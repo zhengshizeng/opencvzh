@@ -1,0 +1,506 @@
+[
+  {
+    "origin": "OpenCV: Install OpenCV-Python in Windows",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Install OpenCV-Python in Windows",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial",
+    "local": ""
+  },
+  {
+    "origin": "We will learn to setup OpenCV-Python in your Windows system.",
+    "local": ""
+  },
+  {
+    "origin": "Below steps are tested in a Windows 7-64 bit machine with Visual Studio 2010 and Visual Studio 2012. The screenshots shows VS2012.",
+    "local": ""
+  },
+  {
+    "origin": "Installing OpenCV from prebuilt binaries",
+    "local": ""
+  },
+  {
+    "origin": "Below Python packages are to be downloaded and installed to their default locations.",
+    "local": ""
+  },
+  {
+    "origin": "Python 3.x (3.4+) or Python 2.7.x from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Numpy package (for example, using",
+    "local": ""
+  },
+  {
+    "origin": "command).",
+    "local": ""
+  },
+  {
+    "origin": "Matplotlib (",
+    "local": ""
+  },
+  {
+    "origin": ") (",
+    "local": ""
+  },
+  {
+    "origin": "Matplotlib is optional, but recommended since we use it a lot in our tutorials",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "Install all packages into their default locations. Python will be installed to",
+    "local": ""
+  },
+  {
+    "origin": "After installation, open Python IDLE. Enter",
+    "local": ""
+  },
+  {
+    "origin": "import numpy",
+    "local": ""
+  },
+  {
+    "origin": "and make sure Numpy is working fine.",
+    "local": ""
+  },
+  {
+    "origin": "Download latest OpenCV release from",
+    "local": ""
+  },
+  {
+    "origin": "GitHub",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "SourceForge site",
+    "local": ""
+  },
+  {
+    "origin": "and double-click to extract it.",
+    "local": ""
+  },
+  {
+    "origin": "Goto",
+    "local": ""
+  },
+  {
+    "origin": "folder.",
+    "local": ""
+  },
+  {
+    "origin": "Copy",
+    "local": ""
+  },
+  {
+    "origin": "cv2.pyd",
+    "local": ""
+  },
+  {
+    "origin": "to",
+    "local": ""
+  },
+  {
+    "origin": "C:/Python27/lib/site-packages",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Open Python IDLE and type following codes in Python terminal.",
+    "local": ""
+  },
+  {
+    "origin": "If the results are printed out without any errors, congratulations !!! You have installed OpenCV-Python successfully.",
+    "local": ""
+  },
+  {
+    "origin": "Building OpenCV from source",
+    "local": ""
+  },
+  {
+    "origin": "Download and install Visual Studio and CMake.",
+    "local": ""
+  },
+  {
+    "origin": "CMake",
+    "local": ""
+  },
+  {
+    "origin": "Download and install necessary Python packages to their default locations",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Numpy",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "In this case, we are using 32-bit binaries of Python packages. But if you want to use OpenCV for x64, 64-bit binaries of Python packages are to be installed. Problem is that, there is no official 64-bit binaries of Numpy. You have to build it on your own. For that, you have to use the same compiler used to build Python. When you start Python IDLE, it shows the compiler details. You can get more",
+    "local": ""
+  },
+  {
+    "origin": "information here",
+    "local": ""
+  },
+  {
+    "origin": ". So your system must have the same Visual Studio version and build Numpy from source.",
+    "local": ""
+  },
+  {
+    "origin": "Another method to have 64-bit Python packages is to use ready-made Python distributions from third-parties like",
+    "local": ""
+  },
+  {
+    "origin": "Anaconda",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Enthought",
+    "local": ""
+  },
+  {
+    "origin": "etc. It will be bigger in size, but will have everything you need. Everything in a single shell. You can also download 32-bit versions also.",
+    "local": ""
+  },
+  {
+    "origin": "Make sure Python and Numpy are working fine.",
+    "local": ""
+  },
+  {
+    "origin": "Download OpenCV source. It can be from",
+    "local": ""
+  },
+  {
+    "origin": "Sourceforge",
+    "local": ""
+  },
+  {
+    "origin": "(for official release version) or from",
+    "local": ""
+  },
+  {
+    "origin": "Github",
+    "local": ""
+  },
+  {
+    "origin": "(for latest source).",
+    "local": ""
+  },
+  {
+    "origin": "Extract it to a folder, opencv and create a new folder build in it.",
+    "local": ""
+  },
+  {
+    "origin": "Open CMake-gui (",
+    "local": ""
+  },
+  {
+    "origin": "Start &gt; All Programs &gt; CMake-gui",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Fill the fields as follows (see the image below):",
+    "local": ""
+  },
+  {
+    "origin": "Click on",
+    "local": ""
+  },
+  {
+    "origin": "Browse Source...",
+    "local": ""
+  },
+  {
+    "origin": "and locate the opencv folder.",
+    "local": ""
+  },
+  {
+    "origin": "Click on",
+    "local": ""
+  },
+  {
+    "origin": "Browse Build...",
+    "local": ""
+  },
+  {
+    "origin": "and locate the build folder we created.",
+    "local": ""
+  },
+  {
+    "origin": "Click on",
+    "local": ""
+  },
+  {
+    "origin": "Configure",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "It will open a new window to select the compiler. Choose appropriate compiler (here, Visual Studio 11) and click",
+    "local": ""
+  },
+  {
+    "origin": "Finish",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Wait until analysis is finished.",
+    "local": ""
+  },
+  {
+    "origin": "You will see all the fields are marked in red. Click on the",
+    "local": ""
+  },
+  {
+    "origin": "WITH",
+    "local": ""
+  },
+  {
+    "origin": "field to expand it. It decides what extra features you need. So mark appropriate fields. See the below image:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Now click on",
+    "local": ""
+  },
+  {
+    "origin": "BUILD",
+    "local": ""
+  },
+  {
+    "origin": "field to expand it. First few fields configure the build method. See the below image:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Remaining fields specify what modules are to be built. Since GPU modules are not yet supported by OpenCV-Python, you can completely avoid it to save time (But if you work with them, keep it there). See the image below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Now click on",
+    "local": ""
+  },
+  {
+    "origin": "ENABLE",
+    "local": ""
+  },
+  {
+    "origin": "field to expand it. Make sure",
+    "local": ""
+  },
+  {
+    "origin": "ENABLE_SOLUTION_FOLDERS",
+    "local": ""
+  },
+  {
+    "origin": "is unchecked (Solution folders are not supported by Visual Studio Express edition). See the image below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Also make sure that in the",
+    "local": ""
+  },
+  {
+    "origin": "PYTHON",
+    "local": ""
+  },
+  {
+    "origin": "field, everything is filled. (Ignore PYTHON_DEBUG_LIBRARY). See image below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Finally click the",
+    "local": ""
+  },
+  {
+    "origin": "Generate",
+    "local": ""
+  },
+  {
+    "origin": "button.",
+    "local": ""
+  },
+  {
+    "origin": "Now go to our",
+    "local": ""
+  },
+  {
+    "origin": "opencv/build",
+    "local": ""
+  },
+  {
+    "origin": "folder. There you will find",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV.sln",
+    "local": ""
+  },
+  {
+    "origin": "file. Open it with Visual Studio.",
+    "local": ""
+  },
+  {
+    "origin": "Check build mode as",
+    "local": ""
+  },
+  {
+    "origin": "Release",
+    "local": ""
+  },
+  {
+    "origin": "instead of",
+    "local": ""
+  },
+  {
+    "origin": "Debug",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "In the solution explorer, right-click on the",
+    "local": ""
+  },
+  {
+    "origin": "Solution",
+    "local": ""
+  },
+  {
+    "origin": "(or",
+    "local": ""
+  },
+  {
+    "origin": "ALL_BUILD",
+    "local": ""
+  },
+  {
+    "origin": ") and build it. It will take some time to finish.",
+    "local": ""
+  },
+  {
+    "origin": "Again, right-click on",
+    "local": ""
+  },
+  {
+    "origin": "INSTALL",
+    "local": ""
+  },
+  {
+    "origin": "and build it. Now OpenCV-Python will be installed.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Open Python IDLE and enter 'import cv2 as cv'. If no error, it is installed correctly.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "We have installed with no other support like TBB, Eigen, Qt, Documentation etc. It would be difficult to explain it here. A more detailed video will be added soon or you can just hack around.",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "If you have a windows machine, compile the OpenCV from source. Do all kinds of hacks. If you meet any problem, visit OpenCV forum and explain your problem.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

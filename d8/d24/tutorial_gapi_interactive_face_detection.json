@@ -1,0 +1,738 @@
+[
+  {
+    "origin": "OpenCV: Face analytics pipeline with G-API",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Face analytics pipeline with G-API",
+    "local": ""
+  },
+  {
+    "origin": "Table of Contents",
+    "local": ""
+  },
+  {
+    "origin": "Overview",
+    "local": ""
+  },
+  {
+    "origin": "Prerequisites",
+    "local": ""
+  },
+  {
+    "origin": "Introduction: why G-API",
+    "local": ""
+  },
+  {
+    "origin": "Pipeline overview",
+    "local": ""
+  },
+  {
+    "origin": "Constructing a pipeline",
+    "local": ""
+  },
+  {
+    "origin": "Declaring Deep Learning topologies",
+    "local": ""
+  },
+  {
+    "origin": "Building a GComputation",
+    "local": ""
+  },
+  {
+    "origin": "Configuring the pipeline",
+    "local": ""
+  },
+  {
+    "origin": "Running the pipeline",
+    "local": ""
+  },
+  {
+    "origin": "Comparison with serial mode",
+    "local": ""
+  },
+  {
+    "origin": "Conclusion",
+    "local": ""
+  },
+  {
+    "origin": "Listing: post-processing kernel",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Overview",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": ""
+  },
+  {
+    "origin": "How to integrate Deep Learning inference in a G-API graph;",
+    "local": ""
+  },
+  {
+    "origin": "How to run a G-API graph on a video stream and obtain data from it.",
+    "local": ""
+  },
+  {
+    "origin": "Prerequisites",
+    "local": ""
+  },
+  {
+    "origin": "This sample requires:",
+    "local": ""
+  },
+  {
+    "origin": "PC with GNU/Linux or Microsoft Windows (Apple macOS is supported but was not tested);",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV 4.2 or later built with Intel® Distribution of",
+    "local": ""
+  },
+  {
+    "origin": "OpenVINO™ Toolkit",
+    "local": ""
+  },
+  {
+    "origin": "(building with",
+    "local": ""
+  },
+  {
+    "origin": "Intel® TBB",
+    "local": ""
+  },
+  {
+    "origin": "is a plus);",
+    "local": ""
+  },
+  {
+    "origin": "The following topologies from OpenVINO™ Toolkit",
+    "local": ""
+  },
+  {
+    "origin": "Open Model Zoo",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": ";",
+    "local": ""
+  },
+  {
+    "origin": ";",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Introduction: why G-API",
+    "local": ""
+  },
+  {
+    "origin": "Many computer vision algorithms run on a video stream rather than on individual images. Stream processing usually consists of multiple steps &ndash; like decode, preprocessing, detection, tracking, classification (on detected objects), and visualization &ndash; forming a",
+    "local": ""
+  },
+  {
+    "origin": "video processing pipeline",
+    "local": ""
+  },
+  {
+    "origin": ". Moreover, many these steps of such pipeline can run in parallel &ndash; modern platforms have different hardware blocks on the same chip like decoders and GPUs, and extra accelerators can be plugged in as extensions, like Intel® Movidius™ Neural Compute Stick for deep learning offload.",
+    "local": ""
+  },
+  {
+    "origin": "Given all this manifold of options and a variety in video analytics algorithms, managing such pipelines effectively quickly becomes a problem. For sure it can be done manually, but this approach doesn't scale: if a change is required in the algorithm (e.g. a new pipeline step is added), or if it is ported on a new platform with different capabilities, the whole pipeline needs to be re-optimized.",
+    "local": ""
+  },
+  {
+    "origin": "Starting with version 4.2, OpenCV offers a solution to this problem. OpenCV G-API now can manage Deep Learning inference (a cornerstone of any modern analytics pipeline) with a traditional Computer Vision as well as video capturing/decoding, all in a single pipeline. G-API takes care of pipelining itself &ndash; so if the algorithm or platform changes, the execution model adapts to it automatically.",
+    "local": ""
+  },
+  {
+    "origin": "Pipeline overview",
+    "local": ""
+  },
+  {
+    "origin": "Our sample application is based on",
+    "local": ""
+  },
+  {
+    "origin": "\"Interactive Face Detection\"",
+    "local": ""
+  },
+  {
+    "origin": "demo from OpenVINO™ Toolkit Open Model Zoo. A simplified pipeline consists of the following steps:",
+    "local": ""
+  },
+  {
+    "origin": "Image acquisition and decode;",
+    "local": ""
+  },
+  {
+    "origin": "Detection with preprocessing;",
+    "local": ""
+  },
+  {
+    "origin": "Classification with preprocessing for every detected object with two networks;",
+    "local": ""
+  },
+  {
+    "origin": "Visualization.",
+    "local": ""
+  },
+  {
+    "origin": "This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.",
+    "local": ""
+  },
+  {
+    "origin": "Constructing a pipeline",
+    "local": ""
+  },
+  {
+    "origin": "Constructing a G-API graph for a video streaming case does not differ much from a",
+    "local": ""
+  },
+  {
+    "origin": "of G-API &ndash; it is still about defining graph",
+    "local": ""
+  },
+  {
+    "origin": "data",
+    "local": ""
+  },
+  {
+    "origin": "(with",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ") and",
+    "local": ""
+  },
+  {
+    "origin": "operations",
+    "local": ""
+  },
+  {
+    "origin": "over it. Inference also becomes an operation in the graph, but is defined in a little bit different way.",
+    "local": ""
+  },
+  {
+    "origin": "Declaring Deep Learning topologies",
+    "local": ""
+  },
+  {
+    "origin": "In contrast with traditional CV functions (see",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ") where G-API declares distinct operations for every function, inference in G-API is a single generic operation",
+    "local": ""
+  },
+  {
+    "origin": ". As usual, it is just an interface and it can be implemented in a number of ways under the hood. In OpenCV 4.2, only OpenVINO™ Inference Engine-based backend is available, and OpenCV's own DNN module-based backend is to come.",
+    "local": ""
+  },
+  {
+    "origin": "is",
+    "local": ""
+  },
+  {
+    "origin": "parametrized",
+    "local": ""
+  },
+  {
+    "origin": "by the details of a topology we are going to execute. Like operations, topologies in G-API are strongly typed and are defined with a special macro",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Similar to how operations are defined with",
+    "local": ""
+  },
+  {
+    "origin": ", network description requires three parameters:",
+    "local": ""
+  },
+  {
+    "origin": "A type name. Every defined topology is declared as a distinct C++ type which is used further in the program &ndash; see below;",
+    "local": ""
+  },
+  {
+    "origin": "A",
+    "local": ""
+  },
+  {
+    "origin": "-like API signature. G-API traits networks as regular \"functions\" which take and return data. Here network",
+    "local": ""
+  },
+  {
+    "origin": "(a detector) takes a",
+    "local": ""
+  },
+  {
+    "origin": "and returns a",
+    "local": ""
+  },
+  {
+    "origin": ", while network",
+    "local": ""
+  },
+  {
+    "origin": "is known to provide two outputs (age and gender blobs, respectively) &ndash; so its has a",
+    "local": ""
+  },
+  {
+    "origin": "as a return type.",
+    "local": ""
+  },
+  {
+    "origin": "A topology name &ndash; can be any non-empty string, G-API is using these names to distinguish networks inside. Names should be unique in the scope of a single graph.",
+    "local": ""
+  },
+  {
+    "origin": "Building a GComputation",
+    "local": ""
+  },
+  {
+    "origin": "Now the above pipeline is expressed in G-API like this:",
+    "local": ""
+  },
+  {
+    "origin": "Every pipeline starts with declaring empty data objects &ndash; which act as inputs to the pipeline. Then we call a generic",
+    "local": ""
+  },
+  {
+    "origin": "specialized to",
+    "local": ""
+  },
+  {
+    "origin": "detection network.",
+    "local": ""
+  },
+  {
+    "origin": "inherits its signature from its template parameter &ndash; and in this case it expects one input",
+    "local": ""
+  },
+  {
+    "origin": "and produces one output",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "In this sample we use a pre-trained SSD-based network and its output needs to be parsed to an array of detections (object regions of interest, ROIs). It is done by a custom operation",
+    "local": ""
+  },
+  {
+    "origin": ", which returns an array of rectangles (of type",
+    "local": ""
+  },
+  {
+    "origin": ") back to the pipeline. This operation also filters out results by a confidence threshold &ndash; and these details are hidden in the kernel itself. Still, at the moment of graph construction we operate with interfaces only and don't need actual kernels to express the pipeline &ndash; so the implementation of this post-processing will be listed later.",
+    "local": ""
+  },
+  {
+    "origin": "After detection result output is parsed to an array of objects, we can run classification on any of those. G-API doesn't support syntax for in-graph loops like",
+    "local": ""
+  },
+  {
+    "origin": "yet, but instead",
+    "local": ""
+  },
+  {
+    "origin": "comes with a special list-oriented overload.",
+    "local": ""
+  },
+  {
+    "origin": "User can call",
+    "local": ""
+  },
+  {
+    "origin": "with a",
+    "local": ""
+  },
+  {
+    "origin": "as the first argument, so then G-API assumes it needs to run the associated network on every rectangle from the given list of the given frame (second argument). Result of such operation is also a list &ndash; a",
+    "local": ""
+  },
+  {
+    "origin": "of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Since",
+    "local": ""
+  },
+  {
+    "origin": "network itself produces two outputs, it's output type for a list-based version of",
+    "local": ""
+  },
+  {
+    "origin": "is a tuple of arrays. We use",
+    "local": ""
+  },
+  {
+    "origin": "to decompose this input into two distinct objects.",
+    "local": ""
+  },
+  {
+    "origin": "network produces a single output so its list-based inference's return type is",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Configuring the pipeline",
+    "local": ""
+  },
+  {
+    "origin": "G-API strictly separates construction from configuration &ndash; with the idea to keep algorithm code itself platform-neutral. In the above listings we only declared our operations and expressed the overall data flow, but didn't even mention that we use OpenVINO™. We only described",
+    "local": ""
+  },
+  {
+    "origin": "what",
+    "local": ""
+  },
+  {
+    "origin": "we do, but not",
+    "local": ""
+  },
+  {
+    "origin": "how",
+    "local": ""
+  },
+  {
+    "origin": "we do it. Keeping these two aspects clearly separated is the design goal for G-API.",
+    "local": ""
+  },
+  {
+    "origin": "Platform-specific details arise when the pipeline is",
+    "local": ""
+  },
+  {
+    "origin": "compiled",
+    "local": ""
+  },
+  {
+    "origin": "&ndash; i.e. is turned from a declarative to an executable form. The way",
+    "local": ""
+  },
+  {
+    "origin": "how",
+    "local": ""
+  },
+  {
+    "origin": "to run stuff is specified via compilation arguments, and new inference/streaming features are no exception from this rule.",
+    "local": ""
+  },
+  {
+    "origin": "G-API is built on backends which implement interfaces (see",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "for details) &ndash; thus",
+    "local": ""
+  },
+  {
+    "origin": "is a function which can be implemented by different backends. In OpenCV 4.2, only OpenVINO™ Inference Engine backend for inference is available. Every inference backend in G-API has to provide a special parameterizable structure to express",
+    "local": ""
+  },
+  {
+    "origin": "backend-specific",
+    "local": ""
+  },
+  {
+    "origin": "neural network parameters &ndash; and in this case, it is",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Here we define three parameter objects:",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ". Every object is a",
+    "local": ""
+  },
+  {
+    "origin": "structure parametrization for each particular network we use. On a compilation stage, G-API automatically matches network parameters with their",
+    "local": ""
+  },
+  {
+    "origin": "calls in graph using this information.",
+    "local": ""
+  },
+  {
+    "origin": "Regardless of the topology, every parameter structure is constructed with three string arguments &ndash; specific to the OpenVINO™ Inference Engine:",
+    "local": ""
+  },
+  {
+    "origin": "Path to the topology's intermediate representation (.xml file);",
+    "local": ""
+  },
+  {
+    "origin": "Path to the topology's model weights (.bin file);",
+    "local": ""
+  },
+  {
+    "origin": "Device where to run &ndash; \"CPU\", \"GPU\", and others &ndash; based on your OpenVINO™ Toolkit installation. These arguments are taken from the command-line parser.",
+    "local": ""
+  },
+  {
+    "origin": "Once networks are defined and custom kernels are implemented, the pipeline is compiled for streaming:",
+    "local": ""
+  },
+  {
+    "origin": "triggers a special video-oriented form of graph compilation where G-API is trying to optimize throughput. Result of this compilation is an object of special type",
+    "local": ""
+  },
+  {
+    "origin": "&ndash; in constract to a traditional callable",
+    "local": ""
+  },
+  {
+    "origin": ", these objects are closer to media players in their semantics.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "There is no need to pass metadata arguments describing the format of the input video stream in",
+    "local": ""
+  },
+  {
+    "origin": "&ndash; G-API figures automatically what are the formats of the input vector and adjusts the pipeline to these formats on-the-fly. User still can pass metadata there as with regular",
+    "local": ""
+  },
+  {
+    "origin": "in order to fix the pipeline to the specific input format.",
+    "local": ""
+  },
+  {
+    "origin": "Running the pipeline",
+    "local": ""
+  },
+  {
+    "origin": "Pipelining optimization is based on processing multiple input video frames simultaneously, running different steps of the pipeline in parallel. This is why it works best when the framework takes full control over the video stream.",
+    "local": ""
+  },
+  {
+    "origin": "The idea behind streaming API is that user specifies an",
+    "local": ""
+  },
+  {
+    "origin": "input source",
+    "local": ""
+  },
+  {
+    "origin": "to the pipeline and then G-API manages its execution automatically until the source ends or user interrupts the execution. G-API pulls new image data from the source and passes it to the pipeline for processing.",
+    "local": ""
+  },
+  {
+    "origin": "Streaming sources are represented by the interface",
+    "local": ""
+  },
+  {
+    "origin": ". Objects implementing this interface may be passed to",
+    "local": ""
+  },
+  {
+    "origin": "as regular inputs via",
+    "local": ""
+  },
+  {
+    "origin": "helper function. In OpenCV 4.2, only one streaming source is allowed per pipeline &ndash; this requirement will be relaxed in the future.",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV comes with a great class",
+    "local": ""
+  },
+  {
+    "origin": "and by default G-API ships with a stream source class based on it &ndash;",
+    "local": ""
+  },
+  {
+    "origin": ". Users can implement their own streaming sources e.g. using",
+    "local": ""
+  },
+  {
+    "origin": "VAAPI",
+    "local": ""
+  },
+  {
+    "origin": "or other Media or Networking APIs.",
+    "local": ""
+  },
+  {
+    "origin": "Sample application specifies the input source as follows:",
+    "local": ""
+  },
+  {
+    "origin": "Please note that a GComputation may still have multiple inputs like",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", or",
+    "local": ""
+  },
+  {
+    "origin": "objects. User can pass their respective host-side types (",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", std::vector&lt;&gt;) in the input vector as well, but in Streaming mode these objects will create \"endless\" constant streams. Mixing a real video source stream and a const data stream is allowed.",
+    "local": ""
+  },
+  {
+    "origin": "Running a pipeline is easy &ndash; just call",
+    "local": ""
+  },
+  {
+    "origin": "and fetch your data with blocking cv::GStreamingCompiled::pull() or non-blocking",
+    "local": ""
+  },
+  {
+    "origin": "; repeat until the stream ends:",
+    "local": ""
+  },
+  {
+    "origin": "The above code may look complex but in fact it handles two modes &ndash; with and without graphical user interface (GUI):",
+    "local": ""
+  },
+  {
+    "origin": "When a sample is running in a \"headless\" mode (",
+    "local": ""
+  },
+  {
+    "origin": "option is set), this code simply pulls data from the pipeline with the blocking",
+    "local": ""
+  },
+  {
+    "origin": "until it ends. This is the most performant mode of execution.",
+    "local": ""
+  },
+  {
+    "origin": "When results are also displayed on the screen, the Window System needs to take some time to refresh the window contents and handle GUI events. In this case, the demo pulls data with a non-blocking",
+    "local": ""
+  },
+  {
+    "origin": "until there is no more data available (but it does not mark end of the stream &ndash; just means new data is not ready yet), and only then displays the latest obtained result and refreshes the screen. Reducing the time spent in GUI with this trick increases the overall performance a little bit.",
+    "local": ""
+  },
+  {
+    "origin": "Comparison with serial mode",
+    "local": ""
+  },
+  {
+    "origin": "The sample can also run in a serial mode for a reference and benchmarking purposes. In this case, a regular",
+    "local": ""
+  },
+  {
+    "origin": "is used and a regular single-frame",
+    "local": ""
+  },
+  {
+    "origin": "object is produced; the pipelining optimization is not applied within G-API; it is the user responsibility to acquire image frames from",
+    "local": ""
+  },
+  {
+    "origin": "object and pass those to G-API.",
+    "local": ""
+  },
+  {
+    "origin": "On a test machine (Intel® Core™ i5-6600), with OpenCV built with [Intel® TBB] support, detector network assigned to CPU, and classifiers to iGPU, the pipelined sample outperformes the serial one by the factor of 1.36x (thus adding +36% in overall throughput).",
+    "local": ""
+  },
+  {
+    "origin": "Conclusion",
+    "local": ""
+  },
+  {
+    "origin": "G-API introduces a technological way to build and optimize hybrid pipelines. Switching to a new execution model does not require changes in the algorithm code expressed with G-API &ndash; only the way how graph is triggered differs.",
+    "local": ""
+  },
+  {
+    "origin": "Listing: post-processing kernel",
+    "local": ""
+  },
+  {
+    "origin": "G-API gives an easy way to plug custom code into the pipeline even if it is running in a streaming mode and processing tensor data. Inference results are represented by multi-dimensional",
+    "local": ""
+  },
+  {
+    "origin": "objects so accessing those is as easy as with a regular DNN module.",
+    "local": ""
+  },
+  {
+    "origin": "The OpenCV-based SSD post-processing kernel is defined and implemented in this sample as follows:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

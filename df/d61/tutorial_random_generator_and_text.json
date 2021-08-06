@@ -1,0 +1,666 @@
+[
+  {
+    "origin": "OpenCV: Random generator and text with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Random generator and text with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Use the",
+    "local": ""
+  },
+  {
+    "origin": "Random Number generator class",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ") and how to get a random number from a uniform distribution.",
+    "local": ""
+  },
+  {
+    "origin": "Display text on an OpenCV window by using the function",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "In the previous tutorial (",
+    "local": ""
+  },
+  {
+    "origin": ") we drew diverse geometric figures, giving as input parameters such as coordinates (in the form of",
+    "local": ""
+  },
+  {
+    "origin": "), color, thickness, etc. You might have noticed that we gave specific values for these arguments.",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial, we intend to use",
+    "local": ""
+  },
+  {
+    "origin": "random",
+    "local": ""
+  },
+  {
+    "origin": "values for the drawing parameters. Also, we intend to populate our image with a big number of geometric figures. Since we will be initializing them in a random fashion, this process will be automatic and made by using",
+    "local": ""
+  },
+  {
+    "origin": "loops",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "This code is in your OpenCV sample folder. Otherwise you can grab it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Let's start by checking out the",
+    "local": ""
+  },
+  {
+    "origin": "main",
+    "local": ""
+  },
+  {
+    "origin": "function. We observe that first thing we do is creating a",
+    "local": ""
+  },
+  {
+    "origin": "Random Number Generator",
+    "local": ""
+  },
+  {
+    "origin": "object (RNG):",
+    "local": ""
+  },
+  {
+    "origin": "RNG implements a random number generator. In this example,",
+    "local": ""
+  },
+  {
+    "origin": "rng",
+    "local": ""
+  },
+  {
+    "origin": "is a RNG element initialized with the value",
+    "local": ""
+  },
+  {
+    "origin": "0xFFFFFFFF",
+    "local": ""
+  },
+  {
+    "origin": "Then we create a matrix initialized to",
+    "local": ""
+  },
+  {
+    "origin": "zeros",
+    "local": ""
+  },
+  {
+    "origin": "(which means that it will appear as black), specifying its height, width and its type:",
+    "local": ""
+  },
+  {
+    "origin": "Then we proceed to draw crazy stuff. After taking a look at the code, you can see that it is mainly divided in 8 sections, defined as functions:",
+    "local": ""
+  },
+  {
+    "origin": "All of these functions follow the same pattern, so we will analyze only a couple of them, since the same explanation applies for all.",
+    "local": ""
+  },
+  {
+    "origin": "Checking out the function",
+    "local": ""
+  },
+  {
+    "origin": "Drawing_Random_Lines",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "We can observe the following:",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "for",
+    "local": ""
+  },
+  {
+    "origin": "loop will repeat",
+    "local": ""
+  },
+  {
+    "origin": "NUMBER",
+    "local": ""
+  },
+  {
+    "origin": "times. Since the function",
+    "local": ""
+  },
+  {
+    "origin": "is inside this loop, that means that",
+    "local": ""
+  },
+  {
+    "origin": "NUMBER",
+    "local": ""
+  },
+  {
+    "origin": "lines will be generated.",
+    "local": ""
+  },
+  {
+    "origin": "The line extremes are given by",
+    "local": ""
+  },
+  {
+    "origin": "pt1",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "pt2",
+    "local": ""
+  },
+  {
+    "origin": ". For",
+    "local": ""
+  },
+  {
+    "origin": "pt1",
+    "local": ""
+  },
+  {
+    "origin": "we can see that:",
+    "local": ""
+  },
+  {
+    "origin": "We know that",
+    "local": ""
+  },
+  {
+    "origin": "rng",
+    "local": ""
+  },
+  {
+    "origin": "is a",
+    "local": ""
+  },
+  {
+    "origin": "Random number generator",
+    "local": ""
+  },
+  {
+    "origin": "object. In the code above we are calling",
+    "local": ""
+  },
+  {
+    "origin": "rng.uniform(a,b)",
+    "local": ""
+  },
+  {
+    "origin": ". This generates a randomly uniformed distribution between the values",
+    "local": ""
+  },
+  {
+    "origin": "a",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "b",
+    "local": ""
+  },
+  {
+    "origin": "(inclusive in",
+    "local": ""
+  },
+  {
+    "origin": "a",
+    "local": ""
+  },
+  {
+    "origin": ", exclusive in",
+    "local": ""
+  },
+  {
+    "origin": "b",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "From the explanation above, we deduce that the extremes",
+    "local": ""
+  },
+  {
+    "origin": "pt1",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "pt2",
+    "local": ""
+  },
+  {
+    "origin": "will be random values, so the lines positions will be quite impredictable, giving a nice visual effect (check out the Result section below).",
+    "local": ""
+  },
+  {
+    "origin": "As another observation, we notice that in the",
+    "local": ""
+  },
+  {
+    "origin": "arguments, for the",
+    "local": ""
+  },
+  {
+    "origin": "color",
+    "local": ""
+  },
+  {
+    "origin": "input we enter:",
+    "local": ""
+  },
+  {
+    "origin": "Let's check the function implementation:",
+    "local": ""
+  },
+  {
+    "origin": "As we can see, the return value is an",
+    "local": ""
+  },
+  {
+    "origin": "Scalar",
+    "local": ""
+  },
+  {
+    "origin": "with 3 randomly initialized values, which are used as the",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "G",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "B",
+    "local": ""
+  },
+  {
+    "origin": "parameters for the line color. Hence, the color of the lines will be random too!",
+    "local": ""
+  },
+  {
+    "origin": "The explanation above applies for the other functions generating circles, ellipses, polygons, etc. The parameters such as",
+    "local": ""
+  },
+  {
+    "origin": "center",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "vertices",
+    "local": ""
+  },
+  {
+    "origin": "are also generated randomly.",
+    "local": ""
+  },
+  {
+    "origin": "Before finishing, we also should take a look at the functions",
+    "local": ""
+  },
+  {
+    "origin": "Display_Random_Text",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "Displaying_Big_End",
+    "local": ""
+  },
+  {
+    "origin": ", since they both have a few interesting features:",
+    "local": ""
+  },
+  {
+    "origin": "Display_Random_Text:",
+    "local": ""
+  },
+  {
+    "origin": "Everything looks familiar but the expression:",
+    "local": ""
+  },
+  {
+    "origin": "So, what does the function",
+    "local": ""
+  },
+  {
+    "origin": "do? In our example:",
+    "local": ""
+  },
+  {
+    "origin": "Draws the text **\"Testing text rendering\"** in",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "The bottom-left corner of the text will be located in the Point",
+    "local": ""
+  },
+  {
+    "origin": "org",
+    "local": ""
+  },
+  {
+    "origin": "The font type is a random integer value in the range: \\([0, 8&gt;\\).",
+    "local": ""
+  },
+  {
+    "origin": "The scale of the font is denoted by the expression",
+    "local": ""
+  },
+  {
+    "origin": "rng.uniform(0, 100)x0.05 + 0.1",
+    "local": ""
+  },
+  {
+    "origin": "(meaning its range is: \\([0.1, 5.1&gt;\\))",
+    "local": ""
+  },
+  {
+    "origin": "The text color is random (denoted by",
+    "local": ""
+  },
+  {
+    "origin": "randomColor(rng)",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "The text thickness ranges between 1 and 10, as specified by",
+    "local": ""
+  },
+  {
+    "origin": "rng.uniform(1,10)",
+    "local": ""
+  },
+  {
+    "origin": "As a result, we will get (analagously to the other drawing functions)",
+    "local": ""
+  },
+  {
+    "origin": "NUMBER",
+    "local": ""
+  },
+  {
+    "origin": "texts over our image, in random locations.",
+    "local": ""
+  },
+  {
+    "origin": "Displaying_Big_End",
+    "local": ""
+  },
+  {
+    "origin": "Besides the function",
+    "local": ""
+  },
+  {
+    "origin": "getTextSize",
+    "local": ""
+  },
+  {
+    "origin": "(which gets the size of the argument text), the new operation we can observe is inside the",
+    "local": ""
+  },
+  {
+    "origin": "foor",
+    "local": ""
+  },
+  {
+    "origin": "loop:",
+    "local": ""
+  },
+  {
+    "origin": "So,",
+    "local": ""
+  },
+  {
+    "origin": "image2",
+    "local": ""
+  },
+  {
+    "origin": "is the subtraction of",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "Scalar::all(i)",
+    "local": ""
+  },
+  {
+    "origin": ". In fact, what happens here is that every pixel of",
+    "local": ""
+  },
+  {
+    "origin": "image2",
+    "local": ""
+  },
+  {
+    "origin": "will be the result of subtracting every pixel of",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "minus the value of",
+    "local": ""
+  },
+  {
+    "origin": "i",
+    "local": ""
+  },
+  {
+    "origin": "(remember that for each pixel we are considering three values such as R, G and B, so each of them will be affected)",
+    "local": ""
+  },
+  {
+    "origin": "Also remember that the subtraction operation",
+    "local": ""
+  },
+  {
+    "origin": "always",
+    "local": ""
+  },
+  {
+    "origin": "performs internally a",
+    "local": ""
+  },
+  {
+    "origin": "saturate",
+    "local": ""
+  },
+  {
+    "origin": "operation, which means that the result obtained will always be inside the allowed range (no negative and between 0 and 255 for our example).",
+    "local": ""
+  },
+  {
+    "origin": "Result",
+    "local": ""
+  },
+  {
+    "origin": "As you just saw in the Code section, the program will sequentially execute diverse drawing functions, which will produce:",
+    "local": ""
+  },
+  {
+    "origin": "First a random set of",
+    "local": ""
+  },
+  {
+    "origin": "NUMBER",
+    "local": ""
+  },
+  {
+    "origin": "lines will appear on screen such as it can be seen in this screenshot:",
+    "local": ""
+  },
+  {
+    "origin": "Then, a new set of figures, these time",
+    "local": ""
+  },
+  {
+    "origin": "rectangles",
+    "local": ""
+  },
+  {
+    "origin": "will follow.",
+    "local": ""
+  },
+  {
+    "origin": "Now some ellipses will appear, each of them with random position, size, thickness and arc length:",
+    "local": ""
+  },
+  {
+    "origin": "Now,",
+    "local": ""
+  },
+  {
+    "origin": "polylines",
+    "local": ""
+  },
+  {
+    "origin": "with 03 segments will appear on screen, again in random configurations.",
+    "local": ""
+  },
+  {
+    "origin": "Filled polygons (in this example triangles) will follow.",
+    "local": ""
+  },
+  {
+    "origin": "The last geometric figure to appear: circles!",
+    "local": ""
+  },
+  {
+    "origin": "Near the end, the text *\"Testing Text Rendering\"* will appear in a variety of fonts, sizes, colors and positions.",
+    "local": ""
+  },
+  {
+    "origin": "And the big end (which by the way expresses a big truth too):",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

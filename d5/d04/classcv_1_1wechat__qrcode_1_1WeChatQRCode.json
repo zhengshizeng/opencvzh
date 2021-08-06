@@ -1,0 +1,410 @@
+[
+  {
+    "origin": "OpenCV: cv::wechat_qrcode::WeChatQRCode Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::wechat_qrcode::WeChatQRCode Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "WeChat QRCode includes two CNN-based models: A object detection model and a super resolution model. Object detection model is applied to detect QRCode with the bounding box. super resolution model is applied to zoom in QRCode when it is small.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const std::string &amp;detector_prototxt_path=\"\", const std::string &amp;detector_caffe_model_path=\"\", const std::string &amp;super_resolution_prototxt_path=\"\", const std::string &amp;super_resolution_caffe_model_path=\"\")",
+    "local": ""
+  },
+  {
+    "origin": "Initialize the",
+    "local": ""
+  },
+  {
+    "origin": ". It includes two models, which are packaged with caffe format. Therefore, there are prototxt and caffe models (In total, four paramenters).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::string &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img,",
+    "local": ""
+  },
+  {
+    "origin": "points=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Both detects and decodes QR code. To simplify the usage, there is a only API: detectAndDecode.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Impl &gt;",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "WeChat QRCode includes two CNN-based models: A object detection model and a super resolution model. Object detection model is applied to detect QRCode with the bounding box. super resolution model is applied to zoom in QRCode when it is small.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "WeChatQRCode()",
+    "local": ""
+  },
+  {
+    "origin": "cv::wechat_qrcode::WeChatQRCode::WeChatQRCode",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "detector_prototxt_path",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "detector_caffe_model_path",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "super_resolution_prototxt_path",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "super_resolution_caffe_model_path",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;wechat_qrcode_WeChatQRCode object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.wechat_qrcode_WeChatQRCode(",
+    "local": ""
+  },
+  {
+    "origin": "[, detector_prototxt_path[, detector_caffe_model_path[, super_resolution_prototxt_path[, super_resolution_caffe_model_path]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Initialize the",
+    "local": ""
+  },
+  {
+    "origin": ". It includes two models, which are packaged with caffe format. Therefore, there are prototxt and caffe models (In total, four paramenters).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "detector_prototxt_path",
+    "local": ""
+  },
+  {
+    "origin": "prototxt file path for the detector",
+    "local": ""
+  },
+  {
+    "origin": "detector_caffe_model_path",
+    "local": ""
+  },
+  {
+    "origin": "caffe model file path for the detector",
+    "local": ""
+  },
+  {
+    "origin": "super_resolution_prototxt_path",
+    "local": ""
+  },
+  {
+    "origin": "prototxt file path for the super resolution model",
+    "local": ""
+  },
+  {
+    "origin": "super_resolution_caffe_model_path",
+    "local": ""
+  },
+  {
+    "origin": "caffe file path for the super resolution model",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "~WeChatQRCode()",
+    "local": ""
+  },
+  {
+    "origin": "cv::wechat_qrcode::WeChatQRCode::~WeChatQRCode",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "detectAndDecode()",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;std::string&gt; cv::wechat_qrcode::WeChatQRCode::detectAndDecode",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, points",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.wechat_qrcode_WeChatQRCode.detectAndDecode(",
+    "local": ""
+  },
+  {
+    "origin": "img[, points]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Both detects and decodes QR code. To simplify the usage, there is a only API: detectAndDecode.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "supports grayscale or color (BGR) image.",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "optional output array of vertices of the found QR code quadrangle. Will be empty if not found.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "list of decoded string.",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "p",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Impl&gt; cv::wechat_qrcode::WeChatQRCode::p",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:49 for OpenCV by",
+    "local": ""
+  }
+]

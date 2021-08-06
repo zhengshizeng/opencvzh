@@ -1,0 +1,510 @@
+[
+  {
+    "origin": "OpenCV: G-API Graph Compilation Arguments",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "G-API Graph Compilation Arguments",
+    "local": ""
+  },
+  {
+    "origin": "Compilation arguments: data structures controlling the compilation process.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "This structure represents the basic parameters for the experimental PlaidML backend.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "Represents an arbitrary compilation argument.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "This structure allows to control the output image region which Fluid backend will produce in the graph.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "This structure allows to customize the way how Fluid executes parallel regions.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "This structure forces Fluid backend to generate multiple parallel output regions in the graph. These regions execute in parallel.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "A container class for heterogeneous kernel implementation collections and graph transformations.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "A container class for network configurations. Similar to GKernelPackage.Use",
+    "local": ""
+  },
+  {
+    "origin": "to construct this object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "Ask G-API to dump compiled graph in Graphviz format under the given file name.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "cv::use_only() is a special combinator which hints G-API to use only kernels specified in",
+    "local": ""
+  },
+  {
+    "origin": "(and not to extend kernels available by default with that package).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "using",
+    "local": ""
+  },
+  {
+    "origin": "= std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(Ts &amp;&amp;... args)",
+    "local": ""
+  },
+  {
+    "origin": "Wraps a list of arguments (a parameter pack) into a vector of compilation arguments (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... KK&gt;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Create a kernel package object containing kernels and transformations specified in variadic template argument.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... FF&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(FF &amp;... functors)",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Compilation arguments: data structures controlling the compilation process.",
+    "local": ""
+  },
+  {
+    "origin": "G-API comes with a number of graph compilation options which can be passed to",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ". Known compilation options are listed in this page, while extra backends may introduce their own compilation options (G-API transparently accepts",
+    "local": ""
+  },
+  {
+    "origin": "everything",
+    "local": ""
+  },
+  {
+    "origin": "which can be passed to",
+    "local": ""
+  },
+  {
+    "origin": ", it depends on underlying backends if an option would be interpreted or not).",
+    "local": ""
+  },
+  {
+    "origin": "For example, if an example computation is executed like this:",
+    "local": ""
+  },
+  {
+    "origin": "Extra parameter specifying which kernels to compile with can be passed like this:",
+    "local": ""
+  },
+  {
+    "origin": "Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GCompileArgs",
+    "local": ""
+  },
+  {
+    "origin": "using",
+    "local": ""
+  },
+  {
+    "origin": "= typedef std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "compile_args()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "cv::compile_args",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Ts &amp;&amp;...",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.compile_args(",
+    "local": ""
+  },
+  {
+    "origin": "pkg",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.compile_args(",
+    "local": ""
+  },
+  {
+    "origin": "kernels, nets",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Wraps a list of arguments (a parameter pack) into a vector of compilation arguments (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "kernels()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... KK&gt;",
+    "local": ""
+  },
+  {
+    "origin": "cv::gapi::kernels",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.gapi.core.ocl.kernels(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Create a kernel package object containing kernels and transformations specified in variadic template argument.",
+    "local": ""
+  },
+  {
+    "origin": "In G-API, kernel implementations and transformations are",
+    "local": ""
+  },
+  {
+    "origin": "types",
+    "local": ""
+  },
+  {
+    "origin": ". Every backend has its own kernel API (like",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ") but all of that APIs define a new type for each kernel implementation.",
+    "local": ""
+  },
+  {
+    "origin": "Use this function to pass kernel implementations (defined in either way) and transformations to the system. Example:",
+    "local": ""
+  },
+  {
+    "origin": "Note that",
+    "local": ""
+  },
+  {
+    "origin": "itself is a function returning object, not a type, so having",
+    "local": ""
+  },
+  {
+    "origin": "at the end is important – it must be a function call.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "kernels()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... FF&gt;",
+    "local": ""
+  },
+  {
+    "origin": "cv::gapi::kernels",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "FF &amp;...",
+    "local": ""
+  },
+  {
+    "origin": "functors",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

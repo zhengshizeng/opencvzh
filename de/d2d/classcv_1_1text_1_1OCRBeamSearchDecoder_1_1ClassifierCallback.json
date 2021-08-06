@@ -1,0 +1,258 @@
+[
+  {
+    "origin": "OpenCV: cv::text::OCRBeamSearchDecoder::ClassifierCallback Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::OCRBeamSearchDecoder::ClassifierCallback Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Callback with the character classifier is made a class.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;recognition_probabilities, std::vector&lt; int &gt; &amp;oversegmentation)",
+    "local": ""
+  },
+  {
+    "origin": "The character classifier must return a (ranked list of) class(es) id('s)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Callback with the character classifier is made a class.",
+    "local": ""
+  },
+  {
+    "origin": "This way it hides the feature extractor and the classifier itself, so developers can write their own OCR code.",
+    "local": ""
+  },
+  {
+    "origin": "The default character classifier and feature extractor can be loaded using the utility function loadOCRBeamSearchClassifierCNN with all its parameters provided in",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/OCRBeamSearch_CNN_model_data.xml.gz",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "~ClassifierCallback()",
+    "local": ""
+  },
+  {
+    "origin": "virtual cv::text::OCRBeamSearchDecoder::ClassifierCallback::~ClassifierCallback",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "eval()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::text::OCRBeamSearchDecoder::ClassifierCallback::eval",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "recognition_probabilities",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "oversegmentation",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "The character classifier must return a (ranked list of) class(es) id('s)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Input image CV_8UC1 or CV_8UC3 with a single letter.",
+    "local": ""
+  },
+  {
+    "origin": "recognition_probabilities",
+    "local": ""
+  },
+  {
+    "origin": "For each of the N characters found the classifier returns a list with class probabilities for each class.",
+    "local": ""
+  },
+  {
+    "origin": "oversegmentation",
+    "local": ""
+  },
+  {
+    "origin": "The classifier returns a list of N+1 character locations' x-coordinates, including 0 as start-sequence location.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getStepSize()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::text::OCRBeamSearchDecoder::ClassifierCallback::getStepSize",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getWindowSize()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::text::OCRBeamSearchDecoder::ClassifierCallback::getWindowSize",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/text/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by &#160;",
+    "local": ""
+  }
+]

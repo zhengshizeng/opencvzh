@@ -1,0 +1,306 @@
+[
+  {
+    "origin": "OpenCV: opencv2/line_descriptor/descriptor.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "descriptor.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Class implements both functionalities for detection of lines and computation of their binary descriptor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "furnishes all functionalities for querying a dataset provided by user or internal to class (that user must, anyway, populate) on the model of",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "A class to represent a line.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "List of",
+    "local": ""
+  },
+  {
+    "origin": "parameters:",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "(x)&#160;&#160;&#160;((x)&gt;15.0?log_gamma_windschitl(x):log_gamma_lanczos(x))",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;2.30258509299404568402",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;100.0",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;((",
+    "local": ""
+  },
+  {
+    "origin": ")0x01)",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;((",
+    "local": ""
+  },
+  {
+    "origin": ")0x01)",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "typedef uint16_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "typedef uint32_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "typedef uint64_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "typedef uint8_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const Mat &amp;image, const std::vector&lt; KeyLine &gt; &amp;keylines, Mat &amp;outImage, const Scalar &amp;color=Scalar::all(-1), int flags=DrawLinesMatchesFlags::DEFAULT)",
+    "local": ""
+  },
+  {
+    "origin": "Draws keylines.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const Mat &amp;img1, const std::vector&lt; KeyLine &gt; &amp;keylines1, const Mat &amp;img2, const std::vector&lt; KeyLine &gt; &amp;keylines2, const std::vector&lt; DMatch &gt; &amp;matches1to2, Mat &amp;outImg, const Scalar &amp;matchColor=Scalar::all(-1), const Scalar &amp;singleLineColor=Scalar::all(-1), const std::vector&lt; char &gt; &amp;matchesMask=std::vector&lt; char &gt;(), int flags=DrawLinesMatchesFlags::DEFAULT)",
+    "local": ""
+  },
+  {
+    "origin": "Draws the found matches of keylines from two images.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "log_gamma",
+    "local": ""
+  },
+  {
+    "origin": "#define log_gamma",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;((x)&gt;15.0?log_gamma_windschitl(x):log_gamma_lanczos(x))",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "MLN10",
+    "local": ""
+  },
+  {
+    "origin": "#define MLN10&#160;&#160;&#160;2.30258509299404568402",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "RELATIVE_ERROR_FACTOR",
+    "local": ""
+  },
+  {
+    "origin": "#define RELATIVE_ERROR_FACTOR&#160;&#160;&#160;100.0",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "UINT32_1",
+    "local": ""
+  },
+  {
+    "origin": "#define UINT32_1&#160;&#160;&#160;((",
+    "local": ""
+  },
+  {
+    "origin": ")0x01)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "UINT64_1",
+    "local": ""
+  },
+  {
+    "origin": "#define UINT64_1&#160;&#160;&#160;((",
+    "local": ""
+  },
+  {
+    "origin": ")0x01)",
+    "local": ""
+  },
+  {
+    "origin": "Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "UINT16",
+    "local": ""
+  },
+  {
+    "origin": "typedef uint16_t",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "UINT32",
+    "local": ""
+  },
+  {
+    "origin": "typedef uint32_t",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "UINT64",
+    "local": ""
+  },
+  {
+    "origin": "typedef uint64_t",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "UINT8",
+    "local": ""
+  },
+  {
+    "origin": "typedef uint8_t",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,246 @@
+[
+  {
+    "origin": "OpenCV: Using OpenCV.js",
+    "local": "OpenCV：使用OpenCV.js"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Using OpenCV.js",
+    "local": "使用OpenCV.js"
+  },
+  {
+    "origin": "Steps",
+    "local": "步骤"
+  },
+  {
+    "origin": "In this tutorial, you will learn how to include and start to use",
+    "local": "在本教程中，您将学习如何包含并开始使用"
+  },
+  {
+    "origin": "inside a web page. You can get a copy of",
+    "local": "在网页内。你可以得到一份"
+  },
+  {
+    "origin": "from",
+    "local": "从"
+  },
+  {
+    "origin": "in each",
+    "local": "在每个"
+  },
+  {
+    "origin": "release",
+    "local": "释放"
+  },
+  {
+    "origin": ", or simply download the prebuilt script from the online documentations at \"https://docs.opencv.org/{VERSION_NUMBER}/opencv.js\" (For example,",
+    "local": "，或直接从在线文档下载预构建脚本，网址为“https://docs.opencv.org/{版本号}/opencv.js“（例如，"
+  },
+  {
+    "origin": "https://docs.opencv.org/3.4.0/opencv.js",
+    "local": "https://docs.opencv.org/3.4.0/opencv.js"
+  },
+  {
+    "origin": ". Use",
+    "local": ". 使用"
+  },
+  {
+    "origin": "if you want the latest build). You can also build your own copy by following the tutorial on Build Opencv.js.",
+    "local": "如果你想要最新版本）。您还可以按照buildopencv.js教程来构建自己的副本。"
+  },
+  {
+    "origin": "Create a web page",
+    "local": "创建网页"
+  },
+  {
+    "origin": "First, let's create a simple web page that is able to upload an image.",
+    "local": "首先，让我们创建一个能够上传图像的简单网页。"
+  },
+  {
+    "origin": "To run this web page, copy the content above and save to a local index.html file. To run it, open it using your web browser.",
+    "local": "若要运行此网页，请复制上面的内容并保存到本地index.html文件。要运行它，请使用web浏览器打开它。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "It is a better practice to use a local web server to host the index.html.",
+    "local": "更好的做法是使用本地web服务器托管index.html。"
+  },
+  {
+    "origin": "Include OpenCV.js",
+    "local": "包括OpenCV.js"
+  },
+  {
+    "origin": "Set the URL of",
+    "local": "设置的URL"
+  },
+  {
+    "origin": "to",
+    "local": "到"
+  },
+  {
+    "origin": "attribute of &lt;script&gt; tag.",
+    "local": "属性&lt；脚本&gt；标签。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "For this tutorial, we host",
+    "local": "在本教程中，我们将"
+  },
+  {
+    "origin": "at same folder as index.html. You can also choose to use the URL of the prebuilt",
+    "local": "与index.html位于同一文件夹中。您还可以选择使用预构建的"
+  },
+  {
+    "origin": "in our online documentation.",
+    "local": "在我们的在线文档中。"
+  },
+  {
+    "origin": "Example for synchronous loading:",
+    "local": "同步加载示例："
+  },
+  {
+    "origin": "You may want to load",
+    "local": "您可能需要加载"
+  },
+  {
+    "origin": "asynchronously by",
+    "local": "异步方式"
+  },
+  {
+    "origin": "attribute in &lt;script&gt; tag. To be notified when",
+    "local": "&lt；中的属性；脚本&gt；标签。通知时间"
+  },
+  {
+    "origin": "is ready, you can register a callback to",
+    "local": "准备好后，您可以注册回调到"
+  },
+  {
+    "origin": "attribute.",
+    "local": "属性。"
+  },
+  {
+    "origin": "Example for asynchronous loading",
+    "local": "异步加载示例"
+  },
+  {
+    "origin": "Use OpenCV.js",
+    "local": "使用OpenCV.js"
+  },
+  {
+    "origin": "Once",
+    "local": "一次"
+  },
+  {
+    "origin": "is ready, you can access OpenCV objects and functions through",
+    "local": "准备就绪后，您可以通过"
+  },
+  {
+    "origin": "object.",
+    "local": "对象。"
+  },
+  {
+    "origin": "For example, you can create a",
+    "local": "例如，可以创建"
+  },
+  {
+    "origin": "from an image by",
+    "local": "从图像"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Because image loading is asynchronous, you need to put",
+    "local": "因为图像加载是异步的，所以需要"
+  },
+  {
+    "origin": "creation inside the",
+    "local": "内部创作"
+  },
+  {
+    "origin": "callback.",
+    "local": "回拨。"
+  },
+  {
+    "origin": "Many OpenCV functions can be used to process",
+    "local": "许多OpenCV函数可以用来处理"
+  },
+  {
+    "origin": ". You can refer to other tutorials, such as",
+    "local": ". 您可以参考其他教程，例如"
+  },
+  {
+    "origin": ", for details.",
+    "local": "，以获取详细信息。"
+  },
+  {
+    "origin": "In this tutorial, we just show a",
+    "local": "在本教程中，我们只展示一个"
+  },
+  {
+    "origin": "on screen. To show a",
+    "local": "在屏幕上。展示"
+  },
+  {
+    "origin": ", you need a canvas element.",
+    "local": "，需要画布元素。"
+  },
+  {
+    "origin": "You can use",
+    "local": "你可以用"
+  },
+  {
+    "origin": "to show",
+    "local": "显示"
+  },
+  {
+    "origin": "on the canvas.",
+    "local": "在画布上。"
+  },
+  {
+    "origin": "Putting all of the steps together, the final index.html is shown below.",
+    "local": "将所有步骤放在一起，最终的index.html如下所示。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "You have to call delete method of",
+    "local": "必须调用的delete方法"
+  },
+  {
+    "origin": "to free memory allocated in Emscripten's heap. Please refer to",
+    "local": "释放Emscripten堆中分配的内存。请参阅"
+  },
+  {
+    "origin": "Memory management of Emscripten",
+    "local": "Emscripten的内存管理"
+  },
+  {
+    "origin": "for details.",
+    "local": "详情。"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

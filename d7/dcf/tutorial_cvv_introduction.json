@@ -1,0 +1,406 @@
+[
+  {
+    "origin": "OpenCV: Interactive Visual Debugging of Computer Vision applications",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Interactive Visual Debugging of Computer Vision applications",
+    "local": ""
+  },
+  {
+    "origin": "What is the most common way to debug computer vision applications? Usually the answer is temporary, hacked together, custom code that must be removed from the code for release compilation.",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial we will show how to use the visual debugging features of the",
+    "local": ""
+  },
+  {
+    "origin": "cvv",
+    "local": ""
+  },
+  {
+    "origin": "module (",
+    "local": ""
+  },
+  {
+    "origin": ") instead.",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Add cvv debug calls to your application",
+    "local": ""
+  },
+  {
+    "origin": "Use the visual debug GUI",
+    "local": ""
+  },
+  {
+    "origin": "Enable and disable the visual debug features during compilation (with zero runtime overhead when disabled)",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "The example code",
+    "local": ""
+  },
+  {
+    "origin": "captures images (",
+    "local": ""
+  },
+  {
+    "origin": "videoio",
+    "local": ""
+  },
+  {
+    "origin": "), e.g. from a webcam,",
+    "local": ""
+  },
+  {
+    "origin": "applies some filters to each image (",
+    "local": ""
+  },
+  {
+    "origin": "imgproc",
+    "local": ""
+  },
+  {
+    "origin": "),",
+    "local": ""
+  },
+  {
+    "origin": "detects image features and matches them to the previous image (",
+    "local": ""
+  },
+  {
+    "origin": "features2d",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "If the program is compiled without visual debugging (see CMakeLists.txt below) the only result is some information printed to the command line. We want to demonstrate how much debugging or development functionality is added by just a few lines of",
+    "local": ""
+  },
+  {
+    "origin": "cvv",
+    "local": ""
+  },
+  {
+    "origin": "commands.",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "We compile the program either using the above CmakeLists.txt with Option",
+    "local": ""
+  },
+  {
+    "origin": "CVV_DEBUG_MODE=ON",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "cmake -DCVV_DEBUG_MODE=ON",
+    "local": ""
+  },
+  {
+    "origin": ") or by adding the corresponding define",
+    "local": ""
+  },
+  {
+    "origin": "CVVISUAL_DEBUGMODE",
+    "local": ""
+  },
+  {
+    "origin": "to our compiler (e.g.",
+    "local": ""
+  },
+  {
+    "origin": "g++ -DCVVISUAL_DEBUGMODE",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "The first cvv call simply shows the image (similar to",
+    "local": ""
+  },
+  {
+    "origin": "imshow",
+    "local": ""
+  },
+  {
+    "origin": ") with the imgIdString as comment.",
+    "local": ""
+  },
+  {
+    "origin": "The image is added to the overview tab in the visual debug GUI and the cvv call blocks.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "The image can then be selected and viewed",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Whenever you want to continue in the code, i.e. unblock the cvv call, you can either continue until the next cvv call (",
+    "local": ""
+  },
+  {
+    "origin": "Step",
+    "local": ""
+  },
+  {
+    "origin": "), continue until the last cvv call (*&gt;&gt;*) or run the application until it exists (",
+    "local": ""
+  },
+  {
+    "origin": "Close",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "We decide to press the green",
+    "local": ""
+  },
+  {
+    "origin": "Step",
+    "local": ""
+  },
+  {
+    "origin": "button.",
+    "local": ""
+  },
+  {
+    "origin": "The next cvv calls are used to debug all kinds of filter operations, i.e. operations that take a picture as input and return a picture as output.",
+    "local": ""
+  },
+  {
+    "origin": "As with every cvv call, you first end up in the overview.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "We decide not to care about the conversion to gray scale and press",
+    "local": ""
+  },
+  {
+    "origin": "Step",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "If you open the filter call, you will end up in the so called \"DefaultFilterView\". Both images are shown next to each other and you can (synchronized) zoom into them.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "When you go to very high zoom levels, each pixel is annotated with its numeric values.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "We press",
+    "local": ""
+  },
+  {
+    "origin": "Step",
+    "local": ""
+  },
+  {
+    "origin": "twice and have a look at the dilated image.",
+    "local": ""
+  },
+  {
+    "origin": "The DefaultFilterView showing both images",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Now we use the",
+    "local": ""
+  },
+  {
+    "origin": "View",
+    "local": ""
+  },
+  {
+    "origin": "selector in the top right and select the \"DualFilterView\". We select \"Changed Pixels\" as filter and apply it (middle image).",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "After we had a close look at these images, perhaps using different views, filters or other GUI features, we decide to let the program run through. Therefore we press the yellow *&gt;&gt;* button.",
+    "local": ""
+  },
+  {
+    "origin": "The program will block at",
+    "local": ""
+  },
+  {
+    "origin": "and display the overview with everything that was passed to cvv in the meantime.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "The cvv debugDMatch call is used in a situation where there are two images each with a set of descriptors that are matched to each other.",
+    "local": ""
+  },
+  {
+    "origin": "We pass both images, both sets of keypoints and their matching to the visual debug module.",
+    "local": ""
+  },
+  {
+    "origin": "Since we want to have a look at matches, we use the filter capabilities (*#type match*) in the overview to only show match calls.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "We want to have a closer look at one of them, e.g. to tune our parameters that use the matching. The view has various settings how to display keypoints and matches. Furthermore, there is a mouseover tooltip.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "We see (visual debugging!) that there are many bad matches. We decide that only 70% of the matches should be shown - those 70% with the lowest match distance.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Having successfully reduced the visual distraction, we want to see more clearly what changed between the two images. We select the \"TranslationMatchView\" that shows to where the keypoint was matched in a different way.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "It is easy to see that the cup was moved to the left during the two images.",
+    "local": ""
+  },
+  {
+    "origin": "Although, cvv is all about interactively",
+    "local": ""
+  },
+  {
+    "origin": "seeing",
+    "local": ""
+  },
+  {
+    "origin": "the computer vision bugs, this is complemented by a \"RawView\" that allows to have a look at the underlying numeric data.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "There are many more useful features contained in the cvv GUI. For instance, one can group the overview tab.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Result",
+    "local": ""
+  },
+  {
+    "origin": "By adding a view expressive lines to our computer vision program we can interactively debug it through different visualizations.",
+    "local": ""
+  },
+  {
+    "origin": "Once we are done developing/debugging we do not have to remove those lines. We simply disable cvv debugging (",
+    "local": ""
+  },
+  {
+    "origin": "cmake -DCVV_DEBUG_MODE=OFF",
+    "local": ""
+  },
+  {
+    "origin": "or g++ without",
+    "local": ""
+  },
+  {
+    "origin": "-DCVVISUAL_DEBUGMODE",
+    "local": ""
+  },
+  {
+    "origin": ") and our programs runs without any debug overhead.",
+    "local": ""
+  },
+  {
+    "origin": "Enjoy computer vision!",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

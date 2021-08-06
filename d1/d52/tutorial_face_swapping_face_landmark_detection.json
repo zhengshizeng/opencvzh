@@ -1,0 +1,114 @@
+[
+  {
+    "origin": "OpenCV: Face swapping using face landmark detection",
+    "local": "OpenCV：使用人脸标记检测的人脸交换"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Face swapping using face landmark detection",
+    "local": "基于人脸标志检测的人脸交换"
+  },
+  {
+    "origin": "This application lets you swap a face in one image with another face in other image. The application first detects faces in both images and finds its landmarks. Then it swaps the face in first image with in another image. You just have to give paths to the images run the application to swap the two faces.",
+    "local": "此应用程序允许您将一张图像中的一张脸与另一张图像中的另一张脸进行交换。该应用程序首先检测两幅图像中的人脸并找到其标志。然后它将第一个图像中的人脸与另一个图像中的人脸进行交换。你只需要给运行应用程序的图像提供路径就可以交换这两个面。"
+  },
+  {
+    "origin": "Description of command parameters",
+    "local": "命令参数说明"
+  },
+  {
+    "origin": "image1",
+    "local": "图像1"
+  },
+  {
+    "origin": "i1 (REQUIRED) Path to the first image file in which you want to apply swapping.",
+    "local": "要应用交换的第一个图像文件的i1（必需）路径。"
+  },
+  {
+    "origin": "image2",
+    "local": "图像2"
+  },
+  {
+    "origin": "i2 (REQUIRED) Path to the second image file in which you want to apply face swapping.",
+    "local": "要在其中应用面交换的第二个图像文件的i2（必需）路径。"
+  },
+  {
+    "origin": "model",
+    "local": "模型"
+  },
+  {
+    "origin": "m (REQUIRED) Path to the file containing model to be loaded for face landmark detection.",
+    "local": "m（必选）包含要加载用于人脸地标检测的模型的文件的路径。"
+  },
+  {
+    "origin": "face_cascade",
+    "local": "面层叠"
+  },
+  {
+    "origin": "f (REQUIRED) Path to the face cascade xml file which you want to use as a face detector.",
+    "local": "f（必需）要用作人脸检测器的人脸级联xml文件的路径。"
+  },
+  {
+    "origin": "Understanding the code",
+    "local": "理解代码"
+  },
+  {
+    "origin": "This tutorial will explain the sample code for face swapping using OpenCV. Jumping directly to the code :",
+    "local": "本教程将解释使用OpenCV进行人脸交换的示例代码。直接跳转到代码："
+  },
+  {
+    "origin": "The facemark API provides the functionality to the user to use their own face detector to be used in face landmark detection.The above code creartes a sample face detector. The above function would be passed to a function pointer in the facemark API.",
+    "local": "FacemarkAPI为用户提供了使用自己的人脸检测器进行人脸标志检测的功能。上面的代码是一个示例人脸检测器。上面的函数将传递给facemarkapi中的函数指针。"
+  },
+  {
+    "origin": "The above code creates a pointer of the face landmark detection class. The face detector created above has to be passed as function pointer to the facemark pointer created for detecting faces while training the model.",
+    "local": "上面的代码创建了人脸标志检测类的指针。上面创建的人脸检测器必须作为函数指针传递给为在训练模型时检测人脸而创建的facemark指针。"
+  },
+  {
+    "origin": "The above code creates vectors to store the detected faces and a vector of vector to store shapes for each face detected in both the images.It then detects landmarks of each face detected in both the images.the images are resized as it is easier to process small images. The images are resized according their actual ratio.",
+    "local": "上面的代码创建向量来存储检测到的人脸，并创建一个向量向量来存储在两幅图像中检测到的每个人脸的形状。然后，它检测在两幅图像中检测到的每个人脸的地标。由于更容易处理小图像，因此会调整图像的大小。图像将根据其实际比例调整大小。"
+  },
+  {
+    "origin": "The above code then finds convex hull to find the boundary points of the face in the image which has to be swapped.",
+    "local": "然后，上面的代码找到凸包，找到图像中需要交换的面的边界点。"
+  },
+  {
+    "origin": "Now as we need to warp one face over the other and we need to find affine transform. Now as the function in OpenCV to find affine transform requires three set of points to calculate the affine matrix. Also we just need to warp the face instead of the surrounding regions. Hence we divide the face into triangles so that each triiangle can be easily warped onto the other image.",
+    "local": "现在我们需要将一个面扭曲到另一个面上，我们需要找到仿射变换。现在OpenCV中的函数求仿射变换需要三组点来计算仿射矩阵。另外，我们只需要扭曲面，而不是周围的地区。因此，我们将人脸分成三角形，这样每个三角形就可以很容易地扭曲到另一个图像上。"
+  },
+  {
+    "origin": "The function divideIntoTriangles divides the detected faces into triangles. The function warpTriangle then warps each triangle of one image to other image to swap the faces.",
+    "local": "函数divideIntoTriangles将检测到的面划分为三角形。函数warpTriangle然后将一个图像的每个三角形扭曲到另一个图像以交换面。"
+  },
+  {
+    "origin": "Even after warping the results somehow look unnatural. Hence to improve the results we apply seamless cloning to get the desired results as required.",
+    "local": "即使在扭曲后，结果看起来也有些不自然。因此，为了提高结果，我们应用无缝克隆来获得所需的结果。"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "Consider two images to be used for face swapping as follows :",
+    "local": "考虑两个用于面部交换的图像，如下所示："
+  },
+  {
+    "origin": "First image",
+    "local": "第一个图像"
+  },
+  {
+    "origin": "Second image",
+    "local": "第二个图像"
+  },
+  {
+    "origin": "Results after swapping",
+    "local": "交换后的结果"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:38为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,1214 @@
+[
+  {
+    "origin": "OpenCV: opencv2/core/hal/intrin.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "intrin.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "(type, int_type_, uint_type_, abs_type_, w_type_, q_type_, sum_type_)",
+    "local": ""
+  },
+  {
+    "origin": "(type, int_type_, uint_type_, abs_type_, w_type_, sum_type_)",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;1",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;64",
+    "local": ""
+  },
+  {
+    "origin": "(a, b)&#160;&#160;&#160;(a)",
+    "local": ""
+  },
+  {
+    "origin": "(a, b)&#160;&#160;&#160;((a) + (b))",
+    "local": ""
+  },
+  {
+    "origin": "(a, b)&#160;&#160;&#160;((a) &amp; (b))",
+    "local": ""
+  },
+  {
+    "origin": "(a)&#160;&#160;&#160;(a)",
+    "local": ""
+  },
+  {
+    "origin": "(func)&#160;&#160;&#160;v512##func",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "typedef v_float32x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Maximum available vector register capacity 32-bit floating point values (single precision)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "typedef v_float64x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Maximum available vector register capacity 64-bit floating point values (double precision)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "typedef v_int16x32&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Maximum available vector register capacity 16-bit signed integer values.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "typedef v_int32x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Maximum available vector register capacity 32-bit signed integer values.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "typedef v_int64x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Maximum available vector register capacity 64-bit signed integer values.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "typedef v_int8x64&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Maximum available vector register capacity 8-bit signed integer values.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "typedef v_uint16x32&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Maximum available vector register capacity 16-bit unsigned integer values.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "typedef v_uint32x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Maximum available vector register capacity 32-bit unsigned integer values.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "typedef v_uint64x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Maximum available vector register capacity 64-bit unsigned integer values.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "typedef v_uint8x64&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Maximum available vector register capacity 8-bit unsigned integer values.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "SIMD processing state cleanup call.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Wide init with value",
+    "local": ""
+  },
+  {
+    "origin": "Create maximum available capacity vector with elements set to a specific value",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "v)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "v)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "v)",
+    "local": ""
+  },
+  {
+    "origin": "(short v)",
+    "local": ""
+  },
+  {
+    "origin": "(int v)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned v)",
+    "local": ""
+  },
+  {
+    "origin": "(float v)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "v)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "v)",
+    "local": ""
+  },
+  {
+    "origin": "(double v)",
+    "local": ""
+  },
+  {
+    "origin": "Wide init with zero",
+    "local": ""
+  },
+  {
+    "origin": "Create maximum available capacity vector with elements set to zero",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Wide load from memory",
+    "local": ""
+  },
+  {
+    "origin": "Load maximum available capacity register contents from memory",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "Wide load from memory(aligned)",
+    "local": ""
+  },
+  {
+    "origin": "Load maximum available capacity register contents from memory(aligned)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "Wide load lower half from memory",
+    "local": ""
+  },
+  {
+    "origin": "Load lower half of maximum available capacity register from memory",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "Wide load halfs from memory",
+    "local": ""
+  },
+  {
+    "origin": "Load maximum available capacity register contents from two memory blocks",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr0, const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr0, const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr0, const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr0, const short *ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr0, const int *ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr0, const unsigned *ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr0, const float *ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr0, const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr0, const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr0, const double *ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "Wide LUT of elements",
+    "local": ""
+  },
+  {
+    "origin": "Load maximum available capacity register contents with array elements by provided indexes",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "Wide LUT of element pairs",
+    "local": ""
+  },
+  {
+    "origin": "Load maximum available capacity register contents with array element pairs by provided indexes",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "Wide LUT of element quads",
+    "local": ""
+  },
+  {
+    "origin": "Load maximum available capacity register contents with array element quads by provided indexes",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "Wide load with double expansion",
+    "local": ""
+  },
+  {
+    "origin": "Load maximum available capacity register contents from memory with double expand",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const float16_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "Wide load with quad expansion",
+    "local": ""
+  },
+  {
+    "origin": "Load maximum available capacity register contents from memory with quad expand",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_INTRIN_DEF_TYPE_TRAITS",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_INTRIN_DEF_TYPE_TRAITS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "type,",
+    "local": ""
+  },
+  {
+    "origin": "int_type_,",
+    "local": ""
+  },
+  {
+    "origin": "uint_type_,",
+    "local": ""
+  },
+  {
+    "origin": "abs_type_,",
+    "local": ""
+  },
+  {
+    "origin": "w_type_,",
+    "local": ""
+  },
+  {
+    "origin": "q_type_,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_INTRIN_DEF_TYPE_TRAITS_NO_Q_TYPE",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "type,",
+    "local": ""
+  },
+  {
+    "origin": "int_type_,",
+    "local": ""
+  },
+  {
+    "origin": "uint_type_,",
+    "local": ""
+  },
+  {
+    "origin": "abs_type_,",
+    "local": ""
+  },
+  {
+    "origin": "w_type_,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_SIMD",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_SIMD&#160;&#160;&#160;1",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_SIMD_64F",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_SIMD_64F&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_SIMD_FP16",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_SIMD_FP16&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_SIMD_WIDTH",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_SIMD_WIDTH&#160;&#160;&#160;64",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_1ST",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_1ST",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "a,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;(a)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_ADD",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_ADD",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "a,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;((a) + (b))",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_AND",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_AND",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "a,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;((a) &amp; (b))",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_NOP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_NOP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "a",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;(a)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "VXPREFIX",
+    "local": ""
+  },
+  {
+    "origin": "#define VXPREFIX",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "func",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;v512##func",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

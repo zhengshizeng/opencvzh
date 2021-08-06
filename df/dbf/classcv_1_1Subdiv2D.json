@@ -1,0 +1,3086 @@
+[
+  {
+    "origin": "OpenCV: cv::Subdiv2D Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::Subdiv2D Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= 0x00,",
+    "local": ""
+  },
+  {
+    "origin": "= 0x22,",
+    "local": ""
+  },
+  {
+    "origin": "= 0x11,",
+    "local": ""
+  },
+  {
+    "origin": "= 0x33,",
+    "local": ""
+  },
+  {
+    "origin": "= 0x13,",
+    "local": ""
+  },
+  {
+    "origin": "= 0x31,",
+    "local": ""
+  },
+  {
+    "origin": "= 0x20,",
+    "local": ""
+  },
+  {
+    "origin": "= 0x02",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rect)",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(int edge,",
+    "local": ""
+  },
+  {
+    "origin": "*dstpt=0) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns the edge destination.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(int edge,",
+    "local": ""
+  },
+  {
+    "origin": "*orgpt=0) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns the edge origin.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pt,",
+    "local": ""
+  },
+  {
+    "origin": "*nearestPt=0)",
+    "local": ""
+  },
+  {
+    "origin": "Finds the subdivision vertex closest to the given point.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(int edge, int nextEdgeType) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns one of the edges related to the given edge.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;edgeList) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns a list of all edges.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(std::vector&lt; int &gt; &amp;leadingEdgeList) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns a list of the leading edge ID connected to each triangle.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;triangleList) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns a list of all triangles.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int vertex, int *firstEdge=0) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns vertex location from vertex ID.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt; int &gt; &amp;idx, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;facetList, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;facetCenters)",
+    "local": ""
+  },
+  {
+    "origin": "Returns a list of all Voronoi facets.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rect)",
+    "local": ""
+  },
+  {
+    "origin": "Creates a new empty Delaunay subdivision.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pt)",
+    "local": ""
+  },
+  {
+    "origin": "Insert a single point into a Delaunay triangulation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;ptvec)",
+    "local": ""
+  },
+  {
+    "origin": "Insert multiple points into a Delaunay triangulation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pt, int &amp;edge, int &amp;vertex)",
+    "local": ""
+  },
+  {
+    "origin": "Returns the location of a point within a Delaunay triangulation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(int edge) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns next edge around the edge origin.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(int edge, int",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "Returns another edge of the same quad-edge.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(int edge) const",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(int edgeA, int edgeB)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(int edge)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(int",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pt, int edge) const",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pt, bool isvirtual, int firstEdge=0)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(int edge, int orgPt, int dstPt)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(int edgeA, int edgeB)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(int edge)",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Bottom right corner of the bounding rect.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "All of the edges.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "Top left corner of the bounding rect.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "All of the vertices.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Member Enumeration Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "point location cases",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "PTLOC_ERROR",
+    "local": ""
+  },
+  {
+    "origin": "Point location error.",
+    "local": ""
+  },
+  {
+    "origin": "PTLOC_OUTSIDE_RECT",
+    "local": ""
+  },
+  {
+    "origin": "Point outside the subdivision bounding rect.",
+    "local": ""
+  },
+  {
+    "origin": "PTLOC_INSIDE",
+    "local": ""
+  },
+  {
+    "origin": "Point inside some facet.",
+    "local": ""
+  },
+  {
+    "origin": "PTLOC_VERTEX",
+    "local": ""
+  },
+  {
+    "origin": "Point coincides with one of the subdivision vertices.",
+    "local": ""
+  },
+  {
+    "origin": "PTLOC_ON_EDGE",
+    "local": ""
+  },
+  {
+    "origin": "Point on some edge.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "edge type navigation (see:",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "NEXT_AROUND_ORG",
+    "local": ""
+  },
+  {
+    "origin": "NEXT_AROUND_DST",
+    "local": ""
+  },
+  {
+    "origin": "PREV_AROUND_ORG",
+    "local": ""
+  },
+  {
+    "origin": "PREV_AROUND_DST",
+    "local": ""
+  },
+  {
+    "origin": "NEXT_AROUND_LEFT",
+    "local": ""
+  },
+  {
+    "origin": "NEXT_AROUND_RIGHT",
+    "local": ""
+  },
+  {
+    "origin": "PREV_AROUND_LEFT",
+    "local": ""
+  },
+  {
+    "origin": "PREV_AROUND_RIGHT",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "Subdiv2D()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::Subdiv2D::Subdiv2D",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Subdiv2D object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Subdiv2D object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D(",
+    "local": ""
+  },
+  {
+    "origin": "rect",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "creates an empty",
+    "local": ""
+  },
+  {
+    "origin": "object. To create a new empty Delaunay subdivision you need to use the",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "Subdiv2D()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::Subdiv2D::Subdiv2D",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rect",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Subdiv2D object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Subdiv2D object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D(",
+    "local": ""
+  },
+  {
+    "origin": "rect",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "rect",
+    "local": ""
+  },
+  {
+    "origin": "Rectangle that includes all of the 2D points that are to be added to the subdivision.",
+    "local": ""
+  },
+  {
+    "origin": "The function creates an empty Delaunay subdivision where 2D points can be added using the function",
+    "local": ""
+  },
+  {
+    "origin": ". All of the points to be added must be within the specified rectangle, otherwise a runtime error is raised.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "calcVoronoi()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::calcVoronoi",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "checkSubdiv()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::checkSubdiv",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "clearVoronoi()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::clearVoronoi",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "connectEdges()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::connectEdges",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edgeA",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edgeB",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "deleteEdge()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::deleteEdge",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "deletePoint()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::deletePoint",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "vtx",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "edgeDst()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::edgeDst",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "*",
+    "local": ""
+  },
+  {
+    "origin": "dstpt",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, dstpt",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.edgeDst(",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns the edge destination.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": "Subdivision edge ID.",
+    "local": ""
+  },
+  {
+    "origin": "dstpt",
+    "local": ""
+  },
+  {
+    "origin": "Output vertex location.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "vertex ID.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "edgeOrg()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::edgeOrg",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "*",
+    "local": ""
+  },
+  {
+    "origin": "orgpt",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, orgpt",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.edgeOrg(",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns the edge origin.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": "Subdivision edge ID.",
+    "local": ""
+  },
+  {
+    "origin": "orgpt",
+    "local": ""
+  },
+  {
+    "origin": "Output vertex location.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "vertex ID.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "findNearest()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::findNearest",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "*",
+    "local": ""
+  },
+  {
+    "origin": "nearestPt",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, nearestPt",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.findNearest(",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Finds the subdivision vertex closest to the given point.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": "Input point.",
+    "local": ""
+  },
+  {
+    "origin": "nearestPt",
+    "local": ""
+  },
+  {
+    "origin": "Output subdivision vertex point.",
+    "local": ""
+  },
+  {
+    "origin": "The function is another function that locates the input point within the subdivision. It finds the subdivision vertex that is the closest to the input point. It is not necessarily one of vertices of the facet containing the input point, though the facet (located using",
+    "local": ""
+  },
+  {
+    "origin": ") is used as a starting point.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "vertex ID.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getEdge()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::getEdge",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "nextEdgeType",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.getEdge(",
+    "local": ""
+  },
+  {
+    "origin": "edge, nextEdgeType",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns one of the edges related to the given edge.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": "Subdivision edge ID.",
+    "local": ""
+  },
+  {
+    "origin": "nextEdgeType",
+    "local": ""
+  },
+  {
+    "origin": "Parameter specifying which of the related edges to return. The following values are possible:",
+    "local": ""
+  },
+  {
+    "origin": "NEXT_AROUND_ORG next around the edge origin ( eOnext on the picture below if e is the input edge)",
+    "local": ""
+  },
+  {
+    "origin": "NEXT_AROUND_DST next around the edge vertex ( eDnext )",
+    "local": ""
+  },
+  {
+    "origin": "PREV_AROUND_ORG previous around the edge origin (reversed eRnext )",
+    "local": ""
+  },
+  {
+    "origin": "PREV_AROUND_DST previous around the edge destination (reversed eLnext )",
+    "local": ""
+  },
+  {
+    "origin": "NEXT_AROUND_LEFT next around the left facet ( eLnext )",
+    "local": ""
+  },
+  {
+    "origin": "NEXT_AROUND_RIGHT next around the right facet ( eRnext )",
+    "local": ""
+  },
+  {
+    "origin": "PREV_AROUND_LEFT previous around the left facet (reversed eOnext )",
+    "local": ""
+  },
+  {
+    "origin": "PREV_AROUND_RIGHT previous around the right facet (reversed eDnext )",
+    "local": ""
+  },
+  {
+    "origin": "sample output",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "edge ID related to the input edge.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getEdgeList()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::getEdgeList",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "edgeList",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "edgeList",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.getEdgeList(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns a list of all edges.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "edgeList",
+    "local": ""
+  },
+  {
+    "origin": "Output vector.",
+    "local": ""
+  },
+  {
+    "origin": "The function gives each edge as a 4 numbers vector, where each two are one of the edge vertices. i.e. org_x = v[0], org_y = v[1], dst_x = v[2], dst_y = v[3].",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLeadingEdgeList()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::getLeadingEdgeList",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; int &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "leadingEdgeList",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "leadingEdgeList",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.getLeadingEdgeList(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns a list of the leading edge ID connected to each triangle.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "leadingEdgeList",
+    "local": ""
+  },
+  {
+    "origin": "Output vector.",
+    "local": ""
+  },
+  {
+    "origin": "The function gives one edge ID for each triangle.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getTriangleList()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::getTriangleList",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "triangleList",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "triangleList",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.getTriangleList(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns a list of all triangles.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "triangleList",
+    "local": ""
+  },
+  {
+    "origin": "Output vector.",
+    "local": ""
+  },
+  {
+    "origin": "The function gives each triangle as a 6 numbers vector, where each two are one of the triangle vertices. i.e. p1_x = v[0], p1_y = v[1], p2_x = v[2], p2_y = v[3], p3_x = v[4], p3_y = v[5].",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getVertex()",
+    "local": ""
+  },
+  {
+    "origin": "cv::Subdiv2D::getVertex",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "vertex",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int *",
+    "local": ""
+  },
+  {
+    "origin": "firstEdge",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, firstEdge",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.getVertex(",
+    "local": ""
+  },
+  {
+    "origin": "vertex",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns vertex location from vertex ID.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "vertex",
+    "local": ""
+  },
+  {
+    "origin": "vertex ID.",
+    "local": ""
+  },
+  {
+    "origin": "firstEdge",
+    "local": ""
+  },
+  {
+    "origin": "Optional. The first edge ID which is connected to the vertex.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "vertex (x,y)",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getVoronoiFacetList()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::getVoronoiFacetList",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt; int &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "idx",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "facetList",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "facetCenters",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "facetList, facetCenters",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.getVoronoiFacetList(",
+    "local": ""
+  },
+  {
+    "origin": "idx",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns a list of all Voronoi facets.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "idx",
+    "local": ""
+  },
+  {
+    "origin": "Vector of vertices IDs to consider. For all vertices you can pass empty vector.",
+    "local": ""
+  },
+  {
+    "origin": "facetList",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of the Voronoi facets.",
+    "local": ""
+  },
+  {
+    "origin": "facetCenters",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of the Voronoi facets center points.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "initDelaunay()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::initDelaunay",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rect",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.initDelaunay(",
+    "local": ""
+  },
+  {
+    "origin": "rect",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates a new empty Delaunay subdivision.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "rect",
+    "local": ""
+  },
+  {
+    "origin": "Rectangle that includes all of the 2D points that are to be added to the subdivision.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "insert()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::insert",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.insert(",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.insert(",
+    "local": ""
+  },
+  {
+    "origin": "ptvec",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Insert a single point into a Delaunay triangulation.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": "Point to insert.",
+    "local": ""
+  },
+  {
+    "origin": "The function inserts a single point into a subdivision and modifies the subdivision topology appropriately. If a point with the same coordinates exists already, no new point is added.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "the ID of the point.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If the point is outside of the triangulation specified rect a runtime error is raised.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "insert()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::insert",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "ptvec",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.insert(",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.insert(",
+    "local": ""
+  },
+  {
+    "origin": "ptvec",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Insert multiple points into a Delaunay triangulation.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "ptvec",
+    "local": ""
+  },
+  {
+    "origin": "Points to insert.",
+    "local": ""
+  },
+  {
+    "origin": "The function inserts a vector of points into a subdivision and modifies the subdivision topology appropriately.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "isRightOf()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::isRightOf",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "locate()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::locate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int &amp;",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int &amp;",
+    "local": ""
+  },
+  {
+    "origin": "vertex",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, edge, vertex",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.locate(",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns the location of a point within a Delaunay triangulation.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": "Point to locate.",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": "Output edge that the point belongs to or is located to the right of it.",
+    "local": ""
+  },
+  {
+    "origin": "vertex",
+    "local": ""
+  },
+  {
+    "origin": "Optional output vertex the input point coincides with.",
+    "local": ""
+  },
+  {
+    "origin": "The function locates the input point within the subdivision and gives one of the triangle edges or vertices.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "an integer which specify one of the following five cases for point location:",
+    "local": ""
+  },
+  {
+    "origin": "The point falls into some facet. The function returns",
+    "local": ""
+  },
+  {
+    "origin": "and edge will contain one of edges of the facet.",
+    "local": ""
+  },
+  {
+    "origin": "The point falls onto the edge. The function returns",
+    "local": ""
+  },
+  {
+    "origin": "and edge will contain this edge.",
+    "local": ""
+  },
+  {
+    "origin": "The point coincides with one of the subdivision vertices. The function returns",
+    "local": ""
+  },
+  {
+    "origin": "and vertex will contain a pointer to the vertex.",
+    "local": ""
+  },
+  {
+    "origin": "The point is outside the subdivision reference rectangle. The function returns",
+    "local": ""
+  },
+  {
+    "origin": "and no pointers are filled.",
+    "local": ""
+  },
+  {
+    "origin": "One of input arguments is invalid. A runtime error is raised or, if silent or \"parent\" error processing mode is selected,",
+    "local": ""
+  },
+  {
+    "origin": "is returned.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "newEdge()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::newEdge",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "newPoint()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::newPoint",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "isvirtual",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "firstEdge",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "nextEdge()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::nextEdge",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.nextEdge(",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns next edge around the edge origin.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": "Subdivision edge ID.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "an integer which is next edge ID around the edge origin: eOnext on the picture above if e is the input edge).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "rotateEdge()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::rotateEdge",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "rotate",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.rotateEdge(",
+    "local": ""
+  },
+  {
+    "origin": "edge, rotate",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns another edge of the same quad-edge.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": "Subdivision edge ID.",
+    "local": ""
+  },
+  {
+    "origin": "rotate",
+    "local": ""
+  },
+  {
+    "origin": "Parameter specifying which of the edges of the same quad-edge as the input one to return. The following values are possible:",
+    "local": ""
+  },
+  {
+    "origin": "0 - the input edge ( e on the picture below if e is the input edge)",
+    "local": ""
+  },
+  {
+    "origin": "1 - the rotated edge ( eRot )",
+    "local": ""
+  },
+  {
+    "origin": "2 - the reversed edge (reversed e (in green))",
+    "local": ""
+  },
+  {
+    "origin": "3 - the reversed rotated edge (reversed eRot (in green))",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "one of the edges ID of the same quad-edge as the input edge.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setEdgePoints()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::setEdgePoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "orgPt",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "dstPt",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "splice()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::splice",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edgeA",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edgeB",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "swapEdges()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::Subdiv2D::swapEdges",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "symEdge()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::symEdge",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.Subdiv2D.symEdge(",
+    "local": ""
+  },
+  {
+    "origin": "edge",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "bottomRight",
+    "local": ""
+  },
+  {
+    "origin": "cv::Subdiv2D::bottomRight",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "Bottom right corner of the bounding rect.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "freePoint",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::freePoint",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "freeQEdge",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::freeQEdge",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "qedges",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::Subdiv2D::qedges",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "All of the edges.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "recentEdge",
+    "local": ""
+  },
+  {
+    "origin": "int cv::Subdiv2D::recentEdge",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "topLeft",
+    "local": ""
+  },
+  {
+    "origin": "cv::Subdiv2D::topLeft",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "Top left corner of the bounding rect.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "validGeometry",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::Subdiv2D::validGeometry",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "vtx",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::Subdiv2D::vtx",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "All of the vertices.",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:43 for OpenCV by",
+    "local": ""
+  }
+]

@@ -1,0 +1,474 @@
+[
+  {
+    "origin": "OpenCV: cv::cudev::TypeTraits&lt; T &gt; Struct Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::cudev::TypeTraits&lt; T &gt; Struct Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= type_traits_detail::UnConst&lt;T&gt;::value }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= type_traits_detail::UnVolatile&lt;T&gt;::value }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= type_traits_detail::ReferenceTraits&lt;unqualified_type&gt;::value }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= type_traits_detail::PointerTraits&lt;typename type_traits_detail::ReferenceTraits&lt;unqualified_type&gt;::type&gt;::value }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= type_traits_detail::IsUnsignedIntegral&lt;unqualified_type&gt;::value }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= type_traits_detail::IsSignedIntergral&lt;unqualified_type&gt;::value }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= type_traits_detail::IsIntegral&lt;unqualified_type&gt;::value }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= type_traits_detail::IsFloat&lt;unqualified_type&gt;::value }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= is_integral || is_float }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= type_traits_detail::IsVec&lt;unqualified_type&gt;::value }",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&lt; type_traits_detail::IsSimpleParameter&lt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef type_traits_detail::PointerTraits&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Member Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "non_const_type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef type_traits_detail::UnConst&lt;T&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "non_volatile_type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef type_traits_detail::UnVolatile&lt;T&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "parameter_type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&lt;type_traits_detail::IsSimpleParameter&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;::value, T, typename type_traits_detail::AddParameterType&lt;T&gt;::type&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "pointee_type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef type_traits_detail::PointerTraits&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "referred_type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef type_traits_detail::ReferenceTraits&lt;T&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "unqualified_type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef type_traits_detail::UnVolatile&lt;typename type_traits_detail::UnConst&lt;T&gt;::type&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "Member Enumeration Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this struct was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/cudev/util/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:46 for OpenCV by &#160;",
+    "local": ""
+  }
+]

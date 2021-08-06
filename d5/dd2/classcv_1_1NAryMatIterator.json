@@ -1,0 +1,686 @@
+[
+  {
+    "origin": "OpenCV: cv::NAryMatIterator Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::NAryMatIterator Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "n-ary multi-dimensional array iterator.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "the default constructor",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "**",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "**",
+    "local": ""
+  },
+  {
+    "origin": ", int",
+    "local": ""
+  },
+  {
+    "origin": "=-1)",
+    "local": ""
+  },
+  {
+    "origin": "the full constructor taking arbitrary number of n-dim matrices",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "**",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "*",
+    "local": ""
+  },
+  {
+    "origin": ", int",
+    "local": ""
+  },
+  {
+    "origin": "=-1)",
+    "local": ""
+  },
+  {
+    "origin": "the full constructor taking arbitrary number of n-dim matrices",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "**",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "*",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "**",
+    "local": ""
+  },
+  {
+    "origin": ", int",
+    "local": ""
+  },
+  {
+    "origin": "=-1)",
+    "local": ""
+  },
+  {
+    "origin": "the separate iterator initialization method",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "proceeds to the next plane of every iterated matrix",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int)",
+    "local": ""
+  },
+  {
+    "origin": "proceeds to the next plane of every iterated matrix (postfix increment operator)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "the iterated arrays",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "the number of arrays",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "the number of hyper-planes that the iterator steps through",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "the current planes",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "data pointers",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "the size of each segment (in elements)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "n-ary multi-dimensional array iterator.",
+    "local": ""
+  },
+  {
+    "origin": "Use the class to implement unary, binary, and, generally, n-ary element-wise operations on multi-dimensional arrays. Some of the arguments of an n-ary function may be continuous arrays, some may be not. It is possible to use conventional MatIterator 's for each array but incrementing all of the iterators after each small operations may be a big overhead. In this case consider using",
+    "local": ""
+  },
+  {
+    "origin": "to iterate through several matrices simultaneously as long as they have the same geometry (dimensionality and all the dimension sizes are the same). On each iteration",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",... will be the slices of the corresponding matrices.",
+    "local": ""
+  },
+  {
+    "origin": "The example below illustrates how you can compute a normalized and threshold 3D color histogram:",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "NAryMatIterator()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "cv::NAryMatIterator::NAryMatIterator",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the default constructor",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "NAryMatIterator()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "cv::NAryMatIterator::NAryMatIterator",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "arrays",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "ptrs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "narrays",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the full constructor taking arbitrary number of n-dim matrices",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "NAryMatIterator()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "cv::NAryMatIterator::NAryMatIterator",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "arrays",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "planes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "narrays",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the full constructor taking arbitrary number of n-dim matrices",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "init()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::NAryMatIterator::init",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "arrays",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "planes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "ptrs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "narrays",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the separate iterator initialization method",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator++()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::NAryMatIterator::operator++",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "proceeds to the next plane of every iterated matrix",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator++()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::NAryMatIterator::operator++",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "proceeds to the next plane of every iterated matrix (postfix increment operator)",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "arrays",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "** cv::NAryMatIterator::arrays",
+    "local": ""
+  },
+  {
+    "origin": "the iterated arrays",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "idx",
+    "local": ""
+  },
+  {
+    "origin": "size_t cv::NAryMatIterator::idx",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "iterdepth",
+    "local": ""
+  },
+  {
+    "origin": "int cv::NAryMatIterator::iterdepth",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "narrays",
+    "local": ""
+  },
+  {
+    "origin": "int cv::NAryMatIterator::narrays",
+    "local": ""
+  },
+  {
+    "origin": "the number of arrays",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nplanes",
+    "local": ""
+  },
+  {
+    "origin": "size_t cv::NAryMatIterator::nplanes",
+    "local": ""
+  },
+  {
+    "origin": "the number of hyper-planes that the iterator steps through",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "planes",
+    "local": ""
+  },
+  {
+    "origin": "* cv::NAryMatIterator::planes",
+    "local": ""
+  },
+  {
+    "origin": "the current planes",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "ptrs",
+    "local": ""
+  },
+  {
+    "origin": "** cv::NAryMatIterator::ptrs",
+    "local": ""
+  },
+  {
+    "origin": "data pointers",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "size",
+    "local": ""
+  },
+  {
+    "origin": "size_t cv::NAryMatIterator::size",
+    "local": ""
+  },
+  {
+    "origin": "the size of each segment (in elements)",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:43 for OpenCV by &#160;",
+    "local": ""
+  }
+]

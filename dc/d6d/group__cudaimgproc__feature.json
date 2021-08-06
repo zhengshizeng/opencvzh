@@ -1,0 +1,506 @@
+[
+  {
+    "origin": "OpenCV: Feature Detection",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Feature Detection",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Base class for Cornerness Criteria computation. :",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Base class for Corners Detector. :",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(int srcType, int maxCorners=1000, double qualityLevel=0.01, double minDistance=0.0, int blockSize=3, bool useHarrisDetector=false, double harrisK=0.04)",
+    "local": ""
+  },
+  {
+    "origin": "Creates implementation for",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(int srcType, int blockSize, int ksize, double k, int borderType=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates implementation for Harris cornerness criteria.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(int srcType, int blockSize, int ksize, int borderType=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates implementation for the minimum eigen value of a 2x2 derivative covariation matrix (the cornerness criteria).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createGoodFeaturesToTrackDetector()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::cuda::createGoodFeaturesToTrackDetector",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "srcType",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "maxCorners",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "qualityLevel",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "minDistance",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "useHarrisDetector",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "harrisK",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates implementation for",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "srcType",
+    "local": ""
+  },
+  {
+    "origin": "Input source type. Only CV_8UC1 and CV_32FC1 are supported for now.",
+    "local": ""
+  },
+  {
+    "origin": "maxCorners",
+    "local": ""
+  },
+  {
+    "origin": "Maximum number of corners to return. If there are more corners than are found, the strongest of them is returned.",
+    "local": ""
+  },
+  {
+    "origin": "qualityLevel",
+    "local": ""
+  },
+  {
+    "origin": "Parameter characterizing the minimal accepted quality of image corners. The parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue (see cornerMinEigenVal ) or the Harris function response (see cornerHarris ). The corners with the quality measure less than the product are rejected. For example, if the best corner has the quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure less than 15 are rejected.",
+    "local": ""
+  },
+  {
+    "origin": "minDistance",
+    "local": ""
+  },
+  {
+    "origin": "Minimum possible Euclidean distance between the returned corners.",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": "Size of an average block for computing a derivative covariation matrix over each pixel neighborhood. See cornerEigenValsAndVecs .",
+    "local": ""
+  },
+  {
+    "origin": "useHarrisDetector",
+    "local": ""
+  },
+  {
+    "origin": "Parameter indicating whether to use a Harris detector (see cornerHarris) or cornerMinEigenVal.",
+    "local": ""
+  },
+  {
+    "origin": "harrisK",
+    "local": ""
+  },
+  {
+    "origin": "Free parameter of the Harris detector.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createHarrisCorner()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::cuda::createHarrisCorner",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "srcType",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "ksize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates implementation for Harris cornerness criteria.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "srcType",
+    "local": ""
+  },
+  {
+    "origin": "Input source type. Only CV_8UC1 and CV_32FC1 are supported for now.",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": "Neighborhood size.",
+    "local": ""
+  },
+  {
+    "origin": "ksize",
+    "local": ""
+  },
+  {
+    "origin": "Aperture parameter for the Sobel operator.",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "Harris detector free parameter.",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "Pixel extrapolation method. Only BORDER_REFLECT101 and BORDER_REPLICATE are supported for now.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createMinEigenValCorner()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::cuda::createMinEigenValCorner",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "srcType",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "ksize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates implementation for the minimum eigen value of a 2x2 derivative covariation matrix (the cornerness criteria).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "srcType",
+    "local": ""
+  },
+  {
+    "origin": "Input source type. Only CV_8UC1 and CV_32FC1 are supported for now.",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": "Neighborhood size.",
+    "local": ""
+  },
+  {
+    "origin": "ksize",
+    "local": ""
+  },
+  {
+    "origin": "Aperture parameter for the Sobel operator.",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "Pixel extrapolation method. Only BORDER_REFLECT101 and BORDER_REPLICATE are supported for now.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by &#160;",
+    "local": ""
+  }
+]

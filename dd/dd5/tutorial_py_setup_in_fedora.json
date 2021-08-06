@@ -1,0 +1,358 @@
+[
+  {
+    "origin": "OpenCV: Install OpenCV-Python in Fedora",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Install OpenCV-Python in Fedora",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial",
+    "local": ""
+  },
+  {
+    "origin": "We will learn to setup OpenCV-Python in your Fedora system. Below steps are tested for Fedora 18 (64-bit) and Fedora 19 (32-bit).",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV-Python can be installed in Fedora in two ways, 1) Install from pre-built binaries available in fedora repositories, 2) Compile from the source. In this section, we will see both.",
+    "local": ""
+  },
+  {
+    "origin": "Another important thing is the additional libraries required. OpenCV-Python requires only",
+    "local": ""
+  },
+  {
+    "origin": "Numpy",
+    "local": ""
+  },
+  {
+    "origin": "(in addition to other dependencies, which we will see later). But in this tutorials, we also use",
+    "local": ""
+  },
+  {
+    "origin": "Matplotlib",
+    "local": ""
+  },
+  {
+    "origin": "for some easy and nice plotting purposes (which I feel much better compared to OpenCV). Matplotlib is optional, but highly recommended. Similarly we will also see",
+    "local": ""
+  },
+  {
+    "origin": "IPython",
+    "local": ""
+  },
+  {
+    "origin": ", an Interactive Python Terminal, which is also highly recommended.",
+    "local": ""
+  },
+  {
+    "origin": "Installing OpenCV-Python from Pre-built Binaries",
+    "local": ""
+  },
+  {
+    "origin": "Install all packages with following command in terminal as root.",
+    "local": ""
+  },
+  {
+    "origin": "Open Python IDLE (or IPython) and type following codes in Python terminal.",
+    "local": ""
+  },
+  {
+    "origin": "If the results are printed out without any errors, congratulations !!! You have installed OpenCV-Python successfully.",
+    "local": ""
+  },
+  {
+    "origin": "It is quite easy. But there is a problem with this. Yum repositories may not contain the latest version of OpenCV always. For example, at the time of writing this tutorial, yum repository contains 2.4.5 while latest OpenCV version is 2.4.6. With respect to Python API, latest version will always contain much better support. Also, there may be chance of problems with camera support, video playback etc depending upon the drivers, ffmpeg, gstreamer packages present etc.",
+    "local": ""
+  },
+  {
+    "origin": "So my personal preference is next method, i.e. compiling from source. Also at some point in time, if you want to contribute to OpenCV, you will need this.",
+    "local": ""
+  },
+  {
+    "origin": "Installing OpenCV from source",
+    "local": ""
+  },
+  {
+    "origin": "Compiling from source may seem a little complicated at first, but once you succeeded in it, there is nothing complicated.",
+    "local": ""
+  },
+  {
+    "origin": "First we will install some dependencies. Some are compulsory, some are optional. Optional dependencies, you can leave if you don't want.",
+    "local": ""
+  },
+  {
+    "origin": "Compulsory Dependencies",
+    "local": ""
+  },
+  {
+    "origin": "We need",
+    "local": ""
+  },
+  {
+    "origin": "CMake",
+    "local": ""
+  },
+  {
+    "origin": "to configure the installation,",
+    "local": ""
+  },
+  {
+    "origin": "GCC",
+    "local": ""
+  },
+  {
+    "origin": "for compilation,",
+    "local": ""
+  },
+  {
+    "origin": "Python-devel",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "Numpy",
+    "local": ""
+  },
+  {
+    "origin": "for creating Python extensions etc.",
+    "local": ""
+  },
+  {
+    "origin": "Next we need",
+    "local": ""
+  },
+  {
+    "origin": "GTK",
+    "local": ""
+  },
+  {
+    "origin": "support for GUI features, Camera support (libdc1394, v4l), Media Support (ffmpeg, gstreamer) etc.",
+    "local": ""
+  },
+  {
+    "origin": "Optional Dependencies",
+    "local": ""
+  },
+  {
+    "origin": "Above dependencies are sufficient to install OpenCV in your fedora machine. But depending upon your requirements, you may need some extra dependencies. A list of such optional dependencies are given below. You can either leave it or install it, your call :)",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV comes with supporting files for image formats like PNG, JPEG, JPEG2000, TIFF, WebP etc. But it may be a little old. If you want to get latest libraries, you can install development files for these formats.",
+    "local": ""
+  },
+  {
+    "origin": "Several OpenCV functions are parallelized with",
+    "local": ""
+  },
+  {
+    "origin": "Intel's Threading Building Blocks",
+    "local": ""
+  },
+  {
+    "origin": "(TBB). But if you want to enable it, you need to install TBB first. ( Also while configuring installation with CMake, don't forget to pass -D WITH_TBB=ON. More details below.)",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV uses another library",
+    "local": ""
+  },
+  {
+    "origin": "Eigen",
+    "local": ""
+  },
+  {
+    "origin": "for optimized mathematical operations. So if you have Eigen installed in your system, you can exploit it. ( Also while configuring installation with CMake, don't forget to pass -D WITH_EIGEN=ON. More details below.)",
+    "local": ""
+  },
+  {
+    "origin": "If you want to build",
+    "local": ""
+  },
+  {
+    "origin": "documentation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Yes, you can create offline version of OpenCV's complete official documentation in your system in HTML with full search facility so that you need not access internet always if any question, and it is quite FAST!!!",
+    "local": ""
+  },
+  {
+    "origin": "), you need to install",
+    "local": ""
+  },
+  {
+    "origin": "Doxygen",
+    "local": ""
+  },
+  {
+    "origin": "(a documentation generation tool).",
+    "local": ""
+  },
+  {
+    "origin": "Downloading OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Next we have to download OpenCV. You can download the latest release of OpenCV from",
+    "local": ""
+  },
+  {
+    "origin": "sourceforge site",
+    "local": ""
+  },
+  {
+    "origin": ". Then extract the folder.",
+    "local": ""
+  },
+  {
+    "origin": "Or you can download latest source from OpenCV's github repo. (If you want to contribute to OpenCV, choose this. It always keeps your OpenCV up-to-date). For that, you need to install",
+    "local": ""
+  },
+  {
+    "origin": "Git",
+    "local": ""
+  },
+  {
+    "origin": "first.",
+    "local": ""
+  },
+  {
+    "origin": "It will create a folder OpenCV in home directory (or the directory you specify). The cloning may take some time depending upon your internet connection.",
+    "local": ""
+  },
+  {
+    "origin": "Now open a terminal window and navigate to the downloaded OpenCV folder. Create a new build folder and navigate to it.",
+    "local": ""
+  },
+  {
+    "origin": "Configuring and Installing",
+    "local": ""
+  },
+  {
+    "origin": "Now we have installed all the required dependencies, let's install OpenCV. Installation has to be configured with CMake. It specifies which modules are to be installed, installation path, which additional libraries to be used, whether documentation and examples to be compiled etc. Below command is normally used for configuration (executed from build folder).",
+    "local": ""
+  },
+  {
+    "origin": "It specifies that build type is \"Release Mode\" and installation path is /usr/local. Observe the -D before each option and .. at the end. In short, this is the format:",
+    "local": ""
+  },
+  {
+    "origin": "You can specify as many flags you want, but each flag should be preceded by -D.",
+    "local": ""
+  },
+  {
+    "origin": "So in this tutorial, we are installing OpenCV with TBB and Eigen support. We also build the documentation, but we exclude Performance tests and building samples. We also disable GPU related modules (since we use OpenCV-Python, we don't need GPU related modules. It saves us some time).",
+    "local": ""
+  },
+  {
+    "origin": "*(All the below commands can be done in a single cmake statement, but it is split here for better understanding.)*",
+    "local": ""
+  },
+  {
+    "origin": "Enable TBB and Eigen support:",
+    "local": ""
+  },
+  {
+    "origin": "Enable documentation and disable tests and samples",
+    "local": ""
+  },
+  {
+    "origin": "Disable all GPU related modules.",
+    "local": ""
+  },
+  {
+    "origin": "Set installation path and build type",
+    "local": ""
+  },
+  {
+    "origin": "Each time you enter cmake statement, it prints out the resulting configuration setup. In the final setup you got, make sure that following fields are filled (below is the some important parts of configuration I got). These fields should be filled appropriately in your system also. Otherwise some problem has happened. So check if you have correctly performed above steps.",
+    "local": ""
+  },
+  {
+    "origin": "Many other flags and settings are there. It is left for you for further exploration.",
+    "local": ""
+  },
+  {
+    "origin": "Now you build the files using make command and install it using make install command. make install should be executed as root.",
+    "local": ""
+  },
+  {
+    "origin": "Installation is over. All files are installed in /usr/local/ folder. But to use it, your Python should be able to find OpenCV module. You have two options for that.",
+    "local": ""
+  },
+  {
+    "origin": "Move the module to any folder in Python Path",
+    "local": ""
+  },
+  {
+    "origin": ": Python path can be found out by entering",
+    "local": ""
+  },
+  {
+    "origin": "in Python terminal. It will print out many locations. Move /usr/local/lib/python2.7/site-packages/cv2.so to any of this folder. For example,",
+    "local": ""
+  },
+  {
+    "origin": "But you will have to do this every time you install OpenCV.",
+    "local": ""
+  },
+  {
+    "origin": "Add /usr/local/lib/python2.7/site-packages to the PYTHON_PATH",
+    "local": ""
+  },
+  {
+    "origin": ": It is to be done only once. Just open/.bashrc and add following line to it, then log out and come back.",
+    "local": ""
+  },
+  {
+    "origin": "Thus OpenCV installation is finished. Open a terminal and try 'import cv2 as cv'.",
+    "local": ""
+  },
+  {
+    "origin": "To build the documentation, just enter following commands:",
+    "local": ""
+  },
+  {
+    "origin": "Then open opencv/build/doc/doxygen/html/index.html and bookmark it in the browser.",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Compile OpenCV from source in your Fedora machine.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,914 @@
+[
+  {
+    "origin": "OpenCV: imgproc/src/hal_replacement.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "hal_replacement.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Dummy structure storing filtering context.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, double maxValue, int adaptiveMethod, int thresholdType, int blockSize, double C)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates adaptive threshold.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int src_depth, int dst_depth, int cn, int margin_left, int margin_top, int margin_right, int margin_bottom, size_t ksize_width, size_t ksize_height, int anchor_x, int anchor_y, bool normalize, int border_type)",
+    "local": ""
+  },
+  {
+    "origin": "Calculate box filter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int cn, double lowThreshold, double highThreshold, int ksize, bool L2gradient)",
+    "local": ""
+  },
+  {
+    "origin": "Canny edge detector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int dcn, bool swapBlue, int greenBits)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtBGR5x5toBGR",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int greenBits)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtBGR5x5toGray",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int scn, int dcn, bool swapBlue)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtBGRtoBGR",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int scn, bool swapBlue, int greenBits)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtBGRtoBGR5x5",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int scn, bool swapBlue)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtBGRtoGray",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int scn, bool swapBlue, bool isFullRange, bool isHSV)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtBGRtoHSV",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int scn, bool swapBlue, bool isLab, bool srgb)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtBGRtoLab",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int scn, bool swapBlue, int uIdx)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtBGRtoThreePlaneYUV",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int scn, bool swapBlue)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtBGRtoXYZ",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int scn, bool swapBlue, bool isCbCr)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtBGRtoYUV",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int dcn)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtGraytoBGR",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int greenBits)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtGraytoBGR5x5",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int dcn, bool swapBlue, bool isFullRange, bool isHSV)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtHSVtoBGR",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int dcn, bool swapBlue, bool isLab, bool srgb)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtLabtoBGR",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtMultipliedRGBAtoRGBA",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int dcn, bool swapBlue, int uIdx, int ycn)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtOnePlaneYUVtoBGR",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtRGBAtoMultipliedRGBA",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int dst_width, int dst_height, int dcn, bool swapBlue, int uIdx)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtThreePlaneYUVtoBGR",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int dst_width, int dst_height, int dcn, bool swapBlue, int uIdx)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtTwoPlaneYUVtoBGR",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int dcn, bool swapBlue)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtXYZtoBGR",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int dcn, bool swapBlue, bool isCbCr)",
+    "local": ""
+  },
+  {
+    "origin": "hal_cvtYUVtoBGR",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*context,",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int full_width, int full_height, int offset_x, int offset_y)",
+    "local": ""
+  },
+  {
+    "origin": "hal_filter",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*context)",
+    "local": ""
+  },
+  {
+    "origin": "hal_filterFree",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "**context,",
+    "local": ""
+  },
+  {
+    "origin": "*kernel_data, size_t kernel_step, int kernel_type, int kernel_width, int kernel_height, int max_width, int max_height, int src_type, int dst_type, int borderType, double delta, int anchor_x, int anchor_y, bool allowSubmatrix, bool allowInplace)",
+    "local": ""
+  },
+  {
+    "origin": "hal_filterInit",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int cn, size_t margin_left, size_t margin_top, size_t margin_right, size_t margin_bottom, size_t ksize_width, size_t ksize_height, double sigmaX, double sigmaY, int border_type)",
+    "local": ""
+  },
+  {
+    "origin": "Blurs an image using a Gaussian filter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int depth, int sdepth, int sqdepth, const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*sum_data, size_t sum_step,",
+    "local": ""
+  },
+  {
+    "origin": "*sqsum_data, size_t sqsum_step,",
+    "local": ""
+  },
+  {
+    "origin": "*tilted_data, size_t tilted_step, int width, int height, int cn)",
+    "local": ""
+  },
+  {
+    "origin": "Calculate integral image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int cn, int ksize)",
+    "local": ""
+  },
+  {
+    "origin": "Calculate medianBlur filter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*context,",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int src_full_width, int src_full_height, int src_roi_x, int src_roi_y, int dst_full_width, int dst_full_height, int dst_roi_x, int dst_roi_y)",
+    "local": ""
+  },
+  {
+    "origin": "hal_morph",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*context)",
+    "local": ""
+  },
+  {
+    "origin": "hal_morphFree",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "**context, int operation, int src_type, int dst_type, int max_width, int max_height, int kernel_type,",
+    "local": ""
+  },
+  {
+    "origin": "*kernel_data, size_t kernel_step, int kernel_width, int kernel_height, int anchor_x, int anchor_y, int borderType, const double borderValue[4], int iterations, bool allowSubmatrix, bool allowInplace)",
+    "local": ""
+  },
+  {
+    "origin": "hal_morphInit",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step, int src_width, int src_height,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int dst_width, int dst_height, int depth, int cn, int border_type)",
+    "local": ""
+  },
+  {
+    "origin": "Perform Gaussian Blur and downsampling for input tile.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int src_type, const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step, int src_width, int src_height,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int dst_width, int dst_height, double inv_scale_x, double inv_scale_y, int interpolation)",
+    "local": ""
+  },
+  {
+    "origin": "hal_resize",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int src_depth, int dst_depth, int cn, int margin_left, int margin_top, int margin_right, int margin_bottom, int dx, int dy, double scale, double delta, int border_type)",
+    "local": ""
+  },
+  {
+    "origin": "Computes Scharr filter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*context,",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int full_width, int full_height, int offset_x, int offset_y)",
+    "local": ""
+  },
+  {
+    "origin": "hal_sepFilter",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*context)",
+    "local": ""
+  },
+  {
+    "origin": "hal_sepFilterFree",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "**context, int src_type, int dst_type, int kernel_type,",
+    "local": ""
+  },
+  {
+    "origin": "*kernelx_data, int kernelx_length,",
+    "local": ""
+  },
+  {
+    "origin": "*kernely_data, int kernely_length, int anchor_x, int anchor_y, double delta, int borderType)",
+    "local": ""
+  },
+  {
+    "origin": "hal_sepFilterInit",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int src_depth, int dst_depth, int cn, int margin_left, int margin_top, int margin_right, int margin_bottom, int dx, int dy, int ksize, double scale, double delta, int border_type)",
+    "local": ""
+  },
+  {
+    "origin": "Computes Sobel derivatives.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int width, int height, int depth, int cn, double thresh, double maxValue, int thresholdType)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates fixed-level threshold to each array element.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int src_type, const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step, int src_width, int src_height,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int dst_width, int dst_height, const double M[6], int interpolation, int borderType, const double borderValue[4])",
+    "local": ""
+  },
+  {
+    "origin": "hal_warpAffine",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int src_type, const",
+    "local": ""
+  },
+  {
+    "origin": "*src_data, size_t src_step, int src_width, int src_height,",
+    "local": ""
+  },
+  {
+    "origin": "*dst_data, size_t dst_step, int dst_width, int dst_height, const double M[9], int interpolation, int borderType, const double borderValue[4])",
+    "local": ""
+  },
+  {
+    "origin": "hal_warpPerspective",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

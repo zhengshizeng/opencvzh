@@ -1,0 +1,190 @@
+[
+  {
+    "origin": "OpenCV: Using OpenCV Java with Eclipse",
+    "local": "OpenCV：在Eclipse中使用opencvjava"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Using OpenCV Java with Eclipse",
+    "local": "在Eclipse中使用opencvjava"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Barış Evrim Demiröz",
+    "local": "担保通知书"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt；=3"
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "This tutorial can contain obsolete information.",
+    "local": "本教程可能包含过时的信息。"
+  },
+  {
+    "origin": "OpenCV supports Java",
+    "local": "OpenCV支持Java"
+  },
+  {
+    "origin": ". In this tutorial I will explain how to setup development environment for using OpenCV Java with Eclipse in",
+    "local": ". 在本教程中，我将解释如何在中使用opencvjava和Eclipse来设置开发环境"
+  },
+  {
+    "origin": "Windows",
+    "local": "窗户"
+  },
+  {
+    "origin": ", so you can enjoy the benefits of garbage collected, very refactorable (rename variable, extract method and whatnot) modern language that enables you to write code with less effort and make less mistakes. Here we go.",
+    "local": "，这样您就可以享受垃圾回收、可重构（重命名变量、提取方法等等）的现代语言的好处，这种语言使您能够用更少的精力编写代码，并且犯更少的错误。我们开始吧。"
+  },
+  {
+    "origin": "Configuring Eclipse",
+    "local": "配置Eclipse"
+  },
+  {
+    "origin": "First, obtain a fresh release of OpenCV",
+    "local": "首先，获取OpenCV的新版本"
+  },
+  {
+    "origin": "from download page",
+    "local": "从下载页"
+  },
+  {
+    "origin": "and extract it under a simple location like",
+    "local": "在一个简单的地方提取出来，比如"
+  },
+  {
+    "origin": ". I am using version 2.4.6, but the steps are more or less the same for other versions.",
+    "local": ". 我使用的是版本2.4.6，但是其他版本的步骤或多或少是相同的。"
+  },
+  {
+    "origin": "Now, we will define OpenCV as a user library in Eclipse, so we can reuse the configuration for any project. Launch Eclipse and select Window &ndash;&gt; Preferences from the menu.",
+    "local": "现在，我们将OpenCV定义为Eclipse中的一个用户库，这样就可以对任何项目重用配置。启动Eclipse并选择Window&ndash&燃气轮机；菜单中的首选项。"
+  },
+  {
+    "origin": "Navigate under Java &ndash;&gt; Build Path &ndash;&gt; User Libraries and click New....",
+    "local": "在Java下导航&ndash&燃气轮机；构建路径&ndash&燃气轮机；用户库，然后单击新建。。。。"
+  },
+  {
+    "origin": "Enter a name, e.g. OpenCV-2.4.6, for your new library.",
+    "local": "输入新库的名称，例如OpenCV-2.4.6。"
+  },
+  {
+    "origin": "Now select your new user library and click Add External JARs....",
+    "local": "现在选择新的用户库并单击添加外部jar。。。。"
+  },
+  {
+    "origin": "Browse through",
+    "local": "浏览"
+  },
+  {
+    "origin": "and select opencv-246.jar. After adding the jar, extend the opencv-246.jar and select Native library location and press Edit....",
+    "local": "然后选择opencv-246.jar。添加jar之后，扩展opencv-246.jar并选择Native library location并按Edit。。。。"
+  },
+  {
+    "origin": "Select External Folder... and browse to select the folder",
+    "local": "选择外部文件夹。。。然后浏览选择文件夹"
+  },
+  {
+    "origin": ". If you have a 32-bit system you need to select the x86 folder instead of x64.",
+    "local": ". 如果您有32位系统，则需要选择x86文件夹而不是x64。"
+  },
+  {
+    "origin": "Your user library configuration should look like this:",
+    "local": "用户库配置应如下所示："
+  },
+  {
+    "origin": "Testing the configuration on a new Java project",
+    "local": "在新的Java项目上测试配置"
+  },
+  {
+    "origin": "Now start creating a new Java project.",
+    "local": "现在开始创建一个新的Java项目。"
+  },
+  {
+    "origin": "On the Java Settings step, under Libraries tab, select Add Library... and select OpenCV-2.4.6, then click Finish.",
+    "local": "在Java设置步骤的库选项卡下，选择添加库。。。并选择OpenCV-2.4.6，然后单击“完成”。"
+  },
+  {
+    "origin": "Libraries should look like this:",
+    "local": "库应如下所示："
+  },
+  {
+    "origin": "Now you have created and configured a new Java project it is time to test it. Create a new java file. Here is a starter code for your convenience:",
+    "local": "现在您已经创建并配置了一个新的Java项目，是时候对它进行测试了。创建一个新的java文件。为了方便起见，这里有一个启动代码："
+  },
+  {
+    "origin": "When you run the code you should see 3x3 identity matrix as output.",
+    "local": "运行代码时，应该会看到3x3标识矩阵作为输出。"
+  },
+  {
+    "origin": "That is it, whenever you start a new project just add the OpenCV user library that you have defined to your project and you are good to go. Enjoy your powerful, less painful development environment :)",
+    "local": "也就是说，无论何时开始一个新项目，只要将您定义的OpenCV用户库添加到您的项目中就可以了。享受您强大、不那么痛苦的开发环境：）"
+  },
+  {
+    "origin": "Running Java code with OpenCV and MKL dependency",
+    "local": "使用OpenCV和MKL依赖关系运行Java代码"
+  },
+  {
+    "origin": "You may get the following error (e.g. on Ubuntu) if you have built OpenCV with MKL library with some Java code that calls OpenCV functions that use Intel MKL:",
+    "local": "如果您使用MKL库构建OpenCV时使用了一些调用使用Intel MKL的OpenCV函数的Java代码，则可能会出现以下错误（例如在Ubuntu上）："
+  },
+  {
+    "origin": "Intel MKL FATAL ERROR: Cannot load libmkl_avx2.so or libmkl_def.so.",
+    "local": "英特尔MKL致命错误：无法加载libmkl\\u avx2.so或libmkl\\u def.so。"
+  },
+  {
+    "origin": "One solution to solve this on Linux consists in preloading the Intel MKL library (either run the command in a terminal or add it to your",
+    "local": "在Linux上解决此问题的一个解决方案是预加载“英特尔MKL库”（在终端中运行该命令或将其添加到计算机中）"
+  },
+  {
+    "origin": "file). Your command line should be something similar to this (add",
+    "local": "文件）。您的命令行应该与此类似（添加"
+  },
+  {
+    "origin": "before if you have already set the",
+    "local": "如果您已经设置了"
+  },
+  {
+    "origin": "variable):",
+    "local": "变量）："
+  },
+  {
+    "origin": "export LD_PRELOAD=/opt/intel/mkl/lib/intel64/libmkl_core.so:/opt/intel/mkl/lib/intel64/libmkl_sequential.so",
+    "local": "export LD\\u PRELOAD=/opt/intel/mkl/lib/intel64/libmkl\\u core.so:/opt/intel/mkl/lib/intel64/libmkl\\u sequential.so"
+  },
+  {
+    "origin": "Then, run the Eclipse IDE from a terminal that have this environment variable set (",
+    "local": "然后，从设置了此环境变量的终端运行eclipseide("
+  },
+  {
+    "origin": ") and the error should disappear.",
+    "local": ")错误应该消失。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:36为OpenCV生成，&#160；"
+  }
+]

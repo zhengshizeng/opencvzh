@@ -1,0 +1,434 @@
+[
+  {
+    "origin": "OpenCV: How to scan images, lookup tables and time measurement with OpenCV",
+    "local": "OpenCV：如何使用OpenCV扫描图像、查找表和时间度量"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "How to scan images, lookup tables and time measurement with OpenCV",
+    "local": "如何使用OpenCV扫描图像、查找表和时间测量"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一个教程:"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Bernát Gábor",
+    "local": "Bernát Gábor"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "OpenCV &gt;= 3.0"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "We'll seek answers for the following questions:",
+    "local": "我们将为以下问题寻求答案:"
+  },
+  {
+    "origin": "How to go through each and every pixel of an image?",
+    "local": "如何遍历图像的每个像素？"
+  },
+  {
+    "origin": "How are OpenCV matrix values stored?",
+    "local": "如何存储OpenCV矩阵值？"
+  },
+  {
+    "origin": "How to measure the performance of our algorithm?",
+    "local": "如何衡量我们算法的性能？"
+  },
+  {
+    "origin": "What are lookup tables and why use them?",
+    "local": "什么是查找表？为什么使用它们？"
+  },
+  {
+    "origin": "Our test case",
+    "local": "我们的测试用例"
+  },
+  {
+    "origin": "Let us consider a simple color reduction method. By using the unsigned char C and C++ type for matrix item storing, a channel of pixel may have up to 256 different values. For a three channel image this can allow the formation of way too many colors (16 million to be exact). Working with so many color shades may give a heavy blow to our algorithm performance. However, sometimes it is enough to work with a lot less of them to get the same final result.",
+    "local": "让我们考虑一种简单的色彩还原方法。通过使用 unsigned char C 和C++类型来存储矩阵项，像素的信道可以具有多达256个不同的值。对于三通道图像，这可能会形成太多的颜色（确切地说是1600万）。使用如此多的颜色阴影可能会严重影响我们的算法性能。然而，有时只需与很少的人一起工作就可以得到相同的最终结果。"
+  },
+  {
+    "origin": "In this cases it's common that we make a",
+    "local": "在这种情况下，我们通常会"
+  },
+  {
+    "origin": "color space reduction",
+    "local": "色彩空间缩小"
+  },
+  {
+    "origin": ". This means that we divide the color space current value with a new input value to end up with fewer colors. For instance every value between zero and nine takes the new value zero, every value between ten and nineteen the value ten and so on.",
+    "local": ". 这意味着我们将颜色空间的当前值除以一个新的输入值，以得到更少的颜色。例如，0到9之间的每个值取新值0，10到19之间的每个值取10，以此类推。"
+  },
+  {
+    "origin": "When you divide an",
+    "local": "当你划分一个"
+  },
+  {
+    "origin": "uchar",
+    "local": "uchar"
+  },
+  {
+    "origin": "(unsigned char - aka values between zero and 255) value with an",
+    "local": "(unsigned char-aka值介于0和255之间)带有"
+  },
+  {
+    "origin": "int",
+    "local": "int"
+  },
+  {
+    "origin": "value the result will be also",
+    "local": "结果也将是"
+  },
+  {
+    "origin": "char",
+    "local": "char"
+  },
+  {
+    "origin": ". These values may only be char values. Therefore, any fraction will be rounded down. Taking advantage of this fact the upper operation in the",
+    "local": ". 这些值只能是char值。因此，任何分数都将向下舍入。利用这一事实，在"
+  },
+  {
+    "origin": "uchar",
+    "local": "uchar"
+  },
+  {
+    "origin": "domain may be expressed as:",
+    "local": "域可以表示为："
+  },
+  {
+    "origin": "\\[I_{new} = (\\frac{I_{old}}{10}) * 10\\]",
+    "local": "\\[I_{new} = (\\frac{I_{old}}{10}) * 10\\]"
+  },
+  {
+    "origin": "A simple color space reduction algorithm would consist of just passing through every pixel of an image matrix and applying this formula. It's worth noting that we do a divide and a multiplication operation. These operations are bloody expensive for a system. If possible it's worth avoiding them by using cheaper operations such as a few subtractions, addition or in best case a simple assignment. Furthermore, note that we only have a limited number of input values for the upper operation. In case of the",
+    "local": "一个简单的颜色空间缩减算法将只通过图像矩阵的每个像素，并应用这个公式。值得注意的是，我们做除法和乘法运算。这些操作对于一个系统来说是非常昂贵的。如果可能的话，可以通过使用更便宜的操作来避免它们，比如一些减法、加法或者在最好的情况下一个简单的赋值。此外，请注意，对于上限操作，我们只有有限数量的输入值。以防"
+  },
+  {
+    "origin": "uchar",
+    "local": "高的"
+  },
+  {
+    "origin": "system this is 256 to be exact.",
+    "local": "这个系统准确地说是256。"
+  },
+  {
+    "origin": "Therefore, for larger images it would be wise to calculate all possible values beforehand and during the assignment just make the assignment, by using a lookup table. Lookup tables are simple arrays (having one or more dimensions) that for a given input value variation holds the final output value. Its strength is that we do not need to make the calculation, we just need to read the result.",
+    "local": "因此，对于较大的图像，明智的做法是预先计算所有可能的值，并在赋值过程中使用查找表进行赋值。查找表是简单的数组（具有一个或多个维度），对于给定的输入值变量，它保留最终的输出值。它的优点是我们不需要计算，只需要读取结果。"
+  },
+  {
+    "origin": "Our test case program (and the code sample below) will do the following: read in an image passed as a command line argument (it may be either color or grayscale) and apply the reduction with the given command line argument integer value. In OpenCV, at the moment there are three major ways of going through an image pixel by pixel. To make things a little more interesting we'll make the scanning of the image using each of these methods, and print out how long it took.",
+    "local": "我们的测试用例程序（以及下面的代码示例）将执行以下操作：读入作为命令行参数传递的图像（它可以是彩色或灰度），并使用给定的命令行参数整数值应用缩减。在OpenCV中，目前有三种主要的方式逐像素地浏览图像。为了使事情更有趣一点，我们将使用这些方法中的每一种对图像进行扫描，并打印出所花的时间。"
+  },
+  {
+    "origin": "You can download the full source code",
+    "local": "您可以下载完整的源代码"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "or look it up in the samples directory of OpenCV at the cpp tutorial code for the core section. Its basic usage is:",
+    "local": "或者在OpenCV的samples目录中的cpp教程代码的核心部分进行查找。其基本用途是："
+  },
+  {
+    "origin": "The final argument is optional. If given the image will be loaded in grayscale format, otherwise the BGR color space is used. The first thing is to calculate the lookup table.",
+    "local": "最后一个参数是可选的。如果给定，图像将以灰度格式加载，否则使用BGR颜色空间。第一件事是计算查找表。"
+  },
+  {
+    "origin": "Here we first use the C++",
+    "local": "这里我们首先使用C++"
+  },
+  {
+    "origin": "stringstream",
+    "local": "stringstream"
+  },
+  {
+    "origin": "class to convert the third command line argument from text to an integer format. Then we use a simple look and the upper formula to calculate the lookup table. No OpenCV specific stuff here.",
+    "local": "类将第三个命令行参数从文本转换为整数格式。然后我们使用一个简单的look和上面的公式来计算查找表。这里没有OpenCV特定的东西。"
+  },
+  {
+    "origin": "Another issue is how do we measure time? Well OpenCV offers two simple functions to achieve this",
+    "local": "另一个问题是我们如何测量时间？OpenCV提供了两个简单的函数来实现这一点"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ". The first returns the number of ticks of your systems CPU from a certain event (like since you booted your system). The second returns how many times your CPU emits a tick during a second. So, measuring amount of time elapsed between two operations is as easy as:",
+    "local": ". 第一个返回某个事件中系统CPU的滴答数(比如自系统启动以来):第二个返回CPU在一秒钟内发出滴答声的次数:因此，测量两个操作之间经过的时间量非常简单:"
+  },
+  {
+    "origin": "How is the image matrix stored in memory?",
+    "local": "图像矩阵是如何存储在内存中的？"
+  },
+  {
+    "origin": "As you could already read in my",
+    "local": "你已经在我的书里读到了"
+  },
+  {
+    "origin": "tutorial the size of the matrix depends on the color system used. More accurately, it depends on the number of channels used. In case of a grayscale image we have something like:",
+    "local": "教程矩阵的大小取决于使用的颜色系统。更准确地说，这取决于使用的通道数。在灰度图像的情况下，我们有如下内容："
+  },
+  {
+    "origin": "For multichannel images the columns contain as many sub columns as the number of channels. For example in case of an BGR color system:",
+    "local": "对于多通道图像，列包含与通道数相同的子列。例如，对于BGR颜色系统："
+  },
+  {
+    "origin": "Note that the order of the channels is inverse: BGR instead of RGB. Because in many cases the memory is large enough to store the rows in a successive fashion the rows may follow one after another, creating a single long row. Because everything is in a single place following one after another this may help to speed up the scanning process. We can use the",
+    "local": "请注意，通道的顺序是相反的：BGR而不是RGB。因为在许多情况下，内存足够大，可以以连续的方式存储行，所以行可以一个接一个地跟随，从而创建一个单独的长行。因为所有的东西都在一个地方，一个接一个的，这可能有助于加快扫描过程。我们可以使用"
+  },
+  {
+    "origin": "function to",
+    "local": "函数到"
+  },
+  {
+    "origin": "ask",
+    "local": "问"
+  },
+  {
+    "origin": "the matrix if this is the case. Continue on to the next section to find an example.",
+    "local": "矩阵，如果是这样的话。继续下一节查找示例。"
+  },
+  {
+    "origin": "The efficient way",
+    "local": "有效的方法"
+  },
+  {
+    "origin": "When it comes to performance you cannot beat the classic C style operator[] (pointer) access. Therefore, the most efficient method we can recommend for making the assignment is:",
+    "local": "在性能方面，您无法击败经典的C风格操作符[]（指针）访问。因此，我们可以推荐的最有效的分配方法是："
+  },
+  {
+    "origin": "Here we basically just acquire a pointer to the start of each row and go through it until it ends. In the special case that the matrix is stored in a continuous manner we only need to request the pointer a single time and go all the way to the end. We need to look out for color images: we have three channels so we need to pass through three times more items in each row.",
+    "local": "在这里，我们基本上只需要获取一个指向每一行开头的指针，然后遍历它直到它结束。在矩阵以连续方式存储的特殊情况下，我们只需要请求指针一次，一直到最后。我们需要注意彩色图像：我们有三个通道，所以我们需要通过每一行的三倍以上的项目。"
+  },
+  {
+    "origin": "There's another way of this. The",
+    "local": "还有另一种方法。这个"
+  },
+  {
+    "origin": "data",
+    "local": "data"
+  },
+  {
+    "origin": "data member of a",
+    "local": "数据库的数据成员"
+  },
+  {
+    "origin": "Mat",
+    "local": "Mat"
+  },
+  {
+    "origin": "object returns the pointer to the first row, first column. If this pointer is null you have no valid input in that object. Checking this is the simplest method to check if your image loading was a success. In case the storage is continuous we can use this to go through the whole data pointer. In case of a grayscale image this would look like:",
+    "local": "对象返回指向第一行、第一列的指针。如果此指针为空，则该对象中没有有效的输入。检查这是检查图像加载是否成功的最简单方法。如果存储是连续的，我们可以用它遍历整个数据指针。如果是灰度图像，则如下所示："
+  },
+  {
+    "origin": "You would get the same result. However, this code is a lot harder to read later on. It gets even harder if you have some more advanced technique there. Moreover, in practice I've observed you'll get the same performance result (as most of the modern compilers will probably make this small optimization trick automatically for you).",
+    "local": "你会得到同样的结果。但是，这段代码以后很难阅读。如果你有更先进的技术那就更难了。此外，在实践中，我观察到您将获得相同的性能结果（因为大多数现代编译器可能会自动为您实现这个小优化技巧）。"
+  },
+  {
+    "origin": "The iterator (safe) method",
+    "local": "迭代器（safe）方法"
+  },
+  {
+    "origin": "In case of the efficient way making sure that you pass through the right amount of",
+    "local": "以确保通过适当数量的"
+  },
+  {
+    "origin": "uchar",
+    "local": "uchar"
+  },
+  {
+    "origin": "fields and to skip the gaps that may occur between the rows was your responsibility. The iterator method is considered a safer way as it takes over these tasks from the user. All you need to do is to ask the begin and the end of the image matrix and then just increase the begin iterator until you reach the end. To acquire the value",
+    "local": "字段和跳过行之间可能出现的间隙是您的责任。迭代器方法被认为是一种更安全的方法，因为它从用户那里接管这些任务。你需要做的就是询问图像矩阵的开始和结束，然后增加开始迭代器直到你到达结束。获取价值"
+  },
+  {
+    "origin": "pointed",
+    "local": "指出"
+  },
+  {
+    "origin": "by the iterator use the * operator (add it before it).",
+    "local": "由迭代器使用*运算符（在它之前添加它）。"
+  },
+  {
+    "origin": "In case of color images we have three uchar items per column. This may be considered a short vector of uchar items, that has been baptized in OpenCV with the",
+    "local": "对于彩色图像，我们每列有三个uchar项。这可能被认为是uchar项目的一个短向量，它已经在OpenCV中用"
+  },
+  {
+    "origin": "Vec3b",
+    "local": "Vec3b"
+  },
+  {
+    "origin": "name. To access the n-th sub column we use simple operator[] access. It's important to remember that OpenCV iterators go through the columns and automatically skip to the next row. Therefore in case of color images if you use a simple",
+    "local": "姓名。要访问第n个子列，我们使用简单运算符[]访问。重要的是要记住OpenCV迭代器遍历列并自动跳到下一行。因此在彩色图像的情况下，如果你使用一个简单的"
+  },
+  {
+    "origin": "uchar",
+    "local": "uchar"
+  },
+  {
+    "origin": "iterator you'll be able to access only the blue channel values.",
+    "local": "迭代器只能访问蓝色通道值。"
+  },
+  {
+    "origin": "On-the-fly address calculation with reference returning",
+    "local": "引用返回的动态地址计算"
+  },
+  {
+    "origin": "The final method isn't recommended for scanning. It was made to acquire or modify somehow random elements in the image. Its basic usage is to specify the row and column number of the item you want to access. During our earlier scanning methods you could already notice that it is important through what type we are looking at the image. It's no different here as you need to manually specify what type to use at the automatic lookup. You can observe this in case of the grayscale images for the following source code (the usage of the +",
+    "local": "最后一种方法不建议用于扫描。它被用来获取或修改图像中的随机元素。它的基本用法是指定要访问的项的行号和列号。在我们早期的扫描方法中，您可能已经注意到，通过我们查看图像的类型是很重要的。这里没有什么不同，因为您需要手动指定在自动查找时使用什么类型。您可以在灰度图像的情况下观察以下源代码（使用+"
+  },
+  {
+    "origin": "function):",
+    "local": "功能）："
+  },
+  {
+    "origin": "The function takes your input type and coordinates and calculates the address of the queried item. Then returns a reference to that. This may be a constant when you",
+    "local": "该函数接受您的输入类型和坐标，并计算查询项的地址。然后返回对它的引用。这可能是一个常数，当你"
+  },
+  {
+    "origin": "get",
+    "local": "得到"
+  },
+  {
+    "origin": "the value and non-constant when you",
+    "local": "当你"
+  },
+  {
+    "origin": "set",
+    "local": "设置"
+  },
+  {
+    "origin": "the value. As a safety step in",
+    "local": "价值观。作为安全措施"
+  },
+  {
+    "origin": "debug mode only",
+    "local": "仅调试模式"
+  },
+  {
+    "origin": "* there is a check performed that your input coordinates are valid and do exist. If this isn't the case you'll get a nice output message of this on the standard error output stream. Compared to the efficient way in release mode the only difference in using this is that for every element of the image you'll get a new row pointer for what we use the C operator[] to acquire the column element.",
+    "local": "*检查输入坐标是否有效且确实存在。如果不是这样的话，您将在标准错误输出流中得到一个很好的输出消息。与release模式中的有效方法相比，使用这种方法的唯一区别在于，对于图像的每个元素，您将获得一个新的行指针，我们使用C操作符[]获取列元素。"
+  },
+  {
+    "origin": "If you need to do multiple lookups using this method for an image it may be troublesome and time consuming to enter the type and the at keyword for each of the accesses. To solve this problem OpenCV has a",
+    "local": "如果您需要使用此方法对一个图像进行多次查找，那么为每个访问输入类型和at关键字可能会非常麻烦和耗时。为了解决这个问题，OpenCV有一个"
+  },
+  {
+    "origin": "data type. It's the same as Mat with the extra need that at definition you need to specify the data type through what to look at the data matrix, however in return you can use the operator() for fast access of items. To make things even better this is easily convertible from and to the usual",
+    "local": "数据类型。它与Mat相同，只是在定义时需要通过查看数据矩阵的内容来指定数据类型，但是作为回报，您可以使用operator（）快速访问项。为了使事情变得更好，这是很容易转换和正常"
+  },
+  {
+    "origin": "data type. A sample usage of this you can see in case of the color images of the function above. Nevertheless, it's important to note that the same operation (with the same runtime speed) could have been done with the",
+    "local": "数据类型。您可以在上面函数的彩色图像中看到这个函数的示例用法。尽管如此，重要的是要注意，相同的操作（具有相同的运行时速度）可以用"
+  },
+  {
+    "origin": "function. It's just a less to write for the lazy programmer trick.",
+    "local": "功能。对于懒惰的程序员来说，这只是一个少写的把戏。"
+  },
+  {
+    "origin": "The Core Function",
+    "local": "核心功能"
+  },
+  {
+    "origin": "This is a bonus method of achieving lookup table modification in an image. In image processing it's quite common that you want to modify all of a given image values to some other value. OpenCV provides a function for modifying image values, without the need to write the scanning logic of the image. We use the",
+    "local": "这是在图像中实现查找表修改的额外方法。在图像处理中，很常见的情况是要将所有给定的图像值修改为其他值。OpenCV提供了一个修改图像值的函数，无需编写图像的扫描逻辑。我们使用"
+  },
+  {
+    "origin": "function of the core module. First we build a Mat type of the lookup table:",
+    "local": "核心模块的功能。首先，我们构建查找表的Mat类型："
+  },
+  {
+    "origin": "Finally call the function (I is our input image and J the output one):",
+    "local": "最后调用函数（I是我们的输入图像，J是输出图像）："
+  },
+  {
+    "origin": "Performance Difference",
+    "local": "性能差异"
+  },
+  {
+    "origin": "For the best result compile the program and run it yourself. To make the differences more clear, I've used a quite large (2560 X 1600) image. The performance presented here are for color images. For a more accurate value I've averaged the value I got from the call of the function for hundred times.",
+    "local": "为了获得最佳结果，请编译程序并自己运行。为了使差异更清楚，我使用了一个相当大的（2560x1600）图像。这里呈现的性能是针对彩色图像的。为了得到一个更精确的值，我将调用函数得到的值平均了一百次。"
+  },
+  {
+    "origin": "Method",
+    "local": "Method"
+  },
+  {
+    "origin": "Time",
+    "local": "时间"
+  },
+  {
+    "origin": "Efficient Way",
+    "local": "有效途径"
+  },
+  {
+    "origin": "79.4717 milliseconds",
+    "local": "79.4717毫秒"
+  },
+  {
+    "origin": "Iterator",
+    "local": "迭代器"
+  },
+  {
+    "origin": "83.7201 milliseconds",
+    "local": "83.7201毫秒"
+  },
+  {
+    "origin": "On-The-Fly RA",
+    "local": "飞行中RA"
+  },
+  {
+    "origin": "93.7878 milliseconds",
+    "local": "93.7878毫秒"
+  },
+  {
+    "origin": "LUT function",
+    "local": "LUT函数"
+  },
+  {
+    "origin": "32.5759 milliseconds",
+    "local": "32.5759毫秒"
+  },
+  {
+    "origin": "We can conclude a couple of things. If possible, use the already made functions of OpenCV (instead of reinventing these). The fastest method turns out to be the LUT function. This is because the OpenCV library is multi-thread enabled via Intel Threaded Building Blocks. However, if you need to write a simple image scan prefer the pointer method. The iterator is a safer bet, however quite slower. Using the on-the-fly reference access method for full image scan is the most costly in debug mode. In the release mode it may beat the iterator approach or not, however it surely sacrifices for this the safety trait of iterators.",
+    "local": "我们可以得出几个结论。如果可能的话，可以使用OpenCV已经生成的函数（而不是重新创建这些函数）。最快的方法是LUT函数。这是因为OpenCV库通过Intel线程构建块启用了多线程。但是，如果您需要编写一个简单的图像扫描首选指针方法。迭代器是一个更安全的赌注，但是速度相当慢。在调试模式下，使用实时参考访问方法进行全图像扫描是成本最高的。在发布模式中，它可能会击败迭代器方法，也可能不会，但是它肯定会为此牺牲迭代器的安全特性。"
+  },
+  {
+    "origin": "Finally, you may watch a sample run of the program on the",
+    "local": "最后，您可以在"
+  },
+  {
+    "origin": "video posted",
+    "local": "视频已发布"
+  },
+  {
+    "origin": "on our YouTube channel.",
+    "local": "在我们的YouTube频道。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;"
+  }
+]

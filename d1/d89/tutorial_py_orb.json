@@ -1,0 +1,118 @@
+[
+  {
+    "origin": "OpenCV: ORB (Oriented FAST and Rotated BRIEF)",
+    "local": "OpenCV:ORB（快速旋转）"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "ORB (Oriented FAST and Rotated BRIEF)",
+    "local": "ORB（快速旋转）"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this chapter,",
+    "local": "在本章中，"
+  },
+  {
+    "origin": "We will see the basics of ORB",
+    "local": "我们将了解ORB的基本知识"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "As an OpenCV enthusiast, the most important thing about the ORB is that it came from \"OpenCV Labs\". This algorithm was brought up by Ethan Rublee, Vincent Rabaud, Kurt Konolige and Gary R. Bradski in their paper",
+    "local": "作为一个OpenCV爱好者，关于ORB最重要的是它来自“OpenCV实验室”。该算法由Ethan Rublee、Vincent Rabaud、Kurt Konolige和Gary R。布拉德斯基在他们的论文中"
+  },
+  {
+    "origin": "ORB: An efficient alternative to SIFT or SURF",
+    "local": "圆球：筛选或冲浪的有效选择"
+  },
+  {
+    "origin": "in 2011. As the title says, it is a good alternative to SIFT and SURF in computation cost, matching performance and mainly the patents. Yes, SIFT and SURF are patented and you are supposed to pay them for its use. But ORB is not !!!",
+    "local": "2011年。正如标题所说，它是一个很好的选择，筛选和冲浪在计算成本，匹配性能，主要是专利。是的，SIFT和SURF是专利，你应该为它的使用付费。但圆球不是！！！"
+  },
+  {
+    "origin": "ORB is basically a fusion of FAST keypoint detector and BRIEF descriptor with many modifications to enhance the performance. First it use FAST to find keypoints, then apply Harris corner measure to find top N points among them. It also use pyramid to produce multiscale-features. But one problem is that, FAST doesn't compute the orientation. So what about rotation invariance? Authors came up with following modification.",
+    "local": "ORB基本上是一个融合了快速关键点检测器和简短描述符，并进行了许多改进以提高性能。首先利用快速算法寻找关键点，然后利用Harris角点测度寻找关键点中的前N个点。它还使用金字塔生成多尺度特征。但一个问题是，FAST不能计算方向。那么旋转不变性呢？作者提出了以下修改。"
+  },
+  {
+    "origin": "It computes the intensity weighted centroid of the patch with located corner at center. The direction of the vector from this corner point to centroid gives the orientation. To improve the rotation invariance, moments are computed with x and y which should be in a circular region of radius \\(r\\), where \\(r\\) is the size of the patch.",
+    "local": "该算法以角点为中心计算贴片的强度加权质心。从这个角点到质心的向量方向给出了方向。为了提高旋转不变性，用x和y计算矩，x和y应该在半径为\\（r\\）的圆形区域内，其中\\（r\\）是面片的大小。"
+  },
+  {
+    "origin": "Now for descriptors, ORB use BRIEF descriptors. But we have already seen that BRIEF performs poorly with rotation. So what ORB does is to \"steer\" BRIEF according to the orientation of keypoints. For any feature set of \\(n\\) binary tests at location \\((x_i, y_i)\\), define a \\(2 \\times n\\) matrix, \\(S\\) which contains the coordinates of these pixels. Then using the orientation of patch, \\(\\theta\\), its rotation matrix is found and rotates the \\(S\\) to get steered(rotated) version \\(S_\\theta\\).",
+    "local": "现在对于描述符，ORB使用简短的描述符。但我们已经看到，BRIEF在轮换时表现不佳。所以ORB所做的就是根据关键点的方向来“引导”BRIEF。对于位于位置\\（（x\\u i，y\\u i）\\）的\\（n\\）二进制测试的任何特征集，定义一个\\（2乘以n\\）矩阵\\（S\\），其中包含这些像素的坐标。然后利用面片的方向\\（\\θ\\），找到其旋转矩阵并旋转\\（S\\）以获得转向（旋转）版本\\（S\\θ\\）。"
+  },
+  {
+    "origin": "ORB discretize the angle to increments of \\(2 \\pi /30\\) (12 degrees), and construct a lookup table of precomputed BRIEF patterns. As long as the keypoint orientation \\(\\theta\\) is consistent across views, the correct set of points \\(S_\\theta\\) will be used to compute its descriptor.",
+    "local": "ORB将角度离散化为\\（2\\pi/30\\）（12度）的增量，并构建一个预先计算的简短模式的查找表。只要关键点方向\\（\\θ\\）在各个视图中是一致的，就将使用正确的点集\\（S\\θ\\）来计算其描述符。"
+  },
+  {
+    "origin": "BRIEF has an important property that each bit feature has a large variance and a mean near 0.5. But once it is oriented along keypoint direction, it loses this property and become more distributed. High variance makes a feature more discriminative, since it responds differentially to inputs. Another desirable property is to have the tests uncorrelated, since then each test will contribute to the result. To resolve all these, ORB runs a greedy search among all possible binary tests to find the ones that have both high variance and means close to 0.5, as well as being uncorrelated. The result is called",
+    "local": "BRIEF有一个重要的特性，即每个位特征都有很大的方差，平均值接近0.5。但是一旦它沿着关键点方向定向，它就失去了这个属性，变得更加分散。高方差使得特征更具鉴别能力，因为它对输入的响应不同。另一个可取的特性是使测试不相关，因为这样每个测试都会对结果作出贡献。为了解决所有这些问题，ORB在所有可能的二进制测试中进行贪婪搜索，以找到方差高、均值接近0.5以及不相关的测试。结果被调用"
+  },
+  {
+    "origin": "rBRIEF",
+    "local": "里夫"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "For descriptor matching, multi-probe LSH which improves on the traditional LSH, is used. The paper says ORB is much faster than SURF and SIFT and ORB descriptor works better than SURF. ORB is a good choice in low-power devices for panorama stitching etc.",
+    "local": "在描述符匹配方面，采用了多探针LSH算法，对传统LSH算法进行了改进。文章说，ORB比SURF和SIFT快得多，ORB描述符比SURF工作得更好。圆球是一个很好的选择，在低功耗设备的全景缝合等。"
+  },
+  {
+    "origin": "ORB in OpenCV",
+    "local": "OpenCV中的ORB"
+  },
+  {
+    "origin": "As usual, we have to create an ORB object with the function,",
+    "local": "像往常一样，我们必须用函数，"
+  },
+  {
+    "origin": "or using feature2d common interface. It has a number of optional parameters. Most useful ones are nFeatures which denotes maximum number of features to be retained (by default 500), scoreType which denotes whether Harris score or FAST score to rank the features (by default, Harris score) etc. Another parameter, WTA_K decides number of points that produce each element of the oriented BRIEF descriptor. By default it is two, ie selects two points at a time. In that case, for matching, NORM_HAMMING distance is used. If WTA_K is 3 or 4, which takes 3 or 4 points to produce BRIEF descriptor, then matching distance is defined by NORM_HAMMING2.",
+    "local": "或者使用feature2d公共接口。它有许多可选参数。最有用的是nFeatures，它表示要保留的特征的最大数量（默认为500），scoreType，它表示是Harris score还是FAST score来对特征进行排序（默认为Harris score），等等。另一个参数WTA_K决定了产生定向简短描述符的每个元素的点数。默认值为2（一次选择两个点）。在这种情况下，为了匹配，使用NORM\\u HAMMING距离。如果WTA_K是3或4，需要3或4个点来产生简短的描述，则匹配距离由范数\\u HAMMING2定义。"
+  },
+  {
+    "origin": "Below is a simple code which shows the use of ORB.",
+    "local": "下面是一个简单的代码，显示了ORB的用法。"
+  },
+  {
+    "origin": "See the result below:",
+    "local": "结果如下："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "ORB feature matching, we will do in another chapter.",
+    "local": "球体特征匹配，我们将在下一章做。"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Ethan Rublee, Vincent Rabaud, Kurt Konolige, Gary R. Bradski: ORB: An efficient alternative to SIFT or SURF. ICCV 2011: 2564-2571.",
+    "local": "伊桑·鲁布利、文森特·拉包德、库尔特·科诺里奇、加里·R。布拉德斯基：圆球：一个有效的选择筛或冲浪。ICCV 2011:2564-2571。"
+  },
+  {
+    "origin": "Exercises",
+    "local": "练习"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

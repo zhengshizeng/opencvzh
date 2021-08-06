@@ -1,0 +1,662 @@
+[
+  {
+    "origin": "OpenCV: Basic Operations on Images",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Basic Operations on Images",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "Learn how to access image properties",
+    "local": ""
+  },
+  {
+    "origin": "Learn how to construct Mat",
+    "local": ""
+  },
+  {
+    "origin": "Learn how to copy Mat",
+    "local": ""
+  },
+  {
+    "origin": "Learn how to convert the type of Mat",
+    "local": ""
+  },
+  {
+    "origin": "Learn how to use MatVector",
+    "local": ""
+  },
+  {
+    "origin": "Learn how to access pixel values and modify them",
+    "local": ""
+  },
+  {
+    "origin": "Learn how to set Region of Interest (ROI)",
+    "local": ""
+  },
+  {
+    "origin": "Learn how to split and merge images",
+    "local": ""
+  },
+  {
+    "origin": "Accessing Image Properties",
+    "local": ""
+  },
+  {
+    "origin": "Image properties include number of rows, columns and size, depth, channels, type of image data.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "src.type() is very important while debugging because a large number of errors in OpenCV.js code are caused by invalid data type.",
+    "local": ""
+  },
+  {
+    "origin": "How to construct Mat",
+    "local": ""
+  },
+  {
+    "origin": "There are 4 basic constructors:",
+    "local": ""
+  },
+  {
+    "origin": "There are 3 static functions:",
+    "local": ""
+  },
+  {
+    "origin": "There are 2 factory functions:",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Don't forget to delete",
+    "local": ""
+  },
+  {
+    "origin": "when you don't want to use it any more.",
+    "local": ""
+  },
+  {
+    "origin": "How to copy Mat",
+    "local": ""
+  },
+  {
+    "origin": "There are 2 ways to copy a Mat:",
+    "local": ""
+  },
+  {
+    "origin": "How to convert the type of Mat",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "convertTo(m, rtype, alpha = 1, beta = 0)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": "output matrix; if it does not have a proper size or type before the operation, it is reallocated.",
+    "local": ""
+  },
+  {
+    "origin": "rtype",
+    "local": ""
+  },
+  {
+    "origin": "desired output matrix type or, rather, the depth since the number of channels are the same as the input has; if rtype is negative, the output matrix will have the same type as the input.",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "optional scale factor.",
+    "local": ""
+  },
+  {
+    "origin": "beta",
+    "local": ""
+  },
+  {
+    "origin": "optional delta added to the scaled values.",
+    "local": ""
+  },
+  {
+    "origin": "How use MatVector",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Don't forget to delete",
+    "local": ""
+  },
+  {
+    "origin": ", cv.MatVector and cnt(the Mat you get from MatVector) when you don't want to use them any more.",
+    "local": ""
+  },
+  {
+    "origin": "Accessing and Modifying pixel values",
+    "local": ""
+  },
+  {
+    "origin": "Firstly, you should know the following type relationship:",
+    "local": ""
+  },
+  {
+    "origin": "Data Properties",
+    "local": ""
+  },
+  {
+    "origin": "C++ Type",
+    "local": ""
+  },
+  {
+    "origin": "JavaScript Typed Array",
+    "local": ""
+  },
+  {
+    "origin": "Mat Type",
+    "local": ""
+  },
+  {
+    "origin": "data",
+    "local": ""
+  },
+  {
+    "origin": "uchar",
+    "local": ""
+  },
+  {
+    "origin": "Uint8Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_8U",
+    "local": ""
+  },
+  {
+    "origin": "data8S",
+    "local": ""
+  },
+  {
+    "origin": "char",
+    "local": ""
+  },
+  {
+    "origin": "Int8Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_8S",
+    "local": ""
+  },
+  {
+    "origin": "data16U",
+    "local": ""
+  },
+  {
+    "origin": "ushort",
+    "local": ""
+  },
+  {
+    "origin": "Uint16Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_16U",
+    "local": ""
+  },
+  {
+    "origin": "data16S",
+    "local": ""
+  },
+  {
+    "origin": "short",
+    "local": ""
+  },
+  {
+    "origin": "Int16Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_16S",
+    "local": ""
+  },
+  {
+    "origin": "data32S",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "Int32Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_32S",
+    "local": ""
+  },
+  {
+    "origin": "data32F",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "Float32Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_32F",
+    "local": ""
+  },
+  {
+    "origin": "data64F",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "Float64Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_64F",
+    "local": ""
+  },
+  {
+    "origin": "1. data",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Data manipulation is only valid for continuous Mat. You should use isContinuous() to check first.",
+    "local": ""
+  },
+  {
+    "origin": "2. at",
+    "local": ""
+  },
+  {
+    "origin": "Mat Type",
+    "local": ""
+  },
+  {
+    "origin": "At Manipulation",
+    "local": ""
+  },
+  {
+    "origin": "CV_8U",
+    "local": ""
+  },
+  {
+    "origin": "ucharAt",
+    "local": ""
+  },
+  {
+    "origin": "CV_8S",
+    "local": ""
+  },
+  {
+    "origin": "charAt",
+    "local": ""
+  },
+  {
+    "origin": "CV_16U",
+    "local": ""
+  },
+  {
+    "origin": "ushortAt",
+    "local": ""
+  },
+  {
+    "origin": "CV_16S",
+    "local": ""
+  },
+  {
+    "origin": "shortAt",
+    "local": ""
+  },
+  {
+    "origin": "CV_32S",
+    "local": ""
+  },
+  {
+    "origin": "intAt",
+    "local": ""
+  },
+  {
+    "origin": "CV_32F",
+    "local": ""
+  },
+  {
+    "origin": "floatAt",
+    "local": ""
+  },
+  {
+    "origin": "CV_64F",
+    "local": ""
+  },
+  {
+    "origin": "doubleAt",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "At manipulation is only for single channel access and the value can't be modified.",
+    "local": ""
+  },
+  {
+    "origin": "3. ptr",
+    "local": ""
+  },
+  {
+    "origin": "Mat Type",
+    "local": ""
+  },
+  {
+    "origin": "Ptr Manipulation",
+    "local": ""
+  },
+  {
+    "origin": "JavaScript Typed Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_8U",
+    "local": ""
+  },
+  {
+    "origin": "ucharPtr",
+    "local": ""
+  },
+  {
+    "origin": "Uint8Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_8S",
+    "local": ""
+  },
+  {
+    "origin": "charPtr",
+    "local": ""
+  },
+  {
+    "origin": "Int8Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_16U",
+    "local": ""
+  },
+  {
+    "origin": "ushortPtr",
+    "local": ""
+  },
+  {
+    "origin": "Uint16Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_16S",
+    "local": ""
+  },
+  {
+    "origin": "shortPtr",
+    "local": ""
+  },
+  {
+    "origin": "Int16Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_32S",
+    "local": ""
+  },
+  {
+    "origin": "intPtr",
+    "local": ""
+  },
+  {
+    "origin": "Int32Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_32F",
+    "local": ""
+  },
+  {
+    "origin": "floatPtr",
+    "local": ""
+  },
+  {
+    "origin": "Float32Array",
+    "local": ""
+  },
+  {
+    "origin": "CV_64F",
+    "local": ""
+  },
+  {
+    "origin": "doublePtr",
+    "local": ""
+  },
+  {
+    "origin": "Float64Array",
+    "local": ""
+  },
+  {
+    "origin": "mat.ucharPtr(k) get the k th row of the mat. mat.ucharPtr(i, j) get the i th row and the j th column of the mat.",
+    "local": ""
+  },
+  {
+    "origin": "Image ROI",
+    "local": ""
+  },
+  {
+    "origin": "Sometimes, you will have to play with certain region of images. For eye detection in images, first face detection is done all over the image and when face is obtained, we select the face region alone and search for eyes inside it instead of searching whole image. It improves accuracy (because eyes are always on faces) and performance (because we search for a small area)",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "roi (rect)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "rect",
+    "local": ""
+  },
+  {
+    "origin": "rectangle Region of Interest.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Splitting and Merging Image Channels",
+    "local": ""
+  },
+  {
+    "origin": "Sometimes you will need to work separately on R,G,B channels of image. Then you need to split the RGB images to single planes. Or another time, you may need to join these individual channels to RGB image.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Don't forget to delete",
+    "local": ""
+  },
+  {
+    "origin": ", cv.MatVector and R(the Mat you get from MatVector) when you don't want to use them any more.",
+    "local": ""
+  },
+  {
+    "origin": "Making Borders for Images (Padding)",
+    "local": ""
+  },
+  {
+    "origin": "If you want to create a border around the image, something like a photo frame, you can use",
+    "local": ""
+  },
+  {
+    "origin": "function. But it has more applications for convolution operation, zero padding etc. This function takes following arguments:",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "- input image",
+    "local": ""
+  },
+  {
+    "origin": "top",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bottom",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "left",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "right",
+    "local": ""
+  },
+  {
+    "origin": "- border width in number of pixels in corresponding directions",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "- Flag defining what kind of border to be added. It can be following types:",
+    "local": ""
+  },
+  {
+    "origin": "- Adds a constant colored border. The value should be given as next argument.",
+    "local": ""
+  },
+  {
+    "origin": "- Border will be mirror reflection of the border elements, like this :",
+    "local": ""
+  },
+  {
+    "origin": "fedcba|abcdefgh|hgfedcb",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "- Same as above, but with a slight change, like this :",
+    "local": ""
+  },
+  {
+    "origin": "gfedcb|abcdefgh|gfedcba",
+    "local": ""
+  },
+  {
+    "origin": "- Last element is replicated throughout, like this:",
+    "local": ""
+  },
+  {
+    "origin": "aaaaaa|abcdefgh|hhhhhhh",
+    "local": ""
+  },
+  {
+    "origin": "- Can't explain, it will look like this :",
+    "local": ""
+  },
+  {
+    "origin": "cdefgh|abcdefgh|abcdefg",
+    "local": ""
+  },
+  {
+    "origin": "value",
+    "local": ""
+  },
+  {
+    "origin": "- Color of border if border type is",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "origin": "OpenCV: Filtering using F-transform",
+    "local": "OpenCV：使用F变换进行过滤"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Filtering using F-transform",
+    "local": "F变换滤波"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "This tutorial demonstrates to you how to use F-transform for image filtering. You will see:",
+    "local": "本教程向您演示如何使用F变换进行图像过滤。您将看到："
+  },
+  {
+    "origin": "basic theory behind,",
+    "local": "背后的基本理论，"
+  },
+  {
+    "origin": "illustration of different settings.",
+    "local": "不同设置的图示。"
+  },
+  {
+    "origin": "Fuzzy transform application",
+    "local": "模糊变换应用"
+  },
+  {
+    "origin": "As I shown in previous tutorial, F-transform is a tool of fuzzy mathematics highly usable in image processing. Let me rewrite the formula using kernel \\(g\\) introduced before as well:",
+    "local": "正如我在上一个教程中所展示的，F变换是模糊数学的一个工具，在图像处理中非常有用。让我用前面介绍的kernel\\（g\\）重写公式："
+  },
+  {
+    "origin": "\\[ F^0_{kl}=\\frac{\\sum_{x=0}^{2h+1}\\sum_{y=0}^{2h+1} \\iota_{kl}(x,y) g(x,y)}{\\sum_{x=0}^{2h+1}\\sum_{y=0}^{2h+1} g(x,y)}, \\]",
+    "local": "\\[f ^0{kl}=\\frac{\\sum{x=0}^{2h+1}\\sum{y=0}^{2h+1}\\iota{kl}（x，y）g（x，y）}{\\sum{x=0}^{2h+1}\\sum{y=0}^{2h+1}g（x，y）}，\\]"
+  },
+  {
+    "origin": "where \\(\\iota_{kl} \\subset I\\) centered to pixel \\((k \\cdot h,l \\cdot h)\\) and \\(g\\) is a kernel. More details can be found in related papers.",
+    "local": "其中，\\（\\iota{kl}\\子集I\\）以像素为中心，\\（（k\\cdot h，l\\cdot h）\\）和\\（g\\）是内核。更多细节见相关论文。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Image filtering changes input in a defined way to enhance or simply change some concrete feature. Let me demonstrate some simple blur.",
+    "local": "图像过滤以一种确定的方式改变输入，以增强或简单地改变某些具体特征。让我来演示一些简单的模糊。"
+  },
+  {
+    "origin": "As a first step, we load input image.",
+    "local": "作为第一步，我们加载输入图像。"
+  },
+  {
+    "origin": "Following the F-transform formula, we must specify a kernel.",
+    "local": "按照F变换公式，我们必须指定一个内核。"
+  },
+  {
+    "origin": "So now, we have two kernels that differ in",
+    "local": "所以现在，我们有两个不同的内核"
+  },
+  {
+    "origin": ". Bigger radius leads to bigger blur.",
+    "local": ". 半径越大，模糊度越大。"
+  },
+  {
+    "origin": "The filtering itself is applied as shown below.",
+    "local": "过滤本身的应用如下所示。"
+  },
+  {
+    "origin": "Output images look as follows.",
+    "local": "输出图像如下所示。"
+  },
+  {
+    "origin": "input, output1 (radius 3), output2 (radius 100)",
+    "local": "输入，输出1（半径3），输出2（半径100）"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:38为OpenCV生成，&#160；"
+  }
+]

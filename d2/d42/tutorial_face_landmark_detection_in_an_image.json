@@ -1,0 +1,78 @@
+[
+  {
+    "origin": "OpenCV: Face landmark detection in an image",
+    "local": "OpenCV：图像中的人脸标志点检测"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Face landmark detection in an image",
+    "local": "图像中的人脸标志点检测"
+  },
+  {
+    "origin": "This application lets you detect landmarks of detected faces in an image. You can detect landmarks of all the faces found in an image and use them further in various applications like face swapping, face averaging etc. This functionality is now available in OpenCV.",
+    "local": "此应用程序允许您检测图像中检测到的人脸的地标。您可以检测在图像中找到的所有人脸的地标，并在各种应用程序中进一步使用这些地标，如人脸交换、人脸平均等。此功能现在在OpenCV中可用。"
+  },
+  {
+    "origin": "Description of command parameters {tutorial_face_training_parameters}",
+    "local": "命令参数说明{教程\\u面\\u训练\\u参数}"
+  },
+  {
+    "origin": "model_filename",
+    "local": "型号\\文件名"
+  },
+  {
+    "origin": "f : (REQUIRED) A path to binary file storing the trained model which is to be loaded [example - /data/file.dat]",
+    "local": "f：（必选）存储要加载的训练模型的二进制文件的路径[example-/data/file.dat]"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "i : (REQUIRED) A path to image in which face landmarks have to be detected.[example - /data/image.jpg]",
+    "local": "i：（必选）一个到图像的路径，在该路径中必须检测到人脸标志。[example-/data/image.jpg]"
+  },
+  {
+    "origin": "face_cascade",
+    "local": "面层叠"
+  },
+  {
+    "origin": "c : (REQUIRED) A path to the face cascade xml file which you want to use as a face detector.",
+    "local": "c：（必选）要用作人脸检测器的人脸级联xml文件的路径。"
+  },
+  {
+    "origin": "Understanding code",
+    "local": "理解代码"
+  },
+  {
+    "origin": "This tutorial will explain the sample code for face landmark detection. Jumping directly to the code :",
+    "local": "本教程将解释人脸地标检测的示例代码。直接跳转到代码："
+  },
+  {
+    "origin": "The above code creates a CascadeClassifier to detect face regions, and an instance of the face landmark detection class. We need to load a pretrained model for face landmark detection, and a cascade file for the face detection. It also loads the image in which landmarks have to be detected.",
+    "local": "上面的代码创建了一个级联分类器来检测人脸区域，以及一个人脸地标检测类的实例。我们需要加载一个预训练的模型来进行人脸地标检测，并加载一个级联文件来进行人脸检测。它还加载需要检测地标的图像。"
+  },
+  {
+    "origin": "After doing some preprocessing, we first have to detect possible face regions (which will be stored in a",
+    "local": "在做了一些预处理之后，我们首先要检测可能的人脸区域（这些区域将存储在"
+  },
+  {
+    "origin": ". Also, the image is resized to a smaller size as processing speed is faster with small images.",
+    "local": ". 此外，图像的大小被调整为较小的大小，因为处理小图像的速度更快。"
+  },
+  {
+    "origin": "It then creates a vector of vector to store shapes for each face detected. The above code calls the function fit to get shapes of all detected faces in the image and then draws the rectangles bounding the faces and marks the desired landmarks.",
+    "local": "然后它创建一个向量向量来存储检测到的每个人脸的形状。上面的代码调用fit函数来获取图像中所有检测到的人脸的形状，然后绘制包围这些人脸的矩形并标记所需的地标。"
+  },
+  {
+    "origin": "Detection Results",
+    "local": "检测结果"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:38为OpenCV生成，&#160；"
+  }
+]

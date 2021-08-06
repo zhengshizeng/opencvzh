@@ -1,0 +1,578 @@
+[
+  {
+    "origin": "OpenCV: Experimental 2D Features Matching Algorithm",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Experimental 2D Features Matching Algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;size1, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;size2, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keypoints1, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keypoints2, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;matches1to2, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;matchesGMS, const bool withRotation=false, const bool withScale=false, const double thresholdFactor=6.0)",
+    "local": ""
+  },
+  {
+    "origin": "GMS (Grid-based Motion Statistics) feature matching strategy described in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keypoints1, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keypoints2, const std::vector&lt; int &gt; &amp;nn1, const std::vector&lt; int &gt; &amp;nn2, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;matches1to2)",
+    "local": ""
+  },
+  {
+    "origin": "LOGOS (Local geometric support for high-outlier spatial verification) feature matching strategy described in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "This section describes the following matching strategies:",
+    "local": ""
+  },
+  {
+    "origin": "GMS: Grid-based Motion Statistics,",
+    "local": ""
+  },
+  {
+    "origin": "LOGOS: Local geometric support for high-outlier spatial verification,",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "matchGMS()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::xfeatures2d::matchGMS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "size1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "size2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "matches1to2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "matchesGMS",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const bool",
+    "local": ""
+  },
+  {
+    "origin": "withRotation",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const bool",
+    "local": ""
+  },
+  {
+    "origin": "withScale",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const double",
+    "local": ""
+  },
+  {
+    "origin": "thresholdFactor",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "matchesGMS",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.xfeatures2d.matchGMS(",
+    "local": ""
+  },
+  {
+    "origin": "size1, size2, keypoints1, keypoints2, matches1to2[, withRotation[, withScale[, thresholdFactor]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "GMS (Grid-based Motion Statistics) feature matching strategy described in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "size1",
+    "local": ""
+  },
+  {
+    "origin": "Input size of image1.",
+    "local": ""
+  },
+  {
+    "origin": "size2",
+    "local": ""
+  },
+  {
+    "origin": "Input size of image2.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints1",
+    "local": ""
+  },
+  {
+    "origin": "Input keypoints of image1.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints2",
+    "local": ""
+  },
+  {
+    "origin": "Input keypoints of image2.",
+    "local": ""
+  },
+  {
+    "origin": "matches1to2",
+    "local": ""
+  },
+  {
+    "origin": "Input 1-nearest neighbor matches.",
+    "local": ""
+  },
+  {
+    "origin": "matchesGMS",
+    "local": ""
+  },
+  {
+    "origin": "Matches returned by the GMS matching strategy.",
+    "local": ""
+  },
+  {
+    "origin": "withRotation",
+    "local": ""
+  },
+  {
+    "origin": "Take rotation transformation into account.",
+    "local": ""
+  },
+  {
+    "origin": "withScale",
+    "local": ""
+  },
+  {
+    "origin": "Take scale transformation into account.",
+    "local": ""
+  },
+  {
+    "origin": "thresholdFactor",
+    "local": ""
+  },
+  {
+    "origin": "The higher, the less matches.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Since GMS works well when the number of features is large, we recommend to use the",
+    "local": ""
+  },
+  {
+    "origin": "feature and set FastThreshold to 0 to get as many as possible features quickly. If matching results are not satisfying, please add more features. (We use 10000 for images with 640 X 480). If your images have big rotation and scale changes, please set withRotation or withScale to true.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "matchLOGOS()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::xfeatures2d::matchLOGOS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt; int &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "nn1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt; int &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "nn2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "matches1to2",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.xfeatures2d.matchLOGOS(",
+    "local": ""
+  },
+  {
+    "origin": "keypoints1, keypoints2, nn1, nn2, matches1to2",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "LOGOS (Local geometric support for high-outlier spatial verification) feature matching strategy described in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "keypoints1",
+    "local": ""
+  },
+  {
+    "origin": "Input keypoints of image1.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints2",
+    "local": ""
+  },
+  {
+    "origin": "Input keypoints of image2.",
+    "local": ""
+  },
+  {
+    "origin": "nn1",
+    "local": ""
+  },
+  {
+    "origin": "Index to the closest BoW centroid for each descriptors of image1.",
+    "local": ""
+  },
+  {
+    "origin": "nn2",
+    "local": ""
+  },
+  {
+    "origin": "Index to the closest BoW centroid for each descriptors of image2.",
+    "local": ""
+  },
+  {
+    "origin": "matches1to2",
+    "local": ""
+  },
+  {
+    "origin": "Matches returned by the LOGOS matching strategy.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This matching strategy is suitable for features matching against large scale database. First step consists in constructing the bag-of-words (BoW) from a representative image database. Image descriptors are then represented by their closest codevector (nearest BoW centroid).",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by",
+    "local": ""
+  }
+]

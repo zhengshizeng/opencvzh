@@ -1,0 +1,890 @@
+[
+  {
+    "origin": "OpenCV: opencv2/dnn/dnn.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "dnn.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Derivatives of this class encapsulates functions of certain backends.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Derivatives of this class wraps",
+    "local": ""
+  },
+  {
+    "origin": "for different backends and targets.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This class represents high-level API for classification models.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This class represents high-level API for object detection networks.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This class represents high-level API for keypoints models.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This interface class allows to build new Layers - are building blocks of networks.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This class provides all data needed to initialize layer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This class is presented high-level API for neural networks.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This class allows to create and manipulate comprehensive artificial neural networks.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This class represents high-level API for segmentation models.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Base class for text detection networks.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This class represents high-level API for text detection DL networks compatible with DB model.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This class represents high-level API for text detection DL networks compatible with EAST model.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This class represents high-level API for text recognition networks.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Enum of computation backends supported by layers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Enum of target devices for computations.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray image, double scalefactor=1.0, const Size &amp;size=Size(), const Scalar &amp;mean=Scalar(), bool swapRB=false, bool crop=false, int ddepth=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates 4-dimensional blob from image. Optionally resizes and crops",
+    "local": ""
+  },
+  {
+    "origin": "from center, subtract",
+    "local": ""
+  },
+  {
+    "origin": "values, scales values by",
+    "local": ""
+  },
+  {
+    "origin": ", swap Blue and Red channels.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray image, OutputArray blob, double scalefactor=1.0, const Size &amp;size=Size(), const Scalar &amp;mean=Scalar(), bool swapRB=false, bool crop=false, int ddepth=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates 4-dimensional blob from image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays images, double scalefactor=1.0, Size size=Size(), const Scalar &amp;mean=Scalar(), bool swapRB=false, bool crop=false, int ddepth=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates 4-dimensional blob from series of images. Optionally resizes and crops",
+    "local": ""
+  },
+  {
+    "origin": "from center, subtract",
+    "local": ""
+  },
+  {
+    "origin": "values, scales values by",
+    "local": ""
+  },
+  {
+    "origin": ", swap Blue and Red channels.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays images, OutputArray blob, double scalefactor=1.0, Size size=Size(), const Scalar &amp;mean=Scalar(), bool swapRB=false, bool crop=false, int ddepth=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates 4-dimensional blob from series of images.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(bool isDiagnosticsMode)",
+    "local": ""
+  },
+  {
+    "origin": "Enables detailed logging of the DNN model loading with CV DNN API.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(dnn::Backend be)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;blob_, OutputArrayOfArrays images_)",
+    "local": ""
+  },
+  {
+    "origin": "Parse a 4D blob and output the images it contains as 2D arrays through a simpler data structure (std::vector&lt;cv::Mat&gt;).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt; Rect &gt; &amp;bboxes, const std::vector&lt; float &gt; &amp;scores, const float score_threshold, const float nms_threshold, std::vector&lt; int &gt; &amp;indices, const float eta=1.f, const int top_k=0)",
+    "local": ""
+  },
+  {
+    "origin": "Performs non maximum suppression given boxes and corresponding scores.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt; Rect2d &gt; &amp;bboxes, const std::vector&lt; float &gt; &amp;scores, const float score_threshold, const float nms_threshold, std::vector&lt; int &gt; &amp;indices, const float eta=1.f, const int top_k=0)",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt; RotatedRect &gt; &amp;bboxes, const std::vector&lt; float &gt; &amp;scores, const float score_threshold, const float nms_threshold, std::vector&lt; int &gt; &amp;indices, const float eta=1.f, const int top_k=0)",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;model, const String &amp;config=&quot;&quot;, const String &amp;framework=&quot;&quot;)",
+    "local": ""
+  },
+  {
+    "origin": "Read deep learning network represented in one of the supported formats.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;framework, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferModel, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferConfig=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;())",
+    "local": ""
+  },
+  {
+    "origin": "Read deep learning network represented in one of the supported formats.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;prototxt, const String &amp;caffeModel=String())",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model stored in",
+    "local": ""
+  },
+  {
+    "origin": "Caffe",
+    "local": ""
+  },
+  {
+    "origin": "framework's format.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferProto, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferModel=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;())",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model stored in Caffe model in memory.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const char *bufferProto, size_t lenProto, const char *bufferModel=NULL, size_t lenModel=0)",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model stored in Caffe model in memory.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;cfgFile, const String &amp;darknetModel=String())",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model stored in",
+    "local": ""
+  },
+  {
+    "origin": "Darknet",
+    "local": ""
+  },
+  {
+    "origin": "model files.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferCfg, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferModel=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;())",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model stored in",
+    "local": ""
+  },
+  {
+    "origin": "Darknet",
+    "local": ""
+  },
+  {
+    "origin": "model files.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const char *bufferCfg, size_t lenCfg, const char *bufferModel=NULL, size_t lenModel=0)",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model stored in",
+    "local": ""
+  },
+  {
+    "origin": "Darknet",
+    "local": ""
+  },
+  {
+    "origin": "model files.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;xml, const String &amp;bin)",
+    "local": ""
+  },
+  {
+    "origin": "Load a network from Intel's",
+    "local": ""
+  },
+  {
+    "origin": "Optimizer intermediate representation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferModelConfig, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferWeights)",
+    "local": ""
+  },
+  {
+    "origin": "Load a network from Intel's",
+    "local": ""
+  },
+  {
+    "origin": "Optimizer intermediate representation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*bufferModelConfigPtr, size_t bufferModelConfigSize, const",
+    "local": ""
+  },
+  {
+    "origin": "*bufferWeightsPtr, size_t bufferWeightsSize)",
+    "local": ""
+  },
+  {
+    "origin": "Load a network from Intel's",
+    "local": ""
+  },
+  {
+    "origin": "Optimizer intermediate representation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;onnxFile)",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model",
+    "local": ""
+  },
+  {
+    "origin": "ONNX",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const char *buffer, size_t sizeBuffer)",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model from",
+    "local": ""
+  },
+  {
+    "origin": "ONNX",
+    "local": ""
+  },
+  {
+    "origin": "in-memory buffer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;buffer)",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model from",
+    "local": ""
+  },
+  {
+    "origin": "ONNX",
+    "local": ""
+  },
+  {
+    "origin": "in-memory buffer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;model, const String &amp;config=String())",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model stored in",
+    "local": ""
+  },
+  {
+    "origin": "TensorFlow",
+    "local": ""
+  },
+  {
+    "origin": "framework's format.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferModel, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferConfig=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;())",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model stored in",
+    "local": ""
+  },
+  {
+    "origin": "TensorFlow",
+    "local": ""
+  },
+  {
+    "origin": "framework's format.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const char *bufferModel, size_t lenModel, const char *bufferConfig=NULL, size_t lenConfig=0)",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model stored in",
+    "local": ""
+  },
+  {
+    "origin": "TensorFlow",
+    "local": ""
+  },
+  {
+    "origin": "framework's format.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;model, bool isBinary=true, bool evaluate=true)",
+    "local": ""
+  },
+  {
+    "origin": "Reads a network model stored in",
+    "local": ""
+  },
+  {
+    "origin": "Torch7",
+    "local": ""
+  },
+  {
+    "origin": "framework's format.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;path)",
+    "local": ""
+  },
+  {
+    "origin": "Creates blob from .pb file.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;filename, bool isBinary=true)",
+    "local": ""
+  },
+  {
+    "origin": "Loads blob which was serialized as torch.Tensor object of Torch7 framework.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;src, const String &amp;dst, const std::vector&lt; String &gt; &amp;layersTypes=std::vector&lt; String &gt;())",
+    "local": ""
+  },
+  {
+    "origin": "Convert all weights of Caffe network to half precision floating point.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const String &amp;model, const String &amp;output)",
+    "local": ""
+  },
+  {
+    "origin": "Create a text representation for a binary network stored in protocol buffer format.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

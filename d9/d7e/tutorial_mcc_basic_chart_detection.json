@@ -1,0 +1,98 @@
+[
+  {
+    "origin": "OpenCV: Detecting colorcheckers using basic algorithms",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Detecting colorcheckers using basic algorithms",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to use the 'mcc' module to detect colorcharts in a image. Here we will only use the basic detection algorithm. In the next tutorial you will see how you can improve detection accuracy using a neural network.",
+    "local": ""
+  },
+  {
+    "origin": "Building",
+    "local": ""
+  },
+  {
+    "origin": "When building OpenCV, run the following command to build all the contrib module:",
+    "local": ""
+  },
+  {
+    "origin": "Or only build the mcc module:",
+    "local": ""
+  },
+  {
+    "origin": "Or make sure you check the mcc module in the GUI version of CMake: cmake-gui.",
+    "local": ""
+  },
+  {
+    "origin": "Source Code of the sample",
+    "local": ""
+  },
+  {
+    "origin": "&ndash;ci=# is the camera ID where 0 (default is the main camera), 1 (secondary camera) etc",
+    "local": ""
+  },
+  {
+    "origin": "&ndash;nc=# By default its values is 1 which means only the best chart will be detected",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Set header and namespaces",
+    "local": ""
+  },
+  {
+    "origin": "If you want you can set the namespace like the code above.",
+    "local": ""
+  },
+  {
+    "origin": "Create the detector object",
+    "local": ""
+  },
+  {
+    "origin": "This is just to create the object.",
+    "local": ""
+  },
+  {
+    "origin": "Run the detector",
+    "local": ""
+  },
+  {
+    "origin": "If the detector successfully detects atleast one chart, it return true otherwise it returns false. In the above given code we print a failure message if no chart were detected. Otherwise if it were successful, the list of colorcharts is stored inside the detector itself, we will see in the next step on how to extract it. By default it will detect atmost one chart, but you can tune the third parameter, nc(maximum number of charts), for detecting more charts.",
+    "local": ""
+  },
+  {
+    "origin": "Get List of ColorCheckers",
+    "local": ""
+  },
+  {
+    "origin": "All the colorcheckers that were detected are now stored in the 'checkers' vector.",
+    "local": ""
+  },
+  {
+    "origin": "Draw the colorcheckers back to the image",
+    "local": ""
+  },
+  {
+    "origin": "Loop through all the checkers one by one and then draw them.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": ""
+  }
+]

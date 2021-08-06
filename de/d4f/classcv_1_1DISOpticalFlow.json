@@ -1,0 +1,2022 @@
+[
+  {
+    "origin": "OpenCV: cv::DISOpticalFlow Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::DISOpticalFlow Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "abstract",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "DIS optical flow algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::DISOpticalFlow:",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "virtual int",
+    "local": ""
+  },
+  {
+    "origin": "Finest level of the Gaussian pyramid on which the flow is computed (zero level corresponds to the original image resolution). The final flow is obtained by bilinear upscaling.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual int",
+    "local": ""
+  },
+  {
+    "origin": "Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual int",
+    "local": ""
+  },
+  {
+    "origin": "Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well enough in most cases.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual int",
+    "local": ""
+  },
+  {
+    "origin": "Stride between neighbor patches. Must be less than patch size. Lower values correspond to higher flow quality.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool",
+    "local": ""
+  },
+  {
+    "origin": "Whether to use mean-normalization of patches when computing patch distance. It is turned on by default as it typically provides a noticeable quality boost because of increased robustness to illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes in illumination.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool",
+    "local": ""
+  },
+  {
+    "origin": "Whether to use spatial propagation of good optical flow vectors. This option is turned on by default, as it tends to work better on average and can sometimes help recover from major errors introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this option off can make the output flow field a bit smoother, however.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual float",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the smoothness term.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual float",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the color constancy term.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual float",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the gradient constancy term.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual int",
+    "local": ""
+  },
+  {
+    "origin": "Number of fixed point iterations of variational refinement per scale. Set to zero to disable variational refinement completely. Higher values will typically result in more smooth and high-quality flow.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Finest level of the Gaussian pyramid on which the flow is computed (zero level corresponds to the original image resolution). The final flow is obtained by bilinear upscaling.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well enough in most cases.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Stride between neighbor patches. Must be less than patch size. Lower values correspond to higher flow quality.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Whether to use mean-normalization of patches when computing patch distance. It is turned on by default as it typically provides a noticeable quality boost because of increased robustness to illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes in illumination.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Whether to use spatial propagation of good optical flow vectors. This option is turned on by default, as it tends to work better on average and can sometimes help recover from major errors introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this option off can make the output flow field a bit smoother, however.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the smoothness term.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the color constancy term.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the gradient constancy term.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "I0,",
+    "local": ""
+  },
+  {
+    "origin": "I1,",
+    "local": ""
+  },
+  {
+    "origin": "Calculates an optical flow.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "Releases all inner buffers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Clears the algorithm state.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns true if the",
+    "local": ""
+  },
+  {
+    "origin": "is empty (e.g. in the very beginning or after unsuccessful read.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": ""
+  },
+  {
+    "origin": "Reads algorithm parameters from a file storage.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename) const",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": ""
+  },
+  {
+    "origin": "Stores algorithm parameters in a file storage.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;fs, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;name=",
+    "local": ""
+  },
+  {
+    "origin": "()) const",
+    "local": ""
+  },
+  {
+    "origin": "simplified API for language bindings This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int preset=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates an instance of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Loads algorithm from the file.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;strModel, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Loads algorithm from a String.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": ""
+  },
+  {
+    "origin": "Reads algorithm from the file node.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "DIS optical flow algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "This class implements the Dense Inverse Search (DIS) optical flow algorithm. More details about the algorithm can be found at",
+    "local": ""
+  },
+  {
+    "origin": ". Includes three presets with preselected parameters to provide reasonable trade-off between speed and quality. However, even the slowest preset is still relatively fast, use DeepFlow if you need better quality and don't care about speed.",
+    "local": ""
+  },
+  {
+    "origin": "This implementation includes several additional features compared to the algorithm described in the paper, including spatial propagation of flow vectors (",
+    "local": ""
+  },
+  {
+    "origin": "), as well as an option to utilize an initial flow approximation passed to",
+    "local": ""
+  },
+  {
+    "origin": "(which is, essentially, temporal propagation, if the previous frame's flow field is passed).",
+    "local": ""
+  },
+  {
+    "origin": "Member Enumeration Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "PRESET_ULTRAFAST",
+    "local": ""
+  },
+  {
+    "origin": "PRESET_FAST",
+    "local": ""
+  },
+  {
+    "origin": "PRESET_MEDIUM",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "create()",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::DISOpticalFlow::create",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "preset",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow_create(",
+    "local": ""
+  },
+  {
+    "origin": "[, preset]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates an instance of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "preset",
+    "local": ""
+  },
+  {
+    "origin": "one of PRESET_ULTRAFAST, PRESET_FAST and PRESET_MEDIUM",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getFinestScale()",
+    "local": ""
+  },
+  {
+    "origin": "virtual int cv::DISOpticalFlow::getFinestScale",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.getFinestScale(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Finest level of the Gaussian pyramid on which the flow is computed (zero level corresponds to the original image resolution). The final flow is obtained by bilinear upscaling.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getGradientDescentIterations()",
+    "local": ""
+  },
+  {
+    "origin": "virtual int cv::DISOpticalFlow::getGradientDescentIterations",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.getGradientDescentIterations(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getPatchSize()",
+    "local": ""
+  },
+  {
+    "origin": "virtual int cv::DISOpticalFlow::getPatchSize",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.getPatchSize(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well enough in most cases.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getPatchStride()",
+    "local": ""
+  },
+  {
+    "origin": "virtual int cv::DISOpticalFlow::getPatchStride",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.getPatchStride(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Stride between neighbor patches. Must be less than patch size. Lower values correspond to higher flow quality.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getUseMeanNormalization()",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool cv::DISOpticalFlow::getUseMeanNormalization",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.getUseMeanNormalization(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Whether to use mean-normalization of patches when computing patch distance. It is turned on by default as it typically provides a noticeable quality boost because of increased robustness to illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes in illumination.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getUseSpatialPropagation()",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool cv::DISOpticalFlow::getUseSpatialPropagation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.getUseSpatialPropagation(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Whether to use spatial propagation of good optical flow vectors. This option is turned on by default, as it tends to work better on average and can sometimes help recover from major errors introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this option off can make the output flow field a bit smoother, however.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getVariationalRefinementAlpha()",
+    "local": ""
+  },
+  {
+    "origin": "virtual float cv::DISOpticalFlow::getVariationalRefinementAlpha",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.getVariationalRefinementAlpha(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the smoothness term.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getVariationalRefinementDelta()",
+    "local": ""
+  },
+  {
+    "origin": "virtual float cv::DISOpticalFlow::getVariationalRefinementDelta",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.getVariationalRefinementDelta(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the color constancy term.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getVariationalRefinementGamma()",
+    "local": ""
+  },
+  {
+    "origin": "virtual float cv::DISOpticalFlow::getVariationalRefinementGamma",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.getVariationalRefinementGamma(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the gradient constancy term.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getVariationalRefinementIterations()",
+    "local": ""
+  },
+  {
+    "origin": "virtual int cv::DISOpticalFlow::getVariationalRefinementIterations",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.getVariationalRefinementIterations(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Number of fixed point iterations of variational refinement per scale. Set to zero to disable variational refinement completely. Higher values will typically result in more smooth and high-quality flow.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setFinestScale()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::DISOpticalFlow::setFinestScale",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.setFinestScale(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Finest level of the Gaussian pyramid on which the flow is computed (zero level corresponds to the original image resolution). The final flow is obtained by bilinear upscaling.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setGradientDescentIterations()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::DISOpticalFlow::setGradientDescentIterations",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.setGradientDescentIterations(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setPatchSize()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::DISOpticalFlow::setPatchSize",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.setPatchSize(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Size of an image patch for matching (in pixels). Normally, default 8x8 patches work well enough in most cases.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setPatchStride()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::DISOpticalFlow::setPatchStride",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.setPatchStride(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Stride between neighbor patches. Must be less than patch size. Lower values correspond to higher flow quality.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setUseMeanNormalization()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::DISOpticalFlow::setUseMeanNormalization",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.setUseMeanNormalization(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Whether to use mean-normalization of patches when computing patch distance. It is turned on by default as it typically provides a noticeable quality boost because of increased robustness to illumination variations. Turn it off if you are certain that your sequence doesn't contain any changes in illumination.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setUseSpatialPropagation()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::DISOpticalFlow::setUseSpatialPropagation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.setUseSpatialPropagation(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Whether to use spatial propagation of good optical flow vectors. This option is turned on by default, as it tends to work better on average and can sometimes help recover from major errors introduced by the coarse-to-fine scheme employed by the DIS optical flow algorithm. Turning this option off can make the output flow field a bit smoother, however.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setVariationalRefinementAlpha()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::DISOpticalFlow::setVariationalRefinementAlpha",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.setVariationalRefinementAlpha(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the smoothness term.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setVariationalRefinementDelta()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::DISOpticalFlow::setVariationalRefinementDelta",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.setVariationalRefinementDelta(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the color constancy term.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setVariationalRefinementGamma()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::DISOpticalFlow::setVariationalRefinementGamma",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.setVariationalRefinementGamma(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the gradient constancy term.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setVariationalRefinementIterations()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::DISOpticalFlow::setVariationalRefinementIterations",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.DISOpticalFlow.setVariationalRefinementIterations(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Maximum number of gradient descent iterations in the patch inverse search stage. Higher values may improve quality in some cases.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/video/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by",
+    "local": ""
+  }
+]

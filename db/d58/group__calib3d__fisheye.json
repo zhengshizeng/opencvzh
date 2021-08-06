@@ -1,0 +1,2910 @@
+[
+  {
+    "origin": "OpenCV: Fisheye camera model",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Fisheye camera model",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "The methods in this namespace use a so-called fisheye camera model.",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 0,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 1,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 2,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 3,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 4,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 5,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 6,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 7,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 8,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 9,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 10,",
+    "local": ""
+  },
+  {
+    "origin": "= 1 &lt;&lt; 11",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints,",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image_size,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "D,",
+    "local": ""
+  },
+  {
+    "origin": "rvecs,",
+    "local": ""
+  },
+  {
+    "origin": "criteria=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": ", 100, DBL_EPSILON))",
+    "local": ""
+  },
+  {
+    "origin": "Performs camera calibaration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "undistorted,",
+    "local": ""
+  },
+  {
+    "origin": "distorted,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "D, double alpha=0)",
+    "local": ""
+  },
+  {
+    "origin": "Distorts 2D points using fisheye model.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "D, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image_size,",
+    "local": ""
+  },
+  {
+    "origin": "R,",
+    "local": ""
+  },
+  {
+    "origin": "P, double balance=0.0, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;new_size=",
+    "local": ""
+  },
+  {
+    "origin": "(), double fov_scale=1.0)",
+    "local": ""
+  },
+  {
+    "origin": "Estimates new camera intrinsic matrix for undistortion or rectification.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "D,",
+    "local": ""
+  },
+  {
+    "origin": "R,",
+    "local": ""
+  },
+  {
+    "origin": "P, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;size, int m1type,",
+    "local": ""
+  },
+  {
+    "origin": "map1,",
+    "local": ""
+  },
+  {
+    "origin": "map2)",
+    "local": ""
+  },
+  {
+    "origin": "Computes undistortion and rectification maps for image transform by",
+    "local": ""
+  },
+  {
+    "origin": ". If D is empty zero distortion is used, if R or P is empty identity matrixes are used.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints,",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;affine,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "jacobian=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Projects points using fisheye model.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints,",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints,",
+    "local": ""
+  },
+  {
+    "origin": "rvec,",
+    "local": ""
+  },
+  {
+    "origin": "tvec,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "jacobian=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints,",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints1,",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints2,",
+    "local": ""
+  },
+  {
+    "origin": "K1,",
+    "local": ""
+  },
+  {
+    "origin": "D1,",
+    "local": ""
+  },
+  {
+    "origin": "K2,",
+    "local": ""
+  },
+  {
+    "origin": "D2,",
+    "local": ""
+  },
+  {
+    "origin": "imageSize,",
+    "local": ""
+  },
+  {
+    "origin": "R,",
+    "local": ""
+  },
+  {
+    "origin": "T, int flags=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "criteria=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": ", 100, DBL_EPSILON))",
+    "local": ""
+  },
+  {
+    "origin": "Performs stereo calibration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "K1,",
+    "local": ""
+  },
+  {
+    "origin": "D1,",
+    "local": ""
+  },
+  {
+    "origin": "K2,",
+    "local": ""
+  },
+  {
+    "origin": "D2, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;imageSize,",
+    "local": ""
+  },
+  {
+    "origin": "R,",
+    "local": ""
+  },
+  {
+    "origin": "tvec,",
+    "local": ""
+  },
+  {
+    "origin": "R1,",
+    "local": ""
+  },
+  {
+    "origin": "R2,",
+    "local": ""
+  },
+  {
+    "origin": "P1,",
+    "local": ""
+  },
+  {
+    "origin": "P2,",
+    "local": ""
+  },
+  {
+    "origin": "Q, int flags, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;newImageSize=",
+    "local": ""
+  },
+  {
+    "origin": "(), double balance=0.0, double fov_scale=1.0)",
+    "local": ""
+  },
+  {
+    "origin": "Stereo rectification for fisheye camera model.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "distorted,",
+    "local": ""
+  },
+  {
+    "origin": "undistorted,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "D,",
+    "local": ""
+  },
+  {
+    "origin": "Knew=",
+    "local": ""
+  },
+  {
+    "origin": "(), const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;new_size=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Transforms an image to compensate for fisheye lens distortion.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "distorted,",
+    "local": ""
+  },
+  {
+    "origin": "undistorted,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "D,",
+    "local": ""
+  },
+  {
+    "origin": "R=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "P=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Undistorts 2D points using fisheye model.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Definitions: Let P be a point in 3D of coordinates X in the world reference frame (stored in the matrix X) The coordinate vector of P in the camera reference frame is:",
+    "local": ""
+  },
+  {
+    "origin": "\\[Xc = R X + T\\]",
+    "local": ""
+  },
+  {
+    "origin": "where R is the rotation matrix corresponding to the rotation vector om: R = rodrigues(om); call x, y and z the 3 coordinates of Xc:",
+    "local": ""
+  },
+  {
+    "origin": "\\[x = Xc_1 \\\\ y = Xc_2 \\\\ z = Xc_3\\]",
+    "local": ""
+  },
+  {
+    "origin": "The pinhole projection coordinates of P is [a; b] where",
+    "local": ""
+  },
+  {
+    "origin": "\\[a = x / z \\ and \\ b = y / z \\\\ r^2 = a^2 + b^2 \\\\ \\theta = atan(r)\\]",
+    "local": ""
+  },
+  {
+    "origin": "Fisheye distortion:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\theta_d = \\theta (1 + k_1 \\theta^2 + k_2 \\theta^4 + k_3 \\theta^6 + k_4 \\theta^8)\\]",
+    "local": ""
+  },
+  {
+    "origin": "The distorted point coordinates are [x'; y'] where",
+    "local": ""
+  },
+  {
+    "origin": "\\[x' = (\\theta_d / r) a \\\\ y' = (\\theta_d / r) b \\]",
+    "local": ""
+  },
+  {
+    "origin": "Finally, conversion into pixel coordinates: The final pixel coordinates vector [u; v] where:",
+    "local": ""
+  },
+  {
+    "origin": "\\[u = f_x (x' + \\alpha y') + c_x \\\\ v = f_y y' + c_y\\]",
+    "local": ""
+  },
+  {
+    "origin": "Enumeration Type Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_USE_INTRINSIC_GUESS",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_USE_INTRINSIC_GUESS",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_RECOMPUTE_EXTRINSIC",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_RECOMPUTE_EXTRINSIC",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_CHECK_COND",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_CHECK_COND",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_FIX_SKEW",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_FIX_SKEW",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_FIX_K1",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_FIX_K1",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_FIX_K2",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_FIX_K2",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_FIX_K3",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_FIX_K3",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_FIX_K4",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_FIX_K4",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_FIX_INTRINSIC",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_FIX_INTRINSIC",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_FIX_PRINCIPAL_POINT",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_FIX_PRINCIPAL_POINT",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_ZERO_DISPARITY",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_ZERO_DISPARITY",
+    "local": ""
+  },
+  {
+    "origin": "CALIB_FIX_FOCAL_LENGTH",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.fisheye.CALIB_FIX_FOCAL_LENGTH",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "calibrate()",
+    "local": ""
+  },
+  {
+    "origin": "double cv::fisheye::calibrate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "image_size",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "rvecs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "tvecs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, K, D, rvecs, tvecs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.fisheye.calibrate(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints, imagePoints, image_size, K, D[, rvecs[, tvecs[, flags[, criteria]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Performs camera calibaration.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints",
+    "local": ""
+  },
+  {
+    "origin": "vector of vectors of calibration pattern points in the calibration pattern coordinate space.",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints",
+    "local": ""
+  },
+  {
+    "origin": "vector of vectors of the projections of calibration pattern points.",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "and imagePoints[i].",
+    "local": ""
+  },
+  {
+    "origin": "must be equal to objectPoints[i].",
+    "local": ""
+  },
+  {
+    "origin": "for each i.",
+    "local": ""
+  },
+  {
+    "origin": "image_size",
+    "local": ""
+  },
+  {
+    "origin": "Size of the image used only to initialize the camera intrinsic matrix.",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x3 floating-point camera intrinsic matrix \\(\\cameramatrix{A}\\) . If",
+    "local": ""
+  },
+  {
+    "origin": "is specified, some or all of fx, fy, cx, cy must be initialized before calling the function.",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of distortion coefficients \\(\\distcoeffsfisheye\\).",
+    "local": ""
+  },
+  {
+    "origin": "rvecs",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of rotation vectors (see Rodrigues ) estimated for each pattern view. That is, each k-th rotation vector together with the corresponding k-th translation vector (see the next output parameter description) brings the calibration pattern from the model coordinate space (in which object points are specified) to the world coordinate space, that is, a real position of the calibration pattern in the k-th pattern view (k=0..",
+    "local": ""
+  },
+  {
+    "origin": "M",
+    "local": ""
+  },
+  {
+    "origin": "-1).",
+    "local": ""
+  },
+  {
+    "origin": "tvecs",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of translation vectors estimated for each pattern view.",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "Different flags that may be zero or a combination of the following values:",
+    "local": ""
+  },
+  {
+    "origin": "cameraMatrix contains valid initial values of fx, fy, cx, cy that are optimized further. Otherwise, (cx, cy) is initially set to the image center ( imageSize is used), and focal distances are computed in a least-squares fashion.",
+    "local": ""
+  },
+  {
+    "origin": "Extrinsic will be recomputed after each iteration of intrinsic optimization.",
+    "local": ""
+  },
+  {
+    "origin": "The functions will check validity of condition number.",
+    "local": ""
+  },
+  {
+    "origin": "Skew coefficient (alpha) is set to zero and stay zero.",
+    "local": ""
+  },
+  {
+    "origin": ",...,",
+    "local": ""
+  },
+  {
+    "origin": "Selected distortion coefficients are set to zeros and stay zero.",
+    "local": ""
+  },
+  {
+    "origin": "The principal point is not changed during the global optimization. It stays at the center or at a different location specified when",
+    "local": ""
+  },
+  {
+    "origin": "is set too.",
+    "local": ""
+  },
+  {
+    "origin": "The focal length is not changed during the global optimization. It is the \\(max(width,height)/\\pi\\) or the provided \\(f_x\\), \\(f_y\\) when",
+    "local": ""
+  },
+  {
+    "origin": "is set too.",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "Termination criteria for the iterative optimization algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "distortPoints()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::fisheye::distortPoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "undistorted",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "distorted",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "distorted",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.fisheye.distortPoints(",
+    "local": ""
+  },
+  {
+    "origin": "undistorted, K, D[, distorted[, alpha]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Distorts 2D points using fisheye model.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "undistorted",
+    "local": ""
+  },
+  {
+    "origin": "Array of object points, 1xN/Nx1 2-channel (or vector&lt;Point2f&gt; ), where N is the number of points in the view.",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Camera intrinsic matrix \\(cameramatrix{K}\\).",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of distortion coefficients \\(\\distcoeffsfisheye\\).",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "The skew coefficient.",
+    "local": ""
+  },
+  {
+    "origin": "distorted",
+    "local": ""
+  },
+  {
+    "origin": "Output array of image points, 1xN/Nx1 2-channel, or vector&lt;Point2f&gt; .",
+    "local": ""
+  },
+  {
+    "origin": "Note that the function assumes the camera intrinsic matrix of the undistorted points to be identity. This means if you want to transform back points undistorted with",
+    "local": ""
+  },
+  {
+    "origin": "you have to multiply them with \\(P^{-1}\\).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "estimateNewCameraMatrixForUndistortRectify()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::fisheye::estimateNewCameraMatrixForUndistortRectify",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "image_size",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "P",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "balance",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "new_size",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "fov_scale",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "P",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.fisheye.estimateNewCameraMatrixForUndistortRectify(",
+    "local": ""
+  },
+  {
+    "origin": "K, D, image_size, R[, P[, balance[, new_size[, fov_scale]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Estimates new camera intrinsic matrix for undistortion or rectification.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Camera intrinsic matrix \\(cameramatrix{K}\\).",
+    "local": ""
+  },
+  {
+    "origin": "image_size",
+    "local": ""
+  },
+  {
+    "origin": "Size of the image",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of distortion coefficients \\(\\distcoeffsfisheye\\).",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "Rectification transformation in the object space: 3x3 1-channel, or vector: 3x1/1x3 1-channel or 1x1 3-channel",
+    "local": ""
+  },
+  {
+    "origin": "P",
+    "local": ""
+  },
+  {
+    "origin": "New camera intrinsic matrix (3x3) or new projection matrix (3x4)",
+    "local": ""
+  },
+  {
+    "origin": "balance",
+    "local": ""
+  },
+  {
+    "origin": "Sets the new focal length in range between the min focal length and the max focal length. Balance is in range of [0, 1].",
+    "local": ""
+  },
+  {
+    "origin": "new_size",
+    "local": ""
+  },
+  {
+    "origin": "the new size",
+    "local": ""
+  },
+  {
+    "origin": "fov_scale",
+    "local": ""
+  },
+  {
+    "origin": "Divisor for new focal length.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "initUndistortRectifyMap()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::fisheye::initUndistortRectifyMap",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "P",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "size",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "m1type",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "map1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "map2",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "map1, map2",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.fisheye.initUndistortRectifyMap(",
+    "local": ""
+  },
+  {
+    "origin": "K, D, R, P, size, m1type[, map1[, map2]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes undistortion and rectification maps for image transform by",
+    "local": ""
+  },
+  {
+    "origin": ". If D is empty zero distortion is used, if R or P is empty identity matrixes are used.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Camera intrinsic matrix \\(cameramatrix{K}\\).",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of distortion coefficients \\(\\distcoeffsfisheye\\).",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "Rectification transformation in the object space: 3x3 1-channel, or vector: 3x1/1x3 1-channel or 1x1 3-channel",
+    "local": ""
+  },
+  {
+    "origin": "P",
+    "local": ""
+  },
+  {
+    "origin": "New camera intrinsic matrix (3x3) or new projection matrix (3x4)",
+    "local": ""
+  },
+  {
+    "origin": "size",
+    "local": ""
+  },
+  {
+    "origin": "Undistorted image size.",
+    "local": ""
+  },
+  {
+    "origin": "m1type",
+    "local": ""
+  },
+  {
+    "origin": "Type of the first output map that can be CV_32FC1 or CV_16SC2 . See",
+    "local": ""
+  },
+  {
+    "origin": "for details.",
+    "local": ""
+  },
+  {
+    "origin": "map1",
+    "local": ""
+  },
+  {
+    "origin": "The first output map.",
+    "local": ""
+  },
+  {
+    "origin": "map2",
+    "local": ""
+  },
+  {
+    "origin": "The second output map.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "projectPoints()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::fisheye::projectPoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "affine",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "jacobian",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints, jacobian",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.fisheye.projectPoints(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints, rvec, tvec, K, D[, imagePoints[, alpha[, jacobian]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Projects points using fisheye model.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints",
+    "local": ""
+  },
+  {
+    "origin": "Array of object points, 1xN/Nx1 3-channel (or vector&lt;Point3f&gt; ), where N is the number of points in the view.",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints",
+    "local": ""
+  },
+  {
+    "origin": "Output array of image points, 2xN/Nx2 1-channel or 1xN/Nx1 2-channel, or vector&lt;Point2f&gt;.",
+    "local": ""
+  },
+  {
+    "origin": "affine",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Camera intrinsic matrix \\(cameramatrix{K}\\).",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of distortion coefficients \\(\\distcoeffsfisheye\\).",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "The skew coefficient.",
+    "local": ""
+  },
+  {
+    "origin": "jacobian",
+    "local": ""
+  },
+  {
+    "origin": "Optional output 2Nx15 jacobian matrix of derivatives of image points with respect to components of the focal lengths, coordinates of the principal point, distortion coefficients, rotation vector, translation vector, and the skew. In the old interface different components of the jacobian are returned via different output parameters.",
+    "local": ""
+  },
+  {
+    "origin": "The function computes projections of 3D points to the image plane given intrinsic and extrinsic camera parameters. Optionally, the function computes Jacobians - matrices of partial derivatives of image points coordinates (as functions of all the input parameters) with respect to the particular parameters, intrinsic and/or extrinsic.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "projectPoints()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::fisheye::projectPoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "rvec",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "tvec",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "jacobian",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints, jacobian",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.fisheye.projectPoints(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints, rvec, tvec, K, D[, imagePoints[, alpha[, jacobian]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "stereoCalibrate()",
+    "local": ""
+  },
+  {
+    "origin": "double cv::fisheye::stereoCalibrate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "imageSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, K1, D1, K2, D2, R, T",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.fisheye.stereoCalibrate(",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints, imagePoints1, imagePoints2, K1, D1, K2, D2, imageSize[, R[, T[, flags[, criteria]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Performs stereo calibration.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "objectPoints",
+    "local": ""
+  },
+  {
+    "origin": "Vector of vectors of the calibration pattern points.",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints1",
+    "local": ""
+  },
+  {
+    "origin": "Vector of vectors of the projections of the calibration pattern points, observed by the first camera.",
+    "local": ""
+  },
+  {
+    "origin": "imagePoints2",
+    "local": ""
+  },
+  {
+    "origin": "Vector of vectors of the projections of the calibration pattern points, observed by the second camera.",
+    "local": ""
+  },
+  {
+    "origin": "K1",
+    "local": ""
+  },
+  {
+    "origin": "Input/output first camera intrinsic matrix: \\(\\vecthreethree{f_x^{(j)}}{0}{c_x^{(j)}}{0}{f_y^{(j)}}{c_y^{(j)}}{0}{0}{1}\\) , \\(j = 0,\\, 1\\) . If any of",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "are specified, some or all of the matrix components must be initialized.",
+    "local": ""
+  },
+  {
+    "origin": "D1",
+    "local": ""
+  },
+  {
+    "origin": "Input/output vector of distortion coefficients \\(\\distcoeffsfisheye\\) of 4 elements.",
+    "local": ""
+  },
+  {
+    "origin": "K2",
+    "local": ""
+  },
+  {
+    "origin": "Input/output second camera intrinsic matrix. The parameter is similar to K1 .",
+    "local": ""
+  },
+  {
+    "origin": "D2",
+    "local": ""
+  },
+  {
+    "origin": "Input/output lens distortion coefficients for the second camera. The parameter is similar to D1 .",
+    "local": ""
+  },
+  {
+    "origin": "imageSize",
+    "local": ""
+  },
+  {
+    "origin": "Size of the image used only to initialize camera intrinsic matrix.",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "Output rotation matrix between the 1st and the 2nd camera coordinate systems.",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": "Output translation vector between the coordinate systems of the cameras.",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "Different flags that may be zero or a combination of the following values:",
+    "local": ""
+  },
+  {
+    "origin": "Fix K1, K2? and D1, D2? so that only R, T matrices are estimated.",
+    "local": ""
+  },
+  {
+    "origin": "K1, K2 contains valid initial values of fx, fy, cx, cy that are optimized further. Otherwise, (cx, cy) is initially set to the image center (imageSize is used), and focal distances are computed in a least-squares fashion.",
+    "local": ""
+  },
+  {
+    "origin": "Extrinsic will be recomputed after each iteration of intrinsic optimization.",
+    "local": ""
+  },
+  {
+    "origin": "The functions will check validity of condition number.",
+    "local": ""
+  },
+  {
+    "origin": "Skew coefficient (alpha) is set to zero and stay zero.",
+    "local": ""
+  },
+  {
+    "origin": ",...,",
+    "local": ""
+  },
+  {
+    "origin": "Selected distortion coefficients are set to zeros and stay zero.",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "Termination criteria for the iterative optimization algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "stereoRectify()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::fisheye::stereoRectify",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "K1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "imageSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "tvec",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "R1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "R2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "P1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "P2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Q",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "newImageSize",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "balance",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "fov_scale",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "R1, R2, P1, P2, Q",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.fisheye.stereoRectify(",
+    "local": ""
+  },
+  {
+    "origin": "K1, D1, K2, D2, imageSize, R, tvec, flags[, R1[, R2[, P1[, P2[, Q[, newImageSize[, balance[, fov_scale]]]]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Stereo rectification for fisheye camera model.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "K1",
+    "local": ""
+  },
+  {
+    "origin": "First camera intrinsic matrix.",
+    "local": ""
+  },
+  {
+    "origin": "D1",
+    "local": ""
+  },
+  {
+    "origin": "First camera distortion parameters.",
+    "local": ""
+  },
+  {
+    "origin": "K2",
+    "local": ""
+  },
+  {
+    "origin": "Second camera intrinsic matrix.",
+    "local": ""
+  },
+  {
+    "origin": "D2",
+    "local": ""
+  },
+  {
+    "origin": "Second camera distortion parameters.",
+    "local": ""
+  },
+  {
+    "origin": "imageSize",
+    "local": ""
+  },
+  {
+    "origin": "Size of the image used for stereo calibration.",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "Rotation matrix between the coordinate systems of the first and the second cameras.",
+    "local": ""
+  },
+  {
+    "origin": "tvec",
+    "local": ""
+  },
+  {
+    "origin": "Translation vector between coordinate systems of the cameras.",
+    "local": ""
+  },
+  {
+    "origin": "R1",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x3 rectification transform (rotation matrix) for the first camera.",
+    "local": ""
+  },
+  {
+    "origin": "R2",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x3 rectification transform (rotation matrix) for the second camera.",
+    "local": ""
+  },
+  {
+    "origin": "P1",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x4 projection matrix in the new (rectified) coordinate systems for the first camera.",
+    "local": ""
+  },
+  {
+    "origin": "P2",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x4 projection matrix in the new (rectified) coordinate systems for the second camera.",
+    "local": ""
+  },
+  {
+    "origin": "Q",
+    "local": ""
+  },
+  {
+    "origin": "Output \\(4 \\times 4\\) disparity-to-depth mapping matrix (see reprojectImageTo3D ).",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "Operation flags that may be zero or",
+    "local": ""
+  },
+  {
+    "origin": ". If the flag is set, the function makes the principal points of each camera have the same pixel coordinates in the rectified views. And if the flag is not set, the function may still shift the images in the horizontal or vertical direction (depending on the orientation of epipolar lines) to maximize the useful image area.",
+    "local": ""
+  },
+  {
+    "origin": "newImageSize",
+    "local": ""
+  },
+  {
+    "origin": "New image resolution after rectification. The same size should be passed to initUndistortRectifyMap (see the stereo_calib.cpp sample in OpenCV samples directory). When (0,0) is passed (default), it is set to the original imageSize . Setting it to larger value can help you preserve details in the original image, especially when there is a big radial distortion.",
+    "local": ""
+  },
+  {
+    "origin": "balance",
+    "local": ""
+  },
+  {
+    "origin": "Sets the new focal length in range between the min focal length and the max focal length. Balance is in range of [0, 1].",
+    "local": ""
+  },
+  {
+    "origin": "fov_scale",
+    "local": ""
+  },
+  {
+    "origin": "Divisor for new focal length.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "undistortImage()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::fisheye::undistortImage",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "distorted",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "undistorted",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Knew",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "new_size",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "undistorted",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.fisheye.undistortImage(",
+    "local": ""
+  },
+  {
+    "origin": "distorted, K, D[, undistorted[, Knew[, new_size]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Transforms an image to compensate for fisheye lens distortion.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "distorted",
+    "local": ""
+  },
+  {
+    "origin": "image with fisheye lens distortion.",
+    "local": ""
+  },
+  {
+    "origin": "undistorted",
+    "local": ""
+  },
+  {
+    "origin": "Output image with compensated fisheye lens distortion.",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Camera intrinsic matrix \\(cameramatrix{K}\\).",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of distortion coefficients \\(\\distcoeffsfisheye\\).",
+    "local": ""
+  },
+  {
+    "origin": "Knew",
+    "local": ""
+  },
+  {
+    "origin": "Camera intrinsic matrix of the distorted image. By default, it is the identity matrix but you may additionally scale and shift the result by using a different matrix.",
+    "local": ""
+  },
+  {
+    "origin": "new_size",
+    "local": ""
+  },
+  {
+    "origin": "the new size",
+    "local": ""
+  },
+  {
+    "origin": "The function transforms an image to compensate radial and tangential lens distortion.",
+    "local": ""
+  },
+  {
+    "origin": "The function is simply a combination of",
+    "local": ""
+  },
+  {
+    "origin": "(with unity R ) and remap (with bilinear interpolation). See the former function for details of the transformation being performed.",
+    "local": ""
+  },
+  {
+    "origin": "See below the results of undistortImage.",
+    "local": ""
+  },
+  {
+    "origin": "a) result of undistort of perspective camera model (all possible coefficients (k_1, k_2, k_3, k_4, k_5, k_6) of distortion were optimized under calibration)",
+    "local": ""
+  },
+  {
+    "origin": "b) result of",
+    "local": ""
+  },
+  {
+    "origin": "of fisheye camera model (all possible coefficients (k_1, k_2, k_3, k_4) of fisheye distortion were optimized under calibration)",
+    "local": ""
+  },
+  {
+    "origin": "c) original image was captured with fisheye lens",
+    "local": ""
+  },
+  {
+    "origin": "Pictures a) and b) almost the same. But if we consider points of image located far from the center of image, we can notice that on image a) these points are distorted.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "undistortPoints()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::fisheye::undistortPoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "distorted",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "undistorted",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "P",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "undistorted",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.fisheye.undistortPoints(",
+    "local": ""
+  },
+  {
+    "origin": "distorted, K, D[, undistorted[, R[, P]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Undistorts 2D points using fisheye model.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "distorted",
+    "local": ""
+  },
+  {
+    "origin": "Array of object points, 1xN/Nx1 2-channel (or vector&lt;Point2f&gt; ), where N is the number of points in the view.",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Camera intrinsic matrix \\(cameramatrix{K}\\).",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of distortion coefficients \\(\\distcoeffsfisheye\\).",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "Rectification transformation in the object space: 3x3 1-channel, or vector: 3x1/1x3 1-channel or 1x1 3-channel",
+    "local": ""
+  },
+  {
+    "origin": "P",
+    "local": ""
+  },
+  {
+    "origin": "New camera intrinsic matrix (3x3) or new projection matrix (3x4)",
+    "local": ""
+  },
+  {
+    "origin": "undistorted",
+    "local": ""
+  },
+  {
+    "origin": "Output array of image points, 1xN/Nx1 2-channel, or vector&lt;Point2f&gt; .",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

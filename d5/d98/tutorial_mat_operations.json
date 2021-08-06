@@ -1,0 +1,418 @@
+[
+  {
+    "origin": "OpenCV: Operations with images",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Operations with images",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Input/Output",
+    "local": ""
+  },
+  {
+    "origin": "Images",
+    "local": ""
+  },
+  {
+    "origin": "Load an image from a file:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "If you read a jpg file, a 3 channel image is created by default. If you need a grayscale image, use:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Format of the file is determined by its content (first few bytes). To save an image to a file:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Format of the file is determined by its extension.",
+    "local": ""
+  },
+  {
+    "origin": "Use",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "to read and write an image from/to memory rather than a file.",
+    "local": ""
+  },
+  {
+    "origin": "Basic operations with images",
+    "local": ""
+  },
+  {
+    "origin": "Accessing pixel intensity values",
+    "local": ""
+  },
+  {
+    "origin": "In order to get pixel intensity value, you have to know the type of an image and the number of channels. Here is an example for a single channel grey scale image (type 8UC1) and pixel coordinates x and y:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "C++ version only: intensity.val[0] contains a value from 0 to 255. Note the ordering of x and y. Since in OpenCV images are represented by the same structure as matrices, we use the same convention for both cases - the 0-based row index (or y-coordinate) goes first and the 0-based column index (or x-coordinate) follows it. Alternatively, you can use the following notation (",
+    "local": ""
+  },
+  {
+    "origin": "C++ only",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "Now let us consider a 3 channel image with BGR color ordering (the default format returned by imread):",
+    "local": ""
+  },
+  {
+    "origin": "C++ code",
+    "local": ""
+  },
+  {
+    "origin": "Python Python",
+    "local": ""
+  },
+  {
+    "origin": "You can use the same method for floating-point images (for example, you can get such an image by running Sobel on a 3 channel image) (",
+    "local": ""
+  },
+  {
+    "origin": "C++ only",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "The same method can be used to change pixel intensities:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "There are functions in OpenCV, especially from calib3d module, such as",
+    "local": ""
+  },
+  {
+    "origin": ", that take an array of 2D or 3D points in the form of Mat. Matrix should contain exactly one column, each row corresponds to a point, matrix type should be 32FC2 or 32FC3 correspondingly. Such a matrix can be easily constructed from",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "C++ only",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "One can access a point in this matrix using the same method",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "C++ only",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "Memory management and reference counting",
+    "local": ""
+  },
+  {
+    "origin": "Mat is a structure that keeps matrix/image characteristics (rows and columns number, data type etc) and a pointer to data. So nothing prevents us from having several instances of Mat corresponding to the same data. A Mat keeps a reference count that tells if data has to be deallocated when a particular instance of Mat is destroyed. Here is an example of creating two matrices without copying data (",
+    "local": ""
+  },
+  {
+    "origin": "C++ only",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "As a result, we get a 32FC1 matrix with 3 columns instead of 32FC3 matrix with 1 column.",
+    "local": ""
+  },
+  {
+    "origin": "uses data from points and will not deallocate the memory when destroyed. In this particular instance, however, developer has to make sure that lifetime of",
+    "local": ""
+  },
+  {
+    "origin": "is longer than of",
+    "local": ""
+  },
+  {
+    "origin": "If we need to copy the data, this is done using, for example,",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "An empty output Mat can be supplied to each function. Each implementation calls Mat::create for a destination matrix. This method allocates data for a matrix if it is empty. If it is not empty and has the correct size and type, the method does nothing. If however, size or type are different from the input arguments, the data is deallocated (and lost) and a new data is allocated. For example:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Primitive operations",
+    "local": ""
+  },
+  {
+    "origin": "There is a number of convenient operators defined on a matrix. For example, here is how we can make a black image from an existing greyscale image",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Selecting a region of interest:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Conversion from color to greyscale:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Change image type from 8UC1 to 32FC1:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Visualizing images",
+    "local": ""
+  },
+  {
+    "origin": "It is very useful to see intermediate results of your algorithm during development process. OpenCV provides a convenient way of visualizing images. A 8U image can be shown using:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "A call to",
+    "local": ""
+  },
+  {
+    "origin": "starts a message passing cycle that waits for a key stroke in the \"image\" window. A 32F image needs to be converted to 8U type. For example:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Here",
+    "local": ""
+  },
+  {
+    "origin": "is not necessary since it is immediately followed by",
+    "local": ""
+  },
+  {
+    "origin": ". Nevertheless, it can be used to change the window properties or when using",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

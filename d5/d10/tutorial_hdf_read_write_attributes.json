@@ -1,0 +1,154 @@
+[
+  {
+    "origin": "OpenCV: Reading and Writing Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Reading and Writing Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial shows you:",
+    "local": ""
+  },
+  {
+    "origin": "How to write attributes?",
+    "local": ""
+  },
+  {
+    "origin": "How to read attributes?",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Although attributes can be associated with groups and datasets, only attributes with the root group are implemented in OpenCV. Supported attribute types are",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "(only for continuous arrays).",
+    "local": ""
+  },
+  {
+    "origin": "Source Code",
+    "local": ""
+  },
+  {
+    "origin": "The following code demonstrates reading and writing attributes inside the root group with data types",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "You can download the code from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "or find it in the file",
+    "local": ""
+  },
+  {
+    "origin": "of the opencv_contrib source code library.",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "The first step is to open the HDF5 file:",
+    "local": ""
+  },
+  {
+    "origin": "Then we use",
+    "local": ""
+  },
+  {
+    "origin": "to write attributes by specifying its value and name:",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "Before writing an attribute, we have to make sure that the attribute does not exist using",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "To read an attribute, we use",
+    "local": ""
+  },
+  {
+    "origin": "by specifying the attribute name",
+    "local": ""
+  },
+  {
+    "origin": "In the end, we have to close the HDF file",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "Figure 1 and Figure 2 give the results visualized using the tool HDFView.",
+    "local": ""
+  },
+  {
+    "origin": "Figure 1: Attributes of the root group",
+    "local": ""
+  },
+  {
+    "origin": "Figure 2: Detailed attribute information",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": ""
+  }
+]

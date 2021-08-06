@@ -1,0 +1,594 @@
+[
+  {
+    "origin": "OpenCV: cv::RotatedRect Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::RotatedRect Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "The class represents rotated (i.e. not up-right) rectangles on a plane.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "default constructor",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": ", const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": ", float",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;point1, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;point2, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;point3)",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the minimal up-right integer rectangle containing the rotated rectangle",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the minimal (exact) floating point rectangle containing the rotated rectangle, not intended for use with images",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pts[]) const",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "returns the rotation angle. When the angle is 0, 90, 180, 270 etc., the rectangle becomes an up-right rectangle.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "returns the rectangle mass center",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "returns width and height of the rectangle",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "The class represents rotated (i.e. not up-right) rectangles on a plane.",
+    "local": ""
+  },
+  {
+    "origin": "Each rectangle is specified by the center point (mass center), length of each side (represented by",
+    "local": ""
+  },
+  {
+    "origin": "structure) and the rotation angle in degrees.",
+    "local": ""
+  },
+  {
+    "origin": "The sample below demonstrates how to use",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", CvBox2D",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "RotatedRect()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "cv::RotatedRect::RotatedRect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "default constructor",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "RotatedRect()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "cv::RotatedRect::RotatedRect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "center",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "size",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "angle",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "full constructor",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "center",
+    "local": ""
+  },
+  {
+    "origin": "The rectangle mass center.",
+    "local": ""
+  },
+  {
+    "origin": "size",
+    "local": ""
+  },
+  {
+    "origin": "Width and height of the rectangle.",
+    "local": ""
+  },
+  {
+    "origin": "angle",
+    "local": ""
+  },
+  {
+    "origin": "The rotation angle in a clockwise direction. When the angle is 0, 90, 180, 270 etc., the rectangle becomes an up-right rectangle.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "RotatedRect()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "cv::RotatedRect::RotatedRect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "point1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "point2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "point3",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Any 3 end points of the",
+    "local": ""
+  },
+  {
+    "origin": ". They must be given in order (either clockwise or anticlockwise).",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "boundingRect()",
+    "local": ""
+  },
+  {
+    "origin": "cv::RotatedRect::boundingRect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "returns the minimal up-right integer rectangle containing the rotated rectangle",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "boundingRect2f()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;float&gt; cv::RotatedRect::boundingRect2f",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "returns the minimal (exact) floating point rectangle containing the rotated rectangle, not intended for use with images",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "points()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::RotatedRect::points",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "pts",
+    "local": ""
+  },
+  {
+    "origin": "[]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "returns 4 vertices of the rectangle",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pts",
+    "local": ""
+  },
+  {
+    "origin": "The points array for storing rectangle vertices. The order is bottomLeft, topLeft, topRight, bottomRight.",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "angle",
+    "local": ""
+  },
+  {
+    "origin": "float cv::RotatedRect::angle",
+    "local": ""
+  },
+  {
+    "origin": "returns the rotation angle. When the angle is 0, 90, 180, 270 etc., the rectangle becomes an up-right rectangle.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "center",
+    "local": ""
+  },
+  {
+    "origin": "cv::RotatedRect::center",
+    "local": ""
+  },
+  {
+    "origin": "returns the rectangle mass center",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "size",
+    "local": ""
+  },
+  {
+    "origin": "cv::RotatedRect::size",
+    "local": ""
+  },
+  {
+    "origin": "returns width and height of the rectangle",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:43 for OpenCV by &#160;",
+    "local": ""
+  }
+]

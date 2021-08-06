@@ -1,0 +1,526 @@
+[
+  {
+    "origin": "OpenCV: Clustering",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Clustering",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "k-Means flags",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "data, int K,",
+    "local": ""
+  },
+  {
+    "origin": "bestLabels,",
+    "local": ""
+  },
+  {
+    "origin": "criteria, int attempts, int flags,",
+    "local": ""
+  },
+  {
+    "origin": "centers=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Finds centers of clusters and groups input samples around the clusters.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp , class _EqPredicate &gt;",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt; _Tp &gt; &amp;_vec, std::vector&lt; int &gt; &amp;labels, _EqPredicate predicate=_EqPredicate())",
+    "local": ""
+  },
+  {
+    "origin": "Splits an element set into equivalency classes.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Enumeration Type Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "KmeansFlags",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "k-Means flags",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "KMEANS_RANDOM_CENTERS",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.KMEANS_RANDOM_CENTERS",
+    "local": ""
+  },
+  {
+    "origin": "Select random initial centers in each attempt.",
+    "local": ""
+  },
+  {
+    "origin": "KMEANS_PP_CENTERS",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.KMEANS_PP_CENTERS",
+    "local": ""
+  },
+  {
+    "origin": "Use kmeans++ center initialization by Arthur and Vassilvitskii [Arthur2007].",
+    "local": ""
+  },
+  {
+    "origin": "KMEANS_USE_INITIAL_LABELS",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.KMEANS_USE_INITIAL_LABELS",
+    "local": ""
+  },
+  {
+    "origin": "During the first (and possibly the only) attempt, use the user-supplied labels instead of computing them from the initial centers. For the second and further attempts, use the random or semi-random centers. Use one of KMEANS_*_CENTERS flag to specify the exact method.",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "kmeans()",
+    "local": ""
+  },
+  {
+    "origin": "double cv::kmeans",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "data",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bestLabels",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "attempts",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "centers",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, bestLabels, centers",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.kmeans(",
+    "local": ""
+  },
+  {
+    "origin": "data, K, bestLabels, criteria, attempts, flags[, centers]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Finds centers of clusters and groups input samples around the clusters.",
+    "local": ""
+  },
+  {
+    "origin": "The function kmeans implements a k-means algorithm that finds the centers of cluster_count clusters and groups the input samples around the clusters. As an output, \\(\\texttt{bestLabels}_i\\) contains a 0-based cluster index for the sample stored in the \\(i^{th}\\) row of the samples matrix.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "(Python) An example on K-means clustering can be found at opencv_source_code/samples/python/kmeans.py",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "data",
+    "local": ""
+  },
+  {
+    "origin": "Data for clustering. An array of N-Dimensional points with float coordinates is needed. Examples of this array can be:",
+    "local": ""
+  },
+  {
+    "origin": "points(count, 2, CV_32F);",
+    "local": ""
+  },
+  {
+    "origin": "points(count, 1, CV_32FC2);",
+    "local": ""
+  },
+  {
+    "origin": "points(1, count, CV_32FC2);",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; points(sampleCount);",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Number of clusters to split the set by.",
+    "local": ""
+  },
+  {
+    "origin": "bestLabels",
+    "local": ""
+  },
+  {
+    "origin": "Input/output integer array that stores the cluster indices for every sample.",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "The algorithm termination criteria, that is, the maximum number of iterations and/or the desired accuracy. The accuracy is specified as criteria.epsilon. As soon as each of the cluster centers moves by less than criteria.epsilon on some iteration, the algorithm stops.",
+    "local": ""
+  },
+  {
+    "origin": "attempts",
+    "local": ""
+  },
+  {
+    "origin": "Flag to specify the number of times the algorithm is executed using different initial labellings. The algorithm returns the labels that yield the best compactness (see the last function parameter).",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "Flag that can take values of",
+    "local": ""
+  },
+  {
+    "origin": "centers",
+    "local": ""
+  },
+  {
+    "origin": "Output matrix of the cluster centers, one row per each cluster center.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "The function returns the compactness measure that is computed as",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sum _i \\| \\texttt{samples} _i - \\texttt{centers} _{ \\texttt{labels} _i} \\| ^2\\]",
+    "local": ""
+  },
+  {
+    "origin": "after every attempt. The best (minimum) value is chosen and the corresponding labels and the compactness value are returned by the function. Basically, you can use only the core of the function, set the number of attempts to 1, initialize labels each time using a custom algorithm, pass them with the ( flags =",
+    "local": ""
+  },
+  {
+    "origin": ") flag, and then choose the best (most-compact) clustering.",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "partition()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp , class _EqPredicate &gt;",
+    "local": ""
+  },
+  {
+    "origin": "int partition",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt; _Tp &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "_vec",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; int &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "labels",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_EqPredicate",
+    "local": ""
+  },
+  {
+    "origin": "predicate",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Splits an element set into equivalency classes.",
+    "local": ""
+  },
+  {
+    "origin": "The generic function partition implements an \\(O(N^2)\\) algorithm for splitting a set of \\(N\\) elements into one or more equivalency classes, as described in",
+    "local": ""
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Disjoint-set_data_structure",
+    "local": ""
+  },
+  {
+    "origin": ". The function returns the number of equivalency classes.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "_vec",
+    "local": ""
+  },
+  {
+    "origin": "Set of elements stored as a vector.",
+    "local": ""
+  },
+  {
+    "origin": "labels",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of labels. It contains as many elements as vec. Each label labels[i] is a 0-based cluster index of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "predicate",
+    "local": ""
+  },
+  {
+    "origin": "Equivalence predicate (pointer to a boolean function of two arguments or an instance of the class that has the method bool operator()(const _Tp&amp; a, const _Tp&amp; b) ). The predicate returns true when the elements are certainly in the same class, and returns false if they may or may not be in the same class.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by",
+    "local": ""
+  }
+]

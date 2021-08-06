@@ -1,0 +1,8726 @@
+[
+  {
+    "origin": "OpenCV: cv::Quat&lt; _Tp &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Friends",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::Quat&lt; _Tp &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 4 &gt; &amp;coeff)",
+    "local": ""
+  },
+  {
+    "origin": "From Vec4d or Vec4f.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp",
+    "local": ""
+  },
+  {
+    "origin": ", _Tp",
+    "local": ""
+  },
+  {
+    "origin": ", _Tp",
+    "local": ""
+  },
+  {
+    "origin": ", _Tp",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "from four numbers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return arccos value of this quaternion, arccos could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arccos(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arccosh(q)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return arccosh value of this quaternion, arccosh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arcosh(q) = \\ln(q + \\sqrt{q^2 - 1})\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return arcsin value of this quaternion, arcsin could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arcsin(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arcsinh(q\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||})\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return arcsinh value of this quaternion, arcsinh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arcsinh(q) = \\ln(q + \\sqrt{q^2 + 1})\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp eps=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "to throw an error if this quaternion is not a unit quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(size_t index) const",
+    "local": ""
+  },
+  {
+    "origin": "a way to get element.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return arctan value of this quaternion, arctan could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arctan(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arctanh(q\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||})\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return arctanh value of this quaternion, arctanh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arcsinh(q) = \\frac{\\ln(q + 1) - \\ln(1 - q)}{2}\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return the conjugate of this quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "\\[q.conjugate() = (w, -x, -y, -z).\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return cos value of this quaternion, cos could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\cos(p) = \\cos(w) * \\cosh(||\\boldsymbol{v}||) - \\sin(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\sinh(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return cosh value of this quaternion, cosh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\cosh(p) = \\cosh(w) * \\cos(||\\boldsymbol{v}||) + \\sinh(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}sin(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q) const",
+    "local": ""
+  },
+  {
+    "origin": "return the crossProduct between \\(p = (a, b, c, d) = (a, \\boldsymbol{u})\\) and \\(q = (w, x, y, z) = (w, \\boldsymbol{v})\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = \\frac{pq- qp}{2}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = \\boldsymbol{u} \\times \\boldsymbol{v}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = (cz-dy)i + (dx-bz)j + (by-xc)k. \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; q) const",
+    "local": ""
+  },
+  {
+    "origin": "return the dot between quaternion \\(q\\) and this quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of exponential value.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\exp(q) = e^w (\\cos||\\boldsymbol{v}||+ \\frac{v}{||\\boldsymbol{v}||}\\sin||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "get the angle of quaternion, it returns the rotation angle.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return \\(q^{-1}\\) which is an inverse of \\(q\\) satisfying \\(q * q^{-1} = 1\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp eps=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return true if this quaternion is a unit quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of logarithm function.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\ln(q) = \\ln||q|| + \\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\arccos\\frac{w}{||q||}\\]",
+    "local": ""
+  },
+  {
+    "origin": ". where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return the norm of quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "\\[||q|| = \\sqrt{w^2 + x^2 + y^2 + z^2}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return a normalized \\(p\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[p = \\frac{q}{||q||}\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(p\\) satisfies \\((p.x)^2 + (p.y)^2 + (p.z)^2 + (p.w)^2 = 1.\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;) const",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of two quaternions q and p. Multiplies values on either side of the operator.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication assignment operator of two quaternions q and p. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp s)",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication assignment operator of a quaternions and a scalar. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;) const",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of two quaternions p and q. It returns a new quaternion that each value is the sum of \\(p_i\\) and \\(q_i\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Addition assignment operator of two quaternions p and q. It adds right operand to the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Return opposite quaternion \\(-p\\) which satisfies \\(p + (-p) = 0.\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;) const",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of two quaternions p and q. It returns a new quaternion that each value is the sum of \\(p_i\\) and \\(-q_i\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction assignment operator of two quaternions p and q. It subtracts right operand from the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp s) const",
+    "local": ""
+  },
+  {
+    "origin": "Division operator of a quaternions and a scalar. It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;) const",
+    "local": ""
+  },
+  {
+    "origin": "Division operator of two quaternions p and q. Divides left hand operand by right hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp s)",
+    "local": ""
+  },
+  {
+    "origin": "Division assignment operator of a quaternions and a scalar. It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Division assignment operator of two quaternions p and q; It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;) const",
+    "local": ""
+  },
+  {
+    "origin": "return true if two quaternions p and q are nearly equal, i.e. when the absolute value of each \\(p_i\\) and \\(q_i\\) is less than CV_QUAT_EPS.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(std::size_t n)",
+    "local": ""
+  },
+  {
+    "origin": "(std::size_t n) const",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of power function with index \\(x\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[q^x = ||q||(\\cos(x\\theta) + \\boldsymbol{u}\\sin(x\\theta))).\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of power function with quaternion \\(q\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[p^q = e^{q\\ln(p)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return sin value of this quaternion, sin could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sin(p) = \\sin(w) * \\cosh(||\\boldsymbol{v}||) + \\cos(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\sinh(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return sinh value of this quaternion, sinh could be calculated as: \\(\\sinh(p) = \\sin(w)\\cos(||\\boldsymbol{v}||) + \\cosh(w)\\frac{v}{||\\boldsymbol{v}||}\\sin||\\boldsymbol{v}||\\) where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return \\(\\sqrt{q}\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return tan value of this quaternion, tan could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\tan(q) = \\frac{\\sin(q)}{\\cos(q)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return tanh value of this quaternion, tanh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\tanh(q) = \\frac{\\sinh(q)}{\\cosh(q)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "eulerAnglesType)",
+    "local": ""
+  },
+  {
+    "origin": "Transform a quaternion q to Euler angles.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3, 3 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "transform a quaternion to a 3x3 rotation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 4, 4 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "transform a quaternion to a 4x4 rotation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "transform this quaternion to a Rotation vector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 4 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "transform the this quaternion to a Vec&lt;T, 4&gt;.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp angle, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;axis)",
+    "local": ""
+  },
+  {
+    "origin": "from an angle, axis. Axis will be normalized in this function. And it generates",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = [\\cos\\psi, u_x\\sin\\psi,u_y\\sin\\psi, u_z\\sin\\psi].\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\psi = \\frac{\\theta}{2}\\), \\(\\theta\\) is the rotation angle.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;angles,",
+    "local": ""
+  },
+  {
+    "origin": "eulerAnglesType)",
+    "local": ""
+  },
+  {
+    "origin": "from Euler angles",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "R)",
+    "local": ""
+  },
+  {
+    "origin": "from a 3x3 rotation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rvec)",
+    "local": ""
+  },
+  {
+    "origin": "from a rotation vector \\(r\\) has the form \\(\\theta \\cdot \\boldsymbol{u}\\), where \\(\\theta\\) represents rotation angle and \\(\\boldsymbol{u}\\) represents normalized rotation axis.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp theta)",
+    "local": ""
+  },
+  {
+    "origin": "get a quaternion from a rotation about the X-axis by \\(\\theta\\) .",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = \\cos(\\theta/2)+sin(\\theta/2) i +0 j +0 k \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp theta)",
+    "local": ""
+  },
+  {
+    "origin": "get a quaternion from a rotation about the Y-axis by \\(\\theta\\) .",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = \\cos(\\theta/2)+0 i+ sin(\\theta/2) j +0k \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp theta)",
+    "local": ""
+  },
+  {
+    "origin": "get a quaternion from a rotation about the Z-axis by \\(\\theta\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = \\cos(\\theta/2)+0 i +0 j +sin(\\theta/2) k \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q0, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q1, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q2,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is the part calculation of squad. To calculate the intermedia quaternion \\(s_i\\) between each three quaternion",
+    "local": ""
+  },
+  {
+    "origin": "\\[s_i = q_i\\exp(-\\frac{\\log(q^*_iq_{i+1}) + \\log(q^*_iq_{i-1})}{4}).\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q0, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;q1, const _Tp t)",
+    "local": ""
+  },
+  {
+    "origin": "To calculate the interpolation from \\(q_0\\) to \\(q_1\\) by Linear Interpolation(Nlerp) For two quaternions, this interpolation curve can be displayed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[Lerp(q_0, q_1, t) = (1 - t)q_0 + tq_1.\\]",
+    "local": ""
+  },
+  {
+    "origin": "Obviously, the lerp will interpolate along a straight line if we think of \\(q_0\\) and \\(q_1\\) as a vector in a two-dimensional space. When \\(t = 0\\), it returns \\(q_0\\) and when \\(t= 1\\), it returns \\(q_1\\). \\(t\\) should to be ranged in \\([0, 1]\\) normally.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q0, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;q1, const _Tp t,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "To calculate the interpolation from \\(q_0\\) to \\(q_1\\) by Normalized Linear Interpolation(Nlerp). it returns a normalized quaternion of Linear Interpolation(Lerp).",
+    "local": ""
+  },
+  {
+    "origin": "\\[ Nlerp(q_0, q_1, t) = \\frac{(1 - t)q_0 + tq_1}{||(1 - t)q_0 + tq_1||}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "The interpolation will always choose the shortest path but the constant speed is not guaranteed.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q0, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;q1, const _Tp t,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ", bool directChange=true)",
+    "local": ""
+  },
+  {
+    "origin": "To calculate the interpolation between \\(q_0\\) and \\(q_1\\) by Spherical Linear Interpolation(Slerp), which can be defined as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ Slerp(q_0, q_1, t) = \\frac{\\sin((1-t)\\theta)}{\\sin(\\theta)}q_0 + \\frac{\\sin(t\\theta)}{\\sin(\\theta)}q_1\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\theta\\) can be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\theta=cos^{-1}(q_0\\cdot q_1)\\]",
+    "local": ""
+  },
+  {
+    "origin": "resulting from the both of their norm is unit.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q0, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q1, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q2, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q3, const _Tp t,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "to calculate a quaternion which is the result of a \\(C^1\\) continuous spline curve constructed by squad at the ratio t. Here, the interpolation values are between \\(q_1\\) and \\(q_2\\). \\(q_0\\) and \\(q_2\\) are used to ensure the \\(C^1\\) continuity. if t = 0, it returns \\(q_1\\), if t = 1, it returns \\(q_2\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q0, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;s0, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;s1, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q1, const _Tp t,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ", bool directChange=true)",
+    "local": ""
+  },
+  {
+    "origin": "To calculate the interpolation between \\(q_0\\), \\(q_1\\), \\(q_2\\), \\(q_3\\) by Spherical and quadrangle(Squad). This could be defined as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[Squad(q_i, s_i, s_{i+1}, q_{i+1}, t) = Slerp(Slerp(q_i, q_{i+1}, t), Slerp(s_i, s_{i+1}, t), 2t(1-t))\\]",
+    "local": ""
+  },
+  {
+    "origin": "where",
+    "local": ""
+  },
+  {
+    "origin": "\\[s_i = q_i\\exp(-\\frac{\\log(q^*_iq_{i+1}) + \\log(q^*_iq_{i-1})}{4})\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "= (_Tp)1.e-6",
+    "local": ""
+  },
+  {
+    "origin": "= (_Tp)1.e-6",
+    "local": ""
+  },
+  {
+    "origin": "Friends",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return arccos value of quaternion q, arccos could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arccos(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arccosh(q)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return arccosh value of quaternion q, arccosh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arccosh(q) = \\ln(q + \\sqrt{q^2 - 1})\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return arcsin value of quaternion q, arcsin could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arcsin(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arcsinh(q\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||})\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return arcsinh value of quaternion q, arcsinh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arcsinh(q) = \\ln(q + \\sqrt{q^2 + 1})\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return arctan value of quaternion q, arctan could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arctan(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arctanh(q\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||})\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return arctanh value of quaternion q, arctanh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arctanh(q) = \\frac{\\ln(q + 1) - \\ln(1 - q)}{2}\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return sin value of quaternion q, cos could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\cos(p) = \\cos(w) * \\cosh(||\\boldsymbol{v}||) - \\sin(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\sinh(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return cosh value of quaternion q, cosh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\cosh(p) = \\cosh(w) * \\cos(||\\boldsymbol{v}||) + \\sinh(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\sin(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;p, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return the crossProduct between \\(p = (a, b, c, d) = (a, \\boldsymbol{u})\\) and \\(q = (w, x, y, z) = (w, \\boldsymbol{v})\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = \\frac{pq- qp}{2}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = \\boldsymbol{u} \\times \\boldsymbol{v}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = (cz-dy)i + (dx-bz)j + (by-xc)k \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const T s, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of a scalar and a quaternions. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;, const T s)",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of a quaternion and a scalar. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const T s, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of a quaternions and a scalar. Adds right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;, const T s)",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of a quaternions and a scalar. Adds right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const T s, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of a scalar and a quaternions. Subtracts right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;, const T s)",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of a quaternions and a scalar. Subtracts right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename S &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(std::ostream &amp;, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; S &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return the value of exponential value.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\exp(q) = e^w (\\cos||\\boldsymbol{v}||+ \\frac{v}{||\\boldsymbol{v}||})\\sin||\\boldsymbol{v}||\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit)",
+    "local": ""
+  },
+  {
+    "origin": "return \\(q^{-1}\\) which is an inverse of \\(q\\) which satisfies \\(q * q^{-1} = 1\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit)",
+    "local": ""
+  },
+  {
+    "origin": "return the value of logarithm function.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\ln(q) = \\ln||q|| + \\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\arccos\\frac{w}{||q||}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q, const T",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit)",
+    "local": ""
+  },
+  {
+    "origin": "return the value of power function with index \\(x\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[q^x = ||q||(cos(x\\theta) + \\boldsymbol{u}sin(x\\theta))).\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;p, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit)",
+    "local": ""
+  },
+  {
+    "origin": "return the value of power function with quaternion \\(q\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[p^q = e^{q\\ln(p)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return tanh value of quaternion q, sin could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sin(p) = \\sin(w) * \\cosh(||\\boldsymbol{v}||) + \\cos(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\sinh(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return sinh value of quaternion q, sinh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sinh(p) = \\sin(w)\\cos(||\\boldsymbol{v}||) + \\cosh(w)\\frac{v}{||\\boldsymbol{v}||}\\sin||\\boldsymbol{v}||\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit)",
+    "local": ""
+  },
+  {
+    "origin": "return \\(\\sqrt{q}\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return tan value of quaternion q, tan could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\tan(q) = \\frac{\\sin(q)}{\\cos(q)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "return tanh value of quaternion q, tanh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\tanh(q) = \\frac{\\sinh(q)}{\\cosh(q)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "class cv::Quat&lt; _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "Quaternion is a number system that extends the complex numbers. It can be expressed as a rotation in three-dimensional space. A quaternion is generally represented in the form:",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = w + x\\boldsymbol{i} + y\\boldsymbol{j} + z\\boldsymbol{k}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = [w, x, y, z]\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = [w, \\boldsymbol{v}] \\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = ||q||[\\cos\\psi, u_x\\sin\\psi,u_y\\sin\\psi, u_z\\sin\\psi].\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = ||q||[\\cos\\psi, \\boldsymbol{u}\\sin\\psi]\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\psi = \\frac{\\theta}{2}\\), \\(\\theta\\) represents rotation angle, \\(\\boldsymbol{u} = [u_x, u_y, u_z]\\) represents normalized rotation axis, and \\(||q||\\) represents the norm of \\(q\\).",
+    "local": ""
+  },
+  {
+    "origin": "A unit quaternion is usually represents rotation, which has the form:",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = [\\cos\\psi, u_x\\sin\\psi,u_y\\sin\\psi, u_z\\sin\\psi].\\]",
+    "local": ""
+  },
+  {
+    "origin": "To create a quaternion representing the rotation around the axis \\(\\boldsymbol{u}\\) with angle \\(\\theta\\), you can use",
+    "local": ""
+  },
+  {
+    "origin": "You can simply use four same type number to create a quaternion",
+    "local": ""
+  },
+  {
+    "origin": "Or use a Vec4d or Vec4f vector.",
+    "local": ""
+  },
+  {
+    "origin": "If you already have a 3x3 rotation matrix R, then you can use",
+    "local": ""
+  },
+  {
+    "origin": "If you already have a rotation vector rvec which has the form of",
+    "local": ""
+  },
+  {
+    "origin": ", then you can use",
+    "local": ""
+  },
+  {
+    "origin": "To extract the rotation matrix from quaternion, see",
+    "local": ""
+  },
+  {
+    "origin": "To extract the Vec4d or Vec4f, see",
+    "local": ""
+  },
+  {
+    "origin": "To extract the rotation vector, see",
+    "local": ""
+  },
+  {
+    "origin": "If there are two quaternions \\(q_0, q_1\\) are needed to interpolate, you can use",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "spline can smoothly connect rotations of multiple quaternions",
+    "local": ""
+  },
+  {
+    "origin": "Three ways to get an element in Quaternion",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Quat()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Quat()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 4 &gt; &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "coeff",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "explicit",
+    "local": ""
+  },
+  {
+    "origin": "From Vec4d or Vec4f.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Quat()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "w",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "y",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "z",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "from four numbers.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "acos()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::acos",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return arccos value of this quaternion, arccos could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arccos(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arccosh(q)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "acosh()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::acosh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return arccosh value of this quaternion, arccosh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arcosh(q) = \\ln(q + \\sqrt{q^2 - 1})\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "asin()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::asin",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return arcsin value of this quaternion, arcsin could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arcsin(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arcsinh(q\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||})\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "asinh()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::asinh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return arcsinh value of this quaternion, arcsinh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arcsinh(q) = \\ln(q + \\sqrt{q^2 + 1})\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "assertNormal()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::assertNormal",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "eps",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "to throw an error if this quaternion is not a unit quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "eps",
+    "local": ""
+  },
+  {
+    "origin": "tolerance scope of normalization.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "at()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::at",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "index",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "a way to get element.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "index",
+    "local": ""
+  },
+  {
+    "origin": "over a range [0, 3].",
+    "local": ""
+  },
+  {
+    "origin": "A quaternion q",
+    "local": ""
+  },
+  {
+    "origin": "q.at(0) is equivalent to q.w,",
+    "local": ""
+  },
+  {
+    "origin": "q.at(1) is equivalent to q.x,",
+    "local": ""
+  },
+  {
+    "origin": "q.at(2) is equivalent to q.y,",
+    "local": ""
+  },
+  {
+    "origin": "q.at(3) is equivalent to q.z.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "atan()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::atan",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return arctan value of this quaternion, arctan could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arctan(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arctanh(q\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||})\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "atanh()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::atanh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return arctanh value of this quaternion, arctanh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arcsinh(q) = \\frac{\\ln(q + 1) - \\ln(1 - q)}{2}\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "conjugate()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::conjugate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the conjugate of this quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "\\[q.conjugate() = (w, -x, -y, -z).\\]",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cos()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::cos",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return cos value of this quaternion, cos could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\cos(p) = \\cos(w) * \\cosh(||\\boldsymbol{v}||) - \\sin(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\sinh(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cosh()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::cosh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return cosh value of this quaternion, cosh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\cosh(p) = \\cosh(w) * \\cos(||\\boldsymbol{v}||) + \\sinh(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}sin(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromAngleAxis()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromAngleAxis",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "angle",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "axis",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "from an angle, axis. Axis will be normalized in this function. And it generates",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = [\\cos\\psi, u_x\\sin\\psi,u_y\\sin\\psi, u_z\\sin\\psi].\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\psi = \\frac{\\theta}{2}\\), \\(\\theta\\) is the rotation angle.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromEulerAngles()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromEulerAngles",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "angles",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "eulerAnglesType",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "from Euler angles",
+    "local": ""
+  },
+  {
+    "origin": "A quaternion can be generated from Euler angles by combining the quaternion representations of the Euler rotations.",
+    "local": ""
+  },
+  {
+    "origin": "For example, if we use intrinsic rotations in the order of X-Y-Z, \\(\\theta_1 \\) is rotation around the X-axis, \\(\\theta_2 \\) is rotation around the Y-axis, \\(\\theta_3 \\) is rotation around the Z-axis. The final quaternion q can be calculated by",
+    "local": ""
+  },
+  {
+    "origin": "\\[ {q} = q_{X, \\theta_1} q_{Y, \\theta_2} q_{Z, \\theta_3}\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\( q_{X, \\theta_1} \\) is created from",
+    "local": ""
+  },
+  {
+    "origin": ", \\( q_{Y, \\theta_2} \\) is created from",
+    "local": ""
+  },
+  {
+    "origin": ", \\( q_{Z, \\theta_3} \\) is created from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "angles",
+    "local": ""
+  },
+  {
+    "origin": "eulerAnglesType",
+    "local": ""
+  },
+  {
+    "origin": "the convertion Euler angles type",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromRotMat()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromRotMat",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "from a 3x3 rotation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromRvec()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromRvec",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rvec",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "from a rotation vector \\(r\\) has the form \\(\\theta \\cdot \\boldsymbol{u}\\), where \\(\\theta\\) represents rotation angle and \\(\\boldsymbol{u}\\) represents normalized rotation axis.",
+    "local": ""
+  },
+  {
+    "origin": "Angle and axis could be easily derived as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} \\psi &amp;= ||r||\\\\ \\boldsymbol{u} &amp;= \\frac{r}{\\theta} \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "Then a quaternion can be calculated by",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = [\\cos\\psi, \\boldsymbol{u}\\sin\\psi]\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\psi = \\theta / 2 \\)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromXRot()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromXRot",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "theta",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "get a quaternion from a rotation about the X-axis by \\(\\theta\\) .",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = \\cos(\\theta/2)+sin(\\theta/2) i +0 j +0 k \\]",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromYRot()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromYRot",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "theta",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "get a quaternion from a rotation about the Y-axis by \\(\\theta\\) .",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = \\cos(\\theta/2)+0 i+ sin(\\theta/2) j +0k \\]",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromZRot()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromZRot",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "theta",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "get a quaternion from a rotation about the Z-axis by \\(\\theta\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[q = \\cos(\\theta/2)+0 i +0 j +sin(\\theta/2) k \\]",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "crossProduct()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::crossProduct",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the crossProduct between \\(p = (a, b, c, d) = (a, \\boldsymbol{u})\\) and \\(q = (w, x, y, z) = (w, \\boldsymbol{v})\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = \\frac{pq- qp}{2}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = \\boldsymbol{u} \\times \\boldsymbol{v}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = (cz-dy)i + (dx-bz)j + (by-xc)k. \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "dot()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::dot",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the dot between quaternion \\(q\\) and this quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "dot(p, q) is a good metric of how close the quaternions are. Indeed, consider the unit quaternion difference \\(p^{-1} * q\\), its real part is dot(p, q). At the same time its real part is equal to \\(\\cos(\\beta/2)\\) where \\(\\beta\\) is an angle of rotation between p and q, i.e., Therefore, the closer dot(p, q) to 1, the smaller rotation between them.",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\cdot q = p.w \\cdot q.w + p.x \\cdot q.x + p.y \\cdot q.y + p.z \\cdot q.z\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "the other quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "exp()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::exp",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of exponential value.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\exp(q) = e^w (\\cos||\\boldsymbol{v}||+ \\frac{v}{||\\boldsymbol{v}||}\\sin||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getAngle()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::getAngle",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "get the angle of quaternion, it returns the rotation angle.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, this quaternion assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\psi = 2 *arccos(\\frac{w}{||q||})\\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "It always return the value between \\([0, 2\\pi]\\).",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getAxis()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp, 3&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::getAxis",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, this quaternion assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "the unit axis \\(\\boldsymbol{u}\\) is defined by",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{equation} \\begin{split} \\boldsymbol{v} &amp;= \\boldsymbol{u} ||\\boldsymbol{v}||\\\\ &amp;= \\boldsymbol{u}||q||sin(\\frac{\\theta}{2}) \\end{split} \\end{equation}\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(v=[x, y ,z]\\) and \\(\\theta\\) represents rotation angle.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "interPoint()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::interPoint",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "This is the part calculation of squad. To calculate the intermedia quaternion \\(s_i\\) between each three quaternion",
+    "local": ""
+  },
+  {
+    "origin": "\\[s_i = q_i\\exp(-\\frac{\\log(q^*_iq_{i+1}) + \\log(q^*_iq_{i-1})}{4}).\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": "the first quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": "the second quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "q2",
+    "local": ""
+  },
+  {
+    "origin": "the third quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, all input quaternions assume to be unit quaternion. Otherwise, all input quaternions will be normalized inside the function.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "inv()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::inv",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return \\(q^{-1}\\) which is an inverse of \\(q\\) satisfying \\(q * q^{-1} = 1\\).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, quaternion q assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "isNormal()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::isNormal",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "eps",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return true if this quaternion is a unit quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "eps",
+    "local": ""
+  },
+  {
+    "origin": "tolerance scope of normalization. The eps could be defined as",
+    "local": ""
+  },
+  {
+    "origin": "\\[eps = |1 - dotValue|\\]",
+    "local": ""
+  },
+  {
+    "origin": "where",
+    "local": ""
+  },
+  {
+    "origin": "\\[dotValue = (this.w^2 + this.x^2 + this,y^2 + this.z^2).\\]",
+    "local": ""
+  },
+  {
+    "origin": "And this function will consider it is normalized when the dotValue over a range \\([1-eps, 1+eps]\\).",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "lerp()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::lerp",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "To calculate the interpolation from \\(q_0\\) to \\(q_1\\) by Linear Interpolation(Nlerp) For two quaternions, this interpolation curve can be displayed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[Lerp(q_0, q_1, t) = (1 - t)q_0 + tq_1.\\]",
+    "local": ""
+  },
+  {
+    "origin": "Obviously, the lerp will interpolate along a straight line if we think of \\(q_0\\) and \\(q_1\\) as a vector in a two-dimensional space. When \\(t = 0\\), it returns \\(q_0\\) and when \\(t= 1\\), it returns \\(q_1\\). \\(t\\) should to be ranged in \\([0, 1]\\) normally.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion used in linear interpolation.",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion used in linear interpolation.",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "percent of vector \\(\\overrightarrow{q_0q_1}\\) over a range [0, 1].",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "it returns a non-unit quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "log()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::log",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of logarithm function.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\ln(q) = \\ln||q|| + \\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\arccos\\frac{w}{||q||}\\]",
+    "local": ""
+  },
+  {
+    "origin": ". where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, this quaternion assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nlerp()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::nlerp",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "To calculate the interpolation from \\(q_0\\) to \\(q_1\\) by Normalized Linear Interpolation(Nlerp). it returns a normalized quaternion of Linear Interpolation(Lerp).",
+    "local": ""
+  },
+  {
+    "origin": "\\[ Nlerp(q_0, q_1, t) = \\frac{(1 - t)q_0 + tq_1}{||(1 - t)q_0 + tq_1||}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "The interpolation will always choose the shortest path but the constant speed is not guaranteed.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion used in normalized linear interpolation.",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion used in normalized linear interpolation.",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "percent of vector \\(\\overrightarrow{q_0q_1}\\) over a range [0, 1].",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, all input quaternions assume to be unit quaternion. Otherwise, all inputs quaternion will be normalized inside the function.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "norm()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::norm",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the norm of quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "\\[||q|| = \\sqrt{w^2 + x^2 + y^2 + z^2}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "normalize()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::normalize",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return a normalized \\(p\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[p = \\frac{q}{||q||}\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(p\\) satisfies \\((p.x)^2 + (p.y)^2 + (p.z)^2 + (p.w)^2 = 1.\\)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator*()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator*",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of two quaternions q and p. Multiplies values on either side of the operator.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of quaternion multiplication:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p * q &amp;= [p_0, \\boldsymbol{u}]*[q_0, \\boldsymbol{v}]\\\\ &amp;=[p_0q_0 - \\boldsymbol{u}\\cdot \\boldsymbol{v}, p_0\\boldsymbol{v} + q_0\\boldsymbol{u}+ \\boldsymbol{u}\\times \\boldsymbol{v}]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\cdot\\) means dot product and \\(\\times \\) means cross product.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator*=()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator*=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication assignment operator of two quaternions q and p. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of quaternion multiplication:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p * q &amp;= [p_0, \\boldsymbol{u}]*[q_0, \\boldsymbol{v}]\\\\ &amp;=[p_0q_0 - \\boldsymbol{u}\\cdot \\boldsymbol{v}, p_0\\boldsymbol{v} + q_0\\boldsymbol{u}+ \\boldsymbol{u}\\times \\boldsymbol{v}]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\cdot\\) means dot product and \\(\\times \\) means cross product.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator*=()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator*=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication assignment operator of a quaternions and a scalar. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of quaternion multiplication with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p * s &amp;= [w, x, y, z] * s\\\\ &amp;=[w * s, x * s, y * s, z * s]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator+()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator+",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of two quaternions p and q. It returns a new quaternion that each value is the sum of \\(p_i\\) and \\(q_i\\).",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator+=()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator+=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Addition assignment operator of two quaternions p and q. It adds right operand to the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator-()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator-",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Return opposite quaternion \\(-p\\) which satisfies \\(p + (-p) = 0.\\).",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator-()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator-",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of two quaternions p and q. It returns a new quaternion that each value is the sum of \\(p_i\\) and \\(-q_i\\).",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator-=()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator-=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction assignment operator of two quaternions p and q. It subtracts right operand from the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator/()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator/",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Division operator of a quaternions and a scalar. It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of quaternion division with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p / s &amp;= [w, x, y, z] / s\\\\ &amp;=[w/s, x/s, y/s, z/s]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to this quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator/()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator/",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Division operator of two quaternions p and q. Divides left hand operand by right hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of quaternion division with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p / q &amp;= p * q.inv()\\\\ \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator/=()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator/=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Division assignment operator of a quaternions and a scalar. It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of quaternion division with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p / s &amp;= [w, x, y, z] / s\\\\ &amp;=[w / s, x / s, y / s, z / s]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator/=()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator/=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Division assignment operator of two quaternions p and q; It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of quaternion division with a quaternion:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p / q&amp;= p * q.inv()\\\\ \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator==()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator==",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return true if two quaternions p and q are nearly equal, i.e. when the absolute value of each \\(p_i\\) and \\(q_i\\) is less than CV_QUAT_EPS.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator[]()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator[]",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "n",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator[]()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "const _Tp&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator[]",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "n",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "power()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::power",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of power function with index \\(x\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[q^x = ||q||(\\cos(x\\theta) + \\boldsymbol{u}\\sin(x\\theta))).\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": "index of exponentiation.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, this quaternion assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "power()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::power",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of power function with quaternion \\(q\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[p^q = e^{q\\ln(p)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "index quaternion of power function.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, this quaternion assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "sin()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::sin",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return sin value of this quaternion, sin could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sin(p) = \\sin(w) * \\cosh(||\\boldsymbol{v}||) + \\cos(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\sinh(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "sinh()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::sinh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return sinh value of this quaternion, sinh could be calculated as: \\(\\sinh(p) = \\sin(w)\\cos(||\\boldsymbol{v}||) + \\cosh(w)\\frac{v}{||\\boldsymbol{v}||}\\sin||\\boldsymbol{v}||\\) where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "slerp()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::slerp",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "directChange",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "To calculate the interpolation between \\(q_0\\) and \\(q_1\\) by Spherical Linear Interpolation(Slerp), which can be defined as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ Slerp(q_0, q_1, t) = \\frac{\\sin((1-t)\\theta)}{\\sin(\\theta)}q_0 + \\frac{\\sin(t\\theta)}{\\sin(\\theta)}q_1\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\theta\\) can be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\theta=cos^{-1}(q_0\\cdot q_1)\\]",
+    "local": ""
+  },
+  {
+    "origin": "resulting from the both of their norm is unit.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion used in Slerp.",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion used in Slerp.",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "percent of angle between \\(q_0\\) and \\(q_1\\) over a range [0, 1].",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, all input quaternions assume to be unit quaternions. Otherwise, all input quaternions will be normalized inside the function.",
+    "local": ""
+  },
+  {
+    "origin": "directChange",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, the interpolation will choose the nearest path.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If the interpolation angle is small, the error between Nlerp and Slerp is not so large. To improve efficiency and avoid zero division error, we use Nlerp instead of Slerp.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "spline()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::spline",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q3",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "to calculate a quaternion which is the result of a \\(C^1\\) continuous spline curve constructed by squad at the ratio t. Here, the interpolation values are between \\(q_1\\) and \\(q_2\\). \\(q_0\\) and \\(q_2\\) are used to ensure the \\(C^1\\) continuity. if t = 0, it returns \\(q_1\\), if t = 1, it returns \\(q_2\\).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": "the first input quaternion to ensure \\(C^1\\) continuity.",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": "the second input quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "q2",
+    "local": ""
+  },
+  {
+    "origin": "the third input quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "q3",
+    "local": ""
+  },
+  {
+    "origin": "the fourth input quaternion the same use of \\(q1\\).",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "ratio over a range [0, 1].",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, \\(q_0, q_1, q_2, q_3\\) assume to be unit quaternion. Otherwise, all input quaternions will be normalized inside the function.",
+    "local": ""
+  },
+  {
+    "origin": "For example:",
+    "local": ""
+  },
+  {
+    "origin": "If there are three double quaternions \\(v_0, v_1, v_2\\) waiting to be interpolated.",
+    "local": ""
+  },
+  {
+    "origin": "Interpolation between \\(v_0\\) and \\(v_1\\) with a ratio \\(t_0\\) could be calculated as",
+    "local": ""
+  },
+  {
+    "origin": "Interpolation between \\(v_1\\) and \\(v_2\\) with a ratio \\(t_0\\) could be calculated as",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "sqrt()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::sqrt",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return \\(\\sqrt{q}\\).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, this quaternion assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "squad()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::squad",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "s0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "s1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "directChange",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "To calculate the interpolation between \\(q_0\\), \\(q_1\\), \\(q_2\\), \\(q_3\\) by Spherical and quadrangle(Squad). This could be defined as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[Squad(q_i, s_i, s_{i+1}, q_{i+1}, t) = Slerp(Slerp(q_i, q_{i+1}, t), Slerp(s_i, s_{i+1}, t), 2t(1-t))\\]",
+    "local": ""
+  },
+  {
+    "origin": "where",
+    "local": ""
+  },
+  {
+    "origin": "\\[s_i = q_i\\exp(-\\frac{\\log(q^*_iq_{i+1}) + \\log(q^*_iq_{i-1})}{4})\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The Squad expression is analogous to the \\(B\\acute{e}zier\\) curve, but involves spherical linear interpolation instead of simple linear interpolation. Each \\(s_i\\) needs to be calculated by three quaternions.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q0",
+    "local": ""
+  },
+  {
+    "origin": "the first quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "s0",
+    "local": ""
+  },
+  {
+    "origin": "the second quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "s1",
+    "local": ""
+  },
+  {
+    "origin": "the third quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": "thr fourth quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "interpolation parameter of quadratic and linear interpolation over a range \\([0, 1]\\).",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, all input quaternions assume to be unit quaternion. Otherwise, all input quaternions will be normalized inside the function.",
+    "local": ""
+  },
+  {
+    "origin": "directChange",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, squad will find the nearest path to interpolate.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "tan()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::tan",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return tan value of this quaternion, tan could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\tan(q) = \\frac{\\sin(q)}{\\cos(q)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "tanh()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::tanh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return tanh value of this quaternion, tanh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\tanh(q) = \\frac{\\sinh(q)}{\\cosh(q)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "toEulerAngles()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp, 3&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::toEulerAngles",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "eulerAnglesType",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Transform a quaternion q to Euler angles.",
+    "local": ""
+  },
+  {
+    "origin": "When transforming a quaternion \\(q = w + x\\boldsymbol{i} + y\\boldsymbol{j} + z\\boldsymbol{k}\\) to Euler angles, rotation matrix M can be calculated by:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{aligned} {M} &amp;={\\begin{bmatrix}1-2(y^{2}+z^{2})&amp;2(xy-zx)&amp;2(xz+yw)\\\\2(xy+zw)&amp;1-2(x^{2}+z^{2})&amp;2(yz-xw)\\\\2(xz-yw)&amp;2(yz+xw)&amp;1-2(x^{2}+y^{2})\\end{bmatrix}}\\end{aligned}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "On the other hand, the rotation matrix can be obtained from Euler angles. Using intrinsic rotations with Euler angles type XYZ as an example, \\(\\theta_1 \\), \\(\\theta_2 \\), \\(\\theta_3 \\) are three angles for Euler angles, the rotation matrix R can be calculated by:",
+    "local": ""
+  },
+  {
+    "origin": "\\[R =X(\\theta_1)Y(\\theta_2)Z(\\theta_3) ={\\begin{bmatrix}\\cos\\theta_{2}\\cos\\theta_{3}&amp;-\\cos\\theta_{2}\\sin\\theta_{3}&amp;\\sin\\theta_{2}\\\\\\cos\\theta_{1}\\sin\\theta_{3}+\\cos\\theta_{3}\\sin\\theta_{1}\\sin\\theta_{2}&amp;\\cos\\theta_{1}\\cos\\theta_{3}-\\sin\\theta_{1}\\sin\\theta_{2}\\sin\\theta_{3}&amp;-\\cos\\theta_{2}\\sin\\theta_{1}\\\\\\sin\\theta_{1}\\sin\\theta_{3}-\\cos\\theta_{1}\\cos\\theta_{3}\\sin\\theta_{2}&amp;\\cos\\theta_{3}\\sin\\theta_{1}+\\cos\\theta_{1}\\sin\\theta_{2}\\sin\\theta_{3}&amp;\\cos\\theta_{1}\\cos_{2}\\end{bmatrix}}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Rotation matrix M and R are equal. As long as \\( s_{2} \\neq 1 \\), by comparing each element of two matrices ,the solution is \\(\\begin{cases} \\theta_1 = \\arctan2(-m_{23},m_{33})\\\\\\theta_2 = arcsin(m_{13}) \\\\\\theta_3 = \\arctan2(-m_{12},m_{11}) \\end{cases}\\).",
+    "local": ""
+  },
+  {
+    "origin": "When \\( s_{2}=1\\) or \\( s_{2}=-1\\), the gimbal lock occurs. The function will prompt \"WARNING: Gimbal Lock will occur. Euler angles is non-unique. For intrinsic rotations, we set the third angle to 0, and for external rotation, we set the first angle to 0.\".",
+    "local": ""
+  },
+  {
+    "origin": "When \\( s_{2}=1\\) , The rotation matrix R is \\(R = {\\begin{bmatrix}0&amp;0&amp;1\\\\\\sin(\\theta_1+\\theta_3)&amp;\\cos(\\theta_1+\\theta_3)&amp;0\\\\-\\cos(\\theta_1+\\theta_3)&amp;\\sin(\\theta_1+\\theta_3)&amp;0\\end{bmatrix}}\\).",
+    "local": ""
+  },
+  {
+    "origin": "The number of solutions is infinite with the condition \\(\\begin{cases} \\theta_1+\\theta_3 = \\arctan2(m_{21},m_{22})\\\\ \\theta_2=\\pi/2 \\end{cases}\\ \\).",
+    "local": ""
+  },
+  {
+    "origin": "We set \\( \\theta_3 = 0\\), the solution is \\(\\begin{cases} \\theta_1=\\arctan2(m_{21},m_{22})\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=0 \\end{cases}\\).",
+    "local": ""
+  },
+  {
+    "origin": "When \\( s_{2}=-1\\), The rotation matrix R is \\(X_{1}Y_{2}Z_{3}={\\begin{bmatrix}0&amp;0&amp;-1\\\\-\\sin(\\theta_1-\\theta_3)&amp;\\cos(\\theta_1-\\theta_3)&amp;0\\\\\\cos(\\theta_1-\\theta_3)&amp;\\sin(\\theta_1-\\theta_3)&amp;0\\end{bmatrix}}\\).",
+    "local": ""
+  },
+  {
+    "origin": "The number of solutions is infinite with the condition \\(\\begin{cases} \\theta_1+\\theta_3 = \\arctan2(m_{32},m_{22})\\\\ \\theta_2=\\pi/2 \\end{cases}\\ \\).",
+    "local": ""
+  },
+  {
+    "origin": "We set \\( \\theta_3 = 0\\), the solution is \\( \\begin{cases}\\theta_1=\\arctan2(m_{32},m_{22}) \\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=0\\end{cases}\\).",
+    "local": ""
+  },
+  {
+    "origin": "Since \\( sin \\theta\\in [-1,1] \\) and \\( cos \\theta \\in [-1,1] \\), the unnormalized quaternion will cause computational troubles. For this reason, this function will normalize the quaternion at first and",
+    "local": ""
+  },
+  {
+    "origin": "is not needed.",
+    "local": ""
+  },
+  {
+    "origin": "When the gimbal lock occurs, we set \\(\\theta_3 = 0\\) for intrinsic rotations or \\(\\theta_1 = 0\\) for extrinsic rotations.",
+    "local": ""
+  },
+  {
+    "origin": "As a result, for every Euler angles type, we can get solution as shown in the following table.",
+    "local": ""
+  },
+  {
+    "origin": "EulerAnglesType",
+    "local": ""
+  },
+  {
+    "origin": "Ordinary",
+    "local": ""
+  },
+  {
+    "origin": "\\(\\theta_2 = π/2\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\(\\theta_2 = -π/2\\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_XYZ",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(-m_{23},m_{33})\\\\\\theta_2 = \\arcsin(m_{13}) \\\\\\theta_3= \\arctan2(-m_{12},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{21},m_{22})\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{32},m_{22})\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_XZY",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{32},m_{22})\\\\\\theta_2 = -\\arcsin(m_{12}) \\\\\\theta_3= \\arctan2(m_{13},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{31},m_{33})\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(-m_{23},m_{33})\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_YXZ",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{13},m_{33})\\\\\\theta_2 = -\\arcsin(m_{23}) \\\\\\theta_3= \\arctan2(m_{21},m_{22}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{12},m_{11})\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(-m_{12},m_{11})\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_YZX",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(-m_{31},m_{11})\\\\\\theta_2 = \\arcsin(m_{21}) \\\\\\theta_3= \\arctan2(-m_{23},m_{22}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{13},m_{33})\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{13},m_{12})\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_ZXY",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(-m_{12},m_{22})\\\\\\theta_2 = \\arcsin(m_{32}) \\\\\\theta_3= \\arctan2(-m_{31},m_{33}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{21},m_{11})\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{21},m_{11})\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_ZYX",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{21},m_{11})\\\\\\theta_2 = \\arcsin(-m_{31}) \\\\\\theta_3= \\arctan2(m_{32},m_{33}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{23},m_{22})\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(-m_{12},m_{22})\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_XYZ",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{32},m_{33})\\\\\\theta_2 = \\arcsin(-m_{31}) \\\\\\ \\theta_3 = \\arctan2(m_{21},m_{11})\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=\\arctan2(m_{23},m_{22}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=0\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=\\arctan2(-m_{12},m_{22}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_XZY",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(-m_{23},m_{22})\\\\\\theta_2 = \\arcsin(m_{21}) \\\\\\theta_3= \\arctan2(-m_{31},m_{11})\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=\\arctan2(m_{13},m_{33}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=0\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=\\arctan2(m_{13},m_{12}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_YXZ",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(-m_{31},m_{33}) \\\\\\theta_2 = \\arcsin(m_{32}) \\\\\\theta_3= \\arctan2(-m_{12},m_{22})\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=\\arctan2(m_{21},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=0\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=\\arctan2(m_{21},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_YZX",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{13},m_{11})\\\\\\theta_2 = -\\arcsin(m_{12}) \\\\\\theta_3= \\arctan2(m_{32},m_{22})\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=\\arctan2(m_{31},m_{33}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=0\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=\\arctan2(-m_{23},m_{33}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_ZXY",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{21},m_{22})\\\\\\theta_2 = -\\arcsin(m_{23}) \\\\\\theta_3= \\arctan2(m_{13},m_{33})\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=\\arctan2(m_{12},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=\\arctan2(-m_{12},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_ZYX",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(-m_{12},m_{11})\\\\\\theta_2 = \\arcsin(m_{13}) \\\\\\theta_3= \\arctan2(-m_{23},m_{33})\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=0\\\\ \\theta_2=\\pi/2\\\\ \\theta_3=\\arctan2(m_{21},m_{22}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=0\\\\ \\theta_2=-\\pi/2\\\\ \\theta_3=\\arctan2(m_{32},m_{22}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EulerAnglesType",
+    "local": ""
+  },
+  {
+    "origin": "Ordinary",
+    "local": ""
+  },
+  {
+    "origin": "\\(\\theta_2 = 0\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\(\\theta_2 = π\\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_XYX",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{21},-m_{31})\\\\\\theta_2 =\\arccos(m_{11}) \\\\\\theta_3 = \\arctan2(m_{12},m_{13}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{32},m_{33})\\\\ \\theta_2=0\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{23},m_{22})\\\\ \\theta_2=\\pi\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_XZX",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{31},m_{21})\\\\\\theta_2 = \\arccos(m_{11}) \\\\\\theta_3 = \\arctan2(m_{13},-m_{12}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{32},m_{33})\\\\ \\theta_2=0\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(-m_{32},m_{33})\\\\ \\theta_2=\\pi\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_YXY",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{12},m_{32})\\\\\\theta_2 = \\arccos(m_{22}) \\\\\\theta_3 = \\arctan2(m_{21},-m_{23}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{13},m_{11})\\\\ \\theta_2=0\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(-m_{31},m_{11})\\\\ \\theta_2=\\pi\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_YZY",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{32},-m_{12})\\\\\\theta_2 = \\arccos(m_{22}) \\\\\\theta_3 =\\arctan2(m_{23},m_{21}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{13},m_{11})\\\\ \\theta_2=0\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{13},-m_{11})\\\\ \\theta_2=\\pi\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_ZXZ",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(-m_{13},m_{23})\\\\\\theta_2 = \\arccos(m_{33}) \\\\\\theta_3 =\\arctan2(m_{31},m_{32}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{21},m_{22})\\\\ \\theta_2=0\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{21},m_{11})\\\\ \\theta_2=\\pi\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "INT_ZYZ",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{23},m_{13})\\\\\\theta_2 = \\arccos(m_{33}) \\\\\\theta_3 = \\arctan2(m_{32},-m_{31}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{21},m_{11})\\\\ \\theta_2=0\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=\\arctan2(m_{21},m_{11})\\\\ \\theta_2=\\pi\\\\ \\theta_3=0 \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_XYX",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{12},m_{13}) \\\\\\theta_2 = \\arccos(m_{11}) \\\\\\theta_3 = \\arctan2(m_{21},-m_{31})\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=0\\\\ \\theta_2=0\\\\ \\theta_3=\\arctan2(m_{32},m_{33}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=\\pi\\\\ \\theta_3= \\arctan2(m_{23},m_{22}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_XZX",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{13},-m_{12})\\\\\\theta_2 = \\arccos(m_{11}) \\\\\\theta_3 = \\arctan2(m_{31},m_{21})\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=0\\\\ \\theta_3=\\arctan2(m_{32},m_{33}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=\\pi\\\\ \\theta_3=\\arctan2(-m_{32},m_{33}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_YXY",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{21},-m_{23})\\\\\\theta_2 = \\arccos(m_{22}) \\\\\\theta_3 = \\arctan2(m_{12},m_{32}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=0\\\\ \\theta_3=\\arctan2(m_{13},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=\\pi\\\\ \\theta_3=\\arctan2(-m_{31},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_YZY",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{23},m_{21}) \\\\\\theta_2 = \\arccos(m_{22}) \\\\\\theta_3 = \\arctan2(m_{32},-m_{12}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=0\\\\ \\theta_3=\\arctan2(m_{13},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=0\\\\ \\theta_2=\\pi\\\\ \\theta_3=\\arctan2(m_{13},-m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_ZXZ",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{31},m_{32}) \\\\\\theta_2 = \\arccos(m_{33}) \\\\\\theta_3 = \\arctan2(-m_{13},m_{23})\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=0\\\\ \\theta_2=0\\\\ \\theta_3=\\arctan2(m_{21},m_{22}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=\\pi\\\\ \\theta_3=\\arctan2(m_{21},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "EXT_ZYZ",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1 = \\arctan2(m_{32},-m_{31})\\\\\\theta_2 = \\arccos(m_{33}) \\\\\\theta_3 = \\arctan2(m_{23},m_{13}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1=0\\\\ \\theta_2=0\\\\ \\theta_3=\\arctan2(m_{21},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\theta_1= 0\\\\ \\theta_2=\\pi\\\\ \\theta_3=\\arctan2(m_{21},m_{11}) \\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "eulerAnglesType",
+    "local": ""
+  },
+  {
+    "origin": "the convertion Euler angles type",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "toRotMat3x3()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp, 3, 3&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::toRotMat3x3",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "transform a quaternion to a 3x3 rotation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, this quaternion assume to be a unit quaternion and this function will save some computations. Otherwise, this function will normalize this quaternion at first then do the transformation.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Matrix A which is to be rotated should have the form",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{bmatrix} x_0&amp; x_1&amp; x_2&amp;...&amp;x_n\\\\ y_0&amp; y_1&amp; y_2&amp;...&amp;y_n\\\\ z_0&amp; z_1&amp; z_2&amp;...&amp;z_n \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "where the same subscript represents a point. The shape of A assume to be [3, n] The points matrix A can be rotated by",
+    "local": ""
+  },
+  {
+    "origin": "* A. The result has 3 rows and n columns too.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "toRotMat4x4()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp, 4, 4&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::toRotMat4x4",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "transform a quaternion to a 4x4 rotation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, this quaternion assume to be a unit quaternion and this function will save some computations. Otherwise, this function will normalize this quaternion at first then do the transformation.",
+    "local": ""
+  },
+  {
+    "origin": "The operations is similar as toRotMat3x3 except that the points matrix should have the form",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{bmatrix} x_0&amp; x_1&amp; x_2&amp;...&amp;x_n\\\\ y_0&amp; y_1&amp; y_2&amp;...&amp;y_n\\\\ z_0&amp; z_1&amp; z_2&amp;...&amp;z_n\\\\ 0&amp;0&amp;0&amp;...&amp;0 \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "toRotVec()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp, 3&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::toRotVec",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "transform this quaternion to a Rotation vector.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, this quaternion assume to be a unit quaternion and this function will save some computations. Rotation vector rVec is defined as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ rVec = [\\theta v_x, \\theta v_y, \\theta v_z]\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\theta\\) represents rotation angle, and \\(\\boldsymbol{v}\\) represents the normalized rotation axis.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "toVec()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp, 4&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::toVec",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "transform the this quaternion to a Vec&lt;T, 4&gt;.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Friends And Related Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "acos",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; acos",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return arccos value of quaternion q, arccos could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arccos(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arccosh(q)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "acosh",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; acosh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return arccosh value of quaternion q, arccosh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arccosh(q) = \\ln(q + \\sqrt{q^2 - 1})\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "asin",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; asin",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return arcsin value of quaternion q, arcsin could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arcsin(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arcsinh(q\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||})\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "asinh",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; asinh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return arcsinh value of quaternion q, arcsinh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arcsinh(q) = \\ln(q + \\sqrt{q^2 + 1})\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "atan",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; atan",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return arctan value of quaternion q, arctan could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\arctan(q) = -\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}arctanh(q\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||})\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "atanh",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; atanh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return arctanh value of quaternion q, arctanh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[arctanh(q) = \\frac{\\ln(q + 1) - \\ln(1 - q)}{2}\\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cos",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cos",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return sin value of quaternion q, cos could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\cos(p) = \\cos(w) * \\cosh(||\\boldsymbol{v}||) - \\sin(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\sinh(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cosh",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cosh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return cosh value of quaternion q, cosh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\cosh(p) = \\cosh(w) * \\cos(||\\boldsymbol{v}||) + \\sinh(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\sin(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "crossProduct",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; crossProduct",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "p",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return the crossProduct between \\(p = (a, b, c, d) = (a, \\boldsymbol{u})\\) and \\(q = (w, x, y, z) = (w, \\boldsymbol{v})\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = \\frac{pq- qp}{2}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = \\boldsymbol{u} \\times \\boldsymbol{v}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[p \\times q = (cz-dy)i + (dx-bz)j + (by-xc)k \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator*",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator*",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of a scalar and a quaternions. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of quaternion multiplication with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p * s &amp;= [w, x, y, z] * s\\\\ &amp;=[w * s, x * s, y * s, z * s]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator*",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator*",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of a quaternion and a scalar. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of quaternion multiplication with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p * s &amp;= [w, x, y, z] * s\\\\ &amp;=[w * s, x * s, y * s, z * s]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator+",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator+",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of a quaternions and a scalar. Adds right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator+",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator+",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of a quaternions and a scalar. Adds right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator-",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator-",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of a scalar and a quaternions. Subtracts right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator-",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator-",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of a quaternions and a scalar. Subtracts right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator",
+    "local": ""
+  },
+  {
+    "origin": "<",
+    "local": ""
+  },
+  {
+    "origin": "<",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename S &gt;",
+    "local": ""
+  },
+  {
+    "origin": "std::ostream&amp; cv::operator&lt;&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "exp",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; exp",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return the value of exponential value.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\exp(q) = e^w (\\cos||\\boldsymbol{v}||+ \\frac{v}{||\\boldsymbol{v}||})\\sin||\\boldsymbol{v}||\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "inv",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; inv",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return \\(q^{-1}\\) which is an inverse of \\(q\\) which satisfies \\(q * q^{-1} = 1\\).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, quaternion q assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "log",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; log",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return the value of logarithm function.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\ln(q) = \\ln||q|| + \\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\arccos\\frac{w}{||q||}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, q assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "power",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; power",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return the value of power function with index \\(x\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[q^x = ||q||(cos(x\\theta) + \\boldsymbol{u}sin(x\\theta))).\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": "index of exponentiation.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, quaternion q assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of the index should be the same as the quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "power",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; power",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "p",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return the value of power function with quaternion \\(q\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[p^q = e^{q\\ln(p)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "p",
+    "local": ""
+  },
+  {
+    "origin": "base quaternion of power function.",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "index quaternion of power function.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, quaternion \\(p\\) assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "sin",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; sin",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return tanh value of quaternion q, sin could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sin(p) = \\sin(w) * \\cosh(||\\boldsymbol{v}||) + \\cos(w)\\frac{\\boldsymbol{v}}{||\\boldsymbol{v}||}\\sinh(||\\boldsymbol{v}||)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "sinh",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; sinh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return sinh value of quaternion q, sinh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sinh(p) = \\sin(w)\\cos(||\\boldsymbol{v}||) + \\cosh(w)\\frac{v}{||\\boldsymbol{v}||}\\sin||\\boldsymbol{v}||\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\boldsymbol{v} = [x, y, z].\\)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "sqrt",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; sqrt",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return \\(\\sqrt{q}\\).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if QUAT_ASSUME_UNIT, quaternion q assume to be a unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "tan",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; tan",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return tan value of quaternion q, tan could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\tan(q) = \\frac{\\sin(q)}{\\cos(q)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "tanh",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; tanh",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return tanh value of quaternion q, tanh could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\tanh(q) = \\frac{\\sinh(q)}{\\cosh(q)}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_QUAT_CONVERT_THRESHOLD",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "constexpr _Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::CV_QUAT_CONVERT_THRESHOLD = (_Tp)1.e-6",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_QUAT_EPS",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "constexpr _Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::CV_QUAT_EPS = (_Tp)1.e-6",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "w",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::w",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::x",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "y",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::y",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "z",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::z",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:43 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "origin": "OpenCV: Image Inpainting",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Image Inpainting",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial we will show how to use the algorithm Rapid Frequency Selective Reconstructiom (FSR) for image inpainting.",
+    "local": ""
+  },
+  {
+    "origin": "Basics",
+    "local": ""
+  },
+  {
+    "origin": "Image Inpainting is the process of reconstructing damaged or missing parts of an image. This is achieved by replacing distorted pixels by pixels similar to the neighboring ones. There are several algorithms for inpainting, using different approaches for such replacement.",
+    "local": ""
+  },
+  {
+    "origin": "One of those algorithms is called",
+    "local": ""
+  },
+  {
+    "origin": "Rapid Frequency Selectice Reconstruction (FSR)",
+    "local": ""
+  },
+  {
+    "origin": ". FSR reconstructs image signals by exploiting the property that small areas of images can be represented sparsely in the Fourier domain. See",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "for details.",
+    "local": ""
+  },
+  {
+    "origin": "FSR can be utilized for the following areas of application:",
+    "local": ""
+  },
+  {
+    "origin": "Error Concealment (Inpainting)",
+    "local": ""
+  },
+  {
+    "origin": ": The sampling mask indicates the missing pixels of the distorted input image to be reconstructed.",
+    "local": ""
+  },
+  {
+    "origin": "Non-Regular Sampling",
+    "local": ""
+  },
+  {
+    "origin": ": For more information on how to choose a good sampling mask, please review",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Example",
+    "local": ""
+  },
+  {
+    "origin": "The following sample code shows how to use FSR for inpainting. The non-zero pixels of the error mask indicate valid image area, while zero pixels indicate area to be reconstructed. You can create an arbitrary mask manually using tools like Paint or GIMP. Start with a plain white image and draw some distortions in black.",
+    "local": ""
+  },
+  {
+    "origin": "Original and distorted image:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruction:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Left image: fast quality profile (run time 8 seconds). Right image: best quality profile (1 minute 51 seconds).",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Comparison of FSR to existing inpainting methods in OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by &#160;",
+    "local": ""
+  }
+]

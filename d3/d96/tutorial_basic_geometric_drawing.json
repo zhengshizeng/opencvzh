@@ -1,0 +1,802 @@
+[
+  {
+    "origin": "OpenCV: Basic Drawing",
+    "local": "OpenCV:基本绘图"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "Basic Drawing",
+    "local": "基础图纸"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "Ana Huamán"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "OpenCV &gt;= 3.0"
+  },
+  {
+    "origin": "Goals",
+    "local": "Goals(目标)"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何:"
+  },
+  {
+    "origin": "Draw a",
+    "local": "画一条"
+  },
+  {
+    "origin": "line",
+    "local": "线"
+  },
+  {
+    "origin": "by using the OpenCV function",
+    "local": "通过使用OpenCV函数"
+  },
+  {
+    "origin": "Draw an",
+    "local": "画一个"
+  },
+  {
+    "origin": "ellipse",
+    "local": "椭圆"
+  },
+  {
+    "origin": "by using the OpenCV function",
+    "local": "通过使用OpenCV函数"
+  },
+  {
+    "origin": "Draw a",
+    "local": "画一个"
+  },
+  {
+    "origin": "rectangle",
+    "local": "矩形"
+  },
+  {
+    "origin": "by using the OpenCV function",
+    "local": "通过使用OpenCV函数"
+  },
+  {
+    "origin": "Draw a",
+    "local": "画一个"
+  },
+  {
+    "origin": "circle",
+    "local": "圆圈"
+  },
+  {
+    "origin": "by using the OpenCV function",
+    "local": "通过使用OpenCV函数"
+  },
+  {
+    "origin": "Draw a",
+    "local": "画一个"
+  },
+  {
+    "origin": "filled polygon",
+    "local": "填充多边形"
+  },
+  {
+    "origin": "by using the OpenCV function",
+    "local": "通过使用OpenCV函数"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "OpenCV Theory",
+    "local": "OpenCV理论"
+  },
+  {
+    "origin": "For this tutorial, we will heavily use two structures:",
+    "local": "在本教程中，我们将大量使用两种结构:"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Point",
+    "local": "Point"
+  },
+  {
+    "origin": "It represents a 2D point, specified by its image coordinates \\(x\\) and \\(y\\). We can define it as:",
+    "local": "它表示一个二维点，由其图像坐标 \\(x\\) 和 \\(y\\)指定。我们可以将其定义为:"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "Scalar",
+    "local": "标量"
+  },
+  {
+    "origin": "Represents a 4-element vector. The type Scalar is widely used in OpenCV for passing pixel values.",
+    "local": "表示4元素向量。类型标量在OpenCV中广泛用于传递像素值。"
+  },
+  {
+    "origin": "In this tutorial, we will use it extensively to represent BGR color values (3 parameters). It is not necessary to define the last argument if it is not going to be used.",
+    "local": "在本教程中，我们将广泛使用它来表示BGR颜色值（3个参数）。如果不使用最后一个参数，则不必定义它。"
+  },
+  {
+    "origin": "Let's see an example, if we are asked for a color argument and we give:",
+    "local": "让我们看一个例子，如果我们被要求一个颜色参数，我们给出:"
+  },
+  {
+    "origin": "We would be defining a BGR color such as:",
+    "local": "我们将定义BGR颜色，例如:"
+  },
+  {
+    "origin": "Blue = a",
+    "local": "蓝色 = a"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "Green = b",
+    "local": "绿色 = b"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "Red = c",
+    "local": "红色 = c"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "OpenCV Theory",
+    "local": "OpenCV理论"
+  },
+  {
+    "origin": "For this tutorial, we will heavily use two structures:",
+    "local": "在本教程中，我们将大量使用两种结构:"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Point",
+    "local": "Point"
+  },
+  {
+    "origin": "It represents a 2D point, specified by its image coordinates \\(x\\) and \\(y\\). We can define it as:",
+    "local": "它表示一个二维点，由其图像坐标 \\(x\\) 和 \\(y\\)指定。我们可以将其定义为:"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "Scalar",
+    "local": "标量"
+  },
+  {
+    "origin": "Represents a 4-element vector. The type Scalar is widely used in OpenCV for passing pixel values.",
+    "local": "表示4元素向量。类型标量在OpenCV中广泛用于传递像素值。"
+  },
+  {
+    "origin": "In this tutorial, we will use it extensively to represent BGR color values (3 parameters). It is not necessary to define the last argument if it is not going to be used.",
+    "local": "在本教程中，我们将广泛使用它来表示BGR颜色值（3个参数）。如果不使用最后一个参数，则不必定义它。"
+  },
+  {
+    "origin": "Let's see an example, if we are asked for a color argument and we give:",
+    "local": "让我们看一个例子，如果我们被要求一个颜色参数，我们给出:"
+  },
+  {
+    "origin": "We would be defining a BGR color such as:",
+    "local": "我们将定义BGR颜色，例如:"
+  },
+  {
+    "origin": "Blue = a",
+    "local": "蓝色 = a"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "Green = b",
+    "local": "绿色 = b"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "Red = c",
+    "local": "红色 = c"
+  },
+  {
+    "origin": "Code",
+    "local": "Code"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "This code is in your OpenCV sample folder. Otherwise you can grab it from",
+    "local": "此代码位于OpenCV示例文件夹中。否则你可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "This code is in your OpenCV sample folder. Otherwise you can grab it from",
+    "local": "此代码位于OpenCV示例文件夹中。否则你可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "This code is in your OpenCV sample folder. Otherwise you can grab it from",
+    "local": "此代码位于OpenCV示例文件夹中。否则你可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Since we plan to draw two examples (an atom and a rook), we have to create two images and two windows to display them.",
+    "local": "因为我们计划绘制两个示例（一个atom和一辆rook），所以我们必须创建两个图像和两个窗口来显示它们。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "We created functions to draw different geometric shapes. For instance, to draw the atom we used",
+    "local": "我们创建函数来绘制不同的几何形状。例如，画我们用的原子"
+  },
+  {
+    "origin": "MyEllipse",
+    "local": "MyEllipse"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "MyFilledCircle",
+    "local": "MyFilledCircle"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "And to draw the rook we employed",
+    "local": "画我们雇的车"
+  },
+  {
+    "origin": "MyLine",
+    "local": "MyLine"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "rectangle",
+    "local": "矩形"
+  },
+  {
+    "origin": "and a",
+    "local": "和一个"
+  },
+  {
+    "origin": "MyPolygon",
+    "local": "我的多边形"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "Let's check what is inside each of these functions:",
+    "local": "让我们检查一下这些函数中的每个函数:"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "MyLine",
+    "local": "MyLine"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "As we can see,",
+    "local": "如我们所见，"
+  },
+  {
+    "origin": "MyLine",
+    "local": "MyLine"
+  },
+  {
+    "origin": "just call the function",
+    "local": "只需调用函数"
+  },
+  {
+    "origin": ", which does the following:",
+    "local": "，执行以下操作:"
+  },
+  {
+    "origin": "Draw a line from Point",
+    "local": "从点画一条线"
+  },
+  {
+    "origin": "start",
+    "local": "开始"
+  },
+  {
+    "origin": "to Point",
+    "local": "指向"
+  },
+  {
+    "origin": "end",
+    "local": "结束"
+  },
+  {
+    "origin": "The line is displayed in the image",
+    "local": "该行将显示在图像中"
+  },
+  {
+    "origin": "img",
+    "local": "img"
+  },
+  {
+    "origin": "The line color is defined by",
+    "local": "线条颜色由"
+  },
+  {
+    "origin": "( 0, 0, 0 )",
+    "local": "( 0, 0, 0 )"
+  },
+  {
+    "origin": "which is the RGB value correspondent to",
+    "local": "哪个是对应的RGB值"
+  },
+  {
+    "origin": "Black",
+    "local": "黑色"
+  },
+  {
+    "origin": "The line thickness is set to",
+    "local": "线条粗细设置为"
+  },
+  {
+    "origin": "thickness",
+    "local": "厚度"
+  },
+  {
+    "origin": "(in this case 2)",
+    "local": "（在本例中为2）"
+  },
+  {
+    "origin": "The line is a 8-connected one (",
+    "local": "这条线是八通的("
+  },
+  {
+    "origin": "lineType",
+    "local": "线型"
+  },
+  {
+    "origin": "= 8)",
+    "local": "= 8)"
+  },
+  {
+    "origin": "MyEllipse",
+    "local": "MyEllipse"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "From the code above, we can observe that the function",
+    "local": "从上面的代码中，我们可以看到"
+  },
+  {
+    "origin": "draws an ellipse such that:",
+    "local": "绘制椭圆，以便:"
+  },
+  {
+    "origin": "The ellipse is displayed in the image",
+    "local": "椭圆将显示在图像中"
+  },
+  {
+    "origin": "img",
+    "local": "img"
+  },
+  {
+    "origin": "The ellipse center is located in the point",
+    "local": "椭圆中心位于"
+  },
+  {
+    "origin": "(w/2, w/2)",
+    "local": "（w/2，w/2）"
+  },
+  {
+    "origin": "and is enclosed in a box of size",
+    "local": "装在一个大小的盒子里"
+  },
+  {
+    "origin": "(w/4, w/16)",
+    "local": "（w/4、w/16）"
+  },
+  {
+    "origin": "The ellipse is rotated",
+    "local": "椭圆旋转"
+  },
+  {
+    "origin": "angle",
+    "local": "角"
+  },
+  {
+    "origin": "degrees",
+    "local": "度"
+  },
+  {
+    "origin": "The ellipse extends an arc between",
+    "local": "椭圆在两者之间延伸一条弧"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "degrees",
+    "local": "度"
+  },
+  {
+    "origin": "The color of the figure will be",
+    "local": "图形的颜色将是"
+  },
+  {
+    "origin": "( 255, 0, 0 )",
+    "local": "( 255, 0, 0 )"
+  },
+  {
+    "origin": "which means blue in BGR value.",
+    "local": "这意味着BGR值为蓝色。"
+  },
+  {
+    "origin": "The ellipse's",
+    "local": "椭圆是"
+  },
+  {
+    "origin": "thickness",
+    "local": "厚度"
+  },
+  {
+    "origin": "MyFilledCircle",
+    "local": "MyFilledCircle"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "Similar to the ellipse function, we can observe that",
+    "local": "类似于椭圆函数，我们可以观察到"
+  },
+  {
+    "origin": "circle",
+    "local": "圆圈"
+  },
+  {
+    "origin": "receives as arguments:",
+    "local": "作为参数接收:"
+  },
+  {
+    "origin": "The image where the circle will be displayed (",
+    "local": "显示圆的图像("
+  },
+  {
+    "origin": "img",
+    "local": "img"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "The center of the circle denoted as the point",
+    "local": "圆心表示为点的圆的中心"
+  },
+  {
+    "origin": "center",
+    "local": "居中"
+  },
+  {
+    "origin": "The radius of the circle:",
+    "local": "圆的半径:"
+  },
+  {
+    "origin": "The color of the circle:",
+    "local": "圆圈的颜色:"
+  },
+  {
+    "origin": "( 0, 0, 255 )",
+    "local": "( 0, 0, 255 )"
+  },
+  {
+    "origin": "which means",
+    "local": "这意味着"
+  },
+  {
+    "origin": "Red",
+    "local": "红色"
+  },
+  {
+    "origin": "in BGR",
+    "local": "在BGR中"
+  },
+  {
+    "origin": "Since",
+    "local": "自"
+  },
+  {
+    "origin": "thickness",
+    "local": "厚度"
+  },
+  {
+    "origin": "= -1, the circle will be drawn filled.",
+    "local": "=-1，将绘制圆并填充。"
+  },
+  {
+    "origin": "MyPolygon",
+    "local": "我的多边形"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "To draw a filled polygon we use the function",
+    "local": "要绘制填充多边形，我们使用函数"
+  },
+  {
+    "origin": ". We note that:",
+    "local": ". 我们注意到:"
+  },
+  {
+    "origin": "The polygon will be drawn on",
+    "local": "将绘制多边形"
+  },
+  {
+    "origin": "img",
+    "local": "img"
+  },
+  {
+    "origin": "The vertices of the polygon are the set of points in",
+    "local": "多边形的顶点是多边形中的一组点"
+  },
+  {
+    "origin": "ppt",
+    "local": "幻灯片演示文件"
+  },
+  {
+    "origin": "The color of the polygon is defined by",
+    "local": "多边形的颜色由"
+  },
+  {
+    "origin": "( 255, 255, 255 )",
+    "local": "( 255, 255, 255 )"
+  },
+  {
+    "origin": ", which is the BGR value for",
+    "local": "，这是的BGR值"
+  },
+  {
+    "origin": "white",
+    "local": "白色"
+  },
+  {
+    "origin": "rectangle",
+    "local": "矩形"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "Finally we have the",
+    "local": "最后我们有了"
+  },
+  {
+    "origin": "function (we did not create a special function for this guy). We note that:",
+    "local": "函数（我们没有为这个家伙创建特殊函数）。我们注意到:"
+  },
+  {
+    "origin": "The rectangle will be drawn on",
+    "local": "矩形将在其上绘制"
+  },
+  {
+    "origin": "rook_image",
+    "local": "rook_image"
+  },
+  {
+    "origin": "Two opposite vertices of the rectangle are defined by",
+    "local": "矩形的两个相对顶点由"
+  },
+  {
+    "origin": "( 0, 7*w/8 )",
+    "local": "( 0, 7*w/8 )"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "( w, w )",
+    "local": "( w, w )"
+  },
+  {
+    "origin": "The color of the rectangle is given by",
+    "local": "矩形的颜色由"
+  },
+  {
+    "origin": "( 0, 255, 255 )",
+    "local": "( 0, 255, 255 )"
+  },
+  {
+    "origin": "which is the BGR value for",
+    "local": "哪个是的BGR值"
+  },
+  {
+    "origin": "yellow",
+    "local": "黄色的"
+  },
+  {
+    "origin": "Since the thickness value is given by",
+    "local": "因为厚度值由"
+  },
+  {
+    "origin": "FILLED (-1)",
+    "local": "FILLED (-1)"
+  },
+  {
+    "origin": ", the rectangle will be filled.",
+    "local": "，矩形将被填充。"
+  },
+  {
+    "origin": "Result",
+    "local": "结果"
+  },
+  {
+    "origin": "Compiling and running your program should give you a result like this:",
+    "local": "编译和运行程序会得到如下结果:"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;"
+  }
+]

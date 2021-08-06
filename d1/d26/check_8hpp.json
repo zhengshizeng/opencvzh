@@ -1,0 +1,850 @@
+[
+  {
+    "origin": "OpenCV: opencv2/core/check.hpp File Reference",
+    "local": "OpenCV:opencv2/core/check.hpp文件参考"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "Macros",
+    "local": "宏"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "check.hpp File Reference",
+    "local": "check.hpp文件参考"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": "“黑盒”表示与磁盘上的文件相关联的文件存储。"
+  },
+  {
+    "origin": "Macros",
+    "local": "宏"
+  },
+  {
+    "origin": "(v, test_expr, msg)&#160;&#160;&#160;CV__CHECK_CUSTOM_TEST(_, auto, v, (test_expr), #v, #test_expr, msg)",
+    "local": "（v，测试表达式，msg）&#160&#160;&#160;CV检查自定义测试（uu，auto，v，（TEST expr），#v，#TEST expr，msg）"
+  },
+  {
+    "origin": "Example: v == A || v == B.",
+    "local": "示例：v==A | | v==B。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(c1, c2, msg)&#160;&#160;&#160;CV__CHECK(_, EQ, MatChannels, c1, c2, #c1, #c2, msg)",
+    "local": "（c1、c2、msg）和#160&#160;&#160;CV检查（uuu，EQ，MatChannels，c1，c2，#c1，#c2，msg）"
+  },
+  {
+    "origin": "(t, test_expr, msg)&#160;&#160;&#160;CV__CHECK_CUSTOM_TEST(_, MatDepth, t, (test_expr), #t, #test_expr, msg)",
+    "local": "（t，测试表达式，msg）&#160&#160;&#160;CV检查定制测试（u，MatDepth，t，（TEST expr），#t，#TEST expr，msg）"
+  },
+  {
+    "origin": "Example: depth == CV_32F || depth == CV_64F.",
+    "local": "示例：depth==CV|32F | depth==CV|64F。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(d1, d2, msg)&#160;&#160;&#160;CV__CHECK(_, EQ, MatDepth, d1, d2, #d1, #d2, msg)",
+    "local": "（d1、d2、msg）你开玩笑吧。160;CV检查（，EQ，MatDepth，d1，d2，#d1，#d2，msg）"
+  },
+  {
+    "origin": "Check with additional \"decoding\" of depth values in error message.",
+    "local": "检查错误消息中深度值的附加“解码”。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, EQ, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1、v2、msg）和#160&#160;&#160;CV检查（uuu，EQ，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "Supported values of these types: int, float, double.",
+    "local": "这些类型支持的值：int、float、double。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, GE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1、v2、msg）你开玩笑吧。160;CV检查（，GE，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, GT, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1、v2、msg）和#160&#160;&#160;CV检查（uuu，GT，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, LE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1，v2，msg）&35；160；&35；160;35;160?CV检查（uy，LE，auto，v1，v2，35；v1，35；v2，msg）"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, LT, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1、v2、msg）和#160&#160;&#160;CV检查（uuu，LT，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, NE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1，v2，msg）&35；160；&35；160;35;160?CV检查（uy，NE，auto，v1，v2，35；v1，35；v2，msg）"
+  },
+  {
+    "origin": "(t, test_expr, msg)&#160;&#160;&#160;CV__CHECK_CUSTOM_TEST(_, MatType, t, (test_expr), #t, #test_expr, msg)",
+    "local": "（t，测试表达式，msg）&#160&#160;&#160;CV检查定制测试（uu，MatType，t，（TEST expr），#t，#TEST expr，msg）"
+  },
+  {
+    "origin": "Example: type == CV_8UC1 || type == CV_8UC3.",
+    "local": "例如：type==CV\\u 8UC1.type==CV\\u 8UC3。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(t1, t2, msg)&#160;&#160;&#160;CV__CHECK(_, EQ, MatType, t1, t2, #t1, #t2, msg)",
+    "local": "（t1、t2、msg）和#160&#160;&#160;CV检查（uuu，EQ，MatType，t1，t2，#t1，#t2，msg）"
+  },
+  {
+    "origin": "Check with additional \"decoding\" of type values in error message.",
+    "local": "检查错误消息中类型值的附加“解码”。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(v, test_expr, msg)&#160;&#160;&#160;CV__CHECK_CUSTOM_TEST(_, auto, v, (test_expr), #v, #test_expr, msg)",
+    "local": "（v，测试表达式，msg）&#160&#160;&#160;CV检查自定义测试（uu，auto，v，（TEST expr），#v，#TEST expr，msg）"
+  },
+  {
+    "origin": "Some complex conditions: CV_Check(src2, src2.empty() || (src2.type() == src1.type() &amp;&amp;",
+    "local": "一些复杂条件：CV|Check（src2，src2.empty（）| |（src2.type（）==src1.type（）&amp&amp；"
+  },
+  {
+    "origin": "==",
+    "local": "=="
+  },
+  {
+    "origin": "), \"src2 should have same size/type as src1\")",
+    "local": ")，“src2应具有与src1相同的大小/类型”）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, EQ, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1、v2、msg）和#160&#160;&#160;CV检查（uuu，EQ，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, GE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1、v2、msg）你开玩笑吧。160;CV检查（，GE，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, GT, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1、v2、msg）和#160&#160;&#160;CV检查（uuu，GT，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, LE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1，v2，msg）&35；160；&35；160;35;160?CV检查（uy，LE，auto，v1，v2，35；v1，35；v2，msg）"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, LT, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1、v2、msg）和#160&#160;&#160;CV检查（uuu，LT，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "(v1, v2, msg)&#160;&#160;&#160;CV__CHECK(_, NE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "（v1，v2，msg）&35；160；&35；160;35;160?CV检查（uy，NE，auto，v1，v2，35；v1，35；v2，msg）"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "(int depth)",
+    "local": "（内部深度）"
+  },
+  {
+    "origin": "(int type)",
+    "local": "（int类型）"
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": "宏定义文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_Check",
+    "local": "简历检查"
+  },
+  {
+    "origin": "#define CV_Check",
+    "local": "#定义CV\\U检查"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v,",
+    "local": "五、，"
+  },
+  {
+    "origin": "test_expr,",
+    "local": "测试表达式，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK_CUSTOM_TEST(_, auto, v, (test_expr), #v, #test_expr, msg)",
+    "local": "&#160;&#160;&#160;CV检查自定义测试（uu，auto，v，（TEST expr），#v，#TEST expr，msg）"
+  },
+  {
+    "origin": "Example: v == A || v == B.",
+    "local": "示例：v==A | | v==B。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckChannelsEQ",
+    "local": "CV\\检查通道序列"
+  },
+  {
+    "origin": "#define CV_CheckChannelsEQ",
+    "local": "#定义CV\\u CheckChannelsEQ"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "c1,",
+    "local": "c1级，"
+  },
+  {
+    "origin": "c2,",
+    "local": "指挥中心，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, EQ, MatChannels, c1, c2, #c1, #c2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，EQ，MatChannels，c1，c2，#c1，#c2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckDepth",
+    "local": "CV\\U检查深度"
+  },
+  {
+    "origin": "#define CV_CheckDepth",
+    "local": "#定义CV\\U检查深度"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "t,",
+    "local": "t，"
+  },
+  {
+    "origin": "test_expr,",
+    "local": "测试表达式，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK_CUSTOM_TEST(_, MatDepth, t, (test_expr), #t, #test_expr, msg)",
+    "local": "&#160;&#160;&#160;CV检查定制测试（u，MatDepth，t，（TEST expr），#t，#TEST expr，msg）"
+  },
+  {
+    "origin": "Example: depth == CV_32F || depth == CV_64F.",
+    "local": "示例：depth==CV|32F | depth==CV|64F。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckDepthEQ",
+    "local": "简历检查部门"
+  },
+  {
+    "origin": "#define CV_CheckDepthEQ",
+    "local": "#定义CV\\u CheckDepthEQ"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "d1,",
+    "local": "d1段，"
+  },
+  {
+    "origin": "d2,",
+    "local": "d2级，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, EQ, MatDepth, d1, d2, #d1, #d2, msg)",
+    "local": "（菲律宾比索4=4.5.0）你开玩笑吧。160;CV检查（，EQ，MatDepth，d1，d2，#d1，#d2，msg）"
+  },
+  {
+    "origin": "Check with additional \"decoding\" of depth values in error message.",
+    "local": "检查错误消息中深度值的附加“解码”。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckEQ",
+    "local": "简历检查"
+  },
+  {
+    "origin": "#define CV_CheckEQ",
+    "local": "#定义CV\\U CheckEQ"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, EQ, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，EQ，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "Supported values of these types: int, float, double.",
+    "local": "这些类型支持的值：int、float、double。"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckGE",
+    "local": "简历支票"
+  },
+  {
+    "origin": "#define CV_CheckGE",
+    "local": "#定义CV\\U复选框"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, GE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，GE，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckGT",
+    "local": "简历检查gt"
+  },
+  {
+    "origin": "#define CV_CheckGT",
+    "local": "#定义CV\\u CheckGT"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, GT, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，GT，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckLE",
+    "local": "CV\\方格"
+  },
+  {
+    "origin": "#define CV_CheckLE",
+    "local": "#定义复选框"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, LE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&35;160;&35;160;35;160?CV检查（uy，LE，auto，v1，v2，35；v1，35；v2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckLT",
+    "local": "简历检查"
+  },
+  {
+    "origin": "#define CV_CheckLT",
+    "local": "#定义CV\\U CheckLT"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, LT, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，LT，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckNE",
+    "local": "CV方格"
+  },
+  {
+    "origin": "#define CV_CheckNE",
+    "local": "#定义CV\\u CheckNE"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, NE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，NE，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckType",
+    "local": "CV\\检查类型"
+  },
+  {
+    "origin": "#define CV_CheckType",
+    "local": "#定义CV\\U CheckType"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "t,",
+    "local": "t，"
+  },
+  {
+    "origin": "test_expr,",
+    "local": "测试表达式，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK_CUSTOM_TEST(_, MatType, t, (test_expr), #t, #test_expr, msg)",
+    "local": "&#160;&#160;&#160;CV检查定制测试（uu，MatType，t，（TEST expr），#t，#TEST expr，msg）"
+  },
+  {
+    "origin": "Example: type == CV_8UC1 || type == CV_8UC3.",
+    "local": "例如：type==CV\\u 8UC1.type==CV\\u 8UC3。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_CheckTypeEQ",
+    "local": "CV\\检查类型EQ"
+  },
+  {
+    "origin": "#define CV_CheckTypeEQ",
+    "local": "#定义CV\\u CheckTypeEQ"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "t1,",
+    "local": "t1级，"
+  },
+  {
+    "origin": "t2,",
+    "local": "t2级，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, EQ, MatType, t1, t2, #t1, #t2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，EQ，MatType，t1，t2，#t1，#t2，msg）"
+  },
+  {
+    "origin": "Check with additional \"decoding\" of type values in error message.",
+    "local": "检查错误消息中类型值的附加“解码”。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_DbgCheck",
+    "local": "CV\\ DbgCheck公司"
+  },
+  {
+    "origin": "#define CV_DbgCheck",
+    "local": "#定义CV\\u DbgCheck"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v,",
+    "local": "五、，"
+  },
+  {
+    "origin": "test_expr,",
+    "local": "测试表达式，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK_CUSTOM_TEST(_, auto, v, (test_expr), #v, #test_expr, msg)",
+    "local": "&#160;&#160;&#160;CV检查自定义测试（uu，auto，v，（TEST expr），#v，#TEST expr，msg）"
+  },
+  {
+    "origin": "Some complex conditions: CV_Check(src2, src2.empty() || (src2.type() == src1.type() &amp;&amp;",
+    "local": "一些复杂条件：CV|Check（src2，src2.empty（）| |（src2.type（）==src1.type（）&amp&amp；"
+  },
+  {
+    "origin": "==",
+    "local": "=="
+  },
+  {
+    "origin": "), \"src2 should have same size/type as src1\")",
+    "local": ")，“src2应具有与src1相同的大小/类型”）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_DbgCheckEQ",
+    "local": "简历检查"
+  },
+  {
+    "origin": "#define CV_DbgCheckEQ",
+    "local": "#定义CV\\u DbgCheckEQ"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, EQ, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，EQ，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_DbgCheckGE",
+    "local": "简历"
+  },
+  {
+    "origin": "#define CV_DbgCheckGE",
+    "local": "#定义CV\\u DbgCheckGE"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, GE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，GE，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_DbgCheckGT",
+    "local": "CV\\ DBG检查"
+  },
+  {
+    "origin": "#define CV_DbgCheckGT",
+    "local": "#定义CV\\u DbgCheckGT"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, GT, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，GT，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_DbgCheckLE",
+    "local": "CV\\ DBG检查"
+  },
+  {
+    "origin": "#define CV_DbgCheckLE",
+    "local": "#定义CV\\ DbgCheckLE"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, LE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&35;160;&35;160;35;160?CV检查（uy，LE，auto，v1，v2，35；v1，35；v2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_DbgCheckLT",
+    "local": "简历"
+  },
+  {
+    "origin": "#define CV_DbgCheckLT",
+    "local": "#定义CV\\ DbgCheckLT"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, LT, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，LT，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_DbgCheckNE",
+    "local": "简历"
+  },
+  {
+    "origin": "#define CV_DbgCheckNE",
+    "local": "#定义CV\\ DbgCheckNE"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "v1,",
+    "local": "第1版，"
+  },
+  {
+    "origin": "v2,",
+    "local": "第2版，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;CV__CHECK(_, NE, auto, v1, v2, #v1, #v2, msg)",
+    "local": "&#160;&#160;&#160;CV检查（uuu，NE，auto，v1，v2，#v1，#v2，msg）"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:33为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,414 @@
+[
+  {
+    "origin": "OpenCV: Autocalibration",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Autocalibration",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;Hs,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;K)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;features, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;pairwise_matches, std::vector&lt; double &gt; &amp;focals)",
+    "local": ""
+  },
+  {
+    "origin": "Estimates focal lengths for each given camera.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;H, double &amp;f0, double &amp;f1, bool &amp;f0_ok, bool &amp;f1_ok)",
+    "local": ""
+  },
+  {
+    "origin": "Tries to estimate focal lengths from the given homography under the assumption that the camera undergoes rotations around its centre only.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "calibrateRotatingCamera()",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::detail::calibrateRotatingCamera",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "Hs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, K",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.detail.calibrateRotatingCamera(",
+    "local": ""
+  },
+  {
+    "origin": "Hs[, K]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "estimateFocal()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::detail::estimateFocal",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "features",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "pairwise_matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; double &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "focals",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Estimates focal lengths for each given camera.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "features",
+    "local": ""
+  },
+  {
+    "origin": "Features of images.",
+    "local": ""
+  },
+  {
+    "origin": "pairwise_matches",
+    "local": ""
+  },
+  {
+    "origin": "Matches between all image pairs.",
+    "local": ""
+  },
+  {
+    "origin": "focals",
+    "local": ""
+  },
+  {
+    "origin": "Estimated focal lengths for each camera.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "focalsFromHomography()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::detail::focalsFromHomography",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "H",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double &amp;",
+    "local": ""
+  },
+  {
+    "origin": "f0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double &amp;",
+    "local": ""
+  },
+  {
+    "origin": "f1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool &amp;",
+    "local": ""
+  },
+  {
+    "origin": "f0_ok",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool &amp;",
+    "local": ""
+  },
+  {
+    "origin": "f1_ok",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.detail.focalsFromHomography(",
+    "local": ""
+  },
+  {
+    "origin": "H, f0, f1, f0_ok, f1_ok",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Tries to estimate focal lengths from the given homography under the assumption that the camera undergoes rotations around its centre only.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "H",
+    "local": ""
+  },
+  {
+    "origin": "Homography.",
+    "local": ""
+  },
+  {
+    "origin": "f0",
+    "local": ""
+  },
+  {
+    "origin": "Estimated focal length along X axis.",
+    "local": ""
+  },
+  {
+    "origin": "f1",
+    "local": ""
+  },
+  {
+    "origin": "Estimated focal length along Y axis.",
+    "local": ""
+  },
+  {
+    "origin": "f0_ok",
+    "local": ""
+  },
+  {
+    "origin": "True, if f0 was estimated successfully, false otherwise.",
+    "local": ""
+  },
+  {
+    "origin": "f1_ok",
+    "local": ""
+  },
+  {
+    "origin": "True, if f1 was estimated successfully, false otherwise.",
+    "local": ""
+  },
+  {
+    "origin": "See \"Construction of Panoramic Image Mosaics with Global and Local Alignment\" by Heung-Yeung Shum and Richard Szeliski.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

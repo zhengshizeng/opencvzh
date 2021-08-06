@@ -1,0 +1,350 @@
+[
+  {
+    "origin": "OpenCV: How to run custom OCR model",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "How to run custom OCR model",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Zihao Mu",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial, we first introduce how to obtain the custom OCR model, then how to transform your own OCR models so that they can be run correctly by the opencv_dnn module. and finally we will provide some pre-trained models.",
+    "local": ""
+  },
+  {
+    "origin": "Train your own OCR model",
+    "local": ""
+  },
+  {
+    "origin": "This repository",
+    "local": ""
+  },
+  {
+    "origin": "is a good start point for training your own OCR model. In repository, the MJSynth+SynthText was set as training set by default. In addition, you can configure the model structure and data set you want.",
+    "local": ""
+  },
+  {
+    "origin": "Transform OCR model to ONNX format and Use it in OpenCV DNN",
+    "local": ""
+  },
+  {
+    "origin": "After completing the model training, please use",
+    "local": ""
+  },
+  {
+    "origin": "transform_to_onnx.py",
+    "local": ""
+  },
+  {
+    "origin": "to convert the model into onnx format.",
+    "local": ""
+  },
+  {
+    "origin": "Execute in webcam",
+    "local": ""
+  },
+  {
+    "origin": "The Python version example code can be found at",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Example:",
+    "local": ""
+  },
+  {
+    "origin": "Pre-trained ONNX models are provided",
+    "local": ""
+  },
+  {
+    "origin": "Some pre-trained models can be found at",
+    "local": ""
+  },
+  {
+    "origin": "https://drive.google.com/drive/folders/1cTbQ3nuZG-EKWak6emD_s8_hHXWz7lAr?usp=sharing",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Their performance at different text recognition datasets is shown in the table below:",
+    "local": ""
+  },
+  {
+    "origin": "Model name",
+    "local": ""
+  },
+  {
+    "origin": "IIIT5k(%)",
+    "local": ""
+  },
+  {
+    "origin": "SVT(%)",
+    "local": ""
+  },
+  {
+    "origin": "ICDAR03(%)",
+    "local": ""
+  },
+  {
+    "origin": "ICDAR13(%)",
+    "local": ""
+  },
+  {
+    "origin": "ICDAR15(%)",
+    "local": ""
+  },
+  {
+    "origin": "SVTP(%)",
+    "local": ""
+  },
+  {
+    "origin": "CUTE80(%)",
+    "local": ""
+  },
+  {
+    "origin": "average acc (%)",
+    "local": ""
+  },
+  {
+    "origin": "parameter( x10^6 )",
+    "local": ""
+  },
+  {
+    "origin": "DenseNet-CTC",
+    "local": ""
+  },
+  {
+    "origin": "72.267",
+    "local": ""
+  },
+  {
+    "origin": "67.39",
+    "local": ""
+  },
+  {
+    "origin": "82.81",
+    "local": ""
+  },
+  {
+    "origin": "48.38",
+    "local": ""
+  },
+  {
+    "origin": "49.45",
+    "local": ""
+  },
+  {
+    "origin": "42.50",
+    "local": ""
+  },
+  {
+    "origin": "63.26",
+    "local": ""
+  },
+  {
+    "origin": "0.24",
+    "local": ""
+  },
+  {
+    "origin": "DenseNet-BiLSTM-CTC",
+    "local": ""
+  },
+  {
+    "origin": "73.76",
+    "local": ""
+  },
+  {
+    "origin": "72.33",
+    "local": ""
+  },
+  {
+    "origin": "86.15",
+    "local": ""
+  },
+  {
+    "origin": "83.15",
+    "local": ""
+  },
+  {
+    "origin": "50.67",
+    "local": ""
+  },
+  {
+    "origin": "57.984",
+    "local": ""
+  },
+  {
+    "origin": "49.826",
+    "local": ""
+  },
+  {
+    "origin": "67.69",
+    "local": ""
+  },
+  {
+    "origin": "3.63",
+    "local": ""
+  },
+  {
+    "origin": "VGG-CTC",
+    "local": ""
+  },
+  {
+    "origin": "75.96",
+    "local": ""
+  },
+  {
+    "origin": "75.42",
+    "local": ""
+  },
+  {
+    "origin": "85.92",
+    "local": ""
+  },
+  {
+    "origin": "83.54",
+    "local": ""
+  },
+  {
+    "origin": "54.89",
+    "local": ""
+  },
+  {
+    "origin": "57.52",
+    "local": ""
+  },
+  {
+    "origin": "50.17",
+    "local": ""
+  },
+  {
+    "origin": "5.57",
+    "local": ""
+  },
+  {
+    "origin": "CRNN_VGG-BiLSTM-CTC",
+    "local": ""
+  },
+  {
+    "origin": "82.63",
+    "local": ""
+  },
+  {
+    "origin": "92.96",
+    "local": ""
+  },
+  {
+    "origin": "88.867",
+    "local": ""
+  },
+  {
+    "origin": "66.28",
+    "local": ""
+  },
+  {
+    "origin": "62.37",
+    "local": ""
+  },
+  {
+    "origin": "8.45",
+    "local": ""
+  },
+  {
+    "origin": "ResNet-CTC",
+    "local": ""
+  },
+  {
+    "origin": "84.00",
+    "local": ""
+  },
+  {
+    "origin": "92.39",
+    "local": ""
+  },
+  {
+    "origin": "88.96",
+    "local": ""
+  },
+  {
+    "origin": "67.74",
+    "local": ""
+  },
+  {
+    "origin": "74.73",
+    "local": ""
+  },
+  {
+    "origin": "67.60",
+    "local": ""
+  },
+  {
+    "origin": "79.93",
+    "local": ""
+  },
+  {
+    "origin": "44.28",
+    "local": ""
+  },
+  {
+    "origin": "The performance of the text recognition model were tesred on OpenCV DNN, and does not include the text detection model.",
+    "local": ""
+  },
+  {
+    "origin": "Model selection suggestion:",
+    "local": ""
+  },
+  {
+    "origin": "The input of text recognition model is the output of the text detection model, which causes the performance of text detection to greatly affect the performance of text recognition.",
+    "local": ""
+  },
+  {
+    "origin": "DenseNet_CTC has the smallest parameters and best FPS, and it is suitable for edge devices, which are very sensitive to the cost of calculation. If you have limited computing resources and want to achieve better accuracy, VGG_CTC is a good choice.",
+    "local": ""
+  },
+  {
+    "origin": "CRNN_VGG_BiLSTM_CTC is suitable for scenarios that require high recognition accuracy.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

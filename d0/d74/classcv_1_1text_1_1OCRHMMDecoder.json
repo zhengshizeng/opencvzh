@@ -1,0 +1,1502 @@
+[
+  {
+    "origin": "OpenCV: cv::text::OCRHMMDecoder Class Reference",
+    "local": "OpenCV:cv:：text:：OCRHMMDecoder类引用"
+  },
+  {
+    "origin": "OpenCV",
+    "local": "打开CV"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": "静态公共成员函数"
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": "受保护的属性"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::text::OCRHMMDecoder Class Reference",
+    "local": "cv:：text:：OCRHMMDecoder类参考"
+  },
+  {
+    "origin": "»",
+    "local": "»"
+  },
+  {
+    "origin": "class provides an interface for OCR using Hidden Markov Models.",
+    "local": "类提供了一个使用隐马尔可夫模型的OCR接口。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Inheritance diagram for cv::text::OCRHMMDecoder:",
+    "local": "cv:：text:：OCRHMMDecoder的继承关系图："
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "class",
+    "local": "班"
+  },
+  {
+    "origin": "Callback with the character classifier is made a class.",
+    "local": "用字符分类器回调是一个类。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;image, std::string &amp;output_text, std::vector&lt;",
+    "local": "&amp；图像，标准：：字符串；输出文本，std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; *component_rects=NULL, std::vector&lt; std::string &gt; *component_texts=NULL, std::vector&lt; float &gt; *component_confidences=NULL, int component_level=0)",
+    "local": "&燃气轮机*组件\\u rects=NULL，std:：vector&lt；标准：：字符串&gt*组件文本=空，标准：：向量&lt；浮动&gt*组件\\u机密=空，int组件\\u级别=0）"
+  },
+  {
+    "origin": "Recognize text using HMM.",
+    "local": "使用HMM识别文本。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;image,",
+    "local": "&amp；图像，"
+  },
+  {
+    "origin": "&amp;mask, std::string &amp;output_text, std::vector&lt;",
+    "local": "&amp；掩码，std:：string&amp；输出文本，std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; *component_rects=NULL, std::vector&lt; std::string &gt; *component_texts=NULL, std::vector&lt; float &gt; *component_confidences=NULL, int component_level=0)",
+    "local": "&燃气轮机*组件\\u rects=NULL，std:：vector&lt；标准：：字符串&gt*组件文本=空，标准：：向量&lt；浮动&gt*组件\\u机密=空，int组件\\u级别=0）"
+  },
+  {
+    "origin": "Recognize text using HMM.",
+    "local": "使用HMM识别文本。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "image, int min_confidence, int component_level=0)",
+    "local": "图像，int min\\u置信度，int分量\\u级别=0）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "image,",
+    "local": "图像，"
+  },
+  {
+    "origin": "mask, int min_confidence, int component_level=0)",
+    "local": "掩码，int min\\u置信度，int component\\u level=0）"
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": "公共成员函数继承自"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": "静态公共成员函数"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": ", const",
+    "local": "，常量"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "transition_probabilities_table,",
+    "local": "转移概率表，"
+  },
+  {
+    "origin": "emission_probabilities_table, int",
+    "local": "发射概率表，int"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": "创建的实例"
+  },
+  {
+    "origin": "class. Initializes HMMDecoder.",
+    "local": "班级。初始化HMMDecoder。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;filename, const",
+    "local": "&amp；文件名，常量"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "transition_probabilities_table,",
+    "local": "转移概率表，"
+  },
+  {
+    "origin": "emission_probabilities_table, int",
+    "local": "发射概率表，int"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ", int",
+    "local": "，内景"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": "创建的实例"
+  },
+  {
+    "origin": "class. Loads and initializes HMMDecoder from the specified path.",
+    "local": "班级。从指定路径加载并初始化HMMDecoder。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": "受保护的属性"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "std::string",
+    "local": "标准：：字符串"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "class provides an interface for OCR using Hidden Markov Models.",
+    "local": "类提供了一个使用隐马尔可夫模型的OCR接口。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "(C++) An example on using",
+    "local": "（C++）使用实例"
+  },
+  {
+    "origin": "recognition combined with scene text detection can be found at the webcam_demo sample:",
+    "local": "识别与场景文本检测相结合可以在webcam\\u演示示例中找到："
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/webcam_demo.cpp",
+    "local": "https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/webcam_demo.cpp"
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "create()",
+    "local": "创建（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; cv::text::OCRHMMDecoder::create",
+    "local": "&燃气轮机；cv：：文本：：OCRHMMDecoder：：创建"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "classifier",
+    "local": "分级机"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "vocabulary",
+    "local": "词汇"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "transition_probabilities_table",
+    "local": "转移概率表"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "emission_probabilities_table",
+    "local": "发射概率表"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "mode",
+    "local": "模式"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text.OCRHMMDecoder_create(",
+    "local": "cv.text.OCRHMMDecoder\\u创建("
+  },
+  {
+    "origin": "classifier, vocabulary, transition_probabilities_table, emission_probabilities_table[, mode]",
+    "local": "分类器，词汇表，转移概率表，发射概率表[，模式]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text.OCRHMMDecoder_create(",
+    "local": "cv.text.OCRHMMDecoder\\u创建("
+  },
+  {
+    "origin": "filename, vocabulary, transition_probabilities_table, emission_probabilities_table[, mode[, classifier]]",
+    "local": "文件名，词汇表，转换概率表，发射概率表[，模式[，分类器]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": "创建的实例"
+  },
+  {
+    "origin": "class. Initializes HMMDecoder.",
+    "local": "班级。初始化HMMDecoder。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "classifier",
+    "local": "分级机"
+  },
+  {
+    "origin": "The character classifier with built in feature extractor.",
+    "local": "具有内置特征抽取器的字符分类器。"
+  },
+  {
+    "origin": "vocabulary",
+    "local": "词汇"
+  },
+  {
+    "origin": "The language vocabulary (chars when ascii english text).",
+    "local": "语言词汇（ascii英语文本时的字符）。"
+  },
+  {
+    "origin": "must be equal to the number of classes of the classifier.",
+    "local": "必须等于分类器的类数。"
+  },
+  {
+    "origin": "transition_probabilities_table",
+    "local": "转移概率表"
+  },
+  {
+    "origin": "Table with transition probabilities between character pairs. cols == rows ==",
+    "local": "具有字符对之间转移概率的表。列==行=="
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "emission_probabilities_table",
+    "local": "发射概率表"
+  },
+  {
+    "origin": "Table with observation emission probabilities. cols == rows ==",
+    "local": "观测发射概率表。列==行=="
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "mode",
+    "local": "模式"
+  },
+  {
+    "origin": "HMM Decoding algorithm. Only OCR_DECODER_VITERBI is available for the moment (",
+    "local": "HMM解码算法。目前只有OCR\\u解码器\\u VITERBI可用("
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Viterbi_algorithm",
+    "local": "http://en.wikipedia.org/wiki/Viterbi_algorithm"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "create()",
+    "local": "创建（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; cv::text::OCRHMMDecoder::create",
+    "local": "&燃气轮机；cv：：文本：：OCRHMMDecoder：：创建"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "filename",
+    "local": "文件名"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "vocabulary",
+    "local": "词汇"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "transition_probabilities_table",
+    "local": "转移概率表"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "emission_probabilities_table",
+    "local": "发射概率表"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "mode",
+    "local": "模式"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "classifier",
+    "local": "分级机"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text.OCRHMMDecoder_create(",
+    "local": "cv.text.OCRHMMDecoder\\u创建("
+  },
+  {
+    "origin": "classifier, vocabulary, transition_probabilities_table, emission_probabilities_table[, mode]",
+    "local": "分类器，词汇表，转移概率表，发射概率表[，模式]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text.OCRHMMDecoder_create(",
+    "local": "cv.text.OCRHMMDecoder\\u创建("
+  },
+  {
+    "origin": "filename, vocabulary, transition_probabilities_table, emission_probabilities_table[, mode[, classifier]]",
+    "local": "文件名，词汇表，转换概率表，发射概率表[，模式[，分类器]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": "创建的实例"
+  },
+  {
+    "origin": "class. Loads and initializes HMMDecoder from the specified path.",
+    "local": "班级。从指定路径加载并初始化HMMDecoder。"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "run()",
+    "local": "运行（）"
+  },
+  {
+    "origin": "[1/4]",
+    "local": "[1/4]"
+  },
+  {
+    "origin": "virtual void cv::text::OCRHMMDecoder::run",
+    "local": "虚拟void cv:：text:：OCRHMMDecoder:：run"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::string &amp;",
+    "local": "标准：：字符串；"
+  },
+  {
+    "origin": "output_text",
+    "local": "输出\\u文本"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; *",
+    "local": "&燃气轮机*"
+  },
+  {
+    "origin": "component_rects",
+    "local": "组件目录"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; std::string &gt; *",
+    "local": "标准：：向量&lt；标准：：字符串&gt*"
+  },
+  {
+    "origin": "component_texts",
+    "local": "组件\\u文本"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; float &gt; *",
+    "local": "标准：：向量&lt；浮动&gt*"
+  },
+  {
+    "origin": "component_confidences",
+    "local": "组件信任"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "component_level",
+    "local": "组件级别"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text_OCRHMMDecoder.run(",
+    "local": "cv.text\\u OCRHMMDecoder.run("
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": "图像，最小置信度[，分量级]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text_OCRHMMDecoder.run(",
+    "local": "cv.text\\u OCRHMMDecoder.run("
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": "图像，遮罩，最小置信度[，分量级]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Recognize text using HMM.",
+    "local": "使用HMM识别文本。"
+  },
+  {
+    "origin": "Takes binary image on input and returns recognized text in the output_text parameter. Optionally provides also the Rects for individual text elements found (e.g. words), and the list of those text elements with their confidence values.",
+    "local": "在输入时获取二进制图像，并在输出文本参数中返回可识别的文本。还可以选择提供找到的单个文本元素（例如单词）的矩形，以及这些文本元素及其置信值的列表。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Input binary image CV_8UC1 with a single text line (or word).",
+    "local": "输入带有单个文本行（或单词）的二进制图像cv8uc1。"
+  },
+  {
+    "origin": "output_text",
+    "local": "输出\\u文本"
+  },
+  {
+    "origin": "Output text. Most likely character sequence found by the HMM decoder.",
+    "local": "输出文本。HMM解码器找到的最可能的字符序列。"
+  },
+  {
+    "origin": "component_rects",
+    "local": "组件目录"
+  },
+  {
+    "origin": "If provided the method will output a list of Rects for the individual text elements found (e.g. words).",
+    "local": "如果提供，该方法将为找到的单个文本元素（例如单词）输出一个rect列表。"
+  },
+  {
+    "origin": "component_texts",
+    "local": "组件\\u文本"
+  },
+  {
+    "origin": "If provided the method will output a list of text strings for the recognition of individual text elements found (e.g. words).",
+    "local": "如果提供，该方法将输出一个文本字符串列表，用于识别找到的单个文本元素（例如单词）。"
+  },
+  {
+    "origin": "component_confidences",
+    "local": "组件信任"
+  },
+  {
+    "origin": "If provided the method will output a list of confidence values for the recognition of individual text elements found (e.g. words).",
+    "local": "如果提供，该方法将输出一个置信值列表，用于识别找到的单个文本元素（例如单词）。"
+  },
+  {
+    "origin": "component_level",
+    "local": "组件级别"
+  },
+  {
+    "origin": "Only OCR_LEVEL_WORD is supported.",
+    "local": "只支持OCR\\级别的\\字。"
+  },
+  {
+    "origin": "Implements",
+    "local": "工具"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "run()",
+    "local": "运行（）"
+  },
+  {
+    "origin": "[2/4]",
+    "local": "[2/4]"
+  },
+  {
+    "origin": "virtual void cv::text::OCRHMMDecoder::run",
+    "local": "虚拟void cv:：text:：OCRHMMDecoder:：run"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::string &amp;",
+    "local": "标准：：字符串；"
+  },
+  {
+    "origin": "output_text",
+    "local": "输出\\u文本"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; *",
+    "local": "&燃气轮机*"
+  },
+  {
+    "origin": "component_rects",
+    "local": "组件目录"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; std::string &gt; *",
+    "local": "标准：：向量&lt；标准：：字符串&gt*"
+  },
+  {
+    "origin": "component_texts",
+    "local": "组件\\u文本"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; float &gt; *",
+    "local": "标准：：向量&lt；浮动&gt*"
+  },
+  {
+    "origin": "component_confidences",
+    "local": "组件信任"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "component_level",
+    "local": "组件级别"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text_OCRHMMDecoder.run(",
+    "local": "cv.text\\u OCRHMMDecoder.run("
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": "图像，最小置信度[，分量级]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text_OCRHMMDecoder.run(",
+    "local": "cv.text\\u OCRHMMDecoder.run("
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": "图像，遮罩，最小置信度[，分量级]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Recognize text using HMM.",
+    "local": "使用HMM识别文本。"
+  },
+  {
+    "origin": "Takes an image and a mask (where each connected component corresponds to a segmented character) on input and returns recognized text in the output_text parameter. Optionally provides also the Rects for individual text elements found (e.g. words), and the list of those text elements with their confidence values.",
+    "local": "在输入时获取一个图像和一个掩码（其中每个连接的组件对应于一个分段字符），并在输出文本参数中返回可识别的文本。还可以选择提供找到的单个文本元素（例如单词）的矩形，以及这些文本元素及其置信值的列表。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Input image CV_8UC1 or CV_8UC3 with a single text line (or word).",
+    "local": "用一行文字（或单词）输入图像CV8uc1或CV8uc3。"
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "Input binary image CV_8UC1 same size as input image. Each connected component in mask corresponds to a segmented character in the input image.",
+    "local": "输入与输入图像大小相同的二值图像CV8uc1。掩模中的每个连通分量对应于输入图像中的一个分割字符。"
+  },
+  {
+    "origin": "output_text",
+    "local": "输出\\u文本"
+  },
+  {
+    "origin": "Output text. Most likely character sequence found by the HMM decoder.",
+    "local": "输出文本。HMM解码器找到的最可能的字符序列。"
+  },
+  {
+    "origin": "component_rects",
+    "local": "组件目录"
+  },
+  {
+    "origin": "If provided the method will output a list of Rects for the individual text elements found (e.g. words).",
+    "local": "如果提供，该方法将为找到的单个文本元素（例如单词）输出一个rect列表。"
+  },
+  {
+    "origin": "component_texts",
+    "local": "组件\\u文本"
+  },
+  {
+    "origin": "If provided the method will output a list of text strings for the recognition of individual text elements found (e.g. words).",
+    "local": "如果提供，该方法将输出一个文本字符串列表，用于识别找到的单个文本元素（例如单词）。"
+  },
+  {
+    "origin": "component_confidences",
+    "local": "组件信任"
+  },
+  {
+    "origin": "If provided the method will output a list of confidence values for the recognition of individual text elements found (e.g. words).",
+    "local": "如果提供，该方法将输出一个置信值列表，用于识别找到的单个文本元素（例如单词）。"
+  },
+  {
+    "origin": "component_level",
+    "local": "组件级别"
+  },
+  {
+    "origin": "Only OCR_LEVEL_WORD is supported.",
+    "local": "只支持OCR\\级别的\\字。"
+  },
+  {
+    "origin": "Implements",
+    "local": "工具"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "run()",
+    "local": "运行（）"
+  },
+  {
+    "origin": "[3/4]",
+    "local": "[3/4]"
+  },
+  {
+    "origin": "cv::text::OCRHMMDecoder::run",
+    "local": "cv：：文本：：OCRHMMDecoder：：运行"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "min_confidence",
+    "local": "最小置信度"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "component_level",
+    "local": "组件级别"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text_OCRHMMDecoder.run(",
+    "local": "cv.text\\u OCRHMMDecoder.run("
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": "图像，最小置信度[，分量级]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text_OCRHMMDecoder.run(",
+    "local": "cv.text\\u OCRHMMDecoder.run("
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": "图像，遮罩，最小置信度[，分量级]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "run()",
+    "local": "运行（）"
+  },
+  {
+    "origin": "[4/4]",
+    "local": "[4/4]"
+  },
+  {
+    "origin": "cv::text::OCRHMMDecoder::run",
+    "local": "cv：：文本：：OCRHMMDecoder：：运行"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "min_confidence",
+    "local": "最小置信度"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "component_level",
+    "local": "组件级别"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text_OCRHMMDecoder.run(",
+    "local": "cv.text\\u OCRHMMDecoder.run("
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": "图像，最小置信度[，分量级]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.text_OCRHMMDecoder.run(",
+    "local": "cv.text\\u OCRHMMDecoder.run("
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": "图像，遮罩，最小置信度[，分量级]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": "成员数据文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "classifier",
+    "local": "分级机"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; cv::text::OCRHMMDecoder::classifier",
+    "local": "&燃气轮机；cv：：文本：：OCRHMMDecoder：：分类器"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "emission_p",
+    "local": "排放量"
+  },
+  {
+    "origin": "cv::text::OCRHMMDecoder::emission_p",
+    "local": "cv：：文本：：OCRHMMDecoder：：发射\\u p"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "mode",
+    "local": "模式"
+  },
+  {
+    "origin": "cv::text::OCRHMMDecoder::mode",
+    "local": "cv：：文本：：OCRHMMDecoder：：模式"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "transition_p",
+    "local": "过渡层"
+  },
+  {
+    "origin": "cv::text::OCRHMMDecoder::transition_p",
+    "local": "cv：：文本：：OCRHMMDecoder：：转换\\u p"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "vocabulary",
+    "local": "词汇"
+  },
+  {
+    "origin": "std::string cv::text::OCRHMMDecoder::vocabulary",
+    "local": "std:：string cv:：text:：OCRHMMDecoder:：词汇表"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/text/",
+    "local": "打开CV2/text/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by",
+    "local": "于2021年4月2日星期五11:36:48为OpenCV生成"
+  }
+]

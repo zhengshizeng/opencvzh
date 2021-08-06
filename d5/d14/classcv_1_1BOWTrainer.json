@@ -1,0 +1,734 @@
+[
+  {
+    "origin": "OpenCV: cv::BOWTrainer Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::BOWTrainer Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "abstract",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "Abstract base class for training the",
+    "local": ""
+  },
+  {
+    "origin": "bag of visual words",
+    "local": ""
+  },
+  {
+    "origin": "vocabulary from a set of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::BOWTrainer:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Adds descriptors to a training set.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "Clusters train descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns the count of all descriptors stored in the training set.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns a training set of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Abstract base class for training the",
+    "local": ""
+  },
+  {
+    "origin": "bag of visual words",
+    "local": ""
+  },
+  {
+    "origin": "vocabulary from a set of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "For details, see, for example,",
+    "local": ""
+  },
+  {
+    "origin": "Visual Categorization with Bags of Keypoints",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "BOWTrainer()",
+    "local": ""
+  },
+  {
+    "origin": "cv::BOWTrainer::BOWTrainer",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "~BOWTrainer()",
+    "local": ""
+  },
+  {
+    "origin": "virtual cv::BOWTrainer::~BOWTrainer",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "add()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::BOWTrainer::add",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.BOWTrainer.add(",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Adds descriptors to a training set.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": "Descriptors to add to a training set. Each row of the descriptors matrix is a descriptor.",
+    "local": ""
+  },
+  {
+    "origin": "The training set is clustered using clustermethod to construct the vocabulary.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "clear()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::BOWTrainer::clear",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.BOWTrainer.clear(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "cluster()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "cv::BOWTrainer::cluster",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.BOWTrainer.cluster(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.BOWTrainer.cluster(",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Implemented in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "cluster()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "cv::BOWTrainer::cluster",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.BOWTrainer.cluster(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.BOWTrainer.cluster(",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Clusters train descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": "Descriptors to cluster. Each row of the descriptors matrix is a descriptor. Descriptors are not added to the inner train descriptor set.",
+    "local": ""
+  },
+  {
+    "origin": "The vocabulary consists of cluster centers. So, this method returns the vocabulary. In the first variant of the method, train descriptors stored in the object are clustered. In the second variant, input descriptors are clustered.",
+    "local": ""
+  },
+  {
+    "origin": "Implemented in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "descriptorsCount()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::BOWTrainer::descriptorsCount",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.BOWTrainer.descriptorsCount(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns the count of all descriptors stored in the training set.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getDescriptors()",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;&amp; cv::BOWTrainer::getDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.BOWTrainer.getDescriptors(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns a training set of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::BOWTrainer::descriptors",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "size",
+    "local": ""
+  },
+  {
+    "origin": "int cv::BOWTrainer::size",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by",
+    "local": ""
+  }
+]

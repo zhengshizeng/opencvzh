@@ -1,0 +1,658 @@
+[
+  {
+    "origin": "OpenCV: Back Projection",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Back Projection",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": ""
+  },
+  {
+    "origin": "What is Back Projection and why it is useful",
+    "local": ""
+  },
+  {
+    "origin": "How to use the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "to calculate Back Projection",
+    "local": ""
+  },
+  {
+    "origin": "How to mix different channels of an image by using the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "What is Back Projection?",
+    "local": ""
+  },
+  {
+    "origin": "Back Projection is a way of recording how well the pixels of a given image fit the distribution of pixels in a histogram model.",
+    "local": ""
+  },
+  {
+    "origin": "To make it simpler: For Back Projection, you calculate the histogram model of a feature and then use it to find this feature in an image.",
+    "local": ""
+  },
+  {
+    "origin": "Application example: If you have a histogram of flesh color (say, a Hue-Saturation histogram ), then you can use it to find flesh color areas in an image:",
+    "local": ""
+  },
+  {
+    "origin": "How does it work?",
+    "local": ""
+  },
+  {
+    "origin": "We explain this by using the skin example:",
+    "local": ""
+  },
+  {
+    "origin": "Let's say you have gotten a skin histogram (Hue-Saturation) based on the image below. The histogram besides is going to be our",
+    "local": ""
+  },
+  {
+    "origin": "model histogram",
+    "local": ""
+  },
+  {
+    "origin": "(which we know represents a sample of skin tonality). You applied some mask to capture only the histogram of the skin area:",
+    "local": ""
+  },
+  {
+    "origin": "T0",
+    "local": ""
+  },
+  {
+    "origin": "T1",
+    "local": ""
+  },
+  {
+    "origin": "Now, let's imagine that you get another hand image (Test Image) like the one below: (with its respective histogram):",
+    "local": ""
+  },
+  {
+    "origin": "T2",
+    "local": ""
+  },
+  {
+    "origin": "T3",
+    "local": ""
+  },
+  {
+    "origin": "What we want to do is to use our",
+    "local": ""
+  },
+  {
+    "origin": "model histogram",
+    "local": ""
+  },
+  {
+    "origin": "(that we know represents a skin tonality) to detect skin areas in our Test Image. Here are the steps",
+    "local": ""
+  },
+  {
+    "origin": "In each pixel of our Test Image (i.e. \\(p(i,j)\\) ), collect the data and find the correspondent bin location for that pixel (i.e. \\(( h_{i,j}, s_{i,j} )\\) ).",
+    "local": ""
+  },
+  {
+    "origin": "Lookup the",
+    "local": ""
+  },
+  {
+    "origin": "model histogram",
+    "local": ""
+  },
+  {
+    "origin": "in the correspondent bin - \\(( h_{i,j}, s_{i,j} )\\) - and read the bin value.",
+    "local": ""
+  },
+  {
+    "origin": "Store this bin value in a new image (",
+    "local": ""
+  },
+  {
+    "origin": "BackProjection",
+    "local": ""
+  },
+  {
+    "origin": "). Also, you may consider to normalize the",
+    "local": ""
+  },
+  {
+    "origin": "model histogram",
+    "local": ""
+  },
+  {
+    "origin": "first, so the output for the Test Image can be visible for you.",
+    "local": ""
+  },
+  {
+    "origin": "Applying the steps above, we get the following BackProjection image for our Test Image:",
+    "local": ""
+  },
+  {
+    "origin": "In terms of statistics, the values stored in",
+    "local": ""
+  },
+  {
+    "origin": "BackProjection",
+    "local": ""
+  },
+  {
+    "origin": "represent the",
+    "local": ""
+  },
+  {
+    "origin": "probability",
+    "local": ""
+  },
+  {
+    "origin": "that a pixel in",
+    "local": ""
+  },
+  {
+    "origin": "Test Image",
+    "local": ""
+  },
+  {
+    "origin": "belongs to a skin area, based on the",
+    "local": ""
+  },
+  {
+    "origin": "model histogram",
+    "local": ""
+  },
+  {
+    "origin": "that we use. For instance in our Test image, the brighter areas are more probable to be skin area (as they actually are), whereas the darker areas have less probability (notice that these \"dark\" areas belong to surfaces that have some shadow on it, which in turns affects the detection).",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "What does this program do?",
+    "local": ""
+  },
+  {
+    "origin": "Loads an image",
+    "local": ""
+  },
+  {
+    "origin": "Convert the original to HSV format and separate only",
+    "local": ""
+  },
+  {
+    "origin": "Hue",
+    "local": ""
+  },
+  {
+    "origin": "channel to be used for the Histogram (using the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Let the user to enter the number of bins to be used in the calculation of the histogram.",
+    "local": ""
+  },
+  {
+    "origin": "Calculate the histogram (and update it if the bins change) and the backprojection of the same image.",
+    "local": ""
+  },
+  {
+    "origin": "Display the backprojection and the histogram in windows.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "for the basic version (explained in this tutorial).",
+    "local": ""
+  },
+  {
+    "origin": "For stuff slightly fancier (using H-S histograms and floodFill to define a mask for the skin area) you can check the",
+    "local": ""
+  },
+  {
+    "origin": "improved demo",
+    "local": ""
+  },
+  {
+    "origin": "...or you can always check out the classical",
+    "local": ""
+  },
+  {
+    "origin": "camshiftdemo",
+    "local": ""
+  },
+  {
+    "origin": "in samples.",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "for the basic version (explained in this tutorial).",
+    "local": ""
+  },
+  {
+    "origin": "For stuff slightly fancier (using H-S histograms and floodFill to define a mask for the skin area) you can check the",
+    "local": ""
+  },
+  {
+    "origin": "improved demo",
+    "local": ""
+  },
+  {
+    "origin": "...or you can always check out the classical",
+    "local": ""
+  },
+  {
+    "origin": "camshiftdemo",
+    "local": ""
+  },
+  {
+    "origin": "in samples.",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "for the basic version (explained in this tutorial).",
+    "local": ""
+  },
+  {
+    "origin": "For stuff slightly fancier (using H-S histograms and floodFill to define a mask for the skin area) you can check the",
+    "local": ""
+  },
+  {
+    "origin": "improved demo",
+    "local": ""
+  },
+  {
+    "origin": "...or you can always check out the classical",
+    "local": ""
+  },
+  {
+    "origin": "camshiftdemo",
+    "local": ""
+  },
+  {
+    "origin": "in samples.",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Read the input image:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Transform it to HSV format:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "For this tutorial, we will use only the Hue value for our 1-D histogram (check out the fancier code in the links above if you want to use the more standard H-S histogram, which yields better results):",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "as you see, we use the function",
+    "local": ""
+  },
+  {
+    "origin": "to get only the channel 0 (Hue) from the hsv image. It gets the following parameters:",
+    "local": ""
+  },
+  {
+    "origin": "&amp;hsv:",
+    "local": ""
+  },
+  {
+    "origin": "The source array from which the channels will be copied",
+    "local": ""
+  },
+  {
+    "origin": "1:",
+    "local": ""
+  },
+  {
+    "origin": "The number of source arrays",
+    "local": ""
+  },
+  {
+    "origin": "&amp;hue:",
+    "local": ""
+  },
+  {
+    "origin": "The destination array of the copied channels",
+    "local": ""
+  },
+  {
+    "origin": "1:",
+    "local": ""
+  },
+  {
+    "origin": "The number of destination arrays",
+    "local": ""
+  },
+  {
+    "origin": "ch[] = {0,0}:",
+    "local": ""
+  },
+  {
+    "origin": "The array of index pairs indicating how the channels are copied. In this case, the Hue(0) channel of &amp;hsv is being copied to the 0 channel of &amp;hue (1-channel)",
+    "local": ""
+  },
+  {
+    "origin": "1:",
+    "local": ""
+  },
+  {
+    "origin": "Number of index pairs",
+    "local": ""
+  },
+  {
+    "origin": "Create a Trackbar for the user to enter the bin values. Any change on the Trackbar means a call to the",
+    "local": ""
+  },
+  {
+    "origin": "Hist_and_Backproj",
+    "local": ""
+  },
+  {
+    "origin": "callback function.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Show the image and wait for the user to exit the program:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Hist_and_Backproj function:",
+    "local": ""
+  },
+  {
+    "origin": "Initialize the arguments needed for",
+    "local": ""
+  },
+  {
+    "origin": ". The number of bins comes from the Trackbar:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Calculate the Histogram and normalize it to the range \\([0,255]\\)",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Get the Backprojection of the same image by calling the function",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "all the arguments are known (the same as used to calculate the histogram), only we add the backproj matrix, which will store the backprojection of the source image (&amp;hue)",
+    "local": ""
+  },
+  {
+    "origin": "Display backproj:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Draw the 1-D Hue histogram of the image:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "Here are the output by using a sample image ( guess what? Another hand ). You can play with the bin values and you will observe how it affects the results:",
+    "local": ""
+  },
+  {
+    "origin": "R0",
+    "local": ""
+  },
+  {
+    "origin": "R1",
+    "local": ""
+  },
+  {
+    "origin": "R2",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": ""
+  }
+]

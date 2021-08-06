@@ -1,0 +1,98 @@
+[
+  {
+    "origin": "OpenCV: Structured forest training",
+    "local": "OpenCV：结构化森林训练"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Structured forest training",
+    "local": "结构化森林训练"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "In this tutorial we show how to train your own structured forest using author's initial Matlab implementation.",
+    "local": "在本教程中，我们将展示如何使用作者最初的Matlab实现来训练您自己的结构化林。"
+  },
+  {
+    "origin": "Training pipeline",
+    "local": "培训渠道"
+  },
+  {
+    "origin": "Download \"Piotr's Toolbox\" from",
+    "local": "从下载“Piotr工具箱”"
+  },
+  {
+    "origin": "link",
+    "local": "链接"
+  },
+  {
+    "origin": "and put it into separate directory, e.g. PToolbox",
+    "local": "并将其放入单独的目录中，例如PToolbox"
+  },
+  {
+    "origin": "Download BSDS500 dataset from link &lt;",
+    "local": "从link&lt；下载BSDS500数据集；"
+  },
+  {
+    "origin": "http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/",
+    "local": "http://www.eecs.berkeley.edu/Research/Projects/CS/vision/grouping/BSR/"
+  },
+  {
+    "origin": "&gt; and put it into separate directory named exactly BSR",
+    "local": "&燃气轮机；把它放到一个单独的目录中，名为BSR"
+  },
+  {
+    "origin": "Add both directory and their subdirectories to Matlab path.",
+    "local": "将目录及其子目录添加到Matlab路径。"
+  },
+  {
+    "origin": "Download detector code from link &lt;",
+    "local": "从链接下载探测器代码&lt；"
+  },
+  {
+    "origin": "http://research.microsoft.com/en-us/downloads/389109f6-b4e8-404c-84bf-239f7cbf4e3d/",
+    "local": "http://research.microsoft.com/en-us/downloads/389109f6-b4e8-404c-84bf-239f7cbf4e3d/"
+  },
+  {
+    "origin": "&gt; and put it into root directory. Now you should have :",
+    "local": "&燃气轮机；并将其放入根目录。现在你应该有："
+  },
+  {
+    "origin": "Rename models/forest/modelFinal.mat to models/forest/modelFinal.mat.backup",
+    "local": "将models/forest/modelFinal.mat重命名为models/forest/modelFinal.mat.backup"
+  },
+  {
+    "origin": "Open edgesChns.m and comment lines 26&ndash;41. Add after commented lines the following:",
+    "local": "打开edgesChns.m和注释行26&ndash；41.在注释行后添加以下内容："
+  },
+  {
+    "origin": "Now it is time to compile promised getFeatures. I do with the following code:",
+    "local": "现在是时候编译这些特性了。我使用以下代码："
+  },
+  {
+    "origin": "Place compiled mex file into root dir and run edgesDemo. You will need to wait a couple of hours after that the new model will appear inside models/forest/.",
+    "local": "将编译好的mex文件放入根目录并运行edgesDemo。在新模型出现在models/forest/中之后，您需要等待几个小时。"
+  },
+  {
+    "origin": "The final step is converting trained model from Matlab binary format to YAML which you can use with our ocv::StructuredEdgeDetection. For this purpose run opencv_contrib/ximgproc/tutorials/scripts/modelConvert(model, \"model.yml\")",
+    "local": "最后一步是将训练好的模型从Matlab二进制格式转换成YAML，您可以使用我们的ocv:：StructuredGeDetection。为此，运行opencv\\u contrib/ximgproc/tutorials/scripts/modelConvert（model，“model.yml”）"
+  },
+  {
+    "origin": "How to use your model",
+    "local": "如何使用您的模型"
+  },
+  {
+    "origin": "Just use expanded constructor with above defined class NewRFFeatureGetter",
+    "local": "只需对上述定义的类NewRFFeatureGetter使用扩展构造函数"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:40为OpenCV生成，&#160；"
+  }
+]

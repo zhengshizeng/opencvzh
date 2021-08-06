@@ -1,0 +1,1922 @@
+[
+  {
+    "origin": "OpenCV: cv::cuda::GpuMatND Class Reference",
+    "local": "OpenCV:cv:：cuda:：GpuMatND类引用"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Public Types",
+    "local": "公共类型"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "Public Attributes",
+    "local": "公共属性"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND Class Reference",
+    "local": "cv:：cuda:：GpuMatND类引用"
+  },
+  {
+    "origin": "&raquo;",
+    "local": "&引用；"
+  },
+  {
+    "origin": "&raquo;",
+    "local": "&引用；"
+  },
+  {
+    "origin": "Public Types",
+    "local": "公共类型"
+  },
+  {
+    "origin": "= std::vector&lt; int &gt;",
+    "local": "=标准：：向量&lt；内部&gt；"
+  },
+  {
+    "origin": "= std::vector&lt; int &gt;",
+    "local": "=标准：：向量&lt；内部&gt；"
+  },
+  {
+    "origin": "= std::vector&lt; size_t &gt;",
+    "local": "=标准：：向量&lt；大小\\u t&gt；"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "default constructor",
+    "local": "默认构造函数"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ", int",
+    "local": "，内景"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ", int",
+    "local": "，内景"
+  },
+  {
+    "origin": ", void *data,",
+    "local": "，void*数据，"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "())",
+    "local": "())"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;)=default",
+    "local": "&amp；）=违约"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;&amp;) noexcept=default",
+    "local": "&amp&amp；）noexcept=默认值"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "destructor",
+    "local": "析构函数"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "Creates a full copy of the array and the underlying data. The method creates a full copy of the array. It mimics the behavior of",
+    "local": "创建数组和基础数据的完整副本。该方法创建数组的完整副本。它模仿"
+  },
+  {
+    "origin": ", i.e. the original step is not taken into account. So, the array copy is a continuous array occupying",
+    "local": "，即不考虑原始步骤。因此，数组副本是一个连续的数组"
+  },
+  {
+    "origin": "*elemSize() bytes.",
+    "local": "*分析大小字节。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;stream) const",
+    "local": "&amp；（流）常数"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ", int",
+    "local": "，内景"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Allocates GPU memory. Suppose there is some GPU memory already allocated. In that case, this method may choose to reuse that GPU memory under the specific condition: it must be of the same size and type, not externally allocated, the GPU memory is continuous(i.e.,",
+    "local": "分配GPU内存。假设已经分配了一些GPU内存。在这种情况下，此方法可以选择在特定条件下重用该GPU内存：它必须具有相同的大小和类型，而不是外部分配的，GPU内存是连续的（即。，"
+  },
+  {
+    "origin": "is true), and is not a sub-matrix of another",
+    "local": "是真的），并且不是另一个的子矩阵"
+  },
+  {
+    "origin": "(i.e.,",
+    "local": "（即。，"
+  },
+  {
+    "origin": "is false). In other words, this method guarantees that the GPU memory allocated by this method is always continuous and is not a sub-region of another",
+    "local": "是假的）。换句话说，该方法保证了由该方法分配的GPU内存始终是连续的，并且不是另一个GPU的子区域"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "idx,",
+    "local": "idx公司，"
+  },
+  {
+    "origin": "rowRange,",
+    "local": "罗兰。"
+  },
+  {
+    "origin": "colRange) const",
+    "local": "（范围）常数"
+  },
+  {
+    "origin": "Creates a",
+    "local": "创建"
+  },
+  {
+    "origin": "header for a 2D plane part of an n-dim matrix.",
+    "local": "n维矩阵的二维平面部分的标题。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "dst) const",
+    "local": "（dst）常数"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "dst,",
+    "local": "夏令时，"
+  },
+  {
+    "origin": "&amp;stream) const",
+    "local": "&amp；（流）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "returns element size in bytes",
+    "local": "返回以字节为单位的元素大小"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "returns the size of element channel in bytes",
+    "local": "返回元素通道的大小（字节）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "returns true if data is null",
+    "local": "如果数据为null，则返回true"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "returns true if not empty and points to external(user-allocated) gpu memory",
+    "local": "如果不为空，则返回true，并指向外部（用户分配的）gpu内存"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "returns pointer to the first byte of the GPU memory",
+    "local": "返回指向GPU内存第一个字节的指针"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "returns true if the matrix is a sub-matrix of another matrix",
+    "local": "如果矩阵是另一个矩阵的子矩阵，则返回true"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "Extracts a 2D plane part of an n-dim matrix if this",
+    "local": "提取n维矩阵的二维平面部分，如果"
+  },
+  {
+    "origin": "is effectively 2D. It differs from",
+    "local": "实际上是二维的。它不同于"
+  },
+  {
+    "origin": "in that it clones a part of this",
+    "local": "因为它克隆了其中的一部分"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;ranges) const",
+    "local": "&燃气轮机&amp；范围）常数"
+  },
+  {
+    "origin": "Extracts a sub-matrix. The operator makes a new header for the specified sub-array of *this. The operator is an O(1) operation, that is, no matrix data is copied.",
+    "local": "提取子矩阵。运算符为*this的指定子数组创建一个新头。运算符是O（1）运算，即不复制任何矩阵数据。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "idx,",
+    "local": "idx公司，"
+  },
+  {
+    "origin": "rowRange,",
+    "local": "罗兰。"
+  },
+  {
+    "origin": "colRange) const",
+    "local": "（范围）常数"
+  },
+  {
+    "origin": "Extracts a 2D plane part of an n-dim matrix. It differs from createGpuMatHeader(IndexArray, Range, Range) in that it clones a part of this",
+    "local": "提取n维矩阵的二维平面部分。它与createGpuMatHeader（IndexArray，Range，Range）的不同之处在于它克隆了其中的一部分"
+  },
+  {
+    "origin": "to the returned",
+    "local": "返回的"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;)=default",
+    "local": "&amp；）=违约"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;&amp;) noexcept=default",
+    "local": "&amp&amp；）noexcept=默认值"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;m) noexcept",
+    "local": "&amp；m） 无例外"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "returns the total number of array elements",
+    "local": "返回数组元素的总数"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "returns the size of underlying memory in bytes",
+    "local": "返回基础内存的大小（字节）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "returns element type",
+    "local": "返回元素类型"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src)",
+    "local": "（src）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src,",
+    "local": "src公司，"
+  },
+  {
+    "origin": "&amp;stream)",
+    "local": "&amp；（溪流）"
+  },
+  {
+    "origin": "Public Attributes",
+    "local": "公共属性"
+  },
+  {
+    "origin": "matrix dimensionality",
+    "local": "矩阵维数"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "shape of this array",
+    "local": "此阵列的形状"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Member Typedef Documentation",
+    "local": "成员类型定义文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "IndexArray",
+    "local": "索引"
+  },
+  {
+    "origin": "using",
+    "local": "使用"
+  },
+  {
+    "origin": "= std::vector&lt;int&gt;",
+    "local": "=标准：：向量&lt；内部&gt；"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "SizeArray",
+    "local": "SizeArray公司"
+  },
+  {
+    "origin": "using",
+    "local": "使用"
+  },
+  {
+    "origin": "= std::vector&lt;int&gt;",
+    "local": "=标准：：向量&lt；内部&gt；"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "StepArray",
+    "local": "步进阵列。"
+  },
+  {
+    "origin": "using",
+    "local": "使用"
+  },
+  {
+    "origin": "= std::vector&lt;size_t&gt;",
+    "local": "=标准：：向量&lt；大小\\u t&gt；"
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": "建造商和；析构函数文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "~GpuMatND()",
+    "local": "~GpuMatND（）"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::~GpuMatND",
+    "local": "简历：：cuda：：GpuMatND：：~GpuMatND"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "destructor",
+    "local": "析构函数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "GpuMatND()",
+    "local": "GpuMatND（）"
+  },
+  {
+    "origin": "[1/5]",
+    "local": "[1/5]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::GpuMatND",
+    "local": "简历：：cuda：：GpuMatND：：GpuMatND"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "default constructor",
+    "local": "默认构造函数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "GpuMatND()",
+    "local": "GpuMatND（）"
+  },
+  {
+    "origin": "[2/5]",
+    "local": "[2/5]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::GpuMatND",
+    "local": "简历：：cuda：：GpuMatND：：GpuMatND"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "size",
+    "local": "大小"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "type",
+    "local": "类型"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "size",
+    "local": "大小"
+  },
+  {
+    "origin": "Array of integers specifying an n-dimensional array shape.",
+    "local": "指定n维数组形状的整数数组。"
+  },
+  {
+    "origin": "type",
+    "local": "类型"
+  },
+  {
+    "origin": "Array type. Use CV_8UC1, ..., CV_16FC4 to create 1-4 channel matrices, or",
+    "local": "数组类型。使用CV_8UC1，…，CV_16FC4创建1-4个通道矩阵，或"
+  },
+  {
+    "origin": ", ...,",
+    "local": ", ...,"
+  },
+  {
+    "origin": "to create multi-channel (up to CV_CN_MAX channels) matrices.",
+    "local": "创建多通道（最多CV\\U CN\\U MAX通道）矩阵。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "GpuMatND()",
+    "local": "GpuMatND（）"
+  },
+  {
+    "origin": "[3/5]",
+    "local": "[3/5]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::GpuMatND",
+    "local": "简历：：cuda：：GpuMatND：：GpuMatND"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "size",
+    "local": "大小"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "type",
+    "local": "类型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "data",
+    "local": "数据"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "step",
+    "local": "步"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "size",
+    "local": "大小"
+  },
+  {
+    "origin": "Array of integers specifying an n-dimensional array shape.",
+    "local": "指定n维数组形状的整数数组。"
+  },
+  {
+    "origin": "type",
+    "local": "类型"
+  },
+  {
+    "origin": "Array type. Use CV_8UC1, ..., CV_16FC4 to create 1-4 channel matrices, or",
+    "local": "数组类型。使用CV_8UC1，…，CV_16FC4创建1-4个通道矩阵，或"
+  },
+  {
+    "origin": ", ...,",
+    "local": ", ...,"
+  },
+  {
+    "origin": "to create multi-channel (up to CV_CN_MAX channels) matrices.",
+    "local": "创建多通道（最多CV\\U CN\\U MAX通道）矩阵。"
+  },
+  {
+    "origin": "data",
+    "local": "数据"
+  },
+  {
+    "origin": "Pointer to the user data. Matrix constructors that take data and step parameters do not allocate matrix data. Instead, they just initialize the matrix header that points to the specified data, which means that no data is copied. This operation is very efficient and can be used to process external data using OpenCV functions. The external data is not automatically deallocated, so you should take care of it.",
+    "local": "指向用户数据的指针。接受数据和步长参数的矩阵构造函数不分配矩阵数据。相反，它们只是初始化指向指定数据的矩阵头，这意味着不复制任何数据。此操作非常有效，可以使用OpenCV函数处理外部数据。外部数据不会自动解除分配，因此您应该注意它。"
+  },
+  {
+    "origin": "step",
+    "local": "步"
+  },
+  {
+    "origin": "Array of",
+    "local": "数组"
+  },
+  {
+    "origin": "-1 steps in case of a multi-dimensional array (the last step is always set to the element size). If not specified, the matrix is assumed to be continuous.",
+    "local": "-如果是多维数组，则为1步（最后一步始终设置为元素大小）。如果未指定，则假定矩阵是连续的。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "GpuMatND()",
+    "local": "GpuMatND（）"
+  },
+  {
+    "origin": "[4/5]",
+    "local": "[4/5]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::GpuMatND",
+    "local": "简历：：cuda：：GpuMatND：：GpuMatND"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "default",
+    "local": "违约"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "GpuMatND()",
+    "local": "GpuMatND（）"
+  },
+  {
+    "origin": "[5/5]",
+    "local": "[5/5]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::GpuMatND",
+    "local": "简历：：cuda：：GpuMatND：：GpuMatND"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "default",
+    "local": "违约"
+  },
+  {
+    "origin": "noexcept",
+    "local": "无例外"
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "clone()",
+    "local": "克隆（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::clone",
+    "local": "cv:：cuda:：GpuMatND:：克隆"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "Creates a full copy of the array and the underlying data. The method creates a full copy of the array. It mimics the behavior of",
+    "local": "创建数组和基础数据的完整副本。该方法创建数组的完整副本。它模仿"
+  },
+  {
+    "origin": ", i.e. the original step is not taken into account. So, the array copy is a continuous array occupying",
+    "local": "，即不考虑原始步骤。因此，数组副本是一个连续的数组"
+  },
+  {
+    "origin": "*elemSize() bytes.",
+    "local": "*分析大小字节。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "clone()",
+    "local": "克隆（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::clone",
+    "local": "cv:：cuda:：GpuMatND:：克隆"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "stream",
+    "local": "流动"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. This overload is non-blocking, so it may return even if the copy operation is not finished.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。此重载是非阻塞的，因此即使复制操作未完成，它也可能返回。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "create()",
+    "local": "创建（）"
+  },
+  {
+    "origin": "void cv::cuda::GpuMatND::create",
+    "local": "void cv:：cuda:：GpuMatND:：创建"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "size",
+    "local": "大小"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "type",
+    "local": "类型"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Allocates GPU memory. Suppose there is some GPU memory already allocated. In that case, this method may choose to reuse that GPU memory under the specific condition: it must be of the same size and type, not externally allocated, the GPU memory is continuous(i.e.,",
+    "local": "分配GPU内存。假设已经分配了一些GPU内存。在这种情况下，此方法可以选择在特定条件下重用该GPU内存：它必须具有相同的大小和类型，而不是外部分配的，GPU内存是连续的（即。，"
+  },
+  {
+    "origin": "is true), and is not a sub-matrix of another",
+    "local": "是真的），并且不是另一个的子矩阵"
+  },
+  {
+    "origin": "(i.e.,",
+    "local": "（即。，"
+  },
+  {
+    "origin": "is false). In other words, this method guarantees that the GPU memory allocated by this method is always continuous and is not a sub-region of another",
+    "local": "是假的）。换句话说，该方法保证了由该方法分配的GPU内存始终是连续的，并且不是另一个GPU的子区域"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "createGpuMatHeader()",
+    "local": "CreateGpuMatHeader（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::createGpuMatHeader",
+    "local": "cv:：cuda:：GpuMatND:：创建GPUMATheader"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "idx",
+    "local": "idx公司"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "rowRange",
+    "local": "罗朗"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "colRange",
+    "local": "科尔兰奇"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "Creates a",
+    "local": "创建"
+  },
+  {
+    "origin": "header for a 2D plane part of an n-dim matrix.",
+    "local": "n维矩阵的二维平面部分的标题。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "The returned",
+    "local": "他回来了"
+  },
+  {
+    "origin": "is constructed with the constructor for user-allocated data. That is, It does not perform reference counting.",
+    "local": "是用用户分配数据的构造函数构造的。也就是说，它不执行引用计数。"
+  },
+  {
+    "origin": "This function does not increment this",
+    "local": "此函数不递增此值"
+  },
+  {
+    "origin": "'s reference counter.",
+    "local": "的引用计数器。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "createGpuMatHeader()",
+    "local": "CreateGpuMatHeader（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::createGpuMatHeader",
+    "local": "cv:：cuda:：GpuMatND:：创建GPUMATheader"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. Creates a",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。创建"
+  },
+  {
+    "origin": "header if this",
+    "local": "标题如果是"
+  },
+  {
+    "origin": "is effectively 2D.",
+    "local": "实际上是二维的。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "The returned",
+    "local": "他回来了"
+  },
+  {
+    "origin": "is constructed with the constructor for user-allocated data. That is, It does not perform reference counting.",
+    "local": "是用用户分配数据的构造函数构造的。也就是说，它不执行引用计数。"
+  },
+  {
+    "origin": "This function does not increment this",
+    "local": "此函数不递增此值"
+  },
+  {
+    "origin": "'s reference counter.",
+    "local": "的引用计数器。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "download()",
+    "local": "下载（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "void cv::cuda::GpuMatND::download",
+    "local": "void cv:：cuda:：GpuMatND:：下载"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "download()",
+    "local": "下载（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "void cv::cuda::GpuMatND::download",
+    "local": "void cv:：cuda:：GpuMatND:：下载"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "stream",
+    "local": "流动"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "elemSize()",
+    "local": "元素"
+  },
+  {
+    "origin": "size_t cv::cuda::GpuMatND::elemSize",
+    "local": "大小\\u t cv:：cuda:：GpuMatND:：elemSize"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "returns element size in bytes",
+    "local": "返回以字节为单位的元素大小"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "elemSize1()",
+    "local": "元素大小1（）"
+  },
+  {
+    "origin": "size_t cv::cuda::GpuMatND::elemSize1",
+    "local": "大小\\u t cv:：cuda:：GpuMatND:：elemSize1"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "returns the size of element channel in bytes",
+    "local": "返回元素通道的大小（字节）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "empty()",
+    "local": "空（）"
+  },
+  {
+    "origin": "bool cv::cuda::GpuMatND::empty",
+    "local": "bool cv:：cuda:：GpuMatND:：空"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "returns true if data is null",
+    "local": "如果数据为null，则返回true"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "external()",
+    "local": "外部（）"
+  },
+  {
+    "origin": "bool cv::cuda::GpuMatND::external",
+    "local": "bool cv:：cuda:：GpuMatND:：外部"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "returns true if not empty and points to external(user-allocated) gpu memory",
+    "local": "如果不为空，则返回true，并指向外部（用户分配的）gpu内存"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getDevicePtr()",
+    "local": "getDevicePtr（）"
+  },
+  {
+    "origin": "* cv::cuda::GpuMatND::getDevicePtr",
+    "local": "*简历：：奇迹：：GpuMatND：：getDevicePtr"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "returns pointer to the first byte of the GPU memory",
+    "local": "返回指向GPU内存第一个字节的指针"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isContinuous()",
+    "local": "isContinuous（）"
+  },
+  {
+    "origin": "bool cv::cuda::GpuMatND::isContinuous",
+    "local": "bool cv:：cuda:：GpuMatND:：isContinuous（布尔cv:：cuda:：GpuMatND:：isContinuous）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "returns true iff the",
+    "local": "如果"
+  },
+  {
+    "origin": "data is continuous (i.e. when there are no gaps between successive rows)",
+    "local": "数据是连续的（即连续行之间没有间隙时）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isSubmatrix()",
+    "local": "isSubmatrix（）"
+  },
+  {
+    "origin": "bool cv::cuda::GpuMatND::isSubmatrix",
+    "local": "布尔cv：：cuda：：GpuMatND：：isSubmatrix"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "returns true if the matrix is a sub-matrix of another matrix",
+    "local": "如果矩阵是另一个矩阵的子矩阵，则返回true"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator GpuMat()",
+    "local": "运算符GpuMat（）"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::operator",
+    "local": "cv:：cuda:：GpuMatND:：运算符"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "Extracts a 2D plane part of an n-dim matrix if this",
+    "local": "提取n维矩阵的二维平面部分，如果"
+  },
+  {
+    "origin": "is effectively 2D. It differs from",
+    "local": "实际上是二维的。它不同于"
+  },
+  {
+    "origin": "in that it clones a part of this",
+    "local": "因为它克隆了其中的一部分"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "This operator does not increment this",
+    "local": "此运算符不递增此值"
+  },
+  {
+    "origin": "'s reference counter;",
+    "local": "的参考计数器；"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator()()",
+    "local": "运算符（）（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::operator()",
+    "local": "cv:：cuda:：GpuMatND:：operator（）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "ranges",
+    "local": "范围"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "Extracts a sub-matrix. The operator makes a new header for the specified sub-array of *this. The operator is an O(1) operation, that is, no matrix data is copied.",
+    "local": "提取子矩阵。运算符为*this的指定子数组创建一个新头。运算符是O（1）运算，即不复制任何矩阵数据。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "ranges",
+    "local": "范围"
+  },
+  {
+    "origin": "Array of selected ranges along each dimension.",
+    "local": "沿每个维度的选定范围的数组。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator()()",
+    "local": "运算符（）（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::operator()",
+    "local": "cv:：cuda:：GpuMatND:：operator（）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "idx",
+    "local": "idx公司"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "rowRange",
+    "local": "罗朗"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "colRange",
+    "local": "科尔兰奇"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "Extracts a 2D plane part of an n-dim matrix. It differs from createGpuMatHeader(IndexArray, Range, Range) in that it clones a part of this",
+    "local": "提取n维矩阵的二维平面部分。它与createGpuMatHeader（IndexArray，Range，Range）的不同之处在于它克隆了其中的一部分"
+  },
+  {
+    "origin": "to the returned",
+    "local": "返回的"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "This operator does not increment this",
+    "local": "此运算符不递增此值"
+  },
+  {
+    "origin": "'s reference counter;",
+    "local": "的参考计数器；"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator=()",
+    "local": "运算符=（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "&amp; cv::cuda::GpuMatND::operator=",
+    "local": "&amp；cv:：cuda:：GpuMatND:：运算符="
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "default",
+    "local": "违约"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator=()",
+    "local": "运算符=（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "&amp; cv::cuda::GpuMatND::operator=",
+    "local": "&amp；cv:：cuda:：GpuMatND:：运算符="
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "default",
+    "local": "违约"
+  },
+  {
+    "origin": "noexcept",
+    "local": "无例外"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "release()",
+    "local": "发布（）"
+  },
+  {
+    "origin": "void cv::cuda::GpuMatND::release",
+    "local": "void cv:：cuda:：GpuMatND:：发布"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "swap()",
+    "local": "交换（）"
+  },
+  {
+    "origin": "void cv::cuda::GpuMatND::swap",
+    "local": "void cv:：cuda:：GpuMatND:：swap无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "noexcept",
+    "local": "无例外"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "total()",
+    "local": "总计（）"
+  },
+  {
+    "origin": "size_t cv::cuda::GpuMatND::total",
+    "local": "大小\\u t cv：：cuda：：GpuMatND：：总计"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "returns the total number of array elements",
+    "local": "返回数组元素的总数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "totalMemSize()",
+    "local": "总计大小（）"
+  },
+  {
+    "origin": "size_t cv::cuda::GpuMatND::totalMemSize",
+    "local": "size t cv:：cuda:：gpumatnd:：totalmemsize"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "returns the size of underlying memory in bytes",
+    "local": "返回基础内存的大小（字节）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "type()",
+    "local": "类型（）"
+  },
+  {
+    "origin": "int cv::cuda::GpuMatND::type",
+    "local": "GpuMatND:：类型"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "returns element type",
+    "local": "返回元素类型"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "upload()",
+    "local": "上载（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "void cv::cuda::GpuMatND::upload",
+    "local": "void cv:：cuda:：GpuMatND:：upload无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "upload()",
+    "local": "上载（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "void cv::cuda::GpuMatND::upload",
+    "local": "void cv:：cuda:：GpuMatND:：upload无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "stream",
+    "local": "流动"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": "成员数据文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "dims",
+    "local": "薄雾"
+  },
+  {
+    "origin": "int cv::cuda::GpuMatND::dims",
+    "local": "int cv：：cuda：：GpuMatND：：尺寸"
+  },
+  {
+    "origin": "matrix dimensionality",
+    "local": "矩阵维数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": "int cv::cuda::GpuMatND::flags",
+    "local": "int cv:：cuda:：GpuMatND:：标志"
+  },
+  {
+    "origin": "includes several bit-fields:",
+    "local": "包括几个位字段："
+  },
+  {
+    "origin": "the magic signature",
+    "local": "神奇的签名"
+  },
+  {
+    "origin": "continuity flag",
+    "local": "连续性标志"
+  },
+  {
+    "origin": "depth",
+    "local": "深度"
+  },
+  {
+    "origin": "number of channels",
+    "local": "通道数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "size",
+    "local": "大小"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::size",
+    "local": "cv:：cuda:：GpuMatND:：大小"
+  },
+  {
+    "origin": "shape of this array",
+    "local": "此阵列的形状"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "step",
+    "local": "步"
+  },
+  {
+    "origin": "cv::cuda::GpuMatND::step",
+    "local": "cv:：cuda:：GpuMatND:：步骤"
+  },
+  {
+    "origin": "step values Their semantics is identical to the semantics of step for",
+    "local": "step值的语义与step for的语义相同"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": "opencv2/核心/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:44 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:44为OpenCV生成，&#160；"
+  }
+]

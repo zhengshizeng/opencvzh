@@ -1,0 +1,290 @@
+[
+  {
+    "origin": "OpenCV: Aruco module FAQ",
+    "local": "OpenCV:Aruco模块常见问题"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Aruco module FAQ",
+    "local": "阿鲁科模块常见问题解答"
+  },
+  {
+    "origin": "This is a compilation of questions that can be useful for those that want to use the aruco module.",
+    "local": "这是一个问题汇编，对那些想使用阿鲁科模块的人来说是有用的。"
+  },
+  {
+    "origin": "I only want to label some objects, what should I use?",
+    "local": "我只想标记一些对象，我应该使用什么？"
+  },
+  {
+    "origin": "In this case, you only need single ArUco markers. You can place one or several markers with different ids in each of the object you want to identify.",
+    "local": "在这种情况下，您只需要一个阿鲁科标记。可以在要标识的每个对象中放置一个或多个具有不同ID的标记。"
+  },
+  {
+    "origin": "Which algorithm is used for marker detection?",
+    "local": "哪种算法用于标记检测？"
+  },
+  {
+    "origin": "The aruco module is based on the original ArUco library. A full description of the detection process can be found in:",
+    "local": "aruco模块基于原始的aruco库。检测过程的完整描述见："
+  },
+  {
+    "origin": "S. Garrido-Jurado, R. Muñoz-Salinas, F. J. Madrid-Cuevas, and M. J. Marín-Jiménez. 2014. \"Automatic generation and detection of highly reliable fiducial markers under occlusion\". Pattern Recogn. 47, 6 (June 2014), 2280-2292. DOI=10.1016/j.patcog.2014.01.005",
+    "local": "S。加里多·朱拉多，R。亩ñ奥兹·萨利纳斯，F。J。马德里奎瓦斯和M。J。三月ín-吉姆é内兹。2014年，“遮挡下高度可靠基准标记的自动生成和检测”。图案识别。47，6（2014年6月），2280-2292.DOI=10.1016/j.patcog.2014.01.005"
+  },
+  {
+    "origin": "My markers are not being detected correctly, what can I do?",
+    "local": "我的标记没有被正确检测到，我该怎么办？"
+  },
+  {
+    "origin": "There can be many factors that avoid the correct detection of markers. You probably need to adjust some of the parameters in the",
+    "local": "有许多因素会避免正确检测标记。您可能需要调整"
+  },
+  {
+    "origin": "object. The first thing you can do is checking if your markers are returned as rejected candidates by the",
+    "local": "对象。您可以做的第一件事是检查您的标记是否被"
+  },
+  {
+    "origin": "function. Depending on this, you should try to modify different parameters.",
+    "local": "功能。根据这一点，您应该尝试修改不同的参数。"
+  },
+  {
+    "origin": "If you are using a ArUco board, you can also try the",
+    "local": "如果您使用的是阿鲁科板，也可以尝试"
+  },
+  {
+    "origin": "function.",
+    "local": "功能。"
+  },
+  {
+    "origin": "What are the benefits of ArUco boards? What are the drawbacks?",
+    "local": "阿鲁科董事会有什么好处？缺点是什么？"
+  },
+  {
+    "origin": "Using a board of markers you can obtain the camera pose from a set of markers, instead of a single one. This way, the detection is able to handle occlusion of partial views of the Board, since only one marker is necessary to obtain the pose.",
+    "local": "使用标记板可以从一组标记（而不是单个标记）获取相机姿势。通过这种方式，检测能够处理电路板部分视图的遮挡，因为获得姿势只需要一个标记。"
+  },
+  {
+    "origin": "Furthermore, as in most cases you are using more corners for pose estimation, it will be more accurate than using a single marker.",
+    "local": "此外，在大多数情况下，使用更多的角点进行姿势估计，这将比使用单个标记更精确。"
+  },
+  {
+    "origin": "The main drawback is that a Board is not as versatile as a single marker.",
+    "local": "主要的缺点是，一个董事会是不是作为一个单一的通用标记。"
+  },
+  {
+    "origin": "What are the benefits of ChArUco boards over ArUco boards? And the drawbacks?",
+    "local": "ChArUco董事会比ArUco董事会有什么好处？缺点呢？"
+  },
+  {
+    "origin": "ChArUco boards combines chessboards with ArUco boards. Thanks to this, the corners provided by ChArUco boards are more accurate than those provided by ArUco Boards (or single markers).",
+    "local": "ChArUco棋盘结合了棋盘和ArUco棋盘。因此，ChArUco板提供的转角比ArUco板（或单个标记）提供的转角更准确。"
+  },
+  {
+    "origin": "The main drawback is that ChArUco boards are not as versatile as ArUco board. For instance, a ChArUco board is a planar board with a specific marker layout while the ArUco boards can have any layout, even in 3d. Furthermore, the markers in the ChArUco board are usually smaller and more difficult to detect.",
+    "local": "主要缺点是ChArUco板不如ArUco板通用。例如，ChArUco板是具有特定标记布局的平面板，而ArUco板可以具有任何布局，即使是在3d中。此外，ChArUco板中的标记通常更小，更难检测。"
+  },
+  {
+    "origin": "I do not need pose estimation, should I use ChArUco boards?",
+    "local": "我不需要姿势估计，我应该使用ChArUco板吗？"
+  },
+  {
+    "origin": "No. The main goal of ChArUco boards is provide high accurate corners for pose estimation or camera calibration.",
+    "local": "不。ChArUco板的主要目标是为姿态估计或摄像机校准提供高精度的角点。"
+  },
+  {
+    "origin": "Should all the markers in an ArUco board be placed in the same plane?",
+    "local": "阿鲁科板上的所有标记是否应放置在同一平面上？"
+  },
+  {
+    "origin": "No, the marker corners in a ArUco board can be placed anywhere in its 3d coordinate system.",
+    "local": "不，阿鲁科板上的标记角可以放置在其三维坐标系中的任何位置。"
+  },
+  {
+    "origin": "Should all the markers in an ChArUco board be placed in the same plane?",
+    "local": "ChArUco板中的所有标记是否应放置在同一平面上？"
+  },
+  {
+    "origin": "Yes, all the markers in a ChArUco board need to be in the same plane and their layout is fixed by the chessboard shape.",
+    "local": "是的，一个棋盘上的所有标记需要在同一个平面上，并且它们的布局是由棋盘形状固定的。"
+  },
+  {
+    "origin": "What is the difference between a",
+    "local": "两种方法的区别是什么"
+  },
+  {
+    "origin": "object and a",
+    "local": "对象和"
+  },
+  {
+    "origin": "object?",
+    "local": "反对？"
+  },
+  {
+    "origin": "The",
+    "local": "这个"
+  },
+  {
+    "origin": "class is a specific type of board that inherits from",
+    "local": "类是从"
+  },
+  {
+    "origin": "class. A",
+    "local": "班级。A"
+  },
+  {
+    "origin": "object is a board whose markers are placed in the same plane and in a grid layout.",
+    "local": "对象是其标记放置在同一平面和网格布局中的板。"
+  },
+  {
+    "origin": "What are Diamond markers?",
+    "local": "什么是钻石标记？"
+  },
+  {
+    "origin": "Diamond markers are very similar to a ChArUco board of 3x3 squares. However, contrary to ChArUco boards, the detection of diamonds is based on the relative position of the markers. They are useful when you want to provide a conceptual meaning to any (or all) of the markers in the diamond. An example is using one of the marker to provide the diamond scale.",
+    "local": "菱形标记非常类似于由3x3正方形组成的ChArUco板。然而，与ChArUco板相反，钻石的检测是基于标记的相对位置。当您希望为菱形中的任何（或所有）标记提供概念意义时，它们非常有用。例如，使用其中一个标记来提供菱形刻度。"
+  },
+  {
+    "origin": "Do I need to detect marker before board detection, ChArUco board detection or Diamond detection?",
+    "local": "我需要在板检测、ChArUco板检测或菱形检测之前检测标记吗？"
+  },
+  {
+    "origin": "Yes, the detection of single markers is a basic tool in the aruco module. It is done using the",
+    "local": "是的，单个标记的检测是aruco模块中的一个基本工具。它是使用"
+  },
+  {
+    "origin": "function. The rest of functionalities receives a list of detected markers from this function.",
+    "local": "功能。其余功能从该功能接收检测到的标记列表。"
+  },
+  {
+    "origin": "I want to calibrate my camera, can I use this module?",
+    "local": "我想校准我的相机，我能用这个模块吗？"
+  },
+  {
+    "origin": "Yes, the aruco module provides functionalities to calibrate the camera using both, ArUco boards and ChArUco boards.",
+    "local": "是的，aruco模块提供了使用aruco板和ChArUco板校准相机的功能。"
+  },
+  {
+    "origin": "Should I calibrate using a ChArUco board or an ArUco board?",
+    "local": "我应该使用ChArUco板还是ArUco板进行校准？"
+  },
+  {
+    "origin": "It is highly recommended the calibration using ChArUco board due to the high accuracy.",
+    "local": "由于精度高，强烈建议使用ChArUco板进行校准。"
+  },
+  {
+    "origin": "Should I use a predefined dictionary or generate my own dictionary?",
+    "local": "我应该使用预定义的词典还是生成自己的词典？"
+  },
+  {
+    "origin": "In general, it is easier to use one of the predefined dictionaries. However, if you need a bigger dictionary (in terms of number of markers or number of bits) you should generate your own dictionary. Dictionary generation is also useful if you want to maximize the inter-marker distance to achieve a better error correction during the identification step.",
+    "local": "一般来说，使用一个预定义的词典比较容易。但是，如果你需要一个更大的字典（以标记的数量或位的数量来说），你应该生成你自己的字典。如果您希望最大化标记间距离，以便在标识步骤中实现更好的错误更正，那么字典生成也很有用。"
+  },
+  {
+    "origin": "I am generating my own dictionary but it takes too long",
+    "local": "我正在编我自己的词典，但花的时间太长了"
+  },
+  {
+    "origin": "Dictionary generation should only be done once at the beginning of your application and it should take some seconds. If you are generating the dictionary on each iteration of your detection loop, you are doing it wrong.",
+    "local": "字典生成应该只在应用程序开始时执行一次，并且需要几秒钟。如果在检测循环的每次迭代中都生成字典，那么就是做错了。"
+  },
+  {
+    "origin": "Furthermore, it is recommendable to save the dictionary to a file and read it on every execution so you dont need to generate it.",
+    "local": "此外，建议将字典保存到一个文件中，并在每次执行时读取它，这样就不需要生成它。"
+  },
+  {
+    "origin": "I would like to use some markers of the original ArUco library that I have already printed, can I use them?",
+    "local": "我想使用一些我已经印刷的阿鲁科图书馆的原始标记，我可以使用它们吗？"
+  },
+  {
+    "origin": "Yes, one of the predefined dictionary is",
+    "local": "是的，预定义的字典之一是"
+  },
+  {
+    "origin": ", which detects the marker of the original ArUco library with the same identifiers.",
+    "local": "，它检测具有相同标识符的原始ArUco库的标记。"
+  },
+  {
+    "origin": "Can I use the Board configuration file of the original ArUco library in this module?",
+    "local": "我可以在这个模块中使用原始ArUco库的板配置文件吗？"
+  },
+  {
+    "origin": "Not directly, you will need to adapt the information of the ArUco file to the aruco module Board format.",
+    "local": "不是直接的，您需要将ArUco文件的信息调整为ArUco模块板格式。"
+  },
+  {
+    "origin": "Can I use this module to detect the markers of other libraries based on binary fiducial markers?",
+    "local": "我可以使用这个模块来检测基于二进制基准标记的其他库的标记吗？"
+  },
+  {
+    "origin": "Probably yes, however you will need to port the dictionary of the original library to the aruco module format.",
+    "local": "可能是的，但是您需要将原始库的字典移植到aruco模块格式。"
+  },
+  {
+    "origin": "Do I need to store the Dictionary information in a file so I can use it in different executions?",
+    "local": "我是否需要将字典信息存储在一个文件中，以便在不同的执行中使用它？"
+  },
+  {
+    "origin": "If you are using one of the predefined dictionaries, it is not necessary. Otherwise, it is recommendable that you save it to file.",
+    "local": "如果您使用的是某个预定义的词典，则不必这样做。否则，建议您将其保存到文件中。"
+  },
+  {
+    "origin": "Do I need to store the Board information in a file so I can use it in different executions?",
+    "local": "我是否需要将电路板信息存储在一个文件中，以便在不同的执行中使用它？"
+  },
+  {
+    "origin": "If you are using a",
+    "local": "如果您使用的是"
+  },
+  {
+    "origin": "or a",
+    "local": "或者"
+  },
+  {
+    "origin": "board you only need to store the board measurements that are provided to the",
+    "local": "电路板您只需要存储提供给"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "functions. If you manually modify the marker ids of the boards, or if you use a different type of board, you should save your board object to file.",
+    "local": "功能。如果手动修改电路板的标记ID，或者使用不同类型的电路板，则应将电路板对象保存到文件中。"
+  },
+  {
+    "origin": "Does the aruco module provide functions to save the Dictionary or Board to file?",
+    "local": "aruco模块是否提供将字典或电路板保存到文件的功能？"
+  },
+  {
+    "origin": "Not right now. However the data member of both the dictionary and board classes are public and can be easily stored.",
+    "local": "现在不行。然而，dictionary和board类的数据成员都是公共的，可以很容易地存储。"
+  },
+  {
+    "origin": "Alright, but how can I render a 3d model to create an augmented reality application?",
+    "local": "好吧，但是我如何渲染一个三维模型来创建一个增强现实应用程序呢？"
+  },
+  {
+    "origin": "To do so, you will need to use an external rendering engine library, such as OpenGL. The aruco module only provides the functionality to obtain the camera pose, i.e. the rotation and traslation vectors, which is necessary to create the augmented reality effect. However, you will need to adapt the rotation and traslation vectors from the OpenCV format to the format accepted by your 3d rendering library. The original ArUco library contains examples of how to do it for OpenGL and Ogre3D.",
+    "local": "为此，需要使用外部渲染引擎库，如OpenGL。aruco模块仅提供获取相机姿态的功能，即旋转和平移矢量，这是创建增强现实效果所必需的。但是，您需要将OpenCV格式中的旋转和平移向量调整为3d渲染库所接受的格式。原始的ArUco库包含如何在OpenGL和Ogre3D中实现的示例。"
+  },
+  {
+    "origin": "I have use this module in my research work, how can I cite it?",
+    "local": "我在研究工作中使用过这个模块，我如何引用它？"
+  },
+  {
+    "origin": "You can cite the original ArUco library:",
+    "local": "您可以引用原始的阿鲁科图书馆："
+  },
+  {
+    "origin": "S. Garrido-Jurado, R. Muñoz-Salinas, F. J. Madrid-Cuevas, and M. J. Marín-Jiménez. 2014. \"Automatic generation and detection of highly reliable fiducial markers under occlusion\". Pattern Recogn. 47, 6 (June 2014), 2280-2292. DOI=10.1016/j.patcog.2014.01.005",
+    "local": "S。加里多·朱拉多，R。亩ñ奥兹·萨利纳斯，F。J。马德里奎瓦斯和M。J。三月ín-吉姆é内兹。2014年，“遮挡下高度可靠基准标记的自动生成和检测”。图案识别。47，6（2014年6月），2280-2292.DOI=10.1016/j.patcog.2014.01.005"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:38为OpenCV生成，&#160；"
+  }
+]

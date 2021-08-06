@@ -1,0 +1,114 @@
+[
+  {
+    "origin": "OpenCV: Shi-Tomasi Corner Detector &amp; Good Features to Track",
+    "local": "OpenCV:Shi Tomasi拐角检测器&amp；好的跟踪功能"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Shi-Tomasi Corner Detector &amp; Good Features to Track",
+    "local": "Shi Tomasi拐角检测器&amp；好的跟踪功能"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this chapter,",
+    "local": "在本章中，"
+  },
+  {
+    "origin": "We will learn about the another corner detector: Shi-Tomasi Corner Detector",
+    "local": "我们将学习另一个角点检测器：Shi Tomasi角点检测器"
+  },
+  {
+    "origin": "We will see the function:",
+    "local": "我们将看到函数："
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "In last chapter, we saw Harris Corner Detector. Later in 1994, J. Shi and C. Tomasi made a small modification to it in their paper",
+    "local": "在上一章，我们看到哈里斯角探测器。1994年晚些时候，J。施和C。托马斯在他们的论文中对此做了一个小小的修改"
+  },
+  {
+    "origin": "Good Features to Track",
+    "local": "好的跟踪功能"
+  },
+  {
+    "origin": "which shows better results compared to Harris Corner Detector. The scoring function in Harris Corner Detector was given by:",
+    "local": "与Harris角点检测器相比，该算法具有更好的检测效果。Harris角点检测器中的评分函数由下式给出："
+  },
+  {
+    "origin": "\\[R = \\lambda_1 \\lambda_2 - k(\\lambda_1+\\lambda_2)^2\\]",
+    "local": "\\[R=\\lambda\\u 1\\lambda\\u 2-k（\\lambda\\u 1+\\lambda\\u 2）^2\\]"
+  },
+  {
+    "origin": "Instead of this, Shi-Tomasi proposed:",
+    "local": "与此相反，Shi Tomasi提出："
+  },
+  {
+    "origin": "\\[R = min(\\lambda_1, \\lambda_2)\\]",
+    "local": "\\[R=min（\\lambda\\u 1、\\lambda\\u 2）\\]"
+  },
+  {
+    "origin": "If it is a greater than a threshold value, it is considered as a corner. If we plot it in \\(\\lambda_1 - \\lambda_2\\) space as we did in Harris Corner Detector, we get an image as below:",
+    "local": "如果大于阈值，则视为角点。如果我们在\\（\\lambda\\u 1-\\lambda\\u 2\\）空间中绘制它，就像我们在Harris角点检测器中所做的那样，我们得到如下图像："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "From the figure, you can see that only when \\(\\lambda_1\\) and \\(\\lambda_2\\) are above a minimum value, \\(\\lambda_{min}\\), it is considered as a corner(green region).",
+    "local": "从图中可以看出，只有当\\（\\lambda\\u 1\\）和\\（\\lambda\\u 2\\）高于最小值\\（\\lambda\\u{min}\\）时，它才被视为角点（绿色区域）。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "OpenCV has a function,",
+    "local": "OpenCV有一个函数，"
+  },
+  {
+    "origin": ". It finds N strongest corners in the image by Shi-Tomasi method (or Harris Corner Detection, if you specify it). As usual, image should be a grayscale image. Then you specify number of corners you want to find. Then you specify the quality level, which is a value between 0-1, which denotes the minimum quality of corner below which everyone is rejected. Then we provide the minimum euclidean distance between corners detected.",
+    "local": ". 它通过Shi-Tomasi方法（或者Harris角点检测，如果您指定的话）在图像中找到N个最强的角点。像往常一样，图像应该是灰度图像。然后指定要查找的角数。然后指定质量级别，它是一个介于0-1之间的值，表示角点的最低质量，低于该质量所有人都将被拒绝。然后给出检测到的角点之间的最小欧氏距离。"
+  },
+  {
+    "origin": "With all this information, the function finds corners in the image. All corners below quality level are rejected. Then it sorts the remaining corners based on quality in the descending order. Then function takes first strongest corner, throws away all the nearby corners in the range of minimum distance and returns N strongest corners.",
+    "local": "利用所有这些信息，函数可以在图像中查找角点。所有低于质量标准的角落都将被拒收。然后根据质量按降序对剩余的角点进行排序。然后函数取第一个最强角点，丢弃最小距离范围内的所有相邻角点，并返回N个最强角点。"
+  },
+  {
+    "origin": "In below example, we will try to find 25 best corners:",
+    "local": "在下面的示例中，我们将尝试找到25个最佳角："
+  },
+  {
+    "origin": "See the result below:",
+    "local": "结果如下："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "This function is more appropriate for tracking. We will see that when its time comes.",
+    "local": "此功能更适合跟踪。到时候我们会看到的。"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Exercises",
+    "local": "练习"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,166 @@
+[
+  {
+    "origin": "OpenCV: Periodic Noise Removing Filter",
+    "local": "周期去噪滤波器"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Periodic Noise Removing Filter",
+    "local": "周期去噪滤波器"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Karpushin Vladislav",
+    "local": "卡尔普辛弗拉迪斯拉夫。"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt；=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": "在本教程中，您将学习："
+  },
+  {
+    "origin": "how to remove periodic noise in the Fourier domain",
+    "local": "如何去除傅里叶域中的周期性噪声"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "The explanation is based on the book",
+    "local": "这个解释是以这本书为基础的"
+  },
+  {
+    "origin": ". The image on this page is a real world image.",
+    "local": ". 此页上的图像是真实世界的图像。"
+  },
+  {
+    "origin": "Periodic noise produces spikes in the Fourier domain that can often be detected by visual analysis.",
+    "local": "周期性噪声在傅里叶域产生尖峰，通常可以通过视觉分析检测到。"
+  },
+  {
+    "origin": "How to remove periodic noise in the Fourier domain?",
+    "local": "如何去除傅里叶域中的周期性噪声？"
+  },
+  {
+    "origin": "Periodic noise can be reduced significantly via frequency domain filtering. On this page we use a notch reject filter with an appropriate radius to completely enclose the noise spikes in the Fourier domain. The notch filter rejects frequencies in predefined neighborhoods around a center frequency. The number of notch filters is arbitrary. The shape of the notch areas can also be arbitrary (e.g. rectangular or circular). On this page we use three circular shape notch reject filters. Power spectrum densify of an image is used for the noise spike’s visual detection.",
+    "local": "通过频域滤波可以显著降低周期性噪声。在这一页上，我们使用一个具有适当半径的陷波抑制滤波器来完全封闭傅里叶域中的噪声尖峰。陷波滤波器抑制围绕中心频率的预定义邻域中的频率。陷波器的数目是任意的。切口区域的形状也可以是任意的（例如矩形或圆形）。在本页中，我们使用三个圆形陷波抑制滤波器。利用图像的功率谱密度对噪声尖峰进行视觉检测。"
+  },
+  {
+    "origin": "Source code",
+    "local": "源代码"
+  },
+  {
+    "origin": "You can find source code in the",
+    "local": "您可以在"
+  },
+  {
+    "origin": "of the OpenCV source code library.",
+    "local": "的源代码库。"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Periodic noise reduction by frequency domain filtering consists of power spectrum density calculation (for the noise spikes visual detection), notch reject filter synthesis and frequency filtering:",
+    "local": "频域滤波周期性降噪包括功率谱密度计算（用于噪声峰值的视觉检测）、陷波抑制滤波器合成和频率滤波："
+  },
+  {
+    "origin": "A function calcPSD() calculates power spectrum density of an image:",
+    "local": "函数calcPSD（）计算图像的功率谱密度："
+  },
+  {
+    "origin": "A function synthesizeFilterH() forms a transfer function of an ideal circular shape notch reject filter according to a center frequency and a radius:",
+    "local": "函数synthesizeFilterH（）根据中心频率和半径形成理想圆形陷波抑制滤波器的传递函数："
+  },
+  {
+    "origin": "A function filter2DFreq() filters an image in the frequency domain. The functions fftshift() and filter2DFreq() are copied from the tutorial",
+    "local": "函数filter2DFreq（）在频域中过滤图像。函数fftshift（）和filter2DFreq（）是从教程中复制的"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Result",
+    "local": "结果"
+  },
+  {
+    "origin": "The figure below shows an image heavily corrupted by periodical noise of various frequencies.",
+    "local": "下图显示了一幅被各种频率的周期性噪声严重破坏的图像。"
+  },
+  {
+    "origin": "Image corrupted by periodic noise",
+    "local": "周期性噪声对图像的影响"
+  },
+  {
+    "origin": "The noise components are easily seen as bright dots (spikes) in the Power spectrum density shown in the figure below.",
+    "local": "噪声分量在下图所示的功率谱密度中很容易被视为亮点（尖峰）。"
+  },
+  {
+    "origin": "Power spectrum density showing periodic noise",
+    "local": "显示周期性噪声的功率谱密度"
+  },
+  {
+    "origin": "The figure below shows a notch reject filter with an appropriate radius to completely enclose the noise spikes.",
+    "local": "下图显示了一个具有适当半径的陷波抑制滤波器，以完全封闭噪声尖峰。"
+  },
+  {
+    "origin": "Notch reject filter",
+    "local": "陷波抑制滤波器"
+  },
+  {
+    "origin": "The result of processing the image with the notch reject filter is shown below.",
+    "local": "用陷波抑制滤波器处理图像的结果如下所示。"
+  },
+  {
+    "origin": "Result of filtering",
+    "local": "过滤结果"
+  },
+  {
+    "origin": "The improvement is quite evident. This image contains significantly less visible periodic noise than the original image.",
+    "local": "改进是很明显的。与原始图像相比，此图像包含的可见周期性噪声明显较少。"
+  },
+  {
+    "origin": "You can also find a quick video demonstration of this filtering idea on",
+    "local": "你也可以在网上找到一个快速的视频演示"
+  },
+  {
+    "origin": "YouTube",
+    "local": "YouTube网站"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:36为OpenCV生成，&#160；"
+  }
+]

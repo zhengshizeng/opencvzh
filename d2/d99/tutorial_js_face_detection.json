@@ -1,0 +1,198 @@
+[
+  {
+    "origin": "OpenCV: Face Detection using Haar Cascades",
+    "local": "OpenCV：基于Haar级联的人脸检测"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Face Detection using Haar Cascades",
+    "local": "基于Haar级联的人脸检测"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "learn the basics of face detection using Haar Feature-based Cascade Classifiers",
+    "local": "学习使用基于Haar特征的级联分类器进行人脸检测的基础知识"
+  },
+  {
+    "origin": "extend the same for eye detection etc.",
+    "local": "扩展相同的眼睛检测等。"
+  },
+  {
+    "origin": "Basics",
+    "local": "基础"
+  },
+  {
+    "origin": "Object Detection using Haar feature-based cascade classifiers is an effective method proposed by Paul Viola and Michael Jones in the 2001 paper, \"Rapid Object Detection using a Boosted Cascade of Simple Features\". It is a machine learning based approach in which a cascade function is trained from a lot of positive and negative images. It is then used to detect objects in other images.",
+    "local": "基于Haar特征的级联分类器的目标检测是paulviola和michaeljones在2001年的论文《利用简单特征的增强级联进行快速目标检测》中提出的一种有效方法。它是一种基于机器学习的方法，从大量的正负图像中训练级联函数。然后用于检测其他图像中的对象。"
+  },
+  {
+    "origin": "Here we will work with face detection. Initially, the algorithm needs a lot of positive images (images of faces) and negative images (images without faces) to train the classifier. Then we need to extract features from it. For this, Haar features shown in below image are used. They are just like our convolutional kernel. Each feature is a single value obtained by subtracting the sum of pixels under the white rectangle from the sum of pixels under the black rectangle.",
+    "local": "这里我们将使用人脸检测。首先，该算法需要大量的正图像（人脸图像）和负图像（无人脸图像）来训练分类器。然后我们需要从中提取特征。为此，使用下图中所示的Haar特性。它们就像我们的卷积核。每个特征是一个单一的值，通过从黑色矩形下的像素和减去白色矩形下的像素和得到。"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Now all possible sizes and locations of each kernel are used to calculate plenty of features. For each feature calculation, we need to find the sum of the pixels under the white and black rectangles. To solve this, they introduced the integral images. It simplifies calculation of the sum of the pixels, how large may be the number of pixels, to an operation involving just four pixels.",
+    "local": "现在每个内核的所有可能大小和位置都被用来计算大量的特性。对于每个特征计算，我们需要找到在白色和黑色矩形下的像素之和。为了解决这个问题，他们引入了积分图像。它将像素和的计算（像素的数目可能有多大）简化为仅涉及四个像素的操作。"
+  },
+  {
+    "origin": "But among all these features we calculated, most of them are irrelevant. For example, consider the image below. Top row shows two good features. The first feature selected seems to focus on the property that the region of the eyes is often darker than the region of the nose and cheeks. The second feature selected relies on the property that the eyes are darker than the bridge of the nose. But the same windows applying on cheeks or any other place is irrelevant. So how do we select the best features out of 160000+ features? It is achieved by",
+    "local": "但在我们计算的所有这些特征中，大多数都是不相关的。例如，考虑下面的图像。最上面一行显示了两个很好的特性。选择的第一个特征似乎集中在眼睛区域通常比鼻子和脸颊区域暗的特性上。选择的第二个特征依赖于眼睛比鼻梁暗的特性。但同样的窗户贴在脸颊或其他任何地方都是无关紧要的。那么，我们如何从160000多个功能中选择最好的功能呢？它是通过"
+  },
+  {
+    "origin": "Adaboost",
+    "local": "阿达博斯特。"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "For this, we apply each and every feature on all the training images. For each feature, it finds the best threshold which will classify the faces to positive and negative. But obviously, there will be errors or misclassifications. We select the features with minimum error rate, which means they are the features that best classifies the face and non-face images. (The process is not as simple as this. Each image is given an equal weight in the beginning. After each classification, weights of misclassified images are increased. Then again same process is done. New error rates are calculated. Also new weights. The process is continued until required accuracy or error rate is achieved or required number of features are found).",
+    "local": "为此，我们在所有训练图像上应用每个特征。对于每一个特征，它会找到一个最佳的阈值，将人脸分为正面和反面。但显然，会有错误或错误的分类。我们选择了错误率最小的特征，这意味着它们是对人脸和非人脸图像进行最佳分类的特征(过程并不像这样简单。每个图像在开始时都被赋予相等的权重。每次分类后，增加误分类图像的权重。然后，同样的过程再次完成。计算新的错误率。还有新的重量。该过程继续进行，直到达到所需的精度或错误率或找到所需的特征数）。"
+  },
+  {
+    "origin": "Final classifier is a weighted sum of these weak classifiers. It is called weak because it alone can't classify the image, but together with others forms a strong classifier. The paper says even 200 features provide detection with 95% accuracy. Their final setup had around 6000 features. (Imagine a reduction from 160000+ features to 6000 features. That is a big gain).",
+    "local": "最终分类器是这些弱分类器的加权和。它之所以被称为弱分类器，是因为它不能单独对图像进行分类，而是与其他分类器一起形成一个强分类器。该报说，即使有200个特征也能提供95%的准确率。他们的最终设置有大约6000个功能(想象一下从160000多个功能减少到6000个功能。这是一个很大的收获）。"
+  },
+  {
+    "origin": "So now you take an image. Take each 24x24 window. Apply 6000 features to it. Check if it is face or not. Wow.. Wow.. Isn't it a little inefficient and time consuming? Yes, it is. Authors have a good solution for that.",
+    "local": "所以现在你拍一张照片。每个24x24窗口。应用6000个特性。检查是否是面部。真 的。。真 的。。这不是有点低效和费时吗？是的，是的。作者有一个很好的解决方案。"
+  },
+  {
+    "origin": "In an image, most of the image region is non-face region. So it is a better idea to have a simple method to check if a window is not a face region. If it is not, discard it in a single shot. Don't process it again. Instead focus on region where there can be a face. This way, we can find more time to check a possible face region.",
+    "local": "在图像中，大部分图像区域是非人脸区域。因此，最好有一个简单的方法来检查窗口是否不是人脸区域。如果不是，一次性丢弃。不要再处理了。取而代之的是把注意力集中在可能有一张脸的区域。这样，我们可以找到更多的时间来检查一个可能的面部区域。"
+  },
+  {
+    "origin": "For this they introduced the concept of",
+    "local": "为此，他们引入了"
+  },
+  {
+    "origin": "Cascade of Classifiers",
+    "local": "分类器级联"
+  },
+  {
+    "origin": ". Instead of applying all the 6000 features on a window, group the features into different stages of classifiers and apply one-by-one. (Normally first few stages will contain very less number of features). If a window fails the first stage, discard it. We don't consider remaining features on it. If it passes, apply the second stage of features and continue the process. The window which passes all stages is a face region. How is the plan !!!",
+    "local": ". 不要在一个窗口上应用所有的6000个特性，而是将这些特性分组到分类器的不同阶段，然后逐个应用(通常，前几个阶段包含的特征数量会非常少）。如果一个窗口在第一阶段失败，则丢弃它。我们不考虑它的其他功能。如果通过，则应用第二阶段的功能并继续该过程。通过所有阶段的窗口是面区域。计划怎么样！！！"
+  },
+  {
+    "origin": "Authors' detector had 6000+ features with 38 stages with 1, 10, 25, 25 and 50 features in first five stages. (Two features in the above image is actually obtained as the best two features from Adaboost). According to authors, on an average, 10 features out of 6000+ are evaluated per sub-window.",
+    "local": "作者的探测器有6000+个特征，38个阶段，前5个阶段有1、10、25、25和50个特征(上图中的两个特征实际上是从Adaboost获得的最佳两个特征。根据作者的说法，平均每个子窗口评估6000+个特征中的10个。"
+  },
+  {
+    "origin": "So this is a simple intuitive explanation of how Viola-Jones face detection works. Read paper for more details.",
+    "local": "这是Viola Jones人脸检测工作原理的一个简单直观的解释。阅读报纸了解更多细节。"
+  },
+  {
+    "origin": "Haar-cascade Detection in OpenCV",
+    "local": "OpenCV中的Haar级联检测"
+  },
+  {
+    "origin": "Here we will deal with detection. OpenCV already contains many pre-trained classifiers for face, eyes, smile etc. Those XML files are stored in opencv/data/haarcascades/ folder. Let's create a face and eye detector with OpenCV.",
+    "local": "在这里我们将处理检测。OpenCV已经包含了许多预先训练的人脸、眼睛、微笑等分类器，这些XML文件存储在OpenCV/data/haarcascades/folder中。让我们用OpenCV创建一个人脸和眼睛检测器。"
+  },
+  {
+    "origin": "We use the function:",
+    "local": "我们使用函数："
+  },
+  {
+    "origin": "detectMultiScale (image, objects, scaleFactor = 1.1, minNeighbors = 3, flags = 0, minSize = new cv.Size(0, 0), maxSize = new cv.Size(0, 0))",
+    "local": "detectMultiScale（图像，对象，scaleFactor=1.1，minNeighbors=3，flags=0，minSize=new cv.Size（0，0），maxSize=new cv.Size（0，0））"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "matrix of the type CV_8U containing an image where objects are detected.",
+    "local": "包含检测到物体的图像的CVƅ8U型矩阵。"
+  },
+  {
+    "origin": "objects",
+    "local": "物体"
+  },
+  {
+    "origin": "vector of rectangles where each rectangle contains the detected object. The rectangles may be partially outside the original image.",
+    "local": "矩形向量，其中每个矩形包含检测到的对象。矩形可能部分位于原始图像之外。"
+  },
+  {
+    "origin": "scaleFactor",
+    "local": "缩放因子"
+  },
+  {
+    "origin": "parameter specifying how much the image size is reduced at each image scale.",
+    "local": "指定在每个图像比例下图像大小减小多少的参数。"
+  },
+  {
+    "origin": "minNeighbors",
+    "local": "米尼堡"
+  },
+  {
+    "origin": "parameter specifying how many neighbors each candidate rectangle should have to retain it.",
+    "local": "指定每个候选矩形应保留多少个邻居的参数。"
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": "parameter with the same meaning for an old cascade as in the function cvHaarDetectObjects. It is not used for a new cascade.",
+    "local": "参数对旧级联的意义与函数cvHaarDetectObjects中的相同。它不用于新的级联。"
+  },
+  {
+    "origin": "minSize",
+    "local": "小型化"
+  },
+  {
+    "origin": "minimum possible object size. Objects smaller than this are ignored.",
+    "local": "最小可能对象大小。小于此值的对象将被忽略。"
+  },
+  {
+    "origin": "maxSize",
+    "local": "最大尺寸"
+  },
+  {
+    "origin": "maximum possible object size. Objects larger than this are ignored. If maxSize == minSize model is evaluated on single scale.",
+    "local": "最大可能对象大小。大于此值的对象将被忽略。如果maxSize==minSize，则在单个比例上评估模型。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Don't forget to delete CascadeClassifier and RectVector!",
+    "local": "别忘了删除CascadeClassifier和RectVector！"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "Try this demo using the code above. Canvas elements named haarCascadeDetectionCanvasInput and haarCascadeDetectionCanvasOutput have been prepared. Choose an image and click",
+    "local": "使用上面的代码尝试这个演示。已准备好名为haarCascadeDetectionCanvasInput和haarCascadeDetectionCanvasOutput的画布元素。选择图像并单击"
+  },
+  {
+    "origin": "to see the result. You can change the code in the textbox to investigate more.",
+    "local": "看看结果。您可以更改文本框中的代码以了解更多信息。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

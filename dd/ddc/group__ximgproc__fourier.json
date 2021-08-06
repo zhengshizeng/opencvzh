@@ -1,0 +1,630 @@
+[
+  {
+    "origin": "OpenCV: Fourier descriptors",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Fourier descriptors",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Class for",
+    "local": ""
+  },
+  {
+    "origin": "algorithms.",
+    "local": ""
+  },
+  {
+    "origin": "match two contours \\( z_a \\) and \\( z_b \\) minimizing distance",
+    "local": ""
+  },
+  {
+    "origin": "\\[ d(z_a,z_b)=\\sum (a_n - s b_n e^{j(n \\alpha +\\phi )})^2 \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\( a_n \\) and \\( b_n \\) are Fourier descriptors of \\( z_a \\) and \\( z_b \\) and s is a scaling factor and \\( \\phi \\) is angle rotation and \\( \\alpha \\) is starting point factor adjustement.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "out, int nbElt)",
+    "local": ""
+  },
+  {
+    "origin": "Contour sampling .",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int ctr=1024, int fd=16)",
+    "local": ""
+  },
+  {
+    "origin": "create",
+    "local": ""
+  },
+  {
+    "origin": "algorithm object",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, int nbElt=-1, int nbFD=-1)",
+    "local": ""
+  },
+  {
+    "origin": "Fourier descriptors for planed closed curves.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "t,",
+    "local": ""
+  },
+  {
+    "origin": "dst, bool fdContour=true)",
+    "local": ""
+  },
+  {
+    "origin": "transform a contour",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "contourSampling()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::contourSampling",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "nbElt",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.contourSampling(",
+    "local": ""
+  },
+  {
+    "origin": "src, nbElt[, out]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Contour sampling .",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "contour type vector&lt;Point&gt; , vector&lt;Point2f&gt; or vector&lt;Point2d&gt;",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": "of type CV_64FC2 and nbElt rows",
+    "local": ""
+  },
+  {
+    "origin": "nbElt",
+    "local": ""
+  },
+  {
+    "origin": "number of points in out contour",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createContourFitting()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createContourFitting",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "ctr",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "fd",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createContourFitting(",
+    "local": ""
+  },
+  {
+    "origin": "[, ctr[, fd]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "create",
+    "local": ""
+  },
+  {
+    "origin": "algorithm object",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "ctr",
+    "local": ""
+  },
+  {
+    "origin": "number of Fourier descriptors equal to number of contour points after resampling.",
+    "local": ""
+  },
+  {
+    "origin": "fd",
+    "local": ""
+  },
+  {
+    "origin": "Contour defining second shape (Target).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "fourierDescriptor()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::fourierDescriptor",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "nbElt",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "nbFD",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.fourierDescriptor(",
+    "local": ""
+  },
+  {
+    "origin": "src[, dst[, nbElt[, nbFD]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Fourier descriptors for planed closed curves.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about this implementation, please see",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "contour type vector&lt;Point&gt; , vector&lt;Point2f&gt; or vector&lt;Point2d&gt;",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "of type CV_64FC2 and nbElt rows A VERIFIER",
+    "local": ""
+  },
+  {
+    "origin": "nbElt",
+    "local": ""
+  },
+  {
+    "origin": "nbFD",
+    "local": ""
+  },
+  {
+    "origin": "number of FD return in dst dst = [FD(1...nbFD/2) FD(nbFD/2-nbElt+1...:nbElt)]",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "transformFD()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::transformFD",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "fdContour",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.transformFD(",
+    "local": ""
+  },
+  {
+    "origin": "src, t[, dst[, fdContour]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "transform a contour",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "contour or Fourier Descriptors if fd is true",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "transform",
+    "local": ""
+  },
+  {
+    "origin": "given by estimateTransformation",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "of type CV_64FC2 and nbElt rows",
+    "local": ""
+  },
+  {
+    "origin": "fdContour",
+    "local": ""
+  },
+  {
+    "origin": "true src are Fourier Descriptors. fdContour false src is a contour",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by",
+    "local": ""
+  }
+]

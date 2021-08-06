@@ -1,0 +1,62 @@
+[
+  {
+    "origin": "OpenCV: Unwrap two-dimensional phase maps",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Unwrap two-dimensional phase maps",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial, you will learn how to use the phase unwrapping module to unwrap two-dimensional phase maps. The implementation is based on",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "To use this example, wrapped phase map values should be stored in a yml file as CV_32FC1 Mat, under the name \"phaseValues\". Path to the data and a name to save the unwrapped phase map must be set in the command line. The results are saved with floating point precision in a yml file and as an 8-bit image for visualization purpose.",
+    "local": ""
+  },
+  {
+    "origin": "Some parameters can be chosen by the user:",
+    "local": ""
+  },
+  {
+    "origin": "histThresh is a parameter used to divide the histogram in two parts. Bins before histThresh are smaller than the ones after histThresh. (Default value is 3*pi*pi).",
+    "local": ""
+  },
+  {
+    "origin": "nbrOfSmallBins is the number of bins between 0 and histThresh. (Default value is 10).",
+    "local": ""
+  },
+  {
+    "origin": "nbrOfLargeBins is the number of bins between histThresh and 32*pi*pi. (Default value is 5).",
+    "local": ""
+  },
+  {
+    "origin": "The wrapped phase map is unwrapped and the result is saved in a yml file. We can also get the reliabilities map for visualization purpose. The unwrapped phase map and the reliabilities map are converted to 8-bit images in order to be saved as png files.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": ""
+  }
+]

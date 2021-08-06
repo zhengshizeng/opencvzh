@@ -1,0 +1,558 @@
+[
+  {
+    "origin": "OpenCV: Detection of ChArUco Corners",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Detection of ChArUco Corners",
+    "local": ""
+  },
+  {
+    "origin": "ArUco markers and boards are very useful due to their fast detection and their versatility. However, one of the problems of ArUco markers is that the accuracy of their corner positions is not too high, even after applying subpixel refinement.",
+    "local": ""
+  },
+  {
+    "origin": "On the contrary, the corners of chessboard patterns can be refined more accurately since each corner is surrounded by two black squares. However, finding a chessboard pattern is not as versatile as finding an ArUco board: it has to be completely visible and occlusions are not permitted.",
+    "local": ""
+  },
+  {
+    "origin": "A ChArUco board tries to combine the benefits of these two approaches:",
+    "local": ""
+  },
+  {
+    "origin": "Charuco definition",
+    "local": ""
+  },
+  {
+    "origin": "The ArUco part is used to interpolate the position of the chessboard corners, so that it has the versatility of marker boards, since it allows occlusions or partial views. Moreover, since the interpolated corners belong to a chessboard, they are very accurate in terms of subpixel accuracy.",
+    "local": ""
+  },
+  {
+    "origin": "When high precision is necessary, such as in camera calibration, Charuco boards are a better option than standard Aruco boards.",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": ""
+  },
+  {
+    "origin": "How to create a charuco board ?",
+    "local": ""
+  },
+  {
+    "origin": "How to detect the charuco corners without performing camera calibration ?",
+    "local": ""
+  },
+  {
+    "origin": "How to detect the charuco corners with camera calibration and pose estimation ?",
+    "local": ""
+  },
+  {
+    "origin": "Source code",
+    "local": ""
+  },
+  {
+    "origin": "You can find this code in",
+    "local": ""
+  },
+  {
+    "origin": "Here's a sample code of how to achieve all the stuff enumerated at the goal list.",
+    "local": ""
+  },
+  {
+    "origin": "ChArUco Board Creation",
+    "local": ""
+  },
+  {
+    "origin": "The aruco module provides the",
+    "local": ""
+  },
+  {
+    "origin": "class that represents a Charuco Board and which inherits from the",
+    "local": ""
+  },
+  {
+    "origin": "class.",
+    "local": ""
+  },
+  {
+    "origin": "This class, as the rest of ChArUco functionalities, are defined in:",
+    "local": ""
+  },
+  {
+    "origin": "To define a",
+    "local": ""
+  },
+  {
+    "origin": ", it is necessary:",
+    "local": ""
+  },
+  {
+    "origin": "Number of chessboard squares in X direction.",
+    "local": ""
+  },
+  {
+    "origin": "Number of chessboard squares in Y direction.",
+    "local": ""
+  },
+  {
+    "origin": "Length of square side.",
+    "local": ""
+  },
+  {
+    "origin": "Length of marker side.",
+    "local": ""
+  },
+  {
+    "origin": "The dictionary of the markers.",
+    "local": ""
+  },
+  {
+    "origin": "Ids of all the markers.",
+    "local": ""
+  },
+  {
+    "origin": "As for the",
+    "local": ""
+  },
+  {
+    "origin": "objects, the aruco module provides a function to create",
+    "local": ""
+  },
+  {
+    "origin": "s easily. This function is the static function",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "The first and second parameters are the number of squares in X and Y direction respectively.",
+    "local": ""
+  },
+  {
+    "origin": "The third and fourth parameters are the length of the squares and the markers respectively. They can be provided in any unit, having in mind that the estimated pose for this board would be measured in the same units (usually meters are used).",
+    "local": ""
+  },
+  {
+    "origin": "Finally, the dictionary of the markers is provided.",
+    "local": ""
+  },
+  {
+    "origin": "The ids of each of the markers are assigned by default in ascending order and starting on 0, like in",
+    "local": ""
+  },
+  {
+    "origin": ". This can be easily customized by accessing to the ids vector through",
+    "local": ""
+  },
+  {
+    "origin": ", like in the",
+    "local": ""
+  },
+  {
+    "origin": "parent class.",
+    "local": ""
+  },
+  {
+    "origin": "Once we have our",
+    "local": ""
+  },
+  {
+    "origin": "object, we can create an image to print it. This can be done with the",
+    "local": ""
+  },
+  {
+    "origin": "method:",
+    "local": ""
+  },
+  {
+    "origin": "The first parameter is the size of the output image in pixels. In this case 600x500 pixels. If this is not proportional to the board dimensions, it will be centered on the image.",
+    "local": ""
+  },
+  {
+    "origin": ": the output image with the board.",
+    "local": ""
+  },
+  {
+    "origin": "Finally, the size of the marker border, similarly to",
+    "local": ""
+  },
+  {
+    "origin": "The output image will be something like this:",
+    "local": ""
+  },
+  {
+    "origin": "A full working example is included in the",
+    "local": ""
+  },
+  {
+    "origin": "inside the modules/aruco/samples/create_board_charuco.cpp.",
+    "local": ""
+  },
+  {
+    "origin": "Note: The create_board_charuco.cpp now take input via commandline via the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Commandline Parser",
+    "local": ""
+  },
+  {
+    "origin": ". For this file the example parameters will look like",
+    "local": ""
+  },
+  {
+    "origin": "ChArUco Board Detection",
+    "local": ""
+  },
+  {
+    "origin": "When you detect a ChArUco board, what you are actually detecting is each of the chessboard corners of the board.",
+    "local": ""
+  },
+  {
+    "origin": "Each corner on a ChArUco board has a unique identifier (id) assigned. These ids go from 0 to the total number of corners in the board. The steps of charuco board detection can be broken down to the following steps:",
+    "local": ""
+  },
+  {
+    "origin": "Taking input Image",
+    "local": ""
+  },
+  {
+    "origin": "The original image where the markers are to be detected. The image is necessary to perform subpixel refinement in the ChArUco corners.",
+    "local": ""
+  },
+  {
+    "origin": "Reading the camera calibration Parameters(only for detection with camera calibration)",
+    "local": ""
+  },
+  {
+    "origin": "The parameters of readCameraParameters are:",
+    "local": ""
+  },
+  {
+    "origin": "filename- This is the path to caliberation.txt file which is the output file generated by calibrate_camera_charuco.cpp",
+    "local": ""
+  },
+  {
+    "origin": "cameraMatrix and distCoeffs- the optional camera calibration parameters",
+    "local": ""
+  },
+  {
+    "origin": "This function takes these parameters as input and returns a boolean value of whether the camera calibration parameters are valid or not. For detection of corners without calibration, this step is not required.",
+    "local": ""
+  },
+  {
+    "origin": "Detecting the markers",
+    "local": ""
+  },
+  {
+    "origin": "The parameters of detectMarkers are:",
+    "local": ""
+  },
+  {
+    "origin": "image - Input image.",
+    "local": ""
+  },
+  {
+    "origin": "dictionary - Pointer to the Dictionary/Set of Markers that will be searched.",
+    "local": ""
+  },
+  {
+    "origin": "markerCorners - vector of detected marker corners.",
+    "local": ""
+  },
+  {
+    "origin": "markerIds - vector of identifiers of the detected markers",
+    "local": ""
+  },
+  {
+    "origin": "params - marker detection parameters The detection of the ChArUco corners is based on the previous detected markers. So that, first markers are detected, and then ChArUco corners are interpolated from markers.",
+    "local": ""
+  },
+  {
+    "origin": "Interpolation of charuco corners from markers",
+    "local": ""
+  },
+  {
+    "origin": "For detection with calibration",
+    "local": ""
+  },
+  {
+    "origin": "For detection without calibration",
+    "local": ""
+  },
+  {
+    "origin": "The function that detect the ChArUco corners is",
+    "local": ""
+  },
+  {
+    "origin": ". This function returns the number of Charuco corners interpolated.",
+    "local": ""
+  },
+  {
+    "origin": ": list of image positions of the detected corners.",
+    "local": ""
+  },
+  {
+    "origin": ": ids for each of the detected corners in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "If calibration parameters are provided, the ChArUco corners are interpolated by, first, estimating a rough pose from the ArUco markers and, then, reprojecting the ChArUco corners back to the image.",
+    "local": ""
+  },
+  {
+    "origin": "On the other hand, if calibration parameters are not provided, the ChArUco corners are interpolated by calculating the corresponding homography between the ChArUco plane and the ChArUco image projection.",
+    "local": ""
+  },
+  {
+    "origin": "The main problem of using homography is that the interpolation is more sensible to image distortion. Actually, the homography is only performed using the closest markers of each ChArUco corner to reduce the effect of distortion.",
+    "local": ""
+  },
+  {
+    "origin": "When detecting markers for ChArUco boards, and specially when using homography, it is recommended to disable the corner refinement of markers. The reason of this is that, due to the proximity of the chessboard squares, the subpixel process can produce important deviations in the corner positions and these deviations are propagated to the ChArUco corner interpolation, producing poor results.",
+    "local": ""
+  },
+  {
+    "origin": "Furthermore, only those corners whose two surrounding markers have be found are returned. If any of the two surrounding markers has not been detected, this usually means that there is some occlusion or the image quality is not good in that zone. In any case, it is preferable not to consider that corner, since what we want is to be sure that the interpolated ChArUco corners are very accurate.",
+    "local": ""
+  },
+  {
+    "origin": "After the ChArUco corners have been interpolated, a subpixel refinement is performed.",
+    "local": ""
+  },
+  {
+    "origin": "Once we have interpolated the ChArUco corners, we would probably want to draw them to see if their detections are correct. This can be easily done using the",
+    "local": ""
+  },
+  {
+    "origin": "function:",
+    "local": ""
+  },
+  {
+    "origin": "is the image where the corners will be drawn (it will normally be the same image where the corners were detected).",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "will be a clone of",
+    "local": ""
+  },
+  {
+    "origin": "with the corners drawn.",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "are the detected Charuco corners from the",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "Finally, the last parameter is the (optional) color we want to draw the corners with, of type",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "For this image:",
+    "local": ""
+  },
+  {
+    "origin": "Image with Charuco board",
+    "local": ""
+  },
+  {
+    "origin": "The result will be:",
+    "local": ""
+  },
+  {
+    "origin": "Charuco board detected",
+    "local": ""
+  },
+  {
+    "origin": "In the presence of occlusion. like in the following image, although some corners are clearly visible, not all their surrounding markers have been detected due occlusion and, thus, they are not interpolated:",
+    "local": ""
+  },
+  {
+    "origin": "Charuco detection with occlusion",
+    "local": ""
+  },
+  {
+    "origin": "Finally, this is a full example of ChArUco detection (without using calibration parameters):",
+    "local": ""
+  },
+  {
+    "origin": "Sample video:",
+    "local": ""
+  },
+  {
+    "origin": "A full working example is included in the",
+    "local": ""
+  },
+  {
+    "origin": "inside the modules/aruco/samples/detect_board_charuco.cpp.",
+    "local": ""
+  },
+  {
+    "origin": "Note: The samples now take input via commandline via the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Commandline Parser",
+    "local": ""
+  },
+  {
+    "origin": ". For this file the example parameters will look like",
+    "local": ""
+  },
+  {
+    "origin": "Here the calib.txt is the output file generated by the calibrate_camera_charuco.cpp.",
+    "local": ""
+  },
+  {
+    "origin": "ChArUco Pose Estimation",
+    "local": ""
+  },
+  {
+    "origin": "The final goal of the ChArUco boards is finding corners very accurately for a high precision calibration or pose estimation.",
+    "local": ""
+  },
+  {
+    "origin": "The aruco module provides a function to perform ChArUco pose estimation easily. As in the",
+    "local": ""
+  },
+  {
+    "origin": ", the coordinate system of the",
+    "local": ""
+  },
+  {
+    "origin": "is placed in the board plane with the Z axis pointing out, and centered in the bottom left corner of the board.",
+    "local": ""
+  },
+  {
+    "origin": "The function for pose estimation is",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "parameters are the detected charuco corners from the",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "The third parameter is the",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "are the camera calibration parameters which are necessary for pose estimation.",
+    "local": ""
+  },
+  {
+    "origin": "Finally, the",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "parameters are the output pose of the Charuco Board.",
+    "local": ""
+  },
+  {
+    "origin": "The function returns true if the pose was correctly estimated and false otherwise. The main reason of failing is that there are not enough corners for pose estimation or they are in the same line.",
+    "local": ""
+  },
+  {
+    "origin": "The axis can be drawn using",
+    "local": ""
+  },
+  {
+    "origin": "to check the pose is correctly estimated. The result would be: (X:red, Y:green, Z:blue)",
+    "local": ""
+  },
+  {
+    "origin": "Charuco Board Axis",
+    "local": ""
+  },
+  {
+    "origin": "A full example of ChArUco detection with pose estimation:",
+    "local": ""
+  },
+  {
+    "origin": "A full working example is included in the",
+    "local": ""
+  },
+  {
+    "origin": "inside the modules/aruco/samples/detect_board_charuco.cpp.",
+    "local": ""
+  },
+  {
+    "origin": "Note: The samples now take input via commandline via the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Commandline Parser",
+    "local": ""
+  },
+  {
+    "origin": ". For this file the example parameters will look like",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

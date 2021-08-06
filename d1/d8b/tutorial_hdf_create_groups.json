@@ -1,0 +1,170 @@
+[
+  {
+    "origin": "OpenCV: Creating Groups",
+    "local": "OpenCV:创建组"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Creating Groups",
+    "local": "创建组"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "This tutorial will show you:",
+    "local": "本教程将向您展示："
+  },
+  {
+    "origin": "How to create a HDF5 file?",
+    "local": "如何创建HDF5文件？"
+  },
+  {
+    "origin": "How to create a group?",
+    "local": "如何创建组？"
+  },
+  {
+    "origin": "How to check whether a given group exists or not?",
+    "local": "如何检查给定的组是否存在？"
+  },
+  {
+    "origin": "How to create a subgroup?",
+    "local": "如何创建子组？"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "The following code creates two groups:",
+    "local": "以下代码创建两个组："
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ", where",
+    "local": "，在哪里"
+  },
+  {
+    "origin": "is a child of",
+    "local": "是…的孩子"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "You can download the code from",
+    "local": "您可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "or find it in the file",
+    "local": "或者在档案里找到"
+  },
+  {
+    "origin": "of the opencv_contrib source code library.",
+    "local": "opencvèu contrib源代码库的。"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "First, we create a HDF5 file",
+    "local": "首先，我们创建一个HDF5文件"
+  },
+  {
+    "origin": "If the given file does not exist, it will be created. Otherwise, it is open for read and write.",
+    "local": "如果给定的文件不存在，将创建它。否则，它是开放的读写。"
+  },
+  {
+    "origin": "Next, we create the group",
+    "local": "接下来，我们创建组"
+  },
+  {
+    "origin": "Note that we have to check whether",
+    "local": "请注意，我们必须检查"
+  },
+  {
+    "origin": "exists or not using the function",
+    "local": "存在或未使用该函数"
+  },
+  {
+    "origin": "before creating it. You can not create a group with an existing name. Otherwise, an error will occur.",
+    "local": "在创建之前。不能使用现有名称创建组。否则，将发生错误。"
+  },
+  {
+    "origin": "Then, we create the subgroup named",
+    "local": "然后，我们创建名为"
+  },
+  {
+    "origin": ". In order to indicate that it is a sub group of",
+    "local": ". 以表明它是"
+  },
+  {
+    "origin": ", we have to use the group name",
+    "local": "，我们必须使用组名"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Note that before creating a subgroup, we have to make sure that its parent group exists. Otherwise, an error will occur.",
+    "local": "请注意，在创建子组之前，必须确保其父组存在。否则，将发生错误。"
+  },
+  {
+    "origin": "In the end, we have to close the file",
+    "local": "最后，我们必须关闭文件"
+  },
+  {
+    "origin": "Result",
+    "local": "结果"
+  },
+  {
+    "origin": "There are many tools that can be used to inspect a given HDF file, such as HDFView and h5dump. If you are using Ubuntu, you can install them with the following commands:",
+    "local": "有许多工具可以用来检查给定的HDF文件，例如HDFView和h5dump。如果您使用的是Ubuntu，可以使用以下命令安装它们："
+  },
+  {
+    "origin": "There are also binaries available from the The HDF Group official website",
+    "local": "HDF集团官方网站也提供了二进制文件"
+  },
+  {
+    "origin": "https://support.hdfgroup.org/HDF5/Tutor/tools.html",
+    "local": "https://support.hdfgroup.org/HDF5/Tutor/tools.html"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "The following figure shows the result visualized with the tool HDFView:",
+    "local": "下图显示了使用工具HDFView可视化的结果："
+  },
+  {
+    "origin": "Figure 1: Results of creating groups and subgroups",
+    "local": "图1：创建组和子组的结果"
+  },
+  {
+    "origin": "The output for",
+    "local": "的输出"
+  },
+  {
+    "origin": "is:",
+    "local": "是："
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:38为OpenCV生成，&#160；"
+  }
+]

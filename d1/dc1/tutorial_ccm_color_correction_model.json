@@ -1,0 +1,98 @@
+[
+  {
+    "origin": "OpenCV: Color Correction Model",
+    "local": "OpenCV：颜色校正模型"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Color Correction Model",
+    "local": "颜色校正模型"
+  },
+  {
+    "origin": "In this tutorial you will learn how to use the 'Color Correction Model' to do a color correction in a image.",
+    "local": "在本教程中，您将学习如何使用“颜色校正模型”对图像进行颜色校正。"
+  },
+  {
+    "origin": "Reference",
+    "local": "参考"
+  },
+  {
+    "origin": "See details of ColorCorrection Algorithm at",
+    "local": "有关颜色校正算法的详细信息，请参见"
+  },
+  {
+    "origin": "https://github.com/riskiest/color_calibration/tree/v4/doc/pdf/English/Algorithm",
+    "local": "https://github.com/riskiest/color_calibration/tree/v4/doc/pdf/English/Algorithm"
+  },
+  {
+    "origin": "Building",
+    "local": "建筑物"
+  },
+  {
+    "origin": "When building OpenCV, run the following command to build all the contrib modules:",
+    "local": "在构建OpenCV时，运行以下命令来构建所有contrib模块："
+  },
+  {
+    "origin": "Or only build the mcc module:",
+    "local": "或仅构建mcc模块："
+  },
+  {
+    "origin": "Or make sure you check the mcc module in the GUI version of CMake: cmake-gui.",
+    "local": "或者确保在CMake的GUI版本中检查mcc模块：CMake GUI。"
+  },
+  {
+    "origin": "Source Code of the sample",
+    "local": "示例的源代码"
+  },
+  {
+    "origin": "The sample has two parts of code, the first is the color checker detector model, see details at",
+    "local": "该示例有两部分代码，第一部分是颜色检测器模型，详细信息请参见"
+  },
+  {
+    "origin": ", the second part is to make collor calibration.",
+    "local": "第二部分是进行collor标定。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "The first part is to detect the ColorChecker position.",
+    "local": "第一部分是检测颜色检测器的位置。"
+  },
+  {
+    "origin": "Preparation for ColorChecker detection to get messages for the image.",
+    "local": "准备ColorChecker检测以获取图像的消息。"
+  },
+  {
+    "origin": "The CCheckerDetectorobject is created and uses getListColorChecker function to get ColorChecker message.",
+    "local": "CCheckerDetectorobject被创建并使用getListColorChecker函数来获取ColorChecker消息。"
+  },
+  {
+    "origin": "For every ColorChecker, we can compute a ccm matrix for color correction. Model1 is an object of ColorCorrectionModel class. The parameters should be changed to get the best effect of color correction. See other parameters' detail at the Parameters.",
+    "local": "对于每个颜色检查器，我们可以计算一个ccm矩阵进行颜色校正。Model1是ColorCorrectionModel类的对象。为了获得最佳的色彩校正效果，需要改变校正参数。在参数栏中查看其他参数的详细信息。"
+  },
+  {
+    "origin": "If you use a customized ColorChecker, you can use your own reference color values and corresponding color space as shown above.",
+    "local": "如果使用自定义的颜色检查器，则可以使用自己的参考颜色值和相应的颜色空间，如上所示。"
+  },
+  {
+    "origin": "The member function infer_image is to make correction correction using ccm matrix.",
+    "local": "成员函数推断图像是利用ccm矩阵进行校正。"
+  },
+  {
+    "origin": "Save the calibrated image.",
+    "local": "保存校准图像。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:39为OpenCV生成，&#160；"
+  }
+]

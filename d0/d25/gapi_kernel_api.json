@@ -1,0 +1,374 @@
+[
+  {
+    "origin": "OpenCV: Kernel API",
+    "local": "OpenCV：内核API"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Kernel API",
+    "local": "内核API"
+  },
+  {
+    "origin": "Table of Contents",
+    "local": "目录"
+  },
+  {
+    "origin": "Defining a kernel",
+    "local": "定义内核"
+  },
+  {
+    "origin": "Extra information",
+    "local": "额外信息"
+  },
+  {
+    "origin": "Implementing a kernel",
+    "local": "实现内核"
+  },
+  {
+    "origin": "Compound kernels",
+    "local": "复合仁"
+  },
+  {
+    "origin": "G-API Kernel API",
+    "local": "G-API内核API"
+  },
+  {
+    "origin": "The core idea behind G-API is portability &ndash; a pipeline built with G-API must be portable (or at least able to be portable). It means that either it works out-of-the box when compiled for new platform,",
+    "local": "G-API背后的核心思想是可移植性&ndash；用G-API构建的管道必须是可移植的（或者至少能够是可移植的）。这意味着在为新平台编译时，它要么是开箱即用，"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "G-API provides necessary tools to make it running there, with little-to-no changes in the algorithm itself.",
+    "local": "G-API提供了必要的工具使其在那里运行，而算法本身几乎没有变化。"
+  },
+  {
+    "origin": "This idea can be achieved by separating kernel interface from its implementation. Once a pipeline is built using kernel interfaces, it becomes implementation-neutral &ndash; the implementation details (i.e. which kernels to use) are passed on a separate stage (graph compilation).",
+    "local": "这种思想可以通过将内核接口与其实现分离来实现。一旦使用内核接口构建了管道，它就成为实现中立的&ndash；实现细节（即使用哪些内核）在单独的阶段（图形编译）上传递。"
+  },
+  {
+    "origin": "Kernel-implementation hierarchy may look like:",
+    "local": "内核实现层次结构可能如下所示："
+  },
+  {
+    "origin": "This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.",
+    "local": "此浏览器无法显示SVG：请改用Firefox、Chrome、Safari或Opera。"
+  },
+  {
+    "origin": "Kernel API/implementation hierarchy example",
+    "local": "内核API/实现层次结构示例"
+  },
+  {
+    "origin": "A pipeline itself then can be expressed only in terms of",
+    "local": "管道本身只能用"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", and so on, and choosing which implementation to use in execution becomes an external parameter.",
+    "local": "，依此类推，选择在执行中使用哪个实现将成为一个外部参数。"
+  },
+  {
+    "origin": "Defining a kernel",
+    "local": "定义内核"
+  },
+  {
+    "origin": "G-API provides a macro to define a new kernel interface &ndash;",
+    "local": "G-API提供了一个宏来定义新的内核接口&ndash；"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "This macro is a shortcut to a new type definition. It takes three arguments to register a new type, and requires type body to be present (see",
+    "local": "此宏是指向新类型定义的快捷方式。它需要三个参数来注册一个新类型，并且需要存在类型body（请参阅"
+  },
+  {
+    "origin": "). The macro arguments are:",
+    "local": "). 宏参数是："
+  },
+  {
+    "origin": "Kernel interface name &ndash; also serves as a name of new type defined with this macro;",
+    "local": "内核接口名称&ndash；也用作此宏定义的新类型的名称；"
+  },
+  {
+    "origin": "Kernel signature &ndash; an",
+    "local": "内核签名&ndash；一"
+  },
+  {
+    "origin": "-like signature which defines API of the kernel;",
+    "local": "-比如定义内核API的签名；"
+  },
+  {
+    "origin": "Kernel's unique name &ndash; used to identify kernel when its type informattion is stripped within the system.",
+    "local": "内核的唯一名称&ndash；用于在系统中剥离内核的类型信息时标识内核。"
+  },
+  {
+    "origin": "Kernel declaration may be seen as function declaration &ndash; in both cases a new entity must be used then according to the way it was defined.",
+    "local": "内核声明可以看作函数声明&ndash；在这两种情况下，必须根据定义的方式使用新实体。"
+  },
+  {
+    "origin": "Kernel signature defines kernel's usage syntax &ndash; which parameters it takes during graph construction. Implementations can also use this signature to derive it into backend-specific callback signatures (see next chapter).",
+    "local": "内核签名定义内核的使用语法&ndash；在图形构造过程中需要哪些参数。实现还可以使用此签名将其派生为特定于后端的回调签名（请参阅下一章）。"
+  },
+  {
+    "origin": "Kernel may accept values of any type, and G-API",
+    "local": "内核可以接受任何类型的值和G-API"
+  },
+  {
+    "origin": "dynamic",
+    "local": "动态"
+  },
+  {
+    "origin": "types are handled in a special way. All other types are opaque to G-API and passed to kernel in",
+    "local": "类型是以一种特殊的方式处理的。所有其他类型对G-API都是不透明的，并在中传递给内核"
+  },
+  {
+    "origin": "or in execution callbacks as-is.",
+    "local": "或者在执行中按原样回调。"
+  },
+  {
+    "origin": "Kernel's return value can",
+    "local": "内核的返回值可以"
+  },
+  {
+    "origin": "only",
+    "local": "只有"
+  },
+  {
+    "origin": "be of G-API dynamic type &ndash;",
+    "local": "应为G-API动态类型&ndash；"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", or",
+    "local": "，或"
+  },
+  {
+    "origin": ". If an operation has more than one output, it should be wrapped into an",
+    "local": ". 如果一个操作有多个输出，则应将其包装到"
+  },
+  {
+    "origin": "(which can contain only mentioned G-API types). Arbitrary-output-number operations are not supported.",
+    "local": "（只能包含提到的G-API类型）。不支持任意输出编号操作。"
+  },
+  {
+    "origin": "Once a kernel is defined, it can be used in pipelines with special, G-API-supplied method \"::on()\". This method has the same signature as defined in kernel, so this code:",
+    "local": "一旦定义了内核，就可以在管道中使用G-API提供的特殊方法“：：on（）”。此方法具有与内核中定义的相同的签名，因此此代码："
+  },
+  {
+    "origin": "is a perfectly legal construction. This example has some verbosity, though, so usually a kernel declaration comes with a C++ function wrapper (\"factory method\") which enables optional parameters, more compact syntax, Doxygen comments, etc:",
+    "local": "是一个完美的法律结构。这个例子有一些冗长，所以通常内核声明附带一个C++函数包装器（“工厂方法”），它允许可选的参数、更紧凑的语法、doxGEN注释等："
+  },
+  {
+    "origin": "so now it can be used like:",
+    "local": "所以现在可以这样使用："
+  },
+  {
+    "origin": "Extra information",
+    "local": "额外信息"
+  },
+  {
+    "origin": "In the current version, kernel declaration body (everything within the curly braces) must contain a static function",
+    "local": "在当前版本中，内核声明体（大括号内的所有内容）必须包含静态函数"
+  },
+  {
+    "origin": ". This function establishes a functional dependency between operation's input and output metadata.",
+    "local": ". 此函数在操作的输入和输出元数据之间建立函数依赖关系。"
+  },
+  {
+    "origin": "Metadata",
+    "local": "元数据"
+  },
+  {
+    "origin": "is an information about data kernel operates on. Since non-G-API types are opaque to G-API, G-API cares only about",
+    "local": "是一个关于数据内核操作的信息。由于非G-API类型对G-API是不透明的，G-API只关心"
+  },
+  {
+    "origin": "data descriptors (i.e. dimensions and format of",
+    "local": "数据描述符（即数据的尺寸和格式）"
+  },
+  {
+    "origin": ", etc).",
+    "local": "等）。"
+  },
+  {
+    "origin": "is also an example of how kernel's signature can be transformed into a derived callback &ndash; note that in this example,",
+    "local": "也是如何将内核签名转换为派生回调的示例&ndash；注意在这个例子中，"
+  },
+  {
+    "origin": "signature exactly follows the kernel signature (defined within the macro) but is different &ndash; where kernel expects",
+    "local": "签名完全遵循内核签名（在宏中定义），但不同&ndash；内核期望的位置"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "takes and returns",
+    "local": "取而代之"
+  },
+  {
+    "origin": "(a G-API structure metadata for",
+    "local": "（a）元数据的G-API结构"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "The point of",
+    "local": "重点"
+  },
+  {
+    "origin": "is to propagate metadata information within computation from inputs to outputs and infer metadata of internal (intermediate, temporary) data objects. This information is required for further pipeline optimizations, memory allocation, and other operations done by G-API framework during graph compilation.",
+    "local": "是将计算中的元数据信息从输入传播到输出，并推断内部（中间、临时）数据对象的元数据。这些信息对于进一步的管道优化、内存分配以及G-API框架在图形编译期间执行的其他操作都是必需的。"
+  },
+  {
+    "origin": "Implementing a kernel",
+    "local": "实现内核"
+  },
+  {
+    "origin": "Once a kernel is declared, its interface can be used to implement versions of this kernel in different backends. This concept is naturally projected from object-oriented programming \"Interface/Implementation\" idiom: an interface can be implemented multiple times, and different implementations of a kernel should be substitutable with each other without breaking the algorithm (pipeline) logic (Liskov Substitution Principle).",
+    "local": "一旦一个内核被声明，它的接口就可以用来在不同的后端实现这个内核的版本。这个概念自然是从面向对象编程的“接口/实现”习语中投射出来的：一个接口可以被多次实现，内核的不同实现应该可以相互替换，而不会破坏算法（流水线）逻辑（Liskov替换原则）。"
+  },
+  {
+    "origin": "Every backend defines its own way to implement a kernel interface. This way is regular, though &ndash; whatever plugin is, its kernel implementation must be \"derived\" from a kernel interface type.",
+    "local": "每个后端都定义了自己实现内核接口的方式。不过，这种方式很正常；无论插件是什么，它的内核实现都必须“派生”自内核接口类型。"
+  },
+  {
+    "origin": "Kernel implementation are then organized into",
+    "local": "然后将内核实现组织为"
+  },
+  {
+    "origin": "kernel packages",
+    "local": "内核包"
+  },
+  {
+    "origin": ". Kernel packages are passed to",
+    "local": ". 内核包传递给"
+  },
+  {
+    "origin": "as compile arguments, with some hints to G-API on how to select proper kernels (see more on this in \"Heterogeneity\"[TBD]).",
+    "local": "作为编译参数，向G-API提供一些关于如何选择适当内核的提示（请参阅“异构性”[TBD]中的更多内容）。"
+  },
+  {
+    "origin": "For example, the aforementioned",
+    "local": "例如，上述"
+  },
+  {
+    "origin": "is implemented in \"reference\" CPU (OpenCV) plugin this way (",
+    "local": "在“参考”CPU（OpenCV）插件中是这样实现的("
+  },
+  {
+    "origin": "NOTE",
+    "local": "注意"
+  },
+  {
+    "origin": "&ndash; this is a simplified form with improper border handling):",
+    "local": "&恩达什；这是一种简化形式，边界处理不当）："
+  },
+  {
+    "origin": "Note how CPU (OpenCV) plugin has transformed the original kernel signature:",
+    "local": "请注意CPU（OpenCV）插件如何转换原始内核签名："
+  },
+  {
+    "origin": "Input",
+    "local": "输入"
+  },
+  {
+    "origin": "has been substituted with",
+    "local": "已被替换为"
+  },
+  {
+    "origin": ", holding actual input data for the underlying OpenCV function call;",
+    "local": "，保存底层OpenCV函数调用的实际输入数据；"
+  },
+  {
+    "origin": "Output",
+    "local": "输出"
+  },
+  {
+    "origin": "has been transformed into extra output parameter, thus",
+    "local": "已转换为额外的输出参数，因此"
+  },
+  {
+    "origin": "takes one argument more than the original kernel signature.",
+    "local": "比原始内核签名多接受一个参数。"
+  },
+  {
+    "origin": "The basic intuition for kernel developer here is",
+    "local": "内核开发人员的基本直觉是"
+  },
+  {
+    "origin": "not to care",
+    "local": "不在乎"
+  },
+  {
+    "origin": "where that",
+    "local": "在哪里"
+  },
+  {
+    "origin": "objects come from instead of the original",
+    "local": "对象来自而不是原始对象"
+  },
+  {
+    "origin": "&ndash; and just follow the signature conventions defined by the plugin. G-API will call this method during execution and supply all the necessary information (and forward the original opaque data as-is).",
+    "local": "&恩达什；只需遵循插件定义的签名约定。G-API将在执行期间调用此方法并提供所有必要的信息（并按原样转发原始不透明数据）。"
+  },
+  {
+    "origin": "Compound kernels",
+    "local": "复合仁"
+  },
+  {
+    "origin": "Sometimes kernel is a single thing only on API level. It is convenient for users, but on a particular implementation side it would be better to have multiple kernels (a subgraph) doing the thing instead. An example is",
+    "local": "有时内核只是API级别的一件事。这对用户来说很方便，但是在特定的实现方面，最好让多个内核（一个子图）来做这件事。一个例子是"
+  },
+  {
+    "origin": "&ndash; while in OpenCV backend it may remain a single kernel, with Fluid it becomes compound &ndash; Fluid can handle Harris response calculation but can't do sparse non-maxima suppression and point extraction to an STL vector:",
+    "local": "&恩达什；而在OpenCV后端，它可能仍然是一个单一的内核，随着Fluid的出现，它就变成了复合内核&ndash；Fluid可以处理Harris响应计算，但不能对STL向量执行稀疏非最大值抑制和点提取："
+  },
+  {
+    "origin": "A compound kernel",
+    "local": "复合核"
+  },
+  {
+    "origin": "implementation",
+    "local": "实施"
+  },
+  {
+    "origin": "can be defined using a generic macro",
+    "local": "可以使用泛型宏定义"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "It is important to distinguish a compound kernel from G-API high-order function, i.e. a C++ function which looks like a kernel but in fact generates a subgraph. The core difference is that a compound kernel is an",
+    "local": "重要的是将复合内核与G-API高阶函数区分开来，即一个看起来像内核但实际上生成子图的C++函数。核心区别在于复合内核是"
+  },
+  {
+    "origin": "implementation detail",
+    "local": "实施细则"
+  },
+  {
+    "origin": "and a kernel implementation may be either compound or not (depending on backend capabilities), while a high-order function is a \"macro\" in terms of G-API and so cannot act as an interface which then needs to be implemented by a backend.",
+    "local": "内核实现可以是复合的，也可以不是（取决于后端功能），而高阶函数是G-API中的“宏”，因此不能充当需要由后端实现的接口。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

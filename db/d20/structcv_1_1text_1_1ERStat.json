@@ -1,0 +1,622 @@
+[
+  {
+    "origin": "OpenCV: cv::text::ERStat Struct Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::ERStat Struct Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "structure represents a class-specific Extremal Region (ER).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(int",
+    "local": ""
+  },
+  {
+    "origin": "=256, int",
+    "local": ""
+  },
+  {
+    "origin": "=0, int x=0, int y=0)",
+    "local": ""
+  },
+  {
+    "origin": "Constructor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Destructor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "incrementally computable features",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "[3]",
+    "local": ""
+  },
+  {
+    "origin": "order 2 central moments to construct the covariance matrix",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "horizontal crossings",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Euler's number.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "2nd stage features",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "whenever the regions is a local maxima of the probability",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "median of the crossings at three different height levels",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "pointers preserving the tree structure of the component tree",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "seed point and the threshold (max grey-level value)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "probability that the ER belongs to the class we are looking for",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "[2]",
+    "local": ""
+  },
+  {
+    "origin": "order 1 raw moments to derive the centroid",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "structure represents a class-specific Extremal Region (ER).",
+    "local": ""
+  },
+  {
+    "origin": "An ER is a 4-connected set of pixels with all its grey-level values smaller than the values in its outer boundary. A class-specific ER is selected (using a classifier) from all the ER's in the component tree of the image. :",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "ERStat()",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::ERStat::ERStat",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "level",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "pixel",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "y",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "explicit",
+    "local": ""
+  },
+  {
+    "origin": "Constructor.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "~ERStat()",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::ERStat::~ERStat",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Destructor.",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "area",
+    "local": ""
+  },
+  {
+    "origin": "int cv::text::ERStat::area",
+    "local": ""
+  },
+  {
+    "origin": "incrementally computable features",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "central_moments",
+    "local": ""
+  },
+  {
+    "origin": "double cv::text::ERStat::central_moments[3]",
+    "local": ""
+  },
+  {
+    "origin": "order 2 central moments to construct the covariance matrix",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "child",
+    "local": ""
+  },
+  {
+    "origin": "* cv::text::ERStat::child",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "convex_hull_ratio",
+    "local": ""
+  },
+  {
+    "origin": "float cv::text::ERStat::convex_hull_ratio",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "crossings",
+    "local": ""
+  },
+  {
+    "origin": "&lt;std::deque&lt;int&gt; &gt; cv::text::ERStat::crossings",
+    "local": ""
+  },
+  {
+    "origin": "horizontal crossings",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "euler",
+    "local": ""
+  },
+  {
+    "origin": "int cv::text::ERStat::euler",
+    "local": ""
+  },
+  {
+    "origin": "Euler's number.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "hole_area_ratio",
+    "local": ""
+  },
+  {
+    "origin": "float cv::text::ERStat::hole_area_ratio",
+    "local": ""
+  },
+  {
+    "origin": "2nd stage features",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "level",
+    "local": ""
+  },
+  {
+    "origin": "int cv::text::ERStat::level",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "local_maxima",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::text::ERStat::local_maxima",
+    "local": ""
+  },
+  {
+    "origin": "whenever the regions is a local maxima of the probability",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "max_probability_ancestor",
+    "local": ""
+  },
+  {
+    "origin": "* cv::text::ERStat::max_probability_ancestor",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "med_crossings",
+    "local": ""
+  },
+  {
+    "origin": "float cv::text::ERStat::med_crossings",
+    "local": ""
+  },
+  {
+    "origin": "median of the crossings at three different height levels",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "min_probability_ancestor",
+    "local": ""
+  },
+  {
+    "origin": "* cv::text::ERStat::min_probability_ancestor",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "next",
+    "local": ""
+  },
+  {
+    "origin": "* cv::text::ERStat::next",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "num_inflexion_points",
+    "local": ""
+  },
+  {
+    "origin": "float cv::text::ERStat::num_inflexion_points",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "parent",
+    "local": ""
+  },
+  {
+    "origin": "* cv::text::ERStat::parent",
+    "local": ""
+  },
+  {
+    "origin": "pointers preserving the tree structure of the component tree",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "perimeter",
+    "local": ""
+  },
+  {
+    "origin": "int cv::text::ERStat::perimeter",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "pixel",
+    "local": ""
+  },
+  {
+    "origin": "int cv::text::ERStat::pixel",
+    "local": ""
+  },
+  {
+    "origin": "seed point and the threshold (max grey-level value)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "pixels",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;int&gt;* cv::text::ERStat::pixels",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "prev",
+    "local": ""
+  },
+  {
+    "origin": "* cv::text::ERStat::prev",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "probability",
+    "local": ""
+  },
+  {
+    "origin": "double cv::text::ERStat::probability",
+    "local": ""
+  },
+  {
+    "origin": "probability that the ER belongs to the class we are looking for",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "raw_moments",
+    "local": ""
+  },
+  {
+    "origin": "double cv::text::ERStat::raw_moments[2]",
+    "local": ""
+  },
+  {
+    "origin": "order 1 raw moments to derive the centroid",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "rect",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::ERStat::rect",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this struct was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/text/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by &#160;",
+    "local": ""
+  }
+]

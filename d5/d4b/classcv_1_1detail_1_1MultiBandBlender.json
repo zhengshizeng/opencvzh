@@ -1,0 +1,738 @@
+[
+  {
+    "origin": "OpenCV: cv::detail::MultiBandBlender Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::MultiBandBlender Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "which uses multi-band blending algorithm (see",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::detail::MultiBandBlender:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(int try_gpu=false, int num_bands=5, int weight_type=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dst,",
+    "local": ""
+  },
+  {
+    "origin": "dst_mask)",
+    "local": ""
+  },
+  {
+    "origin": "Blends and returns the final pano.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img,",
+    "local": ""
+  },
+  {
+    "origin": "mask,",
+    "local": ""
+  },
+  {
+    "origin": "tl)",
+    "local": ""
+  },
+  {
+    "origin": "Processes the image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dst_roi)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(int val)",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;corners, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;sizes)",
+    "local": ""
+  },
+  {
+    "origin": "Prepares the blender for blending.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": ""
+  },
+  {
+    "origin": "Public Types inherited from",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int type, bool try_gpu=false)",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes inherited from",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "which uses multi-band blending algorithm (see",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "MultiBandBlender()",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::MultiBandBlender::MultiBandBlender",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "try_gpu",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "num_bands",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "weight_type",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;detail_MultiBandBlender object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.detail_MultiBandBlender(",
+    "local": ""
+  },
+  {
+    "origin": "[, try_gpu[, num_bands[, weight_type]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "blend()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::detail::MultiBandBlender::blend",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst_mask",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst, dst_mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.detail_MultiBandBlender.blend(",
+    "local": ""
+  },
+  {
+    "origin": "dst, dst_mask",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Blends and returns the final pano.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Final pano",
+    "local": ""
+  },
+  {
+    "origin": "dst_mask",
+    "local": ""
+  },
+  {
+    "origin": "Final pano mask",
+    "local": ""
+  },
+  {
+    "origin": "Reimplemented from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "feed()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::detail::MultiBandBlender::feed",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "tl",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.detail_MultiBandBlender.feed(",
+    "local": ""
+  },
+  {
+    "origin": "img, mask, tl",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Processes the image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Source image",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Source image mask",
+    "local": ""
+  },
+  {
+    "origin": "tl",
+    "local": ""
+  },
+  {
+    "origin": "Source image top-left corners",
+    "local": ""
+  },
+  {
+    "origin": "Reimplemented from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "numBands()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::detail::MultiBandBlender::numBands",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.detail_MultiBandBlender.numBands(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "prepare()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::detail::MultiBandBlender::prepare",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dst_roi",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.detail_MultiBandBlender.prepare(",
+    "local": ""
+  },
+  {
+    "origin": "dst_roi",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Reimplemented from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setNumBands()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::detail::MultiBandBlender::setNumBands",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.detail_MultiBandBlender.setNumBands(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/stitching/detail/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:46 for OpenCV by",
+    "local": ""
+  }
+]

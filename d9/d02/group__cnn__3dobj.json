@@ -1,0 +1,106 @@
+[
+  {
+    "origin": "OpenCV: 3D object recognition and pose estimation API",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "3D object recognition and pose estimation API",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Caffe based 3D images descriptor. A class to extract features from an image. The so obtained descriptors can be used for classification and pose estimation goals",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Icosohedron based camera view data generator. The class create some sphere views of camera towards a 3D object meshed from .ply files",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "As CNN based learning algorithm shows better performance on the classification issues, the rich labeled data could be more useful in the training stage. 3D object classification and pose estimation is a jointed mission aiming at separate different posed apart in the descriptor form.",
+    "local": ""
+  },
+  {
+    "origin": "In the training stage, we prepare 2D training images generated from our module with their class label and pose label. We fully exploit the information lies in their labels by using a triplet and pair-wise jointed loss function in CNN training.",
+    "local": ""
+  },
+  {
+    "origin": "As CNN based learning algorithm shows better performance on the classification issues, the rich labeled data could be more useful in the training stage. 3D object classification and pose estimation is a jointed mission aiming at separate different posea apart in the descriptor form.",
+    "local": ""
+  },
+  {
+    "origin": "In the training stage, we prepare 2D training images generated from our module with their class label and pose label. We fully exploit the information that lies in their labels by using a triplet and pair-wise jointed loss function in CNN training.",
+    "local": ""
+  },
+  {
+    "origin": "Both class and pose label are in consideration in the triplet loss. The loss score will be smaller when features from the same class and same pose is more similar and features from different classes or different poses will lead to a much larger loss score.",
+    "local": ""
+  },
+  {
+    "origin": "This loss is also jointed with a pair wise component to make sure the loss is never be zero and have a restriction on the model scale.",
+    "local": ""
+  },
+  {
+    "origin": "About the training and feature extraction process, it is a rough implementation by using OpenCV and Caffe from the idea of Paul Wohlhart. The principal purpose of this API is constructing a well labeled database from .ply models for CNN training with triplet loss and extracting features with the constructed model for prediction or other purpose of pattern recognition, algorithms into two main Class:",
+    "local": ""
+  },
+  {
+    "origin": ": methods belonging to this class generates 2D images from a 3D model, together with their class and pose from camera view labels.",
+    "local": ""
+  },
+  {
+    "origin": ": methods belonging to this class extract descriptors from 2D images which is discriminant on category prediction and pose estimation.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This API need Caffe with triplet version which is designed for this module",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/Wangyida/caffe/tree/cnn_triplet",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by &#160;",
+    "local": ""
+  }
+]

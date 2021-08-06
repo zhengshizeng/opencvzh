@@ -1,0 +1,294 @@
+[
+  {
+    "origin": "OpenCV: Background Segmentation",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Background Segmentation",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Gaussian Mixture-based Background/Foreground Segmentation",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Gaussian Mixture-based Background/Foreground Segmentation",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(int history=200, int nmixtures=5, double backgroundRatio=0.7, double noiseSigma=0)",
+    "local": ""
+  },
+  {
+    "origin": "Creates mixture-of-gaussian background subtractor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(int history=500, double varThreshold=16, bool detectShadows=true)",
+    "local": ""
+  },
+  {
+    "origin": "Creates MOG2 Background Subtractor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createBackgroundSubtractorMOG()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::cuda::createBackgroundSubtractorMOG",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "history",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "nmixtures",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "backgroundRatio",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "noiseSigma",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates mixture-of-gaussian background subtractor.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "history",
+    "local": ""
+  },
+  {
+    "origin": "Length of the history.",
+    "local": ""
+  },
+  {
+    "origin": "nmixtures",
+    "local": ""
+  },
+  {
+    "origin": "Number of Gaussian mixtures.",
+    "local": ""
+  },
+  {
+    "origin": "backgroundRatio",
+    "local": ""
+  },
+  {
+    "origin": "Background ratio.",
+    "local": ""
+  },
+  {
+    "origin": "noiseSigma",
+    "local": ""
+  },
+  {
+    "origin": "Noise strength (standard deviation of the brightness or each color channel). 0 means some automatic value.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createBackgroundSubtractorMOG2()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::cuda::createBackgroundSubtractorMOG2",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "history",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "varThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "detectShadows",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates MOG2 Background Subtractor.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "history",
+    "local": ""
+  },
+  {
+    "origin": "Length of the history.",
+    "local": ""
+  },
+  {
+    "origin": "varThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Threshold on the squared Mahalanobis distance between the pixel and the model to decide whether a pixel is well described by the background model. This parameter does not affect the background update.",
+    "local": ""
+  },
+  {
+    "origin": "detectShadows",
+    "local": ""
+  },
+  {
+    "origin": "If true, the algorithm will detect shadows and mark them. It decreases the speed a bit, so if you do not need this feature, set the parameter to false.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by &#160;",
+    "local": ""
+  }
+]

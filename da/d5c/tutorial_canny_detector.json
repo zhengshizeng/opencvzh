@@ -1,0 +1,542 @@
+[
+  {
+    "origin": "OpenCV: Canny Edge Detector",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Canny Edge Detector",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "to implement the Canny Edge Detector.",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "Canny Edge detector",
+    "local": ""
+  },
+  {
+    "origin": "was developed by John F. Canny in 1986. Also known to many as the",
+    "local": ""
+  },
+  {
+    "origin": "optimal detector",
+    "local": ""
+  },
+  {
+    "origin": ", the Canny algorithm aims to satisfy three main criteria:",
+    "local": ""
+  },
+  {
+    "origin": "Low error rate:",
+    "local": ""
+  },
+  {
+    "origin": "Meaning a good detection of only existent edges.",
+    "local": ""
+  },
+  {
+    "origin": "Good localization:",
+    "local": ""
+  },
+  {
+    "origin": "The distance between edge pixels detected and real edge pixels have to be minimized.",
+    "local": ""
+  },
+  {
+    "origin": "Minimal response:",
+    "local": ""
+  },
+  {
+    "origin": "Only one detector response per edge.",
+    "local": ""
+  },
+  {
+    "origin": "Steps",
+    "local": ""
+  },
+  {
+    "origin": "Filter out any noise. The Gaussian filter is used for this purpose. An example of a Gaussian kernel of \\(size = 5\\) that might be used is shown below:",
+    "local": ""
+  },
+  {
+    "origin": "\\[K = \\dfrac{1}{159}\\begin{bmatrix} 2 &amp; 4 &amp; 5 &amp; 4 &amp; 2 \\\\ 4 &amp; 9 &amp; 12 &amp; 9 &amp; 4 \\\\ 5 &amp; 12 &amp; 15 &amp; 12 &amp; 5 \\\\ 4 &amp; 9 &amp; 12 &amp; 9 &amp; 4 \\\\ 2 &amp; 4 &amp; 5 &amp; 4 &amp; 2 \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Find the intensity gradient of the image. For this, we follow a procedure analogous to Sobel:",
+    "local": ""
+  },
+  {
+    "origin": "Apply a pair of convolution masks (in \\(x\\) and \\(y\\) directions:",
+    "local": ""
+  },
+  {
+    "origin": "\\[G_{x} = \\begin{bmatrix} -1 &amp; 0 &amp; +1 \\\\ -2 &amp; 0 &amp; +2 \\\\ -1 &amp; 0 &amp; +1 \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[G_{y} = \\begin{bmatrix} -1 &amp; -2 &amp; -1 \\\\ 0 &amp; 0 &amp; 0 \\\\ +1 &amp; +2 &amp; +1 \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Find the gradient strength and direction with:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{array}{l} G = \\sqrt{ G_{x}^{2} + G_{y}^{2} } \\\\ \\theta = \\arctan(\\dfrac{ G_{y} }{ G_{x} }) \\end{array}\\]",
+    "local": ""
+  },
+  {
+    "origin": "The direction is rounded to one of four possible angles (namely 0, 45, 90 or 135)",
+    "local": ""
+  },
+  {
+    "origin": "Non-maximum",
+    "local": ""
+  },
+  {
+    "origin": "suppression is applied. This removes pixels that are not considered to be part of an edge. Hence, only thin lines (candidate edges) will remain.",
+    "local": ""
+  },
+  {
+    "origin": "Hysteresis",
+    "local": ""
+  },
+  {
+    "origin": ": The final step. Canny does use two thresholds (upper and lower):",
+    "local": ""
+  },
+  {
+    "origin": "If a pixel gradient is higher than the",
+    "local": ""
+  },
+  {
+    "origin": "upper",
+    "local": ""
+  },
+  {
+    "origin": "threshold, the pixel is accepted as an edge",
+    "local": ""
+  },
+  {
+    "origin": "If a pixel gradient value is below the",
+    "local": ""
+  },
+  {
+    "origin": "lower",
+    "local": ""
+  },
+  {
+    "origin": "threshold, then it is rejected.",
+    "local": ""
+  },
+  {
+    "origin": "If the pixel gradient is between the two thresholds, then it will be accepted only if it is connected to a pixel that is above the",
+    "local": ""
+  },
+  {
+    "origin": "upper",
+    "local": ""
+  },
+  {
+    "origin": "threshold.",
+    "local": ""
+  },
+  {
+    "origin": "Canny recommended a",
+    "local": ""
+  },
+  {
+    "origin": "upper",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "lower",
+    "local": ""
+  },
+  {
+    "origin": "ratio between 2:1 and 3:1.",
+    "local": ""
+  },
+  {
+    "origin": "For more details, you can always consult your favorite Computer Vision book.",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "What does this program do?",
+    "local": ""
+  },
+  {
+    "origin": "Asks the user to enter a numerical value to set the lower threshold for our",
+    "local": ""
+  },
+  {
+    "origin": "Canny Edge Detector",
+    "local": ""
+  },
+  {
+    "origin": "(by means of a Trackbar).",
+    "local": ""
+  },
+  {
+    "origin": "Applies the",
+    "local": ""
+  },
+  {
+    "origin": "Canny Detector",
+    "local": ""
+  },
+  {
+    "origin": "and generates a",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "(bright lines representing the edges on a black background).",
+    "local": ""
+  },
+  {
+    "origin": "Applies the mask obtained on the original image and display it in a window.",
+    "local": ""
+  },
+  {
+    "origin": "Explanation (C++ code)",
+    "local": ""
+  },
+  {
+    "origin": "Create some needed variables:",
+    "local": ""
+  },
+  {
+    "origin": "Note the following:",
+    "local": ""
+  },
+  {
+    "origin": "We establish a ratio of lower:upper threshold of 3:1 (with the variable",
+    "local": ""
+  },
+  {
+    "origin": "ratio",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "We set the kernel size of \\(3\\) (for the Sobel operations to be performed internally by the Canny function).",
+    "local": ""
+  },
+  {
+    "origin": "We set a maximum value for the lower Threshold of \\(100\\).",
+    "local": ""
+  },
+  {
+    "origin": "Loads the source image:",
+    "local": ""
+  },
+  {
+    "origin": "Create a matrix of the same type and size of",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "(to be",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "Convert the image to grayscale (using the function",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "Create a window to display the results:",
+    "local": ""
+  },
+  {
+    "origin": "Create a Trackbar for the user to enter the lower threshold for our Canny detector:",
+    "local": ""
+  },
+  {
+    "origin": "Observe the following:",
+    "local": ""
+  },
+  {
+    "origin": "The variable to be controlled by the Trackbar is",
+    "local": ""
+  },
+  {
+    "origin": "lowThreshold",
+    "local": ""
+  },
+  {
+    "origin": "with a limit of",
+    "local": ""
+  },
+  {
+    "origin": "max_lowThreshold",
+    "local": ""
+  },
+  {
+    "origin": "(which we set to 100 previously)",
+    "local": ""
+  },
+  {
+    "origin": "Each time the Trackbar registers an action, the callback function",
+    "local": ""
+  },
+  {
+    "origin": "CannyThreshold",
+    "local": ""
+  },
+  {
+    "origin": "will be invoked.",
+    "local": ""
+  },
+  {
+    "origin": "Let's check the",
+    "local": ""
+  },
+  {
+    "origin": "CannyThreshold",
+    "local": ""
+  },
+  {
+    "origin": "function, step by step:",
+    "local": ""
+  },
+  {
+    "origin": "First, we blur the image with a filter of kernel size 3:",
+    "local": ""
+  },
+  {
+    "origin": "Second, we apply the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "where the arguments are:",
+    "local": ""
+  },
+  {
+    "origin": "detected_edges",
+    "local": ""
+  },
+  {
+    "origin": ": Source image, grayscale",
+    "local": ""
+  },
+  {
+    "origin": "detected_edges",
+    "local": ""
+  },
+  {
+    "origin": ": Output of the detector (can be the same as the input)",
+    "local": ""
+  },
+  {
+    "origin": "lowThreshold",
+    "local": ""
+  },
+  {
+    "origin": ": The value entered by the user moving the Trackbar",
+    "local": ""
+  },
+  {
+    "origin": "highThreshold",
+    "local": ""
+  },
+  {
+    "origin": ": Set in the program as three times the lower threshold (following Canny's recommendation)",
+    "local": ""
+  },
+  {
+    "origin": "kernel_size",
+    "local": ""
+  },
+  {
+    "origin": "We fill a",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "image with zeros (meaning the image is completely black).",
+    "local": ""
+  },
+  {
+    "origin": "Finally, we will use the function",
+    "local": ""
+  },
+  {
+    "origin": "to map only the areas of the image that are identified as edges (on a black background).",
+    "local": ""
+  },
+  {
+    "origin": "copy the",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "image onto",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ". However, it will only copy the pixels in the locations where they have non-zero values. Since the output of the Canny detector is the edge contours on a black background, the resulting",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "will be black in all the area but the detected edges.",
+    "local": ""
+  },
+  {
+    "origin": "We display our result:",
+    "local": ""
+  },
+  {
+    "origin": "Result",
+    "local": ""
+  },
+  {
+    "origin": "After compiling the code above, we can run it giving as argument the path to an image. For example, using as an input the following image:",
+    "local": ""
+  },
+  {
+    "origin": "Moving the slider, trying different threshold, we obtain the following result:",
+    "local": ""
+  },
+  {
+    "origin": "Notice how the image is superposed to the black background on the edge regions.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": ""
+  }
+]

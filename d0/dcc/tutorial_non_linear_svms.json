@@ -1,0 +1,562 @@
+[
+  {
+    "origin": "OpenCV: Support Vector Machines for Non-Linearly Separable Data",
+    "local": "非线性可分数据的支持向量机"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Support Vector Machines for Non-Linearly Separable Data",
+    "local": "非线性可分数据的支持向量机"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Fernando Iglesias García",
+    "local": "费尔南多·伊格莱西亚斯·加西亚"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt；=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "Define the optimization problem for SVMs when it is not possible to separate linearly the training data.",
+    "local": "定义了支持向量机在训练数据不能线性分离时的优化问题。"
+  },
+  {
+    "origin": "How to configure the parameters to adapt your SVM for this class of problems.",
+    "local": "如何配置参数以使支持向量机适应这类问题。"
+  },
+  {
+    "origin": "Motivation",
+    "local": "动机"
+  },
+  {
+    "origin": "Why is it interesting to extend the SVM optimization problem in order to handle non-linearly separable training data? Most of the applications in which SVMs are used in computer vision require a more powerful tool than a simple linear classifier. This stems from the fact that in these tasks",
+    "local": "为什么要扩展支持向量机优化问题来处理非线性可分离的训练数据？支持向量机在计算机视觉中的大多数应用都需要比简单线性分类器更强大的工具。这源于在这些任务中"
+  },
+  {
+    "origin": "the training data can be rarely separated using an hyperplane",
+    "local": "训练数据很少可以用超平面来分离"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Consider one of these tasks, for example, face detection. The training data in this case is composed by a set of images that are faces and another set of images that are non-faces (",
+    "local": "考虑这些任务之一，例如，人脸检测。这种情况下的训练数据由一组作为面的图像和另一组非面的图像组成("
+  },
+  {
+    "origin": "every other thing in the world except from faces",
+    "local": "世界上除了脸以外的所有东西"
+  },
+  {
+    "origin": "). This training data is too complex so as to find a representation of each sample (",
+    "local": "). 这个训练数据太复杂，以至于无法找到每个样本的表示("
+  },
+  {
+    "origin": "feature vector",
+    "local": "特征向量"
+  },
+  {
+    "origin": ") that could make the whole set of faces linearly separable from the whole set of non-faces.",
+    "local": ")这可以使整组面与整组非面线性分离。"
+  },
+  {
+    "origin": "Extension of the Optimization Problem",
+    "local": "优化问题的推广"
+  },
+  {
+    "origin": "Remember that using SVMs we obtain a separating hyperplane. Therefore, since the training data is now non-linearly separable, we must admit that the hyperplane found will misclassify some of the samples. This",
+    "local": "记住，使用支持向量机我们得到一个分离的超平面。因此，由于训练数据现在是非线性可分的，我们必须承认，发现的超平面会对一些样本进行错误分类。这个"
+  },
+  {
+    "origin": "misclassification",
+    "local": "错误分类"
+  },
+  {
+    "origin": "is a new variable in the optimization that must be taken into account. The new model has to include both the old requirement of finding the hyperplane that gives the biggest margin and the new one of generalizing the training data correctly by not allowing too many classification errors.",
+    "local": "是优化中必须考虑的新变量。新模型既要考虑到寻找最大裕度超平面的旧要求，又要考虑到在不允许太多分类错误的情况下正确地推广训练数据的新要求。"
+  },
+  {
+    "origin": "We start here from the formulation of the optimization problem of finding the hyperplane which maximizes the",
+    "local": "我们从最优化问题的公式出发，找到使问题最大化的超平面"
+  },
+  {
+    "origin": "margin",
+    "local": "边缘"
+  },
+  {
+    "origin": "(this is explained in the previous tutorial (",
+    "local": "（这在上一个教程中进行了解释("
+  },
+  {
+    "origin": "):",
+    "local": "):"
+  },
+  {
+    "origin": "\\[\\min_{\\beta, \\beta_{0}} L(\\beta) = \\frac{1}{2}||\\beta||^{2} \\text{ subject to } y_{i}(\\beta^{T} x_{i} + \\beta_{0}) \\geq 1 \\text{ } \\forall i\\]",
+    "local": "\\[\\min{\\beta，\\beta{0}}L（\\beta）=\\frac{1}{2}{2}}\\beta}{2}\\text{subject to}y{i}（\\beta^{T}x{i}+\\beta{0}）\\geq 1\\text{}\\forall i\\]"
+  },
+  {
+    "origin": "There are multiple ways in which this model can be modified so it takes into account the misclassification errors. For example, one could think of minimizing the same quantity plus a constant times the number of misclassification errors in the training data, i.e.:",
+    "local": "有多种方法可以对该模型进行修改，以便将错误分类错误考虑在内。例如，可以考虑将相同的数量加上训练数据中错误分类错误数的常数倍最小化，即："
+  },
+  {
+    "origin": "\\[\\min ||\\beta||^{2} + C \\text{(misclassification errors)}\\]",
+    "local": "\\[\\min | | \\beta | ^{2}+C\\text{（误分类错误）}\\]"
+  },
+  {
+    "origin": "However, this one is not a very good solution since, among some other reasons, we do not distinguish between samples that are misclassified with a small distance to their appropriate decision region or samples that are not. Therefore, a better solution will take into account the",
+    "local": "然而，这并不是一个很好的解决方案，因为除其他一些原因外，我们不区分与适当的决策区域有很小距离的错误分类的样本或不正确的样本。因此，更好的解决方案将考虑"
+  },
+  {
+    "origin": "distance of the misclassified samples to their correct decision regions",
+    "local": "错误分类样本到正确决策区域的距离"
+  },
+  {
+    "origin": ", i.e.:",
+    "local": "，即："
+  },
+  {
+    "origin": "\\[\\min ||\\beta||^{2} + C \\text{(distance of misclassified samples to their correct regions)}\\]",
+    "local": "\\[\\min | | \\beta | ^{2}+C\\text{（错误分类样本到其正确区域的距离）}\\]"
+  },
+  {
+    "origin": "For each sample of the training data a new parameter \\(\\xi_{i}\\) is defined. Each one of these parameters contains the distance from its corresponding training sample to their correct decision region. The following picture shows non-linearly separable training data from two classes, a separating hyperplane and the distances to their correct regions of the samples that are misclassified.",
+    "local": "对于训练数据的每个样本，定义了一个新的参数（\\xI{{i}）。这些参数中的每一个都包含从其相应的训练样本到其正确决策区域的距离。下图显示了来自两个类的非线性可分离训练数据，一个分离超平面和到错误分类样本的正确区域的距离。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Only the distances of the samples that are misclassified are shown in the picture. The distances of the rest of the samples are zero since they lay already in their correct decision region.",
+    "local": "图片中只显示了错误分类的样本的距离。其余样本的距离为零，因为它们已经位于正确的判定区域。"
+  },
+  {
+    "origin": "The red and blue lines that appear on the picture are the margins to each one of the decision regions. It is very",
+    "local": "图片上出现的红蓝线是每个决策区域的边距。这是非常重要的"
+  },
+  {
+    "origin": "important",
+    "local": "重要的"
+  },
+  {
+    "origin": "to realize that each of the \\(\\xi_{i}\\) goes from a misclassified training sample to the margin of its appropriate region.",
+    "local": "要认识到每个\\（\\xI{{i}）从错误分类的训练样本到其适当区域的边缘。"
+  },
+  {
+    "origin": "Finally, the new formulation for the optimization problem is:",
+    "local": "最后，优化问题的新公式是："
+  },
+  {
+    "origin": "\\[\\min_{\\beta, \\beta_{0}} L(\\beta) = ||\\beta||^{2} + C \\sum_{i} {\\xi_{i}} \\text{ subject to } y_{i}(\\beta^{T} x_{i} + \\beta_{0}) \\geq 1 - \\xi_{i} \\text{ and } \\xi_{i} \\geq 0 \\text{ } \\forall i\\]",
+    "local": "\\βa{{ 0 }} L（\\beta）＝ββ{^ } 2 } +c SUMi{{I}{{Xi{{I}}}文本{}{y}{i}（\\β^ {t} x{{i}+\\bETa{{ 0 }）\\Geq 1 -\\xI{{i}文本{} } } } i} Geq 0 \\ {{}} \\\\min {{beta"
+  },
+  {
+    "origin": "How should the parameter C be chosen? It is obvious that the answer to this question depends on how the training data is distributed. Although there is no general answer, it is useful to take into account these rules:",
+    "local": "参数C应该如何选择？很明显，这个问题的答案取决于训练数据是如何分布的。虽然没有一般性的答案，但考虑到这些规则是有用的："
+  },
+  {
+    "origin": "Large values of C give solutions with",
+    "local": "C的大值给出了"
+  },
+  {
+    "origin": "less misclassification errors",
+    "local": "减少误分类错误"
+  },
+  {
+    "origin": "but a",
+    "local": "但是"
+  },
+  {
+    "origin": "smaller margin",
+    "local": "较小的利润"
+  },
+  {
+    "origin": ". Consider that in this case it is expensive to make misclassification errors. Since the aim of the optimization is to minimize the argument, few misclassifications errors are allowed.",
+    "local": ". 考虑到在这种情况下，错误分类的代价是昂贵的。由于优化的目的是使参数最小化，所以很少允许错误分类。"
+  },
+  {
+    "origin": "Small values of C give solutions with",
+    "local": "C的小值给出了"
+  },
+  {
+    "origin": "bigger margin",
+    "local": "更大的利润"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "more classification errors",
+    "local": "更多分类错误"
+  },
+  {
+    "origin": ". In this case the minimization does not consider that much the term of the sum so it focuses more on finding a hyperplane with big margin.",
+    "local": ". 在这种情况下，极小化没有考虑太多的和项，所以它更侧重于寻找一个具有大余量的超平面。"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "You may also find the source code in",
+    "local": "您还可以在中找到源代码"
+  },
+  {
+    "origin": "folder of the OpenCV source library or",
+    "local": "OpenCV源代码库的文件夹或"
+  },
+  {
+    "origin": "download it from here",
+    "local": "从这里下载"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Set up the training data",
+    "local": "设置培训数据"
+  },
+  {
+    "origin": "The training data of this exercise is formed by a set of labeled 2D-points that belong to one of two different classes. To make the exercise more appealing, the training data is generated randomly using a uniform probability density functions (PDFs).",
+    "local": "此练习的训练数据由一组属于两个不同类之一的标记2D点组成。为了使训练更具吸引力，训练数据采用均匀概率密度函数（PDFs）随机生成。"
+  },
+  {
+    "origin": "We have divided the generation of the training data into two main parts.",
+    "local": "我们将训练数据的生成分为两个主要部分。"
+  },
+  {
+    "origin": "In the first part we generate data for both classes that is linearly separable.",
+    "local": "在第一部分中，我们为这两个类生成线性可分的数据。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "In the second part we create data for both classes that is non-linearly separable, data that overlaps.",
+    "local": "在第二部分中，我们为这两个类创建了非线性可分离的数据，即重叠的数据。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Set up SVM's parameters",
+    "local": "设置支持向量机的参数"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "In the previous tutorial",
+    "local": "在上一教程中"
+  },
+  {
+    "origin": "there is an explanation of the attributes of the class",
+    "local": "对类的属性有一个解释"
+  },
+  {
+    "origin": "that we configure here before training the SVM.",
+    "local": "在训练SVM之前，我们在这里配置。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "There are just two differences between the configuration we do here and the one that was done in the previous tutorial (",
+    "local": "在我们这里所做的配置和上一个教程中所做的配置之间只有两个区别("
+  },
+  {
+    "origin": ") that we use as reference.",
+    "local": ")作为参考。"
+  },
+  {
+    "origin": "C",
+    "local": "C"
+  },
+  {
+    "origin": ". We chose here a small value of this parameter in order not to punish too much the misclassification errors in the optimization. The idea of doing this stems from the will of obtaining a solution close to the one intuitively expected. However, we recommend to get a better insight of the problem by making adjustments to this parameter.",
+    "local": ". 我们在这里选择了这个参数的一个小值，以避免在优化中惩罚过多的错误分类。这样做的想法源于获得接近直觉预期的解决方案的意愿。但是，我们建议通过调整此参数来更好地了解问题。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "In this case there are just very few points in the overlapping region between classes. By giving a smaller value to",
+    "local": "在这种情况下，类之间的重叠区域中只有很少的点。通过给"
+  },
+  {
+    "origin": "FRAC_LINEAR_SEP",
+    "local": "分形线性分离"
+  },
+  {
+    "origin": "the density of points can be incremented and the impact of the parameter",
+    "local": "点的密度可以增加，参数的影响"
+  },
+  {
+    "origin": "C",
+    "local": "C"
+  },
+  {
+    "origin": "explored deeply.",
+    "local": "深入探索。"
+  },
+  {
+    "origin": "Termination Criteria of the algorithm",
+    "local": "算法的终止准则"
+  },
+  {
+    "origin": ". The maximum number of iterations has to be increased considerably in order to solve correctly a problem with non-linearly separable training data. In particular, we have increased in five orders of magnitude this value.",
+    "local": ". 为了正确地解决具有非线性可分离训练数据的问题，最大迭代次数必须大大增加。特别是，我们把这个值提高了五个数量级。"
+  },
+  {
+    "origin": "Train the SVM",
+    "local": "训练支持向量机"
+  },
+  {
+    "origin": "We call the method",
+    "local": "我们称之为方法"
+  },
+  {
+    "origin": "to build the SVM model. Watch out that the training process may take a quite long time. Have patiance when your run the program.",
+    "local": "建立支持向量机模型。请注意，培训过程可能需要相当长的时间。在你运行程序时要有耐心。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Show the Decision Regions",
+    "local": "显示决策区域"
+  },
+  {
+    "origin": "The method",
+    "local": "方法"
+  },
+  {
+    "origin": "is used to classify an input sample using a trained SVM. In this example we have used this method in order to color the space depending on the prediction done by the SVM. In other words, an image is traversed interpreting its pixels as points of the Cartesian plane. Each of the points is colored depending on the class predicted by the SVM; in dark green if it is the class with label 1 and in dark blue if it is the class with label 2.",
+    "local": "利用训练好的支持向量机对输入样本进行分类。在这个例子中，我们使用这种方法，以颜色的空间取决于预测所做的支持向量机。换句话说，图像被遍历，将其像素解释为笛卡尔平面的点。根据支持向量机预测的类别对每个点进行着色；如果是标签为1的类，则为深绿色；如果是标签为2的类，则为深蓝色。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Show the training data",
+    "local": "显示训练数据"
+  },
+  {
+    "origin": "The method",
+    "local": "方法"
+  },
+  {
+    "origin": "is used to show the samples that compose the training data. The samples of the class labeled with 1 are shown in light green and in light blue the samples of the class labeled with 2.",
+    "local": "用于显示组成训练数据的样本。标有1的类的样本以浅绿色显示，标有2的类的样本以浅蓝色显示。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Support vectors",
+    "local": "支持向量"
+  },
+  {
+    "origin": "We use here a couple of methods to obtain information about the support vectors. The method",
+    "local": "我们在这里使用两种方法来获取有关支持向量的信息。方法"
+  },
+  {
+    "origin": "obtain all support vectors. We have used this methods here to find the training examples that are support vectors and highlight them.",
+    "local": "获取所有支持向量。我们在这里使用了这些方法来找到作为支持向量的训练示例并突出显示它们。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "The code opens an image and shows the training examples of both classes. The points of one class are represented with light green and light blue ones are used for the other class.",
+    "local": "代码将打开一个图像并显示这两个类的训练示例。一类的点用浅绿色表示，另一类用浅蓝色表示。"
+  },
+  {
+    "origin": "The SVM is trained and used to classify all the pixels of the image. This results in a division of the image in a blue region and a green region. The boundary between both regions is the separating hyperplane. Since the training data is non-linearly separable, it can be seen that some of the examples of both classes are misclassified; some green points lay on the blue region and some blue points lay on the green one.",
+    "local": "训练支持向量机对图像中的所有像素进行分类。这导致在蓝色区域和绿色区域中分割图像。两个区域之间的边界是分离超平面。由于训练数据是非线性可分的，可以看出这两个类的一些例子被错误分类；一些绿点位于蓝色区域，一些蓝点位于绿色区域。"
+  },
+  {
+    "origin": "Finally the support vectors are shown using gray rings around the training examples.",
+    "local": "最后在训练样本周围用灰色环表示支持向量。"
+  },
+  {
+    "origin": "You may observe a runtime instance of this on the",
+    "local": "您可以在"
+  },
+  {
+    "origin": "YouTube here",
+    "local": "YouTube在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

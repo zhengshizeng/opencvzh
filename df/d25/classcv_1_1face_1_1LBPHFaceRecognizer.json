@@ -1,0 +1,1526 @@
+[
+  {
+    "origin": "OpenCV: cv::face::LBPHFaceRecognizer Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::face::LBPHFaceRecognizer Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "abstract",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::face::LBPHFaceRecognizer:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "virtual int",
+    "local": ""
+  },
+  {
+    "origin": "virtual int",
+    "local": ""
+  },
+  {
+    "origin": "virtual std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "virtual int",
+    "local": ""
+  },
+  {
+    "origin": "virtual int",
+    "local": ""
+  },
+  {
+    "origin": "virtual double",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(double val)",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "(int label) const",
+    "local": ""
+  },
+  {
+    "origin": "Gets string information by label.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual std::vector&lt; int &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;str) const",
+    "local": ""
+  },
+  {
+    "origin": "Gets vector of labels by string.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src) const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src, int &amp;label, double &amp;confidence) const",
+    "local": ""
+  },
+  {
+    "origin": "Predicts a label and associated confidence (e.g. distance) for a given input image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "if implemented - send all result of prediction to collector that can be used for somehow custom result handling",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename)",
+    "local": ""
+  },
+  {
+    "origin": "Loads a",
+    "local": ""
+  },
+  {
+    "origin": "and its model state.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(int label, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;strInfo)",
+    "local": ""
+  },
+  {
+    "origin": "Sets string info for the specified model's label.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "Trains a",
+    "local": ""
+  },
+  {
+    "origin": "with given data and associated labels.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "labels)",
+    "local": ""
+  },
+  {
+    "origin": "Updates a",
+    "local": ""
+  },
+  {
+    "origin": "with given data and associated labels.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename) const",
+    "local": ""
+  },
+  {
+    "origin": "Saves a",
+    "local": ""
+  },
+  {
+    "origin": "and its model state.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Clears the algorithm state.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename) const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;fs, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;name=",
+    "local": ""
+  },
+  {
+    "origin": "()) const",
+    "local": ""
+  },
+  {
+    "origin": "simplified API for language bindings This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int radius=1, int neighbors=8, int grid_x=8, int grid_y=8, double",
+    "local": ""
+  },
+  {
+    "origin": "=DBL_MAX)",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Loads algorithm from the file.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;strModel, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Loads algorithm from a String.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": ""
+  },
+  {
+    "origin": "Reads algorithm from the file node.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes inherited from",
+    "local": ""
+  },
+  {
+    "origin": "std::map&lt; int,",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "create()",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::face::LBPHFaceRecognizer::create",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "neighbors",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "grid_x",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "grid_y",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "threshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face.LBPHFaceRecognizer_create(",
+    "local": ""
+  },
+  {
+    "origin": "[, radius[, neighbors[, grid_x[, grid_y[, threshold]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": "The radius used for building the Circular Local Binary Pattern. The greater the radius, the smoother the image but more spatial information you can get.",
+    "local": ""
+  },
+  {
+    "origin": "neighbors",
+    "local": ""
+  },
+  {
+    "origin": "The number of sample points to build a Circular Local Binary Pattern from. An appropriate value is to use",
+    "local": ""
+  },
+  {
+    "origin": "sample points. Keep in mind: the more sample points you include, the higher the computational cost.",
+    "local": ""
+  },
+  {
+    "origin": "grid_x",
+    "local": ""
+  },
+  {
+    "origin": "The number of cells in the horizontal direction, 8 is a common value used in publications. The more cells, the finer the grid, the higher the dimensionality of the resulting feature vector.",
+    "local": ""
+  },
+  {
+    "origin": "grid_y",
+    "local": ""
+  },
+  {
+    "origin": "The number of cells in the vertical direction, 8 is a common value used in publications. The more cells, the finer the grid, the higher the dimensionality of the resulting feature vector.",
+    "local": ""
+  },
+  {
+    "origin": "threshold",
+    "local": ""
+  },
+  {
+    "origin": "Notes:",
+    "local": ""
+  },
+  {
+    "origin": "The Circular Local Binary Patterns (used in training and prediction) expect the data given as grayscale images, use cvtColor to convert between the color spaces.",
+    "local": ""
+  },
+  {
+    "origin": "This model supports updating.",
+    "local": ""
+  },
+  {
+    "origin": "Model internal data:",
+    "local": ""
+  },
+  {
+    "origin": "radius see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "neighbors see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "grid_x see LLBPHFaceRecognizer::create.",
+    "local": ""
+  },
+  {
+    "origin": "grid_y see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "threshold see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "histograms Local Binary Patterns Histograms calculated from the given training data (empty if none was given).",
+    "local": ""
+  },
+  {
+    "origin": "labels Labels corresponding to the calculated Local Binary Patterns Histograms.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getGridX()",
+    "local": ""
+  },
+  {
+    "origin": "virtual int cv::face::LBPHFaceRecognizer::getGridX",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.getGridX(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getGridY()",
+    "local": ""
+  },
+  {
+    "origin": "virtual int cv::face::LBPHFaceRecognizer::getGridY",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.getGridY(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getHistograms()",
+    "local": ""
+  },
+  {
+    "origin": "virtual std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::face::LBPHFaceRecognizer::getHistograms",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.getHistograms(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLabels()",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "cv::face::LBPHFaceRecognizer::getLabels",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.getLabels(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getNeighbors()",
+    "local": ""
+  },
+  {
+    "origin": "virtual int cv::face::LBPHFaceRecognizer::getNeighbors",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.getNeighbors(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getRadius()",
+    "local": ""
+  },
+  {
+    "origin": "virtual int cv::face::LBPHFaceRecognizer::getRadius",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.getRadius(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getThreshold()",
+    "local": ""
+  },
+  {
+    "origin": "virtual double cv::face::LBPHFaceRecognizer::getThreshold",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.getThreshold(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setGridX()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::face::LBPHFaceRecognizer::setGridX",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.setGridX(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setGridY()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::face::LBPHFaceRecognizer::setGridY",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.setGridY(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setNeighbors()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::face::LBPHFaceRecognizer::setNeighbors",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.setNeighbors(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setRadius()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::face::LBPHFaceRecognizer::setRadius",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.setRadius(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setThreshold()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::face::LBPHFaceRecognizer::setThreshold",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.face_LBPHFaceRecognizer.setThreshold(",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/face/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:47 for OpenCV by",
+    "local": ""
+  }
+]

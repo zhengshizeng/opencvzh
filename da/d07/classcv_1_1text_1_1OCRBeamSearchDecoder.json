@@ -1,0 +1,1410 @@
+[
+  {
+    "origin": "OpenCV: cv::text::OCRBeamSearchDecoder Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::OCRBeamSearchDecoder Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "class provides an interface for OCR using Beam Search algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::text::OCRBeamSearchDecoder:",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Callback with the character classifier is made a class.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image, std::string &amp;output_text, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; *component_rects=NULL, std::vector&lt; std::string &gt; *component_texts=NULL, std::vector&lt; float &gt; *component_confidences=NULL, int component_level=0)",
+    "local": ""
+  },
+  {
+    "origin": "Recognize text using Beam Search.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask, std::string &amp;output_text, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; *component_rects=NULL, std::vector&lt; std::string &gt; *component_texts=NULL, std::vector&lt; float &gt; *component_confidences=NULL, int component_level=0)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image, int min_confidence, int component_level=0)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image,",
+    "local": ""
+  },
+  {
+    "origin": "mask, int min_confidence, int component_level=0)",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": ", const std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "transition_probabilities_table,",
+    "local": ""
+  },
+  {
+    "origin": "emission_probabilities_table,",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ", int",
+    "local": ""
+  },
+  {
+    "origin": "=500)",
+    "local": ""
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": "class. Initializes HMMDecoder.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "transition_probabilities_table,",
+    "local": ""
+  },
+  {
+    "origin": "emission_probabilities_table,",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ", int",
+    "local": ""
+  },
+  {
+    "origin": "=500)",
+    "local": ""
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": "class. Initializes HMMDecoder from the specified path.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "std::string",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "class provides an interface for OCR using Beam Search algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "(C++) An example on using",
+    "local": ""
+  },
+  {
+    "origin": "recognition combined with scene text detection can be found at the demo sample:",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/word_recognition.cpp",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "create()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::text::OCRBeamSearchDecoder::create",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "classifier",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "vocabulary",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "transition_probabilities_table",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "emission_probabilities_table",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mode",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "beam_size",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.OCRBeamSearchDecoder_create(",
+    "local": ""
+  },
+  {
+    "origin": "classifier, vocabulary, transition_probabilities_table, emission_probabilities_table[, mode[, beam_size]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": "class. Initializes HMMDecoder.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "classifier",
+    "local": ""
+  },
+  {
+    "origin": "The character classifier with built in feature extractor.",
+    "local": ""
+  },
+  {
+    "origin": "vocabulary",
+    "local": ""
+  },
+  {
+    "origin": "The language vocabulary (chars when ASCII English text).",
+    "local": ""
+  },
+  {
+    "origin": "must be equal to the number of classes of the classifier.",
+    "local": ""
+  },
+  {
+    "origin": "transition_probabilities_table",
+    "local": ""
+  },
+  {
+    "origin": "Table with transition probabilities between character pairs. cols == rows ==",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "emission_probabilities_table",
+    "local": ""
+  },
+  {
+    "origin": "Table with observation emission probabilities. cols == rows ==",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "mode",
+    "local": ""
+  },
+  {
+    "origin": "HMM Decoding algorithm. Only OCR_DECODER_VITERBI is available for the moment (",
+    "local": ""
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Viterbi_algorithm",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "beam_size",
+    "local": ""
+  },
+  {
+    "origin": "Size of the beam in Beam Search algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "create()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::text::OCRBeamSearchDecoder::create",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "vocabulary",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "transition_probabilities_table",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "emission_probabilities_table",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mode",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "beam_size",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.OCRBeamSearchDecoder_create(",
+    "local": ""
+  },
+  {
+    "origin": "classifier, vocabulary, transition_probabilities_table, emission_probabilities_table[, mode[, beam_size]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": "class. Initializes HMMDecoder from the specified path.",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[1/4]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::text::OCRBeamSearchDecoder::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "output_text",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_rects",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::string &gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_texts",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; float &gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_confidences",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "component_level",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRBeamSearchDecoder.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRBeamSearchDecoder.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Recognize text using Beam Search.",
+    "local": ""
+  },
+  {
+    "origin": "Takes image on input and returns recognized text in the output_text parameter. Optionally provides also the Rects for individual text elements found (e.g. words), and the list of those text elements with their confidence values.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Input binary image CV_8UC1 with a single text line (or word).",
+    "local": ""
+  },
+  {
+    "origin": "output_text",
+    "local": ""
+  },
+  {
+    "origin": "Output text. Most likely character sequence found by the HMM decoder.",
+    "local": ""
+  },
+  {
+    "origin": "component_rects",
+    "local": ""
+  },
+  {
+    "origin": "If provided the method will output a list of Rects for the individual text elements found (e.g. words).",
+    "local": ""
+  },
+  {
+    "origin": "component_texts",
+    "local": ""
+  },
+  {
+    "origin": "If provided the method will output a list of text strings for the recognition of individual text elements found (e.g. words).",
+    "local": ""
+  },
+  {
+    "origin": "component_confidences",
+    "local": ""
+  },
+  {
+    "origin": "If provided the method will output a list of confidence values for the recognition of individual text elements found (e.g. words).",
+    "local": ""
+  },
+  {
+    "origin": "component_level",
+    "local": ""
+  },
+  {
+    "origin": "Only OCR_LEVEL_WORD is supported.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[2/4]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::text::OCRBeamSearchDecoder::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "output_text",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_rects",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::string &gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_texts",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; float &gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_confidences",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "component_level",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRBeamSearchDecoder.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRBeamSearchDecoder.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[3/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::OCRBeamSearchDecoder::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "min_confidence",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "component_level",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRBeamSearchDecoder.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRBeamSearchDecoder.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[4/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::OCRBeamSearchDecoder::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "min_confidence",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "component_level",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRBeamSearchDecoder.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRBeamSearchDecoder.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "beam_size",
+    "local": ""
+  },
+  {
+    "origin": "int cv::text::OCRBeamSearchDecoder::beam_size",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "classifier",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::text::OCRBeamSearchDecoder::classifier",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "emission_p",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::OCRBeamSearchDecoder::emission_p",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "mode",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::OCRBeamSearchDecoder::mode",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "transition_p",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::OCRBeamSearchDecoder::transition_p",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "vocabulary",
+    "local": ""
+  },
+  {
+    "origin": "std::string cv::text::OCRBeamSearchDecoder::vocabulary",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/text/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by",
+    "local": ""
+  }
+]

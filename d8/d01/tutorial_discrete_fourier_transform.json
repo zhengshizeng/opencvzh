@@ -1,0 +1,486 @@
+[
+  {
+    "origin": "OpenCV: Discrete Fourier Transform",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Discrete Fourier Transform",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Bernát Gábor",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "We'll seek answers for the following questions:",
+    "local": ""
+  },
+  {
+    "origin": "What is a Fourier transform and why use it?",
+    "local": ""
+  },
+  {
+    "origin": "How to do it in OpenCV?",
+    "local": ""
+  },
+  {
+    "origin": "Usage of functions such as:",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Source code",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "You can",
+    "local": ""
+  },
+  {
+    "origin": "download this from here",
+    "local": ""
+  },
+  {
+    "origin": "or find it in the",
+    "local": ""
+  },
+  {
+    "origin": "of the OpenCV source code library.",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "You can",
+    "local": ""
+  },
+  {
+    "origin": "download this from here",
+    "local": ""
+  },
+  {
+    "origin": "or find it in the",
+    "local": ""
+  },
+  {
+    "origin": "of the OpenCV source code library.",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "You can",
+    "local": ""
+  },
+  {
+    "origin": "download this from here",
+    "local": ""
+  },
+  {
+    "origin": "or find it in the",
+    "local": ""
+  },
+  {
+    "origin": "of the OpenCV source code library.",
+    "local": ""
+  },
+  {
+    "origin": "Here's a sample usage of",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "The Fourier Transform will decompose an image into its sinus and cosines components. In other words, it will transform an image from its spatial domain to its frequency domain. The idea is that any function may be approximated exactly with the sum of infinite sinus and cosines functions. The Fourier Transform is a way how to do this. Mathematically a two dimensional images Fourier transform is:",
+    "local": ""
+  },
+  {
+    "origin": "\\[F(k,l) = \\displaystyle\\sum\\limits_{i=0}^{N-1}\\sum\\limits_{j=0}^{N-1} f(i,j)e^{-i2\\pi(\\frac{ki}{N}+\\frac{lj}{N})}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[e^{ix} = \\cos{x} + i\\sin {x}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Here f is the image value in its spatial domain and F in its frequency domain. The result of the transformation is complex numbers. Displaying this is possible either via a",
+    "local": ""
+  },
+  {
+    "origin": "real",
+    "local": ""
+  },
+  {
+    "origin": "image and a",
+    "local": ""
+  },
+  {
+    "origin": "complex",
+    "local": ""
+  },
+  {
+    "origin": "image or via a",
+    "local": ""
+  },
+  {
+    "origin": "magnitude",
+    "local": ""
+  },
+  {
+    "origin": "and a",
+    "local": ""
+  },
+  {
+    "origin": "phase",
+    "local": ""
+  },
+  {
+    "origin": "image. However, throughout the image processing algorithms only the",
+    "local": ""
+  },
+  {
+    "origin": "magnitude",
+    "local": ""
+  },
+  {
+    "origin": "image is interesting as this contains all the information we need about the images geometric structure. Nevertheless, if you intend to make some modifications of the image in these forms and then you need to retransform it you'll need to preserve both of these.",
+    "local": ""
+  },
+  {
+    "origin": "In this sample I'll show how to calculate and show the",
+    "local": ""
+  },
+  {
+    "origin": "magnitude",
+    "local": ""
+  },
+  {
+    "origin": "image of a Fourier Transform. In case of digital images are discrete. This means they may take up a value from a given domain value. For example in a basic gray scale image values usually are between zero and 255. Therefore the Fourier Transform too needs to be of a discrete type resulting in a Discrete Fourier Transform (",
+    "local": ""
+  },
+  {
+    "origin": "DFT",
+    "local": ""
+  },
+  {
+    "origin": "). You'll want to use this whenever you need to determine the structure of an image from a geometrical point of view. Here are the steps to follow (in case of a gray scale input image",
+    "local": ""
+  },
+  {
+    "origin": "I",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "Expand the image to an optimal size",
+    "local": ""
+  },
+  {
+    "origin": "The performance of a DFT is dependent of the image size. It tends to be the fastest for image sizes that are multiple of the numbers two, three and five. Therefore, to achieve maximal performance it is generally a good idea to pad border values to the image to get a size with such traits. The",
+    "local": ""
+  },
+  {
+    "origin": "returns this optimal size and we can use the",
+    "local": ""
+  },
+  {
+    "origin": "function to expand the borders of an image (the appended pixels are initialized with zero):",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Make place for both the complex and the real values",
+    "local": ""
+  },
+  {
+    "origin": "The result of a Fourier Transform is complex. This implies that for each image value the result is two image values (one per component). Moreover, the frequency domains range is much larger than its spatial counterpart. Therefore, we store these usually at least in a",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "format. Therefore we'll convert our input image to this type and expand it with another channel to hold the complex values:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Make the Discrete Fourier Transform",
+    "local": ""
+  },
+  {
+    "origin": "It's possible an in-place calculation (same input as output):",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Transform the real and complex values to magnitude",
+    "local": ""
+  },
+  {
+    "origin": "A complex number has a real (",
+    "local": ""
+  },
+  {
+    "origin": "Re",
+    "local": ""
+  },
+  {
+    "origin": ") and a complex (imaginary -",
+    "local": ""
+  },
+  {
+    "origin": "Im",
+    "local": ""
+  },
+  {
+    "origin": ") part. The results of a DFT are complex numbers. The magnitude of a DFT is:",
+    "local": ""
+  },
+  {
+    "origin": "\\[M = \\sqrt[2]{ {Re(DFT(I))}^2 + {Im(DFT(I))}^2}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Translated to OpenCV code:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Switch to a logarithmic scale",
+    "local": ""
+  },
+  {
+    "origin": "It turns out that the dynamic range of the Fourier coefficients is too large to be displayed on the screen. We have some small and some high changing values that we can't observe like this. Therefore the high values will all turn out as white points, while the small ones as black. To use the gray scale values to for visualization we can transform our linear scale to a logarithmic one:",
+    "local": ""
+  },
+  {
+    "origin": "\\[M_1 = \\log{(1 + M)}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Translated to OpenCV code:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Crop and rearrange",
+    "local": ""
+  },
+  {
+    "origin": "Remember, that at the first step, we expanded the image? Well, it's time to throw away the newly introduced values. For visualization purposes we may also rearrange the quadrants of the result, so that the origin (zero, zero) corresponds with the image center.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Normalize",
+    "local": ""
+  },
+  {
+    "origin": "This is done again for visualization purposes. We now have the magnitudes, however this are still out of our image display range of zero to one. We normalize our values to this range using the",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Result",
+    "local": ""
+  },
+  {
+    "origin": "An application idea would be to determine the geometrical orientation present in the image. For example, let us find out if a text is horizontal or not? Looking at some text you'll notice that the text lines sort of form also horizontal lines and the letters form sort of vertical lines. These two main components of a text snippet may be also seen in case of the Fourier transform. Let us use",
+    "local": ""
+  },
+  {
+    "origin": "this horizontal",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "this rotated",
+    "local": ""
+  },
+  {
+    "origin": "image about a text.",
+    "local": ""
+  },
+  {
+    "origin": "In case of the horizontal text:",
+    "local": ""
+  },
+  {
+    "origin": "In case of a rotated text:",
+    "local": ""
+  },
+  {
+    "origin": "You can see that the most influential components of the frequency domain (brightest dots on the magnitude image) follow the geometric rotation of objects on the image. From this we may calculate the offset and perform an image rotation to correct eventual miss alignments.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

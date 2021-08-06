@@ -1,0 +1,218 @@
+[
+  {
+    "origin": "OpenCV: cv::stereo::QuasiDenseStereo Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::stereo::QuasiDenseStereo Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "abstract",
+    "local": ""
+  },
+  {
+    "origin": "Class containing the methods needed for Quasi Dense Stereo computation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "destructor Method to free all the memory allocated by matrices and vectors in this class.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Get The dense corresponding points.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Compute and return the disparity map based on the correspondences found in the \"process\" method.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Specify pixel coordinates in the left image and get its corresponding location in the right image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Get The sparse corresponding points.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Load a file containing the configuration parameters of the class.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;imgLeft, const",
+    "local": ""
+  },
+  {
+    "origin": "Main process of the algorithm. This method computes the sparse seeds and then densifies them.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Save a file containing all the configuration parameters the class is currently set to.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "monoImgSize,",
+    "local": ""
+  },
+  {
+    "origin": "paramFilepath=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Class containing the methods needed for Quasi Dense Stereo computation.",
+    "local": ""
+  },
+  {
+    "origin": "This module contains the code to perform quasi dense stereo matching. The method initially starts with a sparse 3D reconstruction based on feature matching across a stereo image pair and subsequently propagates the structure into neighboring image regions. To obtain initial seed correspondences, the algorithm locates Shi and Tomashi features in the left image of the stereo pair and then tracks them using pyramidal Lucas-Kanade in the right image. To densify the sparse correspondences, the algorithm computes the zero-mean normalized cross-correlation (ZNCC) in small patches around every seed pair and uses it as a quality metric for each match. In this code, we introduce a custom structure to store the location and ZNCC value of correspondences called \"Match\". Seed Matches are stored in a priority queue sorted according to their ZNCC value, allowing for the best quality Match to be readily available. The algorithm pops Matches and uses them to extract new matches around them. This is done by considering a small neighboring area around each Seed and retrieving correspondences above a certain texture threshold that are not previously computed. New matches are stored in the seed priority queue and used as seeds. The propagation process ends when no additional matches can be retrieved.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "This code represents the work presented in",
+    "local": ""
+  },
+  {
+    "origin": ". If this code is useful for your work please cite",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Also the original growing scheme idea is described in",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/stereo/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by &#160;",
+    "local": ""
+  }
+]

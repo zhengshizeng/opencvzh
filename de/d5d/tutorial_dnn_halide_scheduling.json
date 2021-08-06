@@ -1,0 +1,202 @@
+[
+  {
+    "origin": "OpenCV: How to schedule your network for Halide backend",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "How to schedule your network for Halide backend",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Dmitry Kurtaev",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "Halide code is the same for every device we use. But for achieving the satisfied efficiency we should schedule computations properly. In this tutorial we describe the ways to schedule your networks using Halide backend in OpenCV deep learning module.",
+    "local": ""
+  },
+  {
+    "origin": "For better understanding of Halide scheduling you might want to read tutorials @",
+    "local": ""
+  },
+  {
+    "origin": "http://halide-lang.org/tutorials",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "If it's your first meeting with Halide in OpenCV, we recommend to start from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Configuration files",
+    "local": ""
+  },
+  {
+    "origin": "You can schedule computations of Halide pipeline by writing textual configuration files. It means that you can easily vectorize, parallelize and manage loops order of layers computation. Pass path to file with scheduling directives for specific device into",
+    "local": ""
+  },
+  {
+    "origin": "before the first",
+    "local": ""
+  },
+  {
+    "origin": "call.",
+    "local": ""
+  },
+  {
+    "origin": "Scheduling configuration files represented as YAML files where each node is a scheduled function or a scheduling directive.",
+    "local": ""
+  },
+  {
+    "origin": "Considered use variables",
+    "local": ""
+  },
+  {
+    "origin": "for batch dimension,",
+    "local": ""
+  },
+  {
+    "origin": "for channels,",
+    "local": ""
+  },
+  {
+    "origin": "for rows and",
+    "local": ""
+  },
+  {
+    "origin": "for columns. For variables after split are used names with the same prefix but",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "suffixes for outer and inner variables correspondingly. In example, for variable",
+    "local": ""
+  },
+  {
+    "origin": "in range",
+    "local": ""
+  },
+  {
+    "origin": "directive",
+    "local": ""
+  },
+  {
+    "origin": "gives new ones",
+    "local": ""
+  },
+  {
+    "origin": "in range",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "in range",
+    "local": ""
+  },
+  {
+    "origin": ". Variable name",
+    "local": ""
+  },
+  {
+    "origin": "is no longer available in the same scheduling node.",
+    "local": ""
+  },
+  {
+    "origin": "You can find scheduling examples at",
+    "local": ""
+  },
+  {
+    "origin": "opencv_extra/testdata/dnn",
+    "local": ""
+  },
+  {
+    "origin": "and use it for schedule your networks.",
+    "local": ""
+  },
+  {
+    "origin": "Layers fusing",
+    "local": ""
+  },
+  {
+    "origin": "Thanks to layers fusing we can schedule only the top layers of fused sets. Because for every output value we use the fused formula. In example, if you have three layers Convolution + Scale + ReLU one by one,",
+    "local": ""
+  },
+  {
+    "origin": "fused function is something like",
+    "local": ""
+  },
+  {
+    "origin": "So only function called",
+    "local": ""
+  },
+  {
+    "origin": "require scheduling.",
+    "local": ""
+  },
+  {
+    "origin": "Scheduling patterns",
+    "local": ""
+  },
+  {
+    "origin": "Sometimes networks built using blocked structure that means some layer are identical or quite similar. If you want to apply the same scheduling for different layers accurate to tiling or vectorization factors, define scheduling patterns in section",
+    "local": ""
+  },
+  {
+    "origin": "at the beginning of scheduling file. Also, your patters may use some parametric variables.",
+    "local": ""
+  },
+  {
+    "origin": "Automatic scheduling",
+    "local": ""
+  },
+  {
+    "origin": "You can let DNN to schedule layers automatically. Just skip call of",
+    "local": ""
+  },
+  {
+    "origin": ". Sometimes it might be even more efficient than manual scheduling. But if specific layers require be scheduled manually, you would be able to mix both manual and automatic scheduling ways. Write scheduling file and skip layers that you want to be scheduled automatically.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,1074 @@
+[
+  {
+    "origin": "OpenCV: cv::dnn::TextDetectionModel Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::TextDetectionModel Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Base class for text detection networks.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::dnn::TextDetectionModel:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "frame, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;detections, std::vector&lt; float &gt; &amp;confidences) const",
+    "local": ""
+  },
+  {
+    "origin": "Performs detection.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "frame, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;detections) const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "frame, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;detections, std::vector&lt; float &gt; &amp;confidences) const",
+    "local": ""
+  },
+  {
+    "origin": "Performs detection.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "frame, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;detections) const",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;)=default",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;)=default",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;model, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;config=\"\")",
+    "local": ""
+  },
+  {
+    "origin": "Create model from deep learning network represented in one of the supported formats. An order of",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "arguments does not matter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;network)",
+    "local": ""
+  },
+  {
+    "origin": "Create model from deep learning network.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Impl *",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Impl &amp;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;)=default",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;)=default",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "frame,",
+    "local": ""
+  },
+  {
+    "origin": "outs) const",
+    "local": ""
+  },
+  {
+    "origin": "Given the",
+    "local": ""
+  },
+  {
+    "origin": "frame, create input blob, run net and return the output",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(bool crop)",
+    "local": ""
+  },
+  {
+    "origin": "Set flag crop for frame.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Set mean value for frame.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(double scale=1.0, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;size=",
+    "local": ""
+  },
+  {
+    "origin": "(), const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "(), bool swapRB=false, bool crop=false)",
+    "local": ""
+  },
+  {
+    "origin": "Set preprocessing parameters for frame.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(double scale)",
+    "local": ""
+  },
+  {
+    "origin": "Set scalefactor value for frame.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;size)",
+    "local": ""
+  },
+  {
+    "origin": "Set input size for frame.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(int width, int height)",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(bool swapRB)",
+    "local": ""
+  },
+  {
+    "origin": "Set flag swapRB for frame.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "backendId)",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "targetId)",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes inherited from",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Impl &gt;",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Base class for text detection networks.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "TextDetectionModel()",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::TextDetectionModel::TextDetectionModel",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "detect()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::TextDetectionModel::detect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; float &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "confidences",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "detections, confidences",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_TextDetectionModel.detect(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_TextDetectionModel.detect(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Performs detection.",
+    "local": ""
+  },
+  {
+    "origin": "Given the input",
+    "local": ""
+  },
+  {
+    "origin": ", prepare network input, run network inference, post-process network output and return result detections.",
+    "local": ""
+  },
+  {
+    "origin": "Each result is quadrangle's 4 points in this order:",
+    "local": ""
+  },
+  {
+    "origin": "bottom-left",
+    "local": ""
+  },
+  {
+    "origin": "top-left",
+    "local": ""
+  },
+  {
+    "origin": "top-right",
+    "local": ""
+  },
+  {
+    "origin": "bottom-right",
+    "local": ""
+  },
+  {
+    "origin": "Use",
+    "local": ""
+  },
+  {
+    "origin": "function to retrive image region without perspective transformations.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If DL model doesn't support that kind of output then result may be derived from",
+    "local": ""
+  },
+  {
+    "origin": "output.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": "The input image",
+    "local": ""
+  },
+  {
+    "origin": "[out]",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": "array with detections' quadrangles (4 points per result)",
+    "local": ""
+  },
+  {
+    "origin": "[out]",
+    "local": ""
+  },
+  {
+    "origin": "confidences",
+    "local": ""
+  },
+  {
+    "origin": "array with detection confidences",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "detect()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::TextDetectionModel::detect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "detections, confidences",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_TextDetectionModel.detect(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_TextDetectionModel.detect(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "detectTextRectangles()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::TextDetectionModel::detectTextRectangles",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; float &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "confidences",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "detections, confidences",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_TextDetectionModel.detectTextRectangles(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_TextDetectionModel.detectTextRectangles(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Performs detection.",
+    "local": ""
+  },
+  {
+    "origin": "Given the input",
+    "local": ""
+  },
+  {
+    "origin": ", prepare network input, run network inference, post-process network output and return result detections.",
+    "local": ""
+  },
+  {
+    "origin": "Each result is rotated rectangle.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Result may be inaccurate in case of strong perspective transformations.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": "the input image",
+    "local": ""
+  },
+  {
+    "origin": "[out]",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": "array with detections' RotationRect results",
+    "local": ""
+  },
+  {
+    "origin": "[out]",
+    "local": ""
+  },
+  {
+    "origin": "confidences",
+    "local": ""
+  },
+  {
+    "origin": "array with detection confidences",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "detectTextRectangles()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::TextDetectionModel::detectTextRectangles",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "detections, confidences",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_TextDetectionModel.detectTextRectangles(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_TextDetectionModel.detectTextRectangles(",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/dnn/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:47 for OpenCV by",
+    "local": ""
+  }
+]

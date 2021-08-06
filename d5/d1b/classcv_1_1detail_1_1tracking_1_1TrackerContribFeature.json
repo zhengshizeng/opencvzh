@@ -1,0 +1,454 @@
+[
+  {
+    "origin": "OpenCV: cv::detail::tracking::TrackerContribFeature Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::TrackerContribFeature Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "abstract",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Abstract base class for",
+    "local": ""
+  },
+  {
+    "origin": "that represents the feature.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::detail::tracking::TrackerContribFeature:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Get the name of the specific",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Identify most effective features.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;images,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;response)",
+    "local": ""
+  },
+  {
+    "origin": "Compute the features in the images collection.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;trackerFeatureType)",
+    "local": ""
+  },
+  {
+    "origin": "Create",
+    "local": ""
+  },
+  {
+    "origin": "by tracker feature type.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Protected Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;images,",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Abstract base class for",
+    "local": ""
+  },
+  {
+    "origin": "that represents the feature.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "~TrackerContribFeature()",
+    "local": ""
+  },
+  {
+    "origin": "virtual cv::detail::tracking::TrackerContribFeature::~TrackerContribFeature",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "create()",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::detail::tracking::TrackerContribFeature::create",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "trackerFeatureType",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Create",
+    "local": ""
+  },
+  {
+    "origin": "by tracker feature type.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "trackerFeatureType",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "name",
+    "local": ""
+  },
+  {
+    "origin": "The modes available now:",
+    "local": ""
+  },
+  {
+    "origin": "\"HAAR\" &ndash; Haar Feature-based",
+    "local": ""
+  },
+  {
+    "origin": "The modes that will be available soon:",
+    "local": ""
+  },
+  {
+    "origin": "\"HOG\" &ndash; Histogram of Oriented Gradients features",
+    "local": ""
+  },
+  {
+    "origin": "\"LBP\" &ndash; Local Binary Pattern features",
+    "local": ""
+  },
+  {
+    "origin": "\"FEATURE2D\" &ndash; All types of",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getClassName()",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::TrackerContribFeature::getClassName",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Get the name of the specific",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "selection()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::TrackerContribFeature::selection",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "response",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "npoints",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Identify most effective features.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "response",
+    "local": ""
+  },
+  {
+    "origin": "Collection of response for the specific",
+    "local": ""
+  },
+  {
+    "origin": "npoints",
+    "local": ""
+  },
+  {
+    "origin": "Max number of features",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This method modifies the response parameter",
+    "local": ""
+  },
+  {
+    "origin": "Implemented in",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "className",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::TrackerContribFeature::className",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/tracking/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:46 for OpenCV by &#160;",
+    "local": ""
+  }
+]

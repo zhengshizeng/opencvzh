@@ -1,0 +1,722 @@
+[
+  {
+    "origin": "OpenCV: Changing the contrast and brightness of an image!",
+    "local": "OpenCV:更改图像的对比度和亮度！"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Changing the contrast and brightness of an image!",
+    "local": "改变图像的对比度和亮度！"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "安娜·华曼"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "Access pixel values",
+    "local": "访问像素值"
+  },
+  {
+    "origin": "Initialize a matrix with zeros",
+    "local": "用零初始化矩阵"
+  },
+  {
+    "origin": "Learn what",
+    "local": "学什么"
+  },
+  {
+    "origin": "does and why it is useful",
+    "local": "以及为什么它是有用的"
+  },
+  {
+    "origin": "Get some cool info about pixel transformations",
+    "local": "获取一些关于像素变换的酷信息"
+  },
+  {
+    "origin": "Improve the brightness of an image on a practical example",
+    "local": "提高图像亮度的实例"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "The explanation below belongs to the book",
+    "local": "下面的解释属于这本书"
+  },
+  {
+    "origin": "Computer Vision: Algorithms and Applications",
+    "local": "计算机视觉：算法与应用"
+  },
+  {
+    "origin": "by Richard Szeliski",
+    "local": "作者：Richard Szeliski"
+  },
+  {
+    "origin": "Image Processing",
+    "local": "图像处理"
+  },
+  {
+    "origin": "A general image processing operator is a function that takes one or more input images and produces an output image.",
+    "local": "通用图像处理操作符是获取一个或多个输入图像并生成输出图像的函数。"
+  },
+  {
+    "origin": "Image transforms can be seen as:",
+    "local": "图像变换可以看作："
+  },
+  {
+    "origin": "Point operators (pixel transforms)",
+    "local": "点运算符（像素变换）"
+  },
+  {
+    "origin": "Neighborhood (area-based) operators",
+    "local": "邻域（基于区域）运算符"
+  },
+  {
+    "origin": "Pixel Transforms",
+    "local": "像素变换"
+  },
+  {
+    "origin": "In this kind of image processing transform, each output pixel's value depends on only the corresponding input pixel value (plus, potentially, some globally collected information or parameters).",
+    "local": "在这种图像处理变换中，每个输出像素的值仅依赖于相应的输入像素值（加上一些全局收集的信息或参数）。"
+  },
+  {
+    "origin": "Examples of such operators include",
+    "local": "此类运算符的示例包括"
+  },
+  {
+    "origin": "brightness and contrast adjustments",
+    "local": "亮度和对比度调整"
+  },
+  {
+    "origin": "as well as color correction and transformations.",
+    "local": "以及颜色校正和变换。"
+  },
+  {
+    "origin": "Brightness and contrast adjustments",
+    "local": "亮度和对比度调整"
+  },
+  {
+    "origin": "Two commonly used point processes are",
+    "local": "两种常用的点过程是"
+  },
+  {
+    "origin": "multiplication",
+    "local": "乘法"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "addition",
+    "local": "附加"
+  },
+  {
+    "origin": "with a constant:",
+    "local": "常数："
+  },
+  {
+    "origin": "\\[g(x) = \\alpha f(x) + \\beta\\]",
+    "local": "\\[g（x）=\\alpha f（x）+\\beta\\]"
+  },
+  {
+    "origin": "The parameters \\(\\alpha &gt; 0\\) and \\(\\beta\\) are often called the",
+    "local": "参数\\（\\alpha&gt；0\\）和\\（\\beta\\）通常称为"
+  },
+  {
+    "origin": "gain",
+    "local": "获得"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "bias",
+    "local": "偏倚"
+  },
+  {
+    "origin": "parameters; sometimes these parameters are said to control",
+    "local": "参数；有时这些参数被称为控制"
+  },
+  {
+    "origin": "contrast",
+    "local": "对比"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "brightness",
+    "local": "亮度"
+  },
+  {
+    "origin": "respectively.",
+    "local": "分别。"
+  },
+  {
+    "origin": "You can think of \\(f(x)\\) as the source image pixels and \\(g(x)\\) as the output image pixels. Then, more conveniently we can write the expression as:",
+    "local": "可以将\\（f（x）\\）视为源图像像素，将\\（g（x）\\）视为输出图像像素。那么，我们可以更方便地将表达式写成："
+  },
+  {
+    "origin": "\\[g(i,j) = \\alpha \\cdot f(i,j) + \\beta\\]",
+    "local": "beta \\ \\（g（i，j）=\\ \\ alpha \\ cdot f（i，j）\\ \\ \\ \\"
+  },
+  {
+    "origin": "where \\(i\\) and \\(j\\) indicates that the pixel is located in the",
+    "local": "其中\\（i\\）和\\（j\\）表示像素位于"
+  },
+  {
+    "origin": "i-th",
+    "local": "第i个"
+  },
+  {
+    "origin": "row and",
+    "local": "行和"
+  },
+  {
+    "origin": "j-th",
+    "local": "第j位"
+  },
+  {
+    "origin": "column.",
+    "local": "列。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "The following code performs the operation \\(g(i,j) = \\alpha \\cdot f(i,j) + \\beta\\) :",
+    "local": "以下代码执行操作\\（g（i，j）=\\alpha\\cdot f（i，j）+\\beta\\）："
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "The following code performs the operation \\(g(i,j) = \\alpha \\cdot f(i,j) + \\beta\\) :",
+    "local": "以下代码执行操作\\（g（i，j）=\\alpha\\cdot f（i，j）+\\beta\\）："
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "The following code performs the operation \\(g(i,j) = \\alpha \\cdot f(i,j) + \\beta\\) :",
+    "local": "以下代码执行操作\\（g（i，j）=\\alpha\\cdot f（i，j）+\\beta\\）："
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "We load an image using",
+    "local": "我们使用"
+  },
+  {
+    "origin": "and save it in a Mat object:",
+    "local": "并将其保存在Mat对象中："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Now, since we will make some transformations to this image, we need a new Mat object to store it. Also, we want this to have the following features:",
+    "local": "现在，因为我们要对这个图像进行一些转换，所以我们需要一个新的Mat对象来存储它。此外，我们希望它具有以下特性："
+  },
+  {
+    "origin": "Initial pixel values equal to zero",
+    "local": "初始像素值等于零"
+  },
+  {
+    "origin": "Same size and type as the original image",
+    "local": "与原始图像大小和类型相同"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "We observe that",
+    "local": "我们观察到"
+  },
+  {
+    "origin": "returns a Matlab-style zero initializer based on",
+    "local": "返回一个基于"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "image.type()",
+    "local": "image.type（）"
+  },
+  {
+    "origin": "We ask now the values of \\(\\alpha\\) and \\(\\beta\\) to be entered by the user:",
+    "local": "我们现在要求用户输入\\（\\alpha\\）和\\（\\beta\\）的值："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Now, to perform the operation \\(g(i,j) = \\alpha \\cdot f(i,j) + \\beta\\) we will access to each pixel in image. Since we are operating with BGR images, we will have three values per pixel (B, G and R), so we will also access them separately. Here is the piece of code:",
+    "local": "现在，为了执行操作\\（g（i，j）=\\alpha\\cdot f（i，j）+\\beta\\），我们将访问图像中的每个像素。由于我们使用的是BGR图像，因此每像素有三个值（B、G和R），因此我们也将分别访问它们。下面是一段代码："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Notice the following (",
+    "local": "注意以下几点("
+  },
+  {
+    "origin": "C++ code only",
+    "local": "仅C++代码"
+  },
+  {
+    "origin": "):",
+    "local": "):"
+  },
+  {
+    "origin": "To access each pixel in the images we are using this syntax:",
+    "local": "要访问图像中的每个像素，我们使用以下语法："
+  },
+  {
+    "origin": "image.at&lt;Vec3b&gt;(y,x)[c]",
+    "local": "图像.at&lt；Vec3b&gt(y、 x）[c]"
+  },
+  {
+    "origin": "where",
+    "local": "哪里"
+  },
+  {
+    "origin": "y",
+    "local": "y"
+  },
+  {
+    "origin": "is the row,",
+    "local": "是一排，"
+  },
+  {
+    "origin": "x",
+    "local": "十"
+  },
+  {
+    "origin": "is the column and",
+    "local": "是列和"
+  },
+  {
+    "origin": "c",
+    "local": "c"
+  },
+  {
+    "origin": "is B, G or R (0, 1 or 2).",
+    "local": "是B、G或R（0、1或2）。"
+  },
+  {
+    "origin": "Since the operation \\(\\alpha \\cdot p(i,j) + \\beta\\) can give values out of range or not integers (if \\(\\alpha\\) is float), we use",
+    "local": "由于运算\\（\\alpha\\cdot p（i，j）+\\beta\\）可以给出超出范围的值或不是整数（如果\\（\\alpha\\）是float），我们使用"
+  },
+  {
+    "origin": "to make sure the values are valid.",
+    "local": "以确保值有效。"
+  },
+  {
+    "origin": "Finally, we create windows and show the images, the usual way.",
+    "local": "最后，我们用通常的方式创建窗口并显示图像。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Instead of using the",
+    "local": "而不是使用"
+  },
+  {
+    "origin": "for",
+    "local": "对于"
+  },
+  {
+    "origin": "loops to access each pixel, we could have simply used this command:",
+    "local": "循环访问每个像素，我们可以简单地使用以下命令："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "where",
+    "local": "哪里"
+  },
+  {
+    "origin": "would effectively perform *new_image = a*image + beta*. However, we wanted to show you how to access each pixel. In any case, both methods give the same result but convertTo is more optimized and works a lot faster.",
+    "local": "将有效执行*new_image=a*image+beta*。但是，我们想向您展示如何访问每个像素。在任何情况下，这两种方法给出相同的结果，但convertTo更优化，工作速度更快。"
+  },
+  {
+    "origin": "Result",
+    "local": "结果"
+  },
+  {
+    "origin": "Running our code and using \\(\\alpha = 2.2\\) and \\(\\beta = 50\\)",
+    "local": "运行我们的代码并使用\\（\\alpha=2.2\\）和\\（\\beta=50\\）"
+  },
+  {
+    "origin": "We get this:",
+    "local": "我们得到这个："
+  },
+  {
+    "origin": "Practical example",
+    "local": "实例"
+  },
+  {
+    "origin": "In this paragraph, we will put into practice what we have learned to correct an underexposed image by adjusting the brightness and the contrast of the image. We will also see another technique to correct the brightness of an image called gamma correction.",
+    "local": "在这一段中，我们将把所学的通过调整图像的亮度和对比度来校正曝光不足的图像的方法付诸实践。我们还将看到另一种校正图像亮度的技术，称为gamma校正。"
+  },
+  {
+    "origin": "Brightness and contrast adjustments",
+    "local": "亮度和对比度调整"
+  },
+  {
+    "origin": "Increasing (/ decreasing) the \\(\\beta\\) value will add (/ subtract) a constant value to every pixel. Pixel values outside of the [0 ; 255] range will be saturated (i.e. a pixel value higher (/ lesser) than 255 (/ 0) will be clamped to 255 (/ 0)).",
+    "local": "增加（/减少）\\（\\beta\\）值将为每个像素增加（/减去）一个常量值。像素值超出[0；255]范围将饱和（即，高于/低于255（/0）的像素值将被钳制为255（/0））。"
+  },
+  {
+    "origin": "In light gray, histogram of the original image, in dark gray when brightness = 80 in Gimp",
+    "local": "在浅灰色中，原始图像的直方图，在Gimp中亮度=80时为深灰色"
+  },
+  {
+    "origin": "The histogram represents for each color level the number of pixels with that color level. A dark image will have many pixels with low color value and thus the histogram will present a peak in its left part. When adding a constant bias, the histogram is shifted to the right as we have added a constant bias to all the pixels.",
+    "local": "直方图表示每个颜色级别具有该颜色级别的像素数。暗图像将有许多低颜色值的像素，因此直方图将在其左侧部分呈现峰值。当添加一个恒定的偏差时，直方图会向右移动，因为我们已经为所有像素添加了一个恒定的偏差。"
+  },
+  {
+    "origin": "The \\(\\alpha\\) parameter will modify how the levels spread. If \\( \\alpha &lt; 1 \\), the color levels will be compressed and the result will be an image with less contrast.",
+    "local": "\\（\\alpha\\）参数将修改级别的传播方式。如果\\（\\alpha&lt；1\\），颜色级别将被压缩，结果将是对比度较低的图像。"
+  },
+  {
+    "origin": "In light gray, histogram of the original image, in dark gray when contrast &lt; 0 in Gimp",
+    "local": "在浅灰色时，原始图像的直方图，在深灰色时对比度&lt；Gimp中的0"
+  },
+  {
+    "origin": "Note that these histograms have been obtained using the Brightness-Contrast tool in the Gimp software. The brightness tool should be identical to the \\(\\beta\\) bias parameters but the contrast tool seems to differ to the \\(\\alpha\\) gain where the output range seems to be centered with Gimp (as you can notice in the previous histogram).",
+    "local": "请注意，这些直方图是使用Gimp软件中的亮度对比度工具获得的。亮度工具应该与\\（\\beta\\）偏差参数相同，但对比度工具似乎与\\（\\alpha\\）增益不同，在该增益中，输出范围似乎以Gimp为中心（如您在前面的直方图中所注意到的）。"
+  },
+  {
+    "origin": "It can occur that playing with the \\(\\beta\\) bias will improve the brightness but in the same time the image will appear with a slight veil as the contrast will be reduced. The \\(\\alpha\\) gain can be used to diminue this effect but due to the saturation, we will lose some details in the original bright regions.",
+    "local": "使用\\（\\beta\\）偏压可能会提高亮度，但同时图像会出现轻微的面纱，因为对比度会降低。可以使用\\（\\alpha\\）增益来减弱这种效果，但是由于饱和，我们将丢失原始明亮区域的一些细节。"
+  },
+  {
+    "origin": "Gamma correction",
+    "local": "伽马校正"
+  },
+  {
+    "origin": "Gamma correction",
+    "local": "伽马校正"
+  },
+  {
+    "origin": "can be used to correct the brightness of an image by using a non linear transformation between the input values and the mapped output values:",
+    "local": "可用于通过使用输入值和映射输出值之间的非线性变换来校正图像的亮度："
+  },
+  {
+    "origin": "\\[O = \\left( \\frac{I}{255} \\right)^{\\gamma} \\times 255\\]",
+    "local": "O左（frac{I}{255}右）{gamma}组255"
+  },
+  {
+    "origin": "As this relation is non linear, the effect will not be the same for all the pixels and will depend to their original value.",
+    "local": "由于这种关系是非线性的，因此对所有像素的效果都不相同，而是取决于它们的原始值。"
+  },
+  {
+    "origin": "Plot for different values of gamma",
+    "local": "不同伽马值的绘图"
+  },
+  {
+    "origin": "When \\( \\gamma &lt; 1 \\), the original dark regions will be brighter and the histogram will be shifted to the right whereas it will be the opposite with \\( \\gamma &gt; 1 \\).",
+    "local": "当\\（\\gamma&lt；1\\），原始的暗区域将更亮，直方图将向右移动，而与\\（\\gamma&gt；1 \\)."
+  },
+  {
+    "origin": "Correct an underexposed image",
+    "local": "校正曝光不足的图像"
+  },
+  {
+    "origin": "The following image has been corrected with: \\( \\alpha = 1.3 \\) and \\( \\beta = 40 \\).",
+    "local": "下面的图像已用修正：\\（\\alpha=1.3\\）和\\（\\beta=40\\）。"
+  },
+  {
+    "origin": "By Visem (Own work) [CC BY-SA 3.0], via Wikimedia Commons",
+    "local": "Visem（自己的作品）[CC By-SA 3.0]，通过Wikimedia Commons"
+  },
+  {
+    "origin": "The overall brightness has been improved but you can notice that the clouds are now greatly saturated due to the numerical saturation of the implementation used (",
+    "local": "整体亮度有所提高，但您可以注意到，由于所用实现的数值饱和，云现在已经大大饱和("
+  },
+  {
+    "origin": "highlight clipping",
+    "local": "突出显示剪辑"
+  },
+  {
+    "origin": "in photography).",
+    "local": "在摄影方面）。"
+  },
+  {
+    "origin": "The following image has been corrected with: \\( \\gamma = 0.4 \\).",
+    "local": "以下图像已通过以下方式更正：\\（\\gamma=0.4\\）。"
+  },
+  {
+    "origin": "By Visem (Own work) [CC BY-SA 3.0], via Wikimedia Commons",
+    "local": "Visem（自己的作品）[CC By-SA 3.0]，通过Wikimedia Commons"
+  },
+  {
+    "origin": "The gamma correction should tend to add less saturation effect as the mapping is non linear and there is no numerical saturation possible as in the previous method.",
+    "local": "gamma校正应该倾向于增加较少的饱和效应，因为映射是非线性的，并且没有像先前方法中那样的数值饱和。"
+  },
+  {
+    "origin": "Left: histogram after alpha, beta correction ; Center: histogram of the original image ; Right: histogram after the gamma correction",
+    "local": "左：alpha、beta校正后的直方图；中心：原始图像的直方图；右：伽马校正后的直方图"
+  },
+  {
+    "origin": "The previous figure compares the histograms for the three images (the y-ranges are not the same between the three histograms). You can notice that most of the pixel values are in the lower part of the histogram for the original image. After \\( \\alpha \\), \\( \\beta \\) correction, we can observe a big peak at 255 due to the saturation as well as a shift in the right. After gamma correction, the histogram is shifted to the right but the pixels in the dark regions are more shifted (see the gamma curves",
+    "local": "上图比较了三幅图像的直方图（三幅直方图之间的y范围不同）。您可以注意到，大多数像素值位于原始图像直方图的下部。经过\\（\\alpha\\），\\（\\beta\\）校正后，我们可以观察到255处的一个大峰值，这是由于饱和以及右移造成的。在gamma校正之后，直方图向右移动，但是黑暗区域中的像素移动更多（参见gamma曲线）"
+  },
+  {
+    "origin": "figure",
+    "local": "图形"
+  },
+  {
+    "origin": ") than those in the bright regions.",
+    "local": ")比那些在明亮的地区。"
+  },
+  {
+    "origin": "In this tutorial, you have seen two simple methods to adjust the contrast and the brightness of an image.",
+    "local": "在本教程中，您看到了调整图像对比度和亮度的两种简单方法。"
+  },
+  {
+    "origin": "They are basic techniques and are not intended to be used as a replacement of a raster graphics editor!",
+    "local": "它们是基本技术，不打算作为光栅图形编辑器的替代品！"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Code for the tutorial is",
+    "local": "教程的代码是"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Code for the tutorial is",
+    "local": "教程的代码是"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Code for the tutorial is",
+    "local": "教程的代码是"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Code for the gamma correction:",
+    "local": "伽马校正代码："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "A look-up table is used to improve the performance of the computation as only 256 values needs to be calculated once.",
+    "local": "查找表用于提高计算性能，因为只需计算一次256个值。"
+  },
+  {
+    "origin": "Additional resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Gamma correction in graphics rendering",
+    "local": "图形绘制中的Gamma校正"
+  },
+  {
+    "origin": "Gamma correction and images displayed on CRT monitors",
+    "local": "伽马校正和CRT显示器上显示的图像"
+  },
+  {
+    "origin": "Digital exposure techniques",
+    "local": "数字曝光技术"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

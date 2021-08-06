@@ -1,0 +1,218 @@
+[
+  {
+    "origin": "OpenCV: Smoothing Images",
+    "local": "OpenCV:平滑图像"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Smoothing Images",
+    "local": "平滑图像"
+  },
+  {
+    "origin": "Goals",
+    "local": "目标"
+  },
+  {
+    "origin": "Learn to:",
+    "local": "学会："
+  },
+  {
+    "origin": "Blur images with various low pass filters",
+    "local": "使用各种低通滤波器模糊图像"
+  },
+  {
+    "origin": "Apply custom-made filters to images (2D convolution)",
+    "local": "对图像应用自定义过滤器（二维卷积）"
+  },
+  {
+    "origin": "2D Convolution ( Image Filtering )",
+    "local": "二维卷积（图像滤波）"
+  },
+  {
+    "origin": "As in one-dimensional signals, images also can be filtered with various low-pass filters (LPF), high-pass filters (HPF), etc. LPF helps in removing noise, blurring images, etc. HPF filters help in finding edges in images.",
+    "local": "与一维信号一样，图像也可以通过各种低通滤波器（LPF）、高通滤波器（HPF）等进行滤波。LPF有助于去除噪声、模糊图像等。HPF滤波器有助于在图像中查找边缘。"
+  },
+  {
+    "origin": "OpenCV provides a function",
+    "local": "OpenCV提供了一个函数"
+  },
+  {
+    "origin": "to convolve a kernel with an image. As an example, we will try an averaging filter on an image. A 5x5 averaging filter kernel will look like the below:",
+    "local": "把一个内核和一个映像卷积起来。作为一个例子，我们将尝试对图像进行平均滤波。5x5平均值过滤器内核如下所示："
+  },
+  {
+    "origin": "\\[K = \\frac{1}{25} \\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\\\ 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\\\ 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\\\ 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\\\ 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 \\end{bmatrix}\\]",
+    "local": "\\[K=\\frac{1}{25}\\begin{bmatrix}1&amp；1和；1和；1和；1\\\\\\1和；1和；1和；1和；1\\\\\\1和；1和；1和；1和；1\\\\\\1和；1和；1和；1和；1\\\\\\1和；1和；1和；1和；1\\end{bmatrix}]"
+  },
+  {
+    "origin": "The operation works like this: keep this kernel above a pixel, add all the 25 pixels below this kernel, take the average, and replace the central pixel with the new average value. This operation is continued for all the pixels in the image. Try this code and check the result:",
+    "local": "操作是这样的：将这个内核保持在一个像素以上，将这个内核下的所有25个像素相加，取平均值，然后用新的平均值替换中心像素。对图像中的所有像素继续此操作。尝试此代码并检查结果："
+  },
+  {
+    "origin": "Result:",
+    "local": "结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Image Blurring (Image Smoothing)",
+    "local": "图像模糊（图像平滑）"
+  },
+  {
+    "origin": "Image blurring is achieved by convolving the image with a low-pass filter kernel. It is useful for removing noise. It actually removes high frequency content (eg: noise, edges) from the image. So edges are blurred a little bit in this operation (there are also blurring techniques which don't blur the edges). OpenCV provides four main types of blurring techniques.",
+    "local": "采用低通滤波核对图像进行卷积，实现图像模糊。它有助于消除噪音。它实际上是从图像中去除高频内容（例如：噪声、边缘）。所以在这个操作中边缘会模糊一点（还有一些模糊技术不会模糊边缘）。OpenCV提供了四种主要的模糊技术。"
+  },
+  {
+    "origin": "1. Averaging",
+    "local": "1.平均"
+  },
+  {
+    "origin": "This is done by convolving an image with a normalized box filter. It simply takes the average of all the pixels under the kernel area and replaces the central element. This is done by the function",
+    "local": "这是通过卷积图像与规范化盒过滤器。它只需要取内核区域下所有像素的平均值并替换中心元素。这是由函数完成的"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": ". Check the docs for more details about the kernel. We should specify the width and height of the kernel. A 3x3 normalized box filter would look like the below:",
+    "local": ". 有关内核的更多详细信息，请查看文档。我们应该指定内核的宽度和高度。3x3规格化的盒式过滤器如下所示："
+  },
+  {
+    "origin": "\\[K = \\frac{1}{9} \\begin{bmatrix} 1 &amp; 1 &amp; 1 \\\\ 1 &amp; 1 &amp; 1 \\\\ 1 &amp; 1 &amp; 1 \\end{bmatrix}\\]",
+    "local": "\\[K=\\frac{1}{9}\\begin{bmatrix}1&amp；1和；1\\\\1和；1和；1\\\\1和；1和；1\\end{bmatrix}\\]"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "If you don't want to use a normalized box filter, use",
+    "local": "如果不想使用规范化的长方体过滤器，请使用"
+  },
+  {
+    "origin": ". Pass an argument normalize=False to the function.",
+    "local": ". 将参数normalize=False传递给函数。"
+  },
+  {
+    "origin": "Check a sample demo below with a kernel of 5x5 size:",
+    "local": "请查看下面一个5x5大小内核的示例演示："
+  },
+  {
+    "origin": "Result:",
+    "local": "结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "2. Gaussian Blurring",
+    "local": "2.高斯模糊"
+  },
+  {
+    "origin": "In this method, instead of a box filter, a Gaussian kernel is used. It is done with the function,",
+    "local": "在该方法中，使用高斯核代替盒滤波器。它是用函数完成的，"
+  },
+  {
+    "origin": ". We should specify the width and height of the kernel which should be positive and odd. We also should specify the standard deviation in the X and Y directions, sigmaX and sigmaY respectively. If only sigmaX is specified, sigmaY is taken as the same as sigmaX. If both are given as zeros, they are calculated from the kernel size. Gaussian blurring is highly effective in removing Gaussian noise from an image.",
+    "local": ". 我们应该指定内核的宽度和高度，它应该是正数和奇数。我们还应该分别指定X和Y方向的标准偏差sigmaX和sigmaY。如果只指定了sigmaX，则sigmaY与sigmaX相同。如果两者都以零表示，则根据内核大小计算它们。高斯模糊是去除图像中高斯噪声的有效方法。"
+  },
+  {
+    "origin": "If you want, you can create a Gaussian kernel with the function,",
+    "local": "如果你愿意，你可以用这个函数创建一个高斯核，"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "The above code can be modified for Gaussian blurring:",
+    "local": "对于高斯模糊，可以修改上述代码："
+  },
+  {
+    "origin": "Result:",
+    "local": "结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "3. Median Blurring",
+    "local": "3.中值模糊"
+  },
+  {
+    "origin": "Here, the function",
+    "local": "在这里，函数"
+  },
+  {
+    "origin": "takes the median of all the pixels under the kernel area and the central element is replaced with this median value. This is highly effective against salt-and-pepper noise in an image. Interestingly, in the above filters, the central element is a newly calculated value which may be a pixel value in the image or a new value. But in median blurring, the central element is always replaced by some pixel value in the image. It reduces the noise effectively. Its kernel size should be a positive odd integer.",
+    "local": "取核区域下所有像素的中值，并用该中值替换中心元素。这对图像中的椒盐噪声非常有效。有趣的是，在上述滤波器中，中心元素是新计算的值，该值可以是图像中的像素值或新值。但是在中值模糊中，中心元素总是被图像中的某个像素值所代替。有效地降低了噪声。其内核大小应为正奇数整数。"
+  },
+  {
+    "origin": "In this demo, I added a 50% noise to our original image and applied median blurring. Check the result:",
+    "local": "在这个演示中，我在原始图像中添加了50%的噪声，并应用了中值模糊。检查结果："
+  },
+  {
+    "origin": "Result:",
+    "local": "结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "4. Bilateral Filtering",
+    "local": "4.双边滤波"
+  },
+  {
+    "origin": "is highly effective in noise removal while keeping edges sharp. But the operation is slower compared to other filters. We already saw that a Gaussian filter takes the neighbourhood around the pixel and finds its Gaussian weighted average. This Gaussian filter is a function of space alone, that is, nearby pixels are considered while filtering. It doesn't consider whether pixels have almost the same intensity. It doesn't consider whether a pixel is an edge pixel or not. So it blurs the edges also, which we don't want to do.",
+    "local": "在去除噪音的同时保持边缘锐利。但与其他过滤器相比，操作速度较慢。我们已经看到，高斯滤波器取像素周围的邻域，并找到其高斯加权平均值。这种高斯滤波器是空间的函数，即在滤波时考虑邻近像素。它不考虑像素是否具有几乎相同的强度。它不考虑一个像素是否是边缘像素。所以它也模糊了边缘，这是我们不想做的。"
+  },
+  {
+    "origin": "Bilateral filtering also takes a Gaussian filter in space, but one more Gaussian filter which is a function of pixel difference. The Gaussian function of space makes sure that only nearby pixels are considered for blurring, while the Gaussian function of intensity difference makes sure that only those pixels with similar intensities to the central pixel are considered for blurring. So it preserves the edges since pixels at edges will have large intensity variation.",
+    "local": "双边滤波在空间上也采用高斯滤波器，但多了一个高斯滤波器，它是像素差的函数。空间的高斯函数保证只考虑邻近像素的模糊，而强度差的高斯函数保证只考虑与中心像素强度相近的像素的模糊。因此它保留了边缘，因为边缘的像素会有很大的强度变化。"
+  },
+  {
+    "origin": "The below sample shows use of a bilateral filter (For details on arguments, visit docs).",
+    "local": "下面的示例显示双边筛选器的使用（有关参数的详细信息，请访问docs）。"
+  },
+  {
+    "origin": "Result:",
+    "local": "结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "See, the texture on the surface is gone, but the edges are still preserved.",
+    "local": "你看，表面的纹理消失了，但边缘仍然保留着。"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Details about the",
+    "local": "关于"
+  },
+  {
+    "origin": "bilateral filtering",
+    "local": "双边滤波"
+  },
+  {
+    "origin": "Exercises",
+    "local": "练习"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

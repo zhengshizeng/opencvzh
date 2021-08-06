@@ -1,0 +1,510 @@
+[
+  {
+    "origin": "OpenCV: Conversion of TensorFlow Classification Models and Launch with OpenCV Python",
+    "local": "OpenCV:TensorFlow分类模型的转换并用opencvpython启动"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Conversion of TensorFlow Classification Models and Launch with OpenCV Python",
+    "local": "转换TensorFlow分类模型并用OpenCV Python启动"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Anastasia Murzova",
+    "local": "阿纳斯塔西娅·穆佐娃"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "Goals",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "obtain frozen graphs of TensorFlow (TF) classification models",
+    "local": "得到张量流（TF）分类模型的冻结图"
+  },
+  {
+    "origin": "run converted TensorFlow model with OpenCV Python API",
+    "local": "用opencvpythonapi运行转换后的TensorFlow模型"
+  },
+  {
+    "origin": "obtain an evaluation of the TensorFlow and OpenCV DNN models",
+    "local": "获得TensorFlow和OpenCV DNN模型的评估结果"
+  },
+  {
+    "origin": "We will explore the above-listed points by the example of MobileNet architecture.",
+    "local": "我们将通过MobileNet体系结构的例子来探讨上面列出的要点。"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "Let's briefly view the key concepts involved in the pipeline of TensorFlow models transition with OpenCV API. The initial step in conversion of TensorFlow models into",
+    "local": "让我们简要地看一下使用opencvapi进行TensorFlow模型转换的管道中涉及的关键概念。将张量流模型转换为"
+  },
+  {
+    "origin": "is obtaining the frozen TF model graph. Frozen graph defines the combination of the model graph structure with kept values of the required variables, for example, weights. Usually the frozen graph is saved in",
+    "local": "得到了冻结TF模型图。冻结图定义了模型图结构与所需变量（例如权重）的保留值的组合。通常冻结的图形保存在"
+  },
+  {
+    "origin": "protobuf",
+    "local": "原虫"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ") files. After the model",
+    "local": ")文件。在模型之后"
+  },
+  {
+    "origin": "file was generated it can be read with",
+    "local": "文件是生成的，可以用它读取"
+  },
+  {
+    "origin": "function.",
+    "local": "功能。"
+  },
+  {
+    "origin": "Requirements",
+    "local": "要求"
+  },
+  {
+    "origin": "To be able to experiment with the below code you will need to install a set of libraries. We will use a virtual environment with python3.7+ for this:",
+    "local": "为了能够使用下面的代码进行实验，您需要安装一组库。为此，我们将使用python3.7+虚拟环境："
+  },
+  {
+    "origin": "For OpenCV-Python building from source, follow the corresponding instructions from the",
+    "local": "对于从源代码构建OpenCV Python，请按照"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Before you start the installation of the libraries, you can customize the",
+    "local": "在开始安装库之前，可以自定义"
+  },
+  {
+    "origin": "requirements.txt",
+    "local": "要求.txt"
+  },
+  {
+    "origin": ", excluding or including (for example,",
+    "local": "，排除或包括（例如，"
+  },
+  {
+    "origin": ") some dependencies. The below line initiates requirements installation into the previously activated virtual environment:",
+    "local": ")一些依赖项。下一行启动将需求安装到先前激活的虚拟环境中："
+  },
+  {
+    "origin": "Practice",
+    "local": "练习"
+  },
+  {
+    "origin": "In this part we are going to cover the following points:",
+    "local": "在本部分中，我们将介绍以下几点："
+  },
+  {
+    "origin": "create a TF classification model conversion pipeline and provide the inference",
+    "local": "创建TF分类模型转换管道并提供推理"
+  },
+  {
+    "origin": "evaluate and test TF classification models",
+    "local": "评估和测试TF分类模型"
+  },
+  {
+    "origin": "If you'd like merely to run evaluation or test model pipelines, the \"Model Conversion Pipeline\" tutorial part can be skipped.",
+    "local": "如果您只想运行评估或测试模型管道，可以跳过“模型转换管道”教程部分。"
+  },
+  {
+    "origin": "Model Conversion Pipeline",
+    "local": "模型转换管道"
+  },
+  {
+    "origin": "The code in this subchapter is located in the",
+    "local": "本分章中的代码位于"
+  },
+  {
+    "origin": "module and can be executed with the line:",
+    "local": "模块，可以通过以下行执行："
+  },
+  {
+    "origin": "The following code contains the description of the below-listed steps:",
+    "local": "以下代码包含下列步骤的说明："
+  },
+  {
+    "origin": "instantiate TF model",
+    "local": "实例化TF模型"
+  },
+  {
+    "origin": "create TF frozen graph",
+    "local": "创建TF冻结图"
+  },
+  {
+    "origin": "read TF frozen graph with OpenCV API",
+    "local": "用opencvapi读取TF冻结图"
+  },
+  {
+    "origin": "prepare input data",
+    "local": "准备输入数据"
+  },
+  {
+    "origin": "provide inference",
+    "local": "提供推论"
+  },
+  {
+    "origin": "To provide model inference we will use the below",
+    "local": "为了提供模型推断，我们将使用下面的"
+  },
+  {
+    "origin": "squirrel photo",
+    "local": "松鼠照片"
+  },
+  {
+    "origin": "(under",
+    "local": "（低于"
+  },
+  {
+    "origin": "CC0",
+    "local": "立方厘米"
+  },
+  {
+    "origin": "license) corresponding to ImageNet class ID 335:",
+    "local": "许可证）对应于ImageNet类ID 335："
+  },
+  {
+    "origin": "Classification model input image",
+    "local": "分类模型输入图像"
+  },
+  {
+    "origin": "For the label decoding of the obtained prediction, we also need",
+    "local": "对于获得的预测的标签解码，我们还需要"
+  },
+  {
+    "origin": "file, which contains the full list of the ImageNet classes.",
+    "local": "文件，其中包含ImageNet类的完整列表。"
+  },
+  {
+    "origin": "Let's go deeper into each step by the example of pretrained TF MobileNet:",
+    "local": "让我们以预训练TF MobileNet为例，深入了解每一步："
+  },
+  {
+    "origin": "instantiate TF model:",
+    "local": "实例化TF模型："
+  },
+  {
+    "origin": "create TF frozen graph",
+    "local": "创建TF冻结图"
+  },
+  {
+    "origin": "After the successful execution of the above code, we will get a frozen graph in",
+    "local": "在成功执行上述代码之后，我们将在"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "read TF frozen graph with with",
+    "local": "读取TF冻结图形"
+  },
+  {
+    "origin": "passing the obtained in the previous step",
+    "local": "通过上一步获得的"
+  },
+  {
+    "origin": "into it:",
+    "local": "其中："
+  },
+  {
+    "origin": "prepare input data with cv2.dnn.blobFromImage function:",
+    "local": "使用cv2.dnn.blobFromImage函数准备输入数据："
+  },
+  {
+    "origin": "Please, pay attention at the preprocessing order in the cv2.dnn.blobFromImage function. Firstly, the mean value is subtracted and only then pixel values are multiplied by the defined scale. Therefore, to reproduce the image preprocessing pipeline from the TF",
+    "local": "请注意cv2.dnn.blobFromImage函数中的预处理顺序。首先，减去平均值，然后将像素值乘以定义的比例。因此，要从TF中重现图像预处理流水线"
+  },
+  {
+    "origin": "function, we multiply",
+    "local": "函数，我们乘"
+  },
+  {
+    "origin": "by",
+    "local": "通过"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "As a result, 4-dimensional",
+    "local": "因此，四维"
+  },
+  {
+    "origin": "was obtained:",
+    "local": "已获得："
+  },
+  {
+    "origin": "provide OpenCV",
+    "local": "提供OpenCV"
+  },
+  {
+    "origin": "inference:",
+    "local": "推论："
+  },
+  {
+    "origin": "After the above code execution we will get the following output:",
+    "local": "执行上述代码后，我们将得到以下输出："
+  },
+  {
+    "origin": "provide TF MobileNet inference:",
+    "local": "提供TF MobileNet推断："
+  },
+  {
+    "origin": "To fit TF model input,",
+    "local": "为了适应TF模型输入，"
+  },
+  {
+    "origin": "was transposed:",
+    "local": "被调换了："
+  },
+  {
+    "origin": "TF inference results are the following:",
+    "local": "TF推断结果如下："
+  },
+  {
+    "origin": "As it can be seen from the experiments OpenCV and TF inference results are equal.",
+    "local": "从实验中可以看出，OpenCV和TF的推理结果是一致的。"
+  },
+  {
+    "origin": "Evaluation of the Models",
+    "local": "模型的评估"
+  },
+  {
+    "origin": "The proposed in",
+    "local": "中提出的"
+  },
+  {
+    "origin": "module allows to run the full evaluation pipeline on the ImageNet dataset and test execution for the following TensorFlow classification models:",
+    "local": "模块允许在ImageNet数据集上运行完整的评估管道，并测试以下TensorFlow分类模型的执行："
+  },
+  {
+    "origin": "vgg16",
+    "local": "vgg16型"
+  },
+  {
+    "origin": "vgg19",
+    "local": "vgg19型"
+  },
+  {
+    "origin": "resnet50",
+    "local": "50系列"
+  },
+  {
+    "origin": "resnet101",
+    "local": "系列101"
+  },
+  {
+    "origin": "resnet152",
+    "local": "系列152"
+  },
+  {
+    "origin": "densenet121",
+    "local": "登森网121"
+  },
+  {
+    "origin": "densenet169",
+    "local": "登塞内特169"
+  },
+  {
+    "origin": "densenet201",
+    "local": "登森网201"
+  },
+  {
+    "origin": "inceptionresnetv2",
+    "local": "开端"
+  },
+  {
+    "origin": "inceptionv3",
+    "local": "接收v3"
+  },
+  {
+    "origin": "mobilenet",
+    "local": "手机"
+  },
+  {
+    "origin": "mobilenetv2",
+    "local": "移动netv2"
+  },
+  {
+    "origin": "nasnetlarge",
+    "local": "困乏的"
+  },
+  {
+    "origin": "nasnetmobile",
+    "local": "nasnetmobile公司"
+  },
+  {
+    "origin": "xception",
+    "local": "Xception公司"
+  },
+  {
+    "origin": "This list can be also extended with further appropriate evaluation pipeline configuration.",
+    "local": "此列表还可以通过进一步适当的评估管道配置进行扩展。"
+  },
+  {
+    "origin": "Evaluation Mode",
+    "local": "评价模式"
+  },
+  {
+    "origin": "To below line represents running of the module in the evaluation mode:",
+    "local": "下一行表示模块在评估模式下的运行："
+  },
+  {
+    "origin": "Chosen from the list classification model will be read into OpenCV",
+    "local": "从列表中选择的分类模型将被读入OpenCV"
+  },
+  {
+    "origin": "object. Evaluation results of TF and OpenCV models (accuracy, inference time, L1) will be written into the log file. Inference time values will be also depicted in a chart to generalize the obtained model information.",
+    "local": "对象。TF和OpenCV模型的评估结果（准确性、推断时间、L1）将写入日志文件。推断时间值也将在图表中描述，以概括获得的模型信息。"
+  },
+  {
+    "origin": "Necessary evaluation configurations are defined in the",
+    "local": "必要的评估配置在"
+  },
+  {
+    "origin": "test_config.py",
+    "local": "测试配置.py"
+  },
+  {
+    "origin": "and can be modified in accordance with actual paths of data location::",
+    "local": "并且可以根据数据位置的实际路径进行修改："
+  },
+  {
+    "origin": "The values from",
+    "local": "来自的值"
+  },
+  {
+    "origin": "can be customized in accordance with chosen model.",
+    "local": "可根据所选型号定做。"
+  },
+  {
+    "origin": "To initiate the evaluation of the TensorFlow MobileNet, run the following line:",
+    "local": "要开始评估TensorFlow MobileNet，请运行以下行："
+  },
+  {
+    "origin": "After script launch, the log file with evaluation data will be generated in",
+    "local": "脚本启动后，将在中生成包含评估数据的日志文件"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Test Mode",
+    "local": "测试模式"
+  },
+  {
+    "origin": "The below line represents running of the module in the test mode, namely it provides the steps for the model inference:",
+    "local": "下一行表示模块在测试模式下的运行，即提供模型推断的步骤："
+  },
+  {
+    "origin": "Here",
+    "local": "在这里"
+  },
+  {
+    "origin": "key defines whether you'd like to parametrize the model test process with some particular values or use the default values, for example,",
+    "local": "键定义您是想用一些特定的值来参数化模型测试过程，还是使用默认值，例如，"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Test configuration is represented in",
+    "local": "测试配置如所示"
+  },
+  {
+    "origin": "test_config.py",
+    "local": "测试配置.py"
+  },
+  {
+    "origin": "class:",
+    "local": "班级："
+  },
+  {
+    "origin": "The default image preprocessing options are defined in",
+    "local": "中定义了默认的图像预处理选项"
+  },
+  {
+    "origin": ". For instance, for MobileNet:",
+    "local": "是 啊。例如，对于MobileNet："
+  },
+  {
+    "origin": "The basis of the model testing is represented in",
+    "local": "模型测试的基础如所示"
+  },
+  {
+    "origin": "samples/dnn/classification.py",
+    "local": "样本/dnn/classification.py"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "can be executed autonomously with provided converted model in",
+    "local": "可以使用中提供的转换模型自主执行"
+  },
+  {
+    "origin": "and populated parameters for",
+    "local": "和填充的参数"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "To reproduce from scratch the described in \"Model Conversion Pipeline\" OpenCV steps with",
+    "local": "要从头开始复制“模型转换管道”中描述的OpenCV步骤，请使用"
+  },
+  {
+    "origin": "execute the below line:",
+    "local": "执行以下行："
+  },
+  {
+    "origin": "The network prediction is depicted in the top left corner of the output window:",
+    "local": "网络预测显示在输出窗口的左上角："
+  },
+  {
+    "origin": "TF MobileNet OpenCV inference output",
+    "local": "TF MobileNet OpenCV推断输出"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

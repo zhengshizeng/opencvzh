@@ -1,0 +1,502 @@
+[
+  {
+    "origin": "OpenCV: Affine Transformations",
+    "local": "OpenCV:仿射变换"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Affine Transformations",
+    "local": "仿射转换"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "安娜·华曼"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": "使用OpenCV函数"
+  },
+  {
+    "origin": "to implement simple remapping routines.",
+    "local": "实现简单的重映射例程。"
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": "使用OpenCV函数"
+  },
+  {
+    "origin": "to obtain a \\(2 \\times 3\\) rotation matrix",
+    "local": "获得\\（2乘以3\\）旋转矩阵"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "What is an Affine Transformation?",
+    "local": "什么是仿射变换？"
+  },
+  {
+    "origin": "A transformation that can be expressed in the form of a",
+    "local": "一种可以用符号的形式表示的变换"
+  },
+  {
+    "origin": "matrix multiplication",
+    "local": "矩阵乘法"
+  },
+  {
+    "origin": "(linear transformation) followed by a",
+    "local": "（线性变换）后跟"
+  },
+  {
+    "origin": "vector addition",
+    "local": "矢量加法"
+  },
+  {
+    "origin": "(translation).",
+    "local": "（翻译）。"
+  },
+  {
+    "origin": "From the above, we can use an Affine Transformation to express:",
+    "local": "由上可知，我们可以用仿射变换来表示："
+  },
+  {
+    "origin": "Rotations (linear transformation)",
+    "local": "旋转（线性变换）"
+  },
+  {
+    "origin": "Translations (vector addition)",
+    "local": "翻译（矢量加法）"
+  },
+  {
+    "origin": "Scale operations (linear transformation)",
+    "local": "缩放操作（线性变换）"
+  },
+  {
+    "origin": "you can see that, in essence, an Affine Transformation represents a",
+    "local": "可以看出，在本质上，仿射变换表示"
+  },
+  {
+    "origin": "relation",
+    "local": "关系"
+  },
+  {
+    "origin": "between two images.",
+    "local": "在两个图像之间。"
+  },
+  {
+    "origin": "The usual way to represent an Affine Transformation is by using a \\(2 \\times 3\\) matrix.",
+    "local": "表示仿射变换的常用方法是使用\\（2乘以3）矩阵。"
+  },
+  {
+    "origin": "\\[ A = \\begin{bmatrix} a_{00} &amp; a_{01} \\\\ a_{10} &amp; a_{11} \\end{bmatrix}_{2 \\times 2} B = \\begin{bmatrix} b_{00} \\\\ b_{10} \\end{bmatrix}_{2 \\times 1} \\]",
+    "local": "\\[A=\\begin{bmatrix}A{00}&amp；a{01}\\\\a{10}&amp；a{11}\\end{bmatrix}\\uu2\\times 2}B=\\begin{bmatrix}B{00}\\\\B{10}\\end{bmatrix}\\u2\\times 1}\\]"
+  },
+  {
+    "origin": "\\[ M = \\begin{bmatrix} A &amp; B \\end{bmatrix} = \\begin{bmatrix} a_{00} &amp; a_{01} &amp; b_{00} \\\\ a_{10} &amp; a_{11} &amp; b_{10} \\end{bmatrix}_{2 \\times 3} \\]",
+    "local": "\\[M=\\begin{bmatrix}A&amp；B\\end{bmatrix}=\\begin{bmatrix}a{00}&amp；a{01}&amp；b{00}\\\\a{10}&amp；a{11}&amp；b{10}\\end{bmatrix}{2\\times 3}\\]"
+  },
+  {
+    "origin": "Considering that we want to transform a 2D vector \\(X = \\begin{bmatrix}x \\\\ y\\end{bmatrix}\\) by using \\(A\\) and \\(B\\), we can do the same with:",
+    "local": "考虑到我们想通过使用\\（a\\）和\\（B\\）来变换2D向量\\（X=\\begin{bmatrix}X\\\\y\\end{bmatrix}\\），我们可以用以下方法进行相同的变换："
+  },
+  {
+    "origin": "\\(T = A \\cdot \\begin{bmatrix}x \\\\ y\\end{bmatrix} + B\\) or \\(T = M \\cdot [x, y, 1]^{T}\\)",
+    "local": "\\（T=A\\cdot\\begin{bmatrix}x\\\\y\\end{bmatrix}+B\\）或\\（T=M\\cdot[x，y，1]^{T}\\）"
+  },
+  {
+    "origin": "\\[T = \\begin{bmatrix} a_{00}x + a_{01}y + b_{00} \\\\ a_{10}x + a_{11}y + b_{10} \\end{bmatrix}\\]",
+    "local": "\\[t=\\ begin{bMatrix}a{00}x+a{01}y+b{00}\\ a{10}x+a{11}y+b{10}\\ end{bMatrix}\\"
+  },
+  {
+    "origin": "How do we get an Affine Transformation?",
+    "local": "如何得到仿射变换？"
+  },
+  {
+    "origin": "We mentioned that an Affine Transformation is basically a",
+    "local": "我们提到仿射变换基本上是"
+  },
+  {
+    "origin": "relation",
+    "local": "关系"
+  },
+  {
+    "origin": "between two images. The information about this relation can come, roughly, in two ways:",
+    "local": "在两个图像之间。关于这种关系的信息大致有两种方式："
+  },
+  {
+    "origin": "We know both \\(X\\) and T and we also know that they are related. Then our task is to find \\(M\\)",
+    "local": "我们知道\\（X\\）和T，我们也知道它们是相关的。那么我们的任务就是找到\\（M\\）"
+  },
+  {
+    "origin": "We know \\(M\\) and \\(X\\). To obtain \\(T\\) we only need to apply \\(T = M \\cdot X\\). Our information for \\(M\\) may be explicit (i.e. have the 2-by-3 matrix) or it can come as a geometric relation between points.",
+    "local": "我们知道\\（M\\）和\\（X\\）。要获得\\（T\\），我们只需要应用\\（T=M\\cdot X\\）。我们的\\（M\\）信息可能是明确的（即具有2×3矩阵），也可能是点之间的几何关系。"
+  },
+  {
+    "origin": "Let's explain this in a better way (b). Since \\(M\\) relates 2 images, we can analyze the simplest case in which it relates three points in both images. Look at the figure below:",
+    "local": "让我们用更好的方式来解释（b）。因为\\（M\\）涉及两个图像，我们可以分析最简单的情况，它涉及两个图像中的三个点。请看下图："
+  },
+  {
+    "origin": "the points 1, 2 and 3 (forming a triangle in image 1) are mapped into image 2, still forming a triangle, but now they have changed notoriously. If we find the Affine Transformation with these 3 points (you can choose them as you like), then we can apply this found relation to all the pixels in an image.",
+    "local": "点1、2和3（在图1中形成一个三角形）被映射到图2中，仍然形成一个三角形，但现在它们已经发生了臭名昭著的变化。如果我们找到这三个点的仿射变换（你可以随意选择），那么我们就可以把这个找到的关系应用到图像中的所有像素。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "What does this program do?",
+    "local": "这个程序做什么？"
+  },
+  {
+    "origin": "Loads an image",
+    "local": "加载图像"
+  },
+  {
+    "origin": "Applies an Affine Transform to the image. This transform is obtained from the relation between three points. We use the function",
+    "local": "对图像应用仿射变换。这个变换是由三个点之间的关系得到的。我们使用函数"
+  },
+  {
+    "origin": "for that purpose.",
+    "local": "为此目的。"
+  },
+  {
+    "origin": "Applies a Rotation to the image after being transformed. This rotation is with respect to the image center",
+    "local": "对变换后的图像应用旋转。此旋转是相对于图像中心的"
+  },
+  {
+    "origin": "Waits until the user exits the program",
+    "local": "等待用户退出程序"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "The tutorial's code is shown below. You can also download it",
+    "local": "教程的代码如下所示。你也可以下载"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "The tutorial's code is shown below. You can also download it",
+    "local": "教程的代码如下所示。你也可以下载"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "The tutorial's code is shown below. You can also download it",
+    "local": "教程的代码如下所示。你也可以下载"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Load an image:",
+    "local": "加载图像："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Affine Transform:",
+    "local": "仿射变换："
+  },
+  {
+    "origin": "As we explained in lines above, we need two sets of 3 points to derive the affine transform relation. Have a look:",
+    "local": "正如我们在上面几行中所解释的，我们需要两组3个点来推导仿射变换关系。看一看："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "You may want to draw these points to get a better idea on how they change. Their locations are approximately the same as the ones depicted in the example figure (in the Theory section). You may note that the size and orientation of the triangle defined by the 3 points change.",
+    "local": "你可以画出这些点来更好地了解它们是如何变化的。它们的位置与示例图（理论部分）中描述的位置大致相同。您可能会注意到，由3个点定义的三角形的大小和方向会发生变化。"
+  },
+  {
+    "origin": "Armed with both sets of points, we calculate the Affine Transform by using OpenCV function",
+    "local": "利用这两组点，利用OpenCV函数计算仿射变换"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "We get a \\(2 \\times 3\\) matrix as an output (in this case",
+    "local": "我们得到一个\\（2乘以3\\）矩阵作为输出（在本例中）"
+  },
+  {
+    "origin": "warp_mat",
+    "local": "经纱垫"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "We then apply the Affine Transform just found to the src image",
+    "local": "然后对src图像进行仿射变换"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "with the following arguments:",
+    "local": "使用以下参数："
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ": Input image",
+    "local": "：输入图像"
+  },
+  {
+    "origin": "warp_dst",
+    "local": "扭曲度"
+  },
+  {
+    "origin": ": Output image",
+    "local": "：输出图像"
+  },
+  {
+    "origin": "warp_mat",
+    "local": "经纱垫"
+  },
+  {
+    "origin": ": Affine transform",
+    "local": "：仿射变换"
+  },
+  {
+    "origin": ": The desired size of the output image",
+    "local": "：输出图像的所需大小"
+  },
+  {
+    "origin": "We just got our first transformed image! We will display it in one bit. Before that, we also want to rotate it...",
+    "local": "我们刚得到第一个变形的图像！我们将在一位中显示它。在那之前，我们还要旋转它。。。"
+  },
+  {
+    "origin": "Rotate:",
+    "local": "旋转："
+  },
+  {
+    "origin": "To rotate an image, we need to know two things:",
+    "local": "要旋转图像，我们需要知道两件事："
+  },
+  {
+    "origin": "The center with respect to which the image will rotate",
+    "local": "图像将围绕其旋转的中心"
+  },
+  {
+    "origin": "The angle to be rotated. In OpenCV a positive angle is counter-clockwise",
+    "local": "要旋转的角度。在OpenCV中，正角度是逆时针方向"
+  },
+  {
+    "origin": "Optional:",
+    "local": "可选："
+  },
+  {
+    "origin": "A scale factor",
+    "local": "比例因子"
+  },
+  {
+    "origin": "We define these parameters with the following snippet:",
+    "local": "我们使用以下代码段定义这些参数："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "We generate the rotation matrix with the OpenCV function",
+    "local": "我们用OpenCV函数生成旋转矩阵"
+  },
+  {
+    "origin": ", which returns a \\(2 \\times 3\\) matrix (in this case",
+    "local": "，它返回一个\\（2乘以3\\）矩阵（在本例中"
+  },
+  {
+    "origin": "rot_mat",
+    "local": "旋转垫"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "We now apply the found rotation to the output of our previous Transformation:",
+    "local": "现在，我们将找到的旋转应用于上一个变换的输出："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Finally, we display our results in two windows plus the original image for good measure:",
+    "local": "最后，我们将结果显示在两个窗口中，加上原始图像，以便更好地测量："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "We just have to wait until the user exits the program",
+    "local": "我们只需要等到用户退出程序"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Result",
+    "local": "结果"
+  },
+  {
+    "origin": "After compiling the code above, we can give it the path of an image as argument. For instance, for a picture like:",
+    "local": "编译完上面的代码后，我们可以给它一个图像的路径作为参数。例如，对于以下图片："
+  },
+  {
+    "origin": "after applying the first Affine Transform we obtain:",
+    "local": "应用第一个仿射变换后，我们得到："
+  },
+  {
+    "origin": "and finally, after applying a negative rotation (remember negative means clockwise) and a scale factor, we get:",
+    "local": "最后，在应用负旋转（记住负的意思是顺时针）和比例因子后，我们得到："
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:35为OpenCV生成，&#160；"
+  }
+]

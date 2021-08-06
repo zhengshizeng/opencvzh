@@ -1,0 +1,706 @@
+[
+  {
+    "origin": "OpenCV: Matrix multiplication",
+    "local": "OpenCV：矩阵乘法"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "Matrix multiplication",
+    "local": "矩阵乘法"
+  },
+  {
+    "origin": "&raquo;",
+    "local": "&引用；"
+  },
+  {
+    "origin": "&raquo;",
+    "local": "&引用；"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "(const float *src1, size_t src1_step, const float *src2, size_t src2_step, float alpha, const float *src3, size_t src3_step, float beta, float *dst, size_t dst_step, int m, int n, int k, int flags)",
+    "local": "（const float*src1，size\\t src1\\u step，const float*src2，size\\t src2\\u step，float alpha，const float*src3，size\\t src3\\u step，float beta，float*dst，size\\t dst\\u step，int m，int n，int k，int flags）"
+  },
+  {
+    "origin": "(const float *src1, size_t src1_step, const float *src2, size_t src2_step, float alpha, const float *src3, size_t src3_step, float beta, float *dst, size_t dst_step, int m, int n, int k, int flags)",
+    "local": "（const float*src1，size\\t src1\\u step，const float*src2，size\\t src2\\u step，float alpha，const float*src3，size\\t src3\\u step，float beta，float*dst，size\\t dst\\u step，int m，int n，int k，int flags）"
+  },
+  {
+    "origin": "(const double *src1, size_t src1_step, const double *src2, size_t src2_step, double alpha, const double *src3, size_t src3_step, double beta, double *dst, size_t dst_step, int m, int n, int k, int flags)",
+    "local": "（const double*src1，size\\t src1\\u step，const double*src2，size\\t src2\\u step，double alpha，const double*src3，size\\t src3\\u step，double beta，double*dst，size\\t dst\\u step，int m，int n，int k，int flags）"
+  },
+  {
+    "origin": "(const double *src1, size_t src1_step, const double *src2, size_t src2_step, double alpha, const double *src3, size_t src3_step, double beta, double *dst, size_t dst_step, int m, int n, int k, int flags)",
+    "local": "（const double*src1，size\\t src1\\u step，const double*src2，size\\t src2\\u step，double alpha，const double*src3，size\\t src3\\u step，double beta，double*dst，size\\t dst\\u step，int m，int n，int k，int flags）"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "The function performs generalized matrix multiplication similar to the gemm functions in BLAS level 3: \\(D = \\alpha*AB+\\beta*C\\)",
+    "local": "该函数执行与BLAS级别3中的gemm函数类似的广义矩阵乘法：\\（D=\\alpha*AB+\\beta*C\\）"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "src1",
+    "local": "src1型"
+  },
+  {
+    "origin": "pointer to input \\(M\\times N\\) matrix \\(A\\) or \\(A^T\\) stored in row major order.",
+    "local": "指向按行大顺序存储的输入\\（M\\times N\\）矩阵\\（A\\）或\\（A^T\\）的指针。"
+  },
+  {
+    "origin": "src1_step",
+    "local": "src1\\U步骤"
+  },
+  {
+    "origin": "number of bytes between two consequent rows of matrix \\(A\\) or \\(A^T\\).",
+    "local": "矩阵\\（A\\）或\\（A^T\\）的两个后续行之间的字节数。"
+  },
+  {
+    "origin": "src2",
+    "local": "src2型"
+  },
+  {
+    "origin": "pointer to input \\(N\\times K\\) matrix \\(B\\) or \\(B^T\\) stored in row major order.",
+    "local": "指向按行大顺序存储的输入\\（N乘以K\\）矩阵\\（B\\）或\\（B^T\\）的指针。"
+  },
+  {
+    "origin": "src2_step",
+    "local": "src2\\U步骤"
+  },
+  {
+    "origin": "number of bytes between two consequent rows of matrix \\(B\\) or \\(B^T\\).",
+    "local": "矩阵\\（B\\）或\\（B^T\\）的两个后续行之间的字节数。"
+  },
+  {
+    "origin": "alpha",
+    "local": "阿尔法"
+  },
+  {
+    "origin": "\\(\\alpha\\) multiplier before \\(AB\\)",
+    "local": "\\（\\alpha\\）乘数在\\（AB\\）之前"
+  },
+  {
+    "origin": "src3",
+    "local": "src3型"
+  },
+  {
+    "origin": "pointer to input \\(M\\times K\\) matrix \\(C\\) or \\(C^T\\) stored in row major order.",
+    "local": "指向按行大顺序存储的输入\\（M乘以K\\）矩阵\\（C\\）或\\（C^T\\）的指针。"
+  },
+  {
+    "origin": "src3_step",
+    "local": "src3\\U步骤"
+  },
+  {
+    "origin": "number of bytes between two consequent rows of matrix \\(C\\) or \\(C^T\\).",
+    "local": "矩阵\\（C\\）或\\（C^T\\）的两个后续行之间的字节数。"
+  },
+  {
+    "origin": "beta",
+    "local": "贝塔"
+  },
+  {
+    "origin": "\\(\\beta\\) multiplier before \\(C\\)",
+    "local": "\\（\\beta\\）乘数在\\（C\\）之前"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "pointer to input \\(M\\times K\\) matrix \\(D\\) stored in row major order.",
+    "local": "指向按行主顺序存储的输入\\（M\\乘以K\\）矩阵\\（D\\）的指针。"
+  },
+  {
+    "origin": "dst_step",
+    "local": "dst\\U步骤"
+  },
+  {
+    "origin": "number of bytes between two consequent rows of matrix \\(D\\).",
+    "local": "矩阵\\（D\\）的两个后续行之间的字节数。"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": "number of rows in matrix \\(A\\) or \\(A^T\\), equals to number of rows in matrix \\(D\\)",
+    "local": "矩阵\\（A\\）或\\（A^T\\）中的行数等于矩阵\\（D\\）中的行数"
+  },
+  {
+    "origin": "n",
+    "local": "n"
+  },
+  {
+    "origin": "number of columns in matrix \\(A\\) or \\(A^T\\)",
+    "local": "矩阵\\（A\\）或\\（A^T\\）中的列数"
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": "number of columns in matrix \\(B\\) or \\(B^T\\), equals to number of columns in matrix \\(D\\)",
+    "local": "矩阵\\（B\\）或\\（B^T\\）中的列数等于矩阵\\（D\\）中的列数"
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": "algorithm options (combination of CV_HAL_GEMM_1_T, ...).",
+    "local": "算法选项（CV\\u HAL\\u GEMM\\u 1\\u T的组合，…）。"
+  },
+  {
+    "origin": "Function Documentation",
+    "local": "功能文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "hal_ni_gemm32f()",
+    "local": "我很抱歉。"
+  },
+  {
+    "origin": "int hal_ni_gemm32f",
+    "local": "国际机场"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src1",
+    "local": "src1型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src1_step",
+    "local": "src1\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src2",
+    "local": "src2型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src2_step",
+    "local": "src2\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "alpha",
+    "local": "阿尔法"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src3",
+    "local": "src3型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src3_step",
+    "local": "src3\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "beta",
+    "local": "贝塔"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst_step",
+    "local": "dst\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "n",
+    "local": "n"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "hal_ni_gemm32fc()",
+    "local": "我很抱歉。"
+  },
+  {
+    "origin": "int hal_ni_gemm32fc",
+    "local": "国际航空公司gemm32fc"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src1",
+    "local": "src1型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src1_step",
+    "local": "src1\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src2",
+    "local": "src2型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src2_step",
+    "local": "src2\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "alpha",
+    "local": "阿尔法"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src3",
+    "local": "src3型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src3_step",
+    "local": "src3\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "beta",
+    "local": "贝塔"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst_step",
+    "local": "dst\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "n",
+    "local": "n"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "hal_ni_gemm64f()",
+    "local": "jquery文件（）"
+  },
+  {
+    "origin": "int hal_ni_gemm64f",
+    "local": "国际航空公司gemm64f"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src1",
+    "local": "src1型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src1_step",
+    "local": "src1\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src2",
+    "local": "src2型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src2_step",
+    "local": "src2\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "alpha",
+    "local": "阿尔法"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src3",
+    "local": "src3型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src3_step",
+    "local": "src3\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "beta",
+    "local": "贝塔"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst_step",
+    "local": "dst\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "n",
+    "local": "n"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "hal_ni_gemm64fc()",
+    "local": "真不敢相信（）"
+  },
+  {
+    "origin": "int hal_ni_gemm64fc",
+    "local": "国际航空公司gemm64fc"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src1",
+    "local": "src1型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src1_step",
+    "local": "src1\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src2",
+    "local": "src2型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src2_step",
+    "local": "src2\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "alpha",
+    "local": "阿尔法"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src3",
+    "local": "src3型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "src3_step",
+    "local": "src3\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "beta",
+    "local": "贝塔"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst_step",
+    "local": "dst\\U步骤"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "n",
+    "local": "n"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:42为OpenCV生成，&#160；"
+  }
+]

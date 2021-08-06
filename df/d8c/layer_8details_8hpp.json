@@ -1,0 +1,370 @@
+[
+  {
+    "origin": "OpenCV: opencv2/dnn/layer.details.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "layer.details.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "(type, class)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(#type,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;class&gt;);",
+    "local": ""
+  },
+  {
+    "origin": "Registers layer class in runtime.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(type, class)",
+    "local": ""
+  },
+  {
+    "origin": "Registers layer class on module load time.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(type, constructorFunc)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(#type, constructorFunc);",
+    "local": ""
+  },
+  {
+    "origin": "Registers layer constructor in runtime.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(type, constructorFunc)&#160;&#160;&#160;static",
+    "local": ""
+  },
+  {
+    "origin": "__LayerStaticRegisterer_##type(#type, constructorFunc);",
+    "local": ""
+  },
+  {
+    "origin": "Registers layer constructor on module load time.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename LayerClass &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(LayerParams &amp;params)",
+    "local": ""
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_REGISTER_LAYER_CLASS",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_REGISTER_LAYER_CLASS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "type,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(#type,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;class&gt;);",
+    "local": ""
+  },
+  {
+    "origin": "Registers layer class in runtime.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "string, containing type name of the layer.",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "C++ class, derived from Layer.",
+    "local": ""
+  },
+  {
+    "origin": "This macros must be placed inside the function code.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_REGISTER_LAYER_CLASS_STATIC",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_REGISTER_LAYER_CLASS_STATIC",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "type,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Registers layer class on module load time.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "string, containing type name of the layer.",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "C++ class, derived from Layer.",
+    "local": ""
+  },
+  {
+    "origin": "This macros must be placed outside the function code.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_REGISTER_LAYER_FUNC",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_REGISTER_LAYER_FUNC",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "type,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(#type, constructorFunc);",
+    "local": ""
+  },
+  {
+    "origin": "Registers layer constructor in runtime.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "string, containing type name of the layer.",
+    "local": ""
+  },
+  {
+    "origin": "constructorFunc",
+    "local": ""
+  },
+  {
+    "origin": "pointer to the function of type LayerRegister::Constructor, which creates the layer.",
+    "local": ""
+  },
+  {
+    "origin": "This macros must be placed inside the function code.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_REGISTER_LAYER_FUNC_STATIC",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_REGISTER_LAYER_FUNC_STATIC",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "type,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;static",
+    "local": ""
+  },
+  {
+    "origin": "__LayerStaticRegisterer_##type(#type, constructorFunc);",
+    "local": ""
+  },
+  {
+    "origin": "Registers layer constructor on module load time.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "string, containing type name of the layer.",
+    "local": ""
+  },
+  {
+    "origin": "constructorFunc",
+    "local": ""
+  },
+  {
+    "origin": "pointer to the function of type LayerRegister::Constructor, which creates the layer.",
+    "local": ""
+  },
+  {
+    "origin": "This macros must be placed outside the function code.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

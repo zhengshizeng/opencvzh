@@ -1,0 +1,3550 @@
+[
+  {
+    "origin": "OpenCV: cv::GComputation Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "class represents a captured computation graph.",
+    "local": ""
+  },
+  {
+    "origin": "objects form boundaries for expression code user writes with G-API, allowing to compile and execute it.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "typedef std::function&lt;",
+    "local": ""
+  },
+  {
+    "origin": "()&gt;",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;gen)",
+    "local": ""
+  },
+  {
+    "origin": "Define a computation using a generator function.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;ins,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;outs)",
+    "local": ""
+  },
+  {
+    "origin": "Generic",
+    "local": ""
+  },
+  {
+    "origin": "constructor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in,",
+    "local": ""
+  },
+  {
+    "origin": "out)",
+    "local": ""
+  },
+  {
+    "origin": "Defines an unary (one input – one output) computation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in,",
+    "local": ""
+  },
+  {
+    "origin": "out)",
+    "local": ""
+  },
+  {
+    "origin": "Defines an unary (one input – one output) computation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in1,",
+    "local": ""
+  },
+  {
+    "origin": "in2,",
+    "local": ""
+  },
+  {
+    "origin": "out)",
+    "local": ""
+  },
+  {
+    "origin": "Defines a binary (two inputs – one output) computation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in1,",
+    "local": ""
+  },
+  {
+    "origin": "in2,",
+    "local": ""
+  },
+  {
+    "origin": "out)",
+    "local": ""
+  },
+  {
+    "origin": "Defines a binary (two inputs – one output) computation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;ins, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;outs)",
+    "local": ""
+  },
+  {
+    "origin": "Defines a computation with arbitrary input/output number.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;ins,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;outs,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;args={})",
+    "local": ""
+  },
+  {
+    "origin": "Compile graph on-the-fly and immediately execute it on the inputs data vectors.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;out,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;args={})",
+    "local": ""
+  },
+  {
+    "origin": "Execute an unary computation (with compilation on the fly)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;out,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;args={})",
+    "local": ""
+  },
+  {
+    "origin": "Execute an unary computation (with compilation on the fly)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in1,",
+    "local": ""
+  },
+  {
+    "origin": "in2,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;out,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;args={})",
+    "local": ""
+  },
+  {
+    "origin": "Execute a binary computation (with compilation on the fly)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in1,",
+    "local": ""
+  },
+  {
+    "origin": "in2,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;out,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;args={})",
+    "local": ""
+  },
+  {
+    "origin": "Execute an binary computation (with compilation on the fly)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;ins, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;outs,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;args={})",
+    "local": ""
+  },
+  {
+    "origin": "Execute a computation with arbitrary number of inputs/outputs (with compilation on-the-fly).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;in_metas,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;args={})",
+    "local": ""
+  },
+  {
+    "origin": "Compile the computation for specific input format(s).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "auto",
+    "local": ""
+  },
+  {
+    "origin": "(const Ts &amp;... metas) -&gt; typename std::enable_if&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Ts... &gt;::value,",
+    "local": ""
+  },
+  {
+    "origin": "&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "auto",
+    "local": ""
+  },
+  {
+    "origin": "(const Ts &amp;... meta_and_compile_args) -&gt; typename std::enable_if&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Ts... &gt;::value &amp;&amp;std::is_same&lt;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Ts... &gt; &gt;::value,",
+    "local": ""
+  },
+  {
+    "origin": "&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;in_metas,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;args={})",
+    "local": ""
+  },
+  {
+    "origin": "Compile the computation for streaming mode.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;args={})",
+    "local": ""
+  },
+  {
+    "origin": "Compile the computation for streaming mode.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "auto",
+    "local": ""
+  },
+  {
+    "origin": "(const Ts &amp;... metas) -&gt; typename std::enable_if&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Ts... &gt;::value,",
+    "local": ""
+  },
+  {
+    "origin": "&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "auto",
+    "local": ""
+  },
+  {
+    "origin": "(const Ts &amp;... meta_and_compile_args) -&gt; typename std::enable_if&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Ts... &gt;::value &amp;&amp;std::is_same&lt;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Ts... &gt; &gt;::value,",
+    "local": ""
+  },
+  {
+    "origin": "&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts, int... IIs&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const std::tuple&lt; Ts... &gt; &amp;meta_and_compile_args, detail::Seq&lt; IIs... &gt;)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;in_metas,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;args)",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "class represents a captured computation graph.",
+    "local": ""
+  },
+  {
+    "origin": "objects form boundaries for expression code user writes with G-API, allowing to compile and execute it.",
+    "local": ""
+  },
+  {
+    "origin": "G-API computations are defined with input/output data objects. G-API will track automatically which operations connect specified outputs to the inputs, forming up a call graph to be executed. The below example expresses calculation of Sobel operator for edge detection ( \\(G = \\sqrt{G_x^2 + G_y^2}\\)):",
+    "local": ""
+  },
+  {
+    "origin": "Full pipeline can be now captured with this object declaration:",
+    "local": ""
+  },
+  {
+    "origin": "Input/output data objects on which a call graph should be reconstructed are passed using special wrappers",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ". G-API will track automatically which operations form a path from inputs to outputs and build the execution graph appropriately.",
+    "local": ""
+  },
+  {
+    "origin": "Note that",
+    "local": ""
+  },
+  {
+    "origin": "doesn't take ownership on data objects it is defined. Moreover, multiple",
+    "local": ""
+  },
+  {
+    "origin": "objects may be defined on the same expressions, e.g. a smaller pipeline which expects that image gradients are already pre-calculated may be defined like this:",
+    "local": ""
+  },
+  {
+    "origin": "The resulting graph would expect two inputs and produce one output. In this case, it doesn't matter if gx/gy data objects are results of",
+    "local": ""
+  },
+  {
+    "origin": "operators – G-API will stop unrolling expressions and building the underlying graph one reaching this data objects.",
+    "local": ""
+  },
+  {
+    "origin": "The way how",
+    "local": ""
+  },
+  {
+    "origin": "is defined is important as its definition specifies graph",
+    "local": ""
+  },
+  {
+    "origin": "protocol",
+    "local": ""
+  },
+  {
+    "origin": "– the way how the graph should be used. Protocol is defined by number of inputs, number of outputs, and shapes of inputs and outputs.",
+    "local": ""
+  },
+  {
+    "origin": "In the above example, sobelEdge expects one",
+    "local": ""
+  },
+  {
+    "origin": "on input and produces one",
+    "local": ""
+  },
+  {
+    "origin": "; while sobelEdgeSub expects two Mats on input and produces one",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "'s protocol defines how other computation methods should be used –",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ". For example, if a graph is defined on two",
+    "local": ""
+  },
+  {
+    "origin": "inputs, two",
+    "local": ""
+  },
+  {
+    "origin": "objects have to be passed to",
+    "local": ""
+  },
+  {
+    "origin": "for execution.",
+    "local": ""
+  },
+  {
+    "origin": "checks protocol correctness in runtime so passing a different number of objects in",
+    "local": ""
+  },
+  {
+    "origin": "or passing",
+    "local": ""
+  },
+  {
+    "origin": "instead of",
+    "local": ""
+  },
+  {
+    "origin": "there would compile well as a C++ source but raise an exception in run-time. G-API also comes with a typed wrapper cv::GComputationT&lt;&gt; which introduces this type-checking in compile-time.",
+    "local": ""
+  },
+  {
+    "origin": "itself is a thin object which just captures what the graph is. The compiled graph (which actually process data) is represented by class",
+    "local": ""
+  },
+  {
+    "origin": ". Use",
+    "local": ""
+  },
+  {
+    "origin": "method to generate a compiled graph with given compile options.",
+    "local": ""
+  },
+  {
+    "origin": "can also be used to process data with implicit graph compilation on-the-fly, see",
+    "local": ""
+  },
+  {
+    "origin": "for details.",
+    "local": ""
+  },
+  {
+    "origin": "is a reference-counted object – once defined, all its copies will refer to the same instance.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "Member Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "Generator",
+    "local": ""
+  },
+  {
+    "origin": "typedef std::function&lt;",
+    "local": ""
+  },
+  {
+    "origin": "()&gt;",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GComputation()",
+    "local": ""
+  },
+  {
+    "origin": "[1/7]",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::GComputation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "gen",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "ins, outs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in1, in2, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Define a computation using a generator function.",
+    "local": ""
+  },
+  {
+    "origin": "Graph can be defined in-place directly at the moment of its construction with a lambda:",
+    "local": ""
+  },
+  {
+    "origin": "This may be useful since all temporary objects (cv::GMats) and namespaces can be localized to scope of lambda, without contaminating the parent scope with probably unnecessary objects and information.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "gen",
+    "local": ""
+  },
+  {
+    "origin": "generator function which returns a",
+    "local": ""
+  },
+  {
+    "origin": ", see Generator.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GComputation()",
+    "local": ""
+  },
+  {
+    "origin": "[2/7]",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::GComputation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "ins",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "outs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "ins, outs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in1, in2, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Generic",
+    "local": ""
+  },
+  {
+    "origin": "constructor.",
+    "local": ""
+  },
+  {
+    "origin": "Constructs a new graph with a given protocol, specified as a flow of operations connecting input/output objects. Throws if the passed boundaries are invalid, e.g. if there's no functional dependency (path) between given outputs and inputs.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "ins",
+    "local": ""
+  },
+  {
+    "origin": "Input data vector.",
+    "local": ""
+  },
+  {
+    "origin": "outs",
+    "local": ""
+  },
+  {
+    "origin": "Output data vector.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Don't construct GProtoInputArgs/GProtoOutputArgs objects directly, use",
+    "local": ""
+  },
+  {
+    "origin": "/cv",
+    "local": ""
+  },
+  {
+    "origin": "wrapper functions instead.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GComputation()",
+    "local": ""
+  },
+  {
+    "origin": "[3/7]",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::GComputation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "ins, outs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in1, in2, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Defines an unary (one input – one output) computation.",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "in",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "of the defined unary computation",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "of the defined unary computation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GComputation()",
+    "local": ""
+  },
+  {
+    "origin": "[4/7]",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::GComputation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "ins, outs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in1, in2, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Defines an unary (one input – one output) computation.",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "in",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "of the defined unary computation",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "of the defined unary computation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GComputation()",
+    "local": ""
+  },
+  {
+    "origin": "[5/7]",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::GComputation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "in2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "ins, outs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in1, in2, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Defines a binary (two inputs – one output) computation.",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "in1",
+    "local": ""
+  },
+  {
+    "origin": "first input",
+    "local": ""
+  },
+  {
+    "origin": "of the defined binary computation",
+    "local": ""
+  },
+  {
+    "origin": "in2",
+    "local": ""
+  },
+  {
+    "origin": "second input",
+    "local": ""
+  },
+  {
+    "origin": "of the defined binary computation",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "of the defined binary computation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GComputation()",
+    "local": ""
+  },
+  {
+    "origin": "[6/7]",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::GComputation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "in2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "ins, outs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in1, in2, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Defines a binary (two inputs – one output) computation.",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "in1",
+    "local": ""
+  },
+  {
+    "origin": "first input",
+    "local": ""
+  },
+  {
+    "origin": "of the defined binary computation",
+    "local": ""
+  },
+  {
+    "origin": "in2",
+    "local": ""
+  },
+  {
+    "origin": "second input",
+    "local": ""
+  },
+  {
+    "origin": "of the defined binary computation",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "of the defined binary computation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GComputation()",
+    "local": ""
+  },
+  {
+    "origin": "[7/7]",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::GComputation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "ins",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "outs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "ins, outs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;GComputation object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation(",
+    "local": ""
+  },
+  {
+    "origin": "in1, in2, out",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Defines a computation with arbitrary input/output number.",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "ins",
+    "local": ""
+  },
+  {
+    "origin": "vector of inputs GMats for this computation",
+    "local": ""
+  },
+  {
+    "origin": "outs",
+    "local": ""
+  },
+  {
+    "origin": "vector of outputs GMats for this computation",
+    "local": ""
+  },
+  {
+    "origin": "Use this overload for cases when number of computation inputs/outputs is not known in compile-time – e.g. when graph is programmatically generated to build an image pyramid with the given number of levels, etc.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "apply()",
+    "local": ""
+  },
+  {
+    "origin": "[1/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::GComputation::apply",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "ins",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "outs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.apply(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Compile graph on-the-fly and immediately execute it on the inputs data vectors.",
+    "local": ""
+  },
+  {
+    "origin": "Number of input/output data objects must match",
+    "local": ""
+  },
+  {
+    "origin": "'s protocol, also types of host data objects (",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ") must match the shapes of data objects from protocol (",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "). If there's a mismatch, a run-time exception will be generated.",
+    "local": ""
+  },
+  {
+    "origin": "Internally, a",
+    "local": ""
+  },
+  {
+    "origin": "object is created for the given input format configuration, which then is executed on the input data immediately.",
+    "local": ""
+  },
+  {
+    "origin": "caches compiled objects produced within",
+    "local": ""
+  },
+  {
+    "origin": "– if this method would be called next time with the same input parameters (image formats, image resolution, etc), the underlying compiled graph will be reused without recompilation. If new metadata doesn't match the cached one, the underlying compiled graph is regenerated.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "always triggers a compilation process and produces a new",
+    "local": ""
+  },
+  {
+    "origin": "object regardless if a similar one has been cached via",
+    "local": ""
+  },
+  {
+    "origin": "or not.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "ins",
+    "local": ""
+  },
+  {
+    "origin": "vector of input data to process. Don't create GRunArgs object manually, use",
+    "local": ""
+  },
+  {
+    "origin": "wrapper instead.",
+    "local": ""
+  },
+  {
+    "origin": "outs",
+    "local": ""
+  },
+  {
+    "origin": "vector of output data to fill results in.",
+    "local": ""
+  },
+  {
+    "origin": "objects may be empty in this vector, G-API will automatically initialize it with the required format &amp; dimensions. Don't create GRunArgsP object manually, use",
+    "local": ""
+  },
+  {
+    "origin": "wrapper instead.",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "a list of compilation arguments to pass to the underlying compilation process. Don't create GCompileArgs object manually, use",
+    "local": ""
+  },
+  {
+    "origin": "wrapper instead.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "apply()",
+    "local": ""
+  },
+  {
+    "origin": "[2/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::GComputation::apply",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.apply(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Execute an unary computation (with compilation on the fly)",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "in",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "for unary computation",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "for unary computation",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "compilation arguments for underlying compilation process.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "apply()",
+    "local": ""
+  },
+  {
+    "origin": "[3/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::GComputation::apply",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.apply(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Execute an unary computation (with compilation on the fly)",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "in",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "for unary computation",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "for unary computation",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "compilation arguments for underlying compilation process.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "apply()",
+    "local": ""
+  },
+  {
+    "origin": "[4/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::GComputation::apply",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "in2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.apply(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Execute a binary computation (with compilation on the fly)",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "in1",
+    "local": ""
+  },
+  {
+    "origin": "first input",
+    "local": ""
+  },
+  {
+    "origin": "for binary computation",
+    "local": ""
+  },
+  {
+    "origin": "in2",
+    "local": ""
+  },
+  {
+    "origin": "second input",
+    "local": ""
+  },
+  {
+    "origin": "for binary computation",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "for binary computation",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "compilation arguments for underlying compilation process.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "apply()",
+    "local": ""
+  },
+  {
+    "origin": "[5/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::GComputation::apply",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "in1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "in2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.apply(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Execute an binary computation (with compilation on the fly)",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "in1",
+    "local": ""
+  },
+  {
+    "origin": "first input",
+    "local": ""
+  },
+  {
+    "origin": "for binary computation",
+    "local": ""
+  },
+  {
+    "origin": "in2",
+    "local": ""
+  },
+  {
+    "origin": "second input",
+    "local": ""
+  },
+  {
+    "origin": "for binary computation",
+    "local": ""
+  },
+  {
+    "origin": "out",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "for binary computation",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "compilation arguments for underlying compilation process.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "apply()",
+    "local": ""
+  },
+  {
+    "origin": "[6/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::GComputation::apply",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "ins",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "outs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.apply(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Execute a computation with arbitrary number of inputs/outputs (with compilation on-the-fly).",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "ins",
+    "local": ""
+  },
+  {
+    "origin": "vector of input",
+    "local": ""
+  },
+  {
+    "origin": "objects to process by the computation.",
+    "local": ""
+  },
+  {
+    "origin": "outs",
+    "local": ""
+  },
+  {
+    "origin": "vector of output",
+    "local": ""
+  },
+  {
+    "origin": "objects to produce by the computation.",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "compilation arguments for underlying compilation process.",
+    "local": ""
+  },
+  {
+    "origin": "Numbers of elements in ins/outs vectors must match numbers of inputs/outputs which were used to define this",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "compile()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::compile",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "in_metas",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Compile the computation for specific input format(s).",
+    "local": ""
+  },
+  {
+    "origin": "This method triggers compilation process and produces a new",
+    "local": ""
+  },
+  {
+    "origin": "object which then can process data of the given format. Passing data with different format to the compiled computation will generate a run-time exception.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "in_metas",
+    "local": ""
+  },
+  {
+    "origin": "vector of input metadata configuration. Grab metadata from real data objects (like",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ") using",
+    "local": ""
+  },
+  {
+    "origin": ", or create it on your own.",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "compilation arguments for this compilation process. Compilation arguments directly affect what kind of executable object would be produced, e.g. which kernels (and thus, devices) would be used to execute computation.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": ", an executable computation compiled specifically for the given input parameters.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "compile()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "auto cv::GComputation::compile",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const Ts &amp;...",
+    "local": ""
+  },
+  {
+    "origin": "metas",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "-&gt; typename std::enable_if&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Ts...&gt;::value,",
+    "local": ""
+  },
+  {
+    "origin": "&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Takes a variadic parameter pack with metadata descriptors for which a compiled object needs to be produced.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": ", an executable computation compiled specifically for the given input parameters.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "compile()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "auto cv::GComputation::compile",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const Ts &amp;...",
+    "local": ""
+  },
+  {
+    "origin": "meta_and_compile_args",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "-&gt; typename std::enable_if&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Ts...&gt;::value &amp;&amp; std::is_same&lt;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Ts...&gt; &gt;::value,",
+    "local": ""
+  },
+  {
+    "origin": "&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Takes a variadic parameter pack with metadata descriptors for which a compiled object needs to be produced, followed by GCompileArgs object representing compilation arguments for this process.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": ", an executable computation compiled specifically for the given input parameters.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "compileStreaming()",
+    "local": ""
+  },
+  {
+    "origin": "[1/5]",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::compileStreaming",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "in_metas",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.compileStreaming(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.compileStreaming(",
+    "local": ""
+  },
+  {
+    "origin": "[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Compile the computation for streaming mode.",
+    "local": ""
+  },
+  {
+    "origin": "This method triggers compilation process and produces a new",
+    "local": ""
+  },
+  {
+    "origin": "object which then can process video stream data of the given format. Passing a stream in a different format to the compiled computation will generate a run-time exception.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "in_metas",
+    "local": ""
+  },
+  {
+    "origin": "vector of input metadata configuration. Grab metadata from real data objects (like",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ") using",
+    "local": ""
+  },
+  {
+    "origin": ", or create it on your own.",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "compilation arguments for this compilation process. Compilation arguments directly affect what kind of executable object would be produced, e.g. which kernels (and thus, devices) would be used to execute computation.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": ", a streaming-oriented executable computation compiled specifically for the given input parameters.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "compileStreaming()",
+    "local": ""
+  },
+  {
+    "origin": "[2/5]",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::compileStreaming",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.compileStreaming(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.compileStreaming(",
+    "local": ""
+  },
+  {
+    "origin": "[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Compile the computation for streaming mode.",
+    "local": ""
+  },
+  {
+    "origin": "This method triggers compilation process and produces a new",
+    "local": ""
+  },
+  {
+    "origin": "object which then can process video stream data in any format. Underlying mechanisms will be adjusted to every new input video stream automatically, but please note that",
+    "local": ""
+  },
+  {
+    "origin": "not all",
+    "local": ""
+  },
+  {
+    "origin": "existing backends support this (see reshape()).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": "compilation arguments for this compilation process. Compilation arguments directly affect what kind of executable object would be produced, e.g. which kernels (and thus, devices) would be used to execute computation.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": ", a streaming-oriented executable computation compiled for any input image format.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "compileStreaming()",
+    "local": ""
+  },
+  {
+    "origin": "[3/5]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "auto cv::GComputation::compileStreaming",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const Ts &amp;...",
+    "local": ""
+  },
+  {
+    "origin": "metas",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "-&gt; typename std::enable_if&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Ts...&gt;::value,",
+    "local": ""
+  },
+  {
+    "origin": "&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.compileStreaming(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.compileStreaming(",
+    "local": ""
+  },
+  {
+    "origin": "[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Takes a variadic parameter pack with metadata descriptors for which a compiled object needs to be produced.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": ", a streaming-oriented executable computation compiled specifically for the given input parameters.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "compileStreaming()",
+    "local": ""
+  },
+  {
+    "origin": "[4/5]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "auto cv::GComputation::compileStreaming",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const Ts &amp;...",
+    "local": ""
+  },
+  {
+    "origin": "meta_and_compile_args",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "-&gt; typename std::enable_if&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Ts...&gt;::value &amp;&amp; std::is_same&lt;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Ts...&gt; &gt;::value,",
+    "local": ""
+  },
+  {
+    "origin": "&gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.compileStreaming(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.compileStreaming(",
+    "local": ""
+  },
+  {
+    "origin": "[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Takes a variadic parameter pack with metadata descriptors for which a compiled object needs to be produced, followed by GCompileArgs object representing compilation arguments for this process.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": ", a streaming-oriented executable computation compiled specifically for the given input parameters.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "compileStreaming()",
+    "local": ""
+  },
+  {
+    "origin": "[5/5]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts, int... IIs&gt;",
+    "local": ""
+  },
+  {
+    "origin": "cv::GComputation::compileStreaming",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::tuple&lt; Ts... &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "meta_and_compile_args",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "detail::Seq&lt; IIs... &gt;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.compileStreaming(",
+    "local": ""
+  },
+  {
+    "origin": "callback[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.GComputation.compileStreaming(",
+    "local": ""
+  },
+  {
+    "origin": "[, args]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "recompile()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::GComputation::recompile",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "in_metas",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "args",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/gapi/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:43 for OpenCV by",
+    "local": ""
+  }
+]

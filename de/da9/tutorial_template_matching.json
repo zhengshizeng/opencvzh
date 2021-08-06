@@ -1,0 +1,670 @@
+[
+  {
+    "origin": "OpenCV: Template Matching",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Template Matching",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "to search for matches between an image patch and an input image",
+    "local": ""
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "to find the maximum and minimum values (as well as their positions) in a given array.",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "What is template matching?",
+    "local": ""
+  },
+  {
+    "origin": "Template matching is a technique for finding areas of an image that match (are similar) to a template image (patch).",
+    "local": ""
+  },
+  {
+    "origin": "While the patch must be a rectangle it may be that not all of the rectangle is relevant. In such a case, a mask can be used to isolate the portion of the patch that should be used to find the match.",
+    "local": ""
+  },
+  {
+    "origin": "How does it work?",
+    "local": ""
+  },
+  {
+    "origin": "We need two primary components:",
+    "local": ""
+  },
+  {
+    "origin": "Source image (I):",
+    "local": ""
+  },
+  {
+    "origin": "The image in which we expect to find a match to the template image",
+    "local": ""
+  },
+  {
+    "origin": "Template image (T):",
+    "local": ""
+  },
+  {
+    "origin": "The patch image which will be compared to the source image",
+    "local": ""
+  },
+  {
+    "origin": "our goal is to detect the highest matching area:",
+    "local": ""
+  },
+  {
+    "origin": "To identify the matching area, we have to",
+    "local": ""
+  },
+  {
+    "origin": "compare",
+    "local": ""
+  },
+  {
+    "origin": "the template image against the source image by sliding it:",
+    "local": ""
+  },
+  {
+    "origin": "By",
+    "local": ""
+  },
+  {
+    "origin": "sliding",
+    "local": ""
+  },
+  {
+    "origin": ", we mean moving the patch one pixel at a time (left to right, up to down). At each location, a metric is calculated so it represents how \"good\" or \"bad\" the match at that location is (or how similar the patch is to that particular area of the source image).",
+    "local": ""
+  },
+  {
+    "origin": "For each location of",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": "over",
+    "local": ""
+  },
+  {
+    "origin": "I",
+    "local": ""
+  },
+  {
+    "origin": ", you",
+    "local": ""
+  },
+  {
+    "origin": "store",
+    "local": ""
+  },
+  {
+    "origin": "the metric in the",
+    "local": ""
+  },
+  {
+    "origin": "result matrix",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ". Each location \\((x,y)\\) in",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "contains the match metric:",
+    "local": ""
+  },
+  {
+    "origin": "the image above is the result",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "of sliding the patch with a metric",
+    "local": ""
+  },
+  {
+    "origin": "TM_CCORR_NORMED",
+    "local": ""
+  },
+  {
+    "origin": ". The brightest locations indicate the highest matches. As you can see, the location marked by the red circle is probably the one with the highest value, so that location (the rectangle formed by that point as a corner and width and height equal to the patch image) is considered the match.",
+    "local": ""
+  },
+  {
+    "origin": "In practice, we locate the highest value (or lower, depending of the type of matching method) in the",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "matrix, using the function",
+    "local": ""
+  },
+  {
+    "origin": "How does the mask work?",
+    "local": ""
+  },
+  {
+    "origin": "If masking is needed for the match, three components are required:",
+    "local": ""
+  },
+  {
+    "origin": "Source image (I):",
+    "local": ""
+  },
+  {
+    "origin": "The image in which we expect to find a match to the template image",
+    "local": ""
+  },
+  {
+    "origin": "Template image (T):",
+    "local": ""
+  },
+  {
+    "origin": "The patch image which will be compared to the source image",
+    "local": ""
+  },
+  {
+    "origin": "Mask image (M):",
+    "local": ""
+  },
+  {
+    "origin": "The mask, a grayscale image that masks the template",
+    "local": ""
+  },
+  {
+    "origin": "Only two matching methods currently accept a mask: TM_SQDIFF and TM_CCORR_NORMED (see below for explanation of all the matching methods available in opencv).",
+    "local": ""
+  },
+  {
+    "origin": "The mask must have the same dimensions as the template",
+    "local": ""
+  },
+  {
+    "origin": "The mask should have a CV_8U or CV_32F depth and the same number of channels as the template image. In CV_8U case, the mask values are treated as binary, i.e. zero and non-zero. In CV_32F case, the values should fall into [0..1] range and the template pixels will be multiplied by the corresponding mask pixel values. Since the input images in the sample have the CV_8UC3 type, the mask is also read as color image.",
+    "local": ""
+  },
+  {
+    "origin": "Which are the matching methods available in OpenCV?",
+    "local": ""
+  },
+  {
+    "origin": "Good question. OpenCV implements Template matching in the function",
+    "local": ""
+  },
+  {
+    "origin": ". The available methods are 6:",
+    "local": ""
+  },
+  {
+    "origin": "method=TM_SQDIFF",
+    "local": ""
+  },
+  {
+    "origin": "\\[R(x,y)= \\sum _{x&#39;,y&#39;} (T(x&#39;,y&#39;)-I(x+x&#39;,y+y&#39;))^2\\]",
+    "local": ""
+  },
+  {
+    "origin": "method=TM_SQDIFF_NORMED",
+    "local": ""
+  },
+  {
+    "origin": "\\[R(x,y)= \\frac{\\sum_{x&#39;,y&#39;} (T(x&#39;,y&#39;)-I(x+x&#39;,y+y&#39;))^2}{\\sqrt{\\sum_{x&#39;,y&#39;}T(x&#39;,y&#39;)^2 \\cdot \\sum_{x&#39;,y&#39;} I(x+x&#39;,y+y&#39;)^2}}\\]",
+    "local": ""
+  },
+  {
+    "origin": "method=TM_CCORR",
+    "local": ""
+  },
+  {
+    "origin": "\\[R(x,y)= \\sum _{x&#39;,y&#39;} (T(x&#39;,y&#39;) \\cdot I(x+x&#39;,y+y&#39;))\\]",
+    "local": ""
+  },
+  {
+    "origin": "method=TM_CCORR_NORMED",
+    "local": ""
+  },
+  {
+    "origin": "\\[R(x,y)= \\frac{\\sum_{x&#39;,y&#39;} (T(x&#39;,y&#39;) \\cdot I(x+x&#39;,y+y&#39;))}{\\sqrt{\\sum_{x&#39;,y&#39;}T(x&#39;,y&#39;)^2 \\cdot \\sum_{x&#39;,y&#39;} I(x+x&#39;,y+y&#39;)^2}}\\]",
+    "local": ""
+  },
+  {
+    "origin": "method=TM_CCOEFF",
+    "local": ""
+  },
+  {
+    "origin": "\\[R(x,y)= \\sum _{x&#39;,y&#39;} (T&#39;(x&#39;,y&#39;) \\cdot I&#39;(x+x&#39;,y+y&#39;))\\]",
+    "local": ""
+  },
+  {
+    "origin": "where",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{array}{l} T&#39;(x&#39;,y&#39;)=T(x&#39;,y&#39;) - 1/(w \\cdot h) \\cdot \\sum _{x&#39;&#39;,y&#39;&#39;} T(x&#39;&#39;,y&#39;&#39;) \\\\ I&#39;(x+x&#39;,y+y&#39;)=I(x+x&#39;,y+y&#39;) - 1/(w \\cdot h) \\cdot \\sum _{x&#39;&#39;,y&#39;&#39;} I(x+x&#39;&#39;,y+y&#39;&#39;) \\end{array}\\]",
+    "local": ""
+  },
+  {
+    "origin": "method=TM_CCOEFF_NORMED",
+    "local": ""
+  },
+  {
+    "origin": "\\[R(x,y)= \\frac{ \\sum_{x&#39;,y&#39;} (T&#39;(x&#39;,y&#39;) \\cdot I&#39;(x+x&#39;,y+y&#39;)) }{ \\sqrt{\\sum_{x&#39;,y&#39;}T&#39;(x&#39;,y&#39;)^2 \\cdot \\sum_{x&#39;,y&#39;} I&#39;(x+x&#39;,y+y&#39;)^2} }\\]",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "What does this program do?",
+    "local": ""
+  },
+  {
+    "origin": "Loads an input image, an image patch (",
+    "local": ""
+  },
+  {
+    "origin": "template",
+    "local": ""
+  },
+  {
+    "origin": "), and optionally a mask",
+    "local": ""
+  },
+  {
+    "origin": "Perform a template matching procedure by using the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "with any of the 6 matching methods described before. The user can choose the method by entering its selection in the Trackbar. If a mask is supplied, it will only be used for the methods that support masking",
+    "local": ""
+  },
+  {
+    "origin": "Normalize the output of the matching procedure",
+    "local": ""
+  },
+  {
+    "origin": "Localize the location with higher matching probability",
+    "local": ""
+  },
+  {
+    "origin": "Draw a rectangle around the area corresponding to the highest match",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Declare some global variables, such as the image, template and result matrices, as well as the match method and the window names:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Load the source image, template, and optionally, if supported for the matching method, a mask:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Create the Trackbar to enter the kind of matching method to be used. When a change is detected the callback function is called.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Let's check out the callback function. First, it makes a copy of the source image:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Perform the template matching operation. The arguments are naturally the input image",
+    "local": ""
+  },
+  {
+    "origin": "I",
+    "local": ""
+  },
+  {
+    "origin": ", the template",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": ", the result",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "and the match_method (given by the Trackbar), and optionally the mask image",
+    "local": ""
+  },
+  {
+    "origin": "M",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "We normalize the results:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "We localize the minimum and maximum values in the result matrix",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "by using",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "For the first two methods ( TM_SQDIFF and MT_SQDIFF_NORMED ) the best match are the lowest values. For all the others, higher values represent better matches. So, we save the corresponding value in the",
+    "local": ""
+  },
+  {
+    "origin": "matchLoc",
+    "local": ""
+  },
+  {
+    "origin": "variable:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Display the source image and the result matrix. Draw a rectangle around the highest possible matching area:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "Testing our program with an input image such as:",
+    "local": ""
+  },
+  {
+    "origin": "and a template image:",
+    "local": ""
+  },
+  {
+    "origin": "Generate the following result matrices (first row are the standard methods SQDIFF, CCORR and CCOEFF, second row are the same methods in its normalized version). In the first column, the darkest is the better match, for the other two columns, the brighter a location, the higher the match.",
+    "local": ""
+  },
+  {
+    "origin": "Result_0",
+    "local": ""
+  },
+  {
+    "origin": "Result_1",
+    "local": ""
+  },
+  {
+    "origin": "Result_2",
+    "local": ""
+  },
+  {
+    "origin": "Result_3",
+    "local": ""
+  },
+  {
+    "origin": "Result_4",
+    "local": ""
+  },
+  {
+    "origin": "Result_5",
+    "local": ""
+  },
+  {
+    "origin": "The right match is shown below (black rectangle around the face of the guy at the right). Notice that CCORR and CCDEFF gave erroneous best matches, however their normalized version did it right, this may be due to the fact that we are only considering the \"highest match\" and not the other possible high matches.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": ""
+  }
+]

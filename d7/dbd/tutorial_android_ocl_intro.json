@@ -1,0 +1,578 @@
+[
+  {
+    "origin": "OpenCV: Use OpenCL in Android camera preview based CV application",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Use OpenCL in Android camera preview based CV application",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Andrey Pavlenko",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial is deprecated.",
+    "local": ""
+  },
+  {
+    "origin": "This guide was designed to help you in use of",
+    "local": ""
+  },
+  {
+    "origin": "OpenCL &trade;",
+    "local": ""
+  },
+  {
+    "origin": "in Android camera preview based CV application. It was written for",
+    "local": ""
+  },
+  {
+    "origin": "Eclipse-based ADT tools",
+    "local": ""
+  },
+  {
+    "origin": "(deprecated by Google now), but it easily can be reproduced with",
+    "local": ""
+  },
+  {
+    "origin": "Android Studio",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial assumes you have the following installed and configured:",
+    "local": ""
+  },
+  {
+    "origin": "JDK",
+    "local": ""
+  },
+  {
+    "origin": "Android SDK and NDK",
+    "local": ""
+  },
+  {
+    "origin": "Eclipse IDE with ADT and CDT plugins",
+    "local": ""
+  },
+  {
+    "origin": "It also assumes that you are familiar with Android Java and JNI programming basics. If you need help with anything of the above, you may refer to our",
+    "local": ""
+  },
+  {
+    "origin": "guide.",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial also assumes you have an Android operated device with OpenCL enabled.",
+    "local": ""
+  },
+  {
+    "origin": "The related source code is located within OpenCV samples at",
+    "local": ""
+  },
+  {
+    "origin": "opencv/samples/android/tutorial-4-opencl",
+    "local": ""
+  },
+  {
+    "origin": "directory.",
+    "local": ""
+  },
+  {
+    "origin": "Preface",
+    "local": ""
+  },
+  {
+    "origin": "Using",
+    "local": ""
+  },
+  {
+    "origin": "GPGPU",
+    "local": ""
+  },
+  {
+    "origin": "via OpenCL for applications performance enhancements is quite a modern trend now. Some CV algo-s (e.g. image filtering) run much faster on a GPU than on a CPU. Recently it has become possible on Android OS.",
+    "local": ""
+  },
+  {
+    "origin": "The most popular CV application scenario for an Android operated device is starting camera in preview mode, applying some CV algo to every frame and displaying the preview frames modified by that CV algo.",
+    "local": ""
+  },
+  {
+    "origin": "Let's consider how we can use OpenCL in this scenario. In particular let's try two ways: direct calls to OpenCL API and recently introduced OpenCV T-API (aka",
+    "local": ""
+  },
+  {
+    "origin": "Transparent API",
+    "local": ""
+  },
+  {
+    "origin": ") - implicit OpenCL accelerations of some OpenCV algo-s.",
+    "local": ""
+  },
+  {
+    "origin": "Application structure",
+    "local": ""
+  },
+  {
+    "origin": "Camera API",
+    "local": ""
+  },
+  {
+    "origin": "allows use of OpenGL texture as a target for preview frames. Android API level 21 brings a new",
+    "local": ""
+  },
+  {
+    "origin": "Camera2 API",
+    "local": ""
+  },
+  {
+    "origin": "that provides much more control over the camera settings and usage modes, it allows several targets for preview frames and OpenGL texture in particular.",
+    "local": ""
+  },
+  {
+    "origin": "Having a preview frame in an OpenGL texture is a good deal for using OpenCL because there is an",
+    "local": ""
+  },
+  {
+    "origin": "OpenGL-OpenCL Interoperability API (cl_khr_gl_sharing)",
+    "local": ""
+  },
+  {
+    "origin": ", allowing sharing OpenGL texture data with OpenCL functions without copying (with some restrictions of course).",
+    "local": ""
+  },
+  {
+    "origin": "Let's create a base for our application that just configures Android camera to send preview frames to OpenGL texture and displays these frames on display without any processing.",
+    "local": ""
+  },
+  {
+    "origin": "A minimal",
+    "local": ""
+  },
+  {
+    "origin": "class for that purposes looks like following:",
+    "local": ""
+  },
+  {
+    "origin": "And a minimal",
+    "local": ""
+  },
+  {
+    "origin": "class respectively:",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": ": we use two renderer classes: one for legacy",
+    "local": ""
+  },
+  {
+    "origin": "Camera",
+    "local": ""
+  },
+  {
+    "origin": "API and another for modern",
+    "local": ""
+  },
+  {
+    "origin": "Camera2",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "A minimal",
+    "local": ""
+  },
+  {
+    "origin": "class can be implemented in Java (OpenGL ES 2.0",
+    "local": ""
+  },
+  {
+    "origin": "available",
+    "local": ""
+  },
+  {
+    "origin": "in Java), but since we are going to modify the preview texture with OpenCL let's move OpenGL stuff to JNI. Here is a simple Java wrapper for our JNI stuff:",
+    "local": ""
+  },
+  {
+    "origin": "Since",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "APIs differ significantly in camera setup and control, let's create a base class for the two corresponding renderers:",
+    "local": ""
+  },
+  {
+    "origin": "As you can see, inheritors for",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "APIs should implement the following abstract methods:",
+    "local": ""
+  },
+  {
+    "origin": "Let's leave the details of their implementation beyond of this tutorial, please refer the",
+    "local": ""
+  },
+  {
+    "origin": "source code",
+    "local": ""
+  },
+  {
+    "origin": "to see them.",
+    "local": ""
+  },
+  {
+    "origin": "Preview Frames modification",
+    "local": ""
+  },
+  {
+    "origin": "The details OpenGL ES 2.0 initialization are also quite straightforward and noisy to be quoted here, but the important point here is that the OpeGL texture to be the target for camera preview should be of type",
+    "local": ""
+  },
+  {
+    "origin": "(not",
+    "local": ""
+  },
+  {
+    "origin": "), internally it keeps picture data in",
+    "local": ""
+  },
+  {
+    "origin": "YUV",
+    "local": ""
+  },
+  {
+    "origin": "format. That makes unable sharing it via CL-GL interop (",
+    "local": ""
+  },
+  {
+    "origin": ") and accessing its pixel data via C/C++ code. To overcome this restriction we have to perform an OpenGL rendering from this texture to another regular",
+    "local": ""
+  },
+  {
+    "origin": "one using",
+    "local": ""
+  },
+  {
+    "origin": "FrameBuffer Object",
+    "local": ""
+  },
+  {
+    "origin": "(aka FBO).",
+    "local": ""
+  },
+  {
+    "origin": "C/C++ code",
+    "local": ""
+  },
+  {
+    "origin": "After that we can read (",
+    "local": ""
+  },
+  {
+    "origin": "copy",
+    "local": ""
+  },
+  {
+    "origin": ") pixel data from C/C++ via",
+    "local": ""
+  },
+  {
+    "origin": "and write them back to texture after modification via",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Direct OpenCL calls",
+    "local": ""
+  },
+  {
+    "origin": "Also that",
+    "local": ""
+  },
+  {
+    "origin": "texture can be shared with OpenCL without copying, but we have to create OpenCL context with special way for that:",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "To build this JNI code you need",
+    "local": ""
+  },
+  {
+    "origin": "headers from",
+    "local": ""
+  },
+  {
+    "origin": "Khronos web site",
+    "local": ""
+  },
+  {
+    "origin": "and the",
+    "local": ""
+  },
+  {
+    "origin": "libOpenCL.so",
+    "local": ""
+  },
+  {
+    "origin": "downloaded from the device you'll run the application.",
+    "local": ""
+  },
+  {
+    "origin": "Then the texture can be wrapped by a",
+    "local": ""
+  },
+  {
+    "origin": "object and processed via OpenCL calls:",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV T-API",
+    "local": ""
+  },
+  {
+    "origin": "But instead of writing OpenCL code by yourselves you may want to use",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV T-API",
+    "local": ""
+  },
+  {
+    "origin": "that calls OpenCL implicitly. All that you need is to pass the created OpenCL context to OpenCV (via",
+    "local": ""
+  },
+  {
+    "origin": ") and somehow wrap OpenGL texture with",
+    "local": ""
+  },
+  {
+    "origin": ". Unfortunately",
+    "local": ""
+  },
+  {
+    "origin": "keeps OpenCL",
+    "local": ""
+  },
+  {
+    "origin": "buffer",
+    "local": ""
+  },
+  {
+    "origin": "internally, that can't be wrapped over either OpenGL",
+    "local": ""
+  },
+  {
+    "origin": "texture",
+    "local": ""
+  },
+  {
+    "origin": "or OpenCL",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "- so we have to copy image data here:",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "We have to make one more image data copy when placing back the modified image to the original OpenGL texture via OpenCL image wrapper.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "By default the OpenCL support (T-API) is disabled in OpenCV builds for Android OS (so it's absent in official packages as of version 3.0), but it's possible to rebuild locally OpenCV for Android with OpenCL/T-API enabled: use",
+    "local": ""
+  },
+  {
+    "origin": "option for CMake.",
+    "local": ""
+  },
+  {
+    "origin": "To use your own modified",
+    "local": ""
+  },
+  {
+    "origin": "you have to keep inside your APK, not to use OpenCV Manager and load it manually via",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Performance notes",
+    "local": ""
+  },
+  {
+    "origin": "To compare the performance we measured FPS of the same preview frames modification (",
+    "local": ""
+  },
+  {
+    "origin": "Laplacian",
+    "local": ""
+  },
+  {
+    "origin": ") done by C/C++ code (call to",
+    "local": ""
+  },
+  {
+    "origin": "with",
+    "local": ""
+  },
+  {
+    "origin": "), by direct OpenCL calls (using OpenCL",
+    "local": ""
+  },
+  {
+    "origin": "images",
+    "local": ""
+  },
+  {
+    "origin": "for input and output), and by OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "T-API",
+    "local": ""
+  },
+  {
+    "origin": "(call to",
+    "local": ""
+  },
+  {
+    "origin": "with",
+    "local": ""
+  },
+  {
+    "origin": ") on",
+    "local": ""
+  },
+  {
+    "origin": "Sony Xperia Z3",
+    "local": ""
+  },
+  {
+    "origin": "with 720p camera resolution:",
+    "local": ""
+  },
+  {
+    "origin": "C/C++ version",
+    "local": ""
+  },
+  {
+    "origin": "shows",
+    "local": ""
+  },
+  {
+    "origin": "3-4 fps",
+    "local": ""
+  },
+  {
+    "origin": "direct OpenCL calls",
+    "local": ""
+  },
+  {
+    "origin": "shows",
+    "local": ""
+  },
+  {
+    "origin": "25-27 fps",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV T-API",
+    "local": ""
+  },
+  {
+    "origin": "shows",
+    "local": ""
+  },
+  {
+    "origin": "11-13 fps",
+    "local": ""
+  },
+  {
+    "origin": "(due to extra copying from",
+    "local": ""
+  },
+  {
+    "origin": "to",
+    "local": ""
+  },
+  {
+    "origin": "and back)",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,2470 @@
+[
+  {
+    "origin": "OpenCV: cv::ximgproc::RICInterpolator Class Reference",
+    "local": "OpenCV:cv:：ximgproc:：RICInterpolator类引用"
+  },
+  {
+    "origin": "OpenCV",
+    "local": "打开CV"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::ximgproc::RICInterpolator Class Reference",
+    "local": "cv:：ximgproc:：RICInterpolator类参考"
+  },
+  {
+    "origin": "abstract",
+    "local": "摘要"
+  },
+  {
+    "origin": "»",
+    "local": "»"
+  },
+  {
+    "origin": "Sparse match interpolation algorithm based on modified piecewise locally-weighted affine estimator called Robust Interpolation method of Correspondences or RIC from",
+    "local": "基于改进的分段局部加权仿射估计的稀疏匹配插值算法，称为对应的鲁棒插值法"
+  },
+  {
+    "origin": "and Variational and Fast Global Smoother as post-processing filter. The",
+    "local": "变分快速全局平滑器作为后处理滤波器。这个"
+  },
+  {
+    "origin": "is a extension of the",
+    "local": "是"
+  },
+  {
+    "origin": ". Main concept of this extension is an piece-wise affine model based on over-segmentation via SLIC superpixel estimation. The method contains an efficient propagation mechanism to estimate among the pieces-wise models.",
+    "local": ". 该扩展的主要概念是基于SLIC超像素估计的过分割分段仿射模型。该方法包含了一种有效的传播机制来估计分段模型。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Inheritance diagram for cv::ximgproc::RICInterpolator:",
+    "local": "cv:：ximgproc:：RICInterpolator的继承关系图："
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Alpha is a parameter defining a global weight for transforming geodesic distance into weight.",
+    "local": "Alpha是定义全局权重的参数，用于将测地距离转换为权重。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Sets the respective",
+    "local": "设置相应的"
+  },
+  {
+    "origin": "parameter.",
+    "local": "参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Sets the respective",
+    "local": "设置相应的"
+  },
+  {
+    "origin": "parameter.",
+    "local": "参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "K is a number of nearest-neighbor matches considered, when fitting a locally affine model for a superpixel segment. However, lower values would make the interpolation noticeably faster. The original implementation of",
+    "local": "K是在拟合超像素片段的局部仿射模型时考虑的最近邻匹配数。但是，较低的值会使插值速度明显加快。最初实施的"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "MaxFlow is a threshold to validate the predictions using a certain piece-wise affine model. If the prediction exceeds the treshold the translational model will be applied instead.",
+    "local": "MaxFlow是一个用分段仿射模型验证预测的阈值。如果预测值超过阈值，则采用平移模型。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Parameter defining the number of iterations for piece-wise affine model estimation.",
+    "local": "定义分段仿射模型估计迭代次数的参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual bool",
+    "local": "虚拟布尔"
+  },
+  {
+    "origin": "Parameter to choose wether additional refinement of the piece-wise affine models is employed.",
+    "local": "参数选择是否采用分段仿射模型的附加精化。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Parameter to choose superpixel algorithm variant to use:",
+    "local": "选择要使用的superpixel算法变量的参数："
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Parameter defines the number of nearest-neighbor matches for each superpixel considered, when fitting a locally affine model.",
+    "local": "参数定义在拟合局部仿射模型时，所考虑的每个超像素的最近邻匹配数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Parameter to tune enforcement of superpixel smoothness factor used for oversegmentation.",
+    "local": "用于调整用于过度分段的超级像素平滑因子的强制执行的参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Get the internal cost, i.e. edge map, used for estimating the edge-aware term.",
+    "local": "获取用于估计边缘感知项的内部代价，即边缘映射。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual bool",
+    "local": "虚拟布尔"
+  },
+  {
+    "origin": "Sets whether the",
+    "local": "设置"
+  },
+  {
+    "origin": "post-processing is employed.",
+    "local": "采用后处理。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual bool",
+    "local": "虚拟布尔"
+  },
+  {
+    "origin": "Parameter to choose wether the",
+    "local": "参数来选择"
+  },
+  {
+    "origin": "post-processing is employed.",
+    "local": "采用后处理。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Alpha is a parameter defining a global weight for transforming geodesic distance into weight.",
+    "local": "Alpha是定义全局权重的参数，用于将测地距离转换为权重。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "Interface to provide a more elaborated cost map, i.e. edge map, for the edge-aware term. This implementation is based on a rather simple gradient-based edge map estimation. To used more complex edge map estimator (e.g.",
+    "local": "接口，为边缘感知术语提供更详细的成本图，即边缘图。这个实现是基于一个相当简单的基于梯度的边缘图估计。使用更复杂的边缘图估计器（例如。"
+  },
+  {
+    "origin": "that has been used in the original publication) that may lead to improved accuracies, the internal edge map estimation can be bypassed here.",
+    "local": "这可能会导致提高精度，内部边缘图估计可以绕过这里。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Sets the respective",
+    "local": "设置相应的"
+  },
+  {
+    "origin": "parameter.",
+    "local": "参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Sets the respective",
+    "local": "设置相应的"
+  },
+  {
+    "origin": "parameter.",
+    "local": "参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "K is a number of nearest-neighbor matches considered, when fitting a locally affine model for a superpixel segment. However, lower values would make the interpolation noticeably faster. The original implementation of",
+    "local": "K是在拟合超像素片段的局部仿射模型时考虑的最近邻匹配数。但是，较低的值会使插值速度明显加快。最初实施的"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "MaxFlow is a threshold to validate the predictions using a certain piece-wise affine model. If the prediction exceeds the treshold the translational model will be applied instead.",
+    "local": "MaxFlow是一个用分段仿射模型验证预测的阈值。如果预测值超过阈值，则采用平移模型。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Parameter defining the number of iterations for piece-wise affine model estimation.",
+    "local": "定义分段仿射模型估计迭代次数的参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Parameter to choose wether additional refinement of the piece-wise affine models is employed.",
+    "local": "参数选择是否采用分段仿射模型的附加精化。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Parameter to choose superpixel algorithm variant to use:",
+    "local": "选择要使用的superpixel算法变量的参数："
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Parameter defines the number of nearest-neighbor matches for each superpixel considered, when fitting a locally affine model.",
+    "local": "参数定义在拟合局部仿射模型时，所考虑的每个超像素的最近邻匹配数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Parameter to tune enforcement of superpixel smoothness factor used for oversegmentation.",
+    "local": "用于调整用于过度分段的超级像素平滑因子的强制执行的参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Get the internal cost, i.e. edge map, used for estimating the edge-aware term.",
+    "local": "获取用于估计边缘感知项的内部代价，即边缘映射。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Sets whether the",
+    "local": "设置"
+  },
+  {
+    "origin": "post-processing is employed.",
+    "local": "采用后处理。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Parameter to choose wether the",
+    "local": "参数来选择"
+  },
+  {
+    "origin": "post-processing is employed.",
+    "local": "采用后处理。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": "公共成员函数继承自"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "from_image,",
+    "local": "从你的形象，"
+  },
+  {
+    "origin": "from_points,",
+    "local": "从各点来看，"
+  },
+  {
+    "origin": "to_image,",
+    "local": "为了你的形象，"
+  },
+  {
+    "origin": "to_points,",
+    "local": "对你来说，"
+  },
+  {
+    "origin": "Interpolate input sparse matches.",
+    "local": "插值输入稀疏匹配。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": "公共成员函数继承自"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Clears the algorithm state.",
+    "local": "清除算法状态。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual bool",
+    "local": "虚拟布尔"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "Returns true if the",
+    "local": "如果"
+  },
+  {
+    "origin": "is empty (e.g. in the very beginning or after unsuccessful read.",
+    "local": "为空（例如，在最开始或读取失败后）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": "&amp；（fn）"
+  },
+  {
+    "origin": "Reads algorithm parameters from a file storage.",
+    "local": "从文件存储器中读取算法参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;filename) const",
+    "local": "&amp；文件名）常量"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": "&amp；（f） 常数"
+  },
+  {
+    "origin": "Stores algorithm parameters in a file storage.",
+    "local": "将算法参数存储在文件存储器中。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; &amp;fs, const",
+    "local": "&gt；gt；amp；fs，常数"
+  },
+  {
+    "origin": "&amp;name=",
+    "local": "&amp；姓名="
+  },
+  {
+    "origin": "()) const",
+    "local": "（））常数"
+  },
+  {
+    "origin": "simplified API for language bindings This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "语言绑定的简化API这是一个重载的成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": "其他继承成员"
+  },
+  {
+    "origin": "Static Public Member Functions inherited from",
+    "local": "继承自的静态公共成员函数"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": "&lt_Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;filename, const",
+    "local": "&amp；文件名，常量"
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": "&amp；对象名="
+  },
+  {
+    "origin": "())",
+    "local": "())"
+  },
+  {
+    "origin": "Loads algorithm from the file.",
+    "local": "从文件加载算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": "&lt_Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;strModel, const",
+    "local": "&amp；strModel，常量"
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": "&amp；对象名="
+  },
+  {
+    "origin": "())",
+    "local": "())"
+  },
+  {
+    "origin": "Loads algorithm from a String.",
+    "local": "从字符串加载算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": "&lt_Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": "&amp；（fn）"
+  },
+  {
+    "origin": "Reads algorithm from the file node.",
+    "local": "从文件节点读取算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Protected Member Functions inherited from",
+    "local": "继承自的受保护成员函数"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": "&amp；（f） 常数"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "Sparse match interpolation algorithm based on modified piecewise locally-weighted affine estimator called Robust Interpolation method of Correspondences or RIC from",
+    "local": "基于改进的分段局部加权仿射估计的稀疏匹配插值算法，称为对应的鲁棒插值法"
+  },
+  {
+    "origin": "and Variational and Fast Global Smoother as post-processing filter. The",
+    "local": "变分快速全局平滑器作为后处理滤波器。这个"
+  },
+  {
+    "origin": "is a extension of the",
+    "local": "是"
+  },
+  {
+    "origin": ". Main concept of this extension is an piece-wise affine model based on over-segmentation via SLIC superpixel estimation. The method contains an efficient propagation mechanism to estimate among the pieces-wise models.",
+    "local": ". 该扩展的主要概念是基于SLIC超像素估计的过分割分段仿射模型。该方法包含了一种有效的传播机制来估计分段模型。"
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getAlpha()",
+    "local": "Getalpha（）"
+  },
+  {
+    "origin": "virtual float cv::ximgproc::RICInterpolator::getAlpha",
+    "local": "虚拟浮点cv:：ximgproc:：RICInterpolator:：getAlpha"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getAlpha(",
+    "local": "cv.ximgproc\\u RICInterpolator.getAlpha("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Alpha is a parameter defining a global weight for transforming geodesic distance into weight.",
+    "local": "Alpha是定义全局权重的参数，用于将测地距离转换为权重。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getFGSLambda()",
+    "local": "getFGSLambda（）"
+  },
+  {
+    "origin": "virtual float cv::ximgproc::RICInterpolator::getFGSLambda",
+    "local": "虚拟浮点cv:：ximgproc:：RICInterpolator:：getFGSLambda"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getFGSLambda(",
+    "local": "简历：ximgproc\\u RICInterpolator.getFGSLambda("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Sets the respective",
+    "local": "设置相应的"
+  },
+  {
+    "origin": "parameter.",
+    "local": "参数。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getFGSSigma()",
+    "local": "getFGSSigma（）"
+  },
+  {
+    "origin": "virtual float cv::ximgproc::RICInterpolator::getFGSSigma",
+    "local": "虚拟浮点cv:：ximgproc:：RICInterpolator:：getFGSSigma"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getFGSSigma(",
+    "local": "简历：ximgproc\\u RICInterpolator.getFGSSigma("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Sets the respective",
+    "local": "设置相应的"
+  },
+  {
+    "origin": "parameter.",
+    "local": "参数。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getK()",
+    "local": "getK（）"
+  },
+  {
+    "origin": "virtual int cv::ximgproc::RICInterpolator::getK",
+    "local": "虚拟int cv:：ximgproc:：RICInterpolator:：getK"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getK(",
+    "local": "简历：ximgproc\\u RICInterpolator.getK("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "K is a number of nearest-neighbor matches considered, when fitting a locally affine model for a superpixel segment. However, lower values would make the interpolation noticeably faster. The original implementation of",
+    "local": "K是在拟合超像素片段的局部仿射模型时考虑的最近邻匹配数。但是，较低的值会使插值速度明显加快。最初实施的"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getMaxFlow()",
+    "local": "GetmaxFlow（）"
+  },
+  {
+    "origin": "virtual float cv::ximgproc::RICInterpolator::getMaxFlow",
+    "local": "虚拟浮点cv:：ximgproc:：RICInterpolator:：getMaxFlow"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getMaxFlow(",
+    "local": "CV.XIMGPROC ricinterpolator.getmaxflow（"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "MaxFlow is a threshold to validate the predictions using a certain piece-wise affine model. If the prediction exceeds the treshold the translational model will be applied instead.",
+    "local": "MaxFlow是一个用分段仿射模型验证预测的阈值。如果预测值超过阈值，则采用平移模型。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getModelIter()",
+    "local": "getModelIter（）"
+  },
+  {
+    "origin": "virtual int cv::ximgproc::RICInterpolator::getModelIter",
+    "local": "虚拟int cv:：ximgproc:：RICInterpolator:：getModelIter"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getModelIter(",
+    "local": "cv.ximgproc\\u RICInterpolator.getModelIter文件("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter defining the number of iterations for piece-wise affine model estimation.",
+    "local": "定义分段仿射模型估计迭代次数的参数。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getRefineModels()",
+    "local": "getRefineModels（）"
+  },
+  {
+    "origin": "virtual bool cv::ximgproc::RICInterpolator::getRefineModels",
+    "local": "虚拟bool cv:：ximgproc:：RICInterpolator:：getRefineModels"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getRefineModels(",
+    "local": "cv.ximgproc\\u RICInterpolator.getRefineModels文件("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter to choose wether additional refinement of the piece-wise affine models is employed.",
+    "local": "参数选择是否采用分段仿射模型的附加精化。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getSuperpixelMode()",
+    "local": "getSuperpixelMode（）"
+  },
+  {
+    "origin": "virtual int cv::ximgproc::RICInterpolator::getSuperpixelMode",
+    "local": "虚拟int cv:：ximgproc:：RICInterpolator:：getSuperpixelMode"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getSuperpixelMode(",
+    "local": "cv.ximgproc RICInterpolator.getsuperpix模式("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter to choose superpixel algorithm variant to use:",
+    "local": "选择要使用的superpixel算法变量的参数："
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getSuperpixelNNCnt()",
+    "local": "getSuperpixelNNCnt（）"
+  },
+  {
+    "origin": "virtual int cv::ximgproc::RICInterpolator::getSuperpixelNNCnt",
+    "local": "虚拟int cv:：ximgproc:：RICInterpolator:：getSuperpixelNNCnt"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getSuperpixelNNCnt(",
+    "local": "cv.ximgproc\\u RICInterpolator.getSuperpixelNNCnt公司("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter defines the number of nearest-neighbor matches for each superpixel considered, when fitting a locally affine model.",
+    "local": "参数定义在拟合局部仿射模型时，所考虑的每个超像素的最近邻匹配数。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getSuperpixelRuler()",
+    "local": "getSuperpixelRuler（）"
+  },
+  {
+    "origin": "virtual float cv::ximgproc::RICInterpolator::getSuperpixelRuler",
+    "local": "虚拟浮点cv:：ximgproc:：RICInterpolator:：getSuperpixelRuler"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getSuperpixelRuler(",
+    "local": "cv.ximgproc\\u RICInterpolator.getsuperpix标尺("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter to tune enforcement of superpixel smoothness factor used for oversegmentation.",
+    "local": "用于调整用于过度分段的超级像素平滑因子的强制执行的参数。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getSuperpixelSize()",
+    "local": "getSuperpixelSize（）"
+  },
+  {
+    "origin": "virtual int cv::ximgproc::RICInterpolator::getSuperpixelSize",
+    "local": "虚拟int cv:：ximgproc:：RICInterpolator:：getSuperpixelSize"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getSuperpixelSize(",
+    "local": "cv.ximgproc RICInterpolator.getSuperpixelSize("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Get the internal cost, i.e. edge map, used for estimating the edge-aware term.",
+    "local": "获取用于估计边缘感知项的内部代价，即边缘映射。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getUseGlobalSmootherFilter()",
+    "local": "getUseGlobalSmootherFilter（）"
+  },
+  {
+    "origin": "virtual bool cv::ximgproc::RICInterpolator::getUseGlobalSmootherFilter",
+    "local": "虚拟bool cv:：ximgproc:：RICInterpolator:：getUseGlobalSmootherFilter"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getUseGlobalSmootherFilter(",
+    "local": "cv.ximgproc\\u RICInterpolator.getUseGlobalSmootherFilter公司("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Sets whether the",
+    "local": "设置"
+  },
+  {
+    "origin": "post-processing is employed.",
+    "local": "采用后处理。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getUseVariationalRefinement()",
+    "local": "getUseVariationalRefineration（）"
+  },
+  {
+    "origin": "virtual bool cv::ximgproc::RICInterpolator::getUseVariationalRefinement",
+    "local": "虚拟bool cv:：ximgproc:：RICInterpolator:：GetUseVariational优化"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.getUseVariationalRefinement(",
+    "local": "cv.ximgproc\\u RICInterpolator.getUseVariationalRefinerational工具("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter to choose wether the",
+    "local": "参数来选择"
+  },
+  {
+    "origin": "post-processing is employed.",
+    "local": "采用后处理。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setAlpha()",
+    "local": "setAlpha（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setAlpha",
+    "local": "虚空cv:：ximgproc:：RICInterpolator:：setAlpha"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "alpha",
+    "local": "阿尔法"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setAlpha(",
+    "local": "cv.ximgproc\\u RICInterpolator.setAlpha("
+  },
+  {
+    "origin": "[, alpha]",
+    "local": "[，阿尔法]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Alpha is a parameter defining a global weight for transforming geodesic distance into weight.",
+    "local": "Alpha是定义全局权重的参数，用于将测地距离转换为权重。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setCostMap()",
+    "local": "setCostMap（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setCostMap",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setCostMap"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "costMap",
+    "local": "成本图"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setCostMap(",
+    "local": "cv.ximgproc\\u RICInterpolator.setCostMap文件("
+  },
+  {
+    "origin": "costMap",
+    "local": "成本图"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Interface to provide a more elaborated cost map, i.e. edge map, for the edge-aware term. This implementation is based on a rather simple gradient-based edge map estimation. To used more complex edge map estimator (e.g.",
+    "local": "接口，为边缘感知术语提供更详细的成本图，即边缘图。这个实现是基于一个相当简单的基于梯度的边缘图估计。使用更复杂的边缘图估计器（例如。"
+  },
+  {
+    "origin": "that has been used in the original publication) that may lead to improved accuracies, the internal edge map estimation can be bypassed here.",
+    "local": "这可能会导致提高精度，内部边缘图估计可以绕过这里。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "costMap",
+    "local": "成本图"
+  },
+  {
+    "origin": "a type CV_32FC1",
+    "local": "CV32FC1型"
+  },
+  {
+    "origin": "is required.",
+    "local": "是必需的。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setFGSLambda()",
+    "local": "setFGSLambda（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setFGSLambda",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setFGSLambda"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "lambda",
+    "local": "λ"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setFGSLambda(",
+    "local": "cv.ximgproc\\u RICInterpolator.setFGSLambda文件("
+  },
+  {
+    "origin": "[, lambda]",
+    "local": "[，λ]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Sets the respective",
+    "local": "设置相应的"
+  },
+  {
+    "origin": "parameter.",
+    "local": "参数。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setFGSSigma()",
+    "local": "setFGSSigma（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setFGSSigma",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setFGSSigma"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "sigma",
+    "local": "西格玛"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setFGSSigma(",
+    "local": "cv.ximgproc\\u RICInterpolator.setFGSSigma公司("
+  },
+  {
+    "origin": "[, sigma]",
+    "local": "[，西格玛]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Sets the respective",
+    "local": "设置相应的"
+  },
+  {
+    "origin": "parameter.",
+    "local": "参数。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setK()",
+    "local": "塞克（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setK",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setK"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setK(",
+    "local": "CV.ximgproc RICInterpolator.setK公司("
+  },
+  {
+    "origin": "[, k]",
+    "local": "[，k]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "K is a number of nearest-neighbor matches considered, when fitting a locally affine model for a superpixel segment. However, lower values would make the interpolation noticeably faster. The original implementation of",
+    "local": "K是在拟合超像素片段的局部仿射模型时考虑的最近邻匹配数。但是，较低的值会使插值速度明显加快。最初实施的"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setMaxFlow()",
+    "local": "setMaxFlow（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setMaxFlow",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setMaxFlow"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "maxFlow",
+    "local": "最大流量"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setMaxFlow(",
+    "local": "cv.ximgproc\\u RICInterpolator.setMaxFlow文件("
+  },
+  {
+    "origin": "[, maxFlow]",
+    "local": "[，最大流]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "MaxFlow is a threshold to validate the predictions using a certain piece-wise affine model. If the prediction exceeds the treshold the translational model will be applied instead.",
+    "local": "MaxFlow是一个用分段仿射模型验证预测的阈值。如果预测值超过阈值，则采用平移模型。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setModelIter()",
+    "local": "setModelIter（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setModelIter",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setModelIter"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "modelIter",
+    "local": "模型项"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setModelIter(",
+    "local": "cv.ximgproc\\u RICInterpolator.setModelIter文件("
+  },
+  {
+    "origin": "[, modelIter]",
+    "local": "[，modelIter]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter defining the number of iterations for piece-wise affine model estimation.",
+    "local": "定义分段仿射模型估计迭代次数的参数。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setRefineModels()",
+    "local": "setRefineModels（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setRefineModels",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setRefineModels"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "refineModles",
+    "local": "精炼模型"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setRefineModels(",
+    "local": "cv.ximgproc\\u RICInterpolator.setRefineModels文件("
+  },
+  {
+    "origin": "[, refineModles]",
+    "local": "[，精简模式]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter to choose wether additional refinement of the piece-wise affine models is employed.",
+    "local": "参数选择是否采用分段仿射模型的附加精化。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setSuperpixelMode()",
+    "local": "设置超级像素模式（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setSuperpixelMode",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setSuperpixelMode"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "mode",
+    "local": "模式"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setSuperpixelMode(",
+    "local": "cv.ximgproc RICInterpolator.setSuperpixelMode设置超像素模式("
+  },
+  {
+    "origin": "[, mode]",
+    "local": "[，模式]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter to choose superpixel algorithm variant to use:",
+    "local": "选择要使用的superpixel算法变量的参数："
+  },
+  {
+    "origin": "SLIC segments image using a desired region_size (value: 100)",
+    "local": "SLIC使用所需的区域大小（值：100）分割图像"
+  },
+  {
+    "origin": "SLICO will optimize using adaptive compactness factor (value: 101)",
+    "local": "SLICO将使用自适应紧度因子（值：101）进行优化"
+  },
+  {
+    "origin": "MSLIC will optimize using manifold methods resulting in more content-sensitive superpixels (value: 102).",
+    "local": "MSLIC将使用多种方法进行优化，从而产生更为内容敏感的超级像素（值：102）。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setSuperpixelNNCnt()",
+    "local": "设置超级像素nncnt（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setSuperpixelNNCnt",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setSuperpixelNNCnt"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "spNN",
+    "local": "spNN公司"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setSuperpixelNNCnt(",
+    "local": "cv.ximgproc\\u RICInterpolator.setSuperpixelNNCnt设置超像素("
+  },
+  {
+    "origin": "[, spNN]",
+    "local": "[，spNN]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter defines the number of nearest-neighbor matches for each superpixel considered, when fitting a locally affine model.",
+    "local": "参数定义在拟合局部仿射模型时，所考虑的每个超像素的最近邻匹配数。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setSuperpixelRuler()",
+    "local": "设置超像素标尺（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setSuperpixelRuler",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setSuperpixelRuler"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "ruler",
+    "local": "尺子"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setSuperpixelRuler(",
+    "local": "CV.ximgproc RICInterpolator.setSuperpixelRuler设置超像素标尺("
+  },
+  {
+    "origin": "[, ruler]",
+    "local": "[，标尺]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter to tune enforcement of superpixel smoothness factor used for oversegmentation.",
+    "local": "用于调整用于过度分段的超级像素平滑因子的强制执行的参数。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setSuperpixelSize()",
+    "local": "设置像素大小（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setSuperpixelSize",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setSuperpixelSize"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "spSize",
+    "local": "spSize公司"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setSuperpixelSize(",
+    "local": "CV.ximgproc RICInterpolator.setSuperpixelSize设置("
+  },
+  {
+    "origin": "[, spSize]",
+    "local": "[，spSize]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Get the internal cost, i.e. edge map, used for estimating the edge-aware term.",
+    "local": "获取用于估计边缘感知项的内部代价，即边缘映射。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setUseGlobalSmootherFilter()",
+    "local": "setUseGlobalSmootherFilter（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setUseGlobalSmootherFilter",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setUseGlobalSmootherFilter"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "use_FGS",
+    "local": "使用FGS"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setUseGlobalSmootherFilter(",
+    "local": "cv.ximgproc\\u RICInterpolator.setUseGlobalSmootherFilter设置全局平滑滤波器("
+  },
+  {
+    "origin": "[, use_FGS]",
+    "local": "[，使用\\u FGS]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Sets whether the",
+    "local": "设置"
+  },
+  {
+    "origin": "post-processing is employed.",
+    "local": "采用后处理。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setUseVariationalRefinement()",
+    "local": "setUseVariationalRefineration（）"
+  },
+  {
+    "origin": "virtual void cv::ximgproc::RICInterpolator::setUseVariationalRefinement",
+    "local": "虚拟void cv:：ximgproc:：RICInterpolator:：setUseVariationalRefinection"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "use_variational_refinement",
+    "local": "使用变分求精"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ximgproc_RICInterpolator.setUseVariationalRefinement(",
+    "local": "cv.ximgproc\\u RICInterpolator.setuseVariationalRefinerational设置("
+  },
+  {
+    "origin": "[, use_variational_refinement]",
+    "local": "[，使用\\u变量\\u求精]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameter to choose wether the",
+    "local": "参数来选择"
+  },
+  {
+    "origin": "post-processing is employed.",
+    "local": "采用后处理。"
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/ximgproc/",
+    "local": "opencv2/ximgproc/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:49 for OpenCV by",
+    "local": "于2021年4月2日星期五11:36:49为OpenCV生成"
+  }
+]

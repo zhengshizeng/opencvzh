@@ -1,0 +1,954 @@
+[
+  {
+    "origin": "OpenCV: cv::gapi::GKernelPackage Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Friends",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::gapi::GKernelPackage Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "A container class for heterogeneous kernel implementation collections and graph transformations.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Lists all backends which are included into package.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns vector of kernel ids included in the package.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns vector of transformations included in the package.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;functor)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename KImpl &gt;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Put a new kernel implementation or a new transformation KImpl into the package.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;backend, const std::string &amp;kernel_id)",
+    "local": ""
+  },
+  {
+    "origin": "Adds a new kernel based on it's backend and id into the kernel package.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename KImpl &gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Test if a particular kernel",
+    "local": ""
+  },
+  {
+    "origin": "implementation",
+    "local": ""
+  },
+  {
+    "origin": "KImpl is included in this kernel package.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename KAPI &gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename KAPI &gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Find a kernel (by its API)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;backend)",
+    "local": ""
+  },
+  {
+    "origin": "Remove all kernels associated with the given backend from the package.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename KAPI &gt;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Remove all kernels implementing the given API from the package.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns total number of kernels in the package (across all backends included)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Friends",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;lhs, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;rhs)",
+    "local": ""
+  },
+  {
+    "origin": "Create a new package based on",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "A container class for heterogeneous kernel implementation collections and graph transformations.",
+    "local": ""
+  },
+  {
+    "origin": "is a special container class which stores kernel",
+    "local": ""
+  },
+  {
+    "origin": "implementations",
+    "local": ""
+  },
+  {
+    "origin": "and graph",
+    "local": ""
+  },
+  {
+    "origin": "transformations",
+    "local": ""
+  },
+  {
+    "origin": ". Objects of this class are created and passed to",
+    "local": ""
+  },
+  {
+    "origin": "to specify which kernels to use and which transformations to apply in the compiled graph.",
+    "local": ""
+  },
+  {
+    "origin": "may contain kernels of different backends, e.g. be heterogeneous.",
+    "local": ""
+  },
+  {
+    "origin": "The most easy way to create a kernel package is to use function",
+    "local": ""
+  },
+  {
+    "origin": ". This template functions takes kernel implementations in form of type list (variadic template) and generates a kernel package atop of that.",
+    "local": ""
+  },
+  {
+    "origin": "Kernel packages can be also generated programmatically, starting with an empty package (created with the default constructor) and then by populating it with kernels via call to",
+    "local": ""
+  },
+  {
+    "origin": ". Note this method is also a template one since G-API kernel and transformation implementations are",
+    "local": ""
+  },
+  {
+    "origin": "types",
+    "local": ""
+  },
+  {
+    "origin": ", not objects.",
+    "local": ""
+  },
+  {
+    "origin": "Finally, two kernel packages can be combined into a new one with function",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "backends()",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::gapi::GKernelPackage::backends",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Lists all backends which are included into package.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "vector of backends",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "get_kernel_ids()",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;std::string&gt; cv::gapi::GKernelPackage::get_kernel_ids",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Returns vector of kernel ids included in the package.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "vector of kernel ids included in the package",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "get_transformations()",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;&amp; cv::gapi::GKernelPackage::get_transformations",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Returns vector of transformations included in the package.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "vector of transformations included in the package",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "include()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::gapi::GKernelPackage::include",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "functor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "include()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename KImpl &gt;",
+    "local": ""
+  },
+  {
+    "origin": "void cv::gapi::GKernelPackage::include",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Put a new kernel implementation or a new transformation KImpl into the package.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "include()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::gapi::GKernelPackage::include",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "backend",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "kernel_id",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Adds a new kernel based on it's backend and id into the kernel package.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "backend",
+    "local": ""
+  },
+  {
+    "origin": "backend associated with the kernel",
+    "local": ""
+  },
+  {
+    "origin": "kernel_id",
+    "local": ""
+  },
+  {
+    "origin": "a name/id of the kernel",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "includes()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename KImpl &gt;",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::gapi::GKernelPackage::includes",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Test if a particular kernel",
+    "local": ""
+  },
+  {
+    "origin": "implementation",
+    "local": ""
+  },
+  {
+    "origin": "KImpl is included in this kernel package.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "cannot be applied to transformations",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "true if there is such kernel, false otherwise.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "includesAPI()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename KAPI &gt;",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::gapi::GKernelPackage::includesAPI",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Check if package contains ANY implementation of a kernel API by API type.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "lookup()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename KAPI &gt;",
+    "local": ""
+  },
+  {
+    "origin": "cv::gapi::GKernelPackage::lookup",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Find a kernel (by its API)",
+    "local": ""
+  },
+  {
+    "origin": "Returns implementation corresponding id. Throws if nothing found.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Backend which hosts matching kernel implementation.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "remove()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::gapi::GKernelPackage::remove",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "backend",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Remove all kernels associated with the given backend from the package.",
+    "local": ""
+  },
+  {
+    "origin": "Does nothing if there's no kernels of this backend in the package.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "backend",
+    "local": ""
+  },
+  {
+    "origin": "backend which kernels to remove",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "remove()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename KAPI &gt;",
+    "local": ""
+  },
+  {
+    "origin": "void cv::gapi::GKernelPackage::remove",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Remove all kernels implementing the given API from the package.",
+    "local": ""
+  },
+  {
+    "origin": "Does nothing if there's no kernels implementing the given interface.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "size()",
+    "local": ""
+  },
+  {
+    "origin": "std::size_t cv::gapi::GKernelPackage::size",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Returns total number of kernels in the package (across all backends included)",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "a number of kernels in the package",
+    "local": ""
+  },
+  {
+    "origin": "Friends And Related Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "combine",
+    "local": ""
+  },
+  {
+    "origin": "combine",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "lhs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "rhs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Create a new package based on",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "lhs",
+    "local": ""
+  },
+  {
+    "origin": "\"Left-hand-side\" package in the process",
+    "local": ""
+  },
+  {
+    "origin": "rhs",
+    "local": ""
+  },
+  {
+    "origin": "\"Right-hand-side\" package in the process",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "a new kernel package.",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/gapi/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:47 for OpenCV by &#160;",
+    "local": ""
+  }
+]

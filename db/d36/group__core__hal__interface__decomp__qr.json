@@ -1,0 +1,322 @@
+[
+  {
+    "origin": "OpenCV: QR matrix decomposition",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "QR matrix decomposition",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(float *src1, size_t src1_step, int m, int n, int k, float *src2, size_t src2_step, float *dst, int *info)",
+    "local": ""
+  },
+  {
+    "origin": "(double *src1, size_t src1_step, int m, int n, int k, double *src2, size_t src2_step, double *dst, int *info)",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Performs QR decomposition of \\(M\\times N\\)( \\(M&gt;N\\)) matrix \\(A = Q*R\\) and solves matrix equation \\(A*X=B\\).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": "pointer to input matrix \\(A\\) stored in row major order. After finish of work src1 contains upper triangular \\(N\\times N\\) matrix \\(R\\). Lower triangle of src1 will be filled with vectors of elementary reflectors. See",
+    "local": ""
+  },
+  {
+    "origin": "and Lapack's DGEQRF documentation for details.",
+    "local": ""
+  },
+  {
+    "origin": "src1_step",
+    "local": ""
+  },
+  {
+    "origin": "number of bytes between two consequent rows of matrix \\(A\\).",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": "number fo rows in matrix \\(A\\).",
+    "local": ""
+  },
+  {
+    "origin": "n",
+    "local": ""
+  },
+  {
+    "origin": "number of columns in matrix \\(A\\).",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "number of right-hand vectors in \\(M\\times K\\) matrix \\(B\\).",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": "pointer to \\(M\\times K\\) matrix \\(B\\) which is the right-hand side of system \\(A*X=B\\). \\(B\\) stored in row major order. If src2 is null pointer only QR decomposition will be performed. Otherwise system will be solved and src1 will be used as temporary buffer, so after finish of work src2 contains solution \\(X\\) of system \\(A*X=B\\).",
+    "local": ""
+  },
+  {
+    "origin": "src2_step",
+    "local": ""
+  },
+  {
+    "origin": "number of bytes between two consequent rows of matrix \\(B\\).",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "pointer to continiuos \\(N\\times 1\\) array for scalar factors of elementary reflectors. See",
+    "local": ""
+  },
+  {
+    "origin": "for details.",
+    "local": ""
+  },
+  {
+    "origin": "info",
+    "local": ""
+  },
+  {
+    "origin": "indicates success of decomposition. If *info is zero decomposition failed.",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "hal_ni_QR32f()",
+    "local": ""
+  },
+  {
+    "origin": "int hal_ni_QR32f",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src1_step",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "n",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src2_step",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "info",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "hal_ni_QR64f()",
+    "local": ""
+  },
+  {
+    "origin": "int hal_ni_QR64f",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src1_step",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "n",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src2_step",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "info",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by &#160;",
+    "local": ""
+  }
+]

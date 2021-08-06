@@ -1,0 +1,346 @@
+[
+  {
+    "origin": "OpenCV: XML/YAML Persistence",
+    "local": "OpenCV:XML/YAML持久化"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "XML/YAML Persistence",
+    "local": "XML/YAML持久性"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "File Storage",
+    "local": "文件存储"
+  },
+  {
+    "origin": "class.",
+    "local": "班级。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "used to iterate through sequences and mappings.",
+    "local": "用于遍历序列和映射。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "XML/YAML/JSON file storage class that encapsulates all the information necessary for writing or reading data to/from a file.",
+    "local": "XML/YAML/JSON文件存储类，它封装了在文件中写入或读取数据所需的所有信息。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "XML/YAML/JSON file storages.",
+    "local": "XML/YAML/JSON文件存储。"
+  },
+  {
+    "origin": "Writing to a file storage.",
+    "local": "写入文件存储器。"
+  },
+  {
+    "origin": "You can store and then restore various OpenCV data structures to/from XML (",
+    "local": "您可以将各种OpenCV数据结构存储到XML中，然后从XML中恢复("
+  },
+  {
+    "origin": "http://www.w3c.org/XML",
+    "local": "http://www.w3c.org/XML"
+  },
+  {
+    "origin": "), YAML (",
+    "local": "（亚马尔）"
+  },
+  {
+    "origin": "http://www.yaml.org",
+    "local": "http://www.yaml.org"
+  },
+  {
+    "origin": ") or JSON (",
+    "local": ")或JSON("
+  },
+  {
+    "origin": "http://www.json.org/",
+    "local": "http://www.json.org/"
+  },
+  {
+    "origin": ") formats. Also, it is possible to store and load arbitrarily complex data structures, which include OpenCV data structures, as well as primitive data types (integer and floating-point numbers and text strings) as their elements.",
+    "local": ")格式。此外，还可以存储和加载任意复杂的数据结构，其中包括OpenCV数据结构，以及作为其元素的原始数据类型（整数、浮点数和文本字符串）。"
+  },
+  {
+    "origin": "Use the following procedure to write something to XML, YAML or JSON:",
+    "local": "使用以下过程将内容写入XML、YAML或JSON："
+  },
+  {
+    "origin": "Create new",
+    "local": "新建"
+  },
+  {
+    "origin": "and open it for writing. It can be done with a single call to",
+    "local": "打开它写作。只需给"
+  },
+  {
+    "origin": "constructor that takes a filename, or you can use the default constructor and then call",
+    "local": "构造函数，或者您可以使用默认构造函数，然后调用"
+  },
+  {
+    "origin": ". Format of the file (XML, YAML or JSON) is determined from the filename extension (\".xml\", \".yml\"/\".yaml\" and \".json\", respectively)",
+    "local": ". 文件的格式（XML、YAML或JSON）由文件扩展名（“.XML”、“.yml”/.YAML”和“.JSON”分别确定）"
+  },
+  {
+    "origin": "Write all the data you want using the streaming operator",
+    "local": "使用流式处理操作符写入所需的所有数据"
+  },
+  {
+    "origin": ", just like in the case of STL streams.",
+    "local": "，就像STL流的情况一样。"
+  },
+  {
+    "origin": "Close the file using",
+    "local": "使用关闭文件"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "destructor also closes the file.",
+    "local": "析构函数也会关闭文件。"
+  },
+  {
+    "origin": "Here is an example:",
+    "local": "举个例子："
+  },
+  {
+    "origin": "The sample above stores to YML an integer, a text string (calibration date), 2 matrices, and a custom structure \"feature\", which includes feature coordinates and LBP (local binary pattern) value. Here is output of the sample:",
+    "local": "上面的示例向YML存储一个整数、一个文本字符串（校准日期）、2个矩阵和一个自定义结构“feature”，其中包括特征坐标和LBP（本地二进制模式）值。以下是示例的输出："
+  },
+  {
+    "origin": "As an exercise, you can replace \".yml\" with \".xml\" or \".json\" in the sample above and see, how the corresponding XML file will look like.",
+    "local": "作为练习，您可以将上面示例中的“.yml”替换为“.xml”或“.json”，然后查看相应的xml文件的外观。"
+  },
+  {
+    "origin": "Several things can be noted by looking at the sample code and the output:",
+    "local": "通过查看示例代码和输出，可以注意到以下几点："
+  },
+  {
+    "origin": "The produced YAML (and XML/JSON) consists of heterogeneous collections that can be nested. There are 2 types of collections: named collections (mappings) and unnamed collections (sequences). In mappings each element has a name and is accessed by name. This is similar to structures and std::map in C/C++ and dictionaries in Python. In sequences elements do not have names, they are accessed by indices. This is similar to arrays and std::vector in C/C++ and lists, tuples in Python. \"Heterogeneous\" means that elements of each single collection can have different types.",
+    "local": "生成的YAML（和XML/JSON）由可以嵌套的异构集合组成。集合有两种类型：命名集合（映射）和未命名集合（序列）。在映射中，每个元素都有一个名称，可以通过名称访问。这与结构和STD::C/C++中的映射和Python中的字典类似。在序列中，元素没有名称，它们由索引访问。这类似于数组和STD:：C/C++中的向量和列表，Python中的元组。“异构”意味着每个集合的元素可以有不同的类型。"
+  },
+  {
+    "origin": "Top-level collection in YAML/XML/JSON is a mapping. Each matrix is stored as a mapping, and the matrix elements are stored as a sequence. Then, there is a sequence of features, where each feature is represented a mapping, and lbp value in a nested sequence.",
+    "local": "YAML/XML/JSON中的顶级集合是一个映射。每个矩阵存储为一个映射，矩阵元素存储为一个序列。然后，有一个特征序列，其中每个特征用映射表示，lbp值用嵌套序列表示。"
+  },
+  {
+    "origin": "When you write to a mapping (a structure), you write element name followed by its value. When you write to a sequence, you simply write the elements one by one. OpenCV data structures (such as",
+    "local": "当您写入一个映射（一个结构）时，您需要先写入元素名，然后再写入其值。当您写入序列时，只需逐个写入元素。OpenCV数据结构（例如"
+  },
+  {
+    "origin": ") are written in absolutely the same way as simple C data structures - using",
+    "local": ")以与简单C数据结构完全相同的方式编写-使用"
+  },
+  {
+    "origin": "operator.",
+    "local": "接线员。"
+  },
+  {
+    "origin": "To write a mapping, you first write the special string",
+    "local": "要编写映射，首先要编写特殊的字符串"
+  },
+  {
+    "origin": "to the storage, then write the elements as pairs (",
+    "local": "到存储中，然后将元素成对写入("
+  },
+  {
+    "origin": ") and then write the closing",
+    "local": ")然后写下结束语"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "To write a sequence, you first write the special string",
+    "local": "要编写序列，首先要编写特殊的字符串"
+  },
+  {
+    "origin": ", then write the elements, then write the closing",
+    "local": "，然后写元素，然后写结束语"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "In YAML/JSON (but not XML), mappings and sequences can be written in a compact Python-like inline form. In the sample above matrix elements, as well as each feature, including its lbp value, is stored in such inline form. To store a mapping/sequence in a compact form, put",
+    "local": "在YAML/JSON（而不是XML）中，映射和序列可以用类似Python的紧凑内联形式编写。在上述示例中，矩阵元素以及每个特征（包括其lbp值）都以这种内联形式存储。要以紧凑的形式存储映射/序列，请将"
+  },
+  {
+    "origin": "after the opening character, e.g. use",
+    "local": "在开头字符之后，例如使用"
+  },
+  {
+    "origin": "instead of",
+    "local": "而不是"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "instead of",
+    "local": "而不是"
+  },
+  {
+    "origin": ". When the data is written to XML, those extra",
+    "local": ". 当数据被写入XML时，那些额外的"
+  },
+  {
+    "origin": "are ignored.",
+    "local": "被忽略。"
+  },
+  {
+    "origin": "Reading data from a file storage.",
+    "local": "从文件存储器中读取数据。"
+  },
+  {
+    "origin": "To read the previously written XML, YAML or JSON file, do the following:",
+    "local": "要读取以前编写的XML、YAML或JSON文件，请执行以下操作："
+  },
+  {
+    "origin": "Open the file storage using",
+    "local": "使用打开文件存储"
+  },
+  {
+    "origin": "constructor or",
+    "local": "建造师或"
+  },
+  {
+    "origin": "method. In the current implementation the whole file is parsed and the whole representation of file storage is built in memory as a hierarchy of file nodes (see",
+    "local": "方法。在当前的实现中，整个文件被解析，文件存储的整个表示作为文件节点的层次结构构建在内存中（参见"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Read the data you are interested in. Use",
+    "local": "阅读你感兴趣的数据。使用"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "and/or",
+    "local": "和/或"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Close the storage using",
+    "local": "使用关闭存储"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Here is how to read the file created by the code sample above:",
+    "local": "下面是如何读取上面代码示例创建的文件："
+  },
+  {
+    "origin": "Format specification",
+    "local": "格式规范"
+  },
+  {
+    "origin": "... where the characters correspond to fundamental C++ types:",
+    "local": "... 其中字符对应于基本C++类型："
+  },
+  {
+    "origin": "8-bit unsigned number",
+    "local": "8位无符号数"
+  },
+  {
+    "origin": "8-bit signed number",
+    "local": "8位有符号数"
+  },
+  {
+    "origin": "16-bit unsigned number",
+    "local": "16位无符号数"
+  },
+  {
+    "origin": "16-bit signed number",
+    "local": "16位有符号数"
+  },
+  {
+    "origin": "32-bit signed number",
+    "local": "32位有符号数"
+  },
+  {
+    "origin": "single precision floating-point number",
+    "local": "单精度浮点数"
+  },
+  {
+    "origin": "double precision floating-point number",
+    "local": "双精度浮点数"
+  },
+  {
+    "origin": "pointer, 32 lower bits of which are written as a signed integer. The type can be used to store structures with links between the elements.",
+    "local": "指针，其中32个低位作为有符号整数写入。该类型可用于存储元素之间具有链接的结构。"
+  },
+  {
+    "origin": "is the optional counter of values of a given type. For example,",
+    "local": "给定类型的值的可选计数器。例如，"
+  },
+  {
+    "origin": "means that each array element is a structure of 2 integers, followed by a single-precision floating-point number. The equivalent notations of the above specification are",
+    "local": "意味着每个数组元素是一个由2个整数组成的结构，后跟一个单精度浮点数。上述规范的等效符号为"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "and so forth. Other examples:",
+    "local": "等等。其他示例："
+  },
+  {
+    "origin": "means that the array consists of bytes, and",
+    "local": "表示数组由字节组成，并且"
+  },
+  {
+    "origin": "means the array consists of pairs of doubles.",
+    "local": "表示数组由成对的双精度子组成。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:40为OpenCV生成，&#160；"
+  }
+]

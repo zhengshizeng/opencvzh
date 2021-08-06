@@ -1,0 +1,294 @@
+[
+  {
+    "origin": "OpenCV: Hough Line Transform",
+    "local": "OpenCV:霍夫线变换"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Hough Line Transform",
+    "local": "霍夫线变换"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "We will understand the concept of the Hough Transform.",
+    "local": "我们将理解Hough变换的概念。"
+  },
+  {
+    "origin": "We will learn how to use it to detect lines in an image.",
+    "local": "我们将学习如何使用它来检测图像中的线条。"
+  },
+  {
+    "origin": "We will learn the following functions:",
+    "local": "我们将学习以下功能："
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "The Hough Transform is a popular technique to detect any shape, if you can represent that shape in a mathematical form. It can detect the shape even if it is broken or distorted a little bit. We will see how it works for a line.",
+    "local": "Hough变换是一种流行的检测任何形状的技术，如果你可以用数学形式表示该形状的话。它可以检测到的形状，即使它是打破或扭曲一点点。我们将看看它是如何工作的一条线。"
+  },
+  {
+    "origin": "A line can be represented as \\(y = mx+c\\) or in a parametric form, as \\(\\rho = x \\cos \\theta + y \\sin \\theta\\) where \\(\\rho\\) is the perpendicular distance from the origin to the line, and \\(\\theta\\) is the angle formed by this perpendicular line and the horizontal axis measured in counter-clockwise (That direction varies on how you represent the coordinate system. This representation is used in OpenCV). Check the image below:",
+    "local": "直线可以表示为\\（y=mx+c\\）或参数形式，表示为\\（\\rho=x\\cos\\theta+y\\sin\\theta\\），其中\\（\\rho\\）是从原点到直线的垂直距离，而\\（\\θ\\）是由这条垂直线和以逆时针方向测量的水平轴形成的角度（这个方向随坐标系的表示方式而变化）。此表示法用于OpenCV）。检查以下图像："
+  },
+  {
+    "origin": "houghlines1.svg",
+    "local": "houghlines1.svg文件"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "So if the line is passing below the origin, it will have a positive rho and an angle less than 180. If it is going above the origin, instead of taking an angle greater than 180, the angle is taken less than 180, and rho is taken negative. Any vertical line will have 0 degree and horizontal lines will have 90 degree.",
+    "local": "因此，如果直线从原点下方经过，它将有一个正的ρ，角度小于180。如果它在原点上方经过，而不是角度大于180，角度小于180，角度为负。任何垂直线都是0度，水平线是90度。"
+  },
+  {
+    "origin": "Now let's see how the Hough Transform works for lines. Any line can be represented in these two terms, \\((\\rho, \\theta)\\). So first it creates a 2D array or accumulator (to hold the values of the two parameters) and it is set to 0 initially. Let rows denote the \\(\\rho\\) and columns denote the \\(\\theta\\). Size of array depends on the accuracy you need. Suppose you want the accuracy of angles to be 1 degree, you will need 180 columns. For \\(\\rho\\), the maximum distance possible is the diagonal length of the image. So taking one pixel accuracy, the number of rows can be the diagonal length of the image.",
+    "local": "现在让我们看看Hough变换是如何处理直线的。任何一行都可以用这两个术语表示，\\（\\rho，\\theta）\\）。因此，首先它创建一个2D数组或累加器（用来保存两个参数的值），并且它最初设置为0。让行表示\\（\\rho\\），列表示\\（\\theta\\）。数组的大小取决于所需的精度。假设您希望角度的精度为1度，则需要180列。对于\\（\\rho\\），最大可能的距离是图像的对角线长度。因此，以一个像素的精度，行数可以是图像的对角线长度。"
+  },
+  {
+    "origin": "Consider a 100x100 image with a horizontal line at the middle. Take the first point of the line. You know its (x,y) values. Now in the line equation, put the values \\(\\theta = 0,1,2,....,180\\) and check the \\(\\rho\\) you get. For every \\((\\rho, \\theta)\\) pair, you increment value by one in our accumulator in its corresponding \\((\\rho, \\theta)\\) cells. So now in accumulator, the cell (50,90) = 1 along with some other cells.",
+    "local": "考虑一个中间有一条水平线的100x100图像。走这条线的第一个点。你知道它的（x，y）值。现在在直线方程中，输入值\\（\\theta=0,1,2，…，180\\），然后检查得到的\\（\\rho\\）。对于每一个\\（（\\rho，\\theta）\\）对，您在相应的\\（\\rho，\\theta）\\）单元格中的累加器中增加一个值。所以现在在累加器中，单元格（50，90）=1和其他一些单元格。"
+  },
+  {
+    "origin": "Now take the second point on the line. Do the same as above. Increment the values in the cells corresponding to \\((\\rho, \\theta)\\) you got. This time, the cell (50,90) = 2. What you actually do is voting the \\((\\rho, \\theta)\\) values. You continue this process for every point on the line. At each point, the cell (50,90) will be incremented or voted up, while other cells may or may not be voted up. This way, at the end, the cell (50,90) will have maximum votes. So if you search the accumulator for maximum votes, you get the value (50,90) which says, there is a line in this image at a distance 50 from the origin and at angle 90 degrees. It is well shown in the below animation (Image Courtesy:",
+    "local": "现在再看第二点。同上。递增单元格中与您得到的\\（（\\rho，\\theta）\\）对应的值。这一次，单元格（50,90）=2。实际操作是对\\（（\\rho，\\theta）\\）值进行表决。对线上的每个点都继续此过程。在每一点上，单元格（50,90）将递增或递增，而其他单元格可能递增或递增。这样，在最后，单元格（50,90）将拥有最多的选票。所以如果你搜索累加器中的最大投票数，你得到的值是（50，90），也就是说，在这张图片中有一条线，距离原点50度，角度90度。它在下面的动画中显示得很好（图片提供："
+  },
+  {
+    "origin": "Amos Storkey",
+    "local": "阿莫斯·斯托基"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is how hough transform works for lines. It is simple. Below is an image which shows the accumulator. Bright spots at some locations denote they are the parameters of possible lines in the image. (Image courtesy:",
+    "local": "这就是hough变换如何处理直线。这很简单。下图显示了累加器。某些位置的亮点表示它们是图像中可能线条的参数(图片提供："
+  },
+  {
+    "origin": "Wikipedia",
+    "local": "维基百科"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Hough Transform in OpenCV",
+    "local": "OpenCV中的Hough变换"
+  },
+  {
+    "origin": "Everything explained above is encapsulated in the OpenCV function,",
+    "local": "上面解释的所有内容都封装在OpenCV函数中，"
+  },
+  {
+    "origin": ". It simply returns an array of ( \\((\\rho, \\theta)\\) values. \\(\\rho\\) is measured in pixels and \\(\\theta\\) is measured in radians. First parameter, Input image should be a binary image, so apply threshold or use canny edge detection before applying hough transform.",
+    "local": ". 它只返回一个（\\（（\\rho，\\theta）\\）值数组\\(\\ρ（θ）以像素为单位，θ（θ）以弧度为单位。第一个参数，输入图像应该是一个二值图像，所以在应用hough变换之前应用阈值或canny边缘检测。"
+  },
+  {
+    "origin": "We use the function:",
+    "local": "我们使用函数："
+  },
+  {
+    "origin": "(image, lines, rho, theta, threshold, srn = 0, stn = 0, min_theta = 0, max_theta = Math.PI)",
+    "local": "（图像，线条，ρ，θ，阈值，srn=0，stn=0，最小θ=0，最大θ=Math.PI）"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "8-bit, single-channel binary source image. The image may be modified by the function.",
+    "local": "8位，单通道二进制源图像。该功能可以修改图像。"
+  },
+  {
+    "origin": "lines",
+    "local": "线"
+  },
+  {
+    "origin": "output vector of lines(cv.32FC2 type). Each line is represented by a two-element vector (ρ,θ) . ρ is the distance from the coordinate origin (0,0). θ is the line rotation angle in radians.",
+    "local": "线的输出向量（cv.32FC2类型）。每条线由一个两元素向量表示(ρ,θ) . ρ 是到坐标原点的距离（0,0）。θ 是以弧度表示的线旋转角度。"
+  },
+  {
+    "origin": "rho",
+    "local": "ρ"
+  },
+  {
+    "origin": "distance resolution of the accumulator in pixels.",
+    "local": "累加器的距离分辨率（像素）。"
+  },
+  {
+    "origin": "theta",
+    "local": "θ"
+  },
+  {
+    "origin": "angle resolution of the accumulator in radians.",
+    "local": "累加器的角度分辨率（弧度）。"
+  },
+  {
+    "origin": "threshold",
+    "local": "门槛"
+  },
+  {
+    "origin": "accumulator threshold parameter. Only those lines are returned that get enough votes",
+    "local": "累加器阈值参数。只有那些获得足够票数的行才被返回"
+  },
+  {
+    "origin": "srn",
+    "local": "srn公司"
+  },
+  {
+    "origin": "for the multi-scale Hough transform, it is a divisor for the distance resolution rho . The coarse accumulator distance resolution is rho and the accurate accumulator resolution is rho/srn . If both srn=0 and stn=0 , the classical Hough transform is used. Otherwise, both these parameters should be positive.",
+    "local": "对于多尺度Hough变换，它是距离分辨率rho的除数。粗累加器距离分辨率为rho，精累加器距离分辨率为rho/srn。如果srn=0和stn=0，则使用经典的Hough变换。否则，这两个参数都应为正。"
+  },
+  {
+    "origin": "stn",
+    "local": "stn公司"
+  },
+  {
+    "origin": "for the multi-scale Hough transform, it is a divisor for the distance resolution theta.",
+    "local": "对于多尺度Hough变换，它是距离分辨率θ的一个除数。"
+  },
+  {
+    "origin": "min_theta",
+    "local": "最小θ"
+  },
+  {
+    "origin": "for standard and multi-scale Hough transform, minimum angle to check for lines. Must fall between 0 and max_theta.",
+    "local": "对于标准和多尺度Hough变换，检查直线的最小角度。必须介于0和最大θ之间。"
+  },
+  {
+    "origin": "max_theta",
+    "local": "最大θ"
+  },
+  {
+    "origin": "for standard and multi-scale Hough transform, maximum angle to check for lines. Must fall between min_theta and CV_PI.",
+    "local": "对于标准和多尺度Hough变换，检查直线的最大角度。必须介于minθ和CVπ之间。"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "Probabilistic Hough Transform",
+    "local": "概率霍夫变换"
+  },
+  {
+    "origin": "In the hough transform, you can see that even for a line with two arguments, it takes a lot of computation. Probabilistic Hough Transform is an optimization of the Hough Transform we saw. It doesn't take all the points into consideration. Instead, it takes only a random subset of points which is sufficient for line detection. Just we have to decrease the threshold. See image below which compares Hough Transform and Probabilistic Hough Transform in Hough space. (Image Courtesy :",
+    "local": "在hough变换中，您可以看到，即使对于具有两个参数的直线，也需要大量计算。概率Hough变换是对Hough变换的优化。它没有把所有的要点都考虑进去。相反，它只需要一个随机子集的点，这是足够的线检测。我们必须降低门槛。下面的图片比较了Hough变换和Hough空间中的概率Hough变换(图片提供："
+  },
+  {
+    "origin": "Franck Bettinger's home page",
+    "local": "Franck Bettinger的主页"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "OpenCV implementation is based on Robust Detection of Lines Using the Progressive Probabilistic Hough Transform by Matas, J. and Galambos, C. and Kittler, J.V.",
+    "local": "OpenCV的实现是基于Matas，J.提出的基于渐进概率Hough变换的直线鲁棒检测。加兰博斯，C。基特勒，J.V。"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "We use the function:",
+    "local": "我们使用函数："
+  },
+  {
+    "origin": "(image, lines, rho, theta, threshold, minLineLength = 0, maxLineGap = 0)",
+    "local": "（图像，线条，ρ，θ，阈值，最小线条长度=0，最大线条间距=0）"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "8-bit, single-channel binary source image. The image may be modified by the function.",
+    "local": "8位，单通道二进制源图像。该功能可以修改图像。"
+  },
+  {
+    "origin": "lines",
+    "local": "线"
+  },
+  {
+    "origin": "output vector of lines(cv.32SC4 type). Each line is represented by a 4-element vector (x1,y1,x2,y2) ,where (x1,y1) and (x2,y2) are the ending points of each detected line segment.",
+    "local": "线的输出向量（cv.32SC4类型）。每条线由一个4元素向量（x1，y1，x2，y2）表示，其中（x1，y1）和（x2，y2）是每个检测线段的端点。"
+  },
+  {
+    "origin": "rho",
+    "local": "ρ"
+  },
+  {
+    "origin": "distance resolution of the accumulator in pixels.",
+    "local": "累加器的距离分辨率（像素）。"
+  },
+  {
+    "origin": "theta",
+    "local": "θ"
+  },
+  {
+    "origin": "angle resolution of the accumulator in radians.",
+    "local": "累加器的角度分辨率（弧度）。"
+  },
+  {
+    "origin": "threshold",
+    "local": "门槛"
+  },
+  {
+    "origin": "accumulator threshold parameter. Only those lines are returned that get enough votes",
+    "local": "累加器阈值参数。只有那些获得足够票数的行才被返回"
+  },
+  {
+    "origin": "minLineLength",
+    "local": "最小长度"
+  },
+  {
+    "origin": "minimum line length. Line segments shorter than that are rejected.",
+    "local": "最小线长度。比该线段短的线段将被拒绝。"
+  },
+  {
+    "origin": "maxLineGap",
+    "local": "最大线间距"
+  },
+  {
+    "origin": "maximum allowed gap between points on the same line to link them.",
+    "local": "同一直线上的点之间的最大允许间隙。"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

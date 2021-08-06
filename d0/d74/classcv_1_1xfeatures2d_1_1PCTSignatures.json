@@ -1,0 +1,4698 @@
+[
+  {
+    "origin": "OpenCV: cv::xfeatures2d::PCTSignatures Class Reference",
+    "local": "OpenCV:cv:：xfeature2d:：PCTSignatures类引用"
+  },
+  {
+    "origin": "OpenCV",
+    "local": "打开CV"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Public Types",
+    "local": "公共类型"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": "静态公共成员函数"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::xfeatures2d::PCTSignatures Class Reference",
+    "local": "cv:：xfeatures2d:：PCTSignatures类参考"
+  },
+  {
+    "origin": "abstract",
+    "local": "摘要"
+  },
+  {
+    "origin": "»",
+    "local": "»"
+  },
+  {
+    "origin": "Class implementing PCT (position-color-texture) signature extraction as described in",
+    "local": "类实现PCT（位置颜色纹理）签名提取，如中所述"
+  },
+  {
+    "origin": ". The algorithm is divided to a feature sampler and a clusterizer. Feature sampler produces samples at given set of coordinates. Clusterizer then produces clusters of these samples using k-means algorithm. Resulting set of clusters is the signature of the input image.",
+    "local": ". 该算法分为特征采样器和聚类器。特征采样器在给定的坐标集上生成样本。聚类器然后使用k-均值算法生成这些样本的聚类。得到的聚类集就是输入图像的特征码。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Inheritance diagram for cv::xfeatures2d::PCTSignatures:",
+    "local": "cv:：xfeatures2d:：PCTSignatures的继承关系图："
+  },
+  {
+    "origin": "Public Types",
+    "local": "公共类型"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "{",
+    "local": "{"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "}",
+    "local": "}"
+  },
+  {
+    "origin": "Lp distance function selector.",
+    "local": "Lp距离功能选择器。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "{",
+    "local": "{"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "}",
+    "local": "}"
+  },
+  {
+    "origin": "Point distributions supported by random point generator.",
+    "local": "随机点生成器支持的点分布。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "{",
+    "local": "{"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "}",
+    "local": "}"
+  },
+  {
+    "origin": "Similarity function selector.",
+    "local": "相似函数选择器。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "image,",
+    "local": "图像，"
+  },
+  {
+    "origin": "Computes signature of given image.",
+    "local": "计算给定图像的签名。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;images, std::vector&lt;",
+    "local": "&燃气轮机&amp；图像，标准：：向量&lt；"
+  },
+  {
+    "origin": "Computes signatures for multiple images in parallel.",
+    "local": "并行计算多个图像的签名。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "This parameter multiplied by the index of iteration gives lower limit for cluster size. Clusters containing fewer points than specified by the limit have their centroid dismissed and points are reassigned.",
+    "local": "这个参数乘以迭代的索引给出了集群大小的下限。包含少于限制指定的点的簇将取消其质心并重新指定点。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Distance function selector used for measuring distance between two points in k-means.",
+    "local": "距离函数选择器，用于测量k-均值中两点之间的距离。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Remove centroids in k-means whose weight is lesser or equal to given threshold.",
+    "local": "移除权重小于或等于给定阈值的k-均值中的质心。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Color resolution of the greyscale bitmap represented in allocated bits (i.e., value 4 means that 16 shades of grey are used). The greyscale bitmap is used for computing contrast and entropy values.",
+    "local": "以分配的位表示的灰度位图的颜色分辨率（即，值4表示使用16种灰度）。灰度位图用于计算对比度和熵值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Number of initial seeds (initial number of clusters) for the k-means algorithm.",
+    "local": "k-means算法的初始种子数（初始簇数）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual std::vector&lt; int &gt;",
+    "local": "虚拟标准：：向量&lt；内部&gt；"
+  },
+  {
+    "origin": "Initial seeds (initial number of clusters) for the k-means algorithm.",
+    "local": "k-means算法的初始种子（簇的初始数目）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Number of iterations of the k-means clustering. We use fixed number of iterations, since the modified clustering is pruning clusters (not iteratively refining k clusters).",
+    "local": "k-均值聚类的迭代次数。我们使用固定的迭代次数，因为修改后的聚类是修剪聚类（而不是迭代细化k个聚类）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Threshold euclidean distance between two centroids. If two cluster centers are closer than this distance, one of the centroid is dismissed and points are reassigned.",
+    "local": "两个质心之间的阈值欧氏距离。如果两个簇中心比这个距离更近，其中一个质心将被消除，点将被重新分配。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Maximal number of generated clusters. If the number is exceeded, the clusters are sorted by their weights and the smallest clusters are cropped.",
+    "local": "生成的最大簇数。如果超过该数字，则按权重对簇进行排序，并裁剪最小的簇。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Number of initial samples taken from the image.",
+    "local": "从图像中提取的初始样本数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual std::vector&lt;",
+    "local": "虚拟标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "Initial samples taken from the image. These sampled features become the input for clustering.",
+    "local": "从图像中提取的初始样本。这些采样特征成为聚类的输入。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual float",
+    "local": "虚拟浮动"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual int",
+    "local": "虚拟整数"
+  },
+  {
+    "origin": "Size of the texture sampling window used to compute contrast and entropy (center of the window is always in the pixel selected by x,y coordinates of the corresponding feature sample).",
+    "local": "用于计算对比度和熵的纹理采样窗口的大小（窗口的中心始终位于由相应特征样本的x，y坐标选择的像素中）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "This parameter multiplied by the index of iteration gives lower limit for cluster size. Clusters containing fewer points than specified by the limit have their centroid dismissed and points are reassigned.",
+    "local": "这个参数乘以迭代的索引给出了集群大小的下限。包含少于限制指定的点的簇将取消其质心并重新指定点。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Distance function selector used for measuring distance between two points in k-means. Available: L0_25, L0_5,",
+    "local": "距离函数选择器，用于测量k-均值中两点之间的距离。提供：L0\\U 25，L0\\U 5，"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", L2SQUARED, L5, L_INFINITY.",
+    "local": "，L2SQUARED，L5，L_无穷大。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Remove centroids in k-means whose weight is lesser or equal to given threshold.",
+    "local": "移除权重小于或等于给定阈值的k-均值中的质心。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Color resolution of the greyscale bitmap represented in allocated bits (i.e., value 4 means that 16 shades of grey are used). The greyscale bitmap is used for computing contrast and entropy values.",
+    "local": "以分配的位表示的灰度位图的颜色分辨率（即，值4表示使用16种灰度）。灰度位图用于计算对比度和熵值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Initial seed indexes for the k-means algorithm.",
+    "local": "k-means算法的初始种子索引。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Number of iterations of the k-means clustering. We use fixed number of iterations, since the modified clustering is pruning clusters (not iteratively refining k clusters).",
+    "local": "k-均值聚类的迭代次数。我们使用固定的迭代次数，因为修改后的聚类是修剪聚类（而不是迭代细化k个聚类）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Threshold euclidean distance between two centroids. If two cluster centers are closer than this distance, one of the centroid is dismissed and points are reassigned.",
+    "local": "两个质心之间的阈值欧氏距离。如果两个簇中心比这个距离更近，其中一个质心将被消除，点将被重新分配。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Maximal number of generated clusters. If the number is exceeded, the clusters are sorted by their weights and the smallest clusters are cropped.",
+    "local": "生成的最大簇数。如果超过该数字，则按权重对簇进行排序，并裁剪最小的簇。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": "（标准：：向量&lt；"
+  },
+  {
+    "origin": "Sets sampling points used to sample the input image.",
+    "local": "设置用于对输入图像进行采样的采样点。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Translations of the individual axes of the feature space.",
+    "local": "特征空间的各个轴的平移。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Translations of the individual axes of the feature space.",
+    "local": "特征空间的各个轴的平移。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space.",
+    "local": "线性拉伸特征空间各个轴的权重（乘法常数）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space.",
+    "local": "线性拉伸特征空间各个轴的权重（乘法常数）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "Size of the texture sampling window used to compute contrast and entropy (center of the window is always in the pixel selected by x,y coordinates of the corresponding feature sample).",
+    "local": "用于计算对比度和熵的纹理采样窗口的大小（窗口的中心始终位于由相应特征样本的x，y坐标选择的像素中）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": "公共成员函数继承自"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Clears the algorithm state.",
+    "local": "清除算法状态。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual bool",
+    "local": "虚拟布尔"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "Returns true if the",
+    "local": "如果"
+  },
+  {
+    "origin": "is empty (e.g. in the very beginning or after unsuccessful read.",
+    "local": "为空（例如，在最开始或读取失败后）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": "&amp；（fn）"
+  },
+  {
+    "origin": "Reads algorithm parameters from a file storage.",
+    "local": "从文件存储器中读取算法参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;filename) const",
+    "local": "&amp；文件名）常量"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": "&amp；（f） 常数"
+  },
+  {
+    "origin": "Stores algorithm parameters in a file storage.",
+    "local": "将算法参数存储在文件存储器中。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; &amp;fs, const",
+    "local": "&gt；gt；amp；fs，常数"
+  },
+  {
+    "origin": "&amp;name=",
+    "local": "&amp；姓名="
+  },
+  {
+    "origin": "()) const",
+    "local": "（））常数"
+  },
+  {
+    "origin": "simplified API for language bindings This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "语言绑定的简化API这是一个重载的成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": "静态公共成员函数"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "(const int initSampleCount=2000, const int initSeedCount=400, const int pointDistribution=0)",
+    "local": "（const int initSampleCount=2000，const int initSeedCount=400，const int pointDistribution=0）"
+  },
+  {
+    "origin": "Creates",
+    "local": "创建"
+  },
+  {
+    "origin": "algorithm using sample and seed count. It generates its own sets of sampling points and clusterization seed indexes.",
+    "local": "使用样本和种子计数的算法。它生成自己的采样点集和聚类种子索引。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;initSamplingPoints, const int initSeedCount)",
+    "local": "&gt；gt；amp；初始化采样点，const int initSeedCount）"
+  },
+  {
+    "origin": "Creates",
+    "local": "创建"
+  },
+  {
+    "origin": "algorithm using pre-generated sampling points and number of clusterization seeds. It uses the provided sampling points and generates its own clusterization seed indexes.",
+    "local": "算法采用预先生成的采样点和聚类种子数。它使用提供的采样点并生成自己的聚类种子索引。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;initSamplingPoints, const std::vector&lt; int &gt; &amp;initClusterSeedIndexes)",
+    "local": "&燃气轮机&amp；初始化采样点，const std:：vector&lt；内部&gt&amp；initClusterSeedIndexes（索引）"
+  },
+  {
+    "origin": "Creates",
+    "local": "创建"
+  },
+  {
+    "origin": "algorithm using pre-generated sampling points and clusterization seeds indexes.",
+    "local": "算法使用预先生成的采样点和聚类种子索引。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "static void",
+    "local": "静态空隙"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "source,",
+    "local": "来源：，"
+  },
+  {
+    "origin": "signature,",
+    "local": "签名，"
+  },
+  {
+    "origin": "result, float radiusToShorterSideRatio=1.0/8, int borderThickness=1)",
+    "local": "浮动半径ToSortersideratio=1.0/8，int borderThickness=1）"
+  },
+  {
+    "origin": "Draws signature in the source image and outputs the result. Signatures are visualized as a circle with radius based on signature weight and color based on signature color. Contrast and entropy are not visualized.",
+    "local": "在源图像中绘制签名并输出结果。签名被可视化为一个圆形，半径基于签名权重，颜色基于签名颜色。对比度和熵是不可见的。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "static void",
+    "local": "静态空隙"
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": "（标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;initPoints, const int count, int pointDistribution)",
+    "local": "&燃气轮机&amp；initPoints、const int count、int pointDistribution）"
+  },
+  {
+    "origin": "Generates initial sampling points according to selected point distribution.",
+    "local": "根据所选点分布生成初始采样点。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Static Public Member Functions inherited from",
+    "local": "继承自的静态公共成员函数"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": "&lt_Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;filename, const",
+    "local": "&amp；文件名，常量"
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": "&amp；对象名="
+  },
+  {
+    "origin": "())",
+    "local": "())"
+  },
+  {
+    "origin": "Loads algorithm from the file.",
+    "local": "从文件加载算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": "&lt_Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;strModel, const",
+    "local": "&amp；strModel，常量"
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": "&amp；对象名="
+  },
+  {
+    "origin": "())",
+    "local": "())"
+  },
+  {
+    "origin": "Loads algorithm from a String.",
+    "local": "从字符串加载算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": "&lt_Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": "&amp；（fn）"
+  },
+  {
+    "origin": "Reads algorithm from the file node.",
+    "local": "从文件节点读取算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": "其他继承成员"
+  },
+  {
+    "origin": "Protected Member Functions inherited from",
+    "local": "继承自的受保护成员函数"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": "&amp；（f） 常数"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "Class implementing PCT (position-color-texture) signature extraction as described in",
+    "local": "类实现PCT（位置颜色纹理）签名提取，如中所述"
+  },
+  {
+    "origin": ". The algorithm is divided to a feature sampler and a clusterizer. Feature sampler produces samples at given set of coordinates. Clusterizer then produces clusters of these samples using k-means algorithm. Resulting set of clusters is the signature of the input image.",
+    "local": ". 该算法分为特征采样器和聚类器。特征采样器在给定的坐标集上生成样本。聚类器然后使用k-均值算法生成这些样本的聚类。得到的聚类集就是输入图像的特征码。"
+  },
+  {
+    "origin": "A signature is an array of SIGNATURE_DIMENSION-dimensional points. Used dimensions are: weight, x, y position; lab color, contrast, entropy.",
+    "local": "签名是一个签名的二维点的数组。使用的尺寸为：重量、x、y位置；实验室颜色，对比度，熵。"
+  },
+  {
+    "origin": "Member Enumeration Documentation",
+    "local": "成员枚举文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "DistanceFunction",
+    "local": "距离函数"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "Lp distance function selector.",
+    "local": "Lp距离功能选择器。"
+  },
+  {
+    "origin": "Enumerator",
+    "local": "枚举器"
+  },
+  {
+    "origin": "L0_25",
+    "local": "L0Ā25"
+  },
+  {
+    "origin": "L0_5",
+    "local": "L0\\ 5级"
+  },
+  {
+    "origin": "L1",
+    "local": "L1级"
+  },
+  {
+    "origin": "L2",
+    "local": "L2级"
+  },
+  {
+    "origin": "L2SQUARED",
+    "local": "L2方形"
+  },
+  {
+    "origin": "L5",
+    "local": "L5级"
+  },
+  {
+    "origin": "L_INFINITY",
+    "local": "无穷大"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "PointDistribution",
+    "local": "点"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "Point distributions supported by random point generator.",
+    "local": "随机点生成器支持的点分布。"
+  },
+  {
+    "origin": "Enumerator",
+    "local": "枚举器"
+  },
+  {
+    "origin": "UNIFORM",
+    "local": "制服"
+  },
+  {
+    "origin": "Generate numbers uniformly.",
+    "local": "统一生成数字。"
+  },
+  {
+    "origin": "REGULAR",
+    "local": "常规"
+  },
+  {
+    "origin": "Generate points in a regular grid.",
+    "local": "在规则栅格中生成点。"
+  },
+  {
+    "origin": "NORMAL",
+    "local": "正常"
+  },
+  {
+    "origin": "Generate points with normal (gaussian) distribution.",
+    "local": "生成正态（高斯）分布的点。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "SimilarityFunction",
+    "local": "相似函数"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "Similarity function selector.",
+    "local": "相似函数选择器。"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "Christian Beecks, Merih Seran Uysal, Thomas Seidl. Signature quadratic form distance. In Proceedings of the ACM International Conference on Image and Video Retrieval, pages 438-445. ACM, 2010.",
+    "local": "克里斯蒂安·比克斯、梅里赫·瑟兰·尤萨尔、托马斯·塞德尔。签名二次型距离。ACM国际图像和视频检索会议论文集，438-445页。ACM，2010。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "For selected distance function:",
+    "local": "对于选定的距离函数："
+  },
+  {
+    "origin": "\\[ d(c_i, c_j) \\]",
+    "local": "\\[d（c\\u i，c\\u j）\\]"
+  },
+  {
+    "origin": "and parameter:",
+    "local": "和参数："
+  },
+  {
+    "origin": "\\[ \\alpha \\]",
+    "local": "\\[\\alpha\\]"
+  },
+  {
+    "origin": "Enumerator",
+    "local": "枚举器"
+  },
+  {
+    "origin": "MINUS",
+    "local": "减"
+  },
+  {
+    "origin": "\\[ -d(c_i, c_j) \\]",
+    "local": "\\[-d（c\\u i，c\\u j）\\]"
+  },
+  {
+    "origin": "GAUSSIAN",
+    "local": "高斯分布"
+  },
+  {
+    "origin": "\\[ e^{ -\\alpha * d^2(c_i, c_j)} \\]",
+    "local": "\\\\[e^{-\\alpha*d^2（c\\u i，c\\u j）}\\]"
+  },
+  {
+    "origin": "HEURISTIC",
+    "local": "启发式"
+  },
+  {
+    "origin": "\\[ \\frac{1}{\\alpha + d(c_i, c_j)} \\]",
+    "local": "\\\\[\\frac{1}{\\alpha+d（c\\u i，c\\u j）}\\]"
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "computeSignature()",
+    "local": "计算签名（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::computeSignature",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：computeSignature"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "signature",
+    "local": "签名"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "signature",
+    "local": "签名"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.computeSignature(",
+    "local": "cv.X特征2D\\U PCTSignatures.computeSignature("
+  },
+  {
+    "origin": "image[, signature]",
+    "local": "图片[，签名]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Computes signature of given image.",
+    "local": "计算给定图像的签名。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Input image of CV_8U type.",
+    "local": "输入cv8u类型的图像。"
+  },
+  {
+    "origin": "signature",
+    "local": "签名"
+  },
+  {
+    "origin": "Output computed signature.",
+    "local": "输出计算签名。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "computeSignatures()",
+    "local": "计算签名（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::computeSignatures",
+    "local": "虚拟void cv:：xFeature2D:：PCTSignatures:：computeSignatures"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "images",
+    "local": "图像"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "signatures",
+    "local": "签名"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.computeSignatures(",
+    "local": "cv.X特征2D\\U PCTSignatures.computeSignatures("
+  },
+  {
+    "origin": "images, signatures",
+    "local": "图像、签名"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Computes signatures for multiple images in parallel.",
+    "local": "并行计算多个图像的签名。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "images",
+    "local": "图像"
+  },
+  {
+    "origin": "Vector of input images of CV_8U type.",
+    "local": "cv8u类型的输入图像的向量。"
+  },
+  {
+    "origin": "signatures",
+    "local": "签名"
+  },
+  {
+    "origin": "Vector of computed signatures.",
+    "local": "计算签名向量。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "create()",
+    "local": "创建（）"
+  },
+  {
+    "origin": "[1/3]",
+    "local": "[1/3]"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; cv::xfeatures2d::PCTSignatures::create",
+    "local": "&燃气轮机；cv:：xFeature2D:：PCTSignatures:：创建"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const int",
+    "local": "const int"
+  },
+  {
+    "origin": "initSampleCount",
+    "local": "初始化示例"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const int",
+    "local": "const int"
+  },
+  {
+    "origin": "initSeedCount",
+    "local": "初始化种子计数"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const int",
+    "local": "const int"
+  },
+  {
+    "origin": "pointDistribution",
+    "local": "点"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_create(",
+    "local": "cv.xfeature2d.pct签名\\u创建("
+  },
+  {
+    "origin": "[, initSampleCount[, initSeedCount[, pointDistribution]]]",
+    "local": "[，initSampleCount[，initSeedCount[，pointDistribution]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_create(",
+    "local": "cv.xfeature2d.pct签名\\u创建("
+  },
+  {
+    "origin": "initSamplingPoints, initSeedCount",
+    "local": "初始化采样点，初始化种子计数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_create(",
+    "local": "cv.xfeature2d.pct签名\\u创建("
+  },
+  {
+    "origin": "initSamplingPoints, initClusterSeedIndexes",
+    "local": "initSamplingPoints、initClusterSeedIndexes"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Creates",
+    "local": "创建"
+  },
+  {
+    "origin": "algorithm using sample and seed count. It generates its own sets of sampling points and clusterization seed indexes.",
+    "local": "使用样本和种子计数的算法。它生成自己的采样点集和聚类种子索引。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "initSampleCount",
+    "local": "初始化示例"
+  },
+  {
+    "origin": "Number of points used for image sampling.",
+    "local": "用于图像采样的点数。"
+  },
+  {
+    "origin": "initSeedCount",
+    "local": "初始化种子计数"
+  },
+  {
+    "origin": "Number of initial clusterization seeds. Must be lower or equal to initSampleCount",
+    "local": "初始聚类种子数。必须小于或等于initSampleCount"
+  },
+  {
+    "origin": "pointDistribution",
+    "local": "点"
+  },
+  {
+    "origin": "Distribution of generated points. Default: UNIFORM. Available: UNIFORM, REGULAR, NORMAL.",
+    "local": "生成点的分布。默认值：统一。提供：统一、常规、正常。"
+  },
+  {
+    "origin": "Returns",
+    "local": "退换商品"
+  },
+  {
+    "origin": "Created algorithm.",
+    "local": "创建了算法。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "create()",
+    "local": "创建（）"
+  },
+  {
+    "origin": "[2/3]",
+    "local": "[2/3]"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; cv::xfeatures2d::PCTSignatures::create",
+    "local": "&燃气轮机；cv:：xFeature2D:：PCTSignatures:：创建"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "initSamplingPoints",
+    "local": "初始采样点"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const int",
+    "local": "const int"
+  },
+  {
+    "origin": "initSeedCount",
+    "local": "初始化种子计数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_create(",
+    "local": "cv.xfeature2d.pct签名\\u创建("
+  },
+  {
+    "origin": "[, initSampleCount[, initSeedCount[, pointDistribution]]]",
+    "local": "[，initSampleCount[，initSeedCount[，pointDistribution]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_create(",
+    "local": "cv.xfeature2d.pct签名\\u创建("
+  },
+  {
+    "origin": "initSamplingPoints, initSeedCount",
+    "local": "初始化采样点，初始化种子计数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_create(",
+    "local": "cv.xfeature2d.pct签名\\u创建("
+  },
+  {
+    "origin": "initSamplingPoints, initClusterSeedIndexes",
+    "local": "initSamplingPoints、initClusterSeedIndexes"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Creates",
+    "local": "创建"
+  },
+  {
+    "origin": "algorithm using pre-generated sampling points and number of clusterization seeds. It uses the provided sampling points and generates its own clusterization seed indexes.",
+    "local": "算法采用预先生成的采样点和聚类种子数。它使用提供的采样点并生成自己的聚类种子索引。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "initSamplingPoints",
+    "local": "初始采样点"
+  },
+  {
+    "origin": "Sampling points used in image sampling.",
+    "local": "用于图像采样的采样点。"
+  },
+  {
+    "origin": "initSeedCount",
+    "local": "初始化种子计数"
+  },
+  {
+    "origin": "Number of initial clusterization seeds. Must be lower or equal to",
+    "local": "初始聚类种子数。必须小于或等于"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Returns",
+    "local": "退换商品"
+  },
+  {
+    "origin": "Created algorithm.",
+    "local": "创建了算法。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "create()",
+    "local": "创建（）"
+  },
+  {
+    "origin": "[3/3]",
+    "local": "[3/3]"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; cv::xfeatures2d::PCTSignatures::create",
+    "local": "&燃气轮机；cv:：xFeature2D:：PCTSignatures:：创建"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "initSamplingPoints",
+    "local": "初始采样点"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt; int &gt; &amp;",
+    "local": "常量标准：：向量&lt；内部&gt&amp；"
+  },
+  {
+    "origin": "initClusterSeedIndexes",
+    "local": "初始化群集种子索引"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_create(",
+    "local": "cv.xfeature2d.pct签名\\u创建("
+  },
+  {
+    "origin": "[, initSampleCount[, initSeedCount[, pointDistribution]]]",
+    "local": "[，initSampleCount[，initSeedCount[，pointDistribution]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_create(",
+    "local": "cv.xfeature2d.pct签名\\u创建("
+  },
+  {
+    "origin": "initSamplingPoints, initSeedCount",
+    "local": "初始化采样点，初始化种子计数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_create(",
+    "local": "cv.xfeature2d.pct签名\\u创建("
+  },
+  {
+    "origin": "initSamplingPoints, initClusterSeedIndexes",
+    "local": "initSamplingPoints、initClusterSeedIndexes"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Creates",
+    "local": "创建"
+  },
+  {
+    "origin": "algorithm using pre-generated sampling points and clusterization seeds indexes.",
+    "local": "算法使用预先生成的采样点和聚类种子索引。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "initSamplingPoints",
+    "local": "初始采样点"
+  },
+  {
+    "origin": "Sampling points used in image sampling.",
+    "local": "用于图像采样的采样点。"
+  },
+  {
+    "origin": "initClusterSeedIndexes",
+    "local": "初始化群集种子索引"
+  },
+  {
+    "origin": "Indexes of initial clusterization seeds. Its size must be lower or equal to",
+    "local": "种子初始丛生指数。其大小必须小于或等于"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Returns",
+    "local": "退换商品"
+  },
+  {
+    "origin": "Created algorithm.",
+    "local": "创建了算法。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "drawSignature()",
+    "local": "drawSignature（）"
+  },
+  {
+    "origin": "static void cv::xfeatures2d::PCTSignatures::drawSignature",
+    "local": "静态void cv:：xfeature2d:：PCTSignatures:：drawSignature"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "source",
+    "local": "来源"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "signature",
+    "local": "签名"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "result",
+    "local": "结果"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "radiusToShorterSideRatio",
+    "local": "放射体"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "borderThickness",
+    "local": "边界厚度"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "result",
+    "local": "结果"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_drawSignature(",
+    "local": "cv.xfeatures2d.pct签名\\u绘图签名("
+  },
+  {
+    "origin": "source, signature[, result[, radiusToShorterSideRatio[, borderThickness]]]",
+    "local": "源，签名[，结果[，radiusToShorterSideRatio[，borderThickness]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Draws signature in the source image and outputs the result. Signatures are visualized as a circle with radius based on signature weight and color based on signature color. Contrast and entropy are not visualized.",
+    "local": "在源图像中绘制签名并输出结果。签名被可视化为一个圆形，半径基于签名权重，颜色基于签名颜色。对比度和熵是不可见的。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "source",
+    "local": "来源"
+  },
+  {
+    "origin": "Source image.",
+    "local": "源图像。"
+  },
+  {
+    "origin": "signature",
+    "local": "签名"
+  },
+  {
+    "origin": "Image signature.",
+    "local": "图像签名。"
+  },
+  {
+    "origin": "result",
+    "local": "结果"
+  },
+  {
+    "origin": "Output result.",
+    "local": "输出结果。"
+  },
+  {
+    "origin": "radiusToShorterSideRatio",
+    "local": "放射体"
+  },
+  {
+    "origin": "Determines maximal radius of signature in the output image.",
+    "local": "确定输出图像中签名的最大半径。"
+  },
+  {
+    "origin": "borderThickness",
+    "local": "边界厚度"
+  },
+  {
+    "origin": "Border thickness of the visualized signature.",
+    "local": "可视化签名的边框厚度。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "generateInitPoints()",
+    "local": "generateInitPoints（）"
+  },
+  {
+    "origin": "static void cv::xfeatures2d::PCTSignatures::generateInitPoints",
+    "local": "静态void cv:：xfeature2d:：PCTSignatures:：generateInitPoints"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "initPoints",
+    "local": "初始点"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const int",
+    "local": "const int"
+  },
+  {
+    "origin": "count",
+    "local": "计数"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "pointDistribution",
+    "local": "点"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d.PCTSignatures_generateInitPoints(",
+    "local": "cv.xfeatures2d.pct签名\\u生成要素("
+  },
+  {
+    "origin": "initPoints, count, pointDistribution",
+    "local": "初始点，计数，点分布"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Generates initial sampling points according to selected point distribution.",
+    "local": "根据所选点分布生成初始采样点。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "initPoints",
+    "local": "初始点"
+  },
+  {
+    "origin": "Output vector where the generated points will be saved.",
+    "local": "将保存生成的点的输出向量。"
+  },
+  {
+    "origin": "count",
+    "local": "计数"
+  },
+  {
+    "origin": "Number of points to generate.",
+    "local": "要生成的点数。"
+  },
+  {
+    "origin": "pointDistribution",
+    "local": "点"
+  },
+  {
+    "origin": "Point distribution selector. Available: UNIFORM, REGULAR, NORMAL.",
+    "local": "点分布选择器。提供：统一、常规、正常。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Generated coordinates are in range [0..1)",
+    "local": "生成的坐标在[0..1]范围内"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getClusterMinSize()",
+    "local": "getClusterMinSize（）"
+  },
+  {
+    "origin": "virtual int cv::xfeatures2d::PCTSignatures::getClusterMinSize",
+    "local": "虚拟int cv:：xfeature2d:：PCTSignatures:：getClusterMinSize"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getClusterMinSize(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.getClusterMinSize("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This parameter multiplied by the index of iteration gives lower limit for cluster size. Clusters containing fewer points than specified by the limit have their centroid dismissed and points are reassigned.",
+    "local": "这个参数乘以迭代的索引给出了集群大小的下限。包含少于限制指定的点的簇将取消其质心并重新指定点。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getDistanceFunction()",
+    "local": "getDistanceFunction（）"
+  },
+  {
+    "origin": "virtual int cv::xfeatures2d::PCTSignatures::getDistanceFunction",
+    "local": "虚拟int cv:：xfeature2d:：PCTSignatures:：getDistanceFunction"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getDistanceFunction(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.getDistanceFunction函数("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Distance function selector used for measuring distance between two points in k-means.",
+    "local": "距离函数选择器，用于测量k-均值中两点之间的距离。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getDropThreshold()",
+    "local": "getDropThreshold（）"
+  },
+  {
+    "origin": "virtual float cv::xfeatures2d::PCTSignatures::getDropThreshold",
+    "local": "虚拟浮点cv:：xFeature2D:：PCTSignatures:：getDropThreshold"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getDropThreshold(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.getDropThreshold获取阈值("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Remove centroids in k-means whose weight is lesser or equal to given threshold.",
+    "local": "移除权重小于或等于给定阈值的k-均值中的质心。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getGrayscaleBits()",
+    "local": "getGrayscaleBits（）"
+  },
+  {
+    "origin": "virtual int cv::xfeatures2d::PCTSignatures::getGrayscaleBits",
+    "local": "虚拟int cv:：xfeature2d:：PCTSignatures:：getGrayscaleBits"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getGrayscaleBits(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.getGrayscaleBits属性("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Color resolution of the greyscale bitmap represented in allocated bits (i.e., value 4 means that 16 shades of grey are used). The greyscale bitmap is used for computing contrast and entropy values.",
+    "local": "以分配的位表示的灰度位图的颜色分辨率（即，值4表示使用16种灰度）。灰度位图用于计算对比度和熵值。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getInitSeedCount()",
+    "local": "getInitSeedCount（）"
+  },
+  {
+    "origin": "virtual int cv::xfeatures2d::PCTSignatures::getInitSeedCount",
+    "local": "虚拟int cv:：xfeature2d:：PCTSignatures:：getInitSeedCount"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getInitSeedCount(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.getInitSeedCount("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Number of initial seeds (initial number of clusters) for the k-means algorithm.",
+    "local": "k-means算法的初始种子数（初始簇数）。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getInitSeedIndexes()",
+    "local": "getInitSeedIndexes（）"
+  },
+  {
+    "origin": "virtual std::vector&lt;int&gt; cv::xfeatures2d::PCTSignatures::getInitSeedIndexes",
+    "local": "虚拟标准：：向量&lt；内部&gt；cv:：xfeatures2d:：PCTSignatures:：getInitSeedIndexes"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getInitSeedIndexes(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.getInitSeedIndexes属性("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Initial seeds (initial number of clusters) for the k-means algorithm.",
+    "local": "k-means算法的初始种子（簇的初始数目）。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getIterationCount()",
+    "local": "getIterationCount（）"
+  },
+  {
+    "origin": "virtual int cv::xfeatures2d::PCTSignatures::getIterationCount",
+    "local": "虚拟int cv:：xfeature2d:：PCTSignatures:：getIterationCount"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getIterationCount(",
+    "local": "cv.xfeature2d PCTSignatures.getIterationCount("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Number of iterations of the k-means clustering. We use fixed number of iterations, since the modified clustering is pruning clusters (not iteratively refining k clusters).",
+    "local": "k-均值聚类的迭代次数。我们使用固定的迭代次数，因为修改后的聚类是修剪聚类（而不是迭代细化k个聚类）。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getJoiningDistance()",
+    "local": "getJoiningDistance（）"
+  },
+  {
+    "origin": "virtual float cv::xfeatures2d::PCTSignatures::getJoiningDistance",
+    "local": "虚拟浮点cv:：xFeature2D:：PCTSignatures:：getJoiningDistance"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getJoiningDistance(",
+    "local": "cv.X特征2D\\U PCTSignatures.getJoiningDistance("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Threshold euclidean distance between two centroids. If two cluster centers are closer than this distance, one of the centroid is dismissed and points are reassigned.",
+    "local": "两个质心之间的阈值欧氏距离。如果两个簇中心比这个距离更近，其中一个质心将被消除，点将被重新分配。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getMaxClustersCount()",
+    "local": "GetmaxClusterScount（）"
+  },
+  {
+    "origin": "virtual int cv::xfeatures2d::PCTSignatures::getMaxClustersCount",
+    "local": "虚拟int cv:：xfeature2d:：PCTSignatures:：getMaxClustersCount"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getMaxClustersCount(",
+    "local": "cv.xfeatures2d pctsignatures.getmaxclusterscount（"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Maximal number of generated clusters. If the number is exceeded, the clusters are sorted by their weights and the smallest clusters are cropped.",
+    "local": "生成的最大簇数。如果超过该数字，则按权重对簇进行排序，并裁剪最小的簇。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getSampleCount()",
+    "local": "GetSampleCount（）"
+  },
+  {
+    "origin": "virtual int cv::xfeatures2d::PCTSignatures::getSampleCount",
+    "local": "虚拟int cv:：xfeature2d:：PCTSignatures:：getSampleCount"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getSampleCount(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.getSampleCount参数("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Number of initial samples taken from the image.",
+    "local": "从图像中提取的初始样本数。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getSamplingPoints()",
+    "local": "getSamplingPoints（）"
+  },
+  {
+    "origin": "virtual std::vector&lt;",
+    "local": "虚拟标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; cv::xfeatures2d::PCTSignatures::getSamplingPoints",
+    "local": "&燃气轮机；cv:：xfeatures2d:：PCT签名：：获取采样点"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getSamplingPoints(",
+    "local": "cv.xfeatures2d PCTSignatures.getSamplingPoints获取采样点("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Initial samples taken from the image. These sampled features become the input for clustering.",
+    "local": "从图像中提取的初始样本。这些采样特征成为聚类的输入。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getWeightA()",
+    "local": "获取权重（）"
+  },
+  {
+    "origin": "virtual float cv::xfeatures2d::PCTSignatures::getWeightA",
+    "local": "虚拟浮点cv:：xFeature2D:：PCTSignatures:：getWeightA"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getWeightA(",
+    "local": "cv.xfeatures2d u PCTSignatures.getWeightA参数("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getWeightB()",
+    "local": "getWeightB（）"
+  },
+  {
+    "origin": "virtual float cv::xfeatures2d::PCTSignatures::getWeightB",
+    "local": "虚拟浮点cv:：xFeature2D:：PCTSignatures:：getWeightB"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getWeightB(",
+    "local": "cv.xfeatures2d pctsignatures.getweightb（"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getWeightContrast()",
+    "local": "getWeightContrast（）"
+  },
+  {
+    "origin": "virtual float cv::xfeatures2d::PCTSignatures::getWeightContrast",
+    "local": "虚拟浮点cv:：xFeature2D:：PCTSignatures:：getWeightContrast"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getWeightContrast(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.getWeightContrast属性("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getWeightEntropy()",
+    "local": "获取权重熵（）"
+  },
+  {
+    "origin": "virtual float cv::xfeatures2d::PCTSignatures::getWeightEntropy",
+    "local": "虚拟浮点cv:：xFeature2D:：PCTSignatures:：getWeightEntropy"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getWeightEntropy(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.getWeightEntropy属性("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getWeightL()",
+    "local": "getWeightL（）"
+  },
+  {
+    "origin": "virtual float cv::xfeatures2d::PCTSignatures::getWeightL",
+    "local": "虚拟浮点cv:：xFeature2D:：PCTSignatures:：getWeightL"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getWeightL(",
+    "local": "cv.xfeatures2d u PCTSignatures.getWeightL参数("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getWeightX()",
+    "local": "getWeightX（）"
+  },
+  {
+    "origin": "virtual float cv::xfeatures2d::PCTSignatures::getWeightX",
+    "local": "虚拟浮点cv:：xFeature2D:：PCTSignatures:：getWeightX"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getWeightX(",
+    "local": "cv.X特征2d\\u PCTSignatures.getWeightX("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getWeightY()",
+    "local": "重磅（）"
+  },
+  {
+    "origin": "virtual float cv::xfeatures2d::PCTSignatures::getWeightY",
+    "local": "虚拟浮点cv:：xFeature2D:：PCTSignatures:：getWeightY"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getWeightY(",
+    "local": "cv.X特征2d\\u PCTSignatures.getWeightY("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getWindowRadius()",
+    "local": "getWindowRadius（）"
+  },
+  {
+    "origin": "virtual int cv::xfeatures2d::PCTSignatures::getWindowRadius",
+    "local": "虚拟int cv:：xfeature2d:：PCTSignatures:：getWindowRadius"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.getWindowRadius(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.getWindowRadius("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Size of the texture sampling window used to compute contrast and entropy (center of the window is always in the pixel selected by x,y coordinates of the corresponding feature sample).",
+    "local": "用于计算对比度和熵的纹理采样窗口的大小（窗口的中心始终位于由相应特征样本的x，y坐标选择的像素中）。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setClusterMinSize()",
+    "local": "setClusterMinSize（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setClusterMinSize",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setClusterMinSize"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "clusterMinSize",
+    "local": "群集化"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setClusterMinSize(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setClusterMinSize("
+  },
+  {
+    "origin": "clusterMinSize",
+    "local": "群集化"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This parameter multiplied by the index of iteration gives lower limit for cluster size. Clusters containing fewer points than specified by the limit have their centroid dismissed and points are reassigned.",
+    "local": "这个参数乘以迭代的索引给出了集群大小的下限。包含少于限制指定的点的簇将取消其质心并重新指定点。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setDistanceFunction()",
+    "local": "setDistanceFunction（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setDistanceFunction",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setDistanceFunction"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "distanceFunction",
+    "local": "距离函数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setDistanceFunction(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setDistanceFunction设置距离函数("
+  },
+  {
+    "origin": "distanceFunction",
+    "local": "距离函数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Distance function selector used for measuring distance between two points in k-means. Available: L0_25, L0_5,",
+    "local": "距离函数选择器，用于测量k-均值中两点之间的距离。提供：L0\\U 25，L0\\U 5，"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", L2SQUARED, L5, L_INFINITY.",
+    "local": "，L2SQUARED，L5，L_无穷大。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setDropThreshold()",
+    "local": "setDropThreshold（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setDropThreshold",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setDropThreshold"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "dropThreshold",
+    "local": "下降阈值"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setDropThreshold(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setDropThreshold设置("
+  },
+  {
+    "origin": "dropThreshold",
+    "local": "下降阈值"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Remove centroids in k-means whose weight is lesser or equal to given threshold.",
+    "local": "移除权重小于或等于给定阈值的k-均值中的质心。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setGrayscaleBits()",
+    "local": "setGrayscaleBits（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setGrayscaleBits",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setGrayscaleBits"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "grayscaleBits",
+    "local": "灰度息税前利润"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setGrayscaleBits(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setGrayscaleBits特性("
+  },
+  {
+    "origin": "grayscaleBits",
+    "local": "灰度息税前利润"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Color resolution of the greyscale bitmap represented in allocated bits (i.e., value 4 means that 16 shades of grey are used). The greyscale bitmap is used for computing contrast and entropy values.",
+    "local": "以分配的位表示的灰度位图的颜色分辨率（即，值4表示使用16种灰度）。灰度位图用于计算对比度和熵值。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setInitSeedIndexes()",
+    "local": "setInitSeedIndexes（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setInitSeedIndexes",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setinitseedindex"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "std::vector&lt; int &gt;",
+    "local": "标准：：向量&lt；内部&gt；"
+  },
+  {
+    "origin": "initSeedIndexes",
+    "local": "初始化索引"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setInitSeedIndexes(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setInitSeedIndexes属性("
+  },
+  {
+    "origin": "initSeedIndexes",
+    "local": "初始化索引"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Initial seed indexes for the k-means algorithm.",
+    "local": "k-means算法的初始种子索引。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setIterationCount()",
+    "local": "setIterationCount（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setIterationCount",
+    "local": "虚拟void cv:：xFeature2D:：PCTSignatures:：setIterationCount"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "iterationCount",
+    "local": "迭代计数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setIterationCount(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setIterationCount属性("
+  },
+  {
+    "origin": "iterationCount",
+    "local": "迭代计数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Number of iterations of the k-means clustering. We use fixed number of iterations, since the modified clustering is pruning clusters (not iteratively refining k clusters).",
+    "local": "k-均值聚类的迭代次数。我们使用固定的迭代次数，因为修改后的聚类是修剪聚类（而不是迭代细化k个聚类）。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setJoiningDistance()",
+    "local": "设置连接距离（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setJoiningDistance",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setJoiningDistance"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "joiningDistance",
+    "local": "接合距离"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setJoiningDistance(",
+    "local": "cv.X特征2D\\U PCTSignatures.setJoiningDistance("
+  },
+  {
+    "origin": "joiningDistance",
+    "local": "接合距离"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Threshold euclidean distance between two centroids. If two cluster centers are closer than this distance, one of the centroid is dismissed and points are reassigned.",
+    "local": "两个质心之间的阈值欧氏距离。如果两个簇中心比这个距离更近，其中一个质心将被消除，点将被重新分配。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setMaxClustersCount()",
+    "local": "setMaxClustersCount（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setMaxClustersCount",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setMaxClustersCount"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "maxClustersCount",
+    "local": "最大群集"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setMaxClustersCount(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setMaxClustersCount特性("
+  },
+  {
+    "origin": "maxClustersCount",
+    "local": "最大群集"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Maximal number of generated clusters. If the number is exceeded, the clusters are sorted by their weights and the smallest clusters are cropped.",
+    "local": "生成的最大簇数。如果超过该数字，则按权重对簇进行排序，并裁剪最小的簇。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setSamplingPoints()",
+    "local": "设置采样点（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setSamplingPoints",
+    "local": "虚拟void cv:：xFeature2D:：PCTSignatures:：setSamplingPoints"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "samplingPoints",
+    "local": "取样点"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setSamplingPoints(",
+    "local": "cv.X特征2D PCT签名.设置采样点("
+  },
+  {
+    "origin": "samplingPoints",
+    "local": "取样点"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Sets sampling points used to sample the input image.",
+    "local": "设置用于对输入图像进行采样的采样点。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "samplingPoints",
+    "local": "取样点"
+  },
+  {
+    "origin": "Vector of sampling points in range [0..1)",
+    "local": "范围[0..1]内采样点的向量"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Number of sampling points must be greater or equal to clusterization seed count.",
+    "local": "采样点数必须大于或等于聚类种子数。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setTranslation()",
+    "local": "设置转换（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setTranslation",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setTranslation"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "idx",
+    "local": "idx公司"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "value",
+    "local": "价值"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setTranslation(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setTranslation属性("
+  },
+  {
+    "origin": "idx, value",
+    "local": "IDX，Value"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Translations of the individual axes of the feature space.",
+    "local": "特征空间的各个轴的平移。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "idx",
+    "local": "idx公司"
+  },
+  {
+    "origin": "ID of the translation",
+    "local": "翻译的ID"
+  },
+  {
+    "origin": "value",
+    "local": "价值"
+  },
+  {
+    "origin": "Value of the translation",
+    "local": "翻译的价值"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "WEIGHT_IDX = 0; X_IDX = 1; Y_IDX = 2; L_IDX = 3; A_IDX = 4; B_IDX = 5; CONTRAST_IDX = 6; ENTROPY_IDX = 7;",
+    "local": "重量_IDX=0；X_IDX=1；Y\\u IDX=2；IDX=3；A_IDX=4；B_IDX=5；对比度=6；熵φIDX=7；"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setTranslations()",
+    "local": "设置转换（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setTranslations",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setTranslations"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt; float &gt; &amp;",
+    "local": "常量标准：：向量&lt；浮动&gt&amp；"
+  },
+  {
+    "origin": "translations",
+    "local": "翻译"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setTranslations(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setTranslations设置("
+  },
+  {
+    "origin": "translations",
+    "local": "翻译"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Translations of the individual axes of the feature space.",
+    "local": "特征空间的各个轴的平移。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "translations",
+    "local": "翻译"
+  },
+  {
+    "origin": "Values of all translations.",
+    "local": "所有翻译的值。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "WEIGHT_IDX = 0; X_IDX = 1; Y_IDX = 2; L_IDX = 3; A_IDX = 4; B_IDX = 5; CONTRAST_IDX = 6; ENTROPY_IDX = 7;",
+    "local": "重量_IDX=0；X_IDX=1；Y\\u IDX=2；IDX=3；A_IDX=4；B_IDX=5；对比度=6；熵φIDX=7；"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setWeight()",
+    "local": "设定重量（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setWeight",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setWeight"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "idx",
+    "local": "idx公司"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "value",
+    "local": "价值"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setWeight(",
+    "local": "cv.X特征2d\\u PCTSignatures.setWeight("
+  },
+  {
+    "origin": "idx, value",
+    "local": "IDX，Value"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space.",
+    "local": "线性拉伸特征空间各个轴的权重（乘法常数）。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "idx",
+    "local": "idx公司"
+  },
+  {
+    "origin": "ID of the weight",
+    "local": "重量的ID"
+  },
+  {
+    "origin": "value",
+    "local": "价值"
+  },
+  {
+    "origin": "Value of the weight",
+    "local": "重量值"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "WEIGHT_IDX = 0; X_IDX = 1; Y_IDX = 2; L_IDX = 3; A_IDX = 4; B_IDX = 5; CONTRAST_IDX = 6; ENTROPY_IDX = 7;",
+    "local": "重量_IDX=0；X_IDX=1；Y\\u IDX=2；IDX=3；A_IDX=4；B_IDX=5；对比度=6；熵φIDX=7；"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setWeightA()",
+    "local": "设置权重（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setWeightA",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setWeightA"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setWeightA(",
+    "local": "cv.X特征2d u PCTSignatures.setWeightA("
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setWeightB()",
+    "local": "设置权重b（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setWeightB",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setWeightB"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setWeightB(",
+    "local": "cv.xfeatures2d pctsignatures.setweightb（"
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setWeightContrast()",
+    "local": "设置权重对比度（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setWeightContrast",
+    "local": "虚拟void cv:：xFeature2D:：PCTSignatures:：setWeightContrast"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setWeightContrast(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setWeightContrast设置对比度("
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setWeightEntropy()",
+    "local": "设置权重熵（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setWeightEntropy",
+    "local": "虚拟void cv:：xFeature2D:：PCTSignatures:：setWeightEntropy"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setWeightEntropy(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setWeightEntropy属性("
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setWeightL()",
+    "local": "设置权重（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setWeightL",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setWeightL"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setWeightL(",
+    "local": "cv.X特征2d\\u PCTSignatures.setWeightL("
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setWeights()",
+    "local": "设置权重（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setWeights",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setWeights"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt; float &gt; &amp;",
+    "local": "常量标准：：向量&lt；浮动&gt&amp；"
+  },
+  {
+    "origin": "weights",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setWeights(",
+    "local": "cv.xfeatures2d pctsignatures.setweights（"
+  },
+  {
+    "origin": "weights",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space.",
+    "local": "线性拉伸特征空间各个轴的权重（乘法常数）。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "weights",
+    "local": "重量"
+  },
+  {
+    "origin": "Values of all weights.",
+    "local": "所有权重的值。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "WEIGHT_IDX = 0; X_IDX = 1; Y_IDX = 2; L_IDX = 3; A_IDX = 4; B_IDX = 5; CONTRAST_IDX = 6; ENTROPY_IDX = 7;",
+    "local": "重量_IDX=0；X_IDX=1；Y\\u IDX=2；IDX=3；A_IDX=4；B_IDX=5；对比度=6；熵φIDX=7；"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setWeightX()",
+    "local": "setWeightX（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setWeightX",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setWeightX"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setWeightX(",
+    "local": "cv.X特征2d\\u PCTSignatures.setWeightX("
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setWeightY()",
+    "local": "设置权重（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setWeightY",
+    "local": "虚拟void cv:：xfeature2d:：PCTSignatures:：setWeightY"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setWeightY(",
+    "local": "cv.X特征2d\\u PCTSignatures.setWeightY("
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Weights (multiplicative constants) that linearly stretch individual axes of the feature space (x,y = position; L,a,b = color in CIE Lab space; c = contrast. e = entropy)",
+    "local": "线性拉伸特征空间各个轴的权重（乘性常数）（x，y=位置；五十、 a，b=CIE实验室空间中的颜色；c=对比度。e=熵）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setWindowRadius()",
+    "local": "setWindowRadius（）"
+  },
+  {
+    "origin": "virtual void cv::xfeatures2d::PCTSignatures::setWindowRadius",
+    "local": "虚拟void cv:：xFeature2D:：PCTSignatures:：setWindowRadius"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "radius",
+    "local": "半径"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.xfeatures2d_PCTSignatures.setWindowRadius(",
+    "local": "cv.xfeatures2d\\u PCTSignatures.setWindowRadius设置窗口半径("
+  },
+  {
+    "origin": "radius",
+    "local": "半径"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Size of the texture sampling window used to compute contrast and entropy (center of the window is always in the pixel selected by x,y coordinates of the corresponding feature sample).",
+    "local": "用于计算对比度和熵的纹理采样窗口的大小（窗口的中心始终位于由相应特征样本的x，y坐标选择的像素中）。"
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/",
+    "local": "打开CV2/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:49 for OpenCV by",
+    "local": "于2021年4月2日星期五11:36:49为OpenCV生成"
+  }
+]

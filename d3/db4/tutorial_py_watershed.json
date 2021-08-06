@@ -1,0 +1,154 @@
+[
+  {
+    "origin": "OpenCV: Image Segmentation with Watershed Algorithm",
+    "local": "OpenCV：基于分水岭算法的图像分割"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Image Segmentation with Watershed Algorithm",
+    "local": "基于分水岭算法的图像分割"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this chapter,",
+    "local": "在本章中，"
+  },
+  {
+    "origin": "We will learn to use marker-based image segmentation using watershed algorithm",
+    "local": "我们将学习使用基于标记的图像分割使用分水岭算法"
+  },
+  {
+    "origin": "We will see:",
+    "local": "我们将看到："
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "Any grayscale image can be viewed as a topographic surface where high intensity denotes peaks and hills while low intensity denotes valleys. You start filling every isolated valleys (local minima) with different colored water (labels). As the water rises, depending on the peaks (gradients) nearby, water from different valleys, obviously with different colors will start to merge. To avoid that, you build barriers in the locations where water merges. You continue the work of filling water and building barriers until all the peaks are under water. Then the barriers you created gives you the segmentation result. This is the \"philosophy\" behind the watershed. You can visit the",
+    "local": "任何灰度图像都可以看作是一个地形表面，高强度表示山峰，低强度表示山谷。你开始用不同颜色的水（标签）填充每一个孤立的山谷（当地的最小值）。随着水位上升，根据附近的山峰（梯度），来自不同山谷的水，显然不同颜色的水会开始合并。为了避免这种情况，你在水汇合的地方建造屏障。你继续注水和建造屏障，直到所有的山峰都在水下。然后，您创建的障碍会给出分割结果。这就是分水岭背后的“哲学”。你可以参观"
+  },
+  {
+    "origin": "CMM webpage on watershed",
+    "local": "流域CMM网页"
+  },
+  {
+    "origin": "to understand it with the help of some animations.",
+    "local": "通过一些动画来理解它。"
+  },
+  {
+    "origin": "But this approach gives you oversegmented result due to noise or any other irregularities in the image. So OpenCV implemented a marker-based watershed algorithm where you specify which are all valley points are to be merged and which are not. It is an interactive image segmentation. What we do is to give different labels for our object we know. Label the region which we are sure of being the foreground or object with one color (or intensity), label the region which we are sure of being background or non-object with another color and finally the region which we are not sure of anything, label it with 0. That is our marker. Then apply watershed algorithm. Then our marker will be updated with the labels we gave, and the boundaries of objects will have a value of -1.",
+    "local": "但这种方法会由于图像中的噪声或任何其他不规则性而产生过度分段的结果。因此OpenCV实现了一个基于标记的分水岭算法，在该算法中，您可以指定哪些是要合并的所有山谷点，哪些不是。它是一种交互式的图像分割方法。我们所做的是给我们所知道的物体贴上不同的标签。用一种颜色（或强度）标记我们确定为前景或对象的区域，用另一种颜色标记我们确定为背景或非对象的区域，最后用0标记我们不确定的区域。这就是我们的标记。然后应用分水岭算法。然后我们的标记将用我们给出的标签更新，对象的边界值将为-1。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "Below we will see an example on how to use the Distance Transform along with watershed to segment mutually touching objects.",
+    "local": "下面我们将看到一个如何使用距离变换和分水岭分割相互接触的对象的例子。"
+  },
+  {
+    "origin": "Consider the coins image below, the coins are touching each other. Even if you threshold it, it will be touching each other.",
+    "local": "考虑下面的硬币图像，硬币相互接触。即使你打开它的门槛，它也会互相触碰。"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "We start with finding an approximate estimate of the coins. For that, we can use the Otsu's binarization.",
+    "local": "我们首先要找到硬币的大致估计数。为此，我们可以使用大津的二值化。"
+  },
+  {
+    "origin": "Result:",
+    "local": "结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Now we need to remove any small white noises in the image. For that we can use morphological opening. To remove any small holes in the object, we can use morphological closing. So, now we know for sure that region near to center of objects are foreground and region much away from the object are background. Only region we are not sure is the boundary region of coins.",
+    "local": "现在我们需要去除图像中的小白噪声。为此，我们可以使用形态学开孔。为了去除物体上的任何小孔，我们可以使用形态学闭合。所以，现在我们可以确定，物体中心附近的区域是前景，远离物体的区域是背景。我们唯一不确定的区域是硬币的边界区域。"
+  },
+  {
+    "origin": "So we need to extract the area which we are sure they are coins. Erosion removes the boundary pixels. So whatever remaining, we can be sure it is coin. That would work if objects were not touching each other. But since they are touching each other, another good option would be to find the distance transform and apply a proper threshold. Next we need to find the area which we are sure they are not coins. For that, we dilate the result. Dilation increases object boundary to background. This way, we can make sure whatever region in background in result is really a background, since boundary region is removed. See the image below.",
+    "local": "所以我们需要提取我们确定它们是硬币的区域。侵蚀会移除边界像素。所以不管剩下什么，我们可以肯定这是一枚硬币。如果物体彼此不接触，那就行了。但由于它们彼此接触，另一个好的选择是找到距离变换并应用适当的阈值。下一步我们需要找到我们确定它们不是硬币的区域。为此，我们扩大了结果。膨胀增加了物体边界到背景的距离。这样，我们就可以确保结果中背景中的任何区域都是真实的背景，因为边界区域被移除了。请参见下图。"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "The remaining regions are those which we don't have any idea, whether it is coins or background. Watershed algorithm should find it. These areas are normally around the boundaries of coins where foreground and background meet (Or even two different coins meet). We call it border. It can be obtained from subtracting sure_fg area from sure_bg area.",
+    "local": "剩下的区域是我们不知道的，不管是硬币还是背景。分水岭算法应该找到它。这些区域通常在硬币的边界附近，前景和背景相交（甚至两个不同的硬币相交）。我们称之为边界。它可以从sure\\u bg区域减去sure\\u fg区域得到。"
+  },
+  {
+    "origin": "See the result. In the thresholded image, we get some regions of coins which we are sure of coins and they are detached now. (In some cases, you may be interested in only foreground segmentation, not in separating the mutually touching objects. In that case, you need not use distance transform, just erosion is sufficient. Erosion is just another method to extract sure foreground area, that's all.)",
+    "local": "看看结果。在阈值图像中，我们得到了一些我们确定的硬币区域，现在它们被分离了(在某些情况下，您可能只对前景分割感兴趣，而不是分离相互接触的对象。在这种情况下，不需要使用距离变换，只需腐蚀就足够了。侵蚀只是提取前景区域的另一种方法，仅此而已。）"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Now we know for sure which are region of coins, which are background and all. So we create marker (it is an array of same size as that of original image, but with int32 datatype) and label the regions inside it. The regions we know for sure (whether foreground or background) are labelled with any positive integers, but different integers, and the area we don't know for sure are just left as zero. For this we use",
+    "local": "现在我们可以确定哪些是硬币的区域，哪些是背景。因此，我们创建marker（它是一个与原始图像大小相同的数组，但具有int32数据类型）并标记其中的区域。我们确定知道的区域（不管是前景还是背景）被标记为任何正整数，但是不同的整数，我们不确定的区域被保留为零。为此，我们使用"
+  },
+  {
+    "origin": ". It labels background of the image with 0, then other objects are labelled with integers starting from 1.",
+    "local": ". 它用0标记图像的背景，然后用从1开始的整数标记其他对象。"
+  },
+  {
+    "origin": "But we know that if background is marked with 0, watershed will consider it as unknown area. So we want to mark it with different integer. Instead, we will mark unknown region, defined by unknown, with 0.",
+    "local": "但我们知道，如果背景被标记为0，流域将认为它是未知区域。所以我们要用不同的整数来标记它。相反，我们将用0标记未知区域（由unknown定义）。"
+  },
+  {
+    "origin": "See the result shown in JET colormap. The dark blue region shows unknown region. Sure coins are colored with different values. Remaining area which are sure background are shown in lighter blue compared to unknown region.",
+    "local": "查看JET colormap中显示的结果。深蓝色区域显示未知区域。当然，硬币的颜色是不同的。与未知区域相比，确定背景的剩余区域显示为浅蓝色。"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "See the result below. For some coins, the region where they touch are segmented properly and for some, they are not.",
+    "local": "请参见下面的结果。对于一些硬币来说，它们接触的区域是正确分割的，而对于一些硬币来说，则不是。"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "CMM page on",
+    "local": "CMM第页"
+  },
+  {
+    "origin": "Watershed Transformation",
+    "local": "流域改造"
+  },
+  {
+    "origin": "Exercises",
+    "local": "练习"
+  },
+  {
+    "origin": "OpenCV samples has an interactive sample on watershed segmentation, watershed.py. Run it, Enjoy it, then learn it.",
+    "local": "OpenCV samples有一个关于分水岭分割的交互式示例，waterland.py。运行它，享受它，然后学习它。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

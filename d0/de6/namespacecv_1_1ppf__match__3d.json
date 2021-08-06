@@ -1,0 +1,458 @@
+[
+  {
+    "origin": "OpenCV: cv::ppf_match_3d Namespace Reference",
+    "local": "OpenCV:cv:：ppf\\u match\\u 3d命名空间引用"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Typedefs",
+    "local": "类型定义"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "cv::ppf_match_3d Namespace Reference",
+    "local": "cv:：ppf\\u match\\u 3d命名空间引用"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "This class implements a very efficient and robust variant of the iterative closest point (",
+    "local": "这个类实现了迭代最近点的一个非常有效和健壮的变体("
+  },
+  {
+    "origin": ") algorithm. The task is to register a 3D model (or point cloud) against a set of noisy target data. The variants are put together by myself after certain tests. The task is to be able to match partial, noisy point clouds in cluttered scenes, quickly. You will find that my emphasis is on the performance, while retaining the accuracy. This implementation is based on Tolga Birdal's MATLAB implementation in here:",
+    "local": ")算法。该任务是针对一组噪声目标数据注册三维模型（或点云）。这些变体是经过一定的测试后由我自己组装起来的。任务是能够在杂乱的场景中快速匹配局部的、嘈杂的点云。你会发现，我的重点是性能，同时保持准确性。此实现基于Tolga Birdal的MATLAB实现，如下所示："
+  },
+  {
+    "origin": "http://www.mathworks.com/matlabcentral/fileexchange/47152-icp-registration-using-efficient-variants-and-multi-resolution-scheme",
+    "local": "http://www.mathworks.com/matlabcentral/fileexchange/47152-icp-registration-using-efficient-variants-and-multi-resolution-scheme"
+  },
+  {
+    "origin": "The main contributions come from:",
+    "local": "主要贡献来自："
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Class, allowing the storage of a pose. The data structure stores both the quaternions and the matrix forms. It supports IO functionality together with various helper methods to work with poses.",
+    "local": "类，允许存储姿势。数据结构存储四元数和矩阵形式。它支持IO功能以及各种辅助方法来处理姿势。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "When multiple poses (see",
+    "local": "当出现多个姿势时（请参见"
+  },
+  {
+    "origin": ") are grouped together (contribute to the same transformation) pose clusters occur. This class is a general container for such groups of poses. It is possible to store, load and perform IO on these poses.",
+    "local": ")组合在一起（有助于相同的变换）会出现姿势簇。此类是此类姿势组的通用容器。可以在这些姿势上存储、加载和执行IO。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Class, allowing the load and matching 3D models. Typical Use:",
+    "local": "类，允许加载和匹配三维模型。典型用途："
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Typedefs",
+    "local": "类型定义"
+  },
+  {
+    "origin": "typedef",
+    "local": "类型定义"
+  },
+  {
+    "origin": "typedef",
+    "local": "类型定义"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "typedef",
+    "local": "类型定义"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ", double scale)",
+    "local": "，双刻度）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "&amp;xRange,",
+    "local": "&amp；X系列，"
+  },
+  {
+    "origin": "&amp;yRange,",
+    "local": "&amp；伊兰格，"
+  },
+  {
+    "origin": "&amp;zRange)",
+    "local": "&amp；Z范围）"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;PC,",
+    "local": "&amp；个人电脑，"
+  },
+  {
+    "origin": "&amp;PCNormals, const int NumNeighbors, const bool FlipViewpoint, const",
+    "local": "&amp；PCNormals，const int NumNeighbors，const bool FlipViewpoint，const"
+  },
+  {
+    "origin": "&amp;viewpoint)",
+    "local": "&amp；（视点）"
+  },
+  {
+    "origin": "Compute the normals of an arbitrary point cloud computeNormalsPC3d uses a plane fitting approach to smoothly compute local normals. Normals are obtained through the eigenvector of the covariance matrix, corresponding to the smallest eigen value. If PCNormals is provided to be an Nx6 matrix, then no new allocation is made, instead the existing memory is overwritten.",
+    "local": "计算任意点云的法线computeNormalsPC3d使用平面拟合方法平滑计算局部法线。法线是通过协方差矩阵的特征向量得到的，对应于最小的特征值。如果PCNormals被提供为Nx6矩阵，则不进行新的分配，而是覆盖现有内存。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(void *flannIndex)",
+    "local": "（空*法兰索引）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;Pose)",
+    "local": "&amp；姿势）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*hashtbl)",
+    "local": "*哈希（TBL）"
+  },
+  {
+    "origin": "(size_t size, size_t(*hashfunc)(",
+    "local": "（大小，大小（*hashfunc）("
+  },
+  {
+    "origin": "))",
+    "local": "))"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*hashtbl)",
+    "local": "*哈希（TBL）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*hashtbl,",
+    "local": "*哈什特布尔，"
+  },
+  {
+    "origin": "key)",
+    "local": "键）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*hashtbl,",
+    "local": "*哈什特布尔，"
+  },
+  {
+    "origin": "key)",
+    "local": "键）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*hashtbl,",
+    "local": "*哈什特布尔，"
+  },
+  {
+    "origin": "key, void *data)",
+    "local": "键，无效*数据）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*hashtbl,",
+    "local": "*哈什特布尔，"
+  },
+  {
+    "origin": "key, void *data)",
+    "local": "键，无效*数据）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*hashtbl)",
+    "local": "*哈希（TBL）"
+  },
+  {
+    "origin": "(FILE *f)",
+    "local": "（文件*f）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*hashtbl,",
+    "local": "*哈什特布尔，"
+  },
+  {
+    "origin": "key)",
+    "local": "键）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*hashtbl, size_t size)",
+    "local": "*hashtbl，size（大小）"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "*hashtbl, const size_t dataSize, FILE *f)",
+    "local": "*hashtbl，常量大小\\u t数据大小，文件*f）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "(const char *fileName, int withNormals=0)",
+    "local": "（const char*文件名，int with normals=0）"
+  },
+  {
+    "origin": "Load a PLY file.",
+    "local": "加载PLY文件。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "value)",
+    "local": "值）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ", float scale, float *Cx, float *Cy, float *Cz, float *MinVal, float *MaxVal)",
+    "local": "，浮点刻度，浮点*Cx，浮点*Cy，浮点*Cz，浮点*MinVal，浮点*MaxVal）"
+  },
+  {
+    "origin": "(void *flannIndex,",
+    "local": "（空*法兰索引，"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "&amp;indices,",
+    "local": "&amp；指数，"
+  },
+  {
+    "origin": "&amp;distances)",
+    "local": "&amp；距离）"
+  },
+  {
+    "origin": "(void *flannIndex,",
+    "local": "（空*法兰索引，"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "&amp;indices,",
+    "local": "&amp；指数，"
+  },
+  {
+    "origin": "&amp;distances, const int numNeighbors)",
+    "local": "&amp；距离，常数int numNeighbors）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "&amp;xrange,",
+    "local": "&amp；X系列，"
+  },
+  {
+    "origin": "&amp;yrange,",
+    "local": "&amp；伊兰格，"
+  },
+  {
+    "origin": "&amp;zrange, float sample_step_relative, int weightByCenter=0)",
+    "local": "&amp；zrange，float sample\\u step\\u relative，int weightByCenter=0）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "PC, int sampleStep)",
+    "local": "PC，int样本步骤）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "PC, int sampleStep, std::vector&lt; int &gt; &amp;indices)",
+    "local": "PC，int sampleStep，std:：vector&lt；内部&gt&amp；指数）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ", const",
+    "local": "，常量"
+  },
+  {
+    "origin": "&amp;Pose)",
+    "local": "&amp；姿势）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ", float scale, float Cx, float Cy, float Cz, float MinVal, float MaxVal)",
+    "local": "，浮点刻度，浮点Cx，浮点Cy，浮点Cz，浮点MinVal，浮点MaxVal）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "PC, const char *fileName)",
+    "local": "PC，常量字符*文件名）"
+  },
+  {
+    "origin": "Write a point cloud to PLY file.",
+    "local": "将点云写入PLY文件。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "PC, const char *fileName)",
+    "local": "PC，常量字符*文件名）"
+  },
+  {
+    "origin": "Used for debbuging pruposes, writes a point cloud to a PLY file with the tip of the normal vectors as visible red points.",
+    "local": "用于去除伪影，将点云写入PLY文件，法向量的尖端作为可见的红色点。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:48为OpenCV生成，&#160；"
+  }
+]

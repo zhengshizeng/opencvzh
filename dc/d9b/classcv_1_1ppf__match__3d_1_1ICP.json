@@ -1,0 +1,942 @@
+[
+  {
+    "origin": "OpenCV: cv::ppf_match_3d::ICP Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::ppf_match_3d::ICP Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "This class implements a very efficient and robust variant of the iterative closest point (",
+    "local": ""
+  },
+  {
+    "origin": ") algorithm. The task is to register a 3D model (or point cloud) against a set of noisy target data. The variants are put together by myself after certain tests. The task is to be able to match partial, noisy point clouds in cluttered scenes, quickly. You will find that my emphasis is on the performance, while retaining the accuracy. This implementation is based on Tolga Birdal's MATLAB implementation in here:",
+    "local": ""
+  },
+  {
+    "origin": "http://www.mathworks.com/matlabcentral/fileexchange/47152-icp-registration-using-efficient-variants-and-multi-resolution-scheme",
+    "local": ""
+  },
+  {
+    "origin": "The main contributions come from:",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(const int iterations, const float tolerence=0.05f, const float rejectionScale=2.5f, const int numLevels=6, const int sampleType=ICP::ICP_SAMPLING_TYPE_UNIFORM, const int numMaxCorr=1)",
+    "local": ""
+  },
+  {
+    "origin": "constructor with default arguments.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;srcPC, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;dstPC, double &amp;residual,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;pose)",
+    "local": ""
+  },
+  {
+    "origin": "Perform registration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;srcPC, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;dstPC, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;poses)",
+    "local": ""
+  },
+  {
+    "origin": "Perform registration with multiple initial poses.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "This class implements a very efficient and robust variant of the iterative closest point (",
+    "local": ""
+  },
+  {
+    "origin": ") algorithm. The task is to register a 3D model (or point cloud) against a set of noisy target data. The variants are put together by myself after certain tests. The task is to be able to match partial, noisy point clouds in cluttered scenes, quickly. You will find that my emphasis is on the performance, while retaining the accuracy. This implementation is based on Tolga Birdal's MATLAB implementation in here:",
+    "local": ""
+  },
+  {
+    "origin": "http://www.mathworks.com/matlabcentral/fileexchange/47152-icp-registration-using-efficient-variants-and-multi-resolution-scheme",
+    "local": ""
+  },
+  {
+    "origin": "The main contributions come from:",
+    "local": ""
+  },
+  {
+    "origin": "Picky",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "http://www5.informatik.uni-erlangen.de/Forschung/Publikationen/2003/Zinsser03-ARI.pdf",
+    "local": ""
+  },
+  {
+    "origin": "Efficient variants of the",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "http://docs.happycoders.org/orgadoc/graphics/imaging/fasticp_paper.pdf",
+    "local": ""
+  },
+  {
+    "origin": "Geometrically Stable Sampling for the",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "https://graphics.stanford.edu/papers/stabicp/stabicp.pdf",
+    "local": ""
+  },
+  {
+    "origin": "Multi-resolution registration:",
+    "local": ""
+  },
+  {
+    "origin": "http://www.cvl.iis.u-tokyo.ac.jp/~oishi/Papers/Alignment/Jost_MultiResolutionICP_3DIM03.pdf",
+    "local": ""
+  },
+  {
+    "origin": "Linearization of Point-to-Plane metric by Kok Lim Low:",
+    "local": ""
+  },
+  {
+    "origin": "https://www.comp.nus.edu.sg/~lowkl/publications/lowk_point-to-plane_icp_techrep.pdf",
+    "local": ""
+  },
+  {
+    "origin": "Member Enumeration Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "ICP_SAMPLING_TYPE_UNIFORM",
+    "local": ""
+  },
+  {
+    "origin": "ICP_SAMPLING_TYPE_GELFAND",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "ICP()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::ppf_match_3d::ICP::ICP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;ppf_match_3d_ICP object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ppf_match_3d_ICP(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;ppf_match_3d_ICP object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ppf_match_3d_ICP(",
+    "local": ""
+  },
+  {
+    "origin": "iterations[, tolerence[, rejectionScale[, numLevels[, sampleType[, numMaxCorr]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "~ICP()",
+    "local": ""
+  },
+  {
+    "origin": "virtual cv::ppf_match_3d::ICP::~ICP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "ICP()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::ppf_match_3d::ICP::ICP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "iterations",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const float",
+    "local": ""
+  },
+  {
+    "origin": "tolerence",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const float",
+    "local": ""
+  },
+  {
+    "origin": "rejectionScale",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "numLevels",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "sampleType",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "numMaxCorr",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;ppf_match_3d_ICP object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ppf_match_3d_ICP(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&lt;ppf_match_3d_ICP object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ppf_match_3d_ICP(",
+    "local": ""
+  },
+  {
+    "origin": "iterations[, tolerence[, rejectionScale[, numLevels[, sampleType[, numMaxCorr]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "constructor with default arguments.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "iterations",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "tolerence",
+    "local": ""
+  },
+  {
+    "origin": "Controls the accuracy of registration at each iteration of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "rejectionScale",
+    "local": ""
+  },
+  {
+    "origin": "Robust outlier rejection is applied for robustness. This value actually corresponds to the standard deviation coefficient. Points with rejectionScale * &amp;sigma are ignored during registration.",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "numLevels",
+    "local": ""
+  },
+  {
+    "origin": "Number of pyramid levels to proceed. Deep pyramids increase speed but decrease accuracy. Too coarse pyramids might have computational overhead on top of the inaccurate registrtaion. This parameter should be chosen to optimize a balance. Typical values range from 4 to 10.",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "sampleType",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "numMaxCorr",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "registerModelToScene()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "int cv::ppf_match_3d::ICP::registerModelToScene",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "srcPC",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "dstPC",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double &amp;",
+    "local": ""
+  },
+  {
+    "origin": "residual",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "pose",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, residual, pose",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ppf_match_3d_ICP.registerModelToScene(",
+    "local": ""
+  },
+  {
+    "origin": "srcPC, dstPC",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval, poses",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ppf_match_3d_ICP.registerModelToScene(",
+    "local": ""
+  },
+  {
+    "origin": "srcPC, dstPC, poses",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Perform registration.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "srcPC",
+    "local": ""
+  },
+  {
+    "origin": "The input point cloud for the model. Expected to have the normals (Nx6). Currently, CV_32F is the only supported data type.",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "dstPC",
+    "local": ""
+  },
+  {
+    "origin": "The input point cloud for the scene. It is assumed that the model is registered on the scene. Scene remains static. Expected to have the normals (Nx6). Currently, CV_32F is the only supported data type.",
+    "local": ""
+  },
+  {
+    "origin": "[out]",
+    "local": ""
+  },
+  {
+    "origin": "residual",
+    "local": ""
+  },
+  {
+    "origin": "The output registration error.",
+    "local": ""
+  },
+  {
+    "origin": "[out]",
+    "local": ""
+  },
+  {
+    "origin": "pose",
+    "local": ""
+  },
+  {
+    "origin": "Transformation between srcPC and dstPC.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "It is assumed that the model is registered on the scene. Scene remains static, while the model transforms. The output poses transform the models onto the scene. Because of the point to plane minimization, the scene is expected to have the normals available. Expected to have the normals (Nx6).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "registerModelToScene()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "int cv::ppf_match_3d::ICP::registerModelToScene",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "srcPC",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "dstPC",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "poses",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, residual, pose",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ppf_match_3d_ICP.registerModelToScene(",
+    "local": ""
+  },
+  {
+    "origin": "srcPC, dstPC",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval, poses",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ppf_match_3d_ICP.registerModelToScene(",
+    "local": ""
+  },
+  {
+    "origin": "srcPC, dstPC, poses",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Perform registration with multiple initial poses.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "srcPC",
+    "local": ""
+  },
+  {
+    "origin": "The input point cloud for the model. Expected to have the normals (Nx6). Currently, CV_32F is the only supported data type.",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "dstPC",
+    "local": ""
+  },
+  {
+    "origin": "The input point cloud for the scene. Currently, CV_32F is the only supported data type.",
+    "local": ""
+  },
+  {
+    "origin": "[in,out]",
+    "local": ""
+  },
+  {
+    "origin": "poses",
+    "local": ""
+  },
+  {
+    "origin": "Input poses to start with but also list output of poses.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "It is assumed that the model is registered on the scene. Scene remains static, while the model transforms. The output poses transform the models onto the scene. Because of the point to plane minimization, the scene is expected to have the normals available. Expected to have the normals (Nx6).",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/surface_matching/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by",
+    "local": ""
+  }
+]

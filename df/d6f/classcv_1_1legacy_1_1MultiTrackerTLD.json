@@ -1,0 +1,282 @@
+[
+  {
+    "origin": "OpenCV: cv::legacy::MultiTrackerTLD Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::legacy::MultiTrackerTLD Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Multi Object Tracker for TLD.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::legacy::MultiTrackerTLD:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image)",
+    "local": ""
+  },
+  {
+    "origin": "Update all trackers from the tracking-list, find a new most likely bounding boxes for the targets by optimized update method using some techniques to speedup calculations specifically for MO TLD. The only limitation is that all target bounding boxes should have approximately same aspect ratios. Speed boost is around 20%.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Constructor for Multitracker.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;boundingBox,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; tracker_algorithm)",
+    "local": ""
+  },
+  {
+    "origin": "Add a new target to a tracking-list and initialize the tracker with a known bounding box that surrounded the target.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image)",
+    "local": ""
+  },
+  {
+    "origin": "Update all trackers from the tracking-list, find a new most likely bounding boxes for the targets.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Public Attributes inherited from",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Bounding Boxes list for Multi-Object-Tracker.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "List of randomly generated colors for bounding boxes display.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Current number of targets in tracking-list.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Trackers list for Multi-Object-Tracker.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Multi Object Tracker for TLD.",
+    "local": ""
+  },
+  {
+    "origin": "TLD is a novel tracking framework that explicitly decomposes the long-term tracking task into tracking, learning and detection.",
+    "local": ""
+  },
+  {
+    "origin": "The tracker follows the object from frame to frame. The detector localizes all appearances that have been observed so far and corrects the tracker if necessary. The learning estimates detector's errors and updates it to avoid these errors in the future. The implementation is based on",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The Median Flow algorithm (see cv::TrackerMedianFlow) was chosen as a tracking component in this implementation, following authors. The tracker is supposed to be able to handle rapid motions, partial occlusions, object absence etc.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "update_opt()",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::legacy::MultiTrackerTLD::update_opt",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Update all trackers from the tracking-list, find a new most likely bounding boxes for the targets by optimized update method using some techniques to speedup calculations specifically for MO TLD. The only limitation is that all target bounding boxes should have approximately same aspect ratios. Speed boost is around 20%.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "The current frame.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "True means that all targets were located and false means that tracker couldn't locate one of the targets in current frame. Note, that latter",
+    "local": ""
+  },
+  {
+    "origin": "does not",
+    "local": ""
+  },
+  {
+    "origin": "imply that tracker has failed, maybe target is indeed missing from the frame (say, out of sight)",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/tracking/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:47 for OpenCV by &#160;",
+    "local": ""
+  }
+]

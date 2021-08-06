@@ -1,0 +1,794 @@
+[
+  {
+    "origin": "OpenCV: Basic concepts of the homography explained with code",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Basic concepts of the homography explained with code",
+    "local": ""
+  },
+  {
+    "origin": "Table of Contents",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "Basic theory",
+    "local": ""
+  },
+  {
+    "origin": "What is the homography matrix?",
+    "local": ""
+  },
+  {
+    "origin": "How the homography transformation can be useful?",
+    "local": ""
+  },
+  {
+    "origin": "Demonstration codes",
+    "local": ""
+  },
+  {
+    "origin": "Demo 1: Pose estimation from coplanar points",
+    "local": ""
+  },
+  {
+    "origin": "Demo 2: Perspective correction",
+    "local": ""
+  },
+  {
+    "origin": "Demo 3: Homography from the camera displacement",
+    "local": ""
+  },
+  {
+    "origin": "Demo 4: Decompose the homography matrix",
+    "local": ""
+  },
+  {
+    "origin": "Demo 5: Basic panorama stitching from a rotating camera",
+    "local": ""
+  },
+  {
+    "origin": "Additional references",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial will demonstrate the basic concepts of the homography with some codes. For detailed explanations about the theory, please refer to a computer vision course or a computer vision book, e.g.:",
+    "local": ""
+  },
+  {
+    "origin": "Multiple View Geometry in Computer Vision,",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "An Invitation to 3-D Vision: From Images to Geometric Models,",
+    "local": ""
+  },
+  {
+    "origin": "Computer Vision: Algorithms and Applications,",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code can be found here",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": ". The images used in this tutorial can be found",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "Basic theory",
+    "local": ""
+  },
+  {
+    "origin": "What is the homography matrix?",
+    "local": ""
+  },
+  {
+    "origin": "Briefly, the planar homography relates the transformation between two planes (up to a scale factor):",
+    "local": ""
+  },
+  {
+    "origin": "\\[ s \\begin{bmatrix} x^{&#39;} \\\\ y^{&#39;} \\\\ 1 \\end{bmatrix} = H \\begin{bmatrix} x \\\\ y \\\\ 1 \\end{bmatrix} = \\begin{bmatrix} h_{11} &amp; h_{12} &amp; h_{13} \\\\ h_{21} &amp; h_{22} &amp; h_{23} \\\\ h_{31} &amp; h_{32} &amp; h_{33} \\end{bmatrix} \\begin{bmatrix} x \\\\ y \\\\ 1 \\end{bmatrix} \\]",
+    "local": ""
+  },
+  {
+    "origin": "The homography matrix is a",
+    "local": ""
+  },
+  {
+    "origin": "matrix but with 8 DoF (degrees of freedom) as it is estimated up to a scale. It is generally normalized (see also",
+    "local": ""
+  },
+  {
+    "origin": ") with \\( h_{33} = 1 \\) or \\( h_{11}^2 + h_{12}^2 + h_{13}^2 + h_{21}^2 + h_{22}^2 + h_{23}^2 + h_{31}^2 + h_{32}^2 + h_{33}^2 = 1 \\).",
+    "local": ""
+  },
+  {
+    "origin": "The following examples show different kinds of transformation but all relate a transformation between two planes.",
+    "local": ""
+  },
+  {
+    "origin": "a planar surface and the image plane (image taken from",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "a planar surface viewed by two camera positions (images taken from",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "a rotating camera around its axis of projection, equivalent to consider that the points are on a plane at infinity (image taken from",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "How the homography transformation can be useful?",
+    "local": ""
+  },
+  {
+    "origin": "Camera pose estimation from coplanar points for augmented reality with marker for instance (see the previous first example)",
+    "local": ""
+  },
+  {
+    "origin": "Perspective removal / correction (see the previous second example)",
+    "local": ""
+  },
+  {
+    "origin": "Panorama stitching (see the previous second and third example)",
+    "local": ""
+  },
+  {
+    "origin": "Demonstration codes",
+    "local": ""
+  },
+  {
+    "origin": "Demo 1: Pose estimation from coplanar points",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Please note that the code to estimate the camera pose from the homography is an example and you should use instead",
+    "local": ""
+  },
+  {
+    "origin": "if you want to estimate the camera pose for a planar or an arbitrary object.",
+    "local": ""
+  },
+  {
+    "origin": "The homography can be estimated using for instance the Direct Linear Transform (DLT) algorithm (see",
+    "local": ""
+  },
+  {
+    "origin": "for more information). As the object is planar, the transformation between points expressed in the object frame and projected points into the image plane expressed in the normalized camera frame is a homography. Only because the object is planar, the camera pose can be retrieved from the homography, assuming the camera intrinsic parameters are known (see",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "). This can be tested easily using a chessboard object and",
+    "local": ""
+  },
+  {
+    "origin": "to get the corner locations in the image.",
+    "local": ""
+  },
+  {
+    "origin": "The first thing consists to detect the chessboard corners, the chessboard size (",
+    "local": ""
+  },
+  {
+    "origin": "), here",
+    "local": ""
+  },
+  {
+    "origin": ", is required:",
+    "local": ""
+  },
+  {
+    "origin": "The object points expressed in the object frame can be computed easily knowing the size of a chessboard square:",
+    "local": ""
+  },
+  {
+    "origin": "The coordinate",
+    "local": ""
+  },
+  {
+    "origin": "must be removed for the homography estimation part:",
+    "local": ""
+  },
+  {
+    "origin": "The image points expressed in the normalized camera can be computed from the corner points and by applying a reverse perspective transformation using the camera intrinsics and the distortion coefficients:",
+    "local": ""
+  },
+  {
+    "origin": "The homography can then be estimated with:",
+    "local": ""
+  },
+  {
+    "origin": "A quick solution to retrieve the pose from the homography matrix is (see",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{align*} \\boldsymbol{X} &amp;= \\left( X, Y, 0, 1 \\right ) \\\\ \\boldsymbol{x} &amp;= \\boldsymbol{P}\\boldsymbol{X} \\\\ &amp;= \\boldsymbol{K} \\left[ \\boldsymbol{r_1} \\hspace{0.5em} \\boldsymbol{r_2} \\hspace{0.5em} \\boldsymbol{r_3} \\hspace{0.5em} \\boldsymbol{t} \\right ] \\begin{pmatrix} X \\\\ Y \\\\ 0 \\\\ 1 \\end{pmatrix} \\\\ &amp;= \\boldsymbol{K} \\left[ \\boldsymbol{r_1} \\hspace{0.5em} \\boldsymbol{r_2} \\hspace{0.5em} \\boldsymbol{t} \\right ] \\begin{pmatrix} X \\\\ Y \\\\ 1 \\end{pmatrix} \\\\ &amp;= \\boldsymbol{H} \\begin{pmatrix} X \\\\ Y \\\\ 1 \\end{pmatrix} \\end{align*} \\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{align*} \\boldsymbol{H} &amp;= \\lambda \\boldsymbol{K} \\left[ \\boldsymbol{r_1} \\hspace{0.5em} \\boldsymbol{r_2} \\hspace{0.5em} \\boldsymbol{t} \\right ] \\\\ \\boldsymbol{K}^{-1} \\boldsymbol{H} &amp;= \\lambda \\left[ \\boldsymbol{r_1} \\hspace{0.5em} \\boldsymbol{r_2} \\hspace{0.5em} \\boldsymbol{t} \\right ] \\\\ \\boldsymbol{P} &amp;= \\boldsymbol{K} \\left[ \\boldsymbol{r_1} \\hspace{0.5em} \\boldsymbol{r_2} \\hspace{0.5em} \\left( \\boldsymbol{r_1} \\times \\boldsymbol{r_2} \\right ) \\hspace{0.5em} \\boldsymbol{t} \\right ] \\end{align*} \\]",
+    "local": ""
+  },
+  {
+    "origin": "This is a quick solution (see also",
+    "local": ""
+  },
+  {
+    "origin": "A solution to have a proper rotation matrix (with the properties of a rotation matrix) consists to apply a polar decomposition (see",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "for some information):",
+    "local": ""
+  },
+  {
+    "origin": "To check the result, the object frame projected into the image with the estimated camera pose is displayed:",
+    "local": ""
+  },
+  {
+    "origin": "Demo 2: Perspective correction",
+    "local": ""
+  },
+  {
+    "origin": "In this example, a source image will be transformed into a desired perspective view by computing the homography that maps the source points into the desired points. The following image shows the source image (left) and the chessboard view that we want to transform into the desired chessboard view (right).",
+    "local": ""
+  },
+  {
+    "origin": "Source and desired views",
+    "local": ""
+  },
+  {
+    "origin": "The first step consists to detect the chessboard corners in the source and desired images:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "The homography is estimated easily with:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "To warp the source chessboard view into the desired chessboard view, we use",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "The result image is:",
+    "local": ""
+  },
+  {
+    "origin": "To compute the coordinates of the source corners transformed by the homography:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "To check the correctness of the calculation, the matching lines are displayed:",
+    "local": ""
+  },
+  {
+    "origin": "Demo 3: Homography from the camera displacement",
+    "local": ""
+  },
+  {
+    "origin": "The homography relates the transformation between two planes and it is possible to retrieve the corresponding camera displacement that allows to go from the first to the second plane view (see",
+    "local": ""
+  },
+  {
+    "origin": "for more information). Before going into the details that allow to compute the homography from the camera displacement, some recalls about camera pose and homogeneous transformation.",
+    "local": ""
+  },
+  {
+    "origin": "The function",
+    "local": ""
+  },
+  {
+    "origin": "allows to compute the camera pose from the correspondences 3D object points (points expressed in the object frame) and the projected 2D image points (object points viewed in the image). The intrinsic parameters and the distortion coefficients are required (see the camera calibration process).",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{align*} s \\begin{bmatrix} u \\\\ v \\\\ 1 \\end{bmatrix} &amp;= \\begin{bmatrix} f_x &amp; 0 &amp; c_x \\\\ 0 &amp; f_y &amp; c_y \\\\ 0 &amp; 0 &amp; 1 \\end{bmatrix} \\begin{bmatrix} r_{11} &amp; r_{12} &amp; r_{13} &amp; t_x \\\\ r_{21} &amp; r_{22} &amp; r_{23} &amp; t_y \\\\ r_{31} &amp; r_{32} &amp; r_{33} &amp; t_z \\end{bmatrix} \\begin{bmatrix} X_o \\\\ Y_o \\\\ Z_o \\\\ 1 \\end{bmatrix} \\\\ &amp;= \\boldsymbol{K} \\hspace{0.2em} ^{c}\\textrm{M}_o \\begin{bmatrix} X_o \\\\ Y_o \\\\ Z_o \\\\ 1 \\end{bmatrix} \\end{align*} \\]",
+    "local": ""
+  },
+  {
+    "origin": "\\( \\boldsymbol{K} \\) is the intrinsic matrix and \\( ^{c}\\textrm{M}_o \\) is the camera pose. The output of",
+    "local": ""
+  },
+  {
+    "origin": "is exactly this:",
+    "local": ""
+  },
+  {
+    "origin": "is the Rodrigues rotation vector and",
+    "local": ""
+  },
+  {
+    "origin": "the translation vector.",
+    "local": ""
+  },
+  {
+    "origin": "\\( ^{c}\\textrm{M}_o \\) can be represented in a homogeneous form and allows to transform a point expressed in the object frame into the camera frame:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{align*} \\begin{bmatrix} X_c \\\\ Y_c \\\\ Z_c \\\\ 1 \\end{bmatrix} &amp;= \\hspace{0.2em} ^{c}\\textrm{M}_o \\begin{bmatrix} X_o \\\\ Y_o \\\\ Z_o \\\\ 1 \\end{bmatrix} \\\\ &amp;= \\begin{bmatrix} ^{c}\\textrm{R}_o &amp; ^{c}\\textrm{t}_o \\\\ 0_{1\\times3} &amp; 1 \\end{bmatrix} \\begin{bmatrix} X_o \\\\ Y_o \\\\ Z_o \\\\ 1 \\end{bmatrix} \\\\ &amp;= \\begin{bmatrix} r_{11} &amp; r_{12} &amp; r_{13} &amp; t_x \\\\ r_{21} &amp; r_{22} &amp; r_{23} &amp; t_y \\\\ r_{31} &amp; r_{32} &amp; r_{33} &amp; t_z \\\\ 0 &amp; 0 &amp; 0 &amp; 1 \\end{bmatrix} \\begin{bmatrix} X_o \\\\ Y_o \\\\ Z_o \\\\ 1 \\end{bmatrix} \\end{align*} \\]",
+    "local": ""
+  },
+  {
+    "origin": "Transform a point expressed in one frame to another frame can be easily done with matrix multiplication:",
+    "local": ""
+  },
+  {
+    "origin": "To transform a 3D point expressed in the camera 1 frame to the camera 2 frame:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ ^{c_2}\\textrm{M}_{c_1} = \\hspace{0.2em} ^{c_2}\\textrm{M}_{o} \\cdot \\hspace{0.1em} ^{o}\\textrm{M}_{c_1} = \\hspace{0.2em} ^{c_2}\\textrm{M}_{o} \\cdot \\hspace{0.1em} \\left( ^{c_1}\\textrm{M}_{o} \\right )^{-1} = \\begin{bmatrix} ^{c_2}\\textrm{R}_{o} &amp; ^{c_2}\\textrm{t}_{o} \\\\ 0_{3 \\times 1} &amp; 1 \\end{bmatrix} \\cdot \\begin{bmatrix} ^{c_1}\\textrm{R}_{o}^T &amp; - \\hspace{0.2em} ^{c_1}\\textrm{R}_{o}^T \\cdot \\hspace{0.2em} ^{c_1}\\textrm{t}_{o} \\\\ 0_{1 \\times 3} &amp; 1 \\end{bmatrix} \\]",
+    "local": ""
+  },
+  {
+    "origin": "In this example, we will compute the camera displacement between two camera poses with respect to the chessboard object. The first step consists to compute the camera poses for the two images:",
+    "local": ""
+  },
+  {
+    "origin": "The camera displacement can be computed from the camera poses using the formulas above:",
+    "local": ""
+  },
+  {
+    "origin": "The homography related to a specific plane computed from the camera displacement is:",
+    "local": ""
+  },
+  {
+    "origin": "By Homography-transl.svg: Per Rosengren derivative work: Appoose (Homography-transl.svg) [CC BY 3.0 (http://creativecommons.org/licenses/by/3.0)], via Wikimedia Commons",
+    "local": ""
+  },
+  {
+    "origin": "On this figure,",
+    "local": ""
+  },
+  {
+    "origin": "is the normal vector of the plane and",
+    "local": ""
+  },
+  {
+    "origin": "the distance between the camera frame and the plane along the plane normal. The",
+    "local": ""
+  },
+  {
+    "origin": "equation",
+    "local": ""
+  },
+  {
+    "origin": "to compute the homography from the camera displacement is:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ ^{2}\\textrm{H}_{1} = \\hspace{0.2em} ^{2}\\textrm{R}_{1} - \\hspace{0.1em} \\frac{^{2}\\textrm{t}_{1} \\cdot n^T}{d} \\]",
+    "local": ""
+  },
+  {
+    "origin": "Where \\( ^{2}\\textrm{H}_{1} \\) is the homography matrix that maps the points in the first camera frame to the corresponding points in the second camera frame, \\( ^{2}\\textrm{R}_{1} = \\hspace{0.2em} ^{c_2}\\textrm{R}_{o} \\cdot \\hspace{0.1em} ^{c_1}\\textrm{R}_{o}^{T} \\) is the rotation matrix that represents the rotation between the two camera frames and \\( ^{2}\\textrm{t}_{1} = \\hspace{0.2em} ^{c_2}\\textrm{R}_{o} \\cdot \\left( - \\hspace{0.1em} ^{c_1}\\textrm{R}_{o}^{T} \\cdot \\hspace{0.1em} ^{c_1}\\textrm{t}_{o} \\right ) + \\hspace{0.1em} ^{c_2}\\textrm{t}_{o} \\) the translation vector between the two camera frames.",
+    "local": ""
+  },
+  {
+    "origin": "Here the normal vector",
+    "local": ""
+  },
+  {
+    "origin": "is the plane normal expressed in the camera frame 1 and can be computed as the cross product of 2 vectors (using 3 non collinear points that lie on the plane) or in our case directly with:",
+    "local": ""
+  },
+  {
+    "origin": "The distance",
+    "local": ""
+  },
+  {
+    "origin": "can be computed as the dot product between the plane normal and a point on the plane or by computing the",
+    "local": ""
+  },
+  {
+    "origin": "plane equation",
+    "local": ""
+  },
+  {
+    "origin": "and using the D coefficient:",
+    "local": ""
+  },
+  {
+    "origin": "The projective homography matrix \\( \\textbf{G} \\) can be computed from the Euclidean homography \\( \\textbf{H} \\) using the intrinsic matrix \\( \\textbf{K} \\) (see",
+    "local": ""
+  },
+  {
+    "origin": "), here assuming the same camera between the two plane views:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\textbf{G} = \\gamma \\textbf{K} \\textbf{H} \\textbf{K}^{-1} \\]",
+    "local": ""
+  },
+  {
+    "origin": "In our case, the Z-axis of the chessboard goes inside the object whereas in the homography figure it goes outside. This is just a matter of sign:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ ^{2}\\textrm{H}_{1} = \\hspace{0.2em} ^{2}\\textrm{R}_{1} + \\hspace{0.1em} \\frac{^{2}\\textrm{t}_{1} \\cdot n^T}{d} \\]",
+    "local": ""
+  },
+  {
+    "origin": "We will now compare the projective homography computed from the camera displacement with the one estimated with",
+    "local": ""
+  },
+  {
+    "origin": "The homography matrices are similar. If we compare the image 1 warped using both homography matrices:",
+    "local": ""
+  },
+  {
+    "origin": "Left: image warped using the homography estimated. Right: using the homography computed from the camera displacement",
+    "local": ""
+  },
+  {
+    "origin": "Visually, it is hard to distinguish a difference between the result image from the homography computed from the camera displacement and the one estimated with",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "Demo 4: Decompose the homography matrix",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV 3 contains the function",
+    "local": ""
+  },
+  {
+    "origin": "which allows to decompose the homography matrix to a set of rotations, translations and plane normals. First we will decompose the homography matrix computed from the camera displacement:",
+    "local": ""
+  },
+  {
+    "origin": "The results of",
+    "local": ""
+  },
+  {
+    "origin": "are:",
+    "local": ""
+  },
+  {
+    "origin": "The result of the decomposition of the homography matrix can only be recovered up to a scale factor that corresponds in fact to the distance",
+    "local": ""
+  },
+  {
+    "origin": "as the normal is unit length. As you can see, there is one solution that matches almost perfectly with the computed camera displacement. As stated in the documentation:",
+    "local": ""
+  },
+  {
+    "origin": "As the result of the decomposition is a camera displacement, if we have the initial camera pose \\( ^{c_1}\\textrm{M}_{o} \\), we can compute the current camera pose \\( ^{c_2}\\textrm{M}_{o} = \\hspace{0.2em} ^{c_2}\\textrm{M}_{c_1} \\cdot \\hspace{0.1em} ^{c_1}\\textrm{M}_{o} \\) and test if the 3D object points that belong to the plane are projected in front of the camera or not. Another solution could be to retain the solution with the closest normal if we know the plane normal expressed at the camera 1 pose.",
+    "local": ""
+  },
+  {
+    "origin": "The same thing but with the homography matrix estimated with",
+    "local": ""
+  },
+  {
+    "origin": "Again, there is also a solution that matches with the computed camera displacement.",
+    "local": ""
+  },
+  {
+    "origin": "Demo 5: Basic panorama stitching from a rotating camera",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This example is made to illustrate the concept of image stitching based on a pure rotational motion of the camera and should not be used to stitch panorama images. The",
+    "local": ""
+  },
+  {
+    "origin": "provides a complete pipeline to stitch images.",
+    "local": ""
+  },
+  {
+    "origin": "The homography transformation applies only for planar structure. But in the case of a rotating camera (pure rotation around the camera axis of projection, no translation), an arbitrary world can be considered (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "The homography can then be computed using the rotation transformation and the camera intrinsic parameters as (see for instance",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "\\[ s \\begin{bmatrix} x^{&#39;} \\\\ y^{&#39;} \\\\ 1 \\end{bmatrix} = \\bf{K} \\hspace{0.1em} \\bf{R} \\hspace{0.1em} \\bf{K}^{-1} \\begin{bmatrix} x \\\\ y \\\\ 1 \\end{bmatrix} \\]",
+    "local": ""
+  },
+  {
+    "origin": "To illustrate, we used Blender, a free and open-source 3D computer graphics software, to generate two camera views with only a rotation transformation between each other. More information about how to retrieve the camera intrinsic parameters and the",
+    "local": ""
+  },
+  {
+    "origin": "extrinsic matrix with respect to the world can be found in",
+    "local": ""
+  },
+  {
+    "origin": "(an additional transformation is needed to get the transformation between the camera and the object frames) with Blender.",
+    "local": ""
+  },
+  {
+    "origin": "The figure below shows the two generated views of the Suzanne model, with only a rotation transformation:",
+    "local": ""
+  },
+  {
+    "origin": "With the known associated camera poses and the intrinsic parameters, the relative rotation between the two views can be computed:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Here, the second image will be stitched with respect to the first image. The homography can be calculated using the formula above:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "The stitching is made simply with:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "The resulting image is:",
+    "local": ""
+  },
+  {
+    "origin": "Additional references",
+    "local": ""
+  },
+  {
+    "origin": "Lecture 16: Planar Homographies",
+    "local": ""
+  },
+  {
+    "origin": ", Robert Collins",
+    "local": ""
+  },
+  {
+    "origin": "2D projective transformations (homographies)",
+    "local": ""
+  },
+  {
+    "origin": ", Christiano Gava, Gabriele Bleser",
+    "local": ""
+  },
+  {
+    "origin": "Computer Vision: Algorithms and Applications",
+    "local": ""
+  },
+  {
+    "origin": ", Richard Szeliski",
+    "local": ""
+  },
+  {
+    "origin": "Step by Step Camera Pose Estimation for Visual Tracking and Planar Markers",
+    "local": ""
+  },
+  {
+    "origin": "Pose from homography estimation",
+    "local": ""
+  },
+  {
+    "origin": "Polar Decomposition (in Continuum Mechanics)",
+    "local": ""
+  },
+  {
+    "origin": "A Personal Interview with the Singular Value Decomposition",
+    "local": ""
+  },
+  {
+    "origin": ", Matan Gavish",
+    "local": ""
+  },
+  {
+    "origin": "Homography",
+    "local": ""
+  },
+  {
+    "origin": ", Dr. Gerhard Roth",
+    "local": ""
+  },
+  {
+    "origin": "3x4 camera matrix from blender camera",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

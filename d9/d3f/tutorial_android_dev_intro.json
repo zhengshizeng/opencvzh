@@ -1,0 +1,1094 @@
+[
+  {
+    "origin": "OpenCV: Introduction into Android Development",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Introduction into Android Development",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Vsevolod Glumov",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial is deprecated.",
+    "local": ""
+  },
+  {
+    "origin": "This guide was designed to help you in learning Android development basics and setting up your working environment quickly. It was written with Windows 7 in mind, though it would work with Linux (Ubuntu), Mac OS X and any other OS supported by Android SDK.",
+    "local": ""
+  },
+  {
+    "origin": "If you encounter any error after thoroughly following these steps, feel free to contact us via",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV4Android",
+    "local": ""
+  },
+  {
+    "origin": "discussion group or OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Q&amp;A forum",
+    "local": ""
+  },
+  {
+    "origin": ". We'll do our best to help you out.",
+    "local": ""
+  },
+  {
+    "origin": "Preface",
+    "local": ""
+  },
+  {
+    "origin": "Android is a Linux-based, open source mobile operating system developed by Open Handset Alliance led by Google. See the",
+    "local": ""
+  },
+  {
+    "origin": "Android home site",
+    "local": ""
+  },
+  {
+    "origin": "for general details.",
+    "local": ""
+  },
+  {
+    "origin": "Development for Android significantly differs from development for other platforms. So before starting programming for Android we recommend you make sure that you are familiar with the following key topis:",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "programming language that is the primary development technology for Android OS. Also, you can find",
+    "local": ""
+  },
+  {
+    "origin": "Oracle docs on Java",
+    "local": ""
+  },
+  {
+    "origin": "useful.",
+    "local": ""
+  },
+  {
+    "origin": "Java Native Interface (JNI)",
+    "local": ""
+  },
+  {
+    "origin": "that is a technology of running native code in Java virtual machine. Also, you can find",
+    "local": ""
+  },
+  {
+    "origin": "Oracle docs on JNI",
+    "local": ""
+  },
+  {
+    "origin": "useful.",
+    "local": ""
+  },
+  {
+    "origin": "Android Activity",
+    "local": ""
+  },
+  {
+    "origin": "and its lifecycle, that is an essential Android API class.",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV development will certainly require some knowledge of the",
+    "local": ""
+  },
+  {
+    "origin": "Android Camera",
+    "local": ""
+  },
+  {
+    "origin": "specifics.",
+    "local": ""
+  },
+  {
+    "origin": "Manual environment setup for Android development",
+    "local": ""
+  },
+  {
+    "origin": "Development in Java",
+    "local": ""
+  },
+  {
+    "origin": "You need the following software to be installed in order to develop for Android in Java:",
+    "local": ""
+  },
+  {
+    "origin": "(Sun JDK 7 is also possible)",
+    "local": ""
+  },
+  {
+    "origin": "Visit",
+    "local": ""
+  },
+  {
+    "origin": "Java SE Downloads page",
+    "local": ""
+  },
+  {
+    "origin": "and download an installer for your OS.",
+    "local": ""
+  },
+  {
+    "origin": "Here is a detailed JDK (Java Development Kit)",
+    "local": ""
+  },
+  {
+    "origin": "installation guide",
+    "local": ""
+  },
+  {
+    "origin": "for Ubuntu and Mac OS (only JDK sections are applicable for OpenCV)",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "OpenJDK is not suitable for Android development, since Android SDK supports only Sun JDK. If you use Ubuntu, after installation of Sun JDK you should run the following command to set Sun java environment:",
+    "local": ""
+  },
+  {
+    "origin": "Android SDK",
+    "local": ""
+  },
+  {
+    "origin": "Get the latest Android SDK from",
+    "local": ""
+  },
+  {
+    "origin": "http://developer.android.com/sdk/index.html",
+    "local": ""
+  },
+  {
+    "origin": "Here is Google's",
+    "local": ""
+  },
+  {
+    "origin": "install guide",
+    "local": ""
+  },
+  {
+    "origin": "for the SDK.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "You can choose downloading",
+    "local": ""
+  },
+  {
+    "origin": "ADT Bundle package",
+    "local": ""
+  },
+  {
+    "origin": "that in addition to Android SDK Tools includes Eclipse + ADT + NDK/CDT plugins, Android Platform-tools, the latest Android platform and the latest Android system image for the emulator - this is the best choice for those who is setting up Android development environment the first time!",
+    "local": ""
+  },
+  {
+    "origin": "If you are running x64 version of Ubuntu Linux, then you need ia32 shared libraries for use on amd64 and ia64 systems to be installed. You can install them with the following command:",
+    "local": ""
+  },
+  {
+    "origin": "For Red Hat based systems the following command might be helpful:",
+    "local": ""
+  },
+  {
+    "origin": "Android SDK components",
+    "local": ""
+  },
+  {
+    "origin": "You need the following SDK components to be installed:",
+    "local": ""
+  },
+  {
+    "origin": "Android SDK Tools, revision 20",
+    "local": ""
+  },
+  {
+    "origin": "or newer.",
+    "local": ""
+  },
+  {
+    "origin": "Older revisions should also work, but they are not recommended.",
+    "local": ""
+  },
+  {
+    "origin": "SDK Platform Android 3.0",
+    "local": ""
+  },
+  {
+    "origin": "(API 11).",
+    "local": ""
+  },
+  {
+    "origin": "The minimal platform supported by OpenCV Java API is",
+    "local": ""
+  },
+  {
+    "origin": "(API 8). This is also the minimum API Level required for the provided samples to run. See the &lt;uses-sdk android:minSdkVersion=\"8\"/&gt; tag in their",
+    "local": ""
+  },
+  {
+    "origin": "AndroidManifest.xml",
+    "local": ""
+  },
+  {
+    "origin": "files. But for successful compilation the",
+    "local": ""
+  },
+  {
+    "origin": "target",
+    "local": ""
+  },
+  {
+    "origin": "platform should be set to Android 3.0 (API 11) or higher. It will not prevent them from running on Android 2.2.",
+    "local": ""
+  },
+  {
+    "origin": "See",
+    "local": ""
+  },
+  {
+    "origin": "Adding Platforms and Packages",
+    "local": ""
+  },
+  {
+    "origin": "for help with installing/updating SDK components.",
+    "local": ""
+  },
+  {
+    "origin": "Eclipse IDE",
+    "local": ""
+  },
+  {
+    "origin": "Check the",
+    "local": ""
+  },
+  {
+    "origin": "Android SDK System Requirements",
+    "local": ""
+  },
+  {
+    "origin": "document for a list of Eclipse versions that are compatible with the Android SDK. For OpenCV 2.4.x we recommend",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ". They work well for OpenCV under both Windows and Linux.",
+    "local": ""
+  },
+  {
+    "origin": "If you have no Eclipse installed, you can get it from the",
+    "local": ""
+  },
+  {
+    "origin": "official site",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "ADT plugin for Eclipse",
+    "local": ""
+  },
+  {
+    "origin": "These instructions are copied from",
+    "local": ""
+  },
+  {
+    "origin": "Android Developers site",
+    "local": ""
+  },
+  {
+    "origin": ", check it out in case of any ADT-related problem.",
+    "local": ""
+  },
+  {
+    "origin": "Assuming that you have Eclipse IDE installed, as described above, follow these steps to download and install the ADT plugin:",
+    "local": ""
+  },
+  {
+    "origin": "Start Eclipse, then select Help &ndash;&gt; Install New Software...",
+    "local": ""
+  },
+  {
+    "origin": "Click Add (in the top-right corner).",
+    "local": ""
+  },
+  {
+    "origin": "In the Add Repository dialog that appears, enter \"ADT Plugin\" for the Name and the following URL for the Location:",
+    "local": ""
+  },
+  {
+    "origin": "https://dl-ssl.google.com/android/eclipse/",
+    "local": ""
+  },
+  {
+    "origin": "Click OK",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If you have trouble acquiring the plugin, try using \"http\" in the Location URL, instead of \"https\" (https is preferred for security reasons).",
+    "local": ""
+  },
+  {
+    "origin": "In the Available Software dialog, select the checkbox next to Developer Tools and click Next.",
+    "local": ""
+  },
+  {
+    "origin": "In the next window, you'll see a list of the tools to be downloaded. Click Next.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If you also plan to develop native C++ code with Android NDK don't forget to enable NDK Plugins installations as well.",
+    "local": ""
+  },
+  {
+    "origin": "Read and accept the license agreements, then click Finish.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If you get a security warning saying that the authenticity or validity of the software can't be established, click OK.",
+    "local": ""
+  },
+  {
+    "origin": "When the installation completes, restart Eclipse.",
+    "local": ""
+  },
+  {
+    "origin": "Native development in C++",
+    "local": ""
+  },
+  {
+    "origin": "You need the following software to be installed in order to develop for Android in C++:",
+    "local": ""
+  },
+  {
+    "origin": "Android NDK",
+    "local": ""
+  },
+  {
+    "origin": "To compile C++ code for Android platform you need Android Native Development Kit (",
+    "local": ""
+  },
+  {
+    "origin": "NDK",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "You can get the latest version of NDK from the",
+    "local": ""
+  },
+  {
+    "origin": "download page",
+    "local": ""
+  },
+  {
+    "origin": ". To install Android NDK just extract the archive to some folder on your computer. Here are",
+    "local": ""
+  },
+  {
+    "origin": "installation instructions",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Before start you can read official Android NDK documentation which is in the Android NDK archive, in the folder",
+    "local": ""
+  },
+  {
+    "origin": ". The main article about using Android NDK build system is in the",
+    "local": ""
+  },
+  {
+    "origin": "file. Some additional information you can find in the",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "files, and",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "CDT plugin for Eclipse",
+    "local": ""
+  },
+  {
+    "origin": "If you selected for installation the NDK plugins component of Eclipse ADT plugin (see the picture above) your Eclipse IDE should already have CDT plugin (that means C/C++ Development Tooling). There are several possible ways to integrate compilation of C++ code by Android NDK into Eclipse compilation process. We recommend the approach based on Eclipse CDT(C/C++ Development Tooling) Builder.",
+    "local": ""
+  },
+  {
+    "origin": "Android application structure",
+    "local": ""
+  },
+  {
+    "origin": "Usually source code of an Android application has the following structure:",
+    "local": ""
+  },
+  {
+    "origin": "Where:",
+    "local": ""
+  },
+  {
+    "origin": "the",
+    "local": ""
+  },
+  {
+    "origin": "folder contains Java code of the application,",
+    "local": ""
+  },
+  {
+    "origin": "the",
+    "local": ""
+  },
+  {
+    "origin": "folder contains resources of the application (images, xml files describing UI layout, etc),",
+    "local": ""
+  },
+  {
+    "origin": "the",
+    "local": ""
+  },
+  {
+    "origin": "folder will contain native libraries after a successful build,",
+    "local": ""
+  },
+  {
+    "origin": "and the",
+    "local": ""
+  },
+  {
+    "origin": "folder contains C/C++ application source code and NDK's build scripts",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "producing the native libraries,",
+    "local": ""
+  },
+  {
+    "origin": "file presents essential information about application to the Android system (name of the Application, name of main application's package, components of the application, required permissions, etc).",
+    "local": ""
+  },
+  {
+    "origin": "It can be created using Eclipse wizard or android tool from Android SDK.",
+    "local": ""
+  },
+  {
+    "origin": "is a text file containing information about target Android platform and other build details. This file is generated by Eclipse or can be created with android tool included in Android SDK.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Both",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "files are required to compile the C++ part of the application, since Android NDK build system relies on them. If any of these files does not exist, compile the Java part of the project before the C++ part.",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "scripts",
+    "local": ""
+  },
+  {
+    "origin": "The script",
+    "local": ""
+  },
+  {
+    "origin": "usually has the following structure:",
+    "local": ""
+  },
+  {
+    "origin": "This is the minimal file",
+    "local": ""
+  },
+  {
+    "origin": ", which builds C++ source code of an Android application. Note that the first two lines and the last line are mandatory for any",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Usually the file",
+    "local": ""
+  },
+  {
+    "origin": "is optional, but in case of project using OpenCV, when STL and exceptions are used in C++, it also should be created. Example of the file",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "We recommend setting APP_ABI := all for all targets. If you want to specify the target explicitly, use armeabi for ARMv5/ARMv6, armeabi-v7a for ARMv7, x86 for Intel Atom or mips for MIPS.",
+    "local": ""
+  },
+  {
+    "origin": "Building application native part from command line",
+    "local": ""
+  },
+  {
+    "origin": "Here is the standard way to compile C++ part of an Android application:",
+    "local": ""
+  },
+  {
+    "origin": "warning",
+    "local": ""
+  },
+  {
+    "origin": "We strongly recommend using cmd.exe (standard Windows console) instead of Cygwin on",
+    "local": ""
+  },
+  {
+    "origin": "Windows",
+    "local": ""
+  },
+  {
+    "origin": ". Use the latter if only you're absolutely sure about, what you're doing. Cygwin is not really supported and we are unlikely to help you in case you encounter some problems with it. So, use it only if you're capable of handling the consequences yourself.",
+    "local": ""
+  },
+  {
+    "origin": "Open console and go to the root folder of an Android application",
+    "local": ""
+  },
+  {
+    "origin": "Run the following command",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "On Windows we recommend to use ndk-build.cmd in standard Windows console (cmd.exe) rather than the similar bash script in Cygwin shell.",
+    "local": ""
+  },
+  {
+    "origin": "After executing this command the C++ part of the source code is compiled.",
+    "local": ""
+  },
+  {
+    "origin": "After that the Java part of the application can be (re)compiled (using either",
+    "local": ""
+  },
+  {
+    "origin": "Eclipse",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "Ant",
+    "local": ""
+  },
+  {
+    "origin": "build tool).",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Some parameters can be set for the ndk-build:",
+    "local": ""
+  },
+  {
+    "origin": ": Verbose compilation",
+    "local": ""
+  },
+  {
+    "origin": ": Rebuild all",
+    "local": ""
+  },
+  {
+    "origin": "Building application native part from",
+    "local": ""
+  },
+  {
+    "origin": "Eclipse",
+    "local": ""
+  },
+  {
+    "origin": "(CDT Builder)",
+    "local": ""
+  },
+  {
+    "origin": "There are several possible ways to integrate compilation of native C++ code by Android NDK into Eclipse build process. We recommend the approach based on Eclipse CDT(C/C++ Development Tooling) Builder.",
+    "local": ""
+  },
+  {
+    "origin": "important",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV for Android package since version 2.4.2 contains sample projects pre-configured CDT Builders. For your own projects follow the steps below.",
+    "local": ""
+  },
+  {
+    "origin": "Define the NDKROOT environment variable containing the path to Android NDK in your system (e.g. \"X:\\\\Apps\\\\android-ndk-r8\" or \"/opt/android-ndk-r8\").",
+    "local": ""
+  },
+  {
+    "origin": "On Windows",
+    "local": ""
+  },
+  {
+    "origin": "an environment variable can be set via My Computer -&gt; Properties -&gt; Advanced -&gt; Environment variables. On Windows 7 it's also possible to use",
+    "local": ""
+  },
+  {
+    "origin": "setx",
+    "local": ""
+  },
+  {
+    "origin": "command in a console session.",
+    "local": ""
+  },
+  {
+    "origin": "On Linux",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "MacOS",
+    "local": ""
+  },
+  {
+    "origin": "an environment variable can be set via appending a \"export VAR_NAME=VAR_VALUE\" line to the",
+    "local": ""
+  },
+  {
+    "origin": "file and logging off and then on.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "It's also possible to define the NDKROOT environment variable within Eclipse IDE, but it should be done for every new workspace you create. If you prefer this option better than setting system environment variable, open Eclipse menu Window -&gt; Preferences -&gt; C/C++ -&gt; Build -&gt; Environment, press the Add... button and set variable name to NDKROOT and value to local Android NDK path. #. After that you need to",
+    "local": ""
+  },
+  {
+    "origin": "restart Eclipse",
+    "local": ""
+  },
+  {
+    "origin": "to apply the changes.",
+    "local": ""
+  },
+  {
+    "origin": "Open Eclipse and load the Android app project to configure.",
+    "local": ""
+  },
+  {
+    "origin": "Add C/C++ Nature to the project via Eclipse menu New -&gt; Other -&gt; C/C++ -&gt; Convert to a C/C++ Project.",
+    "local": ""
+  },
+  {
+    "origin": "And:",
+    "local": ""
+  },
+  {
+    "origin": "Select the project(s) to convert. Specify \"Project type\" = Makefile project, \"Toolchains\" = Other Toolchain.",
+    "local": ""
+  },
+  {
+    "origin": "Open Project Properties -&gt; C/C++ Build, uncheck Use default build command, replace \"Build command\" text from \"make\" to",
+    "local": ""
+  },
+  {
+    "origin": "\"${NDKROOT}/ndk-build.cmd\" on Windows,",
+    "local": ""
+  },
+  {
+    "origin": "\"${NDKROOT}/ndk-build\" on Linux and MacOS.",
+    "local": ""
+  },
+  {
+    "origin": "Go to Behaviour tab and change \"Workbench build type\" section like shown below:",
+    "local": ""
+  },
+  {
+    "origin": "Press OK and make sure the ndk-build is successfully invoked when building the project.",
+    "local": ""
+  },
+  {
+    "origin": "If you open your C++ source file in Eclipse editor, you'll see syntax error notifications. They are not real errors, but additional CDT configuring is required.",
+    "local": ""
+  },
+  {
+    "origin": "Open Project Properties -&gt; C/C++ General -&gt; Paths and Symbols and add the following",
+    "local": ""
+  },
+  {
+    "origin": "Include",
+    "local": ""
+  },
+  {
+    "origin": "paths for **C++**:",
+    "local": ""
+  },
+  {
+    "origin": "The last path should be changed to the correct absolute or relative path to OpenCV4Android SDK location.",
+    "local": ""
+  },
+  {
+    "origin": "This should clear the syntax error notifications in Eclipse C++ editor.",
+    "local": ""
+  },
+  {
+    "origin": "Debugging and Testing",
+    "local": ""
+  },
+  {
+    "origin": "In this section we will give you some easy-to-follow instructions on how to set up an emulator or hardware device for testing and debugging an Android project.",
+    "local": ""
+  },
+  {
+    "origin": "AVD",
+    "local": ""
+  },
+  {
+    "origin": "AVD (",
+    "local": ""
+  },
+  {
+    "origin": "Android Virtual Device",
+    "local": ""
+  },
+  {
+    "origin": ") is not probably the most convenient way to test an OpenCV-dependent application, but sure the most uncomplicated one to configure.",
+    "local": ""
+  },
+  {
+    "origin": "Assuming you already have",
+    "local": ""
+  },
+  {
+    "origin": "Android SDK",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "Eclipse IDE",
+    "local": ""
+  },
+  {
+    "origin": "installed, in Eclipse go Window -&gt; AVD Manager.",
+    "local": ""
+  },
+  {
+    "origin": "Press the New button in AVD Manager window.",
+    "local": ""
+  },
+  {
+    "origin": "Create new Android Virtual Device window will let you select some properties for your new device, like target API level, size of SD-card and other.",
+    "local": ""
+  },
+  {
+    "origin": "When you click the Create AVD button, your new AVD will be available in AVD Manager.",
+    "local": ""
+  },
+  {
+    "origin": "Press Start to launch the device. Be aware that any AVD (a.k.a. Emulator) is usually much slower than a hardware Android device, so it may take up to several minutes to start.",
+    "local": ""
+  },
+  {
+    "origin": "Go Run -&gt; Run/Debug in Eclipse IDE to run your application in regular or debugging mode. Device Chooser will let you choose among the running devices or to start a new one.",
+    "local": ""
+  },
+  {
+    "origin": "Hardware Device",
+    "local": ""
+  },
+  {
+    "origin": "If you have an Android device, you can use it to test and debug your applications. This way is more authentic, though a little bit harder to set up. You need to make some actions for Windows and Linux operating systems to be able to work with Android devices. No extra actions are required for Mac OS. See detailed information on configuring hardware devices in subsections below.",
+    "local": ""
+  },
+  {
+    "origin": "You may also consult the official",
+    "local": ""
+  },
+  {
+    "origin": "Android Developers site instructions",
+    "local": ""
+  },
+  {
+    "origin": "for more information.",
+    "local": ""
+  },
+  {
+    "origin": "Windows host computer",
+    "local": ""
+  },
+  {
+    "origin": "Enable USB debugging on the Android device (via Settings menu).",
+    "local": ""
+  },
+  {
+    "origin": "Attach the Android device to your PC with a USB cable.",
+    "local": ""
+  },
+  {
+    "origin": "Go to Start Menu and",
+    "local": ""
+  },
+  {
+    "origin": "right-click",
+    "local": ""
+  },
+  {
+    "origin": "on Computer. Select Manage in the context menu. You may be asked for Administrative permissions.",
+    "local": ""
+  },
+  {
+    "origin": "Select Device Manager in the left pane and find an unknown device in the list. You may try unplugging it and then plugging back in order to check whether it's your exact equipment appears in the list.",
+    "local": ""
+  },
+  {
+    "origin": "Try your luck installing Google USB drivers without any modifications:",
+    "local": ""
+  },
+  {
+    "origin": "right-click",
+    "local": ""
+  },
+  {
+    "origin": "on the unknown device, select Properties menu item &ndash;&gt; Details tab &ndash;&gt; Update Driver button.",
+    "local": ""
+  },
+  {
+    "origin": "Select Browse computer for driver software.",
+    "local": ""
+  },
+  {
+    "origin": "Specify the path to",
+    "local": ""
+  },
+  {
+    "origin": "folder.",
+    "local": ""
+  },
+  {
+    "origin": "If you get the prompt to install unverified drivers and report about success - you've finished with USB driver installation.",
+    "local": ""
+  },
+  {
+    "origin": "Otherwise (getting the failure like shown below) follow the next steps.",
+    "local": ""
+  },
+  {
+    "origin": "Again",
+    "local": ""
+  },
+  {
+    "origin": "right-click",
+    "local": ""
+  },
+  {
+    "origin": "on the unknown device, select Properties &ndash;&gt; Details &ndash;&gt; Hardware Ids and copy the line like",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Now open file",
+    "local": ""
+  },
+  {
+    "origin": ". Select either Google.NTx86 or Google.NTamd64 section depending on your host system architecture.",
+    "local": ""
+  },
+  {
+    "origin": "There should be a record like existing ones for your device and you need to add one manually.",
+    "local": ""
+  },
+  {
+    "origin": "Save the",
+    "local": ""
+  },
+  {
+    "origin": "file and try to install the USB driver again.",
+    "local": ""
+  },
+  {
+    "origin": "This time installation should go successfully.",
+    "local": ""
+  },
+  {
+    "origin": "And an unknown device is now recognized as an Android phone.",
+    "local": ""
+  },
+  {
+    "origin": "Successful device USB connection can be verified in console via adb devices command.",
+    "local": ""
+  },
+  {
+    "origin": "Now, in Eclipse go Run -&gt; Run/Debug to run your application in regular or debugging mode. Device Chooser will let you choose among the devices.",
+    "local": ""
+  },
+  {
+    "origin": "Linux host computer",
+    "local": ""
+  },
+  {
+    "origin": "By default Linux doesn't recognize Android devices, but it's easy to fix this issue. On Ubuntu Linux you have to create a new **/etc/udev/rules.d/51-android.rules** configuration file that contains information about your Android device. You may find some Vendor ID's",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "or execute lsusb command to view VendorID of plugged Android device. Here is an example of such file for LG device:",
+    "local": ""
+  },
+  {
+    "origin": "Then restart your adb server (even better to restart the system), plug in your Android device and execute adb devices command. You will see the list of attached devices:",
+    "local": ""
+  },
+  {
+    "origin": "Mac OS host computer",
+    "local": ""
+  },
+  {
+    "origin": "No actions are required, just connect your device via USB and run adb devices to check connection.",
+    "local": ""
+  },
+  {
+    "origin": "What's next",
+    "local": ""
+  },
+  {
+    "origin": "Now, when you have your development environment set up and configured, you may want to proceed to installing OpenCV4Android SDK. You can learn how to do that in a separate",
+    "local": ""
+  },
+  {
+    "origin": "tutorial.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

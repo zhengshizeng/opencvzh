@@ -1,0 +1,722 @@
+[
+  {
+    "origin": "OpenCV: cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Unscented Kalman filter parameters. The class for initialization parameters of Unscented Kalman filter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(int dp, int mp, int cp, double processNoiseCovDiag, double measurementNoiseCovDiag,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; dynamicalSystem, int type=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "(int dp, int mp, int cp, double processNoiseCovDiag, double measurementNoiseCovDiag,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; dynamicalSystem, int type=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Default is 1e-3.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Default is 2.0.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Dimensionality of the control vector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Type of elements of vectors and matrices, default is CV_64F.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Dimensionality of the state vector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "State estimate cross-covariance matrix, DP x DP, default is identity.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Measurement noise cross-covariance matrix, MP x MP.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Object of the class containing functions for computing the next state and the measurement.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Dimensionality of the measurement vector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Process noise cross-covariance matrix, DP x DP.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Initial state, DP x 1, default is zero.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Unscented Kalman filter parameters. The class for initialization parameters of Unscented Kalman filter.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "UnscentedKalmanFilterParams()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::UnscentedKalmanFilterParams",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "The constructors.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "UnscentedKalmanFilterParams()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::UnscentedKalmanFilterParams",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dp",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mp",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "cp",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "processNoiseCovDiag",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "measurementNoiseCovDiag",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "dynamicalSystem",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dp",
+    "local": ""
+  },
+  {
+    "origin": "- dimensionality of the state vector,",
+    "local": ""
+  },
+  {
+    "origin": "mp",
+    "local": ""
+  },
+  {
+    "origin": "- dimensionality of the measurement vector,",
+    "local": ""
+  },
+  {
+    "origin": "cp",
+    "local": ""
+  },
+  {
+    "origin": "- dimensionality of the control vector,",
+    "local": ""
+  },
+  {
+    "origin": "processNoiseCovDiag",
+    "local": ""
+  },
+  {
+    "origin": "- value of elements on main diagonal process noise cross-covariance matrix,",
+    "local": ""
+  },
+  {
+    "origin": "measurementNoiseCovDiag",
+    "local": ""
+  },
+  {
+    "origin": "- value of elements on main diagonal measurement noise cross-covariance matrix,",
+    "local": ""
+  },
+  {
+    "origin": "dynamicalSystem",
+    "local": ""
+  },
+  {
+    "origin": "- ptr to object of the class containing functions for computing the next state and the measurement,",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "- type of the created matrices that should be CV_32F or CV_64F.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "init()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::init",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dp",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mp",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "cp",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "processNoiseCovDiag",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "measurementNoiseCovDiag",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "dynamicalSystem",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "The function for initialization of Unscented Kalman filter",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dp",
+    "local": ""
+  },
+  {
+    "origin": "- dimensionality of the state vector,",
+    "local": ""
+  },
+  {
+    "origin": "mp",
+    "local": ""
+  },
+  {
+    "origin": "- dimensionality of the measurement vector,",
+    "local": ""
+  },
+  {
+    "origin": "cp",
+    "local": ""
+  },
+  {
+    "origin": "- dimensionality of the control vector,",
+    "local": ""
+  },
+  {
+    "origin": "processNoiseCovDiag",
+    "local": ""
+  },
+  {
+    "origin": "- value of elements on main diagonal process noise cross-covariance matrix,",
+    "local": ""
+  },
+  {
+    "origin": "measurementNoiseCovDiag",
+    "local": ""
+  },
+  {
+    "origin": "- value of elements on main diagonal measurement noise cross-covariance matrix,",
+    "local": ""
+  },
+  {
+    "origin": "dynamicalSystem",
+    "local": ""
+  },
+  {
+    "origin": "- ptr to object of the class containing functions for computing the next state and the measurement,",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "- type of the created matrices that should be CV_32F or CV_64F.",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "double cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::alpha",
+    "local": ""
+  },
+  {
+    "origin": "Default is 1e-3.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "beta",
+    "local": ""
+  },
+  {
+    "origin": "double cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::beta",
+    "local": ""
+  },
+  {
+    "origin": "Default is 2.0.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CP",
+    "local": ""
+  },
+  {
+    "origin": "int cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::CP",
+    "local": ""
+  },
+  {
+    "origin": "Dimensionality of the control vector.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "dataType",
+    "local": ""
+  },
+  {
+    "origin": "int cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::dataType",
+    "local": ""
+  },
+  {
+    "origin": "Type of elements of vectors and matrices, default is CV_64F.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "DP",
+    "local": ""
+  },
+  {
+    "origin": "int cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::DP",
+    "local": ""
+  },
+  {
+    "origin": "Dimensionality of the state vector.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "errorCovInit",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::errorCovInit",
+    "local": ""
+  },
+  {
+    "origin": "State estimate cross-covariance matrix, DP x DP, default is identity.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "double cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::k",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "measurementNoiseCov",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::measurementNoiseCov",
+    "local": ""
+  },
+  {
+    "origin": "Measurement noise cross-covariance matrix, MP x MP.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "model",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::model",
+    "local": ""
+  },
+  {
+    "origin": "Object of the class containing functions for computing the next state and the measurement.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "MP",
+    "local": ""
+  },
+  {
+    "origin": "int cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::MP",
+    "local": ""
+  },
+  {
+    "origin": "Dimensionality of the measurement vector.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "processNoiseCov",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::processNoiseCov",
+    "local": ""
+  },
+  {
+    "origin": "Process noise cross-covariance matrix, DP x DP.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "stateInit",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::kalman_filters::UnscentedKalmanFilterParams::stateInit",
+    "local": ""
+  },
+  {
+    "origin": "Initial state, DP x 1, default is zero.",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/tracking/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:46 for OpenCV by &#160;",
+    "local": ""
+  }
+]

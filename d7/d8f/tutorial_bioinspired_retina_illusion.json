@@ -1,0 +1,282 @@
+[
+  {
+    "origin": "OpenCV: Processing images causing optical illusions",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Processing images causing optical illusions",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "I will show here how the bioinspired module can reproduce a well-known optical illusion that our eyes perceive in certain light condition: The Adelson checkerboard.",
+    "local": ""
+  },
+  {
+    "origin": "The Adelson checkerboard",
+    "local": ""
+  },
+  {
+    "origin": "Looking at the checkerboard image below, human eyes perceive the \"B\" square lighter than the \"A\" square, although they are pictured in the very same RGB color. Of course in the physical world, checkerboard has a \"B\" square which is lighter than \"A\", but in this image the shadow of the green cylinder casting over the \"B\" square ends up in making the \"A\" and \"B\" squares actually having the same luminance.",
+    "local": ""
+  },
+  {
+    "origin": "Adelson checkerboard",
+    "local": ""
+  },
+  {
+    "origin": "Our visual system does \"compensate\" for the shadow, making us perceive the \"B\" square lighter, as the shadow wouldn't be there. This is due to local adaptation process that is performed in the foveal area.",
+    "local": ""
+  },
+  {
+    "origin": "You may find the original Adelson's explanation",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Proof: You can convince yourself by using an image manipulation program, cutting out a portion of the two squares, and looking at them without any background. You can also measure the RGB values of the two squares with the picker tool.",
+    "local": ""
+  },
+  {
+    "origin": "In this image I've cropped a little piece of the A and B squares and I've put them side-by-side. It should be quite evident they have the same luminance.",
+    "local": ""
+  },
+  {
+    "origin": "Adelson checkerboard proof",
+    "local": ""
+  },
+  {
+    "origin": "It's worth to know that this illusion works because the checkerboard image, as you may see it on your laptop, casts on your retina with dimensions that cause the retina local adaptation to take into account both the two squares at the same time.",
+    "local": ""
+  },
+  {
+    "origin": "The foveal vision area is something like one inch at one meter (and because your eye moves continuously, with the so called \"saccades\", your brain is able to reconstruct the entire color scene in real time). This means that one single letter, either A or B, can hit your fovea at any time.",
+    "local": ""
+  },
+  {
+    "origin": "The point is that, even if you can't see both letters at the same time in a single eye fixation, when looking at one letter your fovea also takes into account light information from what is around it. This means that the fovea actually perceives also the neighboring cells.",
+    "local": ""
+  },
+  {
+    "origin": "The net effect is that when looking at one area, your eye locally adapts to luminance, filters noise, enforces contours, etc. considering what",
+    "local": ""
+  },
+  {
+    "origin": "surrounds",
+    "local": ""
+  },
+  {
+    "origin": "this area, and this makes the illusion work. We say that",
+    "local": ""
+  },
+  {
+    "origin": "the retina works in a \"center surround\" manner",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "So, the \"A\" cell being surrounded by lighter cells can be perceived darker. As a comparison, cell \"B\" 's neighborhood is darker and the cell \"B\" is then perceived lighter.",
+    "local": ""
+  },
+  {
+    "origin": "Finally, since shadow edges are soft, retina eliminates this information. Then shadows do not disrupt the overall chessboard observation making possible to \"confidently being fooled\" by the perceived cells luminance.",
+    "local": ""
+  },
+  {
+    "origin": "Reproducing the illusion",
+    "local": ""
+  },
+  {
+    "origin": "The bioinspired module does mimic (also) the parvocellular retina process, that is our foveal vision, and it does reproduce our eyes' local adaptation.",
+    "local": ""
+  },
+  {
+    "origin": "This means we can expect the parvo channel output to really contain luminance values similar to those we perceive with our eyes. Specifically, in this case we expect the \"B\" square RGB values to be actually lighter than the \"A\" ones.",
+    "local": ""
+  },
+  {
+    "origin": "To correctly mimic what our eye does we need opencv to do the local adaptation on the right image portion. This means we have to ensure that the opencv's notion of \"local\" does match with our image's dimensions, otherwise the local adaptation wouldn't work as expected.",
+    "local": ""
+  },
+  {
+    "origin": "For this reason we may have to adjust the",
+    "local": ""
+  },
+  {
+    "origin": "hcellsSpatialConstant",
+    "local": ""
+  },
+  {
+    "origin": "parameter (that technically specifies the low spatial cut frequency, or slow luminance changes sensitivity) depending by the image resolution.",
+    "local": ""
+  },
+  {
+    "origin": "For the image in this tutorial, the default retina parameters should be fine.",
+    "local": ""
+  },
+  {
+    "origin": "In order to feed the image to the bioinspired module, you can use either your own code or the",
+    "local": ""
+  },
+  {
+    "origin": "example_bioinspired_retinaDemo",
+    "local": ""
+  },
+  {
+    "origin": "example that comes with the bioinspired module.",
+    "local": ""
+  },
+  {
+    "origin": "Running",
+    "local": ""
+  },
+  {
+    "origin": "will cause our image to be processed in both parvocellular and magnocellular channels (we are interested just in the first one).",
+    "local": ""
+  },
+  {
+    "origin": "If you choose to use your own code, please note that the parvocellular (and magnocellular) channel does require some iterations (frames to be processed) before actually getting steady.",
+    "local": ""
+  },
+  {
+    "origin": "Actually parvo (and magno) channel do cares about temporal information. That is, when you start feeding frames, it is similar to you with closed eyes; then you open them and you see the chessboard.",
+    "local": ""
+  },
+  {
+    "origin": "This is a static image but your retina just starts moving to a new context (eyes opening) and has to adapt.",
+    "local": ""
+  },
+  {
+    "origin": "While in this transient state the luminance information do matters, and you see more or less the absolute luminance values. Absolute luminance is exactly what you need",
+    "local": ""
+  },
+  {
+    "origin": "not",
+    "local": ""
+  },
+  {
+    "origin": "to look at in order to reproduce the illusion..",
+    "local": ""
+  },
+  {
+    "origin": "As soon as steady state is reached, you receive more contextual luminance information. Your eyes work in a center-surround manner and take into account the neighborhood luminance to evaluate the region of interest luminance level. And that's when our illusion comes out !",
+    "local": ""
+  },
+  {
+    "origin": "This is something that you don't need to worry about when you process videos, because you are naturally feeding the virtual retina with several frames, but you have to take care of it in order to process a single frame.",
+    "local": ""
+  },
+  {
+    "origin": "What you will actually need to do when processing a single frame, and you only need steady state response, is to repeatedly feed the retina with the same frame (this is what the example code does), as you would do with a still video. Alternatively you can set retina temporal parameters to 0 to get steady state immediately (",
+    "local": ""
+  },
+  {
+    "origin": "photoreceptorsTemporalConstant",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "hcellsTemporalConstant",
+    "local": ""
+  },
+  {
+    "origin": "parameters of the xml file); however in this case you should be aware that you are now making experiments with something that is deliberately less accurate in reproducing the behaviour of a real retina!",
+    "local": ""
+  },
+  {
+    "origin": "Here there is a small fragment of python code we used to process the image. It does 20 iterations. This is an arbitrary number that we found experimentally to be (more than) enough",
+    "local": ""
+  },
+  {
+    "origin": "Whatever method you used to process the image, you should end up with something like this:",
+    "local": ""
+  },
+  {
+    "origin": "Parvo output for adelson checkerboard",
+    "local": ""
+  },
+  {
+    "origin": "Analyzing the results",
+    "local": ""
+  },
+  {
+    "origin": "We expected that the \"B\" pixels in the parvo channel output are lighter than \"A\" ones.",
+    "local": ""
+  },
+  {
+    "origin": ".. And in fact that is!",
+    "local": ""
+  },
+  {
+    "origin": "Looking at the resulting image might not tell us so much at a first glance: the \"B\" square looks lighter than \"A\" to our eyes, as it did in the input image. The difference is that, contrarily to the input image, now the RGB values of the pixels are actually lighter; note that when looking at the output image, we are actually applying the parvocellular process two times: first in the bioinspired module, then in our eyes. We can convince ourselves that the illusion appeared in the computed image by measuring the squares' luminance with the image manipulation program and the picker tool, or by cropping pieces of the squares and putting them side-by-side.",
+    "local": ""
+  },
+  {
+    "origin": "In the following image I cropped a portion of square \"A\" and a portion of square \"B\", and I placed them side-by-side, as I did for the original Adelson image.",
+    "local": ""
+  },
+  {
+    "origin": "Illusion reproduced",
+    "local": ""
+  },
+  {
+    "origin": "It should be quite evident that the \"B\" square is really lighter than the \"A\" square! Congratulations: you have just reproduced the Adelson illusion with the Bioinspired module!",
+    "local": ""
+  },
+  {
+    "origin": "Credits",
+    "local": ""
+  },
+  {
+    "origin": "I want to thank:",
+    "local": ""
+  },
+  {
+    "origin": "Alexandre Benoit",
+    "local": ""
+  },
+  {
+    "origin": "- for being so kind of explaining me how this whole thing works, for giving me the opportunity of writing this tutorial, and for reviewing it.",
+    "local": ""
+  },
+  {
+    "origin": "Edward Adelson",
+    "local": ""
+  },
+  {
+    "origin": "- for allowing me to freely use his checkerboard image.",
+    "local": ""
+  },
+  {
+    "origin": "Antonio Cuni",
+    "local": ""
+  },
+  {
+    "origin": "- for reviewing this tutorial and for writing the Python code.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,446 @@
+[
+  {
+    "origin": "OpenCV: cv::legacy::MultiTracker_Alt Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::legacy::MultiTracker_Alt Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Base abstract class for the long-term Multi Object Trackers:",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::legacy::MultiTracker_Alt:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Constructor for Multitracker.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;boundingBox,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; tracker_algorithm)",
+    "local": ""
+  },
+  {
+    "origin": "Add a new target to a tracking-list and initialize the tracker with a known bounding box that surrounded the target.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image)",
+    "local": ""
+  },
+  {
+    "origin": "Update all trackers from the tracking-list, find a new most likely bounding boxes for the targets.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Bounding Boxes list for Multi-Object-Tracker.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "List of randomly generated colors for bounding boxes display.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Current number of targets in tracking-list.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Trackers list for Multi-Object-Tracker.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Base abstract class for the long-term Multi Object Trackers:",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "MultiTracker_Alt()",
+    "local": ""
+  },
+  {
+    "origin": "cv::legacy::MultiTracker_Alt::MultiTracker_Alt",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Constructor for Multitracker.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "addTarget()",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::legacy::MultiTracker_Alt::addTarget",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "boundingBox",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "tracker_algorithm",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Add a new target to a tracking-list and initialize the tracker with a known bounding box that surrounded the target.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "The initial frame",
+    "local": ""
+  },
+  {
+    "origin": "boundingBox",
+    "local": ""
+  },
+  {
+    "origin": "The initial bounding box of target",
+    "local": ""
+  },
+  {
+    "origin": "tracker_algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Multi-tracker algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "True if new target initialization went succesfully, false otherwise",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "update()",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::legacy::MultiTracker_Alt::update",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Update all trackers from the tracking-list, find a new most likely bounding boxes for the targets.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "The current frame",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "True means that all targets were located and false means that tracker couldn't locate one of the targets in current frame. Note, that latter",
+    "local": ""
+  },
+  {
+    "origin": "does not",
+    "local": ""
+  },
+  {
+    "origin": "imply that tracker has failed, maybe target is indeed missing from the frame (say, out of sight)",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "boundingBoxes",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::legacy::MultiTracker_Alt::boundingBoxes",
+    "local": ""
+  },
+  {
+    "origin": "Bounding Boxes list for Multi-Object-Tracker.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "colors",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::legacy::MultiTracker_Alt::colors",
+    "local": ""
+  },
+  {
+    "origin": "List of randomly generated colors for bounding boxes display.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "targetNum",
+    "local": ""
+  },
+  {
+    "origin": "int cv::legacy::MultiTracker_Alt::targetNum",
+    "local": ""
+  },
+  {
+    "origin": "Current number of targets in tracking-list.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "trackers",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; cv::legacy::MultiTracker_Alt::trackers",
+    "local": ""
+  },
+  {
+    "origin": "Trackers list for Multi-Object-Tracker.",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/tracking/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:47 for OpenCV by &#160;",
+    "local": ""
+  }
+]

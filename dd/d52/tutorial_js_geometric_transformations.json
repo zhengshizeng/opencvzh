@@ -1,0 +1,518 @@
+[
+  {
+    "origin": "OpenCV: Geometric Transformations of Images",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Geometric Transformations of Images",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "Learn how to apply different geometric transformation to images like translation, rotation, affine transformation etc.",
+    "local": ""
+  },
+  {
+    "origin": "You will learn these functions:",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "Transformations",
+    "local": ""
+  },
+  {
+    "origin": "Scaling",
+    "local": ""
+  },
+  {
+    "origin": "Scaling is just resizing of the image. OpenCV comes with a function",
+    "local": ""
+  },
+  {
+    "origin": "for this purpose. The size of the image can be specified manually, or you can specify the scaling factor. Different interpolation methods are used. Preferable interpolation methods are",
+    "local": ""
+  },
+  {
+    "origin": "for shrinking and",
+    "local": ""
+  },
+  {
+    "origin": "(slow) &amp;",
+    "local": ""
+  },
+  {
+    "origin": "for zooming.",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(src, dst, dsize, fx = 0, fy = 0, interpolation =",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input image",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output image; it has the size dsize (when it is non-zero) or the size computed from",
+    "local": ""
+  },
+  {
+    "origin": ", fx, and fy; the type of dst is the same as of src.",
+    "local": ""
+  },
+  {
+    "origin": "dsize",
+    "local": ""
+  },
+  {
+    "origin": "output image size; if it equals zero, it is computed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[𝚍𝚜𝚒𝚣𝚎 = 𝚂𝚒𝚣𝚎(𝚛𝚘𝚞𝚗𝚍(𝚏𝚡*𝚜𝚛𝚌.𝚌𝚘𝚕𝚜), 𝚛𝚘𝚞𝚗𝚍(𝚏𝚢*𝚜𝚛𝚌.𝚛𝚘𝚠𝚜))\\]",
+    "local": ""
+  },
+  {
+    "origin": "Either dsize or both fx and fy must be non-zero.",
+    "local": ""
+  },
+  {
+    "origin": "fx",
+    "local": ""
+  },
+  {
+    "origin": "scale factor along the horizontal axis; when it equals 0, it is computed as",
+    "local": ""
+  },
+  {
+    "origin": "\\[(𝚍𝚘𝚞𝚋𝚕𝚎)𝚍𝚜𝚒𝚣𝚎.𝚠𝚒𝚍𝚝𝚑/𝚜𝚛𝚌.𝚌𝚘𝚕𝚜\\]",
+    "local": ""
+  },
+  {
+    "origin": "fy",
+    "local": ""
+  },
+  {
+    "origin": "scale factor along the vertical axis; when it equals 0, it is computed as",
+    "local": ""
+  },
+  {
+    "origin": "\\[(𝚍𝚘𝚞𝚋𝚕𝚎)𝚍𝚜𝚒𝚣𝚎.𝚑𝚎𝚒𝚐𝚑𝚝/𝚜𝚛𝚌.𝚛𝚘𝚠𝚜\\]",
+    "local": ""
+  },
+  {
+    "origin": "interpolation",
+    "local": ""
+  },
+  {
+    "origin": "interpolation method(see",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Translation",
+    "local": ""
+  },
+  {
+    "origin": "Translation is the shifting of object's location. If you know the shift in (x,y) direction, let it be \\((t_x,t_y)\\), you can create the transformation matrix \\(\\textbf{M}\\) as follows:",
+    "local": ""
+  },
+  {
+    "origin": "\\[M = \\begin{bmatrix} 1 &amp; 0 &amp; t_x \\\\ 0 &amp; 1 &amp; t_y \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(src, dst, M, dsize, flags =",
+    "local": ""
+  },
+  {
+    "origin": ", borderMode =",
+    "local": ""
+  },
+  {
+    "origin": ", borderValue = new",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output image that has the size dsize and the same type as src.",
+    "local": ""
+  },
+  {
+    "origin": "Mat",
+    "local": ""
+  },
+  {
+    "origin": "2 × 3 transformation matrix(cv.CV_64FC1 type).",
+    "local": ""
+  },
+  {
+    "origin": "dsize",
+    "local": ""
+  },
+  {
+    "origin": "size of the output image.",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "combination of interpolation methods(see",
+    "local": ""
+  },
+  {
+    "origin": ") and the optional flag WARP_INVERSE_MAP that means that M is the inverse transformation ( 𝚍𝚜𝚝→𝚜𝚛𝚌 )",
+    "local": ""
+  },
+  {
+    "origin": "borderMode",
+    "local": ""
+  },
+  {
+    "origin": "pixel extrapolation method (see",
+    "local": ""
+  },
+  {
+    "origin": "); when borderMode = BORDER_TRANSPARENT, it means that the pixels in the destination image corresponding to the \"outliers\" in the source image are not modified by the function.",
+    "local": ""
+  },
+  {
+    "origin": "borderValue",
+    "local": ""
+  },
+  {
+    "origin": "rows.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Rotation",
+    "local": ""
+  },
+  {
+    "origin": "Rotation of an image for an angle \\(\\theta\\) is achieved by the transformation matrix of the form",
+    "local": ""
+  },
+  {
+    "origin": "\\[M = \\begin{bmatrix} cos\\theta &amp; -sin\\theta \\\\ sin\\theta &amp; cos\\theta \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "But OpenCV provides scaled rotation with adjustable center of rotation so that you can rotate at any location you prefer. Modified transformation matrix is given by",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{bmatrix} \\alpha &amp; \\beta &amp; (1- \\alpha ) \\cdot center.x - \\beta \\cdot center.y \\\\ - \\beta &amp; \\alpha &amp; \\beta \\cdot center.x + (1- \\alpha ) \\cdot center.y \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "where:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{array}{l} \\alpha = scale \\cdot \\cos \\theta , \\\\ \\beta = scale \\cdot \\sin \\theta \\end{array}\\]",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(center, angle, scale)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "center",
+    "local": ""
+  },
+  {
+    "origin": "center of the rotation in the source image.",
+    "local": ""
+  },
+  {
+    "origin": "angle",
+    "local": ""
+  },
+  {
+    "origin": "rotation angle in degrees. Positive values mean counter-clockwise rotation (the coordinate origin is assumed to be the top-left corner).",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "isotropic scale factor.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Affine Transformation",
+    "local": ""
+  },
+  {
+    "origin": "In affine transformation, all parallel lines in the original image will still be parallel in the output image. To find the transformation matrix, we need three points from input image and their corresponding locations in output image. Then",
+    "local": ""
+  },
+  {
+    "origin": "will create a 2x3 matrix which is to be passed to",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(src, dst)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "three points([3, 1] size and cv.CV_32FC2 type) from input imag.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "three corresponding points([3, 1] size and cv.CV_32FC2 type) in output image.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Perspective Transformation",
+    "local": ""
+  },
+  {
+    "origin": "For perspective transformation, you need a 3x3 transformation matrix. Straight lines will remain straight even after the transformation. To find this transformation matrix, you need 4 points on the input image and corresponding points on the output image. Among these 4 points, 3 of them should not be collinear. Then transformation matrix can be found by the function",
+    "local": ""
+  },
+  {
+    "origin": ". Then apply",
+    "local": ""
+  },
+  {
+    "origin": "with this 3x3 transformation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "We use the functions:",
+    "local": ""
+  },
+  {
+    "origin": "(src, dst, M, dsize, flags =",
+    "local": ""
+  },
+  {
+    "origin": ", borderMode =",
+    "local": ""
+  },
+  {
+    "origin": ", borderValue = new",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output image that has the size dsize and the same type as src.",
+    "local": ""
+  },
+  {
+    "origin": "Mat",
+    "local": ""
+  },
+  {
+    "origin": "3 × 3 transformation matrix(cv.CV_64FC1 type).",
+    "local": ""
+  },
+  {
+    "origin": "dsize",
+    "local": ""
+  },
+  {
+    "origin": "size of the output image.",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "combination of interpolation methods (",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ") and the optional flag WARP_INVERSE_MAP, that sets M as the inverse transformation (𝚍𝚜𝚝→𝚜𝚛𝚌).",
+    "local": ""
+  },
+  {
+    "origin": "borderMode",
+    "local": ""
+  },
+  {
+    "origin": "pixel extrapolation method (",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "borderValue",
+    "local": ""
+  },
+  {
+    "origin": "(src, dst)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "coordinates of quadrangle vertices in the source image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "coordinates of the corresponding quadrangle vertices in the destination image.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

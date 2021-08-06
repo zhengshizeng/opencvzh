@@ -1,0 +1,742 @@
+[
+  {
+    "origin": "OpenCV: Build OpenCV.js",
+    "local": "OpenCV:构建OpenCV.js"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Build OpenCV.js",
+    "local": "构建OpenCV.js"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "You don't have to build your own copy if you simply want to start using it. Refer the Using Opencv.js tutorial for steps on getting a prebuilt copy from our releases or online documentation.",
+    "local": "如果您只是想开始使用它，就不必构建自己的副本。有关从我们的发行版或在线文档中获取预构建副本的步骤，请参阅使用Opencv.js教程。"
+  },
+  {
+    "origin": "Installing Emscripten",
+    "local": "安装Emscripten"
+  },
+  {
+    "origin": "Emscripten",
+    "local": "手稿"
+  },
+  {
+    "origin": "is an LLVM-to-JavaScript compiler. We will use Emscripten to build OpenCV.js.",
+    "local": "是LLVM到JavaScript的编译器。我们将使用Emscripten构建OpenCV.js。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "While this describes installation of required tools from scratch, there's a section below also describing an alternative procedure to perform the same build using docker containers which is often easier.",
+    "local": "虽然本文描述了从头开始安装所需的工具，但下面有一节还描述了使用docker容器执行相同构建的替代过程，这通常更简单。"
+  },
+  {
+    "origin": "To Install Emscripten, follow instructions of",
+    "local": "要安装Emscripten，请按照的说明进行操作"
+  },
+  {
+    "origin": "Emscripten SDK",
+    "local": "SDK脚本"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "After install, ensure the",
+    "local": "安装后，确保"
+  },
+  {
+    "origin": "environment is setup correctly.",
+    "local": "环境设置正确。"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "Modern versions of Emscripten requires to use",
+    "local": "Emscripten的现代版本需要使用"
+  },
+  {
+    "origin": "/",
+    "local": "/"
+  },
+  {
+    "origin": "launchers:",
+    "local": "发射器："
+  },
+  {
+    "origin": "The version 2.0.10 of emscripten is verified for latest WebAssembly. Please check the version of Emscripten to use the newest features of WebAssembly.",
+    "local": "emscripten的2.0.10版本已验证是否适用于最新的WebAssembly。请检查Emscripten的版本以使用WebAssembly的最新功能。"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "Obtaining OpenCV Source Code",
+    "local": "获取OpenCV源代码"
+  },
+  {
+    "origin": "You can use the latest stable OpenCV version or you can grab the latest snapshot from our",
+    "local": "您可以使用最新稳定的OpenCV版本，也可以从我们的"
+  },
+  {
+    "origin": "Git repository",
+    "local": "Git存储库"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Obtaining the Latest Stable OpenCV Version",
+    "local": "获取最新稳定的OpenCV版本"
+  },
+  {
+    "origin": "Go to our",
+    "local": "转到我们的"
+  },
+  {
+    "origin": "releases page",
+    "local": "发布页面"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Download the source archive and unpack it.",
+    "local": "下载源文件并将其解包。"
+  },
+  {
+    "origin": "Obtaining the Cutting-edge OpenCV from the Git Repository",
+    "local": "从Git存储库获取最前沿的OpenCV"
+  },
+  {
+    "origin": "Launch Git client and clone",
+    "local": "启动Git客户端并克隆"
+  },
+  {
+    "origin": "OpenCV repository",
+    "local": "OpenCV存储库"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "It requires",
+    "local": "它需要"
+  },
+  {
+    "origin": "installed in your development environment.",
+    "local": "安装在开发环境中。"
+  },
+  {
+    "origin": "Building OpenCV.js from Source",
+    "local": "从源代码构建OpenCV.js"
+  },
+  {
+    "origin": "To build",
+    "local": "建造"
+  },
+  {
+    "origin": ", execute python script",
+    "local": "，执行python脚本"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "For example, to build in",
+    "local": "例如，内置"
+  },
+  {
+    "origin": "directory:",
+    "local": "目录："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "It requires",
+    "local": "它需要"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "installed in your development environment.",
+    "local": "安装在开发环境中。"
+  },
+  {
+    "origin": "The build script builds asm.js version by default. To build WebAssembly version, append",
+    "local": "默认情况下，生成脚本生成asm.js版本。若要生成WebAssembly版本，请附加"
+  },
+  {
+    "origin": "switch.",
+    "local": "开关。"
+  },
+  {
+    "origin": "For example, to build wasm version in",
+    "local": "例如，在"
+  },
+  {
+    "origin": "directory:",
+    "local": "目录："
+  },
+  {
+    "origin": "[Optional] To build the OpenCV.js loader, append",
+    "local": "[可选]要构建OpenCV.js加载程序，请附加"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "The loader is implemented as a js file in the path",
+    "local": "加载程序实现为路径中的js文件"
+  },
+  {
+    "origin": ". The loader utilizes the",
+    "local": ". 装载机利用"
+  },
+  {
+    "origin": "WebAssembly Feature Detection",
+    "local": "WebAssembly特征检测"
+  },
+  {
+    "origin": "to detect the features of the broswer and load corresponding OpenCV.js automatically. To use it, you need to use the UMD version of",
+    "local": "检测broswer的特征并自动加载相应的OpenCV.js。要使用它，您需要使用的UMD版本"
+  },
+  {
+    "origin": "WebAssembly Feature Detection",
+    "local": "WebAssembly特征检测"
+  },
+  {
+    "origin": "and introduce the",
+    "local": "并介绍"
+  },
+  {
+    "origin": "in your Web application.",
+    "local": "在Web应用程序中。"
+  },
+  {
+    "origin": "Example Code:",
+    "local": "示例代码："
+  },
+  {
+    "origin": "[optional] To build documents, append",
+    "local": "[可选]要生成文档，请附加"
+  },
+  {
+    "origin": "option.",
+    "local": "选项。"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "It requires",
+    "local": "它需要"
+  },
+  {
+    "origin": "installed in your development environment.",
+    "local": "安装在开发环境中。"
+  },
+  {
+    "origin": "[optional] To build tests, append",
+    "local": "[可选]要生成测试，请附加"
+  },
+  {
+    "origin": "option.",
+    "local": "选项。"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "[optional] To enable OpenCV contrib modules append",
+    "local": "[可选]启用OpenCV contrib模块"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "[optional] To enable OpenCV contrib modules append",
+    "local": "[可选]启用OpenCV contrib模块"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "Running OpenCV.js Tests",
+    "local": "运行OpenCV.js测试"
+  },
+  {
+    "origin": "Remember to launch the build command passing",
+    "local": "记住启动build命令"
+  },
+  {
+    "origin": "as mentioned previously. This will generate test source code ready to run together with",
+    "local": "如前所述。这将生成测试源代码，准备与一起运行"
+  },
+  {
+    "origin": "file in",
+    "local": "文件输入"
+  },
+  {
+    "origin": "Manually in your browser",
+    "local": "在浏览器中手动"
+  },
+  {
+    "origin": "To run tests, launch a local web server in",
+    "local": "要运行测试，请在中启动本地web服务器"
+  },
+  {
+    "origin": "folder. For example, node http-server which serves on",
+    "local": "文件夹。例如，服务于"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Navigate the web browser to",
+    "local": "将web浏览器导航到"
+  },
+  {
+    "origin": ", which runs the unit tests automatically. Command example:",
+    "local": "，它将自动运行单元测试。命令示例："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "This snippet and the following require",
+    "local": "此代码段和以下代码段需要"
+  },
+  {
+    "origin": "Node.js",
+    "local": "节点.js"
+  },
+  {
+    "origin": "to be installed.",
+    "local": "待安装。"
+  },
+  {
+    "origin": "Headless with Puppeteer",
+    "local": "无头木偶"
+  },
+  {
+    "origin": "Alternatively tests can run with",
+    "local": "或者，测试可以使用"
+  },
+  {
+    "origin": "GoogleChrome/puppeteer",
+    "local": "谷歌浏览器/木偶"
+  },
+  {
+    "origin": "which is a version of Google Chrome that runs in the terminal (useful for Continuos integration like travis CI, etc)",
+    "local": "这是在终端上运行的Google Chrome版本（对于travis CI等Continuos集成非常有用）"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Checkout",
+    "local": "结帐"
+  },
+  {
+    "origin": "for more options to debug and reporting.",
+    "local": "有关调试和报告的更多选项。"
+  },
+  {
+    "origin": "The command",
+    "local": "命令"
+  },
+  {
+    "origin": "only needs to be executed once, since installs the tools dependencies; after that they are ready to use.",
+    "local": "只需要执行一次，因为安装了工具依赖项；之后就可以使用了。"
+  },
+  {
+    "origin": "Use",
+    "local": "使用"
+  },
+  {
+    "origin": "to skip automatic downloading of Chromium. You may specify own Chromium/Chrome binary through",
+    "local": "跳过Chromium的自动下载。您可以通过"
+  },
+  {
+    "origin": "environment variable.",
+    "local": "环境变量。"
+  },
+  {
+    "origin": "BEWARE",
+    "local": "当心"
+  },
+  {
+    "origin": ": Puppeteer is only guaranteed to work with the bundled Chromium, use at your own risk.",
+    "local": "：木偶师只保证与捆绑铬一起使用，使用风险自负。"
+  },
+  {
+    "origin": "Using Node.js.",
+    "local": "使用Node.js。"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "If all tests are failed, then consider using Node.js from 8.x version (",
+    "local": "如果所有测试都失败了，那么考虑使用8.x版本的Node.js("
+  },
+  {
+    "origin": "from",
+    "local": "从"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "[optional] To build",
+    "local": "[可选]生成"
+  },
+  {
+    "origin": "with threads optimization, append",
+    "local": "使用线程优化，附加"
+  },
+  {
+    "origin": "option.",
+    "local": "选项。"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "The default threads number is the logic core number of your device. You can use",
+    "local": "默认线程数是设备的逻辑核心数。你可以用"
+  },
+  {
+    "origin": "to set threads number by yourself and use",
+    "local": "自行设置线程数并使用"
+  },
+  {
+    "origin": "to get the current threads number.",
+    "local": "获取当前线程数。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "You should build wasm version of",
+    "local": "您应该构建的wasm版本"
+  },
+  {
+    "origin": "if you want to enable this optimization. And the threads optimization only works in browser, not in node.js. You need to enable the",
+    "local": "如果要启用此优化。线程优化只在浏览器中有效，而在node.js中无效。您需要启用"
+  },
+  {
+    "origin": "feature first with your browser. For example, if you use Chrome, please enable this flag in chrome://flags.",
+    "local": "使用浏览器先使用功能。例如，如果您使用Chrome，请在中启用此标志chrome://flags."
+  },
+  {
+    "origin": "[optional] To build",
+    "local": "[可选]生成"
+  },
+  {
+    "origin": "with wasm simd optimization, append",
+    "local": "使用wasm simd优化，添加"
+  },
+  {
+    "origin": "option.",
+    "local": "选项。"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "The simd optimization is experimental as wasm simd is still in development.",
+    "local": "由于wasm-simd仍在开发中，simd优化是实验性的。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Now only emscripten LLVM upstream backend supports wasm simd, refering to",
+    "local": "现在只有emscripten LLVM上游后端支持wasm simd，参见"
+  },
+  {
+    "origin": "https://emscripten.org/docs/porting/simd.html",
+    "local": "https://emscripten.org/docs/porting/simd.html"
+  },
+  {
+    "origin": ". So you need to setup upstream backend environment with the following command first:",
+    "local": ". 因此，首先需要使用以下命令设置上游后端环境："
+  },
+  {
+    "origin": "You should build wasm version of",
+    "local": "您应该构建的wasm版本"
+  },
+  {
+    "origin": "if you want to enable this optimization. For browser, you need to enable the",
+    "local": "如果要启用此优化。对于浏览器，您需要启用"
+  },
+  {
+    "origin": "feature first. For example, if you use Chrome, please enable this flag in chrome://flags. For Node.js, you need to run script with flag",
+    "local": "功能优先。例如，如果您使用Chrome，请在中启用此标志chrome://flags. 对于Node.js，需要运行带有标志的脚本"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "The simd version of",
+    "local": "的simd版本"
+  },
+  {
+    "origin": "built by latest LLVM upstream may not work with the stable browser or old version of Node.js. Please use the latest version of unstable browser or Node.js to get new features, like",
+    "local": "由最新的LLVM上游构建可能无法与稳定的浏览器或Node.js的旧版本一起工作。请使用最新版本的unstable browser或Node.js获取新功能，如"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "[optional] To build wasm intrinsics tests, append",
+    "local": "[可选]要构建wasm intrinsics测试，请附加"
+  },
+  {
+    "origin": "option.",
+    "local": "选项。"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "For wasm intrinsics tests, you can use the following function to test all the cases:",
+    "local": "对于wasm intrinsics测试，可以使用以下函数测试所有情况："
+  },
+  {
+    "origin": "And the failed cases will be logged in the JavaScript debug console.",
+    "local": "失败的案例将记录在JavaScript调试控制台中。"
+  },
+  {
+    "origin": "If you only want to test single data type of wasm intrinsics, you can use the following functions:",
+    "local": "如果只想测试单个数据类型的wasm intrinsics，可以使用以下函数："
+  },
+  {
+    "origin": "[optional] To build performance tests, append",
+    "local": "[可选]要生成性能测试，请附加"
+  },
+  {
+    "origin": "option.",
+    "local": "选项。"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "To run performance tests, launch a local web server in &lt;build_dir&gt;/bin folder. For example, node http-server which serves on",
+    "local": "要运行性能测试，请在&lt；中启动本地web服务器；构建方向&gt/bin文件夹。例如，服务于"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "There are some kernels now in the performance test like",
+    "local": "现在有一些内核正在进行性能测试，比如"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ". For example, if you want to test",
+    "local": ". 例如，如果你想测试"
+  },
+  {
+    "origin": ", please navigate the web browser to",
+    "local": "，请将web浏览器导航到"
+  },
+  {
+    "origin": ". You need to input the test parameter like",
+    "local": ". 您需要输入如下测试参数"
+  },
+  {
+    "origin": ", and then click the",
+    "local": "，然后单击"
+  },
+  {
+    "origin": "button to run the case. And if you don't input the parameter, it will run all the cases of this kernel.",
+    "local": "运行该案例的按钮。如果不输入参数，它将运行此内核的所有情况。"
+  },
+  {
+    "origin": "You can also run tests using Node.js.",
+    "local": "也可以使用Node.js运行测试。"
+  },
+  {
+    "origin": "For example, run",
+    "local": "例如，运行"
+  },
+  {
+    "origin": "with parameter",
+    "local": "带参数"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Building OpenCV.js with Docker",
+    "local": "用Docker构建OpenCV.js"
+  },
+  {
+    "origin": "Alternatively, the same build can be can be accomplished using",
+    "local": "或者，可以使用"
+  },
+  {
+    "origin": "docker",
+    "local": "码头工人"
+  },
+  {
+    "origin": "containers which is often easier and more reliable, particularly in non linux systems. You only need to install",
+    "local": "容器通常更简单、更可靠，特别是在非linux系统中。你只需要安装"
+  },
+  {
+    "origin": "docker",
+    "local": "码头工人"
+  },
+  {
+    "origin": "on your system and use a popular container that provides a clean well tested environment for emscripten builds like this, that already has latest versions of all the necessary tools installed.",
+    "local": "在您的系统上，使用一个流行的容器，为这样的emscripten构建提供一个干净、经过良好测试的环境，它已经安装了所有必需工具的最新版本。"
+  },
+  {
+    "origin": "So, make sure",
+    "local": "所以，确保"
+  },
+  {
+    "origin": "docker",
+    "local": "码头工人"
+  },
+  {
+    "origin": "is installed in your system and running. The following shell script should work in Linux and MacOS:",
+    "local": "已安装在系统中并正在运行。以下shell脚本应在Linux和MacOS中工作："
+  },
+  {
+    "origin": "In Windows use the following PowerShell command:",
+    "local": "在Windows中，请使用以下PowerShell命令："
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "The example uses latest version of emscripten. If the build fails you should try a version that is known to work fine which is",
+    "local": "该示例使用最新版本的emscripten。如果构建失败，你应该尝试一个已知可以正常工作的版本"
+  },
+  {
+    "origin": "using the following command:",
+    "local": "使用以下命令："
+  },
+  {
+    "origin": "In Windows use the following PowerShell command:",
+    "local": "在Windows中，请使用以下PowerShell命令："
+  },
+  {
+    "origin": "Building the documentation with Docker",
+    "local": "用Docker构建文档"
+  },
+  {
+    "origin": "To build the documentation",
+    "local": "建立文档"
+  },
+  {
+    "origin": "needs to be installed. Create a file named",
+    "local": "需要安装。创建一个名为"
+  },
+  {
+    "origin": "with the following content:",
+    "local": "包括以下内容："
+  },
+  {
+    "origin": "Then we build the docker image and name it",
+    "local": "然后我们构建docker映像并命名它"
+  },
+  {
+    "origin": "with the following command (that needs to be run only once):",
+    "local": "使用以下命令（只需运行一次）："
+  },
+  {
+    "origin": "Now run the build command again, this time using the new image and passing",
+    "local": "现在再次运行build命令，这次使用新映像并传递"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

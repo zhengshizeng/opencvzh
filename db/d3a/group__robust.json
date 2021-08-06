@@ -1,0 +1,346 @@
+[
+  {
+    "origin": "OpenCV: Robust Estimation",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Robust Estimation",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x1,",
+    "local": ""
+  },
+  {
+    "origin": "x2, double max_error,",
+    "local": ""
+  },
+  {
+    "origin": "F,",
+    "local": ""
+  },
+  {
+    "origin": "inliers, double outliers_probability=1e-2)",
+    "local": ""
+  },
+  {
+    "origin": "Estimate robustly the fundamental matrix between two dataset of 2D point (image coords space).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x1,",
+    "local": ""
+  },
+  {
+    "origin": "x2, double max_error,",
+    "local": ""
+  },
+  {
+    "origin": "F,",
+    "local": ""
+  },
+  {
+    "origin": "inliers, double outliers_probability=1e-2)",
+    "local": ""
+  },
+  {
+    "origin": "Estimate robustly the fundamental matrix between two dataset of 2D point (image coords space).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "fundamentalFromCorrespondences7PointRobust()",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::fundamentalFromCorrespondences7PointRobust",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "x2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "max_error",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "F",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "inliers",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "outliers_probability",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Estimate robustly the fundamental matrix between two dataset of 2D point (image coords space).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "x1",
+    "local": ""
+  },
+  {
+    "origin": "Input 2xN Array of 2D points in view 1.",
+    "local": ""
+  },
+  {
+    "origin": "x2",
+    "local": ""
+  },
+  {
+    "origin": "Input 2xN Array of 2D points in view 2.",
+    "local": ""
+  },
+  {
+    "origin": "max_error",
+    "local": ""
+  },
+  {
+    "origin": "maximum error (in pixels).",
+    "local": ""
+  },
+  {
+    "origin": "F",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x3 fundamental matrix such that \\(x_2^T F x_1=0\\).",
+    "local": ""
+  },
+  {
+    "origin": "inliers",
+    "local": ""
+  },
+  {
+    "origin": "Output 1xN vector that contains the indexes of the detected inliers.",
+    "local": ""
+  },
+  {
+    "origin": "outliers_probability",
+    "local": ""
+  },
+  {
+    "origin": "outliers probability (in ]0,1[). The number of iterations is controlled using the following equation: \\(k = \\frac{log(1-p)}{log(1.0 - w^n )}\\) where \\(k\\), \\(w\\) and \\(n\\) are the number of iterations, the inliers ratio and minimun number of selected independent samples. The more this value is high, the less the function selects ramdom samples.",
+    "local": ""
+  },
+  {
+    "origin": "The fundamental solver relies on the 7 point solution. Returns the best error (in pixels), associated to the solution F.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "fundamentalFromCorrespondences8PointRobust()",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::fundamentalFromCorrespondences8PointRobust",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "x2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "max_error",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "F",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "inliers",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "outliers_probability",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Estimate robustly the fundamental matrix between two dataset of 2D point (image coords space).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "x1",
+    "local": ""
+  },
+  {
+    "origin": "Input 2xN Array of 2D points in view 1.",
+    "local": ""
+  },
+  {
+    "origin": "x2",
+    "local": ""
+  },
+  {
+    "origin": "Input 2xN Array of 2D points in view 2.",
+    "local": ""
+  },
+  {
+    "origin": "max_error",
+    "local": ""
+  },
+  {
+    "origin": "maximum error (in pixels).",
+    "local": ""
+  },
+  {
+    "origin": "F",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x3 fundamental matrix such that \\(x_2^T F x_1=0\\).",
+    "local": ""
+  },
+  {
+    "origin": "inliers",
+    "local": ""
+  },
+  {
+    "origin": "Output 1xN vector that contains the indexes of the detected inliers.",
+    "local": ""
+  },
+  {
+    "origin": "outliers_probability",
+    "local": ""
+  },
+  {
+    "origin": "outliers probability (in ]0,1[). The number of iterations is controlled using the following equation: \\(k = \\frac{log(1-p)}{log(1.0 - w^n )}\\) where \\(k\\), \\(w\\) and \\(n\\) are the number of iterations, the inliers ratio and minimun number of selected independent samples. The more this value is high, the less the function selects ramdom samples.",
+    "local": ""
+  },
+  {
+    "origin": "The fundamental solver relies on the 8 point solution. Returns the best error (in pixels), associated to the solution F.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by &#160;",
+    "local": ""
+  }
+]

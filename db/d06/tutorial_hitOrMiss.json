@@ -1,0 +1,250 @@
+[
+  {
+    "origin": "OpenCV: Hit-or-Miss",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Hit-or-Miss",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Lorena García",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to find a given configuration or pattern in a binary image by using the Hit-or-Miss transform (also known as Hit-and-Miss transform). This transform is also the basis of more advanced morphological operations such as thinning or pruning.",
+    "local": ""
+  },
+  {
+    "origin": "We will use the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Hit-or-Miss theory",
+    "local": ""
+  },
+  {
+    "origin": "Morphological operators process images based on their shape. These operators apply one or more",
+    "local": ""
+  },
+  {
+    "origin": "structuring elements",
+    "local": ""
+  },
+  {
+    "origin": "to an input image to obtain the output image. The two basic morphological operations are the",
+    "local": ""
+  },
+  {
+    "origin": "erosion",
+    "local": ""
+  },
+  {
+    "origin": "and the",
+    "local": ""
+  },
+  {
+    "origin": "dilation",
+    "local": ""
+  },
+  {
+    "origin": ". The combination of these two operations generate advanced morphological transformations such as",
+    "local": ""
+  },
+  {
+    "origin": "opening",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "closing",
+    "local": ""
+  },
+  {
+    "origin": ", or",
+    "local": ""
+  },
+  {
+    "origin": "top-hat",
+    "local": ""
+  },
+  {
+    "origin": "transform. To know more about these and other basic morphological operations refer to previous tutorials (",
+    "local": ""
+  },
+  {
+    "origin": ") and (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "The Hit-or-Miss transformation is useful to find patterns in binary images. In particular, it finds those pixels whose neighbourhood matches the shape of a first structuring element \\(B_1\\) while not matching the shape of a second structuring element \\(B_2\\) at the same time. Mathematically, the operation applied to an image \\(A\\) can be expressed as follows:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ A\\circledast B = (A\\ominus B_1) \\cap (A^c\\ominus B_2) \\]",
+    "local": ""
+  },
+  {
+    "origin": "Therefore, the hit-or-miss operation comprises three steps:",
+    "local": ""
+  },
+  {
+    "origin": "Erode image \\(A\\) with structuring element \\(B_1\\).",
+    "local": ""
+  },
+  {
+    "origin": "Erode the complement of image \\(A\\) ( \\(A^c\\)) with structuring element \\(B_2\\).",
+    "local": ""
+  },
+  {
+    "origin": "AND results from step 1 and step 2.",
+    "local": ""
+  },
+  {
+    "origin": "The structuring elements \\(B_1\\) and \\(B_2\\) can be combined into a single element \\(B\\). Let's see an example:",
+    "local": ""
+  },
+  {
+    "origin": "Structuring elements (kernels). Left: kernel to 'hit'. Middle: kernel to 'miss'. Right: final combined kernel",
+    "local": ""
+  },
+  {
+    "origin": "In this case, we are looking for a pattern in which the central pixel belongs to the background while the north, south, east, and west pixels belong to the foreground. The rest of pixels in the neighbourhood can be of any kind, we don't care about them. Now, let's apply this kernel to an input image:",
+    "local": ""
+  },
+  {
+    "origin": "Input binary image",
+    "local": ""
+  },
+  {
+    "origin": "Output binary image",
+    "local": ""
+  },
+  {
+    "origin": "You can see that the pattern is found in just one location within the image.",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "The code corresponding to the previous example is shown below.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "As you can see, it is as simple as using the function",
+    "local": ""
+  },
+  {
+    "origin": "with the operation type",
+    "local": ""
+  },
+  {
+    "origin": "MORPH_HITMISS",
+    "local": ""
+  },
+  {
+    "origin": "and the chosen kernel.",
+    "local": ""
+  },
+  {
+    "origin": "Other examples",
+    "local": ""
+  },
+  {
+    "origin": "Here you can find the output results of applying different kernels to the same input image used before:",
+    "local": ""
+  },
+  {
+    "origin": "Kernel and output result for finding top-right corners",
+    "local": ""
+  },
+  {
+    "origin": "Kernel and output result for finding left end points",
+    "local": ""
+  },
+  {
+    "origin": "Now try your own patterns!",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,886 @@
+[
+  {
+    "origin": "OpenCV: cv::AutoBuffer&lt; _Tp, fixed_size &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::AutoBuffer&lt; _Tp, fixed_size &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Automatically Allocated Buffer Class.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "the default constructor",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(size_t _size)",
+    "local": ""
+  },
+  {
+    "origin": "constructor taking the real buffer size",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the copy constructor",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "destructor. calls",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(size_t _size)",
+    "local": ""
+  },
+  {
+    "origin": "allocates the new buffer of size _size. if the _size is small enough, stack-allocated buffer is used",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the real buffer, stack-allocated or heap-allocated",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns read-only pointer to the real buffer, stack-allocated or heap-allocated",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "deallocates the buffer if it was dynamically allocated",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the real buffer, stack-allocated or heap-allocated",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns read-only pointer to the real buffer, stack-allocated or heap-allocated",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the assignment operator",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(size_t _size)",
+    "local": ""
+  },
+  {
+    "origin": "resizes the buffer and preserves the content",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the current buffer size",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": ""
+  },
+  {
+    "origin": "[(fixed_size &gt; 0) ? fixed_size :1]",
+    "local": ""
+  },
+  {
+    "origin": "pre-allocated buffer. At least 1 element to confirm C++ standard requirements",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "pointer to the real buffer, can point to buf if the buffer is small enough",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "size of the real buffer",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "class cv::AutoBuffer&lt; _Tp, fixed_size &gt;",
+    "local": ""
+  },
+  {
+    "origin": "Automatically Allocated Buffer Class.",
+    "local": ""
+  },
+  {
+    "origin": "The class is used for temporary buffers in functions and methods. If a temporary buffer is usually small (a few K's of memory), but its size depends on the parameters, it makes sense to create a small fixed-size array on stack and use it if it's large enough. If the required buffer size is larger than the fixed size, another buffer of sufficient size is allocated dynamically and released after the processing. Therefore, in typical cases, when the buffer size is small, there is no overhead associated with malloc()/free(). At the same time, there is no limit on the size of processed data.",
+    "local": ""
+  },
+  {
+    "origin": "This is what",
+    "local": ""
+  },
+  {
+    "origin": "does. The template takes 2 parameters - type of the buffer elements and the number of stack-allocated elements. Here is how the class is used:",
+    "local": ""
+  },
+  {
+    "origin": "Member Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "value_type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef _Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "AutoBuffer()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the default constructor",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "AutoBuffer()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_size",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "explicit",
+    "local": ""
+  },
+  {
+    "origin": "constructor taking the real buffer size",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "AutoBuffer()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "buf",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the copy constructor",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "~AutoBuffer()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::~",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "destructor. calls",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "allocate()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::allocate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_size",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "allocates the new buffer of size _size. if the _size is small enough, stack-allocated buffer is used",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "data()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp*",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::data",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the real buffer, stack-allocated or heap-allocated",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "data()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "const _Tp*",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::data",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "returns read-only pointer to the real buffer, stack-allocated or heap-allocated",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "deallocate()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::deallocate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "deallocates the buffer if it was dynamically allocated",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator _Tp *()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::operator _Tp *",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the real buffer, stack-allocated or heap-allocated",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator const _Tp *()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::operator const _Tp *",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "returns read-only pointer to the real buffer, stack-allocated or heap-allocated",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator=()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp, fixed_size&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::operator=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "buf",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the assignment operator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "resize()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::resize",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_size",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "resizes the buffer and preserves the content",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "size()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "size_t",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::size",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "returns the current buffer size",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "buf",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::buf[(fixed_size &gt; 0) ? fixed_size :1]",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "pre-allocated buffer. At least 1 element to confirm C++ standard requirements",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "ptr",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp*",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::ptr",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "pointer to the real buffer, can point to buf if the buffer is small enough",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "sz",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp, size_t fixed_size = 1024/sizeof(_Tp)+8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "size_t",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, fixed_size &gt;::sz",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "size of the real buffer",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by &#160;",
+    "local": ""
+  }
+]

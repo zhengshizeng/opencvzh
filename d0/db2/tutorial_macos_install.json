@@ -1,0 +1,370 @@
+[
+  {
+    "origin": "OpenCV: Installation in MacOS",
+    "local": "OpenCV：在MacOS中安装"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Installation in MacOS",
+    "local": "在MacOS中安装"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "The following steps have been tested for MacOSX (Mavericks) but should work with other versions as well.",
+    "local": "以下步骤已经针对MacOSX（Mavericks）进行了测试，但也应该适用于其他版本。"
+  },
+  {
+    "origin": "Required Packages",
+    "local": "必需的程序包"
+  },
+  {
+    "origin": "CMake 3.9 or higher",
+    "local": "CMake 3.9或更高版本"
+  },
+  {
+    "origin": "Git",
+    "local": "吉特"
+  },
+  {
+    "origin": "Python 2.7 or later and Numpy 1.5 or later",
+    "local": "Python 2.7或更高版本和Numpy 1.5或更高版本"
+  },
+  {
+    "origin": "This tutorial will assume you have",
+    "local": "本教程假设您"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "Numpy",
+    "local": "努比"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "Git",
+    "local": "吉特"
+  },
+  {
+    "origin": "installed on your machine.",
+    "local": "安装在您的计算机上。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "OSX comes with Python 2.7 by default, you will need to install Python 3.8 if you want to use it specifically.",
+    "local": "OSX默认附带Python2.7，如果您想专门使用它，则需要安装Python3.8。"
+  },
+  {
+    "origin": "If you XCode and XCode Command Line-Tools installed, you already have git installed on your machine.",
+    "local": "如果您安装了XCode和XCode命令行工具，那么您的计算机上已经安装了git。"
+  },
+  {
+    "origin": "Installing CMake",
+    "local": "安装CMake"
+  },
+  {
+    "origin": "Find the version for your system and download CMake from their release's",
+    "local": "找到适合您系统的版本并从他们的发行版下载CMake"
+  },
+  {
+    "origin": "page",
+    "local": "页码"
+  },
+  {
+    "origin": "Install the dmg package and launch it from Applications. That will give you the UI app of CMake",
+    "local": "安装dmg包并从应用程序启动它。这将为您提供CMake的UI应用程序"
+  },
+  {
+    "origin": "From the CMake app window, choose menu Tools &ndash;&gt; How to Install For Command Line Use. Then, follow the instructions from the pop-up there.",
+    "local": "从“CMake应用程序”窗口中，选择“菜单”“工具”&ndash&燃气轮机；如何安装以供命令行使用。然后，按照弹出窗口中的说明进行操作。"
+  },
+  {
+    "origin": "Install folder will be /usr/bin/ by default, submit it by choosing Install command line links.",
+    "local": "安装文件夹默认为/usr/bin/，通过选择Install command line links提交。"
+  },
+  {
+    "origin": "Test that it works by running",
+    "local": "通过运行"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "You can use",
+    "local": "你可以用"
+  },
+  {
+    "origin": "Homebrew",
+    "local": "自制"
+  },
+  {
+    "origin": "to install CMake with",
+    "local": "安装CMake的步骤"
+  },
+  {
+    "origin": "Getting OpenCV Source Code",
+    "local": "获取OpenCV源代码"
+  },
+  {
+    "origin": "You can use the latest stable OpenCV version or you can grab the latest snapshot from our",
+    "local": "您可以使用最新稳定的OpenCV版本，也可以从我们的"
+  },
+  {
+    "origin": "Git repository",
+    "local": "Git存储库"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Getting the Latest Stable OpenCV Version",
+    "local": "获取最新稳定的OpenCV版本"
+  },
+  {
+    "origin": "Go to our",
+    "local": "转到我们的"
+  },
+  {
+    "origin": "downloads page",
+    "local": "下载页面"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Download the source archive and unpack it.",
+    "local": "下载源文件并将其解包。"
+  },
+  {
+    "origin": "Getting the Cutting-edge OpenCV from the Git Repository",
+    "local": "从Git存储库获取最前沿的OpenCV"
+  },
+  {
+    "origin": "Launch Git client and clone",
+    "local": "启动Git客户端并克隆"
+  },
+  {
+    "origin": "OpenCV repository",
+    "local": "OpenCV存储库"
+  },
+  {
+    "origin": ". If you need modules from",
+    "local": ". 如果你需要模块"
+  },
+  {
+    "origin": "OpenCV contrib repository",
+    "local": "OpenCV contrib存储库"
+  },
+  {
+    "origin": "then clone it as well.",
+    "local": "然后再克隆它。"
+  },
+  {
+    "origin": "For example",
+    "local": "例如"
+  },
+  {
+    "origin": "Building OpenCV from Source Using CMake",
+    "local": "使用CMake从源代码构建OpenCV"
+  },
+  {
+    "origin": "Create a temporary directory, which we denote as",
+    "local": "创建一个临时目录，我们将其表示为"
+  },
+  {
+    "origin": ", where you want to put the generated Makefiles, project files as well the object files and output binaries and enter there.",
+    "local": "，您希望将生成的makefile、项目文件以及对象文件和输出二进制文件放在其中，然后进入其中。"
+  },
+  {
+    "origin": "For example",
+    "local": "例如"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "It is good practice to keep clean your source code directories. Create build directory outside of source tree.",
+    "local": "保持源代码目录干净是一个好的做法。在源树外创建生成目录。"
+  },
+  {
+    "origin": "Configuring. Run",
+    "local": "正在配置。跑"
+  },
+  {
+    "origin": "For example",
+    "local": "例如"
+  },
+  {
+    "origin": "or cmake-gui",
+    "local": "或cmake gui"
+  },
+  {
+    "origin": "set the OpenCV source code path to, e.g.",
+    "local": "将OpenCV源代码路径设置为，例如。"
+  },
+  {
+    "origin": "set the binary build path to your CMake build directory, e.g.",
+    "local": "将二进制构建路径设置为CMake构建目录，例如。"
+  },
+  {
+    "origin": "set optional parameters",
+    "local": "设置可选参数"
+  },
+  {
+    "origin": "run: \"Configure\"",
+    "local": "运行：“配置”"
+  },
+  {
+    "origin": "run: \"Generate\"",
+    "local": "运行：“生成”"
+  },
+  {
+    "origin": "Description of some parameters",
+    "local": "部分参数说明"
+  },
+  {
+    "origin": "build type:",
+    "local": "生成类型："
+  },
+  {
+    "origin": "(or",
+    "local": "（或"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "to build with modules from opencv_contrib set",
+    "local": "使用opencv\\u contrib集合中的模块进行构建"
+  },
+  {
+    "origin": "to",
+    "local": "到"
+  },
+  {
+    "origin": "set",
+    "local": "设置"
+  },
+  {
+    "origin": "for building documents (doxygen is required)",
+    "local": "用于建筑文件（需要使用强生）"
+  },
+  {
+    "origin": "set",
+    "local": "设置"
+  },
+  {
+    "origin": "to build all examples",
+    "local": "创建所有示例"
+  },
+  {
+    "origin": "[optional] Building python. Set the following python parameters:",
+    "local": "[可选]构建python。设置以下python参数："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "To specify Python2 versions, you can replace",
+    "local": "要指定Python2版本，可以替换"
+  },
+  {
+    "origin": "with",
+    "local": "具有"
+  },
+  {
+    "origin": "in the above parameters.",
+    "local": "在上述参数中。"
+  },
+  {
+    "origin": "Build. From build directory execute",
+    "local": "建造。从生成目录执行"
+  },
+  {
+    "origin": "make",
+    "local": "制作"
+  },
+  {
+    "origin": ", it is recommended to do this in several threads",
+    "local": "，建议在多个线程中执行此操作"
+  },
+  {
+    "origin": "For example",
+    "local": "例如"
+  },
+  {
+    "origin": "To use OpenCV in your CMake-based projects through",
+    "local": "在基于CMake的项目中使用OpenCV"
+  },
+  {
+    "origin": "specify",
+    "local": "指定"
+  },
+  {
+    "origin": "variable.",
+    "local": "变量。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "You can also use a package manager like",
+    "local": "您还可以使用包管理器，如"
+  },
+  {
+    "origin": "Homebrew",
+    "local": "自制"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "pip",
+    "local": "皮普"
+  },
+  {
+    "origin": "to install releases of OpenCV only (Not the cutting edge).",
+    "local": "仅安装OpenCV释放装置（不安装切削刃）。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:36为OpenCV生成，&#160；"
+  }
+]

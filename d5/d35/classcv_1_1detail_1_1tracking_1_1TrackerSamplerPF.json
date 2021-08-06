@@ -1,0 +1,390 @@
+[
+  {
+    "origin": "OpenCV: cv::detail::tracking::TrackerSamplerPF Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::TrackerSamplerPF Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "This sampler is based on particle filtering.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::detail::tracking::TrackerSamplerPF:",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "This structure contains all the parameters that can be varied during the course of sampling algorithm. Below is the structure exposed, together with its members briefly explained with reference to the above discussion on algorithm's working.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;chosenRect, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;parameters=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Constructor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Destructor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Get the name of the specific",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;boundingBox, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;sample)",
+    "local": ""
+  },
+  {
+    "origin": "Computes the regions starting from a position in an image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image,",
+    "local": ""
+  },
+  {
+    "origin": "boundingBox, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;sample)",
+    "local": ""
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Static Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;trackerSamplerType)",
+    "local": ""
+  },
+  {
+    "origin": "Create",
+    "local": ""
+  },
+  {
+    "origin": "by tracker sampler type.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Protected Attributes inherited from",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "This sampler is based on particle filtering.",
+    "local": ""
+  },
+  {
+    "origin": "In principle, it can be thought of as performing some sort of optimization (and indeed, this tracker uses opencv's optim module), where tracker seeks to find the rectangle in given frame, which is the most *\"similar\"* to the initial rectangle (the one, given through the constructor).",
+    "local": ""
+  },
+  {
+    "origin": "The optimization performed is stochastic and somehow resembles genetic algorithms, where on each new image received (submitted via",
+    "local": ""
+  },
+  {
+    "origin": ") we start with the region bounded by boundingBox, then generate several \"perturbed\" boxes, take the ones most similar to the original. This selection round is repeated several times. At the end, we hope that only the most promising box remaining, and these are combined to produce the subrectangle of image, which is put as a sole element in array sample.",
+    "local": ""
+  },
+  {
+    "origin": "It should be noted, that the definition of \"similarity\" between two rectangles is based on comparing their histograms. As experiments show, tracker is",
+    "local": ""
+  },
+  {
+    "origin": "not",
+    "local": ""
+  },
+  {
+    "origin": "very succesfull if target is assumed to strongly change its dimensions.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "TrackerSamplerPF()",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::TrackerSamplerPF::TrackerSamplerPF",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "chosenRect",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "parameters",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Constructor.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "chosenRect",
+    "local": ""
+  },
+  {
+    "origin": "Initial rectangle, that is supposed to contain target we'd like to track.",
+    "local": ""
+  },
+  {
+    "origin": "parameters",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "samplingImpl()",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::detail::tracking::TrackerSamplerPF::samplingImpl",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "boundingBox",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "sample",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/tracking/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:46 for OpenCV by &#160;",
+    "local": ""
+  }
+]

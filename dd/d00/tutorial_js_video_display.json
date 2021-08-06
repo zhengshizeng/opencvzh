@@ -1,0 +1,158 @@
+[
+  {
+    "origin": "OpenCV: Getting Started with Videos",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Getting Started with Videos",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "Learn to capture video from a camera and display it.",
+    "local": ""
+  },
+  {
+    "origin": "Capture video from camera",
+    "local": ""
+  },
+  {
+    "origin": "Often, we have to capture live stream with a camera. In OpenCV.js, we use",
+    "local": ""
+  },
+  {
+    "origin": "WebRTC",
+    "local": ""
+  },
+  {
+    "origin": "and HTML canvas element to implement this. Let's capture a video from the camera(built-in or a usb), convert it into grayscale video and display it.",
+    "local": ""
+  },
+  {
+    "origin": "To capture a video, you need to add some HTML elements to the web page:",
+    "local": ""
+  },
+  {
+    "origin": "a &lt;video&gt; to display video from camera directly",
+    "local": ""
+  },
+  {
+    "origin": "a &lt;canvas&gt; to transfer video to canvas ImageData frame-by-frame",
+    "local": ""
+  },
+  {
+    "origin": "another &lt;canvas&gt; to display the video OpenCV.js gets",
+    "local": ""
+  },
+  {
+    "origin": "First, we use WebRTC navigator.mediaDevices.getUserMedia to get the media stream.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This function is unnecessary when you capture video from a video file. But notice that HTML video element only supports video formats of Ogg(Theora), WebM(VP8/VP9) or MP4(H.264).",
+    "local": ""
+  },
+  {
+    "origin": "Playing video",
+    "local": ""
+  },
+  {
+    "origin": "Now, the browser gets the camera stream. Then, we use CanvasRenderingContext2D.drawImage() method of the Canvas 2D API to draw video onto the canvas. Finally, we can use the method in",
+    "local": ""
+  },
+  {
+    "origin": "to read and display image in canvas. For playing video,",
+    "local": ""
+  },
+  {
+    "origin": "should be executed every delay milliseconds. We recommend setTimeout() method. And if the video is 30fps, the delay milliseconds should be (1000/30 - processing_time).",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV.js implements",
+    "local": ""
+  },
+  {
+    "origin": "(videoSource)",
+    "local": ""
+  },
+  {
+    "origin": "using the above method. You need not to add the hidden canvas element manually.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "videoSource",
+    "local": ""
+  },
+  {
+    "origin": "the video id or element.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "instance",
+    "local": ""
+  },
+  {
+    "origin": "We use",
+    "local": ""
+  },
+  {
+    "origin": "read (image)",
+    "local": ""
+  },
+  {
+    "origin": "to get one frame of the video. For performance reasons, the image should be constructed with cv.CV_8UC4 type and same size as the video.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "image with cv.CV_8UC4 type and same size as the video.",
+    "local": ""
+  },
+  {
+    "origin": "The above code of playing video could be simplified as below.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Remember to delete src and dst after when stop.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

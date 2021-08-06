@@ -1,0 +1,198 @@
+[
+  {
+    "origin": "OpenCV: Histograms - 3 : 2D Histograms",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Histograms - 3 : 2D Histograms",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this chapter, we will learn to find and plot 2D histograms. It will be helpful in coming chapters.",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "In the first article, we calculated and plotted one-dimensional histogram. It is called one-dimensional because we are taking only one feature into our consideration, ie grayscale intensity value of the pixel. But in two-dimensional histograms, you consider two features. Normally it is used for finding color histograms where two features are Hue &amp; Saturation values of every pixel.",
+    "local": ""
+  },
+  {
+    "origin": "There is a python sample (samples/python/color_histogram.py) already for finding color histograms. We will try to understand how to create such a color histogram, and it will be useful in understanding further topics like Histogram Back-Projection.",
+    "local": ""
+  },
+  {
+    "origin": "2D Histogram in OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "It is quite simple and calculated using the same function,",
+    "local": ""
+  },
+  {
+    "origin": ". For color histograms, we need to convert the image from BGR to HSV. (Remember, for 1D histogram, we converted from BGR to Grayscale). For 2D histograms, its parameters will be modified as follows:",
+    "local": ""
+  },
+  {
+    "origin": "channels = [0,1]",
+    "local": ""
+  },
+  {
+    "origin": "because we need to process both H and S plane.",
+    "local": ""
+  },
+  {
+    "origin": "bins = [180,256]",
+    "local": ""
+  },
+  {
+    "origin": "180 for H plane and 256 for S plane.",
+    "local": ""
+  },
+  {
+    "origin": "range = [0,180,0,256]",
+    "local": ""
+  },
+  {
+    "origin": "Hue value lies between 0 and 180 &amp; Saturation lies between 0 and 256.",
+    "local": ""
+  },
+  {
+    "origin": "Now check the code below:",
+    "local": ""
+  },
+  {
+    "origin": "That's it.",
+    "local": ""
+  },
+  {
+    "origin": "2D Histogram in Numpy",
+    "local": ""
+  },
+  {
+    "origin": "Numpy also provides a specific function for this :",
+    "local": ""
+  },
+  {
+    "origin": "np.histogram2d()",
+    "local": ""
+  },
+  {
+    "origin": ". (Remember, for 1D histogram we used",
+    "local": ""
+  },
+  {
+    "origin": "np.histogram()",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "First argument is H plane, second one is the S plane, third is number of bins for each and fourth is their range.",
+    "local": ""
+  },
+  {
+    "origin": "Now we can check how to plot this color histogram.",
+    "local": ""
+  },
+  {
+    "origin": "Plotting 2D Histograms",
+    "local": ""
+  },
+  {
+    "origin": "Method - 1 : Using",
+    "local": ""
+  },
+  {
+    "origin": "The result we get is a two dimensional array of size 180x256. So we can show them as we do normally, using",
+    "local": ""
+  },
+  {
+    "origin": "function. It will be a grayscale image and it won't give much idea what colors are there, unless you know the Hue values of different colors.",
+    "local": ""
+  },
+  {
+    "origin": "Method - 2 : Using Matplotlib",
+    "local": ""
+  },
+  {
+    "origin": "We can use",
+    "local": ""
+  },
+  {
+    "origin": "function to plot 2D histogram with different color maps. It gives us a much better idea about the different pixel density. But this also, doesn't gives us idea what color is there on a first look, unless you know the Hue values of different colors. Still I prefer this method. It is simple and better.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "While using this function, remember, interpolation flag should be nearest for better results.",
+    "local": ""
+  },
+  {
+    "origin": "Consider code:",
+    "local": ""
+  },
+  {
+    "origin": "Below is the input image and its color histogram plot. X axis shows S values and Y axis shows Hue.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "In histogram, you can see some high values near H = 100 and S = 200. It corresponds to blue of sky. Similarly another peak can be seen near H = 25 and S = 100. It corresponds to yellow of the palace. You can verify it with any image editing tools like GIMP.",
+    "local": ""
+  },
+  {
+    "origin": "Method 3 : OpenCV sample style !!",
+    "local": ""
+  },
+  {
+    "origin": "There is a sample code for color-histogram in OpenCV-Python2 samples (samples/python/color_histogram.py). If you run the code, you can see the histogram shows the corresponding color also. Or simply it outputs a color coded histogram. Its result is very good (although you need to add extra bunch of lines).",
+    "local": ""
+  },
+  {
+    "origin": "In that code, the author created a color map in HSV. Then converted it into BGR. The resulting histogram image is multiplied with this color map. He also uses some preprocessing steps to remove small isolated pixels, resulting in a good histogram.",
+    "local": ""
+  },
+  {
+    "origin": "I leave it to the readers to run the code, analyze it and have your own hack arounds. Below is the output of that code for the same image as above:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "You can clearly see in the histogram what colors are present, blue is there, yellow is there, and some white due to chessboard is there. Nice !!!",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

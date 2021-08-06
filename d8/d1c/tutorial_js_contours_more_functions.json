@@ -1,0 +1,198 @@
+[
+  {
+    "origin": "OpenCV: Contours : More Functions",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Contours : More Functions",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "Convexity defects and how to find them.",
+    "local": ""
+  },
+  {
+    "origin": "Finding shortest distance from a point to a polygon",
+    "local": ""
+  },
+  {
+    "origin": "Matching different shapes",
+    "local": ""
+  },
+  {
+    "origin": "Theory and Code",
+    "local": ""
+  },
+  {
+    "origin": "1. Convexity Defects",
+    "local": ""
+  },
+  {
+    "origin": "We saw what is convex hull in second chapter about contours. Any deviation of the object from this hull can be considered as convexity defect.We can visualize it using an image. We draw a line joining start point and end point, then draw a circle at the farthest point.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Remember we have to pass returnPoints = False while finding convex hull, in order to find convexity defects.",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(contour, convexhull, convexityDefect)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "contour",
+    "local": ""
+  },
+  {
+    "origin": "input contour.",
+    "local": ""
+  },
+  {
+    "origin": "convexhull",
+    "local": ""
+  },
+  {
+    "origin": "convex hull obtained using convexHull that should contain indices of the contour points that make the hull",
+    "local": ""
+  },
+  {
+    "origin": "convexityDefect",
+    "local": ""
+  },
+  {
+    "origin": "the output vector of convexity defects. Each convexity defect is represented as 4-element(start_index, end_index, farthest_pt_index, fixpt_depth), where indices are 0-based indices in the original contour of the convexity defect beginning, end and the farthest point, and fixpt_depth is fixed-point approximation (with 8 fractional bits) of the distance between the farthest contour point and the hull. That is, to get the floating-point value of the depth will be fixpt_depth/256.0.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "2. Point Polygon Test",
+    "local": ""
+  },
+  {
+    "origin": "This function finds the shortest distance between a point in the image and a contour. It returns the distance which is negative when point is outside the contour, positive when point is inside and zero if point is on the contour.",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(contour, pt, measureDist)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "contour",
+    "local": ""
+  },
+  {
+    "origin": "input contour.",
+    "local": ""
+  },
+  {
+    "origin": "pt",
+    "local": ""
+  },
+  {
+    "origin": "point tested against the contour.",
+    "local": ""
+  },
+  {
+    "origin": "measureDist",
+    "local": ""
+  },
+  {
+    "origin": "if true, the function estimates the signed distance from the point to the nearest contour edge. Otherwise, the function only checks if the point is inside a contour or not.",
+    "local": ""
+  },
+  {
+    "origin": "3. Match Shapes",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV comes with a function",
+    "local": ""
+  },
+  {
+    "origin": "which enables us to compare two shapes, or two contours and returns a metric showing the similarity. The lower the result, the better match it is. It is calculated based on the hu-moment values. Different measurement methods are explained in the docs.",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(contour1, contour2, method, parameter)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "contour1",
+    "local": ""
+  },
+  {
+    "origin": "first contour or grayscale image.",
+    "local": ""
+  },
+  {
+    "origin": "contour2",
+    "local": ""
+  },
+  {
+    "origin": "second contour or grayscale image.",
+    "local": ""
+  },
+  {
+    "origin": "method",
+    "local": ""
+  },
+  {
+    "origin": "comparison method, see",
+    "local": ""
+  },
+  {
+    "origin": "parameter",
+    "local": ""
+  },
+  {
+    "origin": "method-specific parameter(not supported now).",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

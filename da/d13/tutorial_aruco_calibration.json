@@ -1,0 +1,206 @@
+[
+  {
+    "origin": "OpenCV: Calibration with ArUco and ChArUco",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Calibration with ArUco and ChArUco",
+    "local": ""
+  },
+  {
+    "origin": "The ArUco module can also be used to calibrate a camera. Camera calibration consists in obtaining the camera intrinsic parameters and distortion coefficients. This parameters remain fixed unless the camera optic is modified, thus camera calibration only need to be done once.",
+    "local": ""
+  },
+  {
+    "origin": "Camera calibration is usually performed using the OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "function. This function requires some correspondences between environment points and their projection in the camera image from different viewpoints. In general, these correspondences are obtained from the corners of chessboard patterns. See",
+    "local": ""
+  },
+  {
+    "origin": "function documentation or the OpenCV calibration tutorial for more detailed information.",
+    "local": ""
+  },
+  {
+    "origin": "Using the ArUco module, calibration can be performed based on ArUco markers corners or ChArUco corners. Calibrating using ArUco is much more versatile than using traditional chessboard patterns, since it allows occlusions or partial views.",
+    "local": ""
+  },
+  {
+    "origin": "As it can be stated, calibration can be done using both, marker corners or ChArUco corners. However, it is highly recommended using the ChArUco corners approach since the provided corners are much more accurate in comparison to the marker corners. Calibration using a standard Board should only be employed in those scenarios where the ChArUco boards cannot be employed because of any kind of restriction.",
+    "local": ""
+  },
+  {
+    "origin": "Calibration with ChArUco Boards",
+    "local": ""
+  },
+  {
+    "origin": "To calibrate using a ChArUco board, it is necessary to detect the board from different viewpoints, in the same way that the standard calibration does with the traditional chessboard pattern. However, due to the benefits of using ChArUco, occlusions and partial views are allowed, and not all the corners need to be visible in all the viewpoints.",
+    "local": ""
+  },
+  {
+    "origin": "ChArUco calibration viewpoints",
+    "local": ""
+  },
+  {
+    "origin": "The function to calibrate is",
+    "local": ""
+  },
+  {
+    "origin": ". Example:",
+    "local": ""
+  },
+  {
+    "origin": "The ChArUco corners and ChArUco identifiers captured on each viewpoint are stored in the vectors",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ", one element per viewpoint.",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "function will fill the",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "arrays with the camera calibration parameters. It will return the reprojection error obtained from the calibration. The elements in",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "will be filled with the estimated pose of the camera (respect to the ChArUco board) in each of the viewpoints.",
+    "local": ""
+  },
+  {
+    "origin": "Finally, the",
+    "local": ""
+  },
+  {
+    "origin": "parameter determines some of the options for the calibration. Its format is equivalent to the flags parameter in the OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "A full working example is included in the",
+    "local": ""
+  },
+  {
+    "origin": "inside the module samples folder.",
+    "local": ""
+  },
+  {
+    "origin": "Note: The samples now take input via commandline via the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Commandline Parser",
+    "local": ""
+  },
+  {
+    "origin": ". For this file the example parameters will look like",
+    "local": ""
+  },
+  {
+    "origin": "Calibration with ArUco Boards",
+    "local": ""
+  },
+  {
+    "origin": "As it has been stated, it is recommended the use of ChAruco boards instead of ArUco boards for camera calibration, since ChArUco corners are more accurate than marker corners. However, in some special cases it must be required to use calibration based on ArUco boards. For these cases, the",
+    "local": ""
+  },
+  {
+    "origin": "function is provided. As in the previous case, it requires the detections of an ArUco board from different viewpoints.",
+    "local": ""
+  },
+  {
+    "origin": "ArUco calibration viewpoints",
+    "local": ""
+  },
+  {
+    "origin": "Example of",
+    "local": ""
+  },
+  {
+    "origin": "use:",
+    "local": ""
+  },
+  {
+    "origin": "In this case, and contrary to the",
+    "local": ""
+  },
+  {
+    "origin": "function, the detected markers on each viewpoint are concatenated in the arrays",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "(the first two parameters). The third parameter, the array",
+    "local": ""
+  },
+  {
+    "origin": ", indicates the number of marker detected on each viewpoint. The rest of parameters are the same than in",
+    "local": ""
+  },
+  {
+    "origin": ", except the board layout object which does not need to be a",
+    "local": ""
+  },
+  {
+    "origin": "object, it can be any",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "A full working example is included in the",
+    "local": ""
+  },
+  {
+    "origin": "inside the module samples folder.",
+    "local": ""
+  },
+  {
+    "origin": "Note: The samples now take input via commandline via the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Commandline Parser",
+    "local": ""
+  },
+  {
+    "origin": ". For this file the example parameters will look like",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

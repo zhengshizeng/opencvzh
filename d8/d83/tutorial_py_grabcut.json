@@ -1,0 +1,306 @@
+[
+  {
+    "origin": "OpenCV: Interactive Foreground Extraction using GrabCut Algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Interactive Foreground Extraction using GrabCut Algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this chapter",
+    "local": ""
+  },
+  {
+    "origin": "We will see GrabCut algorithm to extract foreground in images",
+    "local": ""
+  },
+  {
+    "origin": "We will create an interactive application for this.",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "GrabCut algorithm was designed by Carsten Rother, Vladimir Kolmogorov &amp; Andrew Blake from Microsoft Research Cambridge, UK. in their paper,",
+    "local": ""
+  },
+  {
+    "origin": "\"GrabCut\": interactive foreground extraction using iterated graph cuts",
+    "local": ""
+  },
+  {
+    "origin": ". An algorithm was needed for foreground extraction with minimal user interaction, and the result was GrabCut.",
+    "local": ""
+  },
+  {
+    "origin": "How it works from user point of view ? Initially user draws a rectangle around the foreground region (foreground region should be completely inside the rectangle). Then algorithm segments it iteratively to get the best result. Done. But in some cases, the segmentation won't be fine, like, it may have marked some foreground region as background and vice versa. In that case, user need to do fine touch-ups. Just give some strokes on the images where some faulty results are there. Strokes basically says *\"Hey, this region should be foreground, you marked it background, correct it in next iteration\"* or its opposite for background. Then in the next iteration, you get better results.",
+    "local": ""
+  },
+  {
+    "origin": "See the image below. First player and football is enclosed in a blue rectangle. Then some final touchups with white strokes (denoting foreground) and black strokes (denoting background) is made. And we get a nice result.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "So what happens in background ?",
+    "local": ""
+  },
+  {
+    "origin": "User inputs the rectangle. Everything outside this rectangle will be taken as sure background (That is the reason it is mentioned before that your rectangle should include all the objects). Everything inside rectangle is unknown. Similarly any user input specifying foreground and background are considered as hard-labelling which means they won't change in the process.",
+    "local": ""
+  },
+  {
+    "origin": "Computer does an initial labelling depending on the data we gave. It labels the foreground and background pixels (or it hard-labels)",
+    "local": ""
+  },
+  {
+    "origin": "Now a Gaussian Mixture Model(GMM) is used to model the foreground and background.",
+    "local": ""
+  },
+  {
+    "origin": "Depending on the data we gave, GMM learns and create new pixel distribution. That is, the unknown pixels are labelled either probable foreground or probable background depending on its relation with the other hard-labelled pixels in terms of color statistics (It is just like clustering).",
+    "local": ""
+  },
+  {
+    "origin": "A graph is built from this pixel distribution. Nodes in the graphs are pixels. Additional two nodes are added,",
+    "local": ""
+  },
+  {
+    "origin": "Source node",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "Sink node",
+    "local": ""
+  },
+  {
+    "origin": ". Every foreground pixel is connected to Source node and every background pixel is connected to Sink node.",
+    "local": ""
+  },
+  {
+    "origin": "The weights of edges connecting pixels to source node/end node are defined by the probability of a pixel being foreground/background. The weights between the pixels are defined by the edge information or pixel similarity. If there is a large difference in pixel color, the edge between them will get a low weight.",
+    "local": ""
+  },
+  {
+    "origin": "Then a mincut algorithm is used to segment the graph. It cuts the graph into two separating source node and sink node with minimum cost function. The cost function is the sum of all weights of the edges that are cut. After the cut, all the pixels connected to Source node become foreground and those connected to Sink node become background.",
+    "local": ""
+  },
+  {
+    "origin": "The process is continued until the classification converges.",
+    "local": ""
+  },
+  {
+    "origin": "It is illustrated in below image (Image Courtesy:",
+    "local": ""
+  },
+  {
+    "origin": "http://www.cs.ru.ac.za/research/g02m1682/",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Demo",
+    "local": ""
+  },
+  {
+    "origin": "Now we go for grabcut algorithm with OpenCV. OpenCV has the function,",
+    "local": ""
+  },
+  {
+    "origin": "for this. We will see its arguments first:",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "- Input image",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "- It is a mask image where we specify which areas are background, foreground or probable background/foreground etc. It is done by the following flags,",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", or simply pass 0,1,2,3 to image.",
+    "local": ""
+  },
+  {
+    "origin": "rect",
+    "local": ""
+  },
+  {
+    "origin": "- It is the coordinates of a rectangle which includes the foreground object in the format (x,y,w,h)",
+    "local": ""
+  },
+  {
+    "origin": "bdgModel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "fgdModel",
+    "local": ""
+  },
+  {
+    "origin": "- These are arrays used by the algorithm internally. You just create two np.float64 type zero arrays of size (1,65).",
+    "local": ""
+  },
+  {
+    "origin": "iterCount",
+    "local": ""
+  },
+  {
+    "origin": "- Number of iterations the algorithm should run.",
+    "local": ""
+  },
+  {
+    "origin": "mode",
+    "local": ""
+  },
+  {
+    "origin": "- It should be",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "or combined which decides whether we are drawing rectangle or final touchup strokes.",
+    "local": ""
+  },
+  {
+    "origin": "First let's see with rectangular mode. We load the image, create a similar mask image. We create",
+    "local": ""
+  },
+  {
+    "origin": "fgdModel",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "bgdModel",
+    "local": ""
+  },
+  {
+    "origin": ". We give the rectangle parameters. It's all straight-forward. Let the algorithm run for 5 iterations. Mode should be",
+    "local": ""
+  },
+  {
+    "origin": "since we are using rectangle. Then run the grabcut. It modifies the mask image. In the new mask image, pixels will be marked with four flags denoting background/foreground as specified above. So we modify the mask such that all 0-pixels and 2-pixels are put to 0 (ie background) and all 1-pixels and 3-pixels are put to 1(ie foreground pixels). Now our final mask is ready. Just multiply it with input image to get the segmented image.",
+    "local": ""
+  },
+  {
+    "origin": "See the results below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Oops, Messi's hair is gone.",
+    "local": ""
+  },
+  {
+    "origin": "Who likes Messi without his hair?",
+    "local": ""
+  },
+  {
+    "origin": "We need to bring it back. So we will give there a fine touchup with 1-pixel (sure foreground). At the same time, Some part of ground has come to picture which we don't want, and also some logo. We need to remove them. There we give some 0-pixel touchup (sure background). So we modify our resulting mask in previous case as we told now.",
+    "local": ""
+  },
+  {
+    "origin": "What I actually did is that, I opened input image in paint application and added another layer to the image. Using brush tool in the paint, I marked missed foreground (hair, shoes, ball etc) with white and unwanted background (like logo, ground etc) with black on this new layer. Then filled remaining background with gray. Then loaded that mask image in OpenCV, edited original mask image we got with corresponding values in newly added mask image. Check the code below:",
+    "local": ""
+  },
+  {
+    "origin": "See the result below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "So that's it. Here instead of initializing in rect mode, you can directly go into mask mode. Just mark the rectangle area in mask image with 2-pixel or 3-pixel (probable background/foreground). Then mark our sure_foreground with 1-pixel as we did in second example. Then directly apply the grabCut function with mask mode.",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV samples contain a sample grabcut.py which is an interactive tool using grabcut. Check it. Also watch this",
+    "local": ""
+  },
+  {
+    "origin": "youtube video",
+    "local": ""
+  },
+  {
+    "origin": "on how to use it.",
+    "local": ""
+  },
+  {
+    "origin": "Here, you can make this into a interactive sample with drawing rectangle and strokes with mouse, create trackbar to adjust stroke width etc.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

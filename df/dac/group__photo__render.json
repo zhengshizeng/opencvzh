@@ -1,0 +1,846 @@
+[
+  {
+    "origin": "OpenCV: Non-Photorealistic Rendering",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Non-Photorealistic Rendering",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Edge preserving filters.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, float sigma_s=10, float sigma_r=0.15f)",
+    "local": ""
+  },
+  {
+    "origin": "This filter enhances the details of a particular image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, int flags=1, float sigma_s=60, float sigma_r=0.4f)",
+    "local": ""
+  },
+  {
+    "origin": "Filtering is the fundamental operation in image and video processing. Edge-preserving smoothing filters are used in many different applications",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst1,",
+    "local": ""
+  },
+  {
+    "origin": "dst2, float sigma_s=60, float sigma_r=0.07f, float shade_factor=0.02f)",
+    "local": ""
+  },
+  {
+    "origin": "Pencil-like non-photorealistic line drawing.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, float sigma_s=60, float sigma_r=0.45f)",
+    "local": ""
+  },
+  {
+    "origin": "Stylization aims to produce digital imagery with a wide variety of effects not focused on photorealism. Edge-aware filters are ideal for stylization, as they can abstract regions of low contrast while preserving, or enhancing, high-contrast features.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Useful links:",
+    "local": ""
+  },
+  {
+    "origin": "http://www.inf.ufrgs.br/~eslgastal/DomainTransform",
+    "local": ""
+  },
+  {
+    "origin": "https://www.learnopencv.com/non-photorealistic-rendering-using-opencv-python-c/",
+    "local": ""
+  },
+  {
+    "origin": "Enumeration Type Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Edge preserving filters.",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "RECURS_FILTER",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.RECURS_FILTER",
+    "local": ""
+  },
+  {
+    "origin": "Recursive Filtering.",
+    "local": ""
+  },
+  {
+    "origin": "NORMCONV_FILTER",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.NORMCONV_FILTER",
+    "local": ""
+  },
+  {
+    "origin": "Normalized Convolution Filtering.",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "detailEnhance()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::detailEnhance",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.detailEnhance(",
+    "local": ""
+  },
+  {
+    "origin": "src[, dst[, sigma_s[, sigma_r]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This filter enhances the details of a particular image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Input 8-bit 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Output image with the same size and type as src.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": "Range between 0 to 200.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": "Range between 0 to 1.",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "edgePreservingFilter()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::edgePreservingFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.edgePreservingFilter(",
+    "local": ""
+  },
+  {
+    "origin": "src[, dst[, flags[, sigma_s[, sigma_r]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Filtering is the fundamental operation in image and video processing. Edge-preserving smoothing filters are used in many different applications",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Input 8-bit 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Output 8-bit 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "Edge preserving filters:",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": "Range between 0 to 200.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": "Range between 0 to 1.",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "pencilSketch()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::pencilSketch",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "shade_factor",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst1, dst2",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.pencilSketch(",
+    "local": ""
+  },
+  {
+    "origin": "src[, dst1[, dst2[, sigma_s[, sigma_r[, shade_factor]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Pencil-like non-photorealistic line drawing.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Input 8-bit 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "dst1",
+    "local": ""
+  },
+  {
+    "origin": "Output 8-bit 1-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "dst2",
+    "local": ""
+  },
+  {
+    "origin": "Output image with the same size and type as src.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": "Range between 0 to 200.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": "Range between 0 to 1.",
+    "local": ""
+  },
+  {
+    "origin": "shade_factor",
+    "local": ""
+  },
+  {
+    "origin": "Range between 0 to 0.1.",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "stylization()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::stylization",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.stylization(",
+    "local": ""
+  },
+  {
+    "origin": "src[, dst[, sigma_s[, sigma_r]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Stylization aims to produce digital imagery with a wide variety of effects not focused on photorealism. Edge-aware filters are ideal for stylization, as they can abstract regions of low contrast while preserving, or enhancing, high-contrast features.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Input 8-bit 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Output image with the same size and type as src.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": "Range between 0 to 200.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": "Range between 0 to 1.",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

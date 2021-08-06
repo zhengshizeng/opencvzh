@@ -1,0 +1,854 @@
+[
+  {
+    "origin": "OpenCV: Private implementation helpers",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "Private implementation helpers",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "(func, bin_op, cast_op, _Tp2)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, prefix, suffix)&#160;&#160;&#160;inline _Tpvec prefix##_setall_##suffix(_Tp val) { return _Tpvec::all(val); }",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, prefix, suffix)&#160;&#160;&#160;inline _Tpvec prefix##_setzero_##suffix() { return _Tpvec::zero(); }",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp, _Tpn, pack_suffix, cast)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp, _Tpn, pack_suffix, cast)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp, suffix)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp, _Tpn, pack_suffix, cast)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp, _Tpn, pack_suffix, cast)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(_Tp)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(cmp_op)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(func, cfunc, _Tp2)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(func, cfunc)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(func, cfunc)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(suffix, opA, opB)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(shift_op)",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_ARITHM_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_ARITHM_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "func,",
+    "local": ""
+  },
+  {
+    "origin": "bin_op,",
+    "local": ""
+  },
+  {
+    "origin": "cast_op,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp2&#160;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_C_INIT_VAL",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_C_INIT_VAL",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "prefix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;inline _Tpvec prefix##_setall_##suffix(_Tp val) { return _Tpvec::all(val); }",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_C_INIT_ZERO",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_C_INIT_ZERO",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "prefix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;inline _Tpvec prefix##_setzero_##suffix() { return _Tpvec::zero(); }",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_C_PACK",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_C_PACK",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpn,",
+    "local": ""
+  },
+  {
+    "origin": "pack_suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_C_PACK_STORE",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_C_PACK_STORE",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpn,",
+    "local": ""
+  },
+  {
+    "origin": "pack_suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_C_REINTERPRET",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_C_REINTERPRET",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_C_RSHIFTR",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_C_RSHIFTR",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_C_RSHR_PACK",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_C_RSHR_PACK",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpn,",
+    "local": ""
+  },
+  {
+    "origin": "pack_suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_C_RSHR_PACK_STORE",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_C_RSHR_PACK_STORE",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpn,",
+    "local": ""
+  },
+  {
+    "origin": "pack_suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_C_SHIFTL",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_C_SHIFTL",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_C_SHIFTR",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_C_SHIFTR",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_CMP_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_CMP_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "cmp_op",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_MATH_FUNC",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_MATH_FUNC",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "func,",
+    "local": ""
+  },
+  {
+    "origin": "cfunc,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp2&#160;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_MINMAX_FUNC",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_MINMAX_FUNC",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "func,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_REDUCE_MINMAX_FUNC",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_REDUCE_MINMAX_FUNC",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "func,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_ROTATE_SHIFT_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_ROTATE_SHIFT_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "opA,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_SHIFT_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_SHIFT_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "shift_op",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper macro.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by &#160;",
+    "local": ""
+  }
+]

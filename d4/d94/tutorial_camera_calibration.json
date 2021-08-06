@@ -1,0 +1,586 @@
+[
+  {
+    "origin": "OpenCV: Camera calibration With OpenCV",
+    "local": "OpenCV：使用OpenCV进行相机校准"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Camera calibration With OpenCV",
+    "local": "用OpenCV进行摄像机标定"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Bernát Gábor",
+    "local": "伯纳特加博尔"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 4.0",
+    "local": "打开CV&gt=4"
+  },
+  {
+    "origin": "Cameras have been around for a long-long time. However, with the introduction of the cheap",
+    "local": "照相机已经存在很长时间了。然而，随着廉价的引进"
+  },
+  {
+    "origin": "pinhole",
+    "local": "针孔"
+  },
+  {
+    "origin": "cameras in the late 20th century, they became a common occurrence in our everyday life. Unfortunately, this cheapness comes with its price: significant distortion. Luckily, these are constants and with a calibration and some remapping we can correct this. Furthermore, with calibration you may also determine the relation between the camera's natural units (pixels) and the real world units (for example millimeters).",
+    "local": "照相机在20世纪末，成为我们日常生活中的一种常见现象。不幸的是，这种廉价伴随着它的代价：显著的扭曲。幸运的是，这些是常数，通过校准和一些重新映射，我们可以纠正这一点。此外，通过校准，您还可以确定相机的自然单位（像素）和真实世界单位（例如毫米）之间的关系。"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "For the distortion OpenCV takes into account the radial and tangential factors. For the radial factor one uses the following formula:",
+    "local": "对于畸变，OpenCV考虑了径向和切向因素。对于径向系数，使用以下公式："
+  },
+  {
+    "origin": "\\[x_{distorted} = x( 1 + k_1 r^2 + k_2 r^4 + k_3 r^6) \\\\ y_{distorted} = y( 1 + k_1 r^2 + k_2 r^4 + k_3 r^6)\\]",
+    "local": "\\[x{扭曲}=x（1+k\\u 1 r^2+k\\u 2 r^4+k\\u 3 r^6）\\y{扭曲}=y（1+k\\u 1 r^2+k\\u 2 r^4+k\\u 3 r^6）\\]"
+  },
+  {
+    "origin": "So for an undistorted pixel point at \\((x,y)\\) coordinates, its position on the distorted image will be \\((x_{distorted} y_{distorted})\\). The presence of the radial distortion manifests in form of the \"barrel\" or \"fish-eye\" effect.",
+    "local": "因此，对于一个位于\\（（x，y）\\）坐标的未畸变像素点，它在畸变图像上的位置将是\\（（x{畸变}y{畸变}）\\）。径向畸变的存在表现为“桶”或“鱼眼”效应。"
+  },
+  {
+    "origin": "Tangential distortion occurs because the image taking lenses are not perfectly parallel to the imaging plane. It can be represented via the formulas:",
+    "local": "由于摄像镜头与成像平面不完全平行，因此会发生切向失真。可通过以下公式表示："
+  },
+  {
+    "origin": "\\[x_{distorted} = x + [ 2p_1xy + p_2(r^2+2x^2)] \\\\ y_{distorted} = y + [ p_1(r^2+ 2y^2)+ 2p_2xy]\\]",
+    "local": "\\\\[x{失真}=x+[2p\\u 1x y+p\\u 2（r^2+2x^2）]\\\\y{失真}=y+[p\\u 1（r^2+2y^2）+2p\\u 2xy]\\]"
+  },
+  {
+    "origin": "So we have five distortion parameters which in OpenCV are presented as one row matrix with 5 columns:",
+    "local": "因此，我们有五个失真参数，在OpenCV中表示为一行五列矩阵："
+  },
+  {
+    "origin": "\\[distortion\\_coefficients=(k_1 \\hspace{10pt} k_2 \\hspace{10pt} p_1 \\hspace{10pt} p_2 \\hspace{10pt} k_3)\\]",
+    "local": "\\[失真系数=（k\\u 1\\hspace{10pt}k\\u 2\\hspace{10pt}p\\u 1\\hspace{10pt}p\\u 2\\hspace{10pt}k\\u 3）\\]"
+  },
+  {
+    "origin": "Now for the unit conversion we use the following formula:",
+    "local": "对于单位换算，我们使用以下公式："
+  },
+  {
+    "origin": "\\[\\left [ \\begin{matrix} x \\\\ y \\\\ w \\end{matrix} \\right ] = \\left [ \\begin{matrix} f_x &amp; 0 &amp; c_x \\\\ 0 &amp; f_y &amp; c_y \\\\ 0 &amp; 0 &amp; 1 \\end{matrix} \\right ] \\left [ \\begin{matrix} X \\\\ Y \\\\ Z \\end{matrix} \\right ]\\]",
+    "local": "\\[\\left[\\begin{matrix}x\\\\y\\\\w\\end{matrix}\\right]=\\left[\\begin{matrix}f\\u x&amp；0&amp；c\\u x\\\\0和；是（&U）；是\\\\0&amp；0&amp；1\\end{matrix}\\right]\\left[\\begin{matrix}X\\\\Y\\\\Z\\end{matrix}\\right]\\]"
+  },
+  {
+    "origin": "Here the presence of \\(w\\) is explained by the use of homography coordinate system (and \\(w=Z\\)). The unknown parameters are \\(f_x\\) and \\(f_y\\) (camera focal lengths) and \\((c_x, c_y)\\) which are the optical centers expressed in pixels coordinates. If for both axes a common focal length is used with a given \\(a\\) aspect ratio (usually 1), then \\(f_y=f_x*a\\) and in the upper formula we will have a single focal length \\(f\\). The matrix containing these four parameters is referred to as the",
+    "local": "这里用单应坐标系（和\\（w=Z\\）来解释\\（w\\）的存在。未知参数是\\（f\\u x\\）和\\（f\\u y\\）（相机焦距）和\\（（c\\u x，c\\u y）\\），它们是用像素坐标表示的光学中心。如果对于两个轴，一个公共焦距与给定的\\（a\\）宽高比（通常为1）一起使用，那么\\（f\\u y=f\\u x*a\\），在上面的公式中，我们将得到一个单一焦距\\（f\\）。包含这四个参数的矩阵称为"
+  },
+  {
+    "origin": "camera matrix",
+    "local": "摄像机矩阵"
+  },
+  {
+    "origin": ". While the distortion coefficients are the same regardless of the camera resolutions used, these should be scaled along with the current resolution from the calibrated resolution.",
+    "local": ". 尽管失真系数是相同的，不管使用何种摄像机分辨率，但这些失真系数应与校准分辨率的当前分辨率一起缩放。"
+  },
+  {
+    "origin": "The process of determining these two matrices is the calibration. Calculation of these parameters is done through basic geometrical equations. The equations used depend on the chosen calibrating objects. Currently OpenCV supports three types of objects for calibration:",
+    "local": "确定这两个矩阵的过程就是校准。这些参数的计算是通过基本的几何方程来完成的。使用的方程式取决于所选的校准对象。目前OpenCV支持三种类型的对象进行校准："
+  },
+  {
+    "origin": "Classical black-white chessboard",
+    "local": "经典黑白棋盘"
+  },
+  {
+    "origin": "Symmetrical circle pattern",
+    "local": "对称圆图案"
+  },
+  {
+    "origin": "Asymmetrical circle pattern",
+    "local": "不对称圆图案"
+  },
+  {
+    "origin": "Basically, you need to take snapshots of these patterns with your camera and let OpenCV find them. Each found pattern results in a new equation. To solve the equation you need at least a predetermined number of pattern snapshots to form a well-posed equation system. This number is higher for the chessboard pattern and less for the circle ones. For example, in theory the chessboard pattern requires at least two snapshots. However, in practice we have a good amount of noise present in our input images, so for good results you will probably need at least 10 good snapshots of the input pattern in different positions.",
+    "local": "基本上，你需要用相机拍下这些图案的快照，然后让OpenCV找到它们。每一个发现的模式都会产生一个新的方程式。为了解这个方程，你至少需要预定数量的模式快照来形成一个适定的方程组。这个数字是较高的棋盘图案和较少的圆的。例如，理论上，棋盘模式至少需要两个快照。然而，在实践中，我们的输入图像中存在大量的噪声，因此为了获得好的结果，您可能需要至少10个不同位置的输入模式的良好快照。"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "The sample application will:",
+    "local": "示例应用程序将："
+  },
+  {
+    "origin": "Determine the distortion matrix",
+    "local": "确定失真矩阵"
+  },
+  {
+    "origin": "Determine the camera matrix",
+    "local": "确定摄像机矩阵"
+  },
+  {
+    "origin": "Take input from Camera, Video and Image file list",
+    "local": "从摄像机、视频和图像文件列表中获取输入"
+  },
+  {
+    "origin": "Read configuration from XML/YAML file",
+    "local": "从XML/YAML文件读取配置"
+  },
+  {
+    "origin": "Save the results into XML/YAML file",
+    "local": "将结果保存到XML/YAML文件中"
+  },
+  {
+    "origin": "Calculate re-projection error",
+    "local": "计算重投影误差"
+  },
+  {
+    "origin": "Source code",
+    "local": "源代码"
+  },
+  {
+    "origin": "You may also find the source code in the",
+    "local": "您还可以在"
+  },
+  {
+    "origin": "folder of the OpenCV source library or",
+    "local": "OpenCV源代码库的文件夹或"
+  },
+  {
+    "origin": "download it from here",
+    "local": "从这里下载"
+  },
+  {
+    "origin": ". For the usage of the program, run it with",
+    "local": ". 有关程序的用法，请使用"
+  },
+  {
+    "origin": "argument. The program has an essential argument: the name of its configuration file. If none is given then it will try to open the one named \"default.xml\".",
+    "local": "争论。程序有一个基本参数：它的配置文件名。如果没有给出，那么它将尝试打开名为“default.xml”的文件。"
+  },
+  {
+    "origin": "Here's a sample configuration file",
+    "local": "下面是一个示例配置文件"
+  },
+  {
+    "origin": "in XML format. In the configuration file you may choose to use camera as an input, a video file or an image list. If you opt for the last one, you will need to create a configuration file where you enumerate the images to use. Here's",
+    "local": "XML格式。在配置文件中，您可以选择使用相机作为输入、视频文件或图像列表。如果选择最后一个，则需要创建一个配置文件，在其中枚举要使用的映像。这里是"
+  },
+  {
+    "origin": "an example of this",
+    "local": "举个例子"
+  },
+  {
+    "origin": ". The important part to remember is that the images need to be specified using the absolute path or the relative one from your application's working directory. You may find all this in the samples directory mentioned above.",
+    "local": ". 需要记住的重要一点是，需要使用应用程序工作目录中的绝对路径或相对路径来指定图像。您可以在上面提到的samples目录中找到所有这些。"
+  },
+  {
+    "origin": "The application starts up with reading the settings from the configuration file. Although, this is an important part of it, it has nothing to do with the subject of this tutorial:",
+    "local": "应用程序首先从配置文件中读取设置。虽然这是其中的一个重要部分，但与本教程的主题无关："
+  },
+  {
+    "origin": "camera calibration",
+    "local": "摄像机校准"
+  },
+  {
+    "origin": ". Therefore, I've chosen not to post the code for that part here. Technical background on how to do this you can find in the",
+    "local": ". 因此，我选择不在这里发布该部分的代码。如何做到这一点的技术背景可以在"
+  },
+  {
+    "origin": "tutorial.",
+    "local": "辅导的。"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Read the settings",
+    "local": "读取设置"
+  },
+  {
+    "origin": "For this I've used simple OpenCV class input operation. After reading the file I've an additional post-processing function that checks validity of the input. Only if all inputs are good then",
+    "local": "为此，我使用了简单的OpenCV类输入操作。在读取文件之后，我有一个额外的后处理函数来检查输入的有效性。只有当所有的输入都是好的"
+  },
+  {
+    "origin": "goodInput",
+    "local": "良好的输入"
+  },
+  {
+    "origin": "variable will be true.",
+    "local": "变量将为真。"
+  },
+  {
+    "origin": "Get next input, if it fails or we have enough of them - calibrate",
+    "local": "获取下一个输入，如果失败或者我们有足够的输入-校准"
+  },
+  {
+    "origin": "After this we have a big loop where we do the following operations: get the next image from the image list, camera or video file. If this fails or we have enough images then we run the calibration process. In case of image we step out of the loop and otherwise the remaining frames will be undistorted (if the option is set) via changing from",
+    "local": "在此之后，我们有一个大的循环，在这里我们做以下操作：从图像列表中获取下一个图像，相机或视频文件。如果这失败了，或者我们有足够的图像，然后我们运行校准过程。在图像的情况下，我们步出循环，否则其余的帧将不失真（如果选项设置）通过改变"
+  },
+  {
+    "origin": "DETECTION",
+    "local": "检测"
+  },
+  {
+    "origin": "mode to the",
+    "local": "模式到"
+  },
+  {
+    "origin": "CALIBRATED",
+    "local": "校准"
+  },
+  {
+    "origin": "one.",
+    "local": "一个。"
+  },
+  {
+    "origin": "For some cameras we may need to flip the input image. Here we do this too.",
+    "local": "对于某些相机，我们可能需要翻转输入图像。在这里我们也这样做。"
+  },
+  {
+    "origin": "Find the pattern in the current input",
+    "local": "在当前输入中查找模式"
+  },
+  {
+    "origin": "The formation of the equations I mentioned above aims to finding major patterns in the input: in case of the chessboard this are corners of the squares and for the circles, well, the circles themselves. The position of these will form the result which will be written into the",
+    "local": "我上面提到的方程的形成是为了找到输入中的主要模式：在棋盘上，这是正方形的角，而对于圆，则是圆本身。这些位置将形成结果，并写入"
+  },
+  {
+    "origin": "pointBuf",
+    "local": "波因布夫"
+  },
+  {
+    "origin": "vector.",
+    "local": "矢量。"
+  },
+  {
+    "origin": "Depending on the type of the input pattern you use either the",
+    "local": "根据输入模式的类型，您可以使用"
+  },
+  {
+    "origin": "or the",
+    "local": "或者"
+  },
+  {
+    "origin": "function. For both of them you pass the current image and the size of the board and you'll get the positions of the patterns. Furthermore, they return a boolean variable which states if the pattern was found in the input (we only need to take into account those images where this is true!).",
+    "local": "功能。对于它们两个，你传递当前图像和电路板的大小，你将得到图案的位置。此外，它们还返回一个布尔变量，该变量说明是否在输入中找到了模式（我们只需要考虑那些为真的图像！）。"
+  },
+  {
+    "origin": "Then again in case of cameras we only take camera images when an input delay time is passed. This is done in order to allow user moving the chessboard around and getting different images. Similar images result in similar equations, and similar equations at the calibration step will form an ill-posed problem, so the calibration will fail. For square images the positions of the corners are only approximate. We may improve this by calling the",
+    "local": "同样，在相机的情况下，我们只采取相机图像时，输入延迟时间已过。这样做是为了允许用户移动棋盘周围，得到不同的图像。相似的图像会产生相似的方程，而在标定步骤中相似的方程会形成不适定问题，从而导致标定失败。对于正方形图像，角的位置只是近似值。我们可以打电话给"
+  },
+  {
+    "origin": "function. (",
+    "local": "功能("
+  },
+  {
+    "origin": "may be changed by command line parameter",
+    "local": "可以通过命令行参数更改"
+  },
+  {
+    "origin": ".) It will produce better calibration result. After this we add a valid inputs result to the",
+    "local": "）将产生更好的校准结果。在此之后，我们将一个有效的输入结果添加到"
+  },
+  {
+    "origin": "imagePoints",
+    "local": "图像点"
+  },
+  {
+    "origin": "vector to collect all of the equations into a single container. Finally, for visualization feedback purposes we will draw the found points on the input image using",
+    "local": "向量将所有方程收集到一个容器中。最后，为了实现可视化反馈，我们将使用"
+  },
+  {
+    "origin": "function.",
+    "local": "功能。"
+  },
+  {
+    "origin": "Show state and result to the user, plus command line control of the application",
+    "local": "向用户显示状态和结果，以及应用程序的命令行控制"
+  },
+  {
+    "origin": "This part shows text output on the image.",
+    "local": "此部分显示图像上的文本输出。"
+  },
+  {
+    "origin": "If we ran calibration and got camera's matrix with the distortion coefficients we may want to correct the image using",
+    "local": "如果我们运行校准，并得到相机的矩阵与失真系数，我们可能希望纠正图像使用"
+  },
+  {
+    "origin": "function:",
+    "local": "功能："
+  },
+  {
+    "origin": "Then we show the image and wait for an input key and if this is",
+    "local": "然后我们显示图像并等待输入键，如果这是"
+  },
+  {
+    "origin": "u",
+    "local": "u"
+  },
+  {
+    "origin": "we toggle the distortion removal, if it is",
+    "local": "我们切换失真消除，如果它是"
+  },
+  {
+    "origin": "g",
+    "local": "克"
+  },
+  {
+    "origin": "we start again the detection process, and finally for the",
+    "local": "我们再次开始检测过程，最后"
+  },
+  {
+    "origin": "ESC",
+    "local": "电子稳定控制系统"
+  },
+  {
+    "origin": "key we quit the application:",
+    "local": "我们退出应用程序的关键点："
+  },
+  {
+    "origin": "Show the distortion removal for the images too",
+    "local": "也显示图像的失真消除"
+  },
+  {
+    "origin": "When you work with an image list it is not possible to remove the distortion inside the loop. Therefore, you must do this after the loop. Taking advantage of this now I'll expand the",
+    "local": "使用图像列表时，无法消除循环中的失真。因此，必须在循环之后执行此操作。利用这一点，现在我将扩展"
+  },
+  {
+    "origin": "function, which is in fact first calls",
+    "local": "函数，它实际上是第一个调用"
+  },
+  {
+    "origin": "to find transformation matrices and then performs transformation using",
+    "local": "找到变换矩阵，然后使用"
+  },
+  {
+    "origin": "function. Because, after successful calibration map calculation needs to be done only once, by using this expanded form you may speed up your application:",
+    "local": "功能。因为，成功校准后，只需进行一次地图计算，通过使用此扩展表格，您可以加快应用程序的速度："
+  },
+  {
+    "origin": "The calibration and save",
+    "local": "校准和保存"
+  },
+  {
+    "origin": "Because the calibration needs to be done only once per camera, it makes sense to save it after a successful calibration. This way later on you can just load these values into your program. Due to this we first make the calibration, and if it succeeds we save the result into an OpenCV style XML or YAML file, depending on the extension you give in the configuration file.",
+    "local": "因为每个摄像机只需要进行一次校准，所以在成功校准后保存校准是有意义的。这样以后您就可以将这些值加载到程序中。因此，我们首先进行校准，如果校准成功，我们将结果保存到OpenCV样式的XML或YAML文件中，具体取决于您在配置文件中给出的扩展名。"
+  },
+  {
+    "origin": "Therefore in the first function we just split up these two processes. Because we want to save many of the calibration variables we'll create these variables here and pass on both of them to the calibration and saving function. Again, I'll not show the saving part as that has little in common with the calibration. Explore the source file in order to find out how and what:",
+    "local": "因此，在第一个函数中，我们只是将这两个过程分开。因为我们想保存许多校准变量，所以我们将在这里创建这些变量，并将它们传递给校准和保存函数。再次，我将不显示保存部分，因为它与校准几乎没有共同点。浏览源文件以了解如何和内容："
+  },
+  {
+    "origin": "We do the calibration with the help of the",
+    "local": "我们在仪器的帮助下进行校准"
+  },
+  {
+    "origin": "function. It has the following parameters:",
+    "local": "功能。它具有以下参数："
+  },
+  {
+    "origin": "The object points. This is a vector of",
+    "local": "对象指向。这是一个向量"
+  },
+  {
+    "origin": "Point3f",
+    "local": "点3F"
+  },
+  {
+    "origin": "vector that for each input image describes how should the pattern look. If we have a planar pattern (like a chessboard) then we can simply set all Z coordinates to zero. This is a collection of the points where these important points are present. Because, we use a single pattern for all the input images we can calculate this just once and multiply it for all the other input views. We calculate the corner points with the",
+    "local": "为每个输入图像描述模式外观的向量。如果我们有一个平面图案（如棋盘），那么我们可以简单地将所有Z坐标设置为零。这是这些要点所在的要点的集合。因为，我们对所有的输入图像使用一个模式，我们只需计算一次，然后将它乘以所有其他的输入视图。我们用"
+  },
+  {
+    "origin": "calcBoardCornerPositions",
+    "local": "calcBoardCornerPositions公司"
+  },
+  {
+    "origin": "function as:",
+    "local": "功能如下："
+  },
+  {
+    "origin": "And then multiply it as:",
+    "local": "然后乘以："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "If your calibration board is inaccurate, unmeasured, roughly planar targets (Checkerboard patterns on paper using off-the-shelf printers are the most convenient calibration targets and most of them are not accurate enough.), a method from",
+    "local": "如果您的校准板是不准确的，未测量的，大致平面的目标（使用现成打印机的纸上的棋盘格图案是最方便的校准目标，并且大多数校准目标不够精确），则"
+  },
+  {
+    "origin": "can be utilized to dramatically improve the accuracies of the estimated camera intrinsic parameters. This new calibration method will be called if command line parameter",
+    "local": "可用于显著提高估计的相机内部参数的精度。如果命令行参数"
+  },
+  {
+    "origin": "is provided. In the above code snippet,",
+    "local": "提供。在上面的代码片段中，"
+  },
+  {
+    "origin": "is actually the value set by",
+    "local": "实际上是由"
+  },
+  {
+    "origin": ". It's the measured distance between top-left (0, 0, 0) and top-right (s.squareSize*(s.boardSize.width-1), 0, 0) corners of the pattern grid points. It should be measured precisely with rulers or vernier calipers. After calibration, newObjPoints will be updated with refined 3D coordinates of object points.",
+    "local": ". 它是图案网格点的左上角（0，0，0）和右上角（s.squareSize*（s.boardSize.width-1），0，0）之间的测量距离。应使用直尺或游标卡尺精确测量。校准后，将使用对象点的精确三维坐标更新新对象点。"
+  },
+  {
+    "origin": "The image points. This is a vector of",
+    "local": "图像指向。这是一个向量"
+  },
+  {
+    "origin": "Point2f",
+    "local": "点2F"
+  },
+  {
+    "origin": "vector which for each input image contains coordinates of the important points (corners for chessboard and centers of the circles for the circle pattern). We have already collected this from",
+    "local": "每个输入图像包含重要点坐标的向量（棋盘的角点和圆图案的圆心）。我们已经从你那里收集了这个"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "function. We just need to pass it on.",
+    "local": "功能。我们只需要把它传下去。"
+  },
+  {
+    "origin": "The size of the image acquired from the camera, video file or the images.",
+    "local": "从相机、视频文件或图像中获取的图像的大小。"
+  },
+  {
+    "origin": "The index of the object point to be fixed. We set it to -1 to request standard calibration method. If the new object-releasing method to be used, set it to the index of the top-right corner point of the calibration board grid. See",
+    "local": "要固定的对象点的索引。我们将其设置为-1以请求标准校准方法。如果要使用新的对象释放方法，请将其设置为校准板网格右上角点的索引。看到了吗"
+  },
+  {
+    "origin": "for detailed explanation.",
+    "local": "详细解释。"
+  },
+  {
+    "origin": "The camera matrix. If we used the fixed aspect ratio option we need to set \\(f_x\\):",
+    "local": "摄像机矩阵。如果我们使用固定纵横比选项，我们需要设置\\（f\\u x\\）："
+  },
+  {
+    "origin": "The distortion coefficient matrix. Initialize with zero.",
+    "local": "失真系数矩阵。初始化为零。"
+  },
+  {
+    "origin": "For all the views the function will calculate rotation and translation vectors which transform the object points (given in the model coordinate space) to the image points (given in the world coordinate space). The 7-th and 8-th parameters are the output vector of matrices containing in the i-th position the rotation and translation vector for the i-th object point to the i-th image point.",
+    "local": "对于所有视图，该函数将计算旋转和平移向量，这些向量将对象点（在模型坐标空间中给出）转换为图像点（在世界坐标空间中给出）。第7和第8参数是矩阵的输出向量，该矩阵在第i位置中包含第i对象点到第i图像点的旋转和平移向量。"
+  },
+  {
+    "origin": "The updated output vector of calibration pattern points. This parameter is ignored with standard calibration method.",
+    "local": "校准模式点的更新输出向量。标准校准方法忽略此参数。"
+  },
+  {
+    "origin": "The final argument is the flag. You need to specify here options like fix the aspect ratio for the focal length, assume zero tangential distortion or to fix the principal point. Here we use CALIB_USE_LU to get faster calibration speed.",
+    "local": "最后一个论点是旗帜。您需要在这里指定选项，如固定焦距的纵横比、假设零切向失真或固定主点。这里我们使用CALIB\\u使用\\u LU来获得更快的校准速度。"
+  },
+  {
+    "origin": "The function returns the average re-projection error. This number gives a good estimation of precision of the found parameters. This should be as close to zero as possible. Given the intrinsic, distortion, rotation and translation matrices we may calculate the error for one view by using the",
+    "local": "函数返回平均重投影误差。这个数字很好地估计了所发现的参数的精度。这应该尽可能接近于零。给定固有矩阵、畸变矩阵、旋转矩阵和平移矩阵，我们可以使用"
+  },
+  {
+    "origin": "to first transform the object point to image point. Then we calculate the absolute norm between what we got with our transformation and the corner/circle finding algorithm. To find the average error we calculate the arithmetical mean of the errors calculated for all the calibration images.",
+    "local": "首先将对象点变换为图像点。然后，我们计算得到的绝对范数之间的转换和角/圆发现算法。为了找出平均误差，我们计算了所有校准图像的误差算术平均值。"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "Let there be",
+    "local": "就让它存在吧"
+  },
+  {
+    "origin": "this input chessboard pattern",
+    "local": "这个输入棋盘图案"
+  },
+  {
+    "origin": "which has a size of 9 X 6. I've used an AXIS IP camera to create a couple of snapshots of the board and saved it into VID5 directory. I've put this inside the",
+    "local": "它有一个9 X 6的大小。我用一个AXIS IP摄像头创建了几个板的快照，并将其保存到VID5目录中。我把这个放在"
+  },
+  {
+    "origin": "folder of my working directory and created the following",
+    "local": "我的工作目录的文件夹，并创建了以下"
+  },
+  {
+    "origin": "file that describes which images to use:",
+    "local": "描述要使用哪些图像的文件："
+  },
+  {
+    "origin": "Then passed",
+    "local": "然后通过了"
+  },
+  {
+    "origin": "as an input in the configuration file. Here's a chessboard pattern found during the runtime of the application:",
+    "local": "作为配置文件中的输入。以下是在应用程序运行时发现的棋盘模式："
+  },
+  {
+    "origin": "After applying the distortion removal we get:",
+    "local": "应用失真消除后，我们得到："
+  },
+  {
+    "origin": "The same works for",
+    "local": "同样适用于"
+  },
+  {
+    "origin": "this asymmetrical circle pattern",
+    "local": "这种不对称的圆形图案"
+  },
+  {
+    "origin": "by setting the input width to 4 and height to 11. This time I've used a live camera feed by specifying its ID (\"1\") for the input. Here's, how a detected pattern should look:",
+    "local": "通过将输入宽度设置为4，将高度设置为11。这次我使用了一个实时摄影机提要，通过为输入指定其ID（“1”）。以下是检测到的模式的外观："
+  },
+  {
+    "origin": "In both cases in the specified output XML/YAML file you'll find the camera and distortion coefficients matrices:",
+    "local": "在这两种情况下，在指定的输出XML/YAML文件中，您将找到摄影机和失真系数矩阵："
+  },
+  {
+    "origin": "Add these values as constants to your program, call the",
+    "local": "将这些值作为常量添加到程序中，调用"
+  },
+  {
+    "origin": "and the",
+    "local": "以及"
+  },
+  {
+    "origin": "function to remove distortion and enjoy distortion free inputs for cheap and low quality cameras.",
+    "local": "功能，以消除失真和享受失真免费投入廉价和低质量的相机。"
+  },
+  {
+    "origin": "You may observe a runtime instance of this on the",
+    "local": "您可以在"
+  },
+  {
+    "origin": "YouTube here",
+    "local": "YouTube在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

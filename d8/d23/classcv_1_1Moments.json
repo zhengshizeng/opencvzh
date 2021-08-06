@@ -1,0 +1,626 @@
+[
+  {
+    "origin": "OpenCV: cv::Moments Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::Moments Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "struct returned by",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "the default constructor",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(double",
+    "local": ""
+  },
+  {
+    "origin": ", double",
+    "local": ""
+  },
+  {
+    "origin": ", double",
+    "local": ""
+  },
+  {
+    "origin": ", double",
+    "local": ""
+  },
+  {
+    "origin": ", double",
+    "local": ""
+  },
+  {
+    "origin": ", double",
+    "local": ""
+  },
+  {
+    "origin": ", double",
+    "local": ""
+  },
+  {
+    "origin": ", double",
+    "local": ""
+  },
+  {
+    "origin": ", double",
+    "local": ""
+  },
+  {
+    "origin": ", double",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the full constructor",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "spatial moments",
+    "local": ""
+  },
+  {
+    "origin": "central moments",
+    "local": ""
+  },
+  {
+    "origin": "central normalized moments",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "struct returned by",
+    "local": ""
+  },
+  {
+    "origin": "The spatial moments \\(\\texttt{Moments::m}_{ji}\\) are computed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{m} _{ji}= \\sum _{x,y} \\left ( \\texttt{array} (x,y) \\cdot x^j \\cdot y^i \\right )\\]",
+    "local": ""
+  },
+  {
+    "origin": "The central moments \\(\\texttt{Moments::mu}_{ji}\\) are computed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{mu} _{ji}= \\sum _{x,y} \\left ( \\texttt{array} (x,y) \\cdot (x - \\bar{x} )^j \\cdot (y - \\bar{y} )^i \\right )\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\((\\bar{x}, \\bar{y})\\) is the mass center:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\bar{x} = \\frac{\\texttt{m}_{10}}{\\texttt{m}_{00}} , \\; \\bar{y} = \\frac{\\texttt{m}_{01}}{\\texttt{m}_{00}}\\]",
+    "local": ""
+  },
+  {
+    "origin": "The normalized central moments \\(\\texttt{Moments::nu}_{ij}\\) are computed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{nu} _{ji}= \\frac{\\texttt{mu}_{ji}}{\\texttt{m}_{00}^{(i+j)/2+1}} .\\]",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "\\(\\texttt{mu}_{00}=\\texttt{m}_{00}\\), \\(\\texttt{nu}_{00}=1\\) \\(\\texttt{nu}_{10}=\\texttt{mu}_{10}=\\texttt{mu}_{01}=\\texttt{mu}_{10}=0\\) , hence the values are not stored.",
+    "local": ""
+  },
+  {
+    "origin": "The moments of a contour are defined in the same way but computed using the Green's formula (see",
+    "local": ""
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Green_theorem",
+    "local": ""
+  },
+  {
+    "origin": "). So, due to a limited raster resolution, the moments computed for a contour are slightly different from the moments computed for the same rasterized contour.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Since the contour moments are computed using Green formula, you may get seemingly odd results for contours with self-intersections, e.g. a zero area (m00) for butterfly-shaped contours.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Moments()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::Moments::Moments",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the default constructor",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Moments()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::Moments::Moments",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "m00",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m10",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m01",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m20",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m11",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m02",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m30",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m21",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m12",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m03",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the full constructor",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "m00",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::m00",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "m01",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::m01",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "m02",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::m02",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "m03",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::m03",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "m10",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::m10",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "m11",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::m11",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "m12",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::m12",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "m20",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::m20",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "m21",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::m21",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "m30",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::m30",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "mu02",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::mu02",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "mu03",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::mu03",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "mu11",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::mu11",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "mu12",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::mu12",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "mu20",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::mu20",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "mu21",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::mu21",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "mu30",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::mu30",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nu02",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::nu02",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nu03",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::nu03",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nu11",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::nu11",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nu12",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::nu12",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nu20",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::nu20",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nu21",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::nu21",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nu30",
+    "local": ""
+  },
+  {
+    "origin": "double cv::Moments::nu30",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:43 for OpenCV by &#160;",
+    "local": ""
+  }
+]

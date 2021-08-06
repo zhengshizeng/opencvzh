@@ -1,0 +1,70 @@
+[
+  {
+    "origin": "OpenCV: Camera Motion Estimation",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Camera Motion Estimation",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to use the reconstruction api for camera motion estimation:",
+    "local": ""
+  },
+  {
+    "origin": "Load a file with the tracked 2d points and build the container over all the frames.",
+    "local": ""
+  },
+  {
+    "origin": "Run libmv reconstruction pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "Show obtained results using Viz.",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Firstly, we need to load the file containing the 2d points tracked over all the frames and construct the container to feed the reconstruction api. In this case the tracked 2d points will have the following structure, a vector of 2d points array, where each inner array represents a different frame. Every frame is composed by a list of 2d points which e.g. the first point in frame 1 is the same point in frame 2. If there is no point in a frame the assigned value will be (-1,-1):",
+    "local": ""
+  },
+  {
+    "origin": "Secondly, the built container will be used to feed the reconstruction api. It is important outline that the estimated results must be stored in a vector&lt;Mat&gt;:",
+    "local": ""
+  },
+  {
+    "origin": "Finally, the obtained results will be shown in Viz, in this case reproducing the camera with an oscillation effect.",
+    "local": ""
+  },
+  {
+    "origin": "Usage and Results",
+    "local": ""
+  },
+  {
+    "origin": "In order to run this sample we need to specify the path to the tracked points file, the focal length of the camera in addition to the center projection coordinates (in pixels). You can find a sample file in samples/data/desktop_trakcks.txt",
+    "local": ""
+  },
+  {
+    "origin": "The following picture shows the obtained camera motion obtained from the tracked 2d points:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": ""
+  }
+]

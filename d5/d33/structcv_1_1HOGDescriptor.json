@@ -1,0 +1,3558 @@
+[
+  {
+    "origin": "OpenCV: cv::HOGDescriptor Struct Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor Struct Reference",
+    "local": ""
+  },
+  {
+    "origin": "Implementation of HOG (Histogram of Oriented Gradients) descriptor and object detector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= 64 }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= 0 }",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Creates the HOG descriptor and detector with default params.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_winSize,",
+    "local": ""
+  },
+  {
+    "origin": "_blockSize,",
+    "local": ""
+  },
+  {
+    "origin": "_blockStride,",
+    "local": ""
+  },
+  {
+    "origin": "_cellSize, int _nbins, int _derivAperture=1, double _winSigma=-1,",
+    "local": ""
+  },
+  {
+    "origin": "_histogramNormType=",
+    "local": ""
+  },
+  {
+    "origin": ", double _L2HysThreshold=0.2, bool _gammaCorrection=false, int _nlevels=",
+    "local": ""
+  },
+  {
+    "origin": ", bool _signedGradient=false)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Default destructor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Checks if detector size equal to descriptor size.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img, std::vector&lt; float &gt; &amp;descriptors,",
+    "local": ""
+  },
+  {
+    "origin": "winStride=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "padding=",
+    "local": ""
+  },
+  {
+    "origin": "(), const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;locations=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;()) const",
+    "local": ""
+  },
+  {
+    "origin": "Computes HOG descriptors of given image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img,",
+    "local": ""
+  },
+  {
+    "origin": "grad,",
+    "local": ""
+  },
+  {
+    "origin": "angleOfs,",
+    "local": ""
+  },
+  {
+    "origin": "paddingTL=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "paddingBR=",
+    "local": ""
+  },
+  {
+    "origin": "()) const",
+    "local": ""
+  },
+  {
+    "origin": "Computes gradients and quantized gradient orientations.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;c) const",
+    "local": ""
+  },
+  {
+    "origin": "clones the",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "winStride=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "padding=",
+    "local": ""
+  },
+  {
+    "origin": "(), const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;searchLocations=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;()) const",
+    "local": ""
+  },
+  {
+    "origin": "Performs object detection without a multi-scale window.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "winStride=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "padding=",
+    "local": ""
+  },
+  {
+    "origin": "(), const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;searchLocations=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;()) const",
+    "local": ""
+  },
+  {
+    "origin": "Performs object detection without a multi-scale window.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "winStride=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "padding=",
+    "local": ""
+  },
+  {
+    "origin": "(), double scale=1.05, double finalThreshold=2.0, bool useMeanshiftGrouping=false) const",
+    "local": ""
+  },
+  {
+    "origin": "Detects objects of different sizes in the input image. The detected objects are returned as a list of rectangles.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "winStride=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "padding=",
+    "local": ""
+  },
+  {
+    "origin": "(), double scale=1.05, double finalThreshold=2.0, bool useMeanshiftGrouping=false) const",
+    "local": ""
+  },
+  {
+    "origin": "Detects objects of different sizes in the input image. The detected objects are returned as a list of rectangles.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;foundLocations, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;locations, double hitThreshold=0, int groupThreshold=0) const",
+    "local": ""
+  },
+  {
+    "origin": "evaluate specified ROI and return confidence value for each location in multiple scales",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;locations, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "winStride=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "padding=",
+    "local": ""
+  },
+  {
+    "origin": "()) const",
+    "local": ""
+  },
+  {
+    "origin": "evaluate specified ROI and return confidence value for each location",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns the number of coefficients required for the classification.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns winSigma value.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;rectList, std::vector&lt; double &gt; &amp;weights, int groupThreshold, double eps) const",
+    "local": ""
+  },
+  {
+    "origin": "Groups the object candidate rectangles.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "loads",
+    "local": ""
+  },
+  {
+    "origin": "parameters and coefficients for the linear SVM classifier from a file.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": ""
+  },
+  {
+    "origin": "Reads",
+    "local": ""
+  },
+  {
+    "origin": "parameters from a",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": ""
+  },
+  {
+    "origin": "()) const",
+    "local": ""
+  },
+  {
+    "origin": "saves",
+    "local": ""
+  },
+  {
+    "origin": "parameters and coefficients for the linear SVM classifier to a file",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "svmdetector)",
+    "local": ""
+  },
+  {
+    "origin": "Sets coefficients for the linear SVM classifier.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fs, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;objname) const",
+    "local": ""
+  },
+  {
+    "origin": "Stores",
+    "local": ""
+  },
+  {
+    "origin": "parameters in a",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Returns coefficients of the classifier trained for people detection (for 48x96 windows).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Returns coefficients of the classifier trained for people detection (for 64x128 windows).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Block size in pixels. Align to cell size. Default value is Size(16,16).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Block stride. It must be a multiple of cell size. Default value is Size(8,8).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Cell size. Default value is Size(8,8).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "not documented",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "not documented",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Flag to specify whether the gamma correction preprocessing is required or not.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "histogramNormType",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "L2-Hys normalization method shrinkage.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "coefficients for the linear SVM classifier used when OpenCL is enabled",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Indicates signed gradient will be used or not.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "coefficients for the linear SVM classifier.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Gaussian smoothing window parameter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detection window size. Align to block size and block stride. Default value is Size(64,128).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Implementation of HOG (Histogram of Oriented Gradients) descriptor and object detector.",
+    "local": ""
+  },
+  {
+    "origin": "the HOG descriptor algorithm introduced by Navneet Dalal and Bill Triggs",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "useful links:",
+    "local": ""
+  },
+  {
+    "origin": "https://hal.inria.fr/inria-00548512/document/",
+    "local": ""
+  },
+  {
+    "origin": "https://en.wikipedia.org/wiki/Histogram_of_oriented_gradients",
+    "local": ""
+  },
+  {
+    "origin": "https://software.intel.com/en-us/ipp-dev-reference-histogram-of-oriented-gradients-hog-descriptor",
+    "local": ""
+  },
+  {
+    "origin": "http://www.learnopencv.com/histogram-of-oriented-gradients",
+    "local": ""
+  },
+  {
+    "origin": "http://www.learnopencv.com/handwritten-digits-classification-an-opencv-c-python-tutorial",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Member Enumeration Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "Default nlevels value.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "DescriptorStorageFormat",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "HistogramNormType",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "L2Hys&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Default histogramNormType.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "HOGDescriptor()",
+    "local": ""
+  },
+  {
+    "origin": "[1/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor::HOGDescriptor",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Creates the HOG descriptor and detector with default params.",
+    "local": ""
+  },
+  {
+    "origin": "aqual to",
+    "local": ""
+  },
+  {
+    "origin": "(Size(64,128), Size(16,16), Size(8,8), Size(8,8), 9 )",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "HOGDescriptor()",
+    "local": ""
+  },
+  {
+    "origin": "[2/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor::HOGDescriptor",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_winSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_blockSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_blockStride",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_cellSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_nbins",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_derivAperture",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_winSigma",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_histogramNormType",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_L2HysThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_gammaCorrection",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_nlevels",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_signedGradient",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "_winSize",
+    "local": ""
+  },
+  {
+    "origin": "sets winSize with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_blockSize",
+    "local": ""
+  },
+  {
+    "origin": "sets blockSize with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_blockStride",
+    "local": ""
+  },
+  {
+    "origin": "sets blockStride with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_cellSize",
+    "local": ""
+  },
+  {
+    "origin": "sets cellSize with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_nbins",
+    "local": ""
+  },
+  {
+    "origin": "sets nbins with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_derivAperture",
+    "local": ""
+  },
+  {
+    "origin": "sets derivAperture with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_winSigma",
+    "local": ""
+  },
+  {
+    "origin": "sets winSigma with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_histogramNormType",
+    "local": ""
+  },
+  {
+    "origin": "sets histogramNormType with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_L2HysThreshold",
+    "local": ""
+  },
+  {
+    "origin": "sets L2HysThreshold with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_gammaCorrection",
+    "local": ""
+  },
+  {
+    "origin": "sets gammaCorrection with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_nlevels",
+    "local": ""
+  },
+  {
+    "origin": "sets nlevels with given value.",
+    "local": ""
+  },
+  {
+    "origin": "_signedGradient",
+    "local": ""
+  },
+  {
+    "origin": "sets signedGradient with given value.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "HOGDescriptor()",
+    "local": ""
+  },
+  {
+    "origin": "[3/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor::HOGDescriptor",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": "The file name containing",
+    "local": ""
+  },
+  {
+    "origin": "properties and coefficients for the linear SVM classifier.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "HOGDescriptor()",
+    "local": ""
+  },
+  {
+    "origin": "[4/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor::HOGDescriptor",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": "the",
+    "local": ""
+  },
+  {
+    "origin": "which cloned to create a new one.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "~HOGDescriptor()",
+    "local": ""
+  },
+  {
+    "origin": "virtual cv::HOGDescriptor::~HOGDescriptor",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Default destructor.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "checkDetectorSize()",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::HOGDescriptor::checkDetectorSize",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Checks if detector size equal to descriptor size.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "compute()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::compute",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "locations",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Computes HOG descriptors of given image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of the type CV_8U containing an image where HOG features will be calculated.",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of the type CV_32F",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "Window stride. It must be a multiple of block stride.",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "Padding",
+    "local": ""
+  },
+  {
+    "origin": "locations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of Point",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "computeGradient()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::computeGradient",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "grad",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "angleOfs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "paddingTL",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "paddingBR",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Computes gradients and quantized gradient orientations.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Matrix contains the image to be computed",
+    "local": ""
+  },
+  {
+    "origin": "grad",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of type CV_32FC2 contains computed gradients",
+    "local": ""
+  },
+  {
+    "origin": "angleOfs",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of type CV_8UC2 contains quantized gradient orientations",
+    "local": ""
+  },
+  {
+    "origin": "paddingTL",
+    "local": ""
+  },
+  {
+    "origin": "Padding from top-left",
+    "local": ""
+  },
+  {
+    "origin": "paddingBR",
+    "local": ""
+  },
+  {
+    "origin": "Padding from bottom-right",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "copyTo()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::copyTo",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "c",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "clones the",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "c",
+    "local": ""
+  },
+  {
+    "origin": "cloned",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "detect()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::detect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "searchLocations",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Performs object detection without a multi-scale window.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of the type CV_8U or CV_8UC3 containing an image where objects are detected.",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of point where each point contains left-top corner point of detected object boundaries.",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": "Vector that will contain confidence values for each detected object.",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Threshold for the distance between features and SVM classifying plane. Usually it is 0 and should be specified in the detector coefficients (as the last free coefficient). But if the free coefficient is omitted (which is allowed), you can specify it manually here.",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "Window stride. It must be a multiple of block stride.",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "Padding",
+    "local": ""
+  },
+  {
+    "origin": "searchLocations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of Point includes set of requested locations to be evaluated.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "detect()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::detect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "searchLocations",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Performs object detection without a multi-scale window.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of the type CV_8U or CV_8UC3 containing an image where objects are detected.",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of point where each point contains left-top corner point of detected object boundaries.",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Threshold for the distance between features and SVM classifying plane. Usually it is 0 and should be specified in the detector coefficients (as the last free coefficient). But if the free coefficient is omitted (which is allowed), you can specify it manually here.",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "Window stride. It must be a multiple of block stride.",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "Padding",
+    "local": ""
+  },
+  {
+    "origin": "searchLocations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of Point includes locations to search.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "detectMultiScale()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::detectMultiScale",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "foundWeights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "finalThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "useMeanshiftGrouping",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Detects objects of different sizes in the input image. The detected objects are returned as a list of rectangles.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of the type CV_8U or CV_8UC3 containing an image where objects are detected.",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of rectangles where each rectangle contains the detected object.",
+    "local": ""
+  },
+  {
+    "origin": "foundWeights",
+    "local": ""
+  },
+  {
+    "origin": "Vector that will contain confidence values for each detected object.",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Threshold for the distance between features and SVM classifying plane. Usually it is 0 and should be specified in the detector coefficients (as the last free coefficient). But if the free coefficient is omitted (which is allowed), you can specify it manually here.",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "Window stride. It must be a multiple of block stride.",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "Padding",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "Coefficient of the detection window increase.",
+    "local": ""
+  },
+  {
+    "origin": "finalThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Final threshold",
+    "local": ""
+  },
+  {
+    "origin": "useMeanshiftGrouping",
+    "local": ""
+  },
+  {
+    "origin": "indicates grouping algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "detectMultiScale()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::detectMultiScale",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "finalThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "useMeanshiftGrouping",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Detects objects of different sizes in the input image. The detected objects are returned as a list of rectangles.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of the type CV_8U or CV_8UC3 containing an image where objects are detected.",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of rectangles where each rectangle contains the detected object.",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Threshold for the distance between features and SVM classifying plane. Usually it is 0 and should be specified in the detector coefficients (as the last free coefficient). But if the free coefficient is omitted (which is allowed), you can specify it manually here.",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "Window stride. It must be a multiple of block stride.",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "Padding",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "Coefficient of the detection window increase.",
+    "local": ""
+  },
+  {
+    "origin": "finalThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Final threshold",
+    "local": ""
+  },
+  {
+    "origin": "useMeanshiftGrouping",
+    "local": ""
+  },
+  {
+    "origin": "indicates grouping algorithm",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "detectMultiScaleROI()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::detectMultiScaleROI",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "locations",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "groupThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "evaluate specified ROI and return confidence value for each location in multiple scales",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of the type CV_8U or CV_8UC3 containing an image where objects are detected.",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of rectangles where each rectangle contains the detected object.",
+    "local": ""
+  },
+  {
+    "origin": "locations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Threshold for the distance between features and SVM classifying plane. Usually it is 0 and should be specified in the detector coefficients (as the last free coefficient). But if the free coefficient is omitted (which is allowed), you can specify it manually here.",
+    "local": ""
+  },
+  {
+    "origin": "groupThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Minimum possible number of rectangles minus 1. The threshold is used in a group of rectangles to retain it.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "detectROI()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::detectROI",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "locations",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "confidences",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "evaluate specified ROI and return confidence value for each location",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of the type CV_8U or CV_8UC3 containing an image where objects are detected.",
+    "local": ""
+  },
+  {
+    "origin": "locations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of Point",
+    "local": ""
+  },
+  {
+    "origin": "foundLocations",
+    "local": ""
+  },
+  {
+    "origin": "Vector of Point where each Point is detected object's top-left point.",
+    "local": ""
+  },
+  {
+    "origin": "confidences",
+    "local": ""
+  },
+  {
+    "origin": "confidences",
+    "local": ""
+  },
+  {
+    "origin": "hitThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Threshold for the distance between features and SVM classifying plane. Usually it is 0 and should be specified in the detector coefficients (as the last free coefficient). But if the free coefficient is omitted (which is allowed), you can specify it manually here",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "winStride",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "padding",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getDaimlerPeopleDetector()",
+    "local": ""
+  },
+  {
+    "origin": "static std::vector&lt;float&gt; cv::HOGDescriptor::getDaimlerPeopleDetector",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Returns coefficients of the classifier trained for people detection (for 48x96 windows).",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getDefaultPeopleDetector()",
+    "local": ""
+  },
+  {
+    "origin": "static std::vector&lt;float&gt; cv::HOGDescriptor::getDefaultPeopleDetector",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Returns coefficients of the classifier trained for people detection (for 64x128 windows).",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getDescriptorSize()",
+    "local": ""
+  },
+  {
+    "origin": "size_t cv::HOGDescriptor::getDescriptorSize",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Returns the number of coefficients required for the classification.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getWinSigma()",
+    "local": ""
+  },
+  {
+    "origin": "double cv::HOGDescriptor::getWinSigma",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Returns winSigma value.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "groupRectangles()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::HOGDescriptor::groupRectangles",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "rectList",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "groupThreshold",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "eps",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Groups the object candidate rectangles.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "rectList",
+    "local": ""
+  },
+  {
+    "origin": "Input/output vector of rectangles. Output vector includes retained and grouped rectangles. (The Python list is not modified in place.)",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": "Input/output vector of weights of rectangles. Output vector includes weights of retained and grouped rectangles. (The Python list is not modified in place.)",
+    "local": ""
+  },
+  {
+    "origin": "groupThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Minimum possible number of rectangles minus 1. The threshold is used in a group of rectangles to retain it.",
+    "local": ""
+  },
+  {
+    "origin": "eps",
+    "local": ""
+  },
+  {
+    "origin": "Relative difference between sides of the rectangles to merge them into a group.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "load()",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool cv::HOGDescriptor::load",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "objname",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "loads",
+    "local": ""
+  },
+  {
+    "origin": "parameters and coefficients for the linear SVM classifier from a file.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": "Path of the file to read.",
+    "local": ""
+  },
+  {
+    "origin": "objname",
+    "local": ""
+  },
+  {
+    "origin": "The optional name of the node to read (if empty, the first top-level node will be used).",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "read()",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool cv::HOGDescriptor::read",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "fn",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Reads",
+    "local": ""
+  },
+  {
+    "origin": "parameters from a",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "fn",
+    "local": ""
+  },
+  {
+    "origin": "File node",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "save()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::save",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "objname",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "saves",
+    "local": ""
+  },
+  {
+    "origin": "parameters and coefficients for the linear SVM classifier to a file",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": "File name",
+    "local": ""
+  },
+  {
+    "origin": "objname",
+    "local": ""
+  },
+  {
+    "origin": "Object name",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "setSVMDetector()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::setSVMDetector",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "svmdetector",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Sets coefficients for the linear SVM classifier.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "svmdetector",
+    "local": ""
+  },
+  {
+    "origin": "coefficients for the linear SVM classifier.",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "write()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::HOGDescriptor::write",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "fs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "objname",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Stores",
+    "local": ""
+  },
+  {
+    "origin": "parameters in a",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "fs",
+    "local": ""
+  },
+  {
+    "origin": "File storage",
+    "local": ""
+  },
+  {
+    "origin": "objname",
+    "local": ""
+  },
+  {
+    "origin": "Object name",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor::blockSize",
+    "local": ""
+  },
+  {
+    "origin": "Block size in pixels. Align to cell size. Default value is Size(16,16).",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "blockStride",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor::blockStride",
+    "local": ""
+  },
+  {
+    "origin": "Block stride. It must be a multiple of cell size. Default value is Size(8,8).",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cellSize",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor::cellSize",
+    "local": ""
+  },
+  {
+    "origin": "Cell size. Default value is Size(8,8).",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "derivAperture",
+    "local": ""
+  },
+  {
+    "origin": "int cv::HOGDescriptor::derivAperture",
+    "local": ""
+  },
+  {
+    "origin": "not documented",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "free_coef",
+    "local": ""
+  },
+  {
+    "origin": "float cv::HOGDescriptor::free_coef",
+    "local": ""
+  },
+  {
+    "origin": "not documented",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "gammaCorrection",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::HOGDescriptor::gammaCorrection",
+    "local": ""
+  },
+  {
+    "origin": "Flag to specify whether the gamma correction preprocessing is required or not.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "histogramNormType",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor::histogramNormType",
+    "local": ""
+  },
+  {
+    "origin": "histogramNormType",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "L2HysThreshold",
+    "local": ""
+  },
+  {
+    "origin": "double cv::HOGDescriptor::L2HysThreshold",
+    "local": ""
+  },
+  {
+    "origin": "L2-Hys normalization method shrinkage.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nbins",
+    "local": ""
+  },
+  {
+    "origin": "int cv::HOGDescriptor::nbins",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "nlevels",
+    "local": ""
+  },
+  {
+    "origin": "int cv::HOGDescriptor::nlevels",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "oclSvmDetector",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor::oclSvmDetector",
+    "local": ""
+  },
+  {
+    "origin": "coefficients for the linear SVM classifier used when OpenCL is enabled",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "signedGradient",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::HOGDescriptor::signedGradient",
+    "local": ""
+  },
+  {
+    "origin": "Indicates signed gradient will be used or not.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "svmDetector",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;float&gt; cv::HOGDescriptor::svmDetector",
+    "local": ""
+  },
+  {
+    "origin": "coefficients for the linear SVM classifier.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "winSigma",
+    "local": ""
+  },
+  {
+    "origin": "double cv::HOGDescriptor::winSigma",
+    "local": ""
+  },
+  {
+    "origin": "Gaussian smoothing window parameter.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "winSize",
+    "local": ""
+  },
+  {
+    "origin": "cv::HOGDescriptor::winSize",
+    "local": ""
+  },
+  {
+    "origin": "Detection window size. Align to block size and block stride. Default value is Size(64,128).",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this struct was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:43 for OpenCV by &#160;",
+    "local": ""
+  }
+]

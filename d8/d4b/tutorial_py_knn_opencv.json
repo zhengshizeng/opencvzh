@@ -1,0 +1,102 @@
+[
+  {
+    "origin": "OpenCV: OCR of Hand-written Data using kNN",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "OCR of Hand-written Data using kNN",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this chapter:",
+    "local": ""
+  },
+  {
+    "origin": "We will use our knowledge on kNN to build a basic OCR (Optical Character Recognition) application.",
+    "local": ""
+  },
+  {
+    "origin": "We will try our application on Digits and Alphabets data that comes with OpenCV.",
+    "local": ""
+  },
+  {
+    "origin": "OCR of Hand-written Digits",
+    "local": ""
+  },
+  {
+    "origin": "Our goal is to build an application which can read handwritten digits. For this we need some training data and some test data. OpenCV comes with an image digits.png (in the folder opencv/samples/data/) which has 5000 handwritten digits (500 for each digit). Each digit is a 20x20 image. So our first step is to split this image into 5000 different digit images. Then for each digit (20x20 image), we flatten it into a single row with 400 pixels. That is our feature set, i.e. intensity values of all pixels. It is the simplest feature set we can create. We use the first 250 samples of each digit as training data, and the other 250 samples as test data. So let's prepare them first.",
+    "local": ""
+  },
+  {
+    "origin": "So our basic OCR app is ready. This particular example gave me an accuracy of 91%. One option to improve accuracy is to add more data for training, especially for the digits where we had more errors.",
+    "local": ""
+  },
+  {
+    "origin": "Instead of finding this training data every time I start the application, I better save it, so that the next time, I can directly read this data from a file and start classification. This can be done with the help of some Numpy functions like np.savetxt, np.savez, np.load, etc. Please check the NumPy docs for more details.",
+    "local": ""
+  },
+  {
+    "origin": "In my system, it takes around 4.4 MB of memory. Since we are using intensity values (uint8 data) as features, it would be better to convert the data to np.uint8 first and then save it. It takes only 1.1 MB in this case. Then while loading, you can convert back into float32.",
+    "local": ""
+  },
+  {
+    "origin": "OCR of the English Alphabet",
+    "local": ""
+  },
+  {
+    "origin": "Next we will do the same for the English alphabet, but there is a slight change in data and feature set. Here, instead of images, OpenCV comes with a data file, letter-recognition.data in opencv/samples/cpp/ folder. If you open it, you will see 20000 lines which may, on first sight, look like garbage. Actually, in each row, the first column is a letter which is our label. The next 16 numbers following it are the different features. These features are obtained from the",
+    "local": ""
+  },
+  {
+    "origin": "UCI Machine Learning Repository",
+    "local": ""
+  },
+  {
+    "origin": ". You can find the details of these features in",
+    "local": ""
+  },
+  {
+    "origin": "this page",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "There are 20000 samples available, so we take the first 10000 as training samples and the remaining 10000 as test samples. We should change the letters to ascii characters because we can't work with letters directly.",
+    "local": ""
+  },
+  {
+    "origin": "It gives me an accuracy of 93.22%. Again, if you want to increase accuracy, you can iteratively add more data.",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Wikipedia article on Optical character recognition",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Here we used k=5. What happens if you try other values of k? Can you find a value that maximizes accuracy (minimizes the number of errors)?",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

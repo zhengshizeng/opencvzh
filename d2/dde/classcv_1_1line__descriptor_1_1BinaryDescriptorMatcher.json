@@ -1,0 +1,2266 @@
+[
+  {
+    "origin": "OpenCV: cv::line_descriptor::BinaryDescriptorMatcher Class Reference",
+    "local": "OpenCV:cv:：line\\u descriptor:：BinaryDescriptorMatcher类引用"
+  },
+  {
+    "origin": "OpenCV",
+    "local": "打开CV"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": "静态公共成员函数"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::line_descriptor::BinaryDescriptorMatcher Class Reference",
+    "local": "cv：：行描述符：：BinaryDescriptorMatcher类引用"
+  },
+  {
+    "origin": "furnishes all functionalities for querying a dataset provided by user or internal to class (that user must, anyway, populate) on the model of",
+    "local": "提供了查询用户提供的数据集或类内部数据集的所有功能（无论如何，用户必须填充该数据集）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Inheritance diagram for cv::line_descriptor::BinaryDescriptorMatcher:",
+    "local": "cv:：line\\U descriptor:：BinaryDescriptorMatcher的继承关系图："
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Constructor.",
+    "local": "建造师。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;descriptors)",
+    "local": "&燃气轮机&amp；描述符）"
+  },
+  {
+    "origin": "Store locally new descriptors to be inserted in dataset, without updating dataset.",
+    "local": "本地存储要插入到数据集中的新描述符，而不更新数据集。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Clear dataset and internal data.",
+    "local": "清除数据集和内部数据。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;queryDescriptors, const",
+    "local": "&amp；queryDescriptors，常量"
+  },
+  {
+    "origin": "&amp;trainDescriptors, std::vector&lt; std::vector&lt;",
+    "local": "&amp；列车描述符，标准：：向量&lt；标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &gt; &amp;matches, int k, const",
+    "local": "&gt；gt；&gt；gt；amp；匹配，int k，const"
+  },
+  {
+    "origin": "&amp;mask=",
+    "local": "&amp；遮罩="
+  },
+  {
+    "origin": "(), bool compactResult=false) const",
+    "local": "（），bool compactResult=false）常量"
+  },
+  {
+    "origin": "For every input query descriptor, retrieve the best",
+    "local": "对于每个输入查询描述符，检索最好的"
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": "matching ones from a dataset provided from user or from the one internal to class.",
+    "local": "从用户提供的数据集中或从内部到类的数据集中匹配。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;queryDescriptors, std::vector&lt; std::vector&lt;",
+    "local": "&amp；queryDescriptors，std:：vector&lt；标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &gt; &amp;matches, int k, const std::vector&lt;",
+    "local": "&燃气轮机&燃气轮机&amp；匹配，int k，const std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;masks=std::vector&lt;",
+    "local": "&燃气轮机&amp；掩码=std:：vector&lt；"
+  },
+  {
+    "origin": "&gt;(), bool compactResult=false)",
+    "local": "&gt；（），bool compactResult=假）"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;queryDescriptors, const",
+    "local": "&amp；queryDescriptors，常量"
+  },
+  {
+    "origin": "&amp;trainDescriptors, std::vector&lt;",
+    "local": "&amp；列车描述符，标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;matches, const",
+    "local": "&燃气轮机&amp；火柴，康斯特"
+  },
+  {
+    "origin": "&amp;mask=",
+    "local": "&amp；遮罩="
+  },
+  {
+    "origin": "()) const",
+    "local": "（））常数"
+  },
+  {
+    "origin": "For every input query descriptor, retrieve the best matching one from a dataset provided from user or from the one internal to class.",
+    "local": "对于每个输入查询描述符，从用户提供的数据集或类内部的数据集中检索最佳匹配的描述符。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;queryDescriptors, std::vector&lt;",
+    "local": "&amp；queryDescriptors，std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;matches, const std::vector&lt;",
+    "local": "&燃气轮机&amp；匹配，const std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;masks=std::vector&lt;",
+    "local": "&燃气轮机&amp；掩码=std:：vector&lt；"
+  },
+  {
+    "origin": "&gt;())",
+    "local": "&gt；（））"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;queryDescriptors, const",
+    "local": "&amp；queryDescriptors，常量"
+  },
+  {
+    "origin": "&amp;trainDescriptors, std::vector&lt; std::vector&lt;",
+    "local": "&amp；列车描述符，标准：：向量&lt；标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &gt; &amp;matches, float maxDistance, const",
+    "local": "&gt；gt；&gt；gt；amp；匹配，浮点最大距离，常量"
+  },
+  {
+    "origin": "&amp;mask=",
+    "local": "&amp；遮罩="
+  },
+  {
+    "origin": "(), bool compactResult=false) const",
+    "local": "（），bool compactResult=false）常量"
+  },
+  {
+    "origin": "For every input query descriptor, retrieve, from a dataset provided from user or from the one internal to class, all the descriptors that are not further than",
+    "local": "对于每个输入查询描述符，从用户提供的数据集或类内部的数据集中检索不超过"
+  },
+  {
+    "origin": "maxDist",
+    "local": "最大距离"
+  },
+  {
+    "origin": "from input query.",
+    "local": "从输入查询。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;queryDescriptors, std::vector&lt; std::vector&lt;",
+    "local": "&amp；queryDescriptors，std:：vector&lt；标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &gt; &amp;matches, float maxDistance, const std::vector&lt;",
+    "local": "&燃气轮机&燃气轮机&amp；匹配，浮点最大距离，常量std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;masks=std::vector&lt;",
+    "local": "&燃气轮机&amp；掩码=std:：vector&lt；"
+  },
+  {
+    "origin": "&gt;(), bool compactResult=false)",
+    "local": "&gt；（），bool compactResult=假）"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Update dataset by inserting into it all descriptors that were stored locally by",
+    "local": "更新数据集，方法是在其中插入"
+  },
+  {
+    "origin": "add",
+    "local": "添加"
+  },
+  {
+    "origin": "function.",
+    "local": "功能。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": "公共成员函数继承自"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "virtual bool",
+    "local": "虚拟布尔"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "Returns true if the",
+    "local": "如果"
+  },
+  {
+    "origin": "is empty (e.g. in the very beginning or after unsuccessful read.",
+    "local": "为空（例如，在最开始或读取失败后）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": "&amp；（fn）"
+  },
+  {
+    "origin": "Reads algorithm parameters from a file storage.",
+    "local": "从文件存储器中读取算法参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;filename) const",
+    "local": "&amp；文件名）常量"
+  },
+  {
+    "origin": "virtual void",
+    "local": "虚空"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": "&amp；（f） 常数"
+  },
+  {
+    "origin": "Stores algorithm parameters in a file storage.",
+    "local": "将算法参数存储在文件存储器中。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; &amp;fs, const",
+    "local": "&gt；gt；amp；fs，常数"
+  },
+  {
+    "origin": "&amp;name=",
+    "local": "&amp；姓名="
+  },
+  {
+    "origin": "()) const",
+    "local": "（））常数"
+  },
+  {
+    "origin": "simplified API for language bindings This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "语言绑定的简化API这是一个重载的成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": "静态公共成员函数"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Create a",
+    "local": "创建"
+  },
+  {
+    "origin": "object and return a smart pointer to it.",
+    "local": "对象并返回指向它的智能指针。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Static Public Member Functions inherited from",
+    "local": "继承自的静态公共成员函数"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": "&lt_Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;filename, const",
+    "local": "&amp；文件名，常量"
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": "&amp；对象名="
+  },
+  {
+    "origin": "())",
+    "local": "())"
+  },
+  {
+    "origin": "Loads algorithm from the file.",
+    "local": "从文件加载算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": "&lt_Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;strModel, const",
+    "local": "&amp；strModel，常量"
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": "&amp；对象名="
+  },
+  {
+    "origin": "())",
+    "local": "())"
+  },
+  {
+    "origin": "Loads algorithm from a String.",
+    "local": "从字符串加载算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt; _Tp &gt;",
+    "local": "&lt_Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": "&amp；（fn）"
+  },
+  {
+    "origin": "Reads algorithm from the file node.",
+    "local": "从文件节点读取算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": "其他继承成员"
+  },
+  {
+    "origin": "Protected Member Functions inherited from",
+    "local": "继承自的受保护成员函数"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": "&amp；（f） 常数"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "furnishes all functionalities for querying a dataset provided by user or internal to class (that user must, anyway, populate) on the model of",
+    "local": "提供了查询用户提供的数据集或类内部数据集的所有功能（无论如何，用户必须填充该数据集）"
+  },
+  {
+    "origin": "Once descriptors have been extracted from an image (both they represent lines and points), it becomes interesting to be able to match a descriptor with another one extracted from a different image and representing the same line or point, seen from a differente perspective or on a different scale. In reaching such goal, the main headache is designing an efficient search algorithm to associate a query descriptor to one extracted from a dataset. In the following, a matching modality based on",
+    "local": "一旦从图像中提取了描述符（它们都表示线和点），就可以将一个描述符与从不同图像中提取的另一个描述相同线或点的描述符进行匹配，从不同的角度或在不同的尺度上看。为了达到这个目标，最头痛的是设计一个有效的搜索算法，将查询描述符与从数据集中提取的描述符相关联。在下文中，基于"
+  },
+  {
+    "origin": "Multi-Index Hashing (MiHashing)",
+    "local": "多索引哈希（MiHashing）"
+  },
+  {
+    "origin": "will be described.",
+    "local": "将进行描述。"
+  },
+  {
+    "origin": "Multi-Index Hashing",
+    "local": "多索引哈希"
+  },
+  {
+    "origin": "The theory described in this section is based on",
+    "local": "本节所述理论基于"
+  },
+  {
+    "origin": ". Given a dataset populated with binary codes, each code is indexed",
+    "local": ". 给定一个填充了二进制代码的数据集，每个代码都被编入索引"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": "times into",
+    "local": "时间进入"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": "different hash tables, according to",
+    "local": "不同的哈希表，根据"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": "substrings it has been divided into. Thus, given a query code, all the entries close to it at least in one substring are returned by search as",
+    "local": "它被分成了几个子串。因此，给定一个查询代码，搜索返回至少在一个子字符串中与其接近的所有条目，作为"
+  },
+  {
+    "origin": "neighbor candidates",
+    "local": "邻居候选人"
+  },
+  {
+    "origin": ". Returned entries are then checked for validity by verifying that their full codes are not distant (in",
+    "local": ". 然后，通过验证返回的条目的完整代码不相距（in）来检查其有效性"
+  },
+  {
+    "origin": "space) more than",
+    "local": "空间）大于"
+  },
+  {
+    "origin": "r",
+    "local": "r"
+  },
+  {
+    "origin": "bits from query code. In details, each binary code",
+    "local": "来自查询代码的位。详细地说，每个二进制代码"
+  },
+  {
+    "origin": "h",
+    "local": "小时"
+  },
+  {
+    "origin": "composed of",
+    "local": "组成"
+  },
+  {
+    "origin": "b",
+    "local": "b"
+  },
+  {
+    "origin": "bits is divided into",
+    "local": "位分为"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": "disjoint substrings \\(\\mathbf{h}^{(1)}, ..., \\mathbf{h}^{(m)}\\), each with length \\(\\lfloor b/m \\rfloor\\) or \\(\\lceil b/m \\rceil\\) bits. Formally, when two codes",
+    "local": "不相交的子串\\（\\mathbf{h}^{（1）}，…，\\mathbf{h}^{（m）}\\），每个子串的长度为\\（\\lfloor b/m\\rfloor\\）或\\（\\lceil b/m\\rceil\\）位。正式地说，当两个代码"
+  },
+  {
+    "origin": "h",
+    "local": "小时"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "g",
+    "local": "克"
+  },
+  {
+    "origin": "differ by at the most",
+    "local": "最多相差"
+  },
+  {
+    "origin": "r",
+    "local": "r"
+  },
+  {
+    "origin": "bits, in at the least one of their",
+    "local": "至少在他们的一个"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": "substrings they differ by at the most \\(\\lfloor r/m \\rfloor\\) bits. In particular, when \\(||\\mathbf{h}-\\mathbf{g}||_H \\le r\\) (where \\(||.||_H\\) is the",
+    "local": "子字符串最多相差\\（\\lfloor/m\\rfloor\\）位。特别是，当\\（| | \\mathbf{h}-\\mathbf{g}| | | u h\\le r\\）（其中\\（| |.| | u h\\）是"
+  },
+  {
+    "origin": "norm), there must exist a substring",
+    "local": "norm），必须存在子字符串"
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": "(with \\(1 \\le k \\le m\\)) such that",
+    "local": "（使用\\（1\\le k\\le m\\））使"
+  },
+  {
+    "origin": "\\[||\\mathbf{h}^{(k)} - \\mathbf{g}^{(k)}||_H \\le \\left\\lfloor \\frac{r}{m} \\right\\rfloor .\\]",
+    "local": "\\数学函数{h}^{（k）}-\\mathbf{g}^{（k）}.\\u h\\le\\left\\lfloor\\frac{r}{m}\\right\\rfloor.\\]"
+  },
+  {
+    "origin": "That means that if",
+    "local": "也就是说如果"
+  },
+  {
+    "origin": "distance between each of the",
+    "local": "每根导线之间的距离"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": "substring is strictly greater than \\(\\lfloor r/m \\rfloor\\), then \\(||\\mathbf{h}-\\mathbf{g}||_H\\) must be larger that",
+    "local": "子字符串严格地大于\\（\\lfloor/m\\rfloor\\），则\\（| | \\mathbf{h}-\\mathbf{g}| | | u h\\）必须大于"
+  },
+  {
+    "origin": "r",
+    "local": "r"
+  },
+  {
+    "origin": "and that is a contradiction. If the codes in dataset are divided into",
+    "local": "这是一个矛盾。如果将数据集中的代码划分为"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": "substrings, then",
+    "local": "那么，子串呢"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": "tables will be built. Given a query",
+    "local": "桌子会建起来的。提出疑问"
+  },
+  {
+    "origin": "q",
+    "local": "q"
+  },
+  {
+    "origin": "with substrings \\(\\{\\mathbf{q}^{(i)}\\}^m_{i=1}\\),",
+    "local": "有子串\\（\\{\\mathbf{q}^{（i）}\\}^m{i=1}\\），"
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "-th hash table is searched for entries distant at the most \\(\\lfloor r/m \\rfloor\\) from \\(\\mathbf{q}^{(i)}\\) and a set of candidates \\(\\mathcal{N}_i(\\mathbf{q})\\) is obtained. The union of sets \\(\\mathcal{N}(\\mathbf{q}) = \\bigcup_i \\mathcal{N}_i(\\mathbf{q})\\) is a superset of the",
+    "local": "-在哈希表中搜索从\\（\\mathbf{q}^{（i）}\\）到\\（\\lfloor r/m\\rfloor\\）最远的条目，并获得一组候选\\（\\mathcal{N}u i（\\mathbf{q}）\\）。集合的并集\\（\\mathcal{N}（\\mathbf{q}）=\\bigcup\\u i\\mathcal{N}\\u i（\\mathbf{q}）\\）是集合的超集"
+  },
+  {
+    "origin": "r",
+    "local": "r"
+  },
+  {
+    "origin": "-neighbors of",
+    "local": "-的邻居"
+  },
+  {
+    "origin": "q",
+    "local": "q"
+  },
+  {
+    "origin": ". Then, last step of algorithm is computing the",
+    "local": ". 然后，算法的最后一步是计算"
+  },
+  {
+    "origin": "distance between",
+    "local": "之间的距离"
+  },
+  {
+    "origin": "q",
+    "local": "q"
+  },
+  {
+    "origin": "and each element in \\(\\mathcal{N}(\\mathbf{q})\\), deleting the codes that are distant more that",
+    "local": "以及\\（\\mathcal{N}（\\mathbf{q}）\\）中的每个元素，删除比"
+  },
+  {
+    "origin": "r",
+    "local": "r"
+  },
+  {
+    "origin": "from",
+    "local": "从"
+  },
+  {
+    "origin": "q",
+    "local": "q"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": "建造商和；析构函数文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "BinaryDescriptorMatcher()",
+    "local": "BinaryDescriptorMatcher（）"
+  },
+  {
+    "origin": "cv::line_descriptor::BinaryDescriptorMatcher::BinaryDescriptorMatcher",
+    "local": "cv:：行描述符：：BinaryDescriptorMatcher:：BinaryDescriptorMatcher"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "&lt;line_descriptor_BinaryDescriptorMatcher object&gt;",
+    "local": "&lt；行描述符\\BinaryDescriptorMatcher对象&gt；"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.line_descriptor_BinaryDescriptorMatcher(",
+    "local": "cv.line\\u描述符\\u BinaryDescriptorMatcher("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Constructor.",
+    "local": "建造师。"
+  },
+  {
+    "origin": "The",
+    "local": "这个"
+  },
+  {
+    "origin": "constructed is able to store and manage 256-bits long entries.",
+    "local": "它能够存储和管理256位长的条目。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "~BinaryDescriptorMatcher()",
+    "local": "~BinaryDescriptorMatcher（）"
+  },
+  {
+    "origin": "cv::line_descriptor::BinaryDescriptorMatcher::~BinaryDescriptorMatcher",
+    "local": "cv:：行描述符：：BinaryDescriptorMatcher:：~ BinaryDescriptorMatcher"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "destructor",
+    "local": "析构函数"
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "add()",
+    "local": "添加（）"
+  },
+  {
+    "origin": "void cv::line_descriptor::BinaryDescriptorMatcher::add",
+    "local": "void cv:：line\\u descriptor:：binaryScriptorMatcher:：add"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "descriptors",
+    "local": "描述符"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Store locally new descriptors to be inserted in dataset, without updating dataset.",
+    "local": "本地存储要插入到数据集中的新描述符，而不更新数据集。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "descriptors",
+    "local": "描述符"
+  },
+  {
+    "origin": "matrices containing descriptors to be inserted into dataset",
+    "local": "包含要插入到数据集中的描述符的矩阵"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Each matrix",
+    "local": "每个矩阵"
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "in",
+    "local": "在里面"
+  },
+  {
+    "origin": "descriptors",
+    "local": "描述符"
+  },
+  {
+    "origin": "should contain descriptors relative to lines extracted from i*-th image.",
+    "local": "应该包含相对于从第i*个图像中提取的行的描述符。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "clear()",
+    "local": "清除（）"
+  },
+  {
+    "origin": "void cv::line_descriptor::BinaryDescriptorMatcher::clear",
+    "local": "void cv:：line\\u descriptor:：BinaryDescriptorMatcher:：clear无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "Clear dataset and internal data.",
+    "local": "清除数据集和内部数据。"
+  },
+  {
+    "origin": "Reimplemented from",
+    "local": "从重新实现"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "createBinaryDescriptorMatcher()",
+    "local": "createBinaryDescriptorMatcher（）"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; cv::line_descriptor::BinaryDescriptorMatcher::createBinaryDescriptorMatcher",
+    "local": "&燃气轮机；cv:：行描述符：：BinaryDescriptorMatcher:：createBinaryDescriptorMatcher"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "Create a",
+    "local": "创建"
+  },
+  {
+    "origin": "object and return a smart pointer to it.",
+    "local": "对象并返回指向它的智能指针。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "knnMatch()",
+    "local": "knnMatch（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "void cv::line_descriptor::BinaryDescriptorMatcher::knnMatch",
+    "local": "void cv:：line\\u descriptor:：binaryScriptorMatcher:：knnMatch"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": "列车描述符"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": "标准：：向量&lt；标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": "&燃气轮机&燃气轮机&amp；"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "compactResult",
+    "local": "压缩结果"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.line_descriptor_BinaryDescriptorMatcher.knnMatch(",
+    "local": "cv.line\\描述符\\二进制描述符格式cher.knnMatch("
+  },
+  {
+    "origin": "queryDescriptors, trainDescriptors, k[, mask[, compactResult]]",
+    "local": "queryDescriptors，trainDescriptors，k[，mask[，compactResult]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.line_descriptor_BinaryDescriptorMatcher.knnMatchQuery(",
+    "local": "cv.line\\描述符\\二进制描述符格式cher.knnMatchQuery("
+  },
+  {
+    "origin": "queryDescriptors, matches, k[, masks[, compactResult]]",
+    "local": "queryDescriptors，matches，k[，masks[，compactResult]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "For every input query descriptor, retrieve the best",
+    "local": "对于每个输入查询描述符，检索最好的"
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": "matching ones from a dataset provided from user or from the one internal to class.",
+    "local": "从用户提供的数据集中或从内部到类的数据集中匹配。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "query descriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": "列车描述符"
+  },
+  {
+    "origin": "dataset of descriptors furnished by user",
+    "local": "用户提供的描述符数据集"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "vector to host retrieved matches",
+    "local": "向量到主机检索到的匹配项"
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": "number of the closest descriptors to be returned for every input query",
+    "local": "为每个输入查询返回的最近描述符数"
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "mask to select which input descriptors must be matched to ones in dataset",
+    "local": "选择哪些输入描述符必须与数据集中的描述符匹配的掩码"
+  },
+  {
+    "origin": "compactResult",
+    "local": "压缩结果"
+  },
+  {
+    "origin": "flag to obtain a compact result (if true, a vector that doesn't contain any matches for a given query is not inserted in final result)",
+    "local": "获取压缩结果的标志（如果为true，则不包含给定查询的任何匹配项的向量不会插入到最终结果中）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "knnMatch()",
+    "local": "knnMatch（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "void cv::line_descriptor::BinaryDescriptorMatcher::knnMatch",
+    "local": "void cv:：line\\u descriptor:：binaryScriptorMatcher:：knnMatch"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": "标准：：向量&lt；标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": "&燃气轮机&燃气轮机&amp；"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "masks",
+    "local": "面具"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "compactResult",
+    "local": "压缩结果"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.line_descriptor_BinaryDescriptorMatcher.knnMatch(",
+    "local": "cv.line\\描述符\\二进制描述符格式cher.knnMatch("
+  },
+  {
+    "origin": "queryDescriptors, trainDescriptors, k[, mask[, compactResult]]",
+    "local": "queryDescriptors，trainDescriptors，k[，mask[，compactResult]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.line_descriptor_BinaryDescriptorMatcher.knnMatchQuery(",
+    "local": "cv.line\\描述符\\二进制描述符格式cher.knnMatchQuery("
+  },
+  {
+    "origin": "queryDescriptors, matches, k[, masks[, compactResult]]",
+    "local": "queryDescriptors，matches，k[，masks[，compactResult]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "query descriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "vector to host retrieved matches",
+    "local": "向量到主机检索到的匹配项"
+  },
+  {
+    "origin": "k",
+    "local": "k"
+  },
+  {
+    "origin": "number of the closest descriptors to be returned for every input query",
+    "local": "为每个输入查询返回的最近描述符数"
+  },
+  {
+    "origin": "masks",
+    "local": "面具"
+  },
+  {
+    "origin": "vector of masks to select which input descriptors must be matched to ones in dataset (the",
+    "local": "选择哪些输入描述符必须与数据集中的描述符匹配的掩码向量"
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "-th mask in vector indicates whether each input query can be matched with descriptors in dataset relative to",
+    "local": "-向量中的掩码表示每个输入查询是否可以与数据集中相对于的描述符相匹配"
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "-th image)",
+    "local": "-（图片）"
+  },
+  {
+    "origin": "compactResult",
+    "local": "压缩结果"
+  },
+  {
+    "origin": "flag to obtain a compact result (if true, a vector that doesn't contain any matches for a given query is not inserted in final result)",
+    "local": "获取压缩结果的标志（如果为true，则不包含给定查询的任何匹配项的向量不会插入到最终结果中）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "match()",
+    "local": "匹配（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "void cv::line_descriptor::BinaryDescriptorMatcher::match",
+    "local": "void cv:：line\\u descriptor:：binaryDescriptorMatch:：匹配"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": "列车描述符"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.line_descriptor_BinaryDescriptorMatcher.match(",
+    "local": "cv.line\\u描述符\\u BinaryDescriptorMatcher.match("
+  },
+  {
+    "origin": "queryDescriptors, trainDescriptors[, mask]",
+    "local": "查询描述符，列车描述符[，掩码]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.line_descriptor_BinaryDescriptorMatcher.matchQuery(",
+    "local": "cv.line\\u描述符\\u BinaryDescriptorMatcher.matchQuery("
+  },
+  {
+    "origin": "queryDescriptors[, masks]",
+    "local": "queryDescriptors[，掩码]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "For every input query descriptor, retrieve the best matching one from a dataset provided from user or from the one internal to class.",
+    "local": "对于每个输入查询描述符，从用户提供的数据集或类内部的数据集中检索最佳匹配的描述符。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "query descriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": "列车描述符"
+  },
+  {
+    "origin": "dataset of descriptors furnished by user",
+    "local": "用户提供的描述符数据集"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "vector to host retrieved matches",
+    "local": "向量到主机检索到的匹配项"
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "mask to select which input descriptors must be matched to one in dataset",
+    "local": "选择哪些输入描述符必须与数据集中的一个描述符匹配的掩码"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "match()",
+    "local": "匹配（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "void cv::line_descriptor::BinaryDescriptorMatcher::match",
+    "local": "void cv:：line\\u descriptor:：binaryDescriptorMatch:：匹配"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "masks",
+    "local": "面具"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.line_descriptor_BinaryDescriptorMatcher.match(",
+    "local": "cv.line\\u描述符\\u BinaryDescriptorMatcher.match("
+  },
+  {
+    "origin": "queryDescriptors, trainDescriptors[, mask]",
+    "local": "查询描述符，列车描述符[，掩码]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.line_descriptor_BinaryDescriptorMatcher.matchQuery(",
+    "local": "cv.line\\u描述符\\u BinaryDescriptorMatcher.matchQuery("
+  },
+  {
+    "origin": "queryDescriptors[, masks]",
+    "local": "queryDescriptors[，掩码]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "query descriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "vector to host retrieved matches",
+    "local": "向量到主机检索到的匹配项"
+  },
+  {
+    "origin": "masks",
+    "local": "面具"
+  },
+  {
+    "origin": "vector of masks to select which input descriptors must be matched to one in dataset (the",
+    "local": "选择哪些输入描述符必须与数据集中的一个匹配的掩码向量"
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "-th mask in vector indicates whether each input query can be matched with descriptors in dataset relative to",
+    "local": "-向量中的掩码表示每个输入查询是否可以与数据集中相对于的描述符相匹配"
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "-th image)",
+    "local": "-（图片）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "radiusMatch()",
+    "local": "半径匹配（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "void cv::line_descriptor::BinaryDescriptorMatcher::radiusMatch",
+    "local": "void cv:：line\\u descriptor:：BinaryDescriptorMatcher:：radiusMatch"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": "列车描述符"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": "标准：：向量&lt；标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": "&燃气轮机&燃气轮机&amp；"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "maxDistance",
+    "local": "½屏幕距离"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "compactResult",
+    "local": "压缩结果"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "For every input query descriptor, retrieve, from a dataset provided from user or from the one internal to class, all the descriptors that are not further than",
+    "local": "对于每个输入查询描述符，从用户提供的数据集或类内部的数据集中检索不超过"
+  },
+  {
+    "origin": "maxDist",
+    "local": "最大距离"
+  },
+  {
+    "origin": "from input query.",
+    "local": "从输入查询。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "query descriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": "列车描述符"
+  },
+  {
+    "origin": "dataset of descriptors furnished by user",
+    "local": "用户提供的描述符数据集"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "vector to host retrieved matches",
+    "local": "向量到主机检索到的匹配项"
+  },
+  {
+    "origin": "maxDistance",
+    "local": "½屏幕距离"
+  },
+  {
+    "origin": "search radius",
+    "local": "搜索半径"
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "mask to select which input descriptors must be matched to ones in dataset",
+    "local": "选择哪些输入描述符必须与数据集中的描述符匹配的掩码"
+  },
+  {
+    "origin": "compactResult",
+    "local": "压缩结果"
+  },
+  {
+    "origin": "flag to obtain a compact result (if true, a vector that doesn't contain any matches for a given query is not inserted in final result)",
+    "local": "获取压缩结果的标志（如果为true，则不包含给定查询的任何匹配项的向量不会插入到最终结果中）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "radiusMatch()",
+    "local": "半径匹配（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "void cv::line_descriptor::BinaryDescriptorMatcher::radiusMatch",
+    "local": "void cv:：line\\u descriptor:：BinaryDescriptorMatcher:：radiusMatch"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": "标准：：向量&lt；标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": "&燃气轮机&燃气轮机&amp；"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "maxDistance",
+    "local": "½屏幕距离"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "masks",
+    "local": "面具"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "compactResult",
+    "local": "压缩结果"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "query descriptors",
+    "local": "查询描述符"
+  },
+  {
+    "origin": "matches",
+    "local": "比赛"
+  },
+  {
+    "origin": "vector to host retrieved matches",
+    "local": "向量到主机检索到的匹配项"
+  },
+  {
+    "origin": "maxDistance",
+    "local": "½屏幕距离"
+  },
+  {
+    "origin": "search radius",
+    "local": "搜索半径"
+  },
+  {
+    "origin": "masks",
+    "local": "面具"
+  },
+  {
+    "origin": "vector of masks to select which input descriptors must be matched to ones in dataset (the",
+    "local": "选择哪些输入描述符必须与数据集中的描述符匹配的掩码向量"
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "-th mask in vector indicates whether each input query can be matched with descriptors in dataset relative to",
+    "local": "-向量中的掩码表示每个输入查询是否可以与数据集中相对于的描述符相匹配"
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "-th image)",
+    "local": "-（图片）"
+  },
+  {
+    "origin": "compactResult",
+    "local": "压缩结果"
+  },
+  {
+    "origin": "flag to obtain a compact result (if true, a vector that doesn't contain any matches for a given query is not inserted in final result)",
+    "local": "获取压缩结果的标志（如果为true，则不包含给定查询的任何匹配项的向量不会插入到最终结果中）"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "train()",
+    "local": "列车（）"
+  },
+  {
+    "origin": "void cv::line_descriptor::BinaryDescriptorMatcher::train",
+    "local": "void cv:：line\\u descriptor:：BinaryDescriptorMatcher:：train"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Update dataset by inserting into it all descriptors that were stored locally by",
+    "local": "更新数据集，方法是在其中插入"
+  },
+  {
+    "origin": "add",
+    "local": "添加"
+  },
+  {
+    "origin": "function.",
+    "local": "功能。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Every time this function is invoked, current dataset is deleted and locally stored descriptors are inserted into dataset. The locally stored copy of just inserted descriptors is then removed.",
+    "local": "每次调用此函数时，都会删除当前数据集，并将本地存储的描述符插入到数据集中。然后删除刚刚插入的描述符的本地存储副本。"
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/line_descriptor/",
+    "local": "opencv2/line\\u描述符/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by",
+    "local": "于2021年4月2日星期五11:36:48为OpenCV生成"
+  }
+]

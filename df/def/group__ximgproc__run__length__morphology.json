@@ -1,0 +1,962 @@
+[
+  {
+    "origin": "OpenCV: Binary morphology on run-length encoded image",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Binary morphology on run-length encoded image",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;runs,",
+    "local": ""
+  },
+  {
+    "origin": "res,",
+    "local": ""
+  },
+  {
+    "origin": "size=",
+    "local": ""
+  },
+  {
+    "origin": "(0, 0))",
+    "local": ""
+  },
+  {
+    "origin": "Creates a run-length encoded image from a vector of runs (column begin, column end, row)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc,",
+    "local": ""
+  },
+  {
+    "origin": "rlDest,",
+    "local": ""
+  },
+  {
+    "origin": "rlKernel,",
+    "local": ""
+  },
+  {
+    "origin": "anchor=",
+    "local": ""
+  },
+  {
+    "origin": "(0, 0))",
+    "local": ""
+  },
+  {
+    "origin": "Dilates an run-length encoded binary image by using a specific structuring element.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc,",
+    "local": ""
+  },
+  {
+    "origin": "rlDest,",
+    "local": ""
+  },
+  {
+    "origin": "rlKernel, bool bBoundaryOn=true,",
+    "local": ""
+  },
+  {
+    "origin": "anchor=",
+    "local": ""
+  },
+  {
+    "origin": "(0, 0))",
+    "local": ""
+  },
+  {
+    "origin": "Erodes an run-length encoded binary image by using a specific structuring element.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int shape,",
+    "local": ""
+  },
+  {
+    "origin": "ksize)",
+    "local": ""
+  },
+  {
+    "origin": "Returns a run length encoded structuring element of the specified size and shape.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rlStructuringElement)",
+    "local": ""
+  },
+  {
+    "origin": "Check whether a custom made structuring element can be used with run length morphological operations. (It must consist of a continuous array of single runs per row)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc,",
+    "local": ""
+  },
+  {
+    "origin": "rlDest, int op,",
+    "local": ""
+  },
+  {
+    "origin": "rlKernel, bool bBoundaryOnForErosion=true,",
+    "local": ""
+  },
+  {
+    "origin": "anchor=",
+    "local": ""
+  },
+  {
+    "origin": "(0, 0))",
+    "local": ""
+  },
+  {
+    "origin": "Applies a morphological operation to a run-length encoded binary image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image,",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;value)",
+    "local": ""
+  },
+  {
+    "origin": "Paint run length encoded binary image into an image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "rlDest, double thresh, int type)",
+    "local": ""
+  },
+  {
+    "origin": "Applies a fixed-level threshold to each array element.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "These functions support morphological operations on binary images. In order to be fast and space efficient binary images are encoded with a run-length representation. This representation groups continuous horizontal sequences of \"on\" pixels together in a \"run\". A run is charactarized by the column position of the first pixel in the run, the column position of the last pixel in the run and the row position. This representation is very compact for binary images which contain large continuous areas of \"on\" and \"off\" pixels. A checkerboard pattern would be a good example. The representation is not so suitable for binary images created from random noise images or other images where little correlation between neighboring pixels exists.",
+    "local": ""
+  },
+  {
+    "origin": "The morphological operations supported here are very similar to the operations supported in the imgproc module. In general they are fast. However on several occasions they are slower than the functions from imgproc. The structuring elements of",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "have very good support from the imgproc module. Also small structuring elements are very fast in imgproc (presumably due to opencl support). Therefore the functions from this module are recommended for larger structuring elements (",
+    "local": ""
+  },
+  {
+    "origin": "or self defined structuring elements). A sample application (run_length_morphology_demo) is supplied which allows to compare the speed of some morphological operations for the functions using run-length encoding and the imgproc functions for a given image.",
+    "local": ""
+  },
+  {
+    "origin": "Run length encoded images are stored in standard opencv images. Images have a single column of",
+    "local": ""
+  },
+  {
+    "origin": "elements. The number of rows is the number of run + 1. The first row contains the size of the original (not encoded) image. For the runs the following mapping is used (x: column begin, y: column end (last column), z: row).",
+    "local": ""
+  },
+  {
+    "origin": "The size of the original image is required for compatibility with the imgproc functions when the boundary handling requires that pixel outside the image boundary are \"on\".",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createRLEImage()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::rl::createRLEImage",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "runs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "res",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates a run-length encoded image from a vector of runs (column begin, column end, row)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "runs",
+    "local": ""
+  },
+  {
+    "origin": "vector of runs",
+    "local": ""
+  },
+  {
+    "origin": "res",
+    "local": ""
+  },
+  {
+    "origin": "result",
+    "local": ""
+  },
+  {
+    "origin": "size",
+    "local": ""
+  },
+  {
+    "origin": "image size (to be used if an \"on\" boundary should be used in erosion, using the default means that the size is computed from the extension of the input)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "dilate()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::rl::dilate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "rlDest",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "rlKernel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "anchor",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Dilates an run-length encoded binary image by using a specific structuring element.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc",
+    "local": ""
+  },
+  {
+    "origin": "input image",
+    "local": ""
+  },
+  {
+    "origin": "rlDest",
+    "local": ""
+  },
+  {
+    "origin": "result",
+    "local": ""
+  },
+  {
+    "origin": "rlKernel",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": "anchor",
+    "local": ""
+  },
+  {
+    "origin": "position of the anchor within the element; default value (0, 0) is usually the element center.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "erode()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::rl::erode",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "rlDest",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "rlKernel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bBoundaryOn",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "anchor",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Erodes an run-length encoded binary image by using a specific structuring element.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc",
+    "local": ""
+  },
+  {
+    "origin": "input image",
+    "local": ""
+  },
+  {
+    "origin": "rlDest",
+    "local": ""
+  },
+  {
+    "origin": "result",
+    "local": ""
+  },
+  {
+    "origin": "rlKernel",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": "bBoundaryOn",
+    "local": ""
+  },
+  {
+    "origin": "indicates whether pixel outside the image boundary are assumed to be on (True: works in the same way as the default of",
+    "local": ""
+  },
+  {
+    "origin": ", False: is a little faster)",
+    "local": ""
+  },
+  {
+    "origin": "anchor",
+    "local": ""
+  },
+  {
+    "origin": "position of the anchor within the element; default value (0, 0) is usually the element center.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getStructuringElement()",
+    "local": ""
+  },
+  {
+    "origin": "cv::ximgproc::rl::getStructuringElement",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "shape",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "ksize",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns a run length encoded structuring element of the specified size and shape.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "shape",
+    "local": ""
+  },
+  {
+    "origin": "Element shape that can be one of",
+    "local": ""
+  },
+  {
+    "origin": "ksize",
+    "local": ""
+  },
+  {
+    "origin": "Size of the structuring element.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "isRLMorphologyPossible()",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::ximgproc::rl::isRLMorphologyPossible",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rlStructuringElement",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Check whether a custom made structuring element can be used with run length morphological operations. (It must consist of a continuous array of single runs per row)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "rlStructuringElement",
+    "local": ""
+  },
+  {
+    "origin": "mask to be tested",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "morphologyEx()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::rl::morphologyEx",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "rlDest",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "op",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "rlKernel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bBoundaryOnForErosion",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "anchor",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies a morphological operation to a run-length encoded binary image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc",
+    "local": ""
+  },
+  {
+    "origin": "input image",
+    "local": ""
+  },
+  {
+    "origin": "rlDest",
+    "local": ""
+  },
+  {
+    "origin": "result",
+    "local": ""
+  },
+  {
+    "origin": "op",
+    "local": ""
+  },
+  {
+    "origin": "all operations supported by",
+    "local": ""
+  },
+  {
+    "origin": "(except",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "rlKernel",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": "bBoundaryOnForErosion",
+    "local": ""
+  },
+  {
+    "origin": "indicates whether pixel outside the image boundary are assumed to be on for erosion operations (True: works in the same way as the default of",
+    "local": ""
+  },
+  {
+    "origin": ", False: is a little faster)",
+    "local": ""
+  },
+  {
+    "origin": "anchor",
+    "local": ""
+  },
+  {
+    "origin": "position of the anchor within the element; default value (0, 0) is usually the element center.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "paint()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::rl::paint",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "value",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Paint run length encoded binary image into an image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "image to paint into (currently only single channel images).",
+    "local": ""
+  },
+  {
+    "origin": "rlSrc",
+    "local": ""
+  },
+  {
+    "origin": "run length encoded image",
+    "local": ""
+  },
+  {
+    "origin": "value",
+    "local": ""
+  },
+  {
+    "origin": "all foreground pixel of the binary image are set to this value",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "threshold()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::rl::threshold",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "rlDest",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "thresh",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies a fixed-level threshold to each array element.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input array (single-channel).",
+    "local": ""
+  },
+  {
+    "origin": "rlDest",
+    "local": ""
+  },
+  {
+    "origin": "resulting run length encoded image.",
+    "local": ""
+  },
+  {
+    "origin": "thresh",
+    "local": ""
+  },
+  {
+    "origin": "threshold value.",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "thresholding type (only",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "are supported)",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by &#160;",
+    "local": ""
+  }
+]

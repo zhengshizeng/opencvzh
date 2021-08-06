@@ -1,0 +1,618 @@
+[
+  {
+    "origin": "OpenCV: Using OpenCV with Eclipse (plugin CDT)",
+    "local": "OpenCV:在Eclipse中使用OpenCV(插件CDT)"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "Using OpenCV with Eclipse (plugin CDT)",
+    "local": "在Eclipse中使用OpenCV(插件CDT)"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一个教程:"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "Ana Huamán"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "OpenCV &gt;= 3.0"
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "This tutorial can contain obsolete information.",
+    "local": "本教程可能包含过时的信息:"
+  },
+  {
+    "origin": "Prerequisites",
+    "local": "先决条件"
+  },
+  {
+    "origin": "Two ways, one by forming a project directly, and another by CMake Prerequisites",
+    "local": "两种方法,一种是直接形成一个项目,另一种是通过CMake先决条件"
+  },
+  {
+    "origin": "Having installed",
+    "local": "已安装"
+  },
+  {
+    "origin": "Eclipse",
+    "local": "Eclipse"
+  },
+  {
+    "origin": "in your workstation (only the CDT plugin for C/C++ is needed). You can follow the following steps:",
+    "local": "在工作站中(只需要C/C++的CDT插件).您可以执行以下步骤:"
+  },
+  {
+    "origin": "Go to the Eclipse site",
+    "local": "转到Eclipse站点"
+  },
+  {
+    "origin": "Download",
+    "local": "下载"
+  },
+  {
+    "origin": "Eclipse IDE for C/C++ Developers",
+    "local": "C/C++开发人员的Eclipse IDE"
+  },
+  {
+    "origin": ". Choose the link according to your workstation.",
+    "local": ". 根据您的工作站选择链接:"
+  },
+  {
+    "origin": "Having installed OpenCV. If not yet, go",
+    "local": "安装了OpenCV,如果还没有,就看下这个教程"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Making a project",
+    "local": "做一个项目"
+  },
+  {
+    "origin": "Start Eclipse. Just run the executable that comes in the folder.",
+    "local": "启动Eclipse:只需运行文件夹中的可执行文件:"
+  },
+  {
+    "origin": "Go to",
+    "local": "去"
+  },
+  {
+    "origin": "File -&gt; New -&gt; C/C++ Project",
+    "local": "文件 -&gt; 新建 -&gt; C/C++项目"
+  },
+  {
+    "origin": "Choose a name for your project (i.e. DisplayImage). An",
+    "local": "为项目选择一个名称(即DisplayImage):"
+  },
+  {
+    "origin": "Empty Project",
+    "local": "空项目"
+  },
+  {
+    "origin": "should be okay for this example.",
+    "local": "这个例子应该没问题:"
+  },
+  {
+    "origin": "Leave everything else by default. Press",
+    "local": "默认情况下保留其他所有内容:点击"
+  },
+  {
+    "origin": "Finish",
+    "local": "完成"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Your project (in this case DisplayImage) should appear in the",
+    "local": "您的项目(在本例中是DisplayImage)应该出现在"
+  },
+  {
+    "origin": "Project Navigator",
+    "local": "项目导航器"
+  },
+  {
+    "origin": "(usually at the left side of your window).",
+    "local": "(通常在窗户的左边):"
+  },
+  {
+    "origin": "Now, let's add a source file using OpenCV:",
+    "local": "现在,让我们使用OpenCV添加一个源文件:"
+  },
+  {
+    "origin": "Right click on",
+    "local": "右键单击"
+  },
+  {
+    "origin": "DisplayImage",
+    "local": "显示"
+  },
+  {
+    "origin": "(in the Navigator).",
+    "local": "(在导航器中):"
+  },
+  {
+    "origin": "New -&gt; Folder",
+    "local": "新建 -&gt; 文件夹"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Name your folder",
+    "local": "命名文件夹"
+  },
+  {
+    "origin": "src",
+    "local": "src"
+  },
+  {
+    "origin": "and then hit",
+    "local": "然后打"
+  },
+  {
+    "origin": "Finish",
+    "local": "完成"
+  },
+  {
+    "origin": "Right click on your newly created",
+    "local": "右键单击新创建的"
+  },
+  {
+    "origin": "src",
+    "local": "src"
+  },
+  {
+    "origin": "folder. Choose",
+    "local": "文件夹.选择"
+  },
+  {
+    "origin": "New source file",
+    "local": "新建源文件"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Call it",
+    "local": "就叫它"
+  },
+  {
+    "origin": "DisplayImage.cpp",
+    "local": "DisplayImage.cpp"
+  },
+  {
+    "origin": ". Hit",
+    "local": ". 点击"
+  },
+  {
+    "origin": "Finish",
+    "local": "完成"
+  },
+  {
+    "origin": "So, now you have a project with a empty .cpp file. Let's fill it with some sample code (in other words, copy and paste the snippet below):",
+    "local": "所以,现在您有了一个带有空.cpp文件的项目:让我们用一些示例代码来填充它(换句话说,复制并粘贴下面的代码段):"
+  },
+  {
+    "origin": "We are only missing one final step: To tell OpenCV where the OpenCV headers and libraries are. For this, do the following:",
+    "local": "我们只缺少最后一步:告诉OpenCV OpenCV头和库在哪里:为此,请执行以下操作:"
+  },
+  {
+    "origin": "Go to",
+    "local": "到"
+  },
+  {
+    "origin": "Project&ndash;&gt;Properties",
+    "local": "项目&ndash;&gt;属性"
+  },
+  {
+    "origin": "In",
+    "local": "在"
+  },
+  {
+    "origin": "C/C++ Build",
+    "local": "C/C++ Build"
+  },
+  {
+    "origin": ", click on",
+    "local": ",单击"
+  },
+  {
+    "origin": "Settings",
+    "local": "设置"
+  },
+  {
+    "origin": ". At the right, choose the",
+    "local": ". 在右边,选择"
+  },
+  {
+    "origin": "Tool Settings",
+    "local": "工具设置"
+  },
+  {
+    "origin": "Tab. Here we will enter the headers and libraries info:",
+    "local": "选项卡.在这里,我们将输入标题和库信息:"
+  },
+  {
+    "origin": "In",
+    "local": "在"
+  },
+  {
+    "origin": "GCC C++ Compiler",
+    "local": "GCC C++编译器"
+  },
+  {
+    "origin": ", go to",
+    "local": ",转到"
+  },
+  {
+    "origin": "Includes",
+    "local": "包括"
+  },
+  {
+    "origin": ". In",
+    "local": ". 在"
+  },
+  {
+    "origin": "Include paths(-l)",
+    "local": "包含路径(-l)"
+  },
+  {
+    "origin": "you should include the path of the folder where opencv was installed. In our example, this is /usr/local/include/opencv.",
+    "local": "应该包括安装opencv的文件夹的路径:在我们的示例中,这是 /usr/local/include/opencv."
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "If you do not know where your opencv files are, open the",
+    "local": "如果您不知道opencv文件在哪里,请打开"
+  },
+  {
+    "origin": "Terminal",
+    "local": "终点站"
+  },
+  {
+    "origin": "and type:",
+    "local": "和类型:"
+  },
+  {
+    "origin": "For instance, that command gave me this output:",
+    "local": "例如,该命令给了我以下输出:"
+  },
+  {
+    "origin": "Now go to",
+    "local": "现在转到"
+  },
+  {
+    "origin": "GCC C++ Linker",
+    "local": "GCC C++链接器"
+  },
+  {
+    "origin": ",there you have to fill two spaces:",
+    "local": ",必须填充两个空格:"
+  },
+  {
+    "origin": "First in",
+    "local": "先进的"
+  },
+  {
+    "origin": "Library search path (-L)",
+    "local": "库搜索路径 (-L)"
+  },
+  {
+    "origin": "you have to write the path to where the opencv libraries reside, in my case the path is: :",
+    "local": "您必须将路径写入opencv库所在的位置,在我的示例中,路径是:"
+  },
+  {
+    "origin": "/usr/local/lib",
+    "local": "/usr/local/lib"
+  },
+  {
+    "origin": "Then in",
+    "local": "然后在"
+  },
+  {
+    "origin": "Libraries(-l)",
+    "local": "库(-l)"
+  },
+  {
+    "origin": "add the OpenCV libraries that you may need. Usually just the 4 first on the list below are enough (for simple applications) . In my case, I am putting all of them since I plan to use the whole bunch:",
+    "local": "添加您可能需要的OpenCV库:通常只有下面列表中的前4个就足够了(对于简单的应用程序):在我的情况下,我把所有的,因为我计划使用整个一堆:"
+  },
+  {
+    "origin": "opencv_core opencv_imgproc opencv_imgcodecs opencv_highgui opencv_ml opencv_videoio opencv_video opencv_features2d opencv_calib3d opencv_objdetect opencv_flann",
+    "local": "opencv_core opencv_imgproc opencv_imgcodecs opencv_highgui opencv_ml opencv_videoio opencv_video opencv_features2d opencv_calib3d opencv_objdetect opencv_flann"
+  },
+  {
+    "origin": "If you don't know where your libraries are (or you are just psychotic and want to make sure the path is fine), type in",
+    "local": "如果你不知道你的库在哪里(或者你只是个精神病患者,想确定路径是否正确),请输入"
+  },
+  {
+    "origin": "Terminal",
+    "local": "终点站"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "My output (in case you want to check) was:",
+    "local": "我的输出(如果您想检查)是:"
+  },
+  {
+    "origin": "Now you are done. Click",
+    "local": "现在你完了:点击"
+  },
+  {
+    "origin": "OK",
+    "local": "好的"
+  },
+  {
+    "origin": "Your project should be ready to be built. For this, go to",
+    "local": "你的项目应该准备好了:为此,请转到"
+  },
+  {
+    "origin": "Project-&gt;Build all",
+    "local": "项目-&gt;全部生成"
+  },
+  {
+    "origin": "In the Console you should get something like",
+    "local": "在控制台里,你应该得到"
+  },
+  {
+    "origin": "If you check in your folder, there should be an executable there.",
+    "local": "如果你签入你的文件夹,那里应该有一个可执行文件:"
+  },
+  {
+    "origin": "Running the executable",
+    "local": "运行可执行文件"
+  },
+  {
+    "origin": "So, now we have an executable ready to run. If we were to use the Terminal, we would probably do something like:",
+    "local": "现在我们有一个可执行文件可以运行了:如果我们使用终端,我们可能会这样做:"
+  },
+  {
+    "origin": "Assuming that the image to use as the argument would be located in &lt;DisplayImage_directory&gt;/images/HappyLittleFish.png. We can still do this, but let's do it from Eclipse:",
+    "local": "假设用作参数的图像位于 &lt;显示图像&gt;/images/HappyLittleFish.png. 我们仍然可以这样做,但是让我们从Eclipse开始:"
+  },
+  {
+    "origin": "Go to",
+    "local": "去"
+  },
+  {
+    "origin": "Run-&gt;Run Configurations",
+    "local": "运行-&gt;运行配置"
+  },
+  {
+    "origin": "Under C/C++ Application you will see the name of your executable + Debug (if not, click over C/C++ Application a couple of times). Select the name (in this case",
+    "local": "在C/C++应用程序下,您将看到可执行文件+调试的名称(如果没有,点击C/C++应用程序几次):选择名称(在本例中为"
+  },
+  {
+    "origin": "DisplayImage Debug",
+    "local": "图像调试"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Now, in the right side of the window, choose the",
+    "local": "现在,在窗口的右侧,选择"
+  },
+  {
+    "origin": "Arguments",
+    "local": "论据"
+  },
+  {
+    "origin": "Tab. Write the path of the image file we want to open (path relative to the workspace/DisplayImage folder). Let's use",
+    "local": "选项卡:写入要打开的图像文件的路径(相对于工作区/DisplayImage文件夹的路径):让我们使用"
+  },
+  {
+    "origin": "HappyLittleFish.png",
+    "local": "HappyLittleFish.png(快乐小鱼):"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Click on the",
+    "local": "点击"
+  },
+  {
+    "origin": "Apply",
+    "local": "应用"
+  },
+  {
+    "origin": "button and then in Run. An OpenCV window should pop up with the fish image (or whatever you used).",
+    "local": "按钮,然后在运行:一个OpenCV窗口应该弹出鱼的图像(或任何你用过的):"
+  },
+  {
+    "origin": "Congratulations! You are ready to have fun with OpenCV using Eclipse.",
+    "local": "祝贺 你！您已经准备好使用Eclipse享受OpenCV带来的乐趣了:"
+  },
+  {
+    "origin": "V2: Using CMake+OpenCV with Eclipse (plugin CDT)",
+    "local": "V2:使用CMake+OpenCV和Eclipse(插件CDT)"
+  },
+  {
+    "origin": "Say you have or create a new file,",
+    "local": "假设你有或创建了一个新文件,"
+  },
+  {
+    "origin": "helloworld.cpp",
+    "local": "helloworld.cpp文件"
+  },
+  {
+    "origin": "in a directory called",
+    "local": "在一个名为"
+  },
+  {
+    "origin": "foo",
+    "local": "foo"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Create a build directory, say, under",
+    "local": "创建一个构建目录,比如在"
+  },
+  {
+    "origin": "foo",
+    "local": "foo"
+  },
+  {
+    "origin": ": mkdir /build. Then cd build.",
+    "local": ": mkdir /build. 然后制作cd:"
+  },
+  {
+    "origin": "Put a",
+    "local": "放一个"
+  },
+  {
+    "origin": "file in build:",
+    "local": "内部版本中的文件:"
+  },
+  {
+    "origin": "Run: cmake-gui .. and make sure you fill in where opencv was built.",
+    "local": "运行: cmake-gui .. 并确保填写opencv的构建位置."
+  },
+  {
+    "origin": "Then click configure and then generate. If it's OK,",
+    "local": "然后单击配置,然后单击生成.如果没事的话,"
+  },
+  {
+    "origin": "quit cmake-gui",
+    "local": "退出 cmake-gui"
+  },
+  {
+    "origin": "Run",
+    "local": "运行"
+  },
+  {
+    "origin": "(the -j4 is optional, it just tells the compiler to build in 4 threads). Make sure it builds.",
+    "local": "(j4是可选的,它只是告诉编译器在4个线程中构建),确保它建立起来:"
+  },
+  {
+    "origin": "Start eclipse. Put the workspace in some directory but",
+    "local": "启动eclipse:将工作区放在某个目录中,但是"
+  },
+  {
+    "origin": "not",
+    "local": "不"
+  },
+  {
+    "origin": "in foo or",
+    "local": "在foo或"
+  },
+  {
+    "origin": "Right click in the Project Explorer section. Select Import And then open the C/C++ filter. Choose",
+    "local": "在“项目资源管理器”区域中单击鼠标右键:选择导入,然后打开C/C++过滤器:选择"
+  },
+  {
+    "origin": "Existing Code",
+    "local": "现有代码"
+  },
+  {
+    "origin": "as a Makefile Project.",
+    "local": "作为Makefile项目:"
+  },
+  {
+    "origin": "Name your project, say",
+    "local": "说出你的项目,比如"
+  },
+  {
+    "origin": "helloworld",
+    "local": "helloworld"
+  },
+  {
+    "origin": ". Browse to the Existing Code location",
+    "local": ". 浏览到现有代码位置"
+  },
+  {
+    "origin": "(where you ran your cmake-gui from). Select",
+    "local": "(运行 cmake-gui 的地方):选择"
+  },
+  {
+    "origin": "Linux GCC",
+    "local": "Linux GCC"
+  },
+  {
+    "origin": "in the *\"Toolchain for Indexer Settings\"* and press",
+    "local": "在*“索引器设置的工具链”*中按"
+  },
+  {
+    "origin": "Finish",
+    "local": "完成"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Right click in the Project Explorer section. Select Properties. Under C/C++ Build, set the",
+    "local": "在“项目资源管理器”区域中单击鼠标右键:选择属性:在C/C++构建下,设置"
+  },
+  {
+    "origin": "build directory:",
+    "local": "生成目录:"
+  },
+  {
+    "origin": "from something like",
+    "local": "从某种程度上说"
+  },
+  {
+    "origin": "to",
+    "local": "到"
+  },
+  {
+    "origin": "since that's where you are building to.",
+    "local": "因为那是你要去的地方:"
+  },
+  {
+    "origin": "You can also optionally modify the Build command: from make to something like",
+    "local": "您还可以选择修改Build命令:从make修改为"
+  },
+  {
+    "origin": "which tells the compiler to produce detailed symbol files for debugging and also to compile in 4 parallel threads.",
+    "local": "它告诉编译器生成用于调试的详细符号文件,并在4个并行线程中编译:"
+  },
+  {
+    "origin": "Done!",
+    "local": "完成！"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by zsz"
+  }
+]

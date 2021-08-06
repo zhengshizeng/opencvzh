@@ -1,0 +1,130 @@
+[
+  {
+    "origin": "OpenCV: Adding a new algorithm to the Facemark API",
+    "local": "OpenCV：向facemarkapi添加新算法"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Adding a new algorithm to the Facemark API",
+    "local": "向facemarkapi添加新算法"
+  },
+  {
+    "origin": "Goals",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "integrate a new algorithm of facial landmark detector into the Facemark API",
+    "local": "将一种新的人脸地标检测算法集成到facemarkapi中"
+  },
+  {
+    "origin": "compile a specific contrib module",
+    "local": "编译特定的contrib模块"
+  },
+  {
+    "origin": "using extra parameters in a function",
+    "local": "在函数中使用额外参数"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Add the class header",
+    "local": "添加类标题"
+  },
+  {
+    "origin": "The class header for a new algorithm should be added to a new file in include/opencv2/face. Here is the template that you can use to integrate a new algorithm, change the FacemarkNEW to a representative name of the new algorithm and save it using a representative filename accordingly.",
+    "local": "新算法的类头应该添加到include/opencv2/face中的新文件中。下面是一个模板，您可以使用它集成一个新算法，将FacemarkNEW更改为新算法的代表性名称，并相应地使用代表性文件名保存它。"
+  },
+  {
+    "origin": "Add the implementation code",
+    "local": "添加实现代码"
+  },
+  {
+    "origin": "Create a new file in the source folder with name representing the new algorithm. Here is the template that you can use.",
+    "local": "在源文件夹中创建一个新文件，其名称表示新算法。这是你可以使用的模板。"
+  },
+  {
+    "origin": "Compiling the code",
+    "local": "编译代码"
+  },
+  {
+    "origin": "Clear the build folder and then rebuild the entire library. Note that you can deactivate the compilation of other contrib modules by adding \"-D BUILD_opencv_&lt;MODULE_NAME&gt;=OFF\" flag to the cmake. After that you can execute make command in \"&lt;build_folder&gt;/modules/face\" to speed up the compiling process.",
+    "local": "清除生成文件夹，然后重新生成整个库。请注意，您可以通过添加“-D BUILD\\u opencv”来停用其他contrib模块的编译；模块名称&gt=把“关”的旗子打给cmake。之后，您可以在“&lt；生成文件夹&gt/“模块/面”，以加快编译过程。"
+  },
+  {
+    "origin": "Best Practice",
+    "local": "最佳实践"
+  },
+  {
+    "origin": "Handling the extra parameters",
+    "local": "处理额外参数"
+  },
+  {
+    "origin": "To handle the extra parameters, a new struct should be created to holds all the required parameters. Here is an example of of a parameters container",
+    "local": "为了处理额外的参数，应该创建一个新的结构来保存所有必需的参数。下面是参数容器的示例"
+  },
+  {
+    "origin": "Here is a snippet to extract the extra parameters:",
+    "local": "以下是提取额外参数的片段："
+  },
+  {
+    "origin": "And here is an example to pass the extra parameter into fit function",
+    "local": "下面是一个将额外参数传递到fit函数的示例"
+  },
+  {
+    "origin": "In order to understand this scheme, here is a simple example that you can try to compile and see how it works.",
+    "local": "为了理解这个方案，这里有一个简单的例子，您可以尝试编译并查看它是如何工作的。"
+  },
+  {
+    "origin": "Minimize the dependency",
+    "local": "最小化依赖关系"
+  },
+  {
+    "origin": "It is highly recomended to keep the code as small as possible when compiled. For this purpose, the developers are ecouraged to avoid the needs of heavy dependency such as",
+    "local": "强烈建议在编译时使代码尽可能小。为此，开发人员被生态化，以避免诸如"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Documentation and examples",
+    "local": "文件和示例"
+  },
+  {
+    "origin": "Please update the documentation whenever needed and put example code for the new algorithm.",
+    "local": "请随时更新文档，并为新算法提供示例代码。"
+  },
+  {
+    "origin": "Test codes",
+    "local": "测试代码"
+  },
+  {
+    "origin": "An algorithm should be accompanied with its corresponding test code to ensure that the algorithm is compatible with various types of environment (Linux, Windows64, Windows32, Android, etc). There are several basic test that should be performed as demonstrated in the test/test_facemark_lbf.cpp file including cration of its instance, add training data, perform the training process, load a trained model, and perform the fitting to obtain facial landmarks.",
+    "local": "算法应附带相应的测试代码，以确保算法与各种环境（Linux、Windows64、Windows32、Android等）兼容。如test/test\\u facemark\\u lbf.cpp文件所示，应该执行几个基本测试，包括创建实例、添加训练数据、执行训练过程、加载训练模型以及执行拟合以获得面部地标。"
+  },
+  {
+    "origin": "Data organization",
+    "local": "数据组织"
+  },
+  {
+    "origin": "It is advised to divide the data for a new algorithm into 3 parts :",
+    "local": "建议将新算法的数据分为3部分："
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:38为OpenCV生成，&#160；"
+  }
+]

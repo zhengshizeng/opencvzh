@@ -1,0 +1,1118 @@
+[
+  {
+    "origin": "OpenCV: Motion Analysis and Object Tracking",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Motion Analysis and Object Tracking",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Adds an image to the accumulator image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src1,",
+    "local": ""
+  },
+  {
+    "origin": "src2,",
+    "local": ""
+  },
+  {
+    "origin": "dst,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Adds the per-element product of two input images to the accumulator image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Adds the square of a source image to the accumulator image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, double alpha,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Updates a running average.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dst,",
+    "local": ""
+  },
+  {
+    "origin": "winSize, int type)",
+    "local": ""
+  },
+  {
+    "origin": "This function computes a Hanning window coefficients in two dimensions.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src1,",
+    "local": ""
+  },
+  {
+    "origin": "src2,",
+    "local": ""
+  },
+  {
+    "origin": "window=",
+    "local": ""
+  },
+  {
+    "origin": "(), double *response=0)",
+    "local": ""
+  },
+  {
+    "origin": "The function is used to detect translational shifts that occur between two images.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "accumulate()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::accumulate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.accumulate(",
+    "local": ""
+  },
+  {
+    "origin": "src, dst[, mask]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Adds an image to the accumulator image.",
+    "local": ""
+  },
+  {
+    "origin": "The function adds src or some of its elements to dst :",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{dst} (x,y) \\leftarrow \\texttt{dst} (x,y) + \\texttt{src} (x,y) \\quad \\text{if} \\quad \\texttt{mask} (x,y) \\ne 0\\]",
+    "local": ""
+  },
+  {
+    "origin": "The function supports multi-channel images. Each channel is processed independently.",
+    "local": ""
+  },
+  {
+    "origin": "The function",
+    "local": ""
+  },
+  {
+    "origin": "can be used, for example, to collect statistics of a scene background viewed by a still camera and for the further foreground-background segmentation.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Input image of type",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ", where n is a positive integer.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Accumulator image with the same number of channels as input image, and a depth of CV_32F or CV_64F.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Optional operation mask.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "accumulateProduct()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::accumulateProduct",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.accumulateProduct(",
+    "local": ""
+  },
+  {
+    "origin": "src1, src2, dst[, mask]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Adds the per-element product of two input images to the accumulator image.",
+    "local": ""
+  },
+  {
+    "origin": "The function adds the product of two images or their selected regions to the accumulator dst :",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{dst} (x,y) \\leftarrow \\texttt{dst} (x,y) + \\texttt{src1} (x,y) \\cdot \\texttt{src2} (x,y) \\quad \\text{if} \\quad \\texttt{mask} (x,y) \\ne 0\\]",
+    "local": ""
+  },
+  {
+    "origin": "The function supports multi-channel images. Each channel is processed independently.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": "First input image, 1- or 3-channel, 8-bit or 32-bit floating point.",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": "Second input image of the same type and the same size as src1 .",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Accumulator image with the same number of channels as input images, 32-bit or 64-bit floating-point.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Optional operation mask.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "accumulateSquare()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::accumulateSquare",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.accumulateSquare(",
+    "local": ""
+  },
+  {
+    "origin": "src, dst[, mask]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Adds the square of a source image to the accumulator image.",
+    "local": ""
+  },
+  {
+    "origin": "The function adds the input image src or its selected region, raised to a power of 2, to the accumulator dst :",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{dst} (x,y) \\leftarrow \\texttt{dst} (x,y) + \\texttt{src} (x,y)^2 \\quad \\text{if} \\quad \\texttt{mask} (x,y) \\ne 0\\]",
+    "local": ""
+  },
+  {
+    "origin": "The function supports multi-channel images. Each channel is processed independently.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Input image as 1- or 3-channel, 8-bit or 32-bit floating point.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Accumulator image with the same number of channels as input image, 32-bit or 64-bit floating-point.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Optional operation mask.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "accumulateWeighted()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::accumulateWeighted",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.accumulateWeighted(",
+    "local": ""
+  },
+  {
+    "origin": "src, dst, alpha[, mask]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Updates a running average.",
+    "local": ""
+  },
+  {
+    "origin": "The function calculates the weighted sum of the input image src and the accumulator dst so that dst becomes a running average of a frame sequence:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{dst} (x,y) \\leftarrow (1- \\texttt{alpha} ) \\cdot \\texttt{dst} (x,y) + \\texttt{alpha} \\cdot \\texttt{src} (x,y) \\quad \\text{if} \\quad \\texttt{mask} (x,y) \\ne 0\\]",
+    "local": ""
+  },
+  {
+    "origin": "That is, alpha regulates the update speed (how fast the accumulator \"forgets\" about earlier images). The function supports multi-channel images. Each channel is processed independently.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Input image as 1- or 3-channel, 8-bit or 32-bit floating point.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Accumulator image with the same number of channels as input image, 32-bit or 64-bit floating-point.",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "Weight of the input image.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Optional operation mask.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createHanningWindow()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::createHanningWindow",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "winSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.createHanningWindow(",
+    "local": ""
+  },
+  {
+    "origin": "winSize, type[, dst]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This function computes a Hanning window coefficients in two dimensions.",
+    "local": ""
+  },
+  {
+    "origin": "See (",
+    "local": ""
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Hann_function",
+    "local": ""
+  },
+  {
+    "origin": ") and (",
+    "local": ""
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Window_function",
+    "local": ""
+  },
+  {
+    "origin": ") for more information.",
+    "local": ""
+  },
+  {
+    "origin": "An example is shown below:",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Destination array to place Hann coefficients in",
+    "local": ""
+  },
+  {
+    "origin": "winSize",
+    "local": ""
+  },
+  {
+    "origin": "The window size specifications (both width and height must be &gt; 1)",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "Created array type",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "phaseCorrelate()",
+    "local": ""
+  },
+  {
+    "origin": "cv::phaseCorrelate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "window",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double *",
+    "local": ""
+  },
+  {
+    "origin": "response",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, response",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.phaseCorrelate(",
+    "local": ""
+  },
+  {
+    "origin": "src1, src2[, window]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "The function is used to detect translational shifts that occur between two images.",
+    "local": ""
+  },
+  {
+    "origin": "The operation takes advantage of the Fourier shift theorem for detecting the translational shift in the frequency domain. It can be used for fast image registration as well as motion estimation. For more information please see",
+    "local": ""
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Phase_correlation",
+    "local": ""
+  },
+  {
+    "origin": "Calculates the cross-power spectrum of two supplied source arrays. The arrays are padded if needed with getOptimalDFTSize.",
+    "local": ""
+  },
+  {
+    "origin": "The function performs the following equations:",
+    "local": ""
+  },
+  {
+    "origin": "First it applies a Hanning window (see",
+    "local": ""
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Hann_function",
+    "local": ""
+  },
+  {
+    "origin": ") to each image to remove possible edge effects. This window is cached until the array size changes to speed up processing time.",
+    "local": ""
+  },
+  {
+    "origin": "Next it computes the forward DFTs of each source array:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\mathbf{G}_a = \\mathcal{F}\\{src_1\\}, \\; \\mathbf{G}_b = \\mathcal{F}\\{src_2\\}\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\mathcal{F}\\) is the forward DFT.",
+    "local": ""
+  },
+  {
+    "origin": "It then computes the cross-power spectrum of each frequency domain array:",
+    "local": ""
+  },
+  {
+    "origin": "\\[R = \\frac{ \\mathbf{G}_a \\mathbf{G}_b^*}{|\\mathbf{G}_a \\mathbf{G}_b^*|}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Next the cross-correlation is converted back into the time domain via the inverse DFT:",
+    "local": ""
+  },
+  {
+    "origin": "\\[r = \\mathcal{F}^{-1}\\{R\\}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Finally, it computes the peak location and computes a 5x5 weighted centroid around the peak to achieve sub-pixel accuracy.",
+    "local": ""
+  },
+  {
+    "origin": "\\[(\\Delta x, \\Delta y) = \\texttt{weightedCentroid} \\{\\arg \\max_{(x, y)}\\{r\\}\\}\\]",
+    "local": ""
+  },
+  {
+    "origin": "If non-zero, the response parameter is computed as the sum of the elements of r within the 5x5 centroid around the peak location. It is normalized to a maximum of 1 (meaning there is a single peak) and will be smaller when there are multiple peaks.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": "Source floating point array (CV_32FC1 or CV_64FC1)",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": "Source floating point array (CV_32FC1 or CV_64FC1)",
+    "local": ""
+  },
+  {
+    "origin": "window",
+    "local": ""
+  },
+  {
+    "origin": "Floating point array with windowing coefficients to reduce edge effects (optional).",
+    "local": ""
+  },
+  {
+    "origin": "response",
+    "local": ""
+  },
+  {
+    "origin": "Signal power within the 5x5 centroid around the peak, between 0 and 1 (optional).",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "detected phase shift (sub-pixel) between the two arrays.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by",
+    "local": ""
+  }
+]

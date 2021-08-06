@@ -1,0 +1,514 @@
+[
+  {
+    "origin": "OpenCV: Conversion of PyTorch Classification Models and Launch with OpenCV Python",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Conversion of PyTorch Classification Models and Launch with OpenCV Python",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Anastasia Murzova",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "convert PyTorch classification models into ONNX format",
+    "local": ""
+  },
+  {
+    "origin": "run converted PyTorch model with OpenCV Python API",
+    "local": ""
+  },
+  {
+    "origin": "obtain an evaluation of the PyTorch and OpenCV DNN models.",
+    "local": ""
+  },
+  {
+    "origin": "We will explore the above-listed points by the example of the ResNet-50 architecture.",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "Let's briefly view the key concepts involved in the pipeline of PyTorch models transition with OpenCV API. The initial step in conversion of PyTorch models into",
+    "local": ""
+  },
+  {
+    "origin": "is model transferring into",
+    "local": ""
+  },
+  {
+    "origin": "ONNX",
+    "local": ""
+  },
+  {
+    "origin": "format. ONNX aims at the interchangeability of the neural networks between various frameworks. There is a built-in function in PyTorch for ONNX conversion:",
+    "local": ""
+  },
+  {
+    "origin": ". Further the obtained",
+    "local": ""
+  },
+  {
+    "origin": "model is passed into",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Requirements",
+    "local": ""
+  },
+  {
+    "origin": "To be able to experiment with the below code you will need to install a set of libraries. We will use a virtual environment with python3.7+ for this:",
+    "local": ""
+  },
+  {
+    "origin": "For OpenCV-Python building from source, follow the corresponding instructions from the",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Before you start the installation of the libraries, you can customize the",
+    "local": ""
+  },
+  {
+    "origin": "requirements.txt",
+    "local": ""
+  },
+  {
+    "origin": ", excluding or including (for example,",
+    "local": ""
+  },
+  {
+    "origin": ") some dependencies. The below line initiates requirements installation into the previously activated virtual environment:",
+    "local": ""
+  },
+  {
+    "origin": "Practice",
+    "local": ""
+  },
+  {
+    "origin": "In this part we are going to cover the following points:",
+    "local": ""
+  },
+  {
+    "origin": "create a classification model conversion pipeline and provide the inference",
+    "local": ""
+  },
+  {
+    "origin": "evaluate and test classification models",
+    "local": ""
+  },
+  {
+    "origin": "If you'd like merely to run evaluation or test model pipelines, the \"Model Conversion Pipeline\" part can be skipped.",
+    "local": ""
+  },
+  {
+    "origin": "Model Conversion Pipeline",
+    "local": ""
+  },
+  {
+    "origin": "The code in this subchapter is located in the",
+    "local": ""
+  },
+  {
+    "origin": "module and can be executed with the line:",
+    "local": ""
+  },
+  {
+    "origin": "The following code contains the description of the below-listed steps:",
+    "local": ""
+  },
+  {
+    "origin": "instantiate PyTorch model",
+    "local": ""
+  },
+  {
+    "origin": "convert PyTorch model into",
+    "local": ""
+  },
+  {
+    "origin": "read the transferred network with OpenCV API",
+    "local": ""
+  },
+  {
+    "origin": "prepare input data",
+    "local": ""
+  },
+  {
+    "origin": "provide inference",
+    "local": ""
+  },
+  {
+    "origin": "To provide model inference we will use the below",
+    "local": ""
+  },
+  {
+    "origin": "squirrel photo",
+    "local": ""
+  },
+  {
+    "origin": "(under",
+    "local": ""
+  },
+  {
+    "origin": "CC0",
+    "local": ""
+  },
+  {
+    "origin": "license) corresponding to ImageNet class ID 335:",
+    "local": ""
+  },
+  {
+    "origin": "Classification model input image",
+    "local": ""
+  },
+  {
+    "origin": "For the label decoding of the obtained prediction, we also need",
+    "local": ""
+  },
+  {
+    "origin": "file, which contains the full list of the ImageNet classes.",
+    "local": ""
+  },
+  {
+    "origin": "Let's go deeper into each step by the example of pretrained PyTorch ResNet-50:",
+    "local": ""
+  },
+  {
+    "origin": "instantiate PyTorch ResNet-50 model:",
+    "local": ""
+  },
+  {
+    "origin": "convert PyTorch model into ONNX:",
+    "local": ""
+  },
+  {
+    "origin": "After the successful execution of the above code, we will get",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "read the transferred network with",
+    "local": ""
+  },
+  {
+    "origin": "passing the obtained in the previous step ONNX model into it:",
+    "local": ""
+  },
+  {
+    "origin": "prepare input data:",
+    "local": ""
+  },
+  {
+    "origin": "In this step we read the image and prepare model input with",
+    "local": ""
+  },
+  {
+    "origin": "function, which returns 4-dimensional blob. It should be noted that firstly in",
+    "local": ""
+  },
+  {
+    "origin": "mean value is subtracted and only then pixel values are multiplied by scale. Thus,",
+    "local": ""
+  },
+  {
+    "origin": "is multiplied by",
+    "local": ""
+  },
+  {
+    "origin": "to reproduce the original image preprocessing order:",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "inference:",
+    "local": ""
+  },
+  {
+    "origin": "After the above code execution we will get the following output:",
+    "local": ""
+  },
+  {
+    "origin": "PyTorch ResNet-50 model inference:",
+    "local": ""
+  },
+  {
+    "origin": "After the above code launching we will get the following output:",
+    "local": ""
+  },
+  {
+    "origin": "The inference results of the original ResNet-50 model and",
+    "local": ""
+  },
+  {
+    "origin": "are equal. For the extended evaluation of the models we can use",
+    "local": ""
+  },
+  {
+    "origin": "of the",
+    "local": ""
+  },
+  {
+    "origin": "module. This module part will be described in the next subchapter.",
+    "local": ""
+  },
+  {
+    "origin": "Evaluation of the Models",
+    "local": ""
+  },
+  {
+    "origin": "The proposed in",
+    "local": ""
+  },
+  {
+    "origin": "module allows to run the full evaluation pipeline on the ImageNet dataset and test execution for the following PyTorch classification models:",
+    "local": ""
+  },
+  {
+    "origin": "alexnet",
+    "local": ""
+  },
+  {
+    "origin": "vgg11",
+    "local": ""
+  },
+  {
+    "origin": "vgg13",
+    "local": ""
+  },
+  {
+    "origin": "vgg16",
+    "local": ""
+  },
+  {
+    "origin": "vgg19",
+    "local": ""
+  },
+  {
+    "origin": "resnet18",
+    "local": ""
+  },
+  {
+    "origin": "resnet34",
+    "local": ""
+  },
+  {
+    "origin": "resnet50",
+    "local": ""
+  },
+  {
+    "origin": "resnet101",
+    "local": ""
+  },
+  {
+    "origin": "resnet152",
+    "local": ""
+  },
+  {
+    "origin": "squeezenet1_0",
+    "local": ""
+  },
+  {
+    "origin": "squeezenet1_1",
+    "local": ""
+  },
+  {
+    "origin": "resnext50_32x4d",
+    "local": ""
+  },
+  {
+    "origin": "resnext101_32x8d",
+    "local": ""
+  },
+  {
+    "origin": "wide_resnet50_2",
+    "local": ""
+  },
+  {
+    "origin": "wide_resnet101_2",
+    "local": ""
+  },
+  {
+    "origin": "This list can be also extended with further appropriate evaluation pipeline configuration.",
+    "local": ""
+  },
+  {
+    "origin": "Evaluation Mode",
+    "local": ""
+  },
+  {
+    "origin": "The below line represents running of the module in the evaluation mode:",
+    "local": ""
+  },
+  {
+    "origin": "Chosen from the list classification model will be read into OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "object. Evaluation results of PyTorch and OpenCV models (accuracy, inference time, L1) will be written into the log file. Inference time values will be also depicted in a chart to generalize the obtained model information.",
+    "local": ""
+  },
+  {
+    "origin": "Necessary evaluation configurations are defined in the",
+    "local": ""
+  },
+  {
+    "origin": "test_config.py",
+    "local": ""
+  },
+  {
+    "origin": "and can be modified in accordance with actual paths of data location:",
+    "local": ""
+  },
+  {
+    "origin": "To initiate the evaluation of the PyTorch ResNet-50, run the following line:",
+    "local": ""
+  },
+  {
+    "origin": "After script launch, the log file with evaluation data will be generated in",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Test Mode",
+    "local": ""
+  },
+  {
+    "origin": "The below line represents running of the module in the test mode, namely it provides the steps for the model inference:",
+    "local": ""
+  },
+  {
+    "origin": "Here",
+    "local": ""
+  },
+  {
+    "origin": "key defines whether you'd like to parametrize the model test process with some particular values or use the default values, for example,",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Test configuration is represented in",
+    "local": ""
+  },
+  {
+    "origin": "test_config.py",
+    "local": ""
+  },
+  {
+    "origin": "class:",
+    "local": ""
+  },
+  {
+    "origin": "The default image preprocessing options are defined in",
+    "local": ""
+  },
+  {
+    "origin": "default_preprocess_config.py",
+    "local": ""
+  },
+  {
+    "origin": ". For instance:",
+    "local": ""
+  },
+  {
+    "origin": "The basis of the model testing is represented in",
+    "local": ""
+  },
+  {
+    "origin": "samples/dnn/classification.py",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "can be executed autonomously with provided converted model in",
+    "local": ""
+  },
+  {
+    "origin": "and populated parameters for",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "To reproduce from scratch the described in \"Model Conversion Pipeline\" OpenCV steps with",
+    "local": ""
+  },
+  {
+    "origin": "execute the below line:",
+    "local": ""
+  },
+  {
+    "origin": "The network prediction is depicted in the top left corner of the output window:",
+    "local": ""
+  },
+  {
+    "origin": "ResNet50 OpenCV inference output",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

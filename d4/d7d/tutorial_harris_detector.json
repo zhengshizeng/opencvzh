@@ -1,0 +1,338 @@
+[
+  {
+    "origin": "OpenCV: Harris corner detector",
+    "local": "OpenCV:Harris角点检测器"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Harris corner detector",
+    "local": "Harris角点检测器"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "安娜·华曼"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": "在本教程中，您将学习："
+  },
+  {
+    "origin": "What features are and why they are important",
+    "local": "什么是功能以及为什么它们很重要"
+  },
+  {
+    "origin": "Use the function",
+    "local": "使用函数"
+  },
+  {
+    "origin": "to detect corners using the Harris-Stephens method.",
+    "local": "使用Harris-Stephens方法检测角点。"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "What is a feature?",
+    "local": "什么是功能？"
+  },
+  {
+    "origin": "In computer vision, usually we need to find matching points between different frames of an environment. Why? If we know how two images relate to each other, we can use",
+    "local": "在计算机视觉中，通常需要在环境的不同帧之间找到匹配点。为什么？如果我们知道两个图像之间的关系，我们可以使用"
+  },
+  {
+    "origin": "both",
+    "local": "二者都"
+  },
+  {
+    "origin": "images to extract information of them.",
+    "local": "图像来提取它们的信息。"
+  },
+  {
+    "origin": "When we say",
+    "local": "当我们说"
+  },
+  {
+    "origin": "matching points",
+    "local": "匹配点"
+  },
+  {
+    "origin": "we are referring, in a general sense, to",
+    "local": "在一般意义上，我们指的是"
+  },
+  {
+    "origin": "characteristics",
+    "local": "特点"
+  },
+  {
+    "origin": "in the scene that we can recognize easily. We call these characteristics",
+    "local": "在我们很容易辨认的场景中。我们称之为这些特征"
+  },
+  {
+    "origin": "features",
+    "local": "特征"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "So, what characteristics should a feature have?",
+    "local": "那么，一个功能应该具备哪些特征呢？"
+  },
+  {
+    "origin": "It must be",
+    "local": "一定是的"
+  },
+  {
+    "origin": "uniquely recognizable",
+    "local": "唯一可识别的"
+  },
+  {
+    "origin": "Types of Image Features",
+    "local": "图像特征类型"
+  },
+  {
+    "origin": "To mention a few:",
+    "local": "举几个例子："
+  },
+  {
+    "origin": "Edges",
+    "local": "边缘"
+  },
+  {
+    "origin": "Corners",
+    "local": "角"
+  },
+  {
+    "origin": "(also known as interest points)",
+    "local": "（也称为兴趣点）"
+  },
+  {
+    "origin": "Blobs (also known as regions of interest )",
+    "local": "斑点（也称为感兴趣区域）"
+  },
+  {
+    "origin": "In this tutorial we will study the",
+    "local": "在本教程中，我们将研究"
+  },
+  {
+    "origin": "corner",
+    "local": "角"
+  },
+  {
+    "origin": "features, specifically.",
+    "local": "特别是功能。"
+  },
+  {
+    "origin": "Why is a corner so special?",
+    "local": "为什么一个角落如此特别？"
+  },
+  {
+    "origin": "Because, since it is the intersection of two edges, it represents a point in which the directions of these two edges",
+    "local": "因为，因为它是两条边的交集，所以它代表一个点，这两条边的方向"
+  },
+  {
+    "origin": "change",
+    "local": "改变"
+  },
+  {
+    "origin": ". Hence, the gradient of the image (in both directions) have a high variation, which can be used to detect it.",
+    "local": ". 因此，图像的梯度（在两个方向上）具有高变化，这可用于检测它。"
+  },
+  {
+    "origin": "How does it work?",
+    "local": "它是如何工作的？"
+  },
+  {
+    "origin": "Let's look for corners. Since corners represents a variation in the gradient in the image, we will look for this \"variation\".",
+    "local": "让我们找个角落。由于角点代表图像中梯度的变化，我们将寻找这种“变化”。"
+  },
+  {
+    "origin": "Consider a grayscale image \\(I\\). We are going to sweep a window \\(w(x,y)\\) (with displacements \\(u\\) in the x direction and \\(v\\) in the y direction) \\(I\\) and will calculate the variation of intensity.",
+    "local": "考虑灰度图像\\（I\\）。我们将扫描一个窗口（w（x，y）\\）（x方向的位移为u，y方向的位移为v），然后计算强度的变化。"
+  },
+  {
+    "origin": "\\[E(u,v) = \\sum _{x,y} w(x,y)[ I(x+u,y+v) - I(x,y)]^{2}\\]",
+    "local": "[E（u，v）=\\sum{x，y}w（x，y）[I（x+u，y+v）-I（x，y）]^{2}\\]"
+  },
+  {
+    "origin": "where:",
+    "local": "哪里："
+  },
+  {
+    "origin": "\\(w(x,y)\\) is the window at position \\((x,y)\\)",
+    "local": "\\（w（x，y）\\）是位置\\（（x，y）\\）的窗口"
+  },
+  {
+    "origin": "\\(I(x,y)\\) is the intensity at \\((x,y)\\)",
+    "local": "\\（I（x，y）\\）是\\（（x，y）\\）处的强度"
+  },
+  {
+    "origin": "\\(I(x+u,y+v)\\) is the intensity at the moved window \\((x+u,y+v)\\)",
+    "local": "\\（I（x+u，y+v）\\）是移动窗口处的强度\\（（x+u，y+v）\\）"
+  },
+  {
+    "origin": "Since we are looking for windows with corners, we are looking for windows with a large variation in intensity. Hence, we have to maximize the equation above, specifically the term:",
+    "local": "因为我们要找的是有角的窗户，所以我们要找的是强度变化很大的窗户。因此，我们必须最大化上述方程，特别是："
+  },
+  {
+    "origin": "\\[\\sum _{x,y}[ I(x+u,y+v) - I(x,y)]^{2}\\]",
+    "local": "\\[\\sum{x，y}[I（x+u，y+v）-I（x，y）]^{2}]"
+  },
+  {
+    "origin": "Using",
+    "local": "使用"
+  },
+  {
+    "origin": "Taylor expansion",
+    "local": "泰勒展开"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "\\[E(u,v) \\approx \\sum _{x,y}[ I(x,y) + u I_{x} + vI_{y} - I(x,y)]^{2}\\]",
+    "local": "[E（u，v）\\approx\\sum{x，y}[I（x，y）+和I{x}+vI{y}-I（x，y）]^{2}\\]"
+  },
+  {
+    "origin": "Expanding the equation and cancelling properly:",
+    "local": "展开公式并适当取消："
+  },
+  {
+    "origin": "\\[E(u,v) \\approx \\sum _{x,y} u^{2}I_{x}^{2} + 2uvI_{x}I_{y} + v^{2}I_{y}^{2}\\]",
+    "local": "\\\\[E（u，v）\\approx\\sum{x，y}u^{2}I{x}^{2}+2uvI{x}I{y}+v^{2}I{y}\\]"
+  },
+  {
+    "origin": "Which can be expressed in a matrix form as:",
+    "local": "可以矩阵形式表示为："
+  },
+  {
+    "origin": "\\[E(u,v) \\approx \\begin{bmatrix} u &amp; v \\end{bmatrix} \\left ( \\displaystyle \\sum_{x,y} w(x,y) \\begin{bmatrix} I_x^{2} &amp; I_{x}I_{y} \\\\ I_xI_{y} &amp; I_{y}^{2} \\end{bmatrix} \\right ) \\begin{bmatrix} u \\\\ v \\end{bmatrix}\\]",
+    "local": "\\[E（u，v）\\approx\\begin{bmatrix}u&amp；v\\end{bmatrix}\\left（\\displaystyle\\sum{x，y}w（x，y）\\begin{bmatrix}I{x^{2}&amp；I{x}I{y}\\\\I{xI{y}&amp；I{y}^{2}\\end{bmatrix}\\right）\\begin{bmatrix}u\\\\v\\end{bmatrix}\\]"
+  },
+  {
+    "origin": "Let's denote:",
+    "local": "让我们表示："
+  },
+  {
+    "origin": "\\[M = \\displaystyle \\sum_{x,y} w(x,y) \\begin{bmatrix} I_x^{2} &amp; I_{x}I_{y} \\\\ I_xI_{y} &amp; I_{y}^{2} \\end{bmatrix}\\]",
+    "local": "\\[M=\\displaystyle\\sum{x，y}w（x，y）\\begin{bmatrix}I{x^{2}&amp；I{x}I{y}\\\\I{xI{y}&amp；I{y}^{2}\\end{bmatrix}\\]"
+  },
+  {
+    "origin": "So, our equation now is:",
+    "local": "我们现在的方程是："
+  },
+  {
+    "origin": "\\[E(u,v) \\approx \\begin{bmatrix} u &amp; v \\end{bmatrix} M \\begin{bmatrix} u \\\\ v \\end{bmatrix}\\]",
+    "local": "\\[E（u，v）\\approx\\begin{bmatrix}u&amp；v\\end{bmatrix}M\\begin{bmatrix}u\\\\v\\end{bmatrix}\\]"
+  },
+  {
+    "origin": "A score is calculated for each window, to determine if it can possibly contain a corner:",
+    "local": "为每个窗口计算一个分数，以确定它是否可能包含一个角点："
+  },
+  {
+    "origin": "\\[R = det(M) - k(trace(M))^{2}\\]",
+    "local": "[R=de（M）-k（迹（M）^{2}]"
+  },
+  {
+    "origin": "where:",
+    "local": "哪里："
+  },
+  {
+    "origin": "det(M) = \\(\\lambda_{1}\\lambda_{2}\\)",
+    "local": "它是=\\（\\lambda{1}\\lambda{2}\\"
+  },
+  {
+    "origin": "trace(M) = \\(\\lambda_{1}+\\lambda_{2}\\)",
+    "local": "迹（M）=\\（\\lambda{1}+\\lambda{2}\\）"
+  },
+  {
+    "origin": "a window with a score \\(R\\) greater than a certain value is considered a \"corner\"",
+    "local": "分数\\（R\\）大于某个值的窗口被视为“角点”"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": "本教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": "本教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": "本教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Result",
+    "local": "结果"
+  },
+  {
+    "origin": "The original image:",
+    "local": "原始图像："
+  },
+  {
+    "origin": "The detected corners are surrounded by a small black circle",
+    "local": "检测到的角被一个小的黑色圆圈包围"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

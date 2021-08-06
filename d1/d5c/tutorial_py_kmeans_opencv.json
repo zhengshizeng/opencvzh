@@ -1,0 +1,278 @@
+[
+  {
+    "origin": "OpenCV: K-Means Clustering in OpenCV",
+    "local": "OpenCV:OpenCV中的K-均值聚类"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "K-Means Clustering in OpenCV",
+    "local": "OpenCV中的K-均值聚类"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "Learn to use",
+    "local": "学会使用"
+  },
+  {
+    "origin": "function in OpenCV for data clustering",
+    "local": "OpenCV中的数据聚类函数"
+  },
+  {
+    "origin": "Understanding Parameters",
+    "local": "了解参数"
+  },
+  {
+    "origin": "Input parameters",
+    "local": "输入参数"
+  },
+  {
+    "origin": "samples",
+    "local": "样品"
+  },
+  {
+    "origin": ": It should be of",
+    "local": "：应该是"
+  },
+  {
+    "origin": "np.float32",
+    "local": "第32页"
+  },
+  {
+    "origin": "data type, and each feature should be put in a single column.",
+    "local": "数据类型，每个特性应放在一个列中。"
+  },
+  {
+    "origin": "nclusters(K)",
+    "local": "NClusters（K）"
+  },
+  {
+    "origin": ": Number of clusters required at end",
+    "local": "：结束时所需的群集数"
+  },
+  {
+    "origin": "criteria",
+    "local": "标准"
+  },
+  {
+    "origin": ": It is the iteration termination criteria. When this criteria is satisfied, algorithm iteration stops. Actually, it should be a tuple of 3 parameters. They are `( type, max_iter, epsilon )`:",
+    "local": "：它是迭代终止条件。当满足此条件时，算法迭代停止。实际上，它应该是由3个参数组成的元组。它们是`（类型，最大值，ε）`："
+  },
+  {
+    "origin": "type of termination criteria. It has 3 flags as below:",
+    "local": "终止标准的类型。它有3个标志，如下所示："
+  },
+  {
+    "origin": "cv.TERM_CRITERIA_EPS",
+    "local": "cv.TERM\\U标准\\U EPS"
+  },
+  {
+    "origin": "- stop the algorithm iteration if specified accuracy,",
+    "local": "-如果指定精度，停止算法迭代，"
+  },
+  {
+    "origin": "epsilon",
+    "local": "ε"
+  },
+  {
+    "origin": ", is reached.",
+    "local": "，已到达。"
+  },
+  {
+    "origin": "cv.TERM_CRITERIA_MAX_ITER",
+    "local": "cv.TERM\\标准\\最大\\ ITER"
+  },
+  {
+    "origin": "- stop the algorithm after the specified number of iterations,",
+    "local": "-在指定的迭代次数后停止算法，"
+  },
+  {
+    "origin": "max_iter",
+    "local": "最大值"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "cv.TERM_CRITERIA_EPS + cv.TERM_CRITERIA_MAX_ITER",
+    "local": "cv.TERM\\标准\\U EPS+cv.TERM\\标准\\U MAX\\ ITER"
+  },
+  {
+    "origin": "- stop the iteration when any of the above condition is met.",
+    "local": "-当满足上述任一条件时停止迭代。"
+  },
+  {
+    "origin": "max_iter - An integer specifying maximum number of iterations.",
+    "local": "最大迭代次数-指定最大迭代次数的整数。"
+  },
+  {
+    "origin": "epsilon - Required accuracy",
+    "local": "ε-所需精度"
+  },
+  {
+    "origin": "attempts",
+    "local": "尝试"
+  },
+  {
+    "origin": ": Flag to specify the number of times the algorithm is executed using different initial labellings. The algorithm returns the labels that yield the best compactness. This compactness is returned as output.",
+    "local": "：用于指定使用不同初始标签执行算法的次数的标志。该算法返回产生最佳紧性的标签。这个紧性作为输出返回。"
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": ": This flag is used to specify how initial centers are taken. Normally two flags are used for this :",
+    "local": "：此标志用于指定如何获取初始中心。通常使用两个标志："
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Output parameters",
+    "local": "输出参数"
+  },
+  {
+    "origin": "compactness",
+    "local": "紧致度"
+  },
+  {
+    "origin": ": It is the sum of squared distance from each point to their corresponding centers.",
+    "local": "：它是从每个点到其相应中心的距离平方和。"
+  },
+  {
+    "origin": "labels",
+    "local": "标签"
+  },
+  {
+    "origin": "centers",
+    "local": "中心"
+  },
+  {
+    "origin": ": This is array of centers of clusters.",
+    "local": "：这是群集中心的数组。"
+  },
+  {
+    "origin": "Now we will see how to apply K-Means algorithm with three examples.",
+    "local": "现在我们将通过三个例子来了解如何应用K-Means算法。"
+  },
+  {
+    "origin": "1. Data with Only One Feature",
+    "local": "1.只有一个特征的数据"
+  },
+  {
+    "origin": "Consider, you have a set of data with only one feature, ie one-dimensional. For eg, we can take our t-shirt problem where you use only height of people to decide the size of t-shirt.",
+    "local": "考虑一下，你有一组只有一个特征的数据，即一维的。例如，我们可以拿我们的t恤问题来说，你只用人的身高来决定t恤的尺寸。"
+  },
+  {
+    "origin": "So we start by creating data and plot it in Matplotlib",
+    "local": "因此，我们首先创建数据并在Matplotlib中绘制它"
+  },
+  {
+    "origin": "So we have 'z' which is an array of size 50, and values ranging from 0 to 255. I have reshaped 'z' to a column vector. It will be more useful when more than one features are present. Then I made data of np.float32 type.",
+    "local": "所以我们有一个50大小的数组，它的值从0到255，我把z改成了一个列向量。当存在多个特性时，它将更有用。然后我制作了np.float32类型的数据。"
+  },
+  {
+    "origin": "We get following image :",
+    "local": "我们得到以下图像："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Now we apply the KMeans function. Before that we need to specify the criteria. My criteria is such that, whenever 10 iterations of algorithm is ran, or an accuracy of epsilon = 1.0 is reached, stop the algorithm and return the answer.",
+    "local": "现在我们应用KMeans函数。在此之前，我们需要明确标准。我的标准是，每当运行10次算法迭代，或达到epsilon=1.0的精度时，停止算法并返回答案。"
+  },
+  {
+    "origin": "This gives us the compactness, labels and centers. In this case, I got centers as 60 and 207. Labels will have the same size as that of test data where each data will be labelled as '0','1','2' etc. depending on their centroids. Now we split the data to different clusters depending on their labels.",
+    "local": "这给了我们紧凑性，标签和中心。在本例中，我得到的中心是60和207。标签的大小将与测试数据的大小相同，其中每个数据将被标记为“0”、“1”、“2”等，具体取决于它们的质心。现在，我们根据标签将数据拆分为不同的簇。"
+  },
+  {
+    "origin": "Now we plot A in Red color and B in Blue color and their centroids in Yellow color.",
+    "local": "现在我们用红色绘制A，用蓝色绘制B，用黄色绘制它们的质心。"
+  },
+  {
+    "origin": "Below is the output we got:",
+    "local": "下面是我们得到的结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "2. Data with Multiple Features",
+    "local": "2.多特征数据"
+  },
+  {
+    "origin": "In previous example, we took only height for t-shirt problem. Here, we will take both height and weight, ie two features.",
+    "local": "在前面的例子中，我们只考虑了t恤问题的高度。在这里，我们将同时考虑身高和体重。"
+  },
+  {
+    "origin": "Remember, in previous case, we made our data to a single column vector. Each feature is arranged in a column, while each row corresponds to an input test sample.",
+    "local": "记住，在前面的例子中，我们将数据转换为一个列向量。每个特征排列在一列中，而每行对应于一个输入测试样本。"
+  },
+  {
+    "origin": "For example, in this case, we set a test data of size 50x2, which are heights and weights of 50 people. First column corresponds to height of all the 50 people and second column corresponds to their weights. First row contains two elements where first one is the height of first person and second one his weight. Similarly remaining rows corresponds to heights and weights of other people. Check image below:",
+    "local": "例如，在本例中，我们设置了一个大小为50x2的测试数据，即50人的身高和体重。第一栏对应50个人的身高，第二栏对应他们的体重。第一行包含两个元素，其中第一个是第一个人的身高，第二个是他的体重。类似地，其余的行对应于其他人的身高和体重。检查下面的图像："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Now I am directly moving to the code:",
+    "local": "现在我直接转到代码："
+  },
+  {
+    "origin": "Below is the output we get:",
+    "local": "下面是我们得到的结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "3. Color Quantization",
+    "local": "3.颜色量化"
+  },
+  {
+    "origin": "Color Quantization is the process of reducing number of colors in an image. One reason to do so is to reduce the memory. Sometimes, some devices may have limitation such that it can produce only limited number of colors. In those cases also, color quantization is performed. Here we use k-means clustering for color quantization.",
+    "local": "颜色量化是减少图像中颜色数量的过程。这样做的一个原因是为了减少内存。有时，一些设备可能有限制，使其只能产生有限数量的颜色。在这些情况下，还执行颜色量化。这里我们使用k-均值聚类进行颜色量化。"
+  },
+  {
+    "origin": "There is nothing new to be explained here. There are 3 features, say, R,G,B. So we need to reshape the image to an array of Mx3 size (M is number of pixels in image). And after the clustering, we apply centroid values (it is also R,G,B) to all pixels, such that resulting image will have specified number of colors. And again we need to reshape it back to the shape of original image. Below is the code:",
+    "local": "这里没有什么新的解释。有3个特征，比如R，G，B。所以我们需要将图像重塑为Mx3大小的数组（M是图像中的像素数）。在聚类之后，我们将质心值（也是R，G，B）应用于所有像素，这样得到的图像将具有指定数量的颜色。我们再次需要把它重塑成原始图像的形状。代码如下："
+  },
+  {
+    "origin": "See the result below for K=8:",
+    "local": "K=8见下表："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Exercises",
+    "local": "练习"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

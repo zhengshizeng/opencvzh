@@ -1,0 +1,94 @@
+[
+  {
+    "origin": "OpenCV: Tesseract (master) installation by using git-bash (version&gt;=2.14.1) and cmake (version &gt;=3.9.1)",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Tesseract (master) installation by using git-bash (version&gt;=2.14.1) and cmake (version &gt;=3.9.1)",
+    "local": ""
+  },
+  {
+    "origin": "We assume you installed opencv and opencv_contrib in c:/lib using [this tutorials](",
+    "local": ""
+  },
+  {
+    "origin": "http://docs.opencv.org/master/d3/d52/tutorial_windows_install.html#tutorial_windows_gitbash_build",
+    "local": ""
+  },
+  {
+    "origin": "]",
+    "local": ""
+  },
+  {
+    "origin": "You must download",
+    "local": ""
+  },
+  {
+    "origin": "png lib",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "zlib",
+    "local": ""
+  },
+  {
+    "origin": ". Uncompress lpngx.y.zz in folder lpng and zlib in folder zlib. lpng and zlib must be in same folder as opencv and opencv_contrib. save this script with name installpngzlib.sh in c:/lib",
+    "local": ""
+  },
+  {
+    "origin": "In git command line enter the following command :",
+    "local": ""
+  },
+  {
+    "origin": "save this script with name installTesseract.sh in c:/lib",
+    "local": ""
+  },
+  {
+    "origin": "In this script I suppose you use VS 2015 in 64 bits",
+    "local": ""
+  },
+  {
+    "origin": "and leptonica, tesseract will be installed in c:/lib/install",
+    "local": ""
+  },
+  {
+    "origin": "with no Perf tests, no tests, no doc, no CUDA and no example",
+    "local": ""
+  },
+  {
+    "origin": "In git command line enter the following command :",
+    "local": ""
+  },
+  {
+    "origin": "now we need the language files from tesseract. either clone",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/tesseract-ocr/tessdata,",
+    "local": ""
+  },
+  {
+    "origin": "or copy only those language files you need to a folder (example c:\\lib\\install\\tesseract\\tessdata). If you don't want to add a new folder you must copy language file in same folder than your executable",
+    "local": ""
+  },
+  {
+    "origin": "if you created a new folder, then you must add a new variable, TESSDATA_PREFIX with the value c:\\lib\\install\\tessdata to your system's environment",
+    "local": ""
+  },
+  {
+    "origin": "add c:\\Lib\\install\\leptonica\\bin and c:\\Lib\\install\\tesseract\\bin to your PATH environment. If you don't want to modify the PATH then copy tesseract400.dll and leptonica-1.74.4.dll to the same folder than your exe file.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": ""
+  }
+]

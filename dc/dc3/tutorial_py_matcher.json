@@ -1,0 +1,222 @@
+[
+  {
+    "origin": "OpenCV: Feature Matching",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Feature Matching",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this chapter",
+    "local": ""
+  },
+  {
+    "origin": "We will see how to match features in one image with others.",
+    "local": ""
+  },
+  {
+    "origin": "We will use the Brute-Force matcher and FLANN Matcher in OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Basics of Brute-Force Matcher",
+    "local": ""
+  },
+  {
+    "origin": "Brute-Force matcher is simple. It takes the descriptor of one feature in first set and is matched with all other features in second set using some distance calculation. And the closest one is returned.",
+    "local": ""
+  },
+  {
+    "origin": "For BF matcher, first we have to create the BFMatcher object using",
+    "local": ""
+  },
+  {
+    "origin": ". It takes two optional params. First one is normType. It specifies the distance measurement to be used. By default, it is",
+    "local": ""
+  },
+  {
+    "origin": ". It is good for SIFT, SURF etc (",
+    "local": ""
+  },
+  {
+    "origin": "is also there). For binary string based descriptors like ORB, BRIEF, BRISK etc,",
+    "local": ""
+  },
+  {
+    "origin": "should be used, which used Hamming distance as measurement. If ORB is using WTA_K == 3 or 4,",
+    "local": ""
+  },
+  {
+    "origin": "should be used.",
+    "local": ""
+  },
+  {
+    "origin": "Second param is boolean variable, crossCheck which is false by default. If it is true, Matcher returns only those matches with value (i,j) such that i-th descriptor in set A has j-th descriptor in set B as the best match and vice-versa. That is, the two features in both sets should match each other. It provides consistent result, and is a good alternative to ratio test proposed by D.Lowe in SIFT paper.",
+    "local": ""
+  },
+  {
+    "origin": "Once it is created, two important methods are",
+    "local": ""
+  },
+  {
+    "origin": "BFMatcher.match()",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "BFMatcher.knnMatch()",
+    "local": ""
+  },
+  {
+    "origin": ". First one returns the best match. Second method returns k best matches where k is specified by the user. It may be useful when we need to do additional work on that.",
+    "local": ""
+  },
+  {
+    "origin": "Like we used",
+    "local": ""
+  },
+  {
+    "origin": "to draw keypoints,",
+    "local": ""
+  },
+  {
+    "origin": "helps us to draw the matches. It stacks two images horizontally and draw lines from first image to second image showing best matches. There is also",
+    "local": ""
+  },
+  {
+    "origin": "cv.drawMatchesKnn",
+    "local": ""
+  },
+  {
+    "origin": "which draws all the k best matches. If k=2, it will draw two match-lines for each keypoint. So we have to pass a mask if we want to selectively draw it.",
+    "local": ""
+  },
+  {
+    "origin": "Let's see one example for each of SIFT and ORB (Both use different distance measurements).",
+    "local": ""
+  },
+  {
+    "origin": "Brute-Force Matching with ORB Descriptors",
+    "local": ""
+  },
+  {
+    "origin": "Here, we will see a simple example on how to match features between two images. In this case, I have a queryImage and a trainImage. We will try to find the queryImage in trainImage using feature matching. ( The images are /samples/data/box.png and /samples/data/box_in_scene.png)",
+    "local": ""
+  },
+  {
+    "origin": "We are using ORB descriptors to match features. So let's start with loading images, finding descriptors etc.",
+    "local": ""
+  },
+  {
+    "origin": "Next we create a BFMatcher object with distance measurement",
+    "local": ""
+  },
+  {
+    "origin": "(since we are using ORB) and crossCheck is switched on for better results. Then we use Matcher.match() method to get the best matches in two images. We sort them in ascending order of their distances so that best matches (with low distance) come to front. Then we draw only first 10 matches (Just for sake of visibility. You can increase it as you like)",
+    "local": ""
+  },
+  {
+    "origin": "Below is the result I got:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "What is this Matcher Object?",
+    "local": ""
+  },
+  {
+    "origin": "The result of matches = bf.match(des1,des2) line is a list of DMatch objects. This DMatch object has following attributes:",
+    "local": ""
+  },
+  {
+    "origin": "DMatch.distance - Distance between descriptors. The lower, the better it is.",
+    "local": ""
+  },
+  {
+    "origin": "DMatch.trainIdx - Index of the descriptor in train descriptors",
+    "local": ""
+  },
+  {
+    "origin": "DMatch.queryIdx - Index of the descriptor in query descriptors",
+    "local": ""
+  },
+  {
+    "origin": "DMatch.imgIdx - Index of the train image.",
+    "local": ""
+  },
+  {
+    "origin": "Brute-Force Matching with SIFT Descriptors and Ratio Test",
+    "local": ""
+  },
+  {
+    "origin": "This time, we will use BFMatcher.knnMatch() to get k best matches. In this example, we will take k=2 so that we can apply ratio test explained by D.Lowe in his paper.",
+    "local": ""
+  },
+  {
+    "origin": "See the result below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "FLANN based Matcher",
+    "local": ""
+  },
+  {
+    "origin": "FLANN stands for Fast Library for Approximate Nearest Neighbors. It contains a collection of algorithms optimized for fast nearest neighbor search in large datasets and for high dimensional features. It works faster than BFMatcher for large datasets. We will see the second example with FLANN based matcher.",
+    "local": ""
+  },
+  {
+    "origin": "For FLANN based matcher, we need to pass two dictionaries which specifies the algorithm to be used, its related parameters etc. First one is IndexParams. For various algorithms, the information to be passed is explained in FLANN docs. As a summary, for algorithms like SIFT, SURF etc. you can pass following:",
+    "local": ""
+  },
+  {
+    "origin": "While using ORB, you can pass the following. The commented values are recommended as per the docs, but it didn't provide required results in some cases. Other values worked fine.:",
+    "local": ""
+  },
+  {
+    "origin": "Second dictionary is the SearchParams. It specifies the number of times the trees in the index should be recursively traversed. Higher values gives better precision, but also takes more time. If you want to change the value, pass search_params = dict(checks=100).",
+    "local": ""
+  },
+  {
+    "origin": "With this information, we are good to go.",
+    "local": ""
+  },
+  {
+    "origin": "See the result below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

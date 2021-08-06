@@ -1,0 +1,2630 @@
+[
+  {
+    "origin": "OpenCV: cv::cuda::DescriptorMatcher Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::DescriptorMatcher Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "abstract",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Abstract base class for matching keypoint descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::cuda::DescriptorMatcher:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Adds descriptors to train a descriptor collection.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Clears the train descriptor collection.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Returns true if there are no train descriptors in the collection.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Returns a constant link to the train descriptor collection.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Returns true if the descriptor matcher supports masking permissible matches.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;matches, int k,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "Finds the k best matches for each descriptor from a query set (blocking version).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;matches, int k, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;masks=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "matches, int k,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "&amp;stream=",
+    "local": ""
+  },
+  {
+    "origin": "Finds the k best matches for each descriptor from a query set (asynchronous version).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "matches, int k, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;masks=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;(),",
+    "local": ""
+  },
+  {
+    "origin": "&amp;stream=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "gpu_matches, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Converts matches array from internal representation to standard matches vector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;matches,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "Finds the best match for each descriptor from a query set (blocking version).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;matches, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;masks=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "matches,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "&amp;stream=",
+    "local": ""
+  },
+  {
+    "origin": "Finds the best match for each descriptor from a query set (asynchronous version).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "matches, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;masks=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;(),",
+    "local": ""
+  },
+  {
+    "origin": "&amp;stream=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "gpu_matches, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Converts matches array from internal representation to standard matches vector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;matches, float maxDistance,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "For each query descriptor, finds the training descriptors not farther than the specified distance (blocking version).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;matches, float maxDistance, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;masks=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "matches, float maxDistance,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "(),",
+    "local": ""
+  },
+  {
+    "origin": "&amp;stream=",
+    "local": ""
+  },
+  {
+    "origin": "For each query descriptor, finds the training descriptors not farther than the specified distance (asynchronous version).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors,",
+    "local": ""
+  },
+  {
+    "origin": "matches, float maxDistance, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;masks=std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;(),",
+    "local": ""
+  },
+  {
+    "origin": "&amp;stream=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "gpu_matches, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Converts matches array from internal representation to standard matches vector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Trains a descriptor matcher.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": ""
+  },
+  {
+    "origin": "Reads algorithm parameters from a file storage.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename) const",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": ""
+  },
+  {
+    "origin": "Stores algorithm parameters in a file storage.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;fs, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;name=",
+    "local": ""
+  },
+  {
+    "origin": "()) const",
+    "local": ""
+  },
+  {
+    "origin": "simplified API for language bindings This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(int normType=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Brute-force descriptor matcher.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Static Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Loads algorithm from the file.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;strModel, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;objname=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Loads algorithm from a String.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fn)",
+    "local": ""
+  },
+  {
+    "origin": "Reads algorithm from the file node.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Protected Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;fs) const",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Abstract base class for matching keypoint descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "It has two groups of match methods: for matching descriptors of an image with another image or with an image set.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "add()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::add",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Adds descriptors to train a descriptor collection.",
+    "local": ""
+  },
+  {
+    "origin": "If the collection is not empty, the new descriptors are added to existing train descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": "Descriptors to add. Each descriptors[i] is a set of descriptors from the same train image.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "clear()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::clear",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Clears the train descriptor collection.",
+    "local": ""
+  },
+  {
+    "origin": "Reimplemented from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createBFMatcher()",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::cuda::DescriptorMatcher::createBFMatcher",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "normType",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Brute-force descriptor matcher.",
+    "local": ""
+  },
+  {
+    "origin": "For each descriptor in the first set, this matcher finds the closest descriptor in the second set by trying each one. This descriptor matcher supports masking permissible matches of descriptor sets.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "normType",
+    "local": ""
+  },
+  {
+    "origin": "One of NORM_L1, NORM_L2, NORM_HAMMING.",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "norms are preferable choices for",
+    "local": ""
+  },
+  {
+    "origin": "and SURF descriptors, NORM_HAMMING should be used with",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "and BRIEF).",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "empty()",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool cv::cuda::DescriptorMatcher::empty",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Returns true if there are no train descriptors in the collection.",
+    "local": ""
+  },
+  {
+    "origin": "Reimplemented from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getTrainDescriptors()",
+    "local": ""
+  },
+  {
+    "origin": "virtual const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;&amp; cv::cuda::DescriptorMatcher::getTrainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Returns a constant link to the train descriptor collection.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "isMaskSupported()",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool cv::cuda::DescriptorMatcher::isMaskSupported",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Returns true if the descriptor matcher supports masking permissible matches.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "knnMatch()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::knnMatch",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "compactResult",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Finds the k best matches for each descriptor from a query set (blocking version).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Query set of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Train set of descriptors. This set is not added to the train descriptors collection stored in the class object.",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": "Matches. Each matches[i] is k or less matches for the same query descriptor.",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "Count of best matches found per each query descriptor or less if a query descriptor has less than k possible matches in total.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Mask specifying permissible matches between an input query and train matrices of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "compactResult",
+    "local": ""
+  },
+  {
+    "origin": "Parameter used when the mask (or masks) is not empty. If compactResult is false, the matches vector has the same size as queryDescriptors rows. If compactResult is true, the matches vector does not contain matches for fully masked-out query descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "These extended variants of",
+    "local": ""
+  },
+  {
+    "origin": "methods find several best matches for each query descriptor. The matches are returned in the distance increasing order. See",
+    "local": ""
+  },
+  {
+    "origin": "for the details about query and train descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "knnMatch()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::knnMatch",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "masks",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "compactResult",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "knnMatchAsync()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::knnMatchAsync",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "stream",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Finds the k best matches for each descriptor from a query set (asynchronous version).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Query set of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Train set of descriptors. This set is not added to the train descriptors collection stored in the class object.",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": "Matches array stored in GPU memory. Internal representation is not defined. Use",
+    "local": ""
+  },
+  {
+    "origin": "method to retrieve results in standard representation.",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "Count of best matches found per each query descriptor or less if a query descriptor has less than k possible matches in total.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Mask specifying permissible matches between an input query and train matrices of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "stream",
+    "local": ""
+  },
+  {
+    "origin": "CUDA stream.",
+    "local": ""
+  },
+  {
+    "origin": "These extended variants of",
+    "local": ""
+  },
+  {
+    "origin": "methods find several best matches for each query descriptor. The matches are returned in the distance increasing order. See",
+    "local": ""
+  },
+  {
+    "origin": "for the details about query and train descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "knnMatchAsync()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::knnMatchAsync",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "masks",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "stream",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "knnMatchConvert()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::knnMatchConvert",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "gpu_matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "compactResult",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Converts matches array from internal representation to standard matches vector.",
+    "local": ""
+  },
+  {
+    "origin": "The method is supposed to be used with",
+    "local": ""
+  },
+  {
+    "origin": "to get final result. Call this method only after",
+    "local": ""
+  },
+  {
+    "origin": "is completed (ie. after synchronization).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "gpu_matches",
+    "local": ""
+  },
+  {
+    "origin": "Matches, returned from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": "Vector of",
+    "local": ""
+  },
+  {
+    "origin": "objects.",
+    "local": ""
+  },
+  {
+    "origin": "compactResult",
+    "local": ""
+  },
+  {
+    "origin": "Parameter used when the mask (or masks) is not empty. If compactResult is false, the matches vector has the same size as queryDescriptors rows. If compactResult is true, the matches vector does not contain matches for fully masked-out query descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "match()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::match",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Finds the best match for each descriptor from a query set (blocking version).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Query set of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Train set of descriptors. This set is not added to the train descriptors collection stored in the class object.",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": "Matches. If a query descriptor is masked out in mask , no match is added for this descriptor. So, matches size may be smaller than the query descriptors count.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Mask specifying permissible matches between an input query and train matrices of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "In the first variant of this method, the train descriptors are passed as an input argument. In the second variant of the method, train descriptors collection that was set by",
+    "local": ""
+  },
+  {
+    "origin": "is used. Optional mask (or masks) can be passed to specify which query and training descriptors can be matched. Namely, queryDescriptors[i] can be matched with trainDescriptors[j] only if mask.at&lt;uchar&gt;(i,j) is non-zero.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "match()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::match",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "masks",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "matchAsync()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::matchAsync",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "stream",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Finds the best match for each descriptor from a query set (asynchronous version).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Query set of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Train set of descriptors. This set is not added to the train descriptors collection stored in the class object.",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": "Matches array stored in GPU memory. Internal representation is not defined. Use",
+    "local": ""
+  },
+  {
+    "origin": "method to retrieve results in standard representation.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Mask specifying permissible matches between an input query and train matrices of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "stream",
+    "local": ""
+  },
+  {
+    "origin": "CUDA stream.",
+    "local": ""
+  },
+  {
+    "origin": "In the first variant of this method, the train descriptors are passed as an input argument. In the second variant of the method, train descriptors collection that was set by",
+    "local": ""
+  },
+  {
+    "origin": "is used. Optional mask (or masks) can be passed to specify which query and training descriptors can be matched. Namely, queryDescriptors[i] can be matched with trainDescriptors[j] only if mask.at&lt;uchar&gt;(i,j) is non-zero.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "matchAsync()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::matchAsync",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "masks",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "stream",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "matchConvert()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::matchConvert",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "gpu_matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Converts matches array from internal representation to standard matches vector.",
+    "local": ""
+  },
+  {
+    "origin": "The method is supposed to be used with",
+    "local": ""
+  },
+  {
+    "origin": "to get final result. Call this method only after",
+    "local": ""
+  },
+  {
+    "origin": "is completed (ie. after synchronization).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "gpu_matches",
+    "local": ""
+  },
+  {
+    "origin": "Matches, returned from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": "Vector of",
+    "local": ""
+  },
+  {
+    "origin": "objects.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "radiusMatch()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::radiusMatch",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "maxDistance",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "compactResult",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "For each query descriptor, finds the training descriptors not farther than the specified distance (blocking version).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Query set of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Train set of descriptors. This set is not added to the train descriptors collection stored in the class object.",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": "Found matches.",
+    "local": ""
+  },
+  {
+    "origin": "maxDistance",
+    "local": ""
+  },
+  {
+    "origin": "Threshold for the distance between matched descriptors. Distance means here metric distance (e.g.",
+    "local": ""
+  },
+  {
+    "origin": "distance), not the distance between coordinates (which is measured in Pixels)!",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Mask specifying permissible matches between an input query and train matrices of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "compactResult",
+    "local": ""
+  },
+  {
+    "origin": "Parameter used when the mask (or masks) is not empty. If compactResult is false, the matches vector has the same size as queryDescriptors rows. If compactResult is true, the matches vector does not contain matches for fully masked-out query descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "For each query descriptor, the methods find such training descriptors that the distance between the query descriptor and the training descriptor is equal or smaller than maxDistance. Found matches are returned in the distance increasing order.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "radiusMatch()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::radiusMatch",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "maxDistance",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "masks",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "compactResult",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "radiusMatchAsync()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::radiusMatchAsync",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "maxDistance",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "stream",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "For each query descriptor, finds the training descriptors not farther than the specified distance (asynchronous version).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Query set of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "trainDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "Train set of descriptors. This set is not added to the train descriptors collection stored in the class object.",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": "Matches array stored in GPU memory. Internal representation is not defined. Use",
+    "local": ""
+  },
+  {
+    "origin": "method to retrieve results in standard representation.",
+    "local": ""
+  },
+  {
+    "origin": "maxDistance",
+    "local": ""
+  },
+  {
+    "origin": "Threshold for the distance between matched descriptors. Distance means here metric distance (e.g.",
+    "local": ""
+  },
+  {
+    "origin": "distance), not the distance between coordinates (which is measured in Pixels)!",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Mask specifying permissible matches between an input query and train matrices of descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "stream",
+    "local": ""
+  },
+  {
+    "origin": "CUDA stream.",
+    "local": ""
+  },
+  {
+    "origin": "For each query descriptor, the methods find such training descriptors that the distance between the query descriptor and the training descriptor is equal or smaller than maxDistance. Found matches are returned in the distance increasing order.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "radiusMatchAsync()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::radiusMatchAsync",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "queryDescriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "maxDistance",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "masks",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "stream",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "radiusMatchConvert()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::radiusMatchConvert",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "gpu_matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "compactResult",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Converts matches array from internal representation to standard matches vector.",
+    "local": ""
+  },
+  {
+    "origin": "The method is supposed to be used with",
+    "local": ""
+  },
+  {
+    "origin": "to get final result. Call this method only after",
+    "local": ""
+  },
+  {
+    "origin": "is completed (ie. after synchronization).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "gpu_matches",
+    "local": ""
+  },
+  {
+    "origin": "Matches, returned from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "matches",
+    "local": ""
+  },
+  {
+    "origin": "Vector of",
+    "local": ""
+  },
+  {
+    "origin": "objects.",
+    "local": ""
+  },
+  {
+    "origin": "compactResult",
+    "local": ""
+  },
+  {
+    "origin": "Parameter used when the mask (or masks) is not empty. If compactResult is false, the matches vector has the same size as queryDescriptors rows. If compactResult is true, the matches vector does not contain matches for fully masked-out query descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "train()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::cuda::DescriptorMatcher::train",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Trains a descriptor matcher.",
+    "local": ""
+  },
+  {
+    "origin": "Trains a descriptor matcher (for example, the flann index). In all methods to match, the method",
+    "local": ""
+  },
+  {
+    "origin": "is run every time before matching.",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:44 for OpenCV by &#160;",
+    "local": ""
+  }
+]

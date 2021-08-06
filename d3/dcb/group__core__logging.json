@@ -1,0 +1,1906 @@
+[
+  {
+    "origin": "OpenCV: Logging facilities",
+    "local": "OpenCV:日志记录设施"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Macros",
+    "local": "宏"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "Logging facilities",
+    "local": "伐木设施"
+  },
+  {
+    "origin": "&raquo;",
+    "local": "&引用；"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": "“黑盒”表示与磁盘上的文件相关联的文件存储。"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Macros",
+    "local": "宏"
+  },
+  {
+    "origin": "(tag, ...)&#160;&#160;&#160;",
+    "local": "（标签，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , , __VA_ARGS__)",
+    "local": "，，，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "(tag, ...)&#160;&#160;&#160;",
+    "local": "（标签，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , , __VA_ARGS__)",
+    "local": "，，，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "(tag, ...)&#160;&#160;&#160;",
+    "local": "（标签，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , , __VA_ARGS__)",
+    "local": "，，，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "(tag, logging_cond, ...)&#160;&#160;&#160;",
+    "local": "（标签，记录条件，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u IF\\u CHECK（logging\\u cond），\\uu VA\\u ARGS\\uuuu）"
+  },
+  {
+    "origin": "(tag, logging_cond, ...)&#160;&#160;&#160;",
+    "local": "（标签，记录条件，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u IF\\u CHECK（logging\\u cond），\\uu VA\\u ARGS\\uuuu）"
+  },
+  {
+    "origin": "(tag, logging_cond, ...)&#160;&#160;&#160;",
+    "local": "（标签，记录条件，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u IF\\u CHECK（logging\\u cond），\\uu VA\\u ARGS\\uuuu）"
+  },
+  {
+    "origin": "(tag, logging_cond, ...)&#160;&#160;&#160;",
+    "local": "（标签，记录条件，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u IF\\u CHECK（logging\\u cond），\\uu VA\\u ARGS\\uuuu）"
+  },
+  {
+    "origin": "(tag, v, logging_cond, ...)&#160;&#160;&#160;",
+    "local": "（标签，v，记录条件，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag, (",
+    "local": "（标签("
+  },
+  {
+    "origin": "+ (int)(v)), , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "+（int）（v）），CV\\ LOG\\ IF\\ CHECK（logging\\ cond），\\ VA\\ ARGS\\ uuu）"
+  },
+  {
+    "origin": "(tag, v, logging_cond, ...)",
+    "local": "（标签，v，记录条件，…）"
+  },
+  {
+    "origin": "(tag, logging_cond, ...)&#160;&#160;&#160;",
+    "local": "（标签，记录条件，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u IF\\u CHECK（logging\\u cond），\\uu VA\\u ARGS\\uuuu）"
+  },
+  {
+    "origin": "(tag, ...)&#160;&#160;&#160;",
+    "local": "（标签，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , , __VA_ARGS__)",
+    "local": "，，，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "&#160;&#160;&#160;5",
+    "local": "&#160;&#160;&#160;5"
+  },
+  {
+    "origin": "Debug message. Disabled in the \"Release\" build.",
+    "local": "调试消息。在“发布”版本中禁用。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&#160;&#160;&#160;2",
+    "local": "&#160;&#160;&#160;2"
+  },
+  {
+    "origin": "Error message.",
+    "local": "错误消息。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&#160;&#160;&#160;1",
+    "local": "&#160;&#160;&#160;1"
+  },
+  {
+    "origin": "Fatal (critical) error (unrecoverable internal error)",
+    "local": "致命（严重）错误（不可恢复的内部错误）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&#160;&#160;&#160;4",
+    "local": "&#160;&#160;&#160;4"
+  },
+  {
+    "origin": "Info message.",
+    "local": "信息消息。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&#160;&#160;&#160;0",
+    "local": "&#160;&#160;&#160;0"
+  },
+  {
+    "origin": "for using in",
+    "local": "用于"
+  },
+  {
+    "origin": "call",
+    "local": "呼叫"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&#160;&#160;&#160;6",
+    "local": "&#160;&#160;&#160;6"
+  },
+  {
+    "origin": "Verbose (trace) messages. Requires verbosity level. Disabled in the \"Release\" build.",
+    "local": "详细（跟踪）消息。需要详细级别。在“发布”版本中禁用。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&#160;&#160;&#160;3",
+    "local": "&#160;&#160;&#160;3"
+  },
+  {
+    "origin": "Warning message.",
+    "local": "警告信息。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(tag, ...)&#160;&#160;&#160;",
+    "local": "（标签，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", CV__LOG_ONCE_CHECK_PRE, CV__LOG_ONCE_CHECK_POST, __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u ONCE\\u CHECK\\u PRE，CV\\uu LOG\\u ONCE\\u CHECK\\u POST，\\uu VA\\u ARGS\\uu）"
+  },
+  {
+    "origin": "(tag, ...)&#160;&#160;&#160;",
+    "local": "（标签，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", CV__LOG_ONCE_CHECK_PRE, CV__LOG_ONCE_CHECK_POST, __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u ONCE\\u CHECK\\u PRE，CV\\uu LOG\\u ONCE\\u CHECK\\u POST，\\uu VA\\u ARGS\\uu）"
+  },
+  {
+    "origin": "(tag, ...)&#160;&#160;&#160;",
+    "local": "（标签，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", CV__LOG_ONCE_CHECK_PRE, CV__LOG_ONCE_CHECK_POST, __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u ONCE\\u CHECK\\u PRE，CV\\uu LOG\\u ONCE\\u CHECK\\u POST，\\uu VA\\u ARGS\\uu）"
+  },
+  {
+    "origin": "(tag, v, ...)&#160;&#160;&#160;",
+    "local": "（标签，v，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag, (",
+    "local": "（标签("
+  },
+  {
+    "origin": "+ (int)(v)), CV__LOG_ONCE_CHECK_PRE, CV__LOG_ONCE_CHECK_POST, __VA_ARGS__)",
+    "local": "+（int）（v）），CV\\u LOG\\u ONCE\\u CHECK\\u PRE，CV\\u LOG\\u ONCE\\u CHECK\\u POST，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "(tag, v, ...)",
+    "local": "（标签，v，…）"
+  },
+  {
+    "origin": "(tag, ...)&#160;&#160;&#160;",
+    "local": "（标签，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", CV__LOG_ONCE_CHECK_PRE, CV__LOG_ONCE_CHECK_POST, __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u ONCE\\u CHECK\\u PRE，CV\\uu LOG\\u ONCE\\u CHECK\\u POST，\\uu VA\\u ARGS\\uu）"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag, v, ...)&#160;&#160;&#160;",
+    "local": "（标签，v，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag, (",
+    "local": "（标签("
+  },
+  {
+    "origin": "+ (int)(v)), , , __VA_ARGS__)",
+    "local": "+（int）（v）），，，\\uu VA\\u ARGS\\uuu）"
+  },
+  {
+    "origin": "(tag, v, ...)",
+    "local": "（标签，v，…）"
+  },
+  {
+    "origin": "(tag, ...)&#160;&#160;&#160;",
+    "local": "（标签，…）和#160&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , , __VA_ARGS__)",
+    "local": "，，，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "(tag, msgLevel, extra_check0, extra_check1, ...)",
+    "local": "（标记，msgLevel，额外检查0，额外检查1，…）"
+  },
+  {
+    "origin": "(tag)&#160;&#160;&#160;tag",
+    "local": "（标签）和#160&#160;&#160;标签"
+  },
+  {
+    "origin": "&#160;&#160;&#160;nullptr",
+    "local": "&35;160;&35;160;35;160?空PTR"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "(expr)&#160;&#160;&#160;static_cast&lt;const",
+    "local": "（expr）和#160&#160;&#160;静态投射&lt；常数"
+  },
+  {
+    "origin": "*&gt;(expr)",
+    "local": "*&燃气轮机(表达式）"
+  },
+  {
+    "origin": "(arg_id)",
+    "local": "（参数id）"
+  },
+  {
+    "origin": "Macro to trace argument value.",
+    "local": "宏来跟踪参数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(arg_id, arg_name, value)",
+    "local": "（arg\\u id、arg\\u name、value）"
+  },
+  {
+    "origin": "Macro to trace argument value (expanded version)",
+    "local": "宏跟踪参数值（扩展版本）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Macro to trace function.",
+    "local": "宏来跟踪函数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "(name_as_static_string_literal)",
+    "local": "（名称\\u为\\u静态\\u字符串\\u文字）"
+  },
+  {
+    "origin": "(name_as_static_string_literal)",
+    "local": "（名称\\u为\\u静态\\u字符串\\u文字）"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "(const char *tag)",
+    "local": "（常量字符*标记）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*plogtag)",
+    "local": "*普洛格日）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "logLevel)",
+    "local": "对数电平）"
+  },
+  {
+    "origin": "(const char *tag,",
+    "local": "（const char*标签，"
+  },
+  {
+    "origin": "level)",
+    "local": "水平）"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": "宏定义文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_DEBUG",
+    "local": "CV\\日志\\调试"
+  },
+  {
+    "origin": "#define CV_LOG_DEBUG",
+    "local": "#定义CV\\u LOG\\u DEBUG"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , , __VA_ARGS__)",
+    "local": "，，，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_ERROR",
+    "local": "CV\\日志\\错误"
+  },
+  {
+    "origin": "#define CV_LOG_ERROR",
+    "local": "#定义CV\\日志\\错误"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , , __VA_ARGS__)",
+    "local": "，，，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_FATAL",
+    "local": "简历\\日志\\致命"
+  },
+  {
+    "origin": "#define CV_LOG_FATAL",
+    "local": "#定义CV\\u LOG\\u FATAL"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , , __VA_ARGS__)",
+    "local": "，，，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_IF_DEBUG",
+    "local": "CV\\日志\\如果调试"
+  },
+  {
+    "origin": "#define CV_LOG_IF_DEBUG",
+    "local": "#如果调试，则定义CV\\u LOG\\u"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "logging_cond,",
+    "local": "记录条件，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u IF\\u CHECK（logging\\u cond），\\uu VA\\u ARGS\\uuuu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_IF_ERROR",
+    "local": "CV\\日志\\如果\\错误"
+  },
+  {
+    "origin": "#define CV_LOG_IF_ERROR",
+    "local": "#如果出现错误，请定义CV\\u LOG\\u"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "logging_cond,",
+    "local": "记录条件，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u IF\\u CHECK（logging\\u cond），\\uu VA\\u ARGS\\uuuu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_IF_FATAL",
+    "local": "简历日志如果是致命的"
+  },
+  {
+    "origin": "#define CV_LOG_IF_FATAL",
+    "local": "#定义CV\\u LOG\\u IF\\u FATAL"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "logging_cond,",
+    "local": "记录条件，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u IF\\u CHECK（logging\\u cond），\\uu VA\\u ARGS\\uuuu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_IF_INFO",
+    "local": "简历日志信息"
+  },
+  {
+    "origin": "#define CV_LOG_IF_INFO",
+    "local": "#定义简历日志信息"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "logging_cond,",
+    "local": "记录条件，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u IF\\u CHECK（logging\\u cond），\\uu VA\\u ARGS\\uuuu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_IF_VERBOSE",
+    "local": "简历\\u日志\\u如果\\u详细"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "#define CV_LOG_IF_VERBOSE",
+    "local": "#如果详细，请定义简历日志"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "v,",
+    "local": "五、，"
+  },
+  {
+    "origin": "logging_cond,",
+    "local": "记录条件，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag, (",
+    "local": "（标签("
+  },
+  {
+    "origin": "+ (int)(v)), , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "+（int）（v）），CV\\ LOG\\ IF\\ CHECK（logging\\ cond），\\ VA\\ ARGS\\ uuu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_IF_VERBOSE",
+    "local": "简历\\u日志\\u如果\\u详细"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "#define CV_LOG_IF_VERBOSE",
+    "local": "#如果详细，请定义简历日志"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "v,",
+    "local": "五、，"
+  },
+  {
+    "origin": "logging_cond,",
+    "local": "记录条件，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_IF_WARNING",
+    "local": "CV\\ LOG\\ IF\\警告"
+  },
+  {
+    "origin": "#define CV_LOG_IF_WARNING",
+    "local": "#如果警告，定义CV日志"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "logging_cond,",
+    "local": "记录条件，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , CV__LOG_IF_CHECK(logging_cond), __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u IF\\u CHECK（logging\\u cond），\\uu VA\\u ARGS\\uuuu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_INFO",
+    "local": "简历日志信息"
+  },
+  {
+    "origin": "#define CV_LOG_INFO",
+    "local": "#定义简历日志信息"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , , __VA_ARGS__)",
+    "local": "，，，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_LEVEL_DEBUG",
+    "local": "CV\\日志\\级别\\调试"
+  },
+  {
+    "origin": "#define CV_LOG_LEVEL_DEBUG&#160;&#160;&#160;5",
+    "local": "#定义CV#LOG#LEVEL#u DEBUG&#160&#160;&#160;5"
+  },
+  {
+    "origin": "Debug message. Disabled in the \"Release\" build.",
+    "local": "调试消息。在“发布”版本中禁用。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_LEVEL_ERROR",
+    "local": "CV\\日志\\级别\\错误"
+  },
+  {
+    "origin": "#define CV_LOG_LEVEL_ERROR&#160;&#160;&#160;2",
+    "local": "#定义CV#LOG#LEVEL#ERROR&#160&#160;&#160;2"
+  },
+  {
+    "origin": "Error message.",
+    "local": "错误消息。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_LEVEL_FATAL",
+    "local": "简历\\日志\\级别\\致命"
+  },
+  {
+    "origin": "#define CV_LOG_LEVEL_FATAL&#160;&#160;&#160;1",
+    "local": "#定义CV#LOG#LEVEL#FATAL&#160&#160;&#160;1"
+  },
+  {
+    "origin": "Fatal (critical) error (unrecoverable internal error)",
+    "local": "致命（严重）错误（不可恢复的内部错误）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_LEVEL_INFO",
+    "local": "简历\\日志\\级别\\信息"
+  },
+  {
+    "origin": "#define CV_LOG_LEVEL_INFO&#160;&#160;&#160;4",
+    "local": "#定义简历#日志#级别#信息&#160&#160;&#160;4"
+  },
+  {
+    "origin": "Info message.",
+    "local": "信息消息。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_LEVEL_SILENT",
+    "local": "简历\\日志\\级别\\静默"
+  },
+  {
+    "origin": "#define CV_LOG_LEVEL_SILENT&#160;&#160;&#160;0",
+    "local": "#定义CV#LOG#LEVEL#静默&#160&#160;&#160;0"
+  },
+  {
+    "origin": "for using in",
+    "local": "用于"
+  },
+  {
+    "origin": "call",
+    "local": "呼叫"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_LEVEL_VERBOSE",
+    "local": "简历\\日志\\级别\\详细"
+  },
+  {
+    "origin": "#define CV_LOG_LEVEL_VERBOSE&#160;&#160;&#160;6",
+    "local": "#定义CV#LOG#LEVEL#VERBOSE&#160&#160;&#160;6"
+  },
+  {
+    "origin": "Verbose (trace) messages. Requires verbosity level. Disabled in the \"Release\" build.",
+    "local": "详细（跟踪）消息。需要详细级别。在“发布”版本中禁用。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_LEVEL_WARN",
+    "local": "CV\\日志\\级别\\警告"
+  },
+  {
+    "origin": "#define CV_LOG_LEVEL_WARN&#160;&#160;&#160;3",
+    "local": "#定义CV#LOG#LEVEL#WARN&#160&#160;&#160;三"
+  },
+  {
+    "origin": "Warning message.",
+    "local": "警告信息。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_ONCE_DEBUG",
+    "local": "CV\\u日志\\u一次\\u调试"
+  },
+  {
+    "origin": "#define CV_LOG_ONCE_DEBUG",
+    "local": "#定义CV\\u日志\\u一次\\u调试"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", CV__LOG_ONCE_CHECK_PRE, CV__LOG_ONCE_CHECK_POST, __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u ONCE\\u CHECK\\u PRE，CV\\uu LOG\\u ONCE\\u CHECK\\u POST，\\uu VA\\u ARGS\\uu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_ONCE_ERROR",
+    "local": "CV\\ LOG\\ ONCE\\错误"
+  },
+  {
+    "origin": "#define CV_LOG_ONCE_ERROR",
+    "local": "#定义CV\\u LOG\\u ONCE\\u ERROR"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", CV__LOG_ONCE_CHECK_PRE, CV__LOG_ONCE_CHECK_POST, __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u ONCE\\u CHECK\\u PRE，CV\\uu LOG\\u ONCE\\u CHECK\\u POST，\\uu VA\\u ARGS\\uu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_ONCE_INFO",
+    "local": "简历日志信息"
+  },
+  {
+    "origin": "#define CV_LOG_ONCE_INFO",
+    "local": "#定义简历日志信息"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", CV__LOG_ONCE_CHECK_PRE, CV__LOG_ONCE_CHECK_POST, __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u ONCE\\u CHECK\\u PRE，CV\\uu LOG\\u ONCE\\u CHECK\\u POST，\\uu VA\\u ARGS\\uu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_ONCE_VERBOSE",
+    "local": "简历\\u日志\\u一次\\u详细"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "#define CV_LOG_ONCE_VERBOSE",
+    "local": "#详细定义一次简历日志"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "v,",
+    "local": "五、，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag, (",
+    "local": "（标签("
+  },
+  {
+    "origin": "+ (int)(v)), CV__LOG_ONCE_CHECK_PRE, CV__LOG_ONCE_CHECK_POST, __VA_ARGS__)",
+    "local": "+（int）（v）），CV\\u LOG\\u ONCE\\u CHECK\\u PRE，CV\\u LOG\\u ONCE\\u CHECK\\u POST，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_ONCE_VERBOSE",
+    "local": "简历\\u日志\\u一次\\u详细"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "#define CV_LOG_ONCE_VERBOSE",
+    "local": "#详细定义一次简历日志"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "v,",
+    "local": "五、，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_ONCE_WARNING",
+    "local": "CV\\ LOG\\ ONCE\\警告"
+  },
+  {
+    "origin": "#define CV_LOG_ONCE_WARNING",
+    "local": "#定义CV\\u LOG\\u ONCE\\u警告"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", CV__LOG_ONCE_CHECK_PRE, CV__LOG_ONCE_CHECK_POST, __VA_ARGS__)",
+    "local": "，CV\\uu LOG\\u ONCE\\u CHECK\\u PRE，CV\\uu LOG\\u ONCE\\u CHECK\\u POST，\\uu VA\\u ARGS\\uu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_STRIP_LEVEL",
+    "local": "CV\\日志\\条带\\级别"
+  },
+  {
+    "origin": "#define CV_LOG_STRIP_LEVEL&#160;&#160;&#160;",
+    "local": "#定义CV#LOG#STRIP#LEVEL&#160&#160;&#160;"
+  },
+  {
+    "origin": "Define CV_LOG_STRIP_LEVEL=CV_LOG_LEVEL_[DEBUG|INFO|WARN|ERROR|FATAL|SILENT] to compile out anything at that and before that logging level",
+    "local": "定义CV|LOG|STRIP|LEVEL=CV|LOG|LEVEL|[DEBUG | INFO | WARN | ERROR | FATAL | SILENT]编译该日志级别和该日志级别之前的任何内容"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_VERBOSE",
+    "local": "简历\\u日志\\u详细"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "#define CV_LOG_VERBOSE",
+    "local": "#定义CV\\u日志\\u详细信息"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "v,",
+    "local": "五、，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag, (",
+    "local": "（标签("
+  },
+  {
+    "origin": "+ (int)(v)), , , __VA_ARGS__)",
+    "local": "+（int）（v）），，，\\uu VA\\u ARGS\\uuu）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_VERBOSE",
+    "local": "简历\\u日志\\u详细"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "#define CV_LOG_VERBOSE",
+    "local": "#定义CV\\u日志\\u详细信息"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "v,",
+    "local": "五、，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_WARNING",
+    "local": "CV\\日志\\警告"
+  },
+  {
+    "origin": "#define CV_LOG_WARNING",
+    "local": "#定义CV\\日志\\警告"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": "&#160;&#160;&#160;"
+  },
+  {
+    "origin": "(tag,",
+    "local": "（标签，"
+  },
+  {
+    "origin": ", , , __VA_ARGS__)",
+    "local": "，，，\\u VA\\u ARGS\\u）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOG_WITH_TAG",
+    "local": "带有标签的简历日志"
+  },
+  {
+    "origin": "#define CV_LOG_WITH_TAG",
+    "local": "#定义带有标记的简历日志"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag,",
+    "local": "标签，"
+  },
+  {
+    "origin": "msgLevel,",
+    "local": "msgLevel先生，"
+  },
+  {
+    "origin": "extra_check0,",
+    "local": "额外检查0，"
+  },
+  {
+    "origin": "extra_check1,",
+    "local": "额外检查1，"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Value:",
+    "local": "价值："
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOGTAG_EXPAND_NAME",
+    "local": "简历\\日志标签\\扩展\\名称"
+  },
+  {
+    "origin": "#define CV_LOGTAG_EXPAND_NAME",
+    "local": "#定义CV\\u LOGTAG\\u EXPAND\\u NAME"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag",
+    "local": "标签"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;tag",
+    "local": "&#160;&#160;&#160;标签"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOGTAG_FALLBACK",
+    "local": "CV\\日志标签\\回退"
+  },
+  {
+    "origin": "#define CV_LOGTAG_FALLBACK&#160;&#160;&#160;nullptr",
+    "local": "#定义CVŠLOGTAGŠFALLBACK&Š160&#160;&#160;空PTR"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOGTAG_GLOBAL",
+    "local": "简历\\日志标签\\全球"
+  },
+  {
+    "origin": "#define CV_LOGTAG_GLOBAL&#160;&#160;&#160;",
+    "local": "#定义CVŠLOGTAGŠGLOBAL&Š160&#160;&#160;"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_LOGTAG_PTR_CAST",
+    "local": "履历表"
+  },
+  {
+    "origin": "#define CV_LOGTAG_PTR_CAST",
+    "local": "#定义CV\\u LOGTAG\\u PTR\\u CAST"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "expr",
+    "local": "出口"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;static_cast&lt;const",
+    "local": "&#160;&#160;&#160;静态投射&lt；常数"
+  },
+  {
+    "origin": "*&gt;(expr)",
+    "local": "*&燃气轮机(表达式）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_TRACE_ARG",
+    "local": "CV\\跟踪参数"
+  },
+  {
+    "origin": "#define CV_TRACE_ARG",
+    "local": "#定义CV\\u TRACE\\u ARG"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "arg_id",
+    "local": "参数id"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Macro to trace argument value.",
+    "local": "宏来跟踪参数值。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_TRACE_ARG_VALUE",
+    "local": "CV\\跟踪\\参数\\值"
+  },
+  {
+    "origin": "#define CV_TRACE_ARG_VALUE",
+    "local": "#定义CV\\跟踪\\参数\\值"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "arg_id,",
+    "local": "参数id，"
+  },
+  {
+    "origin": "arg_name,",
+    "local": "参数名称，"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Macro to trace argument value (expanded version)",
+    "local": "宏跟踪参数值（扩展版本）"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_TRACE_FUNCTION",
+    "local": "CV\\跟踪\\函数"
+  },
+  {
+    "origin": "#define CV_TRACE_FUNCTION",
+    "local": "#定义CV\\跟踪\\函数"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Macro to trace function.",
+    "local": "宏来跟踪函数。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_TRACE_FUNCTION_SKIP_NESTED",
+    "local": "CV\\跟踪\\函数\\跳过\\嵌套"
+  },
+  {
+    "origin": "#define CV_TRACE_FUNCTION_SKIP_NESTED",
+    "local": "#定义CV\\u跟踪\\u函数\\u跳过\\u嵌套"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_TRACE_REGION",
+    "local": "CV\\跟踪\\区域"
+  },
+  {
+    "origin": "#define CV_TRACE_REGION",
+    "local": "#定义CV\\跟踪\\区域"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "name_as_static_string_literal",
+    "local": "名称\\u为\\u静态\\u字符串\\u文字"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Trace code scope.",
+    "local": "跟踪代码范围。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Dynamic names are not supported in this macro (on stack or heap). Use string literals here only, like \"initialize\".",
+    "local": "此宏（在堆栈或堆上）不支持动态名称。此处仅使用字符串文字，如“initialize”。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_TRACE_REGION_NEXT",
+    "local": "CV\\跟踪\\区域\\下一步"
+  },
+  {
+    "origin": "#define CV_TRACE_REGION_NEXT",
+    "local": "#定义CV\\跟踪\\区域\\下一步"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "name_as_static_string_literal",
+    "local": "名称\\u为\\u静态\\u字符串\\u文字"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "mark completed of the current opened region and create new one",
+    "local": "标记当前打开区域的已完成并创建新区域"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Dynamic names are not supported in this macro (on stack or heap). Use string literals here only, like \"step1\".",
+    "local": "此宏（在堆栈或堆上）不支持动态名称。此处仅使用字符串文字，如“step1”。"
+  },
+  {
+    "origin": "Function Documentation",
+    "local": "功能文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getLogLevel()",
+    "local": "Getloglevel（）"
+  },
+  {
+    "origin": "cv::utils::logging::getLogLevel",
+    "local": "cv:：utils:：logging:：getLogLevel"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Get global logging level",
+    "local": "获取全局日志级别"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getLogTagLevel()",
+    "local": "getLogTagLevel（）"
+  },
+  {
+    "origin": "cv::utils::logging::getLogTagLevel",
+    "local": "cv:：utils:：logging:：getLogTagLevel"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag",
+    "local": "标签"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "registerLogTag()",
+    "local": "registerLogTag（）"
+  },
+  {
+    "origin": "void cv::utils::logging::registerLogTag",
+    "local": "void cv:：utils:：logging:：registerLogTag"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "plogtag",
+    "local": "普洛塔格"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "setLogLevel()",
+    "local": "设置日志级别（）"
+  },
+  {
+    "origin": "cv::utils::logging::setLogLevel",
+    "local": "cv:：utils:：logging:：setLogLevel"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "logLevel",
+    "local": "日志级别"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Set global logging level",
+    "local": "设置全局日志记录级别"
+  },
+  {
+    "origin": "Returns",
+    "local": "退换商品"
+  },
+  {
+    "origin": "previous logging level",
+    "local": "以前的日志记录级别"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "setLogTagLevel()",
+    "local": "setLogTagLevel（）"
+  },
+  {
+    "origin": "void cv::utils::logging::setLogTagLevel",
+    "local": "void cv:：utils:：logging:：setLogTagLevel"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tag",
+    "local": "标签"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "level",
+    "local": "水平"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:40为OpenCV生成，&#160；"
+  }
+]

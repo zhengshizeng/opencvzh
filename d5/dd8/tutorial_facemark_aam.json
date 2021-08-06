@@ -1,0 +1,182 @@
+[
+  {
+    "origin": "OpenCV: Using the FacemarkAAM",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Using the FacemarkAAM",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "creating the instance of FacemarkAAM",
+    "local": ""
+  },
+  {
+    "origin": "training the AAM model",
+    "local": ""
+  },
+  {
+    "origin": "Fitting using FacemarkAAM",
+    "local": ""
+  },
+  {
+    "origin": "Preparation",
+    "local": ""
+  },
+  {
+    "origin": "Before you continue with this tutorial, you should download the dataset of facial landmarks detection. We suggest you to download the LFPW dataset which can be retrieved at",
+    "local": ""
+  },
+  {
+    "origin": "https://ibug.doc.ic.ac.uk/download/annotations/lfpw.zip",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Make sure that the annotation format is supported by the API, the contents in annotation file should look like the following snippet:",
+    "local": ""
+  },
+  {
+    "origin": "The next thing to do is to make 2 text files containing the list of image files and annotation files respectively. Make sure that the order or image and annotation in both files are matched. Furthermore, it is advised to use absolute path instead of relative path. Example to make the file list in Linux machine",
+    "local": ""
+  },
+  {
+    "origin": "example of content in the images_train.txt",
+    "local": ""
+  },
+  {
+    "origin": "example of content in the annotation_train.txt",
+    "local": ""
+  },
+  {
+    "origin": "Optionally, you can create the similar files for the testset.",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial, the pre-trained model will not be provided due to its large file size (~500MB). By following this tutorial, you will be able to train obtain your own trained model within few minutes.",
+    "local": ""
+  },
+  {
+    "origin": "Working with the AAM Algorithm",
+    "local": ""
+  },
+  {
+    "origin": "The full working code is available in the face/samples/facemark_demo_aam.cpp file. In this tutorial, the explanation of some important parts are covered.",
+    "local": ""
+  },
+  {
+    "origin": "Creating the instance of AAM algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Firstly, an instance of parameter for the AAM algorithm is created. In this case, we will modify the default list of the scaling factor. By default, the scaling factor used is 1.0 (no scaling). Here we add two more scaling factor which will make the instance trains two more model at scale 2 and 4 (2 time smaller and 4 time smaller, faster faster fitting time). However, you should make sure that this scaling factor is not too big since it will make the image scaled into a very small one. Thus it will lost all of its important information for the landmark detection purpose.",
+    "local": ""
+  },
+  {
+    "origin": "Alternatively, you can override the default scaling in similar way to this example:",
+    "local": ""
+  },
+  {
+    "origin": "Loading the dataset",
+    "local": ""
+  },
+  {
+    "origin": "List of the dataset are loaded into the program. We will put the samples from dataset one by one in the next step.",
+    "local": ""
+  },
+  {
+    "origin": "Adding the samples to the trainer",
+    "local": ""
+  },
+  {
+    "origin": "The image from the dataset list are loaded one by one as well as its corresponding annotation data. Then the pair of sample is added to the trainer.",
+    "local": ""
+  },
+  {
+    "origin": "Training process",
+    "local": ""
+  },
+  {
+    "origin": "The training process is called using a single line of code. Make sure that all the required training samples are already added to the trainer.",
+    "local": ""
+  },
+  {
+    "origin": "Preparation for fitting",
+    "local": ""
+  },
+  {
+    "origin": "First of all, you need to load the list of test files.",
+    "local": ""
+  },
+  {
+    "origin": "Since the AAM needs initialization parameters (rotation, translation, and scaling), you need to declare the required variable to store these information which will be obtained using a custom function. Since the implementation of getInitialFitting() function in this example is not optimal, you can create your own function.",
+    "local": ""
+  },
+  {
+    "origin": "The initialization is obtained by comparing the base shape of the trained model with the current face image. In this case, the rotation is obtained by comparing the angle of line formed by two eyes in the input face image with the same line in the base shape. Meanwhile, the scaling is obtained by comparing the length of line between eyes in the input image compared to the base shape.",
+    "local": ""
+  },
+  {
+    "origin": "Fitting process",
+    "local": ""
+  },
+  {
+    "origin": "The fitting process is started by detecting the face in a given image.",
+    "local": ""
+  },
+  {
+    "origin": "If at least one face is found, then the next step is computing the initialization parameters. In this case, since the getInitialFitting() function is not optimal, it may not find pair of eyes from a given face. Therefore, we will filter out the face without initialization parameters and in this case, each element in the",
+    "local": ""
+  },
+  {
+    "origin": "vector represent the initialization parameter for each filtered face.",
+    "local": ""
+  },
+  {
+    "origin": "For the fitting parameter stored in the",
+    "local": ""
+  },
+  {
+    "origin": "vector, the last parameter represent the ID of scaling factor that will be used in the fitting process. In this example the fitting will use the biggest scaling factor (4) which is expected to have the fastest computation time compared to the other scales. If the ID if bigger than the available trained scale in the model, the the model with the biggest scale ID is used.",
+    "local": ""
+  },
+  {
+    "origin": "The fitting process is quite simple, you just need to put the corresponding image, vector of",
+    "local": ""
+  },
+  {
+    "origin": "representing the ROIs of all faces in the given image, container of the landmark points represented by",
+    "local": ""
+  },
+  {
+    "origin": "variable, and the configuration variables.",
+    "local": ""
+  },
+  {
+    "origin": "After the fitting process is finished, you can visualize the result using the",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

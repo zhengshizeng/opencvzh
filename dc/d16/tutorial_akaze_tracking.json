@@ -1,0 +1,258 @@
+[
+  {
+    "origin": "OpenCV: AKAZE and ORB planar tracking",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "AKAZE and ORB planar tracking",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Fedor Morozov",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial we will compare",
+    "local": ""
+  },
+  {
+    "origin": "AKAZE",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "ORB",
+    "local": ""
+  },
+  {
+    "origin": "local features using them to find matches between video frames and track object movements.",
+    "local": ""
+  },
+  {
+    "origin": "The algorithm is as follows:",
+    "local": ""
+  },
+  {
+    "origin": "Detect and describe keypoints on the first frame, manually set object boundaries",
+    "local": ""
+  },
+  {
+    "origin": "For every next frame:",
+    "local": ""
+  },
+  {
+    "origin": "Detect and describe keypoints",
+    "local": ""
+  },
+  {
+    "origin": "Match them using bruteforce matcher",
+    "local": ""
+  },
+  {
+    "origin": "Estimate homography transformation using RANSAC",
+    "local": ""
+  },
+  {
+    "origin": "Filter inliers from all the matches",
+    "local": ""
+  },
+  {
+    "origin": "Apply homography transformation to the bounding box to find the object",
+    "local": ""
+  },
+  {
+    "origin": "Draw bounding box and inliers, compute inlier ratio as evaluation metric",
+    "local": ""
+  },
+  {
+    "origin": "Data",
+    "local": ""
+  },
+  {
+    "origin": "To do the tracking we need a video and object position on the first frame.",
+    "local": ""
+  },
+  {
+    "origin": "You can download our example video and data from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "To run the code you have to specify input (camera id or video_file). Then, select a bounding box with the mouse, and press any key to start tracking",
+    "local": ""
+  },
+  {
+    "origin": "Source Code",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Tracker class",
+    "local": ""
+  },
+  {
+    "origin": "This class implements algorithm described abobve using given feature detector and descriptor matcher.",
+    "local": ""
+  },
+  {
+    "origin": "Setting up the first frame",
+    "local": ""
+  },
+  {
+    "origin": "We compute and store keypoints and descriptors from the first frame and prepare it for the output.",
+    "local": ""
+  },
+  {
+    "origin": "We need to save number of detected keypoints to make sure both detectors locate roughly the same number of those.",
+    "local": ""
+  },
+  {
+    "origin": "Processing frames",
+    "local": ""
+  },
+  {
+    "origin": "Locate keypoints and compute descriptors",
+    "local": ""
+  },
+  {
+    "origin": "To find matches between frames we have to locate the keypoints first.",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial detectors are set up to find about 1000 keypoints on each frame.",
+    "local": ""
+  },
+  {
+    "origin": "Use 2-nn matcher to find correspondences",
+    "local": ""
+  },
+  {
+    "origin": "If the closest match is",
+    "local": ""
+  },
+  {
+    "origin": "nn_match_ratio",
+    "local": ""
+  },
+  {
+    "origin": "closer than the second closest one, then it's a match.",
+    "local": ""
+  },
+  {
+    "origin": "Use",
+    "local": ""
+  },
+  {
+    "origin": "RANSAC",
+    "local": ""
+  },
+  {
+    "origin": "to estimate homography transformation",
+    "local": ""
+  },
+  {
+    "origin": "If there are at least 4 matches we can use random sample consensus to estimate image transformation.",
+    "local": ""
+  },
+  {
+    "origin": "Save the inliers",
+    "local": ""
+  },
+  {
+    "origin": "Since",
+    "local": ""
+  },
+  {
+    "origin": "findHomography",
+    "local": ""
+  },
+  {
+    "origin": "computes the inliers we only have to save the chosen points and matches.",
+    "local": ""
+  },
+  {
+    "origin": "Project object bounding box",
+    "local": ""
+  },
+  {
+    "origin": "If there is a reasonable number of inliers we can use estimated transformation to locate the object.",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "You can watch the resulting",
+    "local": ""
+  },
+  {
+    "origin": "video on youtube",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "AKAZE",
+    "local": ""
+  },
+  {
+    "origin": "statistics:",
+    "local": ""
+  },
+  {
+    "origin": "ORB",
+    "local": ""
+  },
+  {
+    "origin": "statistics:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

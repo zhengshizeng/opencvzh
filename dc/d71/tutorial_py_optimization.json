@@ -1,0 +1,242 @@
+[
+  {
+    "origin": "OpenCV: Performance Measurement and Improvement Techniques",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Performance Measurement and Improvement Techniques",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In image processing, since you are dealing with a large number of operations per second, it is mandatory that your code is not only providing the correct solution, but that it is also providing it in the fastest manner. So in this chapter, you will learn:",
+    "local": ""
+  },
+  {
+    "origin": "To measure the performance of your code.",
+    "local": ""
+  },
+  {
+    "origin": "Some tips to improve the performance of your code.",
+    "local": ""
+  },
+  {
+    "origin": "You will see these functions:",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ", etc.",
+    "local": ""
+  },
+  {
+    "origin": "Apart from OpenCV, Python also provides a module",
+    "local": ""
+  },
+  {
+    "origin": "time",
+    "local": ""
+  },
+  {
+    "origin": "which is helpful in measuring the time of execution. Another module",
+    "local": ""
+  },
+  {
+    "origin": "profile",
+    "local": ""
+  },
+  {
+    "origin": "helps to get a detailed report on the code, like how much time each function in the code took, how many times the function was called, etc. But, if you are using IPython, all these features are integrated in an user-friendly manner. We will see some important ones, and for more details, check links in the",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "section.",
+    "local": ""
+  },
+  {
+    "origin": "Measuring Performance with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "function returns the number of clock-cycles after a reference event (like the moment the machine was switched ON) to the moment this function is called. So if you call it before and after the function execution, you get the number of clock-cycles used to execute a function.",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "function returns the frequency of clock-cycles, or the number of clock-cycles per second. So to find the time of execution in seconds, you can do following:",
+    "local": ""
+  },
+  {
+    "origin": "We will demonstrate with following example. The following example applies median filtering with kernels of odd sizes ranging from 5 to 49. (Don't worry about what the result will look like - that is not our goal):",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "You can do the same thing with the time module. Instead of",
+    "local": ""
+  },
+  {
+    "origin": ", use the time.time() function. Then take the difference of the two times.",
+    "local": ""
+  },
+  {
+    "origin": "Default Optimization in OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Many of the OpenCV functions are optimized using SSE2, AVX, etc. It contains the unoptimized code also. So if our system support these features, we should exploit them (almost all modern day processors support them). It is enabled by default while compiling. So OpenCV runs the optimized code if it is enabled, otherwise it runs the unoptimized code. You can use",
+    "local": ""
+  },
+  {
+    "origin": "to check if it is enabled/disabled and",
+    "local": ""
+  },
+  {
+    "origin": "to enable/disable it. Let's see a simple example.",
+    "local": ""
+  },
+  {
+    "origin": "As you can see, optimized median filtering is2x faster than the unoptimized version. If you check its source, you can see that median filtering is SIMD optimized. So you can use this to enable optimization at the top of your code (remember it is enabled by default).",
+    "local": ""
+  },
+  {
+    "origin": "Measuring Performance in IPython",
+    "local": ""
+  },
+  {
+    "origin": "Sometimes you may need to compare the performance of two similar operations. IPython gives you a magic command timeit to perform this. It runs the code several times to get more accurate results. Once again, it is suitable to measuring single lines of code.",
+    "local": ""
+  },
+  {
+    "origin": "For example, do you know which of the following addition operations is better, x = 5; y = x**2, x = 5; y = x*x, x = np.uint8([5]); y = x*x, or y = np.square(x)? We will find out with timeit in the IPython shell.",
+    "local": ""
+  },
+  {
+    "origin": "You can see that, x = 5 ; y = x*x is fastest and it is around 20x faster compared to Numpy. If you consider the array creation also, it may reach up to 100x faster. Cool, right? *(Numpy devs are working on this issue)*",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Python scalar operations are faster than Numpy scalar operations. So for operations including one or two elements, Python scalar is better than Numpy arrays. Numpy has the advantage when the size of the array is a little bit bigger.",
+    "local": ""
+  },
+  {
+    "origin": "We will try one more example. This time, we will compare the performance of",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "np.count_nonzero()",
+    "local": ""
+  },
+  {
+    "origin": "for the same image.",
+    "local": ""
+  },
+  {
+    "origin": "See, the OpenCV function is nearly 25x faster than the Numpy function.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Normally, OpenCV functions are faster than Numpy functions. So for same operation, OpenCV functions are preferred. But, there can be exceptions, especially when Numpy works with views instead of copies.",
+    "local": ""
+  },
+  {
+    "origin": "More IPython magic commands",
+    "local": ""
+  },
+  {
+    "origin": "There are several other magic commands to measure performance, profiling, line profiling, memory measurement, and etc. They all are well documented. So only links to those docs are provided here. Interested readers are recommended to try them out.",
+    "local": ""
+  },
+  {
+    "origin": "Performance Optimization Techniques",
+    "local": ""
+  },
+  {
+    "origin": "There are several techniques and coding methods to exploit maximum performance of Python and Numpy. Only relevant ones are noted here and links are given to important sources. The main thing to be noted here is, first try to implement the algorithm in a simple manner. Once it is working, profile it, find the bottlenecks, and optimize them.",
+    "local": ""
+  },
+  {
+    "origin": "Avoid using loops in Python as much as possible, especially double/triple loops etc. They are inherently slow.",
+    "local": ""
+  },
+  {
+    "origin": "Vectorize the algorithm/code to the maximum extent possible, because Numpy and OpenCV are optimized for vector operations.",
+    "local": ""
+  },
+  {
+    "origin": "Exploit the cache coherence.",
+    "local": ""
+  },
+  {
+    "origin": "Never make copies of an array unless it is necessary. Try to use views instead. Array copying is a costly operation.",
+    "local": ""
+  },
+  {
+    "origin": "If your code is still slow after doing all of these operations, or if the use of large loops is inevitable, use additional libraries like Cython to make it faster.",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Python Optimization Techniques",
+    "local": ""
+  },
+  {
+    "origin": "Scipy Lecture Notes -",
+    "local": ""
+  },
+  {
+    "origin": "Advanced Numpy",
+    "local": ""
+  },
+  {
+    "origin": "Timing and Profiling in IPython",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

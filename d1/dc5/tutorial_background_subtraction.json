@@ -1,0 +1,318 @@
+[
+  {
+    "origin": "OpenCV: How to Use Background Subtraction Methods",
+    "local": "OpenCV：如何使用背景减法"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "How to Use Background Subtraction Methods",
+    "local": "如何使用背景减法"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Domenico Daniele Bloisi",
+    "local": "多梅尼科·达尼埃尔·布卢西"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt；=3"
+  },
+  {
+    "origin": "Background subtraction (BS) is a common and widely used technique for generating a foreground mask (namely, a binary image containing the pixels belonging to moving objects in the scene) by using static cameras.",
+    "local": "背景减法（BS）是通过使用静态相机生成前景遮罩（即，包含属于场景中的运动对象的像素的二值图像）的常用且广泛使用的技术。"
+  },
+  {
+    "origin": "As the name suggests, BS calculates the foreground mask performing a subtraction between the current frame and a background model, containing the static part of the scene or, more in general, everything that can be considered as background given the characteristics of the observed scene.",
+    "local": "顾名思义，BS计算前景遮罩，在当前帧和背景模型之间执行减法运算，其中包含场景的静态部分，或者更一般地说，根据所观察场景的特征，可以认为是背景的所有内容。"
+  },
+  {
+    "origin": "Background modeling consists of two main steps:",
+    "local": "背景建模包括两个主要步骤："
+  },
+  {
+    "origin": "Background Initialization;",
+    "local": "后台初始化；"
+  },
+  {
+    "origin": "Background Update.",
+    "local": "后台更新。"
+  },
+  {
+    "origin": "In the first step, an initial model of the background is computed, while in the second step that model is updated in order to adapt to possible changes in the scene.",
+    "local": "在第一步中，计算背景的初始模型，而在第二步中，更新该模型以适应场景中可能的变化。"
+  },
+  {
+    "origin": "In this tutorial we will learn how to perform BS by using OpenCV.",
+    "local": "在本教程中，我们将学习如何使用OpenCV执行BS。"
+  },
+  {
+    "origin": "Goals",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "Read data from videos or image sequences by using",
+    "local": "使用从视频或图像序列读取数据"
+  },
+  {
+    "origin": ";",
+    "local": ";"
+  },
+  {
+    "origin": "Create and update the background model by using",
+    "local": "使用创建和更新背景模型"
+  },
+  {
+    "origin": "class;",
+    "local": "班级；"
+  },
+  {
+    "origin": "Get and show the foreground mask by using",
+    "local": "使用获取并显示前景掩码"
+  },
+  {
+    "origin": ";",
+    "local": ";"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "In the following you can find the source code. We will let the user choose to process either a video file or a sequence of images.",
+    "local": "在下面您可以找到源代码。我们将让用户选择处理一个视频文件或一系列图像。"
+  },
+  {
+    "origin": "We will use",
+    "local": "我们将使用"
+  },
+  {
+    "origin": "in this sample, to generate the foreground mask.",
+    "local": "在此示例中，生成前景遮罩。"
+  },
+  {
+    "origin": "The results as well as the input data are shown on the screen.",
+    "local": "结果和输入数据显示在屏幕上。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "We discuss the main parts of the code above:",
+    "local": "我们将讨论上述代码的主要部分："
+  },
+  {
+    "origin": "A",
+    "local": "A"
+  },
+  {
+    "origin": "object will be used to generate the foreground mask. In this example, default parameters are used, but it is also possible to declare specific parameters in the create function.",
+    "local": "对象将用于生成前景掩码。在本例中，使用默认参数，但也可以在create函数中声明特定参数。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "A",
+    "local": "A"
+  },
+  {
+    "origin": "object is used to read the input video or input images sequence.",
+    "local": "对象用于读取输入视频或输入图像序列。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Every frame is used both for calculating the foreground mask and for updating the background. If you want to change the learning rate used for updating the background model, it is possible to set a specific learning rate by passing a parameter to the",
+    "local": "每一帧都用于计算前景遮罩和更新背景。如果要更改用于更新背景模型的学习速率，可以通过将参数传递给"
+  },
+  {
+    "origin": "method.",
+    "local": "方法。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "The current frame number can be extracted from the",
+    "local": "当前帧号可以从"
+  },
+  {
+    "origin": "object and stamped in the top left corner of the current frame. A white rectangle is used to highlight the black colored frame number.",
+    "local": "对象并压印在当前帧的左上角。白色矩形用于高亮显示黑色的帧编号。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "We are ready to show the current input frame and the results.",
+    "local": "我们已经准备好显示当前的输入帧和结果。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "With the",
+    "local": "与"
+  },
+  {
+    "origin": "video, for the following frame:",
+    "local": "视频，用于以下帧："
+  },
+  {
+    "origin": "The output of the program will look as the following for MOG2 method (gray areas are detected shadows):",
+    "local": "对于MOG2方法，程序的输出如下所示（灰色区域是检测到的阴影）："
+  },
+  {
+    "origin": "The output of the program will look as the following for the KNN method (gray areas are detected shadows):",
+    "local": "对于KNN方法，程序的输出将如下所示（灰色区域是检测到的阴影）："
+  },
+  {
+    "origin": "References",
+    "local": "工具书类"
+  },
+  {
+    "origin": "Background Models Challenge (BMC) website",
+    "local": "背景模特挑战赛（BMC）网站"
+  },
+  {
+    "origin": "A Benchmark Dataset for Foreground/Background Extraction",
+    "local": "用于前景/背景提取的基准数据集"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

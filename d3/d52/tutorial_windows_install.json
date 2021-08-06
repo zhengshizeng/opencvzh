@@ -1,0 +1,1246 @@
+[
+  {
+    "origin": "OpenCV: Installation in Windows",
+    "local": "OpenCV:在Windows中安装"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "Installation in Windows",
+    "local": "在Windows中安装"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一个教程:"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Bernát Gábor",
+    "local": "Bernát Gábor"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "OpenCV &gt;= 3.0"
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "This tutorial can contain obsolete information.",
+    "local": "本教程可能包含过时的信息."
+  },
+  {
+    "origin": "The description here was tested on Windows 7 SP1. Nevertheless, it should also work on any other relatively modern version of Windows OS. If you encounter errors after following the steps described below, feel free to contact us via our",
+    "local": "这里的描述是在Windows7SP1上测试的.不过,它也应该适用于任何其他相对现代的Windows操作系统版本.如果您在执行以下步骤后遇到错误,请随时通过我们的联系方式与我们联系"
+  },
+  {
+    "origin": "OpenCV Q&amp;A forum",
+    "local": "OpenCV问答;论坛"
+  },
+  {
+    "origin": ". We'll do our best to help you out.",
+    "local": ". 我们会尽力帮助你的."
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "To use the OpenCV library you have two options:",
+    "local": "要使用OpenCV库,有两个选项:"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": ". While the first one is easier to complete, it only works if you are coding with the latest Microsoft Visual Studio IDE and do not take advantage of the most advanced technologies we integrate into our library. .. _Windows_Install_Prebuild:",
+    "local": ". 虽然第一个更容易完成,但它只适用于使用最新的Microsoft Visual Studio IDE进行编码,并且不利用我们集成到库中的最先进技术_Windows_Install_Prebuild:"
+  },
+  {
+    "origin": "Installation by Using the Pre-built Libraries",
+    "local": "使用预建库安装"
+  },
+  {
+    "origin": "Launch a web browser of choice and go to our",
+    "local": "启动所选的web浏览器并转到"
+  },
+  {
+    "origin": "page on Sourceforge",
+    "local": "源代码页"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Choose a build you want to use and download it.",
+    "local": "选择要使用的版本并下载."
+  },
+  {
+    "origin": "Make sure you have admin rights. Unpack the self-extracting archive.",
+    "local": "确保你有管理员权限.打开自解压存档."
+  },
+  {
+    "origin": "You can check the installation at the chosen path as you can see below.",
+    "local": "您可以在所选路径检查安装,如下所示."
+  },
+  {
+    "origin": "To finalize the installation go to the",
+    "local": "要完成安装,请转到"
+  },
+  {
+    "origin": "section.",
+    "local": "部分."
+  },
+  {
+    "origin": "Installation by Using git-bash (version&gt;=2.14.1) and cmake (version &gt;=3.9.1)",
+    "local": "使用git bash安装(版本&gt=2.14.1)和cmake(版本&gt=3.9.1)"
+  },
+  {
+    "origin": "You must download",
+    "local": "你必须下载"
+  },
+  {
+    "origin": "cmake (version &gt;=3.9.1)",
+    "local": "cmake (version &gt;=3.9.1)"
+  },
+  {
+    "origin": "and install it. You must add cmake to PATH variable during installation",
+    "local": "然后安装.安装期间必须将cmake添加到路径变量"
+  },
+  {
+    "origin": "You must install",
+    "local": "您必须安装"
+  },
+  {
+    "origin": "git-bash (version&gt;=2.14.1)",
+    "local": "git-bash (version&gt;=2.14.1)"
+  },
+  {
+    "origin": ". Don't add git to PATH variable during installation",
+    "local": ". 安装期间不要将git添加到PATH变量"
+  },
+  {
+    "origin": "Run git-bash. You observe a command line window. Suppose you want to build opencv and opencv_contrib in c:/lib",
+    "local": "运行git bash.观察命令行窗口.假设您想在c:/lib中构建opencv和 opencv_contrib "
+  },
+  {
+    "origin": "In git command line enter following command (if folder does not exist) :",
+    "local": "在 git 命令行中输入以下命令(如果文件夹不存在):"
+  },
+  {
+    "origin": "save this script with name installOCV.sh in c:/lib",
+    "local": "在c:/lib中保存名为installOCV.sh的脚本"
+  },
+  {
+    "origin": "In this script I suppose you use VS 2015 in 64 bits",
+    "local": "在这个脚本中,我假设您使用64位的VS 2015"
+  },
+  {
+    "origin": "and opencv will be installed in c:/lib/install/opencv",
+    "local": "opencv将安装在c:/lib/install/opencv中"
+  },
+  {
+    "origin": "with no Perf tests, no tests, no doc, no CUDA and no example",
+    "local": "没有性能测试,没有测试,没有文档,没有CUDA,没有例子"
+  },
+  {
+    "origin": "In git command line enter following command :",
+    "local": "在git命令行中输入以下命令:"
+  },
+  {
+    "origin": "Drink a coffee or two... opencv is ready : That's all!",
+    "local": "喝一两杯咖啡...opencv准备就绪:仅此而已！"
+  },
+  {
+    "origin": "Next time you run this script, opencv and opencv_contrib will be updated and rebuild",
+    "local": "下次运行此脚本时,将更新并重新生成opencv和opencv_contrib"
+  },
+  {
+    "origin": "Installation by Making Your Own Libraries from the Source Files",
+    "local": "通过从源文件创建自己的库进行安装"
+  },
+  {
+    "origin": "You may find the content of this tutorial also inside the following videos:",
+    "local": "您可以在以下视频中找到本教程的内容:"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ", hosted on YouTube.",
+    "local": ",在YouTube上主持.(有梯子的同学可以搬下)"
+  },
+  {
+    "origin": "warning",
+    "local": "warning"
+  },
+  {
+    "origin": "These videos above are long-obsolete and contain inaccurate information. Be careful, since solutions described in those videos are no longer supported and may even break your install.",
+    "local": "以上这些视频早已过时,包含不准确的信息.请小心,因为这些视频中描述的解决方案不再受支持,甚至可能破坏您的安装."
+  },
+  {
+    "origin": "If you are building your own libraries you can take the source files from our",
+    "local": "如果您正在构建自己的库,您可以从我们的"
+  },
+  {
+    "origin": "Git repository",
+    "local": "Git repository"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Building the OpenCV library from scratch requires a couple of tools installed beforehand:",
+    "local": "从头开始构建OpenCV库需要预先安装几个工具:"
+  },
+  {
+    "origin": "An IDE of choice (preferably), or just a CC++ compiler that will actually make the binary files. Here we will use the",
+    "local": "一个IDE的选择(最好),或只是一个CC++编译器,将真正使二进制文件.在这里我们将使用"
+  },
+  {
+    "origin": "Microsoft Visual Studio",
+    "local": "Microsoft Visual Studio"
+  },
+  {
+    "origin": ". However, you can use any other IDE that has a valid CC++ compiler.",
+    "local": ". 但是,您可以使用任何其他具有有效CC++编译器的IDE."
+  },
+  {
+    "origin": "CMake",
+    "local": "CMake"
+  },
+  {
+    "origin": ", which is a neat tool to make the project files (for your chosen IDE) from the OpenCV source files. It will also allow an easy configuration of the OpenCV build files, in order to make binary files that fits exactly to your needs.",
+    "local": ",这是一个从OpenCV源文件生成项目文件(用于所选IDE)的简洁工具.它还允许轻松配置OpenCV构建文件,以便生成完全符合您需要的二进制文件."
+  },
+  {
+    "origin": "Git to acquire the OpenCV source files. A good tool for this is",
+    "local": "Git获取OpenCV源文件.一个很好的工具就是"
+  },
+  {
+    "origin": "TortoiseGit",
+    "local": "TortoiseGit"
+  },
+  {
+    "origin": ". Alternatively, you can just download an archived version of the source files from our",
+    "local": ". 或者,您可以从我们的网站下载源文件的存档版本"
+  },
+  {
+    "origin": "page on Sourceforge",
+    "local": "源代码页"
+  },
+  {
+    "origin": "OpenCV may come in multiple flavors. There is a \"core\" section that will work on its own. Nevertheless, there is a couple of tools, libraries made by 3rd parties that offer services of which the OpenCV may take advantage. These will improve its capabilities in many ways. In order to use any of them, you need to download and install them on your system.",
+    "local": "OpenCV可能有多种风格.有一个“核心”部分将自己工作.尽管如此,仍然有一些由第三方制作的工具库,它们提供OpenCV可以利用的服务.这些将在许多方面提高其能力.为了使用它们中的任何一个,您需要下载它们并将其安装到您的系统上."
+  },
+  {
+    "origin": "The",
+    "local": "这个"
+  },
+  {
+    "origin": "Python libraries",
+    "local": "Python库"
+  },
+  {
+    "origin": "are required to build the",
+    "local": "是构建"
+  },
+  {
+    "origin": "Python interface",
+    "local": "Python接口"
+  },
+  {
+    "origin": "of OpenCV. For now use the version",
+    "local": "OpenCV.现在使用这个版本"
+  },
+  {
+    "origin": ". This is also a must if you want to build the",
+    "local": ". 如果您想构建"
+  },
+  {
+    "origin": "OpenCV documentation",
+    "local": "OpenCV文档"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Numpy",
+    "local": "Numpy"
+  },
+  {
+    "origin": "is a scientific computing package for Python. Required for the",
+    "local": "是Python的科学计算包.所需的"
+  },
+  {
+    "origin": "Python interface",
+    "local": "Python接口"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Intel Threading Building Blocks (",
+    "local": "英特尔线程构建块("
+  },
+  {
+    "origin": "TBB",
+    "local": "TBB"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "is used inside OpenCV for parallel code snippets. Using this will make sure that the OpenCV library will take advantage of all the cores you have in your system's CPU.",
+    "local": "在OpenCV内部用于并行代码段.使用它可以确保OpenCV库能够充分利用系统CPU中的所有核心."
+  },
+  {
+    "origin": "Intel Integrated Performance Primitives (",
+    "local": "英特尔集成性能原件("
+  },
+  {
+    "origin": "IPP",
+    "local": "IPP"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "may be used to improve the performance of color conversion, Haar training and DFT functions of the OpenCV library. Watch out, since this is not a free service.",
+    "local": "可以用来提高OpenCV库的颜色转换、Haar训练和DFT函数的性能.小心,因为这不是免费服务."
+  },
+  {
+    "origin": "OpenCV offers a somewhat fancier and more useful graphical user interface, than the default one by using the",
+    "local": "OpenCV通过使用"
+  },
+  {
+    "origin": "Qt framework",
+    "local": "Qt框架"
+  },
+  {
+    "origin": ". For a quick overview of what this has to offer, look into the documentations",
+    "local": ". 要快速了解它所提供的内容,请查看文档"
+  },
+  {
+    "origin": "highgui",
+    "local": "highgui"
+  },
+  {
+    "origin": "module, under the",
+    "local": "模块,在"
+  },
+  {
+    "origin": "Qt New Functions",
+    "local": "Qt新功能"
+  },
+  {
+    "origin": "section. Version 4.6 or later of the framework is required.",
+    "local": "部分.需要4.6或更高版本的框架."
+  },
+  {
+    "origin": "Eigen",
+    "local": "Eigen"
+  },
+  {
+    "origin": "is a C++ template library for linear algebra.",
+    "local": "是一个线性代数的C++模板库."
+  },
+  {
+    "origin": "The latest",
+    "local": "最新的"
+  },
+  {
+    "origin": "CUDA Toolkit",
+    "local": "CUDA工具包"
+  },
+  {
+    "origin": "will allow you to use the power lying inside your GPU. This will drastically improve performance for some algorithms (e.g the HOG descriptor). Getting more and more of our algorithms to work on the GPUs is a constant effort of the OpenCV team.",
+    "local": "允许你使用GPU内部的电源.这将大大提高某些算法(例如HOG描述符)的性能.让越来越多的算法在gpu上工作是OpenCV团队不断努力的结果."
+  },
+  {
+    "origin": "OpenEXR",
+    "local": "OpenEXR"
+  },
+  {
+    "origin": "source files are required for the library to work with this high dynamic range (HDR) image file format.",
+    "local": "库需要源文件才能使用这种高动态范围(HDR)图像文件格式."
+  },
+  {
+    "origin": "The OpenNI Framework contains a set of open source APIs that provide support for natural interaction with devices via methods such as voice command recognition, hand gestures, and body motion tracking. Prebuilt binaries can be found",
+    "local": "OpenNI框架包含一组开源api,通过诸如语音命令识别、手势和身体运动跟踪等方法为与设备的自然交互提供支持.可以找到预构建的二进制文件"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ". The source code of",
+    "local": ". 的源代码"
+  },
+  {
+    "origin": "OpenNI",
+    "local": "OpenNI"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "OpenNI2",
+    "local": "OpenNI2"
+  },
+  {
+    "origin": "are also available on Github.",
+    "local": "也可以在Github上使用."
+  },
+  {
+    "origin": "Doxygen",
+    "local": "编程辅助工具"
+  },
+  {
+    "origin": "is a documentation generator and is the tool that will actually create the",
+    "local": "是一个文档生成器,是实际创建"
+  },
+  {
+    "origin": "OpenCV documentation",
+    "local": "OpenCV文档"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Now we will describe the steps to follow for a full build (using all the above frameworks, tools and libraries). If you do not need the support for some of these, you can just freely skip this section.",
+    "local": "现在,我们将描述完整构建(使用上述所有框架、工具和库)要遵循的步骤.如果您不需要这些支持,您可以自由地跳过本节."
+  },
+  {
+    "origin": "Building the library",
+    "local": "Building the library"
+  },
+  {
+    "origin": "Make sure you have a working IDE with a valid compiler. In case of the Microsoft Visual Studio just install it and make sure it starts up.",
+    "local": "确保您有一个使用有效编译器的IDE.如果是microsoftvisualstudio,只需安装它并确保它启动."
+  },
+  {
+    "origin": "Install",
+    "local": "安装"
+  },
+  {
+    "origin": "CMake",
+    "local": "CMake"
+  },
+  {
+    "origin": ". Simply follow the wizard, no need to add it to the path. The default install options are OK.",
+    "local": ". 只需按照向导操作,无需将其添加到路径中.默认安装选项正常."
+  },
+  {
+    "origin": "Download and install an up-to-date version of msysgit from its",
+    "local": "从its下载并安装msysgit的最新版本"
+  },
+  {
+    "origin": "official site",
+    "local": "官方网站"
+  },
+  {
+    "origin": ". There is also the portable version, which you need only to unpack to get access to the console version of Git. Supposing that for some of us it could be quite enough.",
+    "local": ". 还有可移植版本,您只需解包即可访问Git的控制台版本.假设对我们中的一些人来说这已经足够了."
+  },
+  {
+    "origin": "Install",
+    "local": "安装"
+  },
+  {
+    "origin": "TortoiseGit",
+    "local": "TortoiseGit"
+  },
+  {
+    "origin": ". Choose the 32 or 64 bit version according to the type of OS you work in. While installing, locate your msysgit (if it does not do that automatically). Follow the wizard &ndash; the default options are OK for the most part.",
+    "local": ". 根据您使用的操作系统类型选择32位或64位版本.安装时,找到msysgit(如果它没有自动完成).跟随向导&ndash;默认选项在大多数情况下是可以的."
+  },
+  {
+    "origin": "Choose a directory in your file system, where you will download the OpenCV libraries to. I recommend creating a new one that has short path and no special characters in it, for example",
+    "local": "在文件系统中选择一个目录,从中下载OpenCV库.例如,我建议创建一个具有短路径和没有特殊字符的新路径"
+  },
+  {
+    "origin": ". For this tutorial, I will suggest you do so. If you use your own path and know, what you are doing &ndash; it is OK.",
+    "local": ". 对于本教程,我建议您这样做.如果你走自己的路,知道自己在做什么&ndash;没关系."
+  },
+  {
+    "origin": "Clone the repository to the selected directory. After clicking",
+    "local": "将存储库克隆到所选目录.点击后"
+  },
+  {
+    "origin": "Clone",
+    "local": "Clone"
+  },
+  {
+    "origin": "button, a window will appear where you can select from what repository you want to download source files (",
+    "local": "按钮,将出现一个窗口,您可以从中选择要下载源文件的存储库("
+  },
+  {
+    "origin": "https://github.com/opencv/opencv.git",
+    "local": "https://github.com/opencv/opencv.git"
+  },
+  {
+    "origin": ") and to what directory (",
+    "local": ")去哪个目录("
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Push the OK button and be patient as the repository is quite a heavy download. It will take some time depending on your Internet connection.",
+    "local": "按下OK按钮并耐心等待,因为存储库的下载量相当大.这将需要一些时间取决于你的互联网连接."
+  },
+  {
+    "origin": "In this section, I will cover installing the 3rd party libraries.",
+    "local": "在本节中,我将介绍如何安装第三方库."
+  },
+  {
+    "origin": "Download the",
+    "local": "下载"
+  },
+  {
+    "origin": "Python libraries",
+    "local": "Python库"
+  },
+  {
+    "origin": "and install it with the default options. You will need a couple other python extensions. Luckily installing all these may be automated by a nice tool called",
+    "local": "并使用默认选项进行安装.您将需要一些其他python扩展.幸运的是,通过一个叫做"
+  },
+  {
+    "origin": "Setuptools",
+    "local": "安装工具"
+  },
+  {
+    "origin": ". Download and install again.",
+    "local": ". 下载并重新安装."
+  },
+  {
+    "origin": "The easiest way to install Numpy is to just download its binaries from the",
+    "local": "安装Numpy最简单的方法就是从"
+  },
+  {
+    "origin": "sourceforge page",
+    "local": "来源"
+  },
+  {
+    "origin": ". Make sure your download and install exactly the binary for your python version (so for version",
+    "local": ". 确保下载并安装的二进制文件与python版本完全一致(对于python版本也是如此)"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "For the",
+    "local": "对于"
+  },
+  {
+    "origin": "Intel Threading Building Blocks (",
+    "local": "英特尔线程构建块("
+  },
+  {
+    "origin": "TBB",
+    "local": "TBB"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "download the source files and extract it inside a directory on your system. For example let there be",
+    "local": "下载源文件并将其解压缩到系统的目录中.例如,让我们有"
+  },
+  {
+    "origin": ". For installing the",
+    "local": ". 用于安装"
+  },
+  {
+    "origin": "Intel Integrated Performance Primitives (",
+    "local": "英特尔集成性能原件("
+  },
+  {
+    "origin": "IPP",
+    "local": "IPP"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "the story is the same. For extracting the archives, I recommend using the",
+    "local": "故事是一样的.对于提取档案,我建议使用"
+  },
+  {
+    "origin": "7-Zip",
+    "local": "7-Zip"
+  },
+  {
+    "origin": "application.",
+    "local": "应用程序."
+  },
+  {
+    "origin": "In case of the",
+    "local": "以防"
+  },
+  {
+    "origin": "Eigen",
+    "local": "Eigen"
+  },
+  {
+    "origin": "library it is again a case of download and extract to the",
+    "local": "library又是一个下载和解压的案例"
+  },
+  {
+    "origin": "directory.",
+    "local": "目录."
+  },
+  {
+    "origin": "Same as above with",
+    "local": "同上"
+  },
+  {
+    "origin": "OpenEXR",
+    "local": "OpenEXR"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "For the",
+    "local": "对于"
+  },
+  {
+    "origin": "OpenNI Framework",
+    "local": "OpenNI框架"
+  },
+  {
+    "origin": "you need to install both the",
+    "local": "您需要同时安装"
+  },
+  {
+    "origin": "development build",
+    "local": "开发-建造"
+  },
+  {
+    "origin": "and the",
+    "local": "以及"
+  },
+  {
+    "origin": "PrimeSensor Module",
+    "local": "传感器模块"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "For the CUDA you need again two modules: the latest",
+    "local": "对于CUDA,您还需要两个模块:最新的"
+  },
+  {
+    "origin": "CUDA Toolkit",
+    "local": "CUDA工具包"
+  },
+  {
+    "origin": "and the",
+    "local": "以及"
+  },
+  {
+    "origin": "CUDA Tools SDK",
+    "local": "CUDA Tools SDK"
+  },
+  {
+    "origin": ". Download and install both of them with a",
+    "local": ". 使用"
+  },
+  {
+    "origin": "complete",
+    "local": "完成"
+  },
+  {
+    "origin": "option by using the 32 or 64 bit setups according to your OS.",
+    "local": "选项,根据您的操作系统使用32位或64位设置."
+  },
+  {
+    "origin": "In case of the Qt framework you need to build yourself the binary files (unless you use the Microsoft Visual Studio 2008 with 32 bit compiler). To do this go to the",
+    "local": "对于Qt框架,您需要自己构建二进制文件(除非您使用32位编译器的microsoftvisualstudio2008).要做到这一点,请转到"
+  },
+  {
+    "origin": "Qt Downloads",
+    "local": "Qt下载"
+  },
+  {
+    "origin": "page. Download the source files (not the installers!!!):",
+    "local": "第页.下载源文件(不是安装程序！！！):"
+  },
+  {
+    "origin": "Extract it into a nice and short named directory like",
+    "local": "将其解压到一个简短的目录中,如"
+  },
+  {
+    "origin": ". Then you need to build it. Start up a",
+    "local": ". 然后你需要建造它.启动一个"
+  },
+  {
+    "origin": "Visual",
+    "local": "Visual"
+  },
+  {
+    "origin": "Studio",
+    "local": "Studio"
+  },
+  {
+    "origin": "Command",
+    "local": "命令"
+  },
+  {
+    "origin": "Prompt",
+    "local": "提示"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ") by using the start menu search (or navigate through the start menu All Programs &ndash;&gt; Microsoft Visual Studio 2010 &ndash;&gt; Visual Studio Tools &ndash;&gt; Visual Studio Command Prompt (2010)).",
+    "local": ")使用“开始”菜单搜索(或在“开始”菜单中导航所有程序&ndash&gt;Microsoft Visual Studio 2010&ndash&gt;Visual Studio工具&ndash&gt;Visual Studio命令提示符(2010))."
+  },
+  {
+    "origin": "Now navigate to the extracted folder and enter inside it by using this console window. You should have a folder containing files like",
+    "local": "现在导航到提取的文件夹并使用这个控制台窗口在其中输入.你应该有一个包含如下文件的文件夹"
+  },
+  {
+    "origin": "Install",
+    "local": "安装"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "Make",
+    "local": "Make"
+  },
+  {
+    "origin": "and so on. Use the",
+    "local": "等等.使用"
+  },
+  {
+    "origin": "dir",
+    "local": "目录"
+  },
+  {
+    "origin": "command to list files inside your current directory. Once arrived at this directory enter the following command:",
+    "local": "命令列出当前目录中的文件.到达此目录后,输入以下命令:"
+  },
+  {
+    "origin": "Completing this will take around 10-20 minutes. Then enter the next command that will take a lot longer (can easily take even more than a full hour):",
+    "local": "完成这项工作大约需要10-20分钟.然后输入下一个需要更长时间的命令(很容易就需要一个多小时):"
+  },
+  {
+    "origin": "After this set the Qt environment variables using the following command on Windows 7:",
+    "local": "在此之后,在Windows 7上使用以下命令设置Qt环境变量:"
+  },
+  {
+    "origin": "Also, add the built binary files path to the system path by using the",
+    "local": "另外,使用"
+  },
+  {
+    "origin": "PathEditor",
+    "local": "路径编辑器"
+  },
+  {
+    "origin": ". In our case this is",
+    "local": ". 在我们的情况下,这是"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "If you plan on doing Qt application development you can also install at this point the",
+    "local": "如果您计划进行Qt应用程序开发,也可以在此时安装"
+  },
+  {
+    "origin": "Qt Visual Studio Add-in",
+    "local": "Qt Visual Studio加载项"
+  },
+  {
+    "origin": ". After this you can make and build Qt applications without using the",
+    "local": ". 在此之后,您可以在不使用"
+  },
+  {
+    "origin": "Qt Creator",
+    "local": "Qt Creator"
+  },
+  {
+    "origin": ". Everything is nicely integrated into Visual Studio.",
+    "local": ". 一切都很好地集成到visualstudio中."
+  },
+  {
+    "origin": "Now start the",
+    "local": "现在开始"
+  },
+  {
+    "origin": "CMake (cmake-gui)",
+    "local": "CMake(CMake gui)"
+  },
+  {
+    "origin": ". You may again enter it in the start menu search or get it from the All Programs &ndash;&gt; CMake 2.8 &ndash;&gt; CMake (cmake-gui). First, select the directory for the source files of the OpenCV library (1). Then, specify a directory where you will build the binary files for OpenCV (2).",
+    "local": ". 您可以再次在“开始”菜单搜索中输入它或从“所有程序”中获取它&ndash&gt;CMake 2.8&ndash&gt;CMake(CMake gui).首先,为OpenCV库的源文件选择目录(1).然后,指定一个为OpenCV(2)构建二进制文件的目录."
+  },
+  {
+    "origin": "Press the Configure button to specify the compiler (and",
+    "local": "按Configure按钮指定编译器(和"
+  },
+  {
+    "origin": "IDE",
+    "local": "IDE"
+  },
+  {
+    "origin": ") you want to use. Note that in case you can choose between different compilers for making either 64 bit or 32 bit libraries. Select the one you use in your application development.",
+    "local": ")你想用的.请注意,在这种情况下,您可以选择不同的编译器来生成64位或32位库.选择在应用程序开发中使用的一个."
+  },
+  {
+    "origin": "CMake will start out and based on your system variables will try to automatically locate as many packages as possible. You can modify the packages to use for the build in the WITH &ndash;&gt; WITH_X menu points (where",
+    "local": "CMake将启动并基于您的系统变量尝试自动定位尽可能多的包.您可以使用&ndash;在中修改要用于生成的包&gt;带有X个菜单点(其中"
+  },
+  {
+    "origin": "X",
+    "local": "X"
+  },
+  {
+    "origin": "is the package abbreviation). Here are a list of current packages you can turn on or off:",
+    "local": "是软件包的缩写).以下是您可以打开或关闭的当前软件包列表:"
+  },
+  {
+    "origin": "Select all the packages you want to use and press again the",
+    "local": "选择要使用的所有软件包,然后再次按"
+  },
+  {
+    "origin": "Configure",
+    "local": "配置"
+  },
+  {
+    "origin": "button. For an easier overview of the build options make sure the",
+    "local": "按钮.为了更容易地概述构建选项,请确保"
+  },
+  {
+    "origin": "Grouped",
+    "local": "分组"
+  },
+  {
+    "origin": "option under the binary directory selection is turned on. For some of the packages CMake may not find all of the required files or directories. In case of these, CMake will throw an error in its output window (located at the bottom of the GUI) and set its field values to not found constants. For example:",
+    "local": "二进制目录选择下的选项处于启用状态.对于某些包,CMake可能找不到所有必需的文件或目录.在这种情况下,CMake将在其输出窗口(位于GUI底部)中抛出一个错误,并将其字段值设置为notfound常量.例如:"
+  },
+  {
+    "origin": "For these you need to manually set the queried directories or files path. After this press again the",
+    "local": "为此,您需要手动设置查询的目录或文件路径.在这次新闻发布会之后"
+  },
+  {
+    "origin": "Configure",
+    "local": "配置"
+  },
+  {
+    "origin": "button to see if the value entered by you was accepted or not. Do this until all entries are good and you cannot see errors in the field/value or the output part of the GUI. Now I want to emphasize an option that you will definitely love: ENABLE &ndash;&gt; ENABLE_SOLUTION_FOLDERS. OpenCV will create many-many projects and turning this option will make sure that they are categorized inside directories in the",
+    "local": "按钮查看您输入的值是否被接受.这样做,直到所有条目都正常,并且您在GUI的字段/值或输出部分看不到错误为止.现在我想强调一个您肯定会喜欢的选项:启用&ndash&gt;启用\\解决方案\\文件夹.OpenCV将创建许多项目,启用此选项将确保它们在"
+  },
+  {
+    "origin": "Solution Explorer",
+    "local": "解决方案管理器"
+  },
+  {
+    "origin": ". It is a must have feature, if you ask me.",
+    "local": ". 如果你问我的话,这是一个必备功能."
+  },
+  {
+    "origin": "Furthermore, you need to select what part of OpenCV you want to build.",
+    "local": "此外,还需要选择要构建OpenCV的哪一部分."
+  },
+  {
+    "origin": "BUILD_DOCS",
+    "local": "生成文档"
+  },
+  {
+    "origin": "-&gt; It creates two projects for building the documentation of OpenCV (there will be a separate project for building the HTML and the PDF files). Note that these are not built together with the solution. You need to make an explicit build project command on these to do so.",
+    "local": "-&gt;它创建了两个用于构建OpenCV文档的项目(将有一个单独的项目用于构建HTML和PDF文件).请注意,这些不是与解决方案一起构建的.为此,需要对这些对象执行显式的build project命令."
+  },
+  {
+    "origin": "BUILD_EXAMPLES",
+    "local": "构建示例"
+  },
+  {
+    "origin": "-&gt; OpenCV comes with many example applications from which you may learn most of the libraries capabilities. This will also come handy to easily try out if OpenCV is fully functional on your computer.",
+    "local": "-&gt;OpenCV附带了许多示例应用程序,您可以从中了解大多数库功能.如果OpenCV在您的计算机上完全可用,那么这也很容易尝试."
+  },
+  {
+    "origin": "BUILD_PACKAGE",
+    "local": "BUILD_PACKAGE"
+  },
+  {
+    "origin": "-&gt; Prior to version 2.3 with this you could build a project that will build an OpenCV installer. With this, you can easily install your OpenCV flavor on other systems. For the latest source files of OpenCV, it generates a new project that simply creates a zip archive with OpenCV sources.",
+    "local": "-&gt;在版本2.3之前,您可以构建一个将构建OpenCV安装程序的项目.有了它,您可以轻松地在其他系统上安装OpenCV风格.对于OpenCV的最新源文件,它生成了一个新项目,该项目只需使用OpenCV源文件创建一个zip存档."
+  },
+  {
+    "origin": "BUILD_SHARED_LIBS",
+    "local": "生成共享库"
+  },
+  {
+    "origin": "-&gt; With this you can control to build DLL files (when turned on) or static library files (*.lib) otherwise.",
+    "local": "-&gt; 通过此选项,您可以控制生成DLL文件(启用时)或静态库文件(*.lib)."
+  },
+  {
+    "origin": "BUILD_TESTS",
+    "local": "内部版本测试"
+  },
+  {
+    "origin": "-&gt; Each module of OpenCV has a test project assigned to it. Building these test projects is also a good way to try out, that the modules work just as expected on your system too.",
+    "local": "-&gt; OpenCV的每个模块都分配了一个测试项目.构建这些测试项目也是一种很好的尝试方式,模块在您的系统上也能像预期的那样工作."
+  },
+  {
+    "origin": "BUILD_PERF_TESTS",
+    "local": "构建性能测试"
+  },
+  {
+    "origin": "-&gt; There are also performance tests for many OpenCV functions. If you are concerned about performance, build them and run.",
+    "local": "-&gt; 还有许多OpenCV函数的性能测试.如果您关心性能,请构建它们并运行."
+  },
+  {
+    "origin": "BUILD_opencv_python",
+    "local": "BUILD_opencv_python"
+  },
+  {
+    "origin": "-&gt; Self-explanatory. Create the binaries to use OpenCV from the Python language.",
+    "local": "-&gt;不言自明.从Python语言创建二进制文件以使用OpenCV."
+  },
+  {
+    "origin": "BUILD_opencv_world",
+    "local": "BUILD_opencv_world"
+  },
+  {
+    "origin": "-&gt; Generate a single \"opencv_world\" binary (a shared or static library, depending on",
+    "local": "-&gt;生成一个“opencv_world”二进制文件(一个共享或静态库,取决于"
+  },
+  {
+    "origin": "BUILD_SHARED_LIBS",
+    "local": "BUILD_SHARED_LIBS"
+  },
+  {
+    "origin": ") including all the modules instead of a collection of separate binaries, one binary per module.",
+    "local": ")包括所有模块,而不是单独的二进制文件集合,每个模块一个二进制文件."
+  },
+  {
+    "origin": "Press again the",
+    "local": "再按一下按钮"
+  },
+  {
+    "origin": "Configure",
+    "local": "配置"
+  },
+  {
+    "origin": "button and ensure no errors are reported. If this is the case, you can tell CMake to create the project files by pushing the",
+    "local": "按钮并确保没有报告错误.如果是这种情况,您可以告诉CMake通过按"
+  },
+  {
+    "origin": "Generate",
+    "local": "Generate"
+  },
+  {
+    "origin": "button. Go to the build directory and open the created",
+    "local": "按钮.转到build目录并打开创建的"
+  },
+  {
+    "origin": "OpenCV",
+    "local": "OpenCV"
+  },
+  {
+    "origin": "solution. Depending on just how much of the above options you have selected the solution may contain quite a lot of projects so be tolerant on the IDE at the startup. Now you need to build both the",
+    "local": "解决方案.根据您选择的上述选项的多少,解决方案可能包含相当多的项目,因此在启动时对IDE要宽容.现在您需要同时构建"
+  },
+  {
+    "origin": "Release",
+    "local": "释放"
+  },
+  {
+    "origin": "and the",
+    "local": "以及"
+  },
+  {
+    "origin": "Debug",
+    "local": "调试"
+  },
+  {
+    "origin": "binaries. Use the drop-down menu on your IDE to change to another of these after building for one of them.",
+    "local": "二进制文件.在为其中一个生成后,使用IDE上的下拉菜单更改为另一个."
+  },
+  {
+    "origin": "In the end, you can observe the built binary files inside the bin directory:",
+    "local": "最后,您可以观察bin目录中构建的二进制文件:"
+  },
+  {
+    "origin": "For the documentation, you need to explicitly issue the build commands on the",
+    "local": "对于文档,您需要在"
+  },
+  {
+    "origin": "doxygen",
+    "local": "doxygen"
+  },
+  {
+    "origin": "project for the HTML documentation. It will call",
+    "local": "HTML文档的项目.它会召唤"
+  },
+  {
+    "origin": "Doxygen",
+    "local": "Doxygen"
+  },
+  {
+    "origin": "to do all the hard work. You can find the generated documentation inside the",
+    "local": "做所有艰苦的工作.您可以在"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "To collect the header and the binary files, that you will use during your own projects, into a separate directory (similarly to how the pre-built binaries ship) you need to explicitly build the",
+    "local": "要将头文件和二进制文件(您将在自己的项目中使用)收集到一个单独的目录中(类似于预构建的二进制文件的传送方式),您需要显式地构建"
+  },
+  {
+    "origin": "Install",
+    "local": "安装"
+  },
+  {
+    "origin": "project.",
+    "local": "项目."
+  },
+  {
+    "origin": "This will create an",
+    "local": "这将创建一个"
+  },
+  {
+    "origin": "Install",
+    "local": "安装"
+  },
+  {
+    "origin": "directory inside the",
+    "local": "目录中的"
+  },
+  {
+    "origin": "Build",
+    "local": "建造"
+  },
+  {
+    "origin": "one collecting all the built binaries into a single place. Use this only after you built both the",
+    "local": "一个将所有构建的二进制文件收集到一个地方的程序.只有在你建立了两个"
+  },
+  {
+    "origin": "Release",
+    "local": "释放"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "Debug",
+    "local": "调试"
+  },
+  {
+    "origin": "versions.",
+    "local": "版本."
+  },
+  {
+    "origin": "To test your build just go into the",
+    "local": "要测试您的构建,只需进入"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "directory and start a couple of applications like the",
+    "local": "目录并启动两个应用程序,如"
+  },
+  {
+    "origin": "contours.exe",
+    "local": "contours.exe"
+  },
+  {
+    "origin": ". If they run, you are done. Otherwise, something definitely went awfully wrong. In this case you should contact us at our",
+    "local": ". 如果他们跑了,你就完了.否则,肯定出了大问题.在这种情况下,你应该联系我们的电话"
+  },
+  {
+    "origin": "Q&amp;A forum",
+    "local": "问答;论坛"
+  },
+  {
+    "origin": ". If everything is okay, the",
+    "local": ". 如果一切正常"
+  },
+  {
+    "origin": "contours.exe",
+    "local": "contours.exe"
+  },
+  {
+    "origin": "output should resemble the following image (if built with Qt support):",
+    "local": "输出应类似于下图(如果使用Qt支持构建):"
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "If you use the GPU module (CUDA libraries), make sure you also upgrade to the latest drivers of your GPU. Error messages containing invalid entries in (or cannot find) the nvcuda.dll are caused mostly by old video card drivers. For testing the GPU (if built) run the",
+    "local": "如果您使用GPU模块(CUDA库),请确保您也升级到GPU的最新驱动程序.在nvcuda.dll中包含无效项(或找不到)的错误消息主要是由旧的视频卡驱动程序引起的.要测试GPU(如果已构建),请运行"
+  },
+  {
+    "origin": "performance_gpu.exe",
+    "local": "performance_gpu.exe"
+  },
+  {
+    "origin": "sample application.",
+    "local": "示例应用程序."
+  },
+  {
+    "origin": "Set the OpenCV environment variable and add it to the systems path",
+    "local": "设置OpenCV环境变量并将其添加到系统路径"
+  },
+  {
+    "origin": "First we set an environment variable to make easier our work. This will hold the build directory of our OpenCV library that we use in our projects. Start up a command window and enter:",
+    "local": "首先,我们设置一个环境变量来简化我们的工作.这将保存我们在项目中使用的OpenCV库的构建目录.启动命令窗口并输入:"
+  },
+  {
+    "origin": "Here the directory is where you have your OpenCV binaries (",
+    "local": "这里的目录是您拥有OpenCV二进制文件的地方("
+  },
+  {
+    "origin": "extracted",
+    "local": "提取"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "built",
+    "local": "构建"
+  },
+  {
+    "origin": "). You can have different platform (e.g. x64 instead of x86) or compiler type, so substitute appropriate value. Inside this, you should have two folders called",
+    "local": "). 您可以使用不同的平台(例如x64而不是x86)或编译器类型,因此请替换适当的值.在这个文件夹中,应该有两个名为"
+  },
+  {
+    "origin": "lib",
+    "local": "库"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "bin",
+    "local": "箱子"
+  },
+  {
+    "origin": ". The -m should be added if you wish to make the settings computer wise, instead of user wise.",
+    "local": ". 如果您希望使设置计算机化,而不是用户化,那么应该添加-m."
+  },
+  {
+    "origin": "If you built static libraries then you are done. Otherwise, you need to add the",
+    "local": "如果您构建了静态库,那么就完成了.否则,您需要添加"
+  },
+  {
+    "origin": "bin",
+    "local": "箱子"
+  },
+  {
+    "origin": "folders path to the systems path. This is because you will use the OpenCV library in form of *\"Dynamic-link libraries\"* (also known as",
+    "local": "文件夹路径到系统路径.这是因为您将以*“动态链接库”*(也称为"
+  },
+  {
+    "origin": "DLL",
+    "local": "动态链接库"
+  },
+  {
+    "origin": "). Inside these are stored all the algorithms and information the OpenCV library contains. The operating system will load them only on demand, during runtime. However, to do this the operating system needs to know where they are. The systems",
+    "local": "). 其中存储了OpenCV库包含的所有算法和信息.操作系统将只在运行时按需加载它们.然而,要做到这一点,操作系统需要知道它们在哪里.系统"
+  },
+  {
+    "origin": "PATH",
+    "local": "路径"
+  },
+  {
+    "origin": "contains a list of folders where DLLs can be found. Add the OpenCV library path to this and the OS will know where to look if he ever needs the OpenCV binaries. Otherwise, you will need to copy the used DLLs right beside the applications executable file (",
+    "local": "包含可在其中找到DLL的文件夹列表.将OpenCV库路径添加到这个文件中,操作系统就会知道如果他需要OpenCV二进制文件,应该去哪里查找.否则,您将需要在应用程序可执行文件旁边复制使用过的dll("
+  },
+  {
+    "origin": "exe",
+    "local": "exe"
+  },
+  {
+    "origin": ") for the OS to find it, which is highly unpleasant if you work on many projects. To do this start up again the",
+    "local": ")对于操作系统来说,这是非常不愉快的,如果你在许多项目上工作.要做到这一点,请重新启动"
+  },
+  {
+    "origin": "PathEditor",
+    "local": "PathEditor"
+  },
+  {
+    "origin": "and add the following new entry (right click in the application to bring up the menu):",
+    "local": "并添加以下新条目(在应用程序中单击鼠标右键以打开菜单):"
+  },
+  {
+    "origin": "Save it to the registry and you are done. If you ever change the location of your build directories or want to try out your application with a different build, all you will need to do is to update the OPENCV_DIR variable via the",
+    "local": "把它保存到注册表,你就完成了.如果您更改了构建目录的位置,或者希望使用不同的构建来试用您的应用程序,那么您所需要做的就是通过"
+  },
+  {
+    "origin": "setx",
+    "local": "setx"
+  },
+  {
+    "origin": "command inside a command window.",
+    "local": "命令窗口中的命令."
+  },
+  {
+    "origin": "Now you can continue reading the tutorials with the",
+    "local": "现在您可以使用继续阅读教程"
+  },
+  {
+    "origin": "section. There you will find out how to use the OpenCV library in your own projects with the help of the Microsoft Visual Studio IDE.",
+    "local": "部分.在那里,您将了解如何在MicrosoftVisualStudioIDE的帮助下在您自己的项目中使用OpenCV库."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by "
+  }
+]

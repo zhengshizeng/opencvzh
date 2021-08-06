@@ -1,0 +1,186 @@
+[
+  {
+    "origin": "OpenCV: Contour Properties",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Contour Properties",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "Here we will learn to extract some frequently used properties of objects like Solidity, Equivalent Diameter, Mask image, Mean Intensity etc.",
+    "local": ""
+  },
+  {
+    "origin": "1. Aspect Ratio",
+    "local": ""
+  },
+  {
+    "origin": "It is the ratio of width to height of bounding rect of the object.",
+    "local": ""
+  },
+  {
+    "origin": "\\[Aspect \\; Ratio = \\frac{Width}{Height}\\]",
+    "local": ""
+  },
+  {
+    "origin": "2. Extent",
+    "local": ""
+  },
+  {
+    "origin": "Extent is the ratio of contour area to bounding rectangle area.",
+    "local": ""
+  },
+  {
+    "origin": "\\[Extent = \\frac{Object \\; Area}{Bounding \\; Rectangle \\; Area}\\]",
+    "local": ""
+  },
+  {
+    "origin": "3. Solidity",
+    "local": ""
+  },
+  {
+    "origin": "Solidity is the ratio of contour area to its convex hull area.",
+    "local": ""
+  },
+  {
+    "origin": "\\[Solidity = \\frac{Contour \\; Area}{Convex \\; Hull \\; Area}\\]",
+    "local": ""
+  },
+  {
+    "origin": "4. Equivalent Diameter",
+    "local": ""
+  },
+  {
+    "origin": "Equivalent Diameter is the diameter of the circle whose area is same as the contour area.",
+    "local": ""
+  },
+  {
+    "origin": "\\[Equivalent \\; Diameter = \\sqrt{\\frac{4 \\times Contour \\; Area}{\\pi}}\\]",
+    "local": ""
+  },
+  {
+    "origin": "5. Orientation",
+    "local": ""
+  },
+  {
+    "origin": "Orientation is the angle at which object is directed. Following method also gives the Major Axis and Minor Axis lengths.",
+    "local": ""
+  },
+  {
+    "origin": "6. Mask and Pixel Points",
+    "local": ""
+  },
+  {
+    "origin": "In some cases, we may need all the points which comprises that object.",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(src, dst)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input array.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output array of the same type as src.",
+    "local": ""
+  },
+  {
+    "origin": "7. Maximum Value, Minimum Value and their locations",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "cv.minMaxLoc(src, mask)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input single-channel array.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "optional mask used to select a sub-array.",
+    "local": ""
+  },
+  {
+    "origin": "8. Mean Color or Mean Intensity",
+    "local": ""
+  },
+  {
+    "origin": "Here, we can find the average color of an object. Or it can be average intensity of the object in grayscale mode. We again use the same mask to do it.",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(src, mask)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input array that should have from 1 to 4 channels so that the result can be stored in Scalar.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "optional operation mask.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

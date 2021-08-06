@@ -1,0 +1,630 @@
+[
+  {
+    "origin": "OpenCV: opencv2/photo.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "photo.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "The base class for algorithms that align images of the same scene with different exposures.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This algorithm converts images to median threshold bitmaps (1 for pixels brighter than median luminance and 0 otherwise) and than aligns the resulting bitmaps using bit operations.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "The base class for camera response calibration algorithms.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inverse camera response function is extracted for each brightness value by minimizing an objective function as linear system. Objective function is constructed using pixel values on the same position in all images, extra term is added to make the result smoother.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inverse camera response function is extracted for each brightness value by minimizing an objective function as linear system. This algorithm uses all image pixels.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "The resulting HDR image is calculated as weighted average of the exposures considering exposure values and camera response.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "The base class algorithms that can merge exposure sequence to a single image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Pixels are weighted using contrast, saturation and well-exposedness measures, than images are combined using laplacian pyramids.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "The resulting HDR image is calculated as weighted average of the exposures considering exposure values and camera response.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Base class for tonemapping algorithms - tools that are used to map HDR image to 8-bit range.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Adaptive logarithmic mapping is a fast global tonemapping algorithm that scales the image in logarithmic domain.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This algorithm transforms image to contrast using gradients on all levels of gaussian pyramid, transforms contrast values to HVS response and scales the response. After this the image is reconstructed from new contrast values.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "This is a global tonemapping operator that models human visual system.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= 256 }",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "seamlessClone algorithm flags",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Edge preserving filters.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, InputArray mask, OutputArray dst, float red_mul=1.0f, float green_mul=1.0f, float blue_mul=1.0f)",
+    "local": ""
+  },
+  {
+    "origin": "Given an original color image, two differently colored versions of this image can be mixed seamlessly.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int max_bits=6, int exclude_range=4, bool cut=true)",
+    "local": ""
+  },
+  {
+    "origin": "Creates",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int samples=70, float lambda=10.0f, bool random=false)",
+    "local": ""
+  },
+  {
+    "origin": "Creates",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int max_iter=30, float threshold=0.01f)",
+    "local": ""
+  },
+  {
+    "origin": "Creates",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Creates",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(float contrast_weight=1.0f, float saturation_weight=1.0f, float exposure_weight=0.0f)",
+    "local": ""
+  },
+  {
+    "origin": "Creates",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Creates",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(float gamma=1.0f)",
+    "local": ""
+  },
+  {
+    "origin": "Creates simple linear mapper with gamma correction.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(float gamma=1.0f, float saturation=1.0f, float bias=0.85f)",
+    "local": ""
+  },
+  {
+    "origin": "Creates",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(float gamma=1.0f, float scale=0.7f, float saturation=1.0f)",
+    "local": ""
+  },
+  {
+    "origin": "Creates",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(float gamma=1.0f, float intensity=0.0f, float light_adapt=1.0f, float color_adapt=0.0f)",
+    "local": ""
+  },
+  {
+    "origin": "Creates",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, OutputArray grayscale, OutputArray color_boost)",
+    "local": ""
+  },
+  {
+    "origin": "Transforms a color image to a grayscale image. It is a basic tool in digital printing, stylized black-and-white photograph rendering, and in many single channel image processing applications",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt; Mat &gt; &amp;observations, Mat &amp;result, double lambda=1.0, int niters=30)",
+    "local": ""
+  },
+  {
+    "origin": "Primal-dual algorithm is an algorithm for solving special types of variational problems (that is, finding a function to minimize some functional). As the image denoising, in particular, may be seen as the variational problem, primal-dual algorithm then can be used to perform denoising and this is exactly what is implemented.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, float sigma_s=10, float sigma_r=0.15f)",
+    "local": ""
+  },
+  {
+    "origin": "This filter enhances the details of a particular image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, int flags=1, float sigma_s=60, float sigma_r=0.4f)",
+    "local": ""
+  },
+  {
+    "origin": "Filtering is the fundamental operation in image and video processing. Edge-preserving smoothing filters are used in many different applications",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, float h=3, int templateWindowSize=7, int searchWindowSize=21)",
+    "local": ""
+  },
+  {
+    "origin": "Perform image denoising using Non-local Means Denoising algorithm",
+    "local": ""
+  },
+  {
+    "origin": "http://www.ipol.im/pub/algo/bcm_non_local_means_denoising/",
+    "local": ""
+  },
+  {
+    "origin": "with several computational optimizations. Noise expected to be a gaussian white noise.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, const std::vector&lt; float &gt; &amp;h, int templateWindowSize=7, int searchWindowSize=21, int normType=NORM_L2)",
+    "local": ""
+  },
+  {
+    "origin": "Perform image denoising using Non-local Means Denoising algorithm",
+    "local": ""
+  },
+  {
+    "origin": "http://www.ipol.im/pub/algo/bcm_non_local_means_denoising/",
+    "local": ""
+  },
+  {
+    "origin": "with several computational optimizations. Noise expected to be a gaussian white noise.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, float h=3, float hColor=3, int templateWindowSize=7, int searchWindowSize=21)",
+    "local": ""
+  },
+  {
+    "origin": "Modification of fastNlMeansDenoising function for colored images.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays srcImgs, OutputArray dst, int imgToDenoiseIndex, int temporalWindowSize, float h=3, float hColor=3, int templateWindowSize=7, int searchWindowSize=21)",
+    "local": ""
+  },
+  {
+    "origin": "Modification of fastNlMeansDenoisingMulti function for colored images sequences.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays srcImgs, OutputArray dst, int imgToDenoiseIndex, int temporalWindowSize, float h=3, int templateWindowSize=7, int searchWindowSize=21)",
+    "local": ""
+  },
+  {
+    "origin": "Modification of fastNlMeansDenoising function for images sequence where consecutive images have been captured in small period of time. For example video. This version of the function is for grayscale images or for manual manipulation with colorspaces. For more details see",
+    "local": ""
+  },
+  {
+    "origin": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.131.6394",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays srcImgs, OutputArray dst, int imgToDenoiseIndex, int temporalWindowSize, const std::vector&lt; float &gt; &amp;h, int templateWindowSize=7, int searchWindowSize=21, int normType=NORM_L2)",
+    "local": ""
+  },
+  {
+    "origin": "Modification of fastNlMeansDenoising function for images sequence where consecutive images have been captured in small period of time. For example video. This version of the function is for grayscale images or for manual manipulation with colorspaces. For more details see",
+    "local": ""
+  },
+  {
+    "origin": "http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.131.6394",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, InputArray mask, OutputArray dst, float alpha=0.2f, float beta=0.4f)",
+    "local": ""
+  },
+  {
+    "origin": "Applying an appropriate non-linear transformation to the gradient field inside the selection and then integrating back with a Poisson solver, modifies locally the apparent illumination of an image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, InputArray inpaintMask, OutputArray dst, double inpaintRadius, int flags)",
+    "local": ""
+  },
+  {
+    "origin": "Restores the selected region in an image using the region neighborhood.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst1, OutputArray dst2, float sigma_s=60, float sigma_r=0.07f, float shade_factor=0.02f)",
+    "local": ""
+  },
+  {
+    "origin": "Pencil-like non-photorealistic line drawing.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, InputArray dst, InputArray mask, Point p, OutputArray blend, int flags)",
+    "local": ""
+  },
+  {
+    "origin": "Image editing tasks concern either global changes (color/intensity corrections, filters, deformations) or local changes concerned to a selection. Here we are interested in achieving local changes, ones that are restricted to a region manually selected (ROI), in a seamless and effortless manner. The extent of the changes ranges from slight distortions to complete replacement by novel content",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, float sigma_s=60, float sigma_r=0.45f)",
+    "local": ""
+  },
+  {
+    "origin": "Stylization aims to produce digital imagery with a wide variety of effects not focused on photorealism. Edge-aware filters are ideal for stylization, as they can abstract regions of low contrast while preserving, or enhancing, high-contrast features.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, InputArray mask, OutputArray dst, float low_threshold=30, float high_threshold=45, int kernel_size=3)",
+    "local": ""
+  },
+  {
+    "origin": "By retaining only the gradients at edge locations, before integrating with the Poisson solver, one washes out the texture of the selected region, giving its contents a flat aspect. Here Canny Edge Detector is used.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

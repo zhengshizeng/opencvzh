@@ -1,0 +1,498 @@
+[
+  {
+    "origin": "OpenCV: Using OpenCV.js In Node.js",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Using OpenCV.js In Node.js",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial, you will learn:",
+    "local": ""
+  },
+  {
+    "origin": "Use OpenCV.js in a",
+    "local": ""
+  },
+  {
+    "origin": "Node.js",
+    "local": ""
+  },
+  {
+    "origin": "application.",
+    "local": ""
+  },
+  {
+    "origin": "Load images with",
+    "local": ""
+  },
+  {
+    "origin": "jimp",
+    "local": ""
+  },
+  {
+    "origin": "in order to use them with OpenCV.js.",
+    "local": ""
+  },
+  {
+    "origin": "Using",
+    "local": ""
+  },
+  {
+    "origin": "jsdom",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "node-canvas",
+    "local": ""
+  },
+  {
+    "origin": "to support",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "The basics of",
+    "local": ""
+  },
+  {
+    "origin": "emscripten",
+    "local": ""
+  },
+  {
+    "origin": "APIs, like",
+    "local": ""
+  },
+  {
+    "origin": "Module",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "File System",
+    "local": ""
+  },
+  {
+    "origin": "on which OpenCV.js is based.",
+    "local": ""
+  },
+  {
+    "origin": "Learn Node.js basics. Although this tutorial assumes the user knows JavaScript, experience with Node.js is not required.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Besides giving instructions to run OpenCV.js in Node.js, another objective of this tutorial is to introduce users to the basics of",
+    "local": ""
+  },
+  {
+    "origin": "emscripten",
+    "local": ""
+  },
+  {
+    "origin": "APIs, like",
+    "local": ""
+  },
+  {
+    "origin": "Module",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "File System",
+    "local": ""
+  },
+  {
+    "origin": "and also Node.js.",
+    "local": ""
+  },
+  {
+    "origin": "Minimal example",
+    "local": ""
+  },
+  {
+    "origin": "Create a file",
+    "local": ""
+  },
+  {
+    "origin": "with the following content:",
+    "local": ""
+  },
+  {
+    "origin": "Execute it",
+    "local": ""
+  },
+  {
+    "origin": "Save the file as",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Make sure the file",
+    "local": ""
+  },
+  {
+    "origin": "is in the same folder.",
+    "local": ""
+  },
+  {
+    "origin": "Make sure",
+    "local": ""
+  },
+  {
+    "origin": "Node.js",
+    "local": ""
+  },
+  {
+    "origin": "is installed on your system.",
+    "local": ""
+  },
+  {
+    "origin": "The following command should print OpenCV build information:",
+    "local": ""
+  },
+  {
+    "origin": "What just happened?",
+    "local": ""
+  },
+  {
+    "origin": "In the first statement",
+    "local": ""
+  },
+  {
+    "origin": ":, by defining a global variable named 'Module', emscripten will call",
+    "local": ""
+  },
+  {
+    "origin": "when the library is ready to use. Our program is in that method and uses the global variable",
+    "local": ""
+  },
+  {
+    "origin": "just like in the browser.",
+    "local": ""
+  },
+  {
+    "origin": "The statement **\"cv = require('./opencv.js')\"** requires the file",
+    "local": ""
+  },
+  {
+    "origin": "and assign the return value to the global variable",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "which is a Node.js API, is used to load modules and files. In this case we load the file",
+    "local": ""
+  },
+  {
+    "origin": "form the current folder, and, as said previously emscripten will call",
+    "local": ""
+  },
+  {
+    "origin": "when its ready.",
+    "local": ""
+  },
+  {
+    "origin": "See",
+    "local": ""
+  },
+  {
+    "origin": "emscripten Module API",
+    "local": ""
+  },
+  {
+    "origin": "for more details.",
+    "local": ""
+  },
+  {
+    "origin": "Working with images",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV.js doesn't support image formats so we can't load png or jpeg images directly. In the browser it uses the HTML DOM (like HTMLCanvasElement and HTMLImageElement to decode and decode images). In node.js we will need to use a library for this.",
+    "local": ""
+  },
+  {
+    "origin": "In this example we use",
+    "local": ""
+  },
+  {
+    "origin": "jimp",
+    "local": ""
+  },
+  {
+    "origin": ", which supports common image formats and is pretty easy to use.",
+    "local": ""
+  },
+  {
+    "origin": "Example setup",
+    "local": ""
+  },
+  {
+    "origin": "Execute the following commands to create a new node.js package and install",
+    "local": ""
+  },
+  {
+    "origin": "jimp",
+    "local": ""
+  },
+  {
+    "origin": "dependency:",
+    "local": ""
+  },
+  {
+    "origin": "The example",
+    "local": ""
+  },
+  {
+    "origin": "Execute it",
+    "local": ""
+  },
+  {
+    "origin": "Save the file as",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Make sure a sample image",
+    "local": ""
+  },
+  {
+    "origin": "exists in the current directory.",
+    "local": ""
+  },
+  {
+    "origin": "The following command should generate the file",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Emulating HTML DOM and canvas",
+    "local": ""
+  },
+  {
+    "origin": "As you might already seen, the rest of the examples use functions like",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "to read and write images. Unfortunately as mentioned they won't work on Node.js since there is no HTML DOM.",
+    "local": ""
+  },
+  {
+    "origin": "In this section, you will learn how to use",
+    "local": ""
+  },
+  {
+    "origin": "jsdom",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "node-canvas",
+    "local": ""
+  },
+  {
+    "origin": "to emulate the HTML DOM on Node.js so those functions work.",
+    "local": ""
+  },
+  {
+    "origin": "Example setup",
+    "local": ""
+  },
+  {
+    "origin": "As before, we create a Node.js project and install the dependencies we need:",
+    "local": ""
+  },
+  {
+    "origin": "The example",
+    "local": ""
+  },
+  {
+    "origin": "Execute it",
+    "local": ""
+  },
+  {
+    "origin": "Save the file as",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Make sure a sample image",
+    "local": ""
+  },
+  {
+    "origin": "exists in the current directory.",
+    "local": ""
+  },
+  {
+    "origin": "The following command should generate the file",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Dealing with files",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to configure emscripten so it uses the local filesystem for file operations instead of using memory. Also it tries to describe how",
+    "local": ""
+  },
+  {
+    "origin": "files are supported by emscripten applications",
+    "local": ""
+  },
+  {
+    "origin": "Accessing the emscripten filesystem is often needed in OpenCV applications for example to load machine learning models such as the ones used in",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Example setup",
+    "local": ""
+  },
+  {
+    "origin": "Before the example, is worth consider first how files are handled in emscripten applications such as OpenCV.js. Remember that OpenCV library is written in C++ and the file opencv.js is just that C++ code being translated to JavaScript or WebAssembly by emscripten C++ compiler.",
+    "local": ""
+  },
+  {
+    "origin": "These C++ sources use standard APIs to access the filesystem and the implementation often ends up in system calls that read a file in the hard drive. Since JavaScript applications in the browser don't have access to the local filesystem,",
+    "local": ""
+  },
+  {
+    "origin": "emscripten emulates a standard filesystem",
+    "local": ""
+  },
+  {
+    "origin": "so compiled C++ code works out of the box.",
+    "local": ""
+  },
+  {
+    "origin": "In the browser, this filesystem is emulated in memory while in Node.js there's also the possibility of using the local filesystem directly. This is often preferable since there's no need of copy file's content in memory. This section is explains how to do do just that, this is, configuring emscripten so files are accessed directly from our local filesystem and relative paths match files relative to the current local directory as expected.",
+    "local": ""
+  },
+  {
+    "origin": "The example",
+    "local": ""
+  },
+  {
+    "origin": "The following is an adaptation of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Execute it",
+    "local": ""
+  },
+  {
+    "origin": "Save the file as",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Make sure the files",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "\u001b are present in project's directory. They can be obtained from",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV sources",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Make sure a sample image file",
+    "local": ""
+  },
+  {
+    "origin": "exists in project's directory. It should display people's faces for this example to make sense. The following image is known to work:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "The following command should generate the file",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

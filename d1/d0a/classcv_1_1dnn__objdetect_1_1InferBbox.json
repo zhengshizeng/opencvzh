@@ -1,0 +1,950 @@
+[
+  {
+    "origin": "OpenCV: cv::dnn_objdetect::InferBbox Class Reference",
+    "local": "OpenCV:cv:：dnn\\u objdetect:：InferBbox类引用"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "Public Attributes",
+    "local": "公共属性"
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": "受保护的成员函数"
+  },
+  {
+    "origin": "Static Protected Member Functions",
+    "local": "静态保护成员函数"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::dnn_objdetect::InferBbox Class Reference",
+    "local": "cv:：dnn\\u objdetect:：InferBbox类引用"
+  },
+  {
+    "origin": "A class to post process model predictions.",
+    "local": "用于后期处理模型预测的类。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "_delta_bbox,",
+    "local": "_分享盒子，"
+  },
+  {
+    "origin": "_class_scores,",
+    "local": "_U类分数，"
+  },
+  {
+    "origin": "_conf_scores)",
+    "local": "_确认分数）"
+  },
+  {
+    "origin": "Default constructer.",
+    "local": "默认构造函数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(double thresh=0.8)",
+    "local": "（双阈值=0.8）"
+  },
+  {
+    "origin": "Filters the bounding boxes.",
+    "local": "过滤边界框。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Attributes",
+    "local": "公共属性"
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "Vector which holds the final detections of the model.",
+    "local": "保存模型最终检测的向量。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": "受保护的成员函数"
+  },
+  {
+    "origin": "(std::vector&lt; std::vector&lt; double &gt; &gt; *min_max_boxes)",
+    "local": "（标准：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机*最小\\u最大\\u盒）"
+  },
+  {
+    "origin": "Ensures that the bounding box values are within image boundaries.",
+    "local": "确保边界框值在图像边界内。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(std::vector&lt; std::vector&lt; double &gt; &gt; *probs, std::vector&lt; std::vector&lt; double &gt; &gt; *boxes, std::vector&lt; std::vector&lt; double &gt; &gt; &amp;top_n_boxes, std::vector&lt; size_t &gt; &amp;top_n_idxs, std::vector&lt; double &gt; &amp;top_n_probs)",
+    "local": "（标准：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机*问题，标准：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机*框，标准：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机&amp；顶框，std:：vector&lt；大小\\u t&gt&amp；顶部\\n\\u idxs，std:：vector&lt；双倍&gt&amp；首要问题）"
+  },
+  {
+    "origin": "Filter top",
+    "local": "过滤器顶部"
+  },
+  {
+    "origin": "predictions.",
+    "local": "预言。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(std::vector&lt; std::vector&lt; double &gt; &gt; *final_probs)",
+    "local": "（标准：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机*最终问题）"
+  },
+  {
+    "origin": "Computes final probability values of each bounding box.",
+    "local": "计算每个边界框的最终概率值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(std::vector&lt; std::vector&lt; double &gt; &gt; *boxes, std::vector&lt; double &gt; *base_box, std::vector&lt; double &gt; *iou)",
+    "local": "（标准：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机*框，标准：：向量&lt；双倍&gt*基盒，标准：：向量&lt；双倍&gt*借据）"
+  },
+  {
+    "origin": "Computes intersection over union of bounding boxes.",
+    "local": "计算边界框并集的交集。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(std::vector&lt; std::vector&lt; double &gt; &gt; &amp;top_n_boxes, std::vector&lt; size_t &gt; &amp;top_n_idxs, std::vector&lt; double &gt; &amp;top_n_probs)",
+    "local": "（标准：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机&amp；顶框，std:：vector&lt；大小\\u t&gt&amp；顶部\\n\\u idxs，std:：vector&lt；双倍&gt&amp；首要问题）"
+  },
+  {
+    "origin": "Wrapper to apply Non-Maximal Supression.",
+    "local": "应用非最大抑制的包装器。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(std::vector&lt; std::vector&lt; double &gt; &gt; *boxes, std::vector&lt; double &gt; *probs)",
+    "local": "（标准：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机*框，标准：：向量&lt；双倍&gt*问题）"
+  },
+  {
+    "origin": "Applies Non-Maximal Supression.",
+    "local": "应用非最大抑制。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(std::vector&lt; std::vector&lt; double &gt; &gt; *bboxes)",
+    "local": "（标准：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机*B箱）"
+  },
+  {
+    "origin": "Transform relative coordinates from ConvDet to bounding box coordinates.",
+    "local": "将相对坐标从ConvDet转换为边界框坐标。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(std::vector&lt; std::vector&lt; double &gt; &gt; *pre, std::vector&lt; std::vector&lt; double &gt; &gt; *post)",
+    "local": "（标准：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机*pre，std：：向量&lt；标准：：向量&lt；双倍&gt&燃气轮机*职位）"
+  },
+  {
+    "origin": "Transform bounding boxes from [x, y, h, w] to [xmin, ymin, xmax, ymax].",
+    "local": "将边界框从[x，y，h，w]转换为[xmin，ymin，xmax，ymax]。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Static Protected Member Functions",
+    "local": "静态保护成员函数"
+  },
+  {
+    "origin": "(std::pair&lt; double, size_t &gt; l1, std::pair&lt; double, size_t &gt; l2)",
+    "local": "（标准：：成对&lt；双人床，尺寸；l1，标准：：成对&lt；双人床，尺寸；l2级）"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "A class to post process model predictions.",
+    "local": "用于后期处理模型预测的类。"
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": "建造商和；析构函数文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "InferBbox()",
+    "local": "推断框（）"
+  },
+  {
+    "origin": "cv::dnn_objdetect::InferBbox::InferBbox",
+    "local": "cv:：dnn'u对象检测：：推断框：：推断框"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "_delta_bbox",
+    "local": "_参与"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "_class_scores",
+    "local": "_大学等级分数"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "_conf_scores",
+    "local": "_确认分数"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Default constructer.",
+    "local": "默认构造函数。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "_delta_bbox",
+    "local": "_参与"
+  },
+  {
+    "origin": "Blob containing relative coordinates of bounding boxes",
+    "local": "包含边界框相对坐标的Blob"
+  },
+  {
+    "origin": "_class_scores",
+    "local": "_大学等级分数"
+  },
+  {
+    "origin": "Blob containing the probability values of each class",
+    "local": "包含每个类的概率值的Blob"
+  },
+  {
+    "origin": "_conf_scores",
+    "local": "_确认分数"
+  },
+  {
+    "origin": "Blob containing the confidence scores",
+    "local": "包含置信度分数的Blob"
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "assert_predictions()",
+    "local": "断言预测（）"
+  },
+  {
+    "origin": "void cv::dnn_objdetect::InferBbox::assert_predictions",
+    "local": "void cv:：dnn\\u objdetect:：InferBbox:：assert\\u预测"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "min_max_boxes",
+    "local": "最小\\u最大\\u盒"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "Ensures that the bounding box values are within image boundaries.",
+    "local": "确保边界框值在图像边界内。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "min_max_boxes",
+    "local": "最小\\u最大\\u盒"
+  },
+  {
+    "origin": "Vector containing bounding boxes of the form [xmin, ymin, xmax, ymax]",
+    "local": "包含[xmin，ymin，xmax，ymax]形式的边界框的向量"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "comparator()",
+    "local": "比较器（）"
+  },
+  {
+    "origin": "static bool cv::dnn_objdetect::InferBbox::comparator",
+    "local": "静态bool cv:：dnn\\u objdetect:：InferBbox:：comparator"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "l1",
+    "local": "l1级"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "l2",
+    "local": "l2级"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "filter()",
+    "local": "筛选器（）"
+  },
+  {
+    "origin": "void cv::dnn_objdetect::InferBbox::filter",
+    "local": "void cv:：dnn\\u objdetect:：InferBbox:：filter无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "thresh",
+    "local": "脱粒"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Filters the bounding boxes.",
+    "local": "过滤边界框。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "filter_top_n()",
+    "local": "筛选器\\u top\\n（）"
+  },
+  {
+    "origin": "void cv::dnn_objdetect::InferBbox::filter_top_n",
+    "local": "void cv:：dnn\\u objdetect:：InferBbox:：filter\\u top\\n"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "probs",
+    "local": "试验"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "boxes",
+    "local": "盒"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "top_n_boxes",
+    "local": "顶盒"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "top_n_idxs",
+    "local": "顶部\\u n \\u idx"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "top_n_probs",
+    "local": "顶部探头"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "Filter top",
+    "local": "过滤器顶部"
+  },
+  {
+    "origin": "predictions.",
+    "local": "预言。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "probs",
+    "local": "试验"
+  },
+  {
+    "origin": "Final probability values of bounding boxes",
+    "local": "边界框的最终概率值"
+  },
+  {
+    "origin": "boxes",
+    "local": "盒"
+  },
+  {
+    "origin": "Predicted bounding box co-ordinates",
+    "local": "预测边界框坐标"
+  },
+  {
+    "origin": "top_n_boxes",
+    "local": "顶盒"
+  },
+  {
+    "origin": "Contains bounding box co-ordinates of top",
+    "local": "包含顶部的边界框坐标"
+  },
+  {
+    "origin": "boxes",
+    "local": "盒"
+  },
+  {
+    "origin": "top_n_idxs",
+    "local": "顶部\\u n \\u idx"
+  },
+  {
+    "origin": "Containes class indices of top",
+    "local": "包含顶级"
+  },
+  {
+    "origin": "bounding boxes",
+    "local": "边界框"
+  },
+  {
+    "origin": "top_n_probs",
+    "local": "顶部探头"
+  },
+  {
+    "origin": "Contains probability values of top",
+    "local": "包含top的概率值"
+  },
+  {
+    "origin": "bounding boxes",
+    "local": "边界框"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "final_probability_dist()",
+    "local": "最终概率分布（）"
+  },
+  {
+    "origin": "void cv::dnn_objdetect::InferBbox::final_probability_dist",
+    "local": "void cv：：dnn\\u objdetect：：InferBbox：：final\\u probability\\u dist"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "final_probs",
+    "local": "探头末端"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "Computes final probability values of each bounding box.",
+    "local": "计算每个边界框的最终概率值。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "final_probs",
+    "local": "探头末端"
+  },
+  {
+    "origin": "Vector to hold the probability values",
+    "local": "保持概率值的向量"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "intersection_over_union()",
+    "local": "相交于联合（）"
+  },
+  {
+    "origin": "void cv::dnn_objdetect::InferBbox::intersection_over_union",
+    "local": "void cv:：dnn\\u objdetect:：InferBbox:：intersection\\u over \\u并集"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "boxes",
+    "local": "盒"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "base_box",
+    "local": "底座接线盒"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "iou",
+    "local": "借据"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "Computes intersection over union of bounding boxes.",
+    "local": "计算边界框并集的交集。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "boxes",
+    "local": "盒"
+  },
+  {
+    "origin": "Vector of bounding box co-ordinates",
+    "local": "边界框坐标向量"
+  },
+  {
+    "origin": "base_box",
+    "local": "底座接线盒"
+  },
+  {
+    "origin": "Base box wrt which IOU is calculated",
+    "local": "与计算IOU相关的基本框"
+  },
+  {
+    "origin": "iou",
+    "local": "借据"
+  },
+  {
+    "origin": "Vector to store IOU values",
+    "local": "存储IOU值的向量"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "nms_wrapper()",
+    "local": "nms\\U包装（）"
+  },
+  {
+    "origin": "void cv::dnn_objdetect::InferBbox::nms_wrapper",
+    "local": "void cv:：dnn\\u objdetect:：InferBbox:：nms\\u包装"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "top_n_boxes",
+    "local": "顶盒"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "top_n_idxs",
+    "local": "顶部\\u n \\u idx"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "top_n_probs",
+    "local": "顶部探头"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "Wrapper to apply Non-Maximal Supression.",
+    "local": "应用非最大抑制的包装器。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "top_n_boxes",
+    "local": "顶盒"
+  },
+  {
+    "origin": "Contains bounding box co-ordinates of top",
+    "local": "包含顶部的边界框坐标"
+  },
+  {
+    "origin": "boxes",
+    "local": "盒"
+  },
+  {
+    "origin": "top_n_idxs",
+    "local": "顶部\\u n \\u idx"
+  },
+  {
+    "origin": "Containes class indices of top",
+    "local": "包含顶级"
+  },
+  {
+    "origin": "bounding boxes",
+    "local": "边界框"
+  },
+  {
+    "origin": "top_n_probs",
+    "local": "顶部探头"
+  },
+  {
+    "origin": "Contains probability values of top",
+    "local": "包含top的概率值"
+  },
+  {
+    "origin": "bounding boxes",
+    "local": "边界框"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "non_maximal_suppression()",
+    "local": "非最大抑制（）"
+  },
+  {
+    "origin": "std::vector&lt;bool&gt; cv::dnn_objdetect::InferBbox::non_maximal_suppression",
+    "local": "标准：：向量（&L）布尔&gt；CV:：DNN OBJDETECT:：INFERBBOX:：非最大删除"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "boxes",
+    "local": "盒"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "probs",
+    "local": "试验"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "Applies Non-Maximal Supression.",
+    "local": "应用非最大抑制。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "boxes",
+    "local": "盒"
+  },
+  {
+    "origin": "Bounding box co-ordinates belonging to one class",
+    "local": "属于一个类的边界框坐标"
+  },
+  {
+    "origin": "probs",
+    "local": "试验"
+  },
+  {
+    "origin": "Probability values of boxes belonging to one class",
+    "local": "一类盒子的概率值"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "transform_bboxes()",
+    "local": "转换\\u bboxes（）"
+  },
+  {
+    "origin": "void cv::dnn_objdetect::InferBbox::transform_bboxes",
+    "local": "void cv:：dnn\\u objdetect:：InferBbox:：transform\\u bboxes"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "bboxes",
+    "local": "B盒子"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "Transform relative coordinates from ConvDet to bounding box coordinates.",
+    "local": "将相对坐标从ConvDet转换为边界框坐标。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "bboxes",
+    "local": "B盒子"
+  },
+  {
+    "origin": "Vector to hold the predicted bounding boxes",
+    "local": "向量来保存预测的边界框"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "transform_bboxes_inv()",
+    "local": "转换\\u bboxes \\u inv（）"
+  },
+  {
+    "origin": "void cv::dnn_objdetect::InferBbox::transform_bboxes_inv",
+    "local": "void cv:：dnn\\u objdetect:：InferBbox:：transform\\u bboxes\\u inv"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "pre",
+    "local": "之前"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "post",
+    "local": "邮递"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "Transform bounding boxes from [x, y, h, w] to [xmin, ymin, xmax, ymax].",
+    "local": "将边界框从[x，y，h，w]转换为[xmin，ymin，xmax，ymax]。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "pre",
+    "local": "之前"
+  },
+  {
+    "origin": "Vector conatining initial co-ordinates",
+    "local": "矢量控制初始坐标"
+  },
+  {
+    "origin": "post",
+    "local": "邮递"
+  },
+  {
+    "origin": "Vector containing the transformed co-ordinates",
+    "local": "包含变换坐标的向量"
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": "成员数据文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "detections",
+    "local": "检测"
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; cv::dnn_objdetect::InferBbox::detections",
+    "local": "&燃气轮机；cv:：dnn'u对象检测：：推断框：：检测"
+  },
+  {
+    "origin": "Vector which holds the final detections of the model.",
+    "local": "保存模型最终检测的向量。"
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/",
+    "local": "打开CV2/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:47 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:47为OpenCV生成，&#160；"
+  }
+]

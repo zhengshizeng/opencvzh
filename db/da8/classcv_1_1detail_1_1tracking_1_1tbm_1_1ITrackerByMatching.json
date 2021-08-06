@@ -1,0 +1,1402 @@
+[
+  {
+    "origin": "OpenCV: cv::detail::tracking::tbm::ITrackerByMatching Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::tbm::ITrackerByMatching Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "abstract",
+    "local": ""
+  },
+  {
+    "origin": "Tracker-by-Matching algorithm interface.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "= std::shared_ptr&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "= std::shared_ptr&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Destructor for the tracker.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Returns number of counted people.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual const",
+    "local": ""
+  },
+  {
+    "origin": "Fast descriptor getter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual const",
+    "local": ""
+  },
+  {
+    "origin": "Strong descriptor getter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual const",
+    "local": ""
+  },
+  {
+    "origin": "Fast distance getter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual const",
+    "local": ""
+  },
+  {
+    "origin": "Strong distance getter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "Draws active tracks on a given frame.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "dropForgottenTrack Check that the track was lost too many frames ago and removes it frm memory.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "dropForgottenTracks Removes tracks from memory that were lost too many frames ago.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual std::unordered_map&lt; size_t, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "Get active tracks to draw.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "isTrackForgotten returns true if track is forgotten.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "isTrackValid Checks whether track is valid (duration &gt; threshold).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual const",
+    "local": ""
+  },
+  {
+    "origin": "Pipeline parameters getter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;frame, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;detections,",
+    "local": ""
+  },
+  {
+    "origin": "Process given frame.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "Fast descriptor setter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "Strong descriptor setter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "Fast distance setter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "Strong distance setter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "Pipeline parameters setter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Get tracked detections.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual const std::unordered_map&lt; size_t,",
+    "local": ""
+  },
+  {
+    "origin": "tracks Returns all tracks including forgotten (lost too many frames ago).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Tracker-by-Matching algorithm interface.",
+    "local": ""
+  },
+  {
+    "origin": "This class is implementation of tracking-by-matching system. It uses two different appearance measures to compute affinity between bounding boxes: some fast descriptor and some strong descriptor. Each time the assignment problem is solved. The assignment problem in our case is how to establish correspondence between existing tracklets and recently detected objects. First step is to compute an affinity matrix between tracklets and detections. The affinity equals to appearance_affinity * motion_affinity * shape_affinity. Where appearance is 1 - distance(tracklet_fast_dscr, detection_fast_dscr). Second step is to solve the assignment problem using Kuhn-Munkres algorithm. If correspondence between some tracklet and detection is established with low confidence (affinity) then the strong descriptor is used to determine if there is correspondence between tracklet and detection.",
+    "local": ""
+  },
+  {
+    "origin": "Member Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Descriptor",
+    "local": ""
+  },
+  {
+    "origin": "using",
+    "local": ""
+  },
+  {
+    "origin": "= std::shared_ptr&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Distance",
+    "local": ""
+  },
+  {
+    "origin": "using",
+    "local": ""
+  },
+  {
+    "origin": "= std::shared_ptr&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "~ITrackerByMatching()",
+    "local": ""
+  },
+  {
+    "origin": "virtual cv::detail::tracking::tbm::ITrackerByMatching::~ITrackerByMatching",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Destructor for the tracker.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "count()",
+    "local": ""
+  },
+  {
+    "origin": "virtual size_t cv::detail::tracking::tbm::ITrackerByMatching::count",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Returns number of counted people.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "a number of counted people.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptorFast()",
+    "local": ""
+  },
+  {
+    "origin": "virtual const",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::detail::tracking::tbm::ITrackerByMatching::descriptorFast",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Fast descriptor getter.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Fast descriptor used in pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptorStrong()",
+    "local": ""
+  },
+  {
+    "origin": "virtual const",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::detail::tracking::tbm::ITrackerByMatching::descriptorStrong",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Strong descriptor getter.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Strong descriptor used in pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "distanceFast()",
+    "local": ""
+  },
+  {
+    "origin": "virtual const",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::detail::tracking::tbm::ITrackerByMatching::distanceFast",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Fast distance getter.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Fast distance used in pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "distanceStrong()",
+    "local": ""
+  },
+  {
+    "origin": "virtual const",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::detail::tracking::tbm::ITrackerByMatching::distanceStrong",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Strong distance getter.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Strong distance used in pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "drawActiveTracks()",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::tbm::ITrackerByMatching::drawActiveTracks",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Draws active tracks on a given frame.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": "Colored image (CV_8UC3).",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Colored image with drawn active tracks.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "dropForgottenTrack()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::tbm::ITrackerByMatching::dropForgottenTrack",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "track_id",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "dropForgottenTrack Check that the track was lost too many frames ago and removes it frm memory.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "dropForgottenTracks()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::tbm::ITrackerByMatching::dropForgottenTracks",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "dropForgottenTracks Removes tracks from memory that were lost too many frames ago.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getActiveTracks()",
+    "local": ""
+  },
+  {
+    "origin": "virtual std::unordered_map&lt;size_t, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; cv::detail::tracking::tbm::ITrackerByMatching::getActiveTracks",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Get active tracks to draw.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Active tracks.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "isTrackForgotten()",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool cv::detail::tracking::tbm::ITrackerByMatching::isTrackForgotten",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "id",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "isTrackForgotten returns true if track is forgotten.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "id",
+    "local": ""
+  },
+  {
+    "origin": "ID.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "true if track is forgotten.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "isTrackValid()",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool cv::detail::tracking::tbm::ITrackerByMatching::isTrackValid",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "track_id",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "isTrackValid Checks whether track is valid (duration &gt; threshold).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "track_id",
+    "local": ""
+  },
+  {
+    "origin": "Index of checked track.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "True if track duration exceeds some predefined value.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "params()",
+    "local": ""
+  },
+  {
+    "origin": "virtual const",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::detail::tracking::tbm::ITrackerByMatching::params",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Pipeline parameters getter.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Parameters of pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "process()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::tbm::ITrackerByMatching::process",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "timestamp",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Process given frame.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": "Colored image (CV_8UC3).",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "detections",
+    "local": ""
+  },
+  {
+    "origin": "Detected objects on the frame.",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "timestamp",
+    "local": ""
+  },
+  {
+    "origin": "Timestamp must be positive and measured in milliseconds",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "setDescriptorFast()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::tbm::ITrackerByMatching::setDescriptorFast",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Fast descriptor setter.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": "Fast descriptor used in pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "setDescriptorStrong()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::tbm::ITrackerByMatching::setDescriptorStrong",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Strong descriptor setter.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": "Strong descriptor used in pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "setDistanceFast()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::tbm::ITrackerByMatching::setDistanceFast",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Fast distance setter.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": "Fast distance used in pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "setDistanceStrong()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::tbm::ITrackerByMatching::setDistanceStrong",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Strong distance setter.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "val",
+    "local": ""
+  },
+  {
+    "origin": "Strong distance used in pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "setParams()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::tbm::ITrackerByMatching::setParams",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Pipeline parameters setter.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": "Parameters of pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "trackedDetections()",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::tracking::tbm::ITrackerByMatching::trackedDetections",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Get tracked detections.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Tracked detections.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "tracks()",
+    "local": ""
+  },
+  {
+    "origin": "virtual const std::unordered_map&lt;size_t,",
+    "local": ""
+  },
+  {
+    "origin": "&gt;&amp; cv::detail::tracking::tbm::ITrackerByMatching::tracks",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "tracks Returns all tracks including forgotten (lost too many frames ago).",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Set of tracks {id, track}.",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/tracking/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:47 for OpenCV by &#160;",
+    "local": ""
+  }
+]

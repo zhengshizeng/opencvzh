@@ -1,0 +1,6510 @@
+[
+  {
+    "origin": "OpenCV: cv::dnn::Net Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "This class allows to create and manipulate comprehensive artificial neural networks.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "Container for strings and integers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Default constructor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Destructor frees the net only if there aren't references to the net anymore.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;name, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;type,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;params)",
+    "local": ""
+  },
+  {
+    "origin": "Adds new layer to the net.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;name, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;type,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;params)",
+    "local": ""
+  },
+  {
+    "origin": "Adds new layer and connects its first input to the first output of previously added layer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "outPin,",
+    "local": ""
+  },
+  {
+    "origin": "inpPin)",
+    "local": ""
+  },
+  {
+    "origin": "Connects output of the first layer to input of the second layer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(int outLayerId, int outNum, int inpLayerId, int inpNum)",
+    "local": ""
+  },
+  {
+    "origin": "Connects #",
+    "local": ""
+  },
+  {
+    "origin": "output of the first layer to #",
+    "local": ""
+  },
+  {
+    "origin": "input of the second layer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Dump net to String.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;path)",
+    "local": ""
+  },
+  {
+    "origin": "Dump net structure, hyperparameters, backend, target and fusion to dot file.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(bool fusion)",
+    "local": ""
+  },
+  {
+    "origin": "Enables or disables layer fusion in the network.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;outputName=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Runs forward pass to compute output of layer with name",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;outputName=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Runs forward pass to compute output of layer with name",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;outBlobNames)",
+    "local": ""
+  },
+  {
+    "origin": "Runs forward pass to compute outputs of layers listed in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;outputBlobs, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;outBlobNames)",
+    "local": ""
+  },
+  {
+    "origin": "Runs forward pass to compute outputs of layers listed in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;outputName=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Runs forward pass to compute output of layer with name",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;netInputShapes) const",
+    "local": ""
+  },
+  {
+    "origin": "Computes FLOP for whole loaded model with specified input shapes.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;netInputShape) const",
+    "local": ""
+  },
+  {
+    "origin": "(const int layerId, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;netInputShapes) const",
+    "local": ""
+  },
+  {
+    "origin": "(const int layerId, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;netInputShape) const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "layerId)",
+    "local": ""
+  },
+  {
+    "origin": "Returns pointer to layer with specified id or name which the network use.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;layer)",
+    "local": ""
+  },
+  {
+    "origin": "Converts string name of the layer to the integer identifier.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "layerId)",
+    "local": ""
+  },
+  {
+    "origin": "Returns pointers to input layers of specific layer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;layerType) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns count of layers of specified type.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;netInputShape, const int layerId, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;inLayerShapes, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;outLayerShapes) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns input and output shapes for layer with specified id in loaded model; preliminary inferencing isn't necessary.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;netInputShapes, const int layerId, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;inLayerShapes, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;outLayerShapes) const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;netInputShapes, std::vector&lt; int &gt; &amp;layersIds, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;inLayersShapes, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;outLayersShapes) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns input and output shapes for all layers in loaded model; preliminary inferencing isn't necessary.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;netInputShape, std::vector&lt; int &gt; &amp;layersIds, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;inLayersShapes, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;outLayersShapes) const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;layersTypes) const",
+    "local": ""
+  },
+  {
+    "origin": "Returns list of types for layer used in model.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;netInputShapes, size_t &amp;weights, size_t &amp;blobs) const",
+    "local": ""
+  },
+  {
+    "origin": "Computes bytes number which are required to store all weights and intermediate blobs for model.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;netInputShape, size_t &amp;weights, size_t &amp;blobs) const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const int layerId, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;netInputShapes, size_t &amp;weights, size_t &amp;blobs) const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const int layerId, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;netInputShape, size_t &amp;weights, size_t &amp;blobs) const",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;netInputShapes, std::vector&lt; int &gt; &amp;layerIds, std::vector&lt; size_t &gt; &amp;weights, std::vector&lt; size_t &gt; &amp;blobs) const",
+    "local": ""
+  },
+  {
+    "origin": "Computes bytes number which are required to store all weights and intermediate blobs for each layer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;netInputShape, std::vector&lt; int &gt; &amp;layerIds, std::vector&lt; size_t &gt; &amp;weights, std::vector&lt; size_t &gt; &amp;blobs) const",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "layer, int numParam=0)",
+    "local": ""
+  },
+  {
+    "origin": "Returns parameter blob of the layer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(std::vector&lt; double &gt; &amp;timings)",
+    "local": ""
+  },
+  {
+    "origin": "Returns overall time for inference and timings (in ticks) for layers. Indexes in returned vector correspond to layers ids. Some layers can be fused with others, in this case zero ticks count will be return for that skipped layers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; int &gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns indexes of layers with unconnected outputs.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns names of layers with unconnected outputs.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;scheduler)",
+    "local": ""
+  },
+  {
+    "origin": "Compile Halide layers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "blob, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;name=\"\", double scalefactor=1.0, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Sets the new input value for the network.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;inputName, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Specify shape of network input.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;inputBlobNames)",
+    "local": ""
+  },
+  {
+    "origin": "Sets outputs names of the network input pseudo layer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "layer, int numParam, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;blob)",
+    "local": ""
+  },
+  {
+    "origin": "Sets the new value for the learned param of the layer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(int backendId)",
+    "local": ""
+  },
+  {
+    "origin": "Ask network to use specific computation backend where it supported.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(int targetId)",
+    "local": ""
+  },
+  {
+    "origin": "Ask network to make computations on specific target device.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;xml, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;bin)",
+    "local": ""
+  },
+  {
+    "origin": "Create a network from Intel's",
+    "local": ""
+  },
+  {
+    "origin": "Optimizer intermediate representation (IR).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferModelConfig, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;bufferWeights)",
+    "local": ""
+  },
+  {
+    "origin": "Create a network from Intel's",
+    "local": ""
+  },
+  {
+    "origin": "Optimizer in-memory buffers with intermediate representation (IR).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*bufferModelConfigPtr, size_t bufferModelConfigSize, const",
+    "local": ""
+  },
+  {
+    "origin": "*bufferWeightsPtr, size_t bufferWeightsSize)",
+    "local": ""
+  },
+  {
+    "origin": "Create a network from Intel's",
+    "local": ""
+  },
+  {
+    "origin": "Optimizer in-memory buffers with intermediate representation (IR).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "This class allows to create and manipulate comprehensive artificial neural networks.",
+    "local": ""
+  },
+  {
+    "origin": "Neural network is presented as directed acyclic graph (DAG), where vertices are",
+    "local": ""
+  },
+  {
+    "origin": "instances, and edges specify relationships between layers inputs and outputs.",
+    "local": ""
+  },
+  {
+    "origin": "Each network layer has unique integer id and unique string name inside its network. LayerId can store either layer name or layer id.",
+    "local": ""
+  },
+  {
+    "origin": "This class supports reference counting of its instances, i. e. copies point to the same instance.",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Member Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "LayerId",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "Container for strings and integers.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "Net()",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::Net",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;dnn_Net object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Default constructor.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "~Net()",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::~Net",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Destructor frees the net only if there aren't references to the net anymore.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "addLayer()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::dnn::Net::addLayer",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "name",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Adds new layer to the net.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "name",
+    "local": ""
+  },
+  {
+    "origin": "unique name of the adding layer.",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "typename of the adding layer (type must be registered in LayerRegister).",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": "parameters which will be used to initialize the creating layer.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "unique identifier of created layer, or -1 if a failure will happen.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "addLayerToPrev()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::dnn::Net::addLayerToPrev",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "name",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Adds new layer and connects its first input to the first output of previously added layer.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "connect()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::connect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "outPin",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "inpPin",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.connect(",
+    "local": ""
+  },
+  {
+    "origin": "outPin, inpPin",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Connects output of the first layer to input of the second layer.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "outPin",
+    "local": ""
+  },
+  {
+    "origin": "descriptor of the first layer output.",
+    "local": ""
+  },
+  {
+    "origin": "inpPin",
+    "local": ""
+  },
+  {
+    "origin": "descriptor of the second layer input.",
+    "local": ""
+  },
+  {
+    "origin": "Descriptors have the following template",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "the first part of the template",
+    "local": ""
+  },
+  {
+    "origin": "is string name of the added layer. If this part is empty then the network input pseudo layer will be used;",
+    "local": ""
+  },
+  {
+    "origin": "the second optional part of the template",
+    "local": ""
+  },
+  {
+    "origin": "is either number of the layer input, either label one. If this part is omitted then the first layer input will be used.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "setNetInputs(),",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "connect()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::connect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "outLayerId",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "outNum",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "inpLayerId",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "inpNum",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.connect(",
+    "local": ""
+  },
+  {
+    "origin": "outPin, inpPin",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Connects #",
+    "local": ""
+  },
+  {
+    "origin": "output of the first layer to #",
+    "local": ""
+  },
+  {
+    "origin": "input of the second layer.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "outLayerId",
+    "local": ""
+  },
+  {
+    "origin": "identifier of the first layer",
+    "local": ""
+  },
+  {
+    "origin": "outNum",
+    "local": ""
+  },
+  {
+    "origin": "number of the first layer output",
+    "local": ""
+  },
+  {
+    "origin": "inpLayerId",
+    "local": ""
+  },
+  {
+    "origin": "identifier of the second layer",
+    "local": ""
+  },
+  {
+    "origin": "inpNum",
+    "local": ""
+  },
+  {
+    "origin": "number of the second layer input",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "dump()",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::dump",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.dump(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Dump net to String.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "String with structure, hyperparameters, backend, target and fusion Call method after",
+    "local": ""
+  },
+  {
+    "origin": ". To see correct backend, target and fusion run after",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "dumpToFile()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::dumpToFile",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "path",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.dumpToFile(",
+    "local": ""
+  },
+  {
+    "origin": "path",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Dump net structure, hyperparameters, backend, target and fusion to dot file.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "path",
+    "local": ""
+  },
+  {
+    "origin": "path to output file with .dot extension",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "empty()",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::dnn::Net::empty",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.empty(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns true if there are no layers in the network.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "enableFusion()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::enableFusion",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "fusion",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.enableFusion(",
+    "local": ""
+  },
+  {
+    "origin": "fusion",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Enables or disables layer fusion in the network.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "fusion",
+    "local": ""
+  },
+  {
+    "origin": "true to enable the fusion, false to disable. The fusion is enabled by default.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "forward()",
+    "local": ""
+  },
+  {
+    "origin": "[1/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::forward",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "outputName",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "[, outputName]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "[, outputBlobs[, outputName]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames[, outputBlobs]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forwardAndRetrieve(",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Runs forward pass to compute output of layer with name",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "outputName",
+    "local": ""
+  },
+  {
+    "origin": "name for layer which output is needed to get",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "blob for first output of specified layer.",
+    "local": ""
+  },
+  {
+    "origin": "By default runs forward pass for the whole network.",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "forward()",
+    "local": ""
+  },
+  {
+    "origin": "[2/4]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::forward",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "outputName",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "[, outputName]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "[, outputBlobs[, outputName]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames[, outputBlobs]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forwardAndRetrieve(",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Runs forward pass to compute output of layer with name",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "contains all output blobs for specified layer.",
+    "local": ""
+  },
+  {
+    "origin": "outputName",
+    "local": ""
+  },
+  {
+    "origin": "name for layer which output is needed to get",
+    "local": ""
+  },
+  {
+    "origin": "If",
+    "local": ""
+  },
+  {
+    "origin": "is empty, runs forward pass for the whole network.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "forward()",
+    "local": ""
+  },
+  {
+    "origin": "[3/4]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::forward",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "[, outputName]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "[, outputBlobs[, outputName]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames[, outputBlobs]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forwardAndRetrieve(",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Runs forward pass to compute outputs of layers listed in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "contains blobs for first outputs of specified layers.",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames",
+    "local": ""
+  },
+  {
+    "origin": "names for layers which outputs are needed to get",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "forward()",
+    "local": ""
+  },
+  {
+    "origin": "[4/4]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::forward",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "[, outputName]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "[, outputBlobs[, outputName]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forward(",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames[, outputBlobs]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forwardAndRetrieve(",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Runs forward pass to compute outputs of layers listed in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "outputBlobs",
+    "local": ""
+  },
+  {
+    "origin": "contains all output blobs for each layer specified in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "outBlobNames",
+    "local": ""
+  },
+  {
+    "origin": "names for layers which outputs are needed to get",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "forwardAsync()",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::forwardAsync",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "outputName",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.forwardAsync(",
+    "local": ""
+  },
+  {
+    "origin": "[, outputName]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Runs forward pass to compute output of layer with name",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "outputName",
+    "local": ""
+  },
+  {
+    "origin": "name for layer which output is needed to get",
+    "local": ""
+  },
+  {
+    "origin": "By default runs forward pass for the whole network.",
+    "local": ""
+  },
+  {
+    "origin": "This is an asynchronous version of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "backend is required.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getFLOPS()",
+    "local": ""
+  },
+  {
+    "origin": "[1/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::getFLOPS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes FLOP for whole loaded model with specified input shapes.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": "vector of shapes for all net inputs.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "computed FLOP.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getFLOPS()",
+    "local": ""
+  },
+  {
+    "origin": "[2/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::getFLOPS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getFLOPS()",
+    "local": ""
+  },
+  {
+    "origin": "[3/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::getFLOPS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "layerId",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getFLOPS()",
+    "local": ""
+  },
+  {
+    "origin": "[4/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::getFLOPS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "layerId",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getFLOPS(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLayer()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::dnn::Net::getLayer",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "layerId",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getLayer(",
+    "local": ""
+  },
+  {
+    "origin": "layerId",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns pointer to layer with specified id or name which the network use.",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLayerId()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::dnn::Net::getLayerId",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "layer",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getLayerId(",
+    "local": ""
+  },
+  {
+    "origin": "layer",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Converts string name of the layer to the integer identifier.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "id of the layer, or -1 if the layer wasn't found.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLayerInputs()",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; cv::dnn::Net::getLayerInputs",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "layerId",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns pointers to input layers of specific layer.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLayerNames()",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::dnn::Net::getLayerNames",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getLayerNames(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLayersCount()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::dnn::Net::getLayersCount",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "layerType",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getLayersCount(",
+    "local": ""
+  },
+  {
+    "origin": "layerType",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns count of layers of specified type.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "layerType",
+    "local": ""
+  },
+  {
+    "origin": "type.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "count of layers",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLayerShapes()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getLayerShapes",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "layerId",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "inLayerShapes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "outLayerShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Returns input and output shapes for layer with specified id in loaded model; preliminary inferencing isn't necessary.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": "shape input blob in net input layer.",
+    "local": ""
+  },
+  {
+    "origin": "layerId",
+    "local": ""
+  },
+  {
+    "origin": "id for layer.",
+    "local": ""
+  },
+  {
+    "origin": "inLayerShapes",
+    "local": ""
+  },
+  {
+    "origin": "output parameter for input layers shapes; order is the same as in layersIds",
+    "local": ""
+  },
+  {
+    "origin": "outLayerShapes",
+    "local": ""
+  },
+  {
+    "origin": "output parameter for output layers shapes; order is the same as in layersIds",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLayerShapes()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getLayerShapes",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "layerId",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "inLayerShapes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "outLayerShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLayersShapes()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; int &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "layersIds",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "inLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "outLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "layersIds, inLayersShapes, outLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getLayersShapes(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "layersIds, inLayersShapes, outLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getLayersShapes(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns input and output shapes for all layers in loaded model; preliminary inferencing isn't necessary.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": "shapes for all input blobs in net input layer.",
+    "local": ""
+  },
+  {
+    "origin": "layersIds",
+    "local": ""
+  },
+  {
+    "origin": "output parameter for layer IDs.",
+    "local": ""
+  },
+  {
+    "origin": "inLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": "output parameter for input layers shapes; order is the same as in layersIds",
+    "local": ""
+  },
+  {
+    "origin": "outLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": "output parameter for output layers shapes; order is the same as in layersIds",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLayersShapes()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; int &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "layersIds",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "inLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "outLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "layersIds, inLayersShapes, outLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getLayersShapes(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "layersIds, inLayersShapes, outLayersShapes",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getLayersShapes(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getLayerTypes()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getLayerTypes",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "layersTypes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "layersTypes",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getLayerTypes(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns list of types for layer used in model.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "layersTypes",
+    "local": ""
+  },
+  {
+    "origin": "output parameter for returning types.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getMemoryConsumption()",
+    "local": ""
+  },
+  {
+    "origin": "[1/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getMemoryConsumption",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size_t &amp;",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size_t &amp;",
+    "local": ""
+  },
+  {
+    "origin": "blobs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes bytes number which are required to store all weights and intermediate blobs for model.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": "vector of shapes for all net inputs.",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": "output parameter to store resulting bytes for weights.",
+    "local": ""
+  },
+  {
+    "origin": "blobs",
+    "local": ""
+  },
+  {
+    "origin": "output parameter to store resulting bytes for intermediate blobs.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getMemoryConsumption()",
+    "local": ""
+  },
+  {
+    "origin": "[2/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getMemoryConsumption",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size_t &amp;",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size_t &amp;",
+    "local": ""
+  },
+  {
+    "origin": "blobs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getMemoryConsumption()",
+    "local": ""
+  },
+  {
+    "origin": "[3/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getMemoryConsumption",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "layerId",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size_t &amp;",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size_t &amp;",
+    "local": ""
+  },
+  {
+    "origin": "blobs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getMemoryConsumption()",
+    "local": ""
+  },
+  {
+    "origin": "[4/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getMemoryConsumption",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "layerId",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size_t &amp;",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size_t &amp;",
+    "local": ""
+  },
+  {
+    "origin": "blobs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getMemoryConsumption()",
+    "local": ""
+  },
+  {
+    "origin": "[5/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getMemoryConsumption",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; int &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "layerIds",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; size_t &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; size_t &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "blobs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes bytes number which are required to store all weights and intermediate blobs for each layer.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": "vector of shapes for all net inputs.",
+    "local": ""
+  },
+  {
+    "origin": "layerIds",
+    "local": ""
+  },
+  {
+    "origin": "output vector to save layer IDs.",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": "output parameter to store resulting bytes for weights.",
+    "local": ""
+  },
+  {
+    "origin": "blobs",
+    "local": ""
+  },
+  {
+    "origin": "output parameter to store resulting bytes for intermediate blobs.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getMemoryConsumption()",
+    "local": ""
+  },
+  {
+    "origin": "[6/6]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::getMemoryConsumption",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; int &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "layerIds",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; size_t &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; size_t &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "blobs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShapes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "weights, blobs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getMemoryConsumption(",
+    "local": ""
+  },
+  {
+    "origin": "layerId, netInputShape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getParam()",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::getParam",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "layer",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "numParam",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getParam(",
+    "local": ""
+  },
+  {
+    "origin": "layer[, numParam]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns parameter blob of the layer.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "layer",
+    "local": ""
+  },
+  {
+    "origin": "name or id of the layer.",
+    "local": ""
+  },
+  {
+    "origin": "numParam",
+    "local": ""
+  },
+  {
+    "origin": "index of the layer parameter in the",
+    "local": ""
+  },
+  {
+    "origin": "array.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getPerfProfile()",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::getPerfProfile",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; double &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "timings",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, timings",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getPerfProfile(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns overall time for inference and timings (in ticks) for layers. Indexes in returned vector correspond to layers ids. Some layers can be fused with others, in this case zero ticks count will be return for that skipped layers.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "timings",
+    "local": ""
+  },
+  {
+    "origin": "vector for tick timings for all layers.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "overall ticks for model inference.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getUnconnectedOutLayers()",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;int&gt; cv::dnn::Net::getUnconnectedOutLayers",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getUnconnectedOutLayers(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns indexes of layers with unconnected outputs.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getUnconnectedOutLayersNames()",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::dnn::Net::getUnconnectedOutLayersNames",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.getUnconnectedOutLayersNames(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns names of layers with unconnected outputs.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "readFromModelOptimizer()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::readFromModelOptimizer",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "xml",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "bin",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn.Net_readFromModelOptimizer(",
+    "local": ""
+  },
+  {
+    "origin": "xml, bin",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn.Net_readFromModelOptimizer(",
+    "local": ""
+  },
+  {
+    "origin": "bufferModelConfig, bufferWeights",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Create a network from Intel's",
+    "local": ""
+  },
+  {
+    "origin": "Optimizer intermediate representation (IR).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "xml",
+    "local": ""
+  },
+  {
+    "origin": "XML configuration file with network's topology.",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "bin",
+    "local": ""
+  },
+  {
+    "origin": "Binary file with trained weights. Networks imported from Intel's",
+    "local": ""
+  },
+  {
+    "origin": "Optimizer are launched in Intel's Inference Engine backend.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "readFromModelOptimizer()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::readFromModelOptimizer",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "bufferModelConfig",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "bufferWeights",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn.Net_readFromModelOptimizer(",
+    "local": ""
+  },
+  {
+    "origin": "xml, bin",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn.Net_readFromModelOptimizer(",
+    "local": ""
+  },
+  {
+    "origin": "bufferModelConfig, bufferWeights",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Create a network from Intel's",
+    "local": ""
+  },
+  {
+    "origin": "Optimizer in-memory buffers with intermediate representation (IR).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "bufferModelConfig",
+    "local": ""
+  },
+  {
+    "origin": "buffer with model's configuration.",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "bufferWeights",
+    "local": ""
+  },
+  {
+    "origin": "buffer with model's trained weights.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "readFromModelOptimizer()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "cv::dnn::Net::readFromModelOptimizer",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "*",
+    "local": ""
+  },
+  {
+    "origin": "bufferModelConfigPtr",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size_t",
+    "local": ""
+  },
+  {
+    "origin": "bufferModelConfigSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "*",
+    "local": ""
+  },
+  {
+    "origin": "bufferWeightsPtr",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "size_t",
+    "local": ""
+  },
+  {
+    "origin": "bufferWeightsSize",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn.Net_readFromModelOptimizer(",
+    "local": ""
+  },
+  {
+    "origin": "xml, bin",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn.Net_readFromModelOptimizer(",
+    "local": ""
+  },
+  {
+    "origin": "bufferModelConfig, bufferWeights",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Create a network from Intel's",
+    "local": ""
+  },
+  {
+    "origin": "Optimizer in-memory buffers with intermediate representation (IR).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "bufferModelConfigPtr",
+    "local": ""
+  },
+  {
+    "origin": "buffer pointer of model's configuration.",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "bufferModelConfigSize",
+    "local": ""
+  },
+  {
+    "origin": "buffer size of model's configuration.",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "bufferWeightsPtr",
+    "local": ""
+  },
+  {
+    "origin": "buffer pointer of model's trained weights.",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "bufferWeightsSize",
+    "local": ""
+  },
+  {
+    "origin": "buffer size of model's trained weights.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setHalideScheduler()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::setHalideScheduler",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "scheduler",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.setHalideScheduler(",
+    "local": ""
+  },
+  {
+    "origin": "scheduler",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Compile Halide layers.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "scheduler",
+    "local": ""
+  },
+  {
+    "origin": "Path to YAML file with scheduling directives.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "Schedule layers that support Halide backend. Then compile them for specific target. For layers that not represented in scheduling file or if no manual scheduling used at all, automatic scheduling will be applied.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setInput()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::setInput",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "blob",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "name",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "scalefactor",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mean",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.setInput(",
+    "local": ""
+  },
+  {
+    "origin": "blob[, name[, scalefactor[, mean]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Sets the new input value for the network.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "blob",
+    "local": ""
+  },
+  {
+    "origin": "A new blob. Should have CV_32F or CV_8U depth.",
+    "local": ""
+  },
+  {
+    "origin": "name",
+    "local": ""
+  },
+  {
+    "origin": "A name of input layer.",
+    "local": ""
+  },
+  {
+    "origin": "scalefactor",
+    "local": ""
+  },
+  {
+    "origin": "An optional normalization scale.",
+    "local": ""
+  },
+  {
+    "origin": "mean",
+    "local": ""
+  },
+  {
+    "origin": "An optional mean subtraction values.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "to know format of the descriptor.",
+    "local": ""
+  },
+  {
+    "origin": "If scale or mean values are specified, a final input blob is computed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[input(n,c,h,w) = scalefactor \\times (blob(n,c,h,w) - mean_c)\\]",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ", and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setInputShape()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::setInputShape",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "inputName",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "shape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.setInputShape(",
+    "local": ""
+  },
+  {
+    "origin": "inputName, shape",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Specify shape of network input.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setInputsNames()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::setInputsNames",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "inputBlobNames",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.setInputsNames(",
+    "local": ""
+  },
+  {
+    "origin": "inputBlobNames",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Sets outputs names of the network input pseudo layer.",
+    "local": ""
+  },
+  {
+    "origin": "Each net always has special own the network input pseudo layer with id=0. This layer stores the user blobs only and don't make any computations. In fact, this layer provides the only way to pass user data into the network. As any other layer, this layer can label its outputs and this function provides an easy way to do this.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setParam()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::setParam",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "layer",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "numParam",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "blob",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.setParam(",
+    "local": ""
+  },
+  {
+    "origin": "layer, numParam, blob",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Sets the new value for the learned param of the layer.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "layer",
+    "local": ""
+  },
+  {
+    "origin": "name or id of the layer.",
+    "local": ""
+  },
+  {
+    "origin": "numParam",
+    "local": ""
+  },
+  {
+    "origin": "index of the layer parameter in the",
+    "local": ""
+  },
+  {
+    "origin": "array.",
+    "local": ""
+  },
+  {
+    "origin": "blob",
+    "local": ""
+  },
+  {
+    "origin": "the new value.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If shape of the new blob differs from the previous shape, then the following forward pass may fail.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setPreferableBackend()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::setPreferableBackend",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "backendId",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.setPreferableBackend(",
+    "local": ""
+  },
+  {
+    "origin": "backendId",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Ask network to use specific computation backend where it supported.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "backendId",
+    "local": ""
+  },
+  {
+    "origin": "backend identifier.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "If OpenCV is compiled with Intel's Inference Engine library, DNN_BACKEND_DEFAULT means DNN_BACKEND_INFERENCE_ENGINE. Otherwise it equals to DNN_BACKEND_OPENCV.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setPreferableTarget()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::dnn::Net::setPreferableTarget",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "targetId",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.dnn_Net.setPreferableTarget(",
+    "local": ""
+  },
+  {
+    "origin": "targetId",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Ask network to make computations on specific target device.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "[in]",
+    "local": ""
+  },
+  {
+    "origin": "targetId",
+    "local": ""
+  },
+  {
+    "origin": "target identifier.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "List of supported combinations backend / target:",
+    "local": ""
+  },
+  {
+    "origin": "DNN_BACKEND_OPENCV",
+    "local": ""
+  },
+  {
+    "origin": "DNN_BACKEND_INFERENCE_ENGINE",
+    "local": ""
+  },
+  {
+    "origin": "DNN_BACKEND_HALIDE",
+    "local": ""
+  },
+  {
+    "origin": "DNN_BACKEND_CUDA",
+    "local": ""
+  },
+  {
+    "origin": "DNN_TARGET_CPU",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "DNN_TARGET_OPENCL",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "DNN_TARGET_OPENCL_FP16",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "DNN_TARGET_MYRIAD",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "DNN_TARGET_FPGA",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "DNN_TARGET_CUDA",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "DNN_TARGET_CUDA_FP16",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "DNN_TARGET_HDDL",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/dnn/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:47 for OpenCV by",
+    "local": ""
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "origin": "OpenCV: Capture Sinusoidal pattern tutorial",
+    "local": "OpenCV:捕捉正弦模式教程"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Capture Sinusoidal pattern tutorial",
+    "local": "捕捉正弦模式教程"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial, you will learn how to use the sinusoidal pattern class to:",
+    "local": "在本教程中，您将学习如何使用正弦模式类来："
+  },
+  {
+    "origin": "Generate sinusoidal patterns.",
+    "local": "生成正弦模式。"
+  },
+  {
+    "origin": "Project the generated patterns.",
+    "local": "投影生成的模式。"
+  },
+  {
+    "origin": "Capture the projected patterns.",
+    "local": "捕捉投影模式。"
+  },
+  {
+    "origin": "Compute a wrapped phase map from these patterns using three different algorithms (Fourier Transform Profilometry, Phase Shifting Profilometry, Fourier-assisted Phase Shifting Profilometry)",
+    "local": "使用三种不同的算法（傅里叶变换轮廓术、相移轮廓术、傅里叶辅助相移轮廓术）从这些图形计算包裹的相位图"
+  },
+  {
+    "origin": "Unwrap the previous phase map.",
+    "local": "打开上一个相位图。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "Expalantion",
+    "local": "扩张"
+  },
+  {
+    "origin": "First, the sinusoidal patterns must be generated.",
+    "local": "首先，必须生成正弦图形。"
+  },
+  {
+    "origin": "SinusoidalPattern",
+    "local": "正弦曲线"
+  },
+  {
+    "origin": "class parameters have to be set by the user:",
+    "local": "类参数必须由用户设置："
+  },
+  {
+    "origin": "projector width and height",
+    "local": "投影仪宽度和高度"
+  },
+  {
+    "origin": "number of periods in the patterns",
+    "local": "模式中的周期数"
+  },
+  {
+    "origin": "set cross markers in the patterns (used to convert relative phase map to absolute phase map)",
+    "local": "在模式中设置交叉标记（用于将相对相位图转换为绝对相位图）"
+  },
+  {
+    "origin": "patterns direction (horizontal or vertical)",
+    "local": "图案方向（水平或垂直）"
+  },
+  {
+    "origin": "phase shift value (usually set to 2pi/3 to enable a cyclical system)",
+    "local": "相移值（通常设置为2pi/3以启用循环系统）"
+  },
+  {
+    "origin": "number of pixels between two consecutive markers on the same row/column",
+    "local": "同一行/列上两个连续标记之间的像素数"
+  },
+  {
+    "origin": "id of the method used to compute the phase map (FTP = 0, PSP = 1, FAPS = 2)",
+    "local": "用于计算相位图的方法的id（FTP=0，PSP=1，FAPS=2）"
+  },
+  {
+    "origin": "The user can also choose to save the patterns and the phase map.",
+    "local": "用户还可以选择保存模式和相位图。"
+  },
+  {
+    "origin": "The number of patterns is always equal to three, no matter the method used to compute the phase map. Those three patterns are projected in a loop which is fine since the system is cyclical.",
+    "local": "无论用什么方法计算相位图，图案的数目总是等于三个。这三种模式被投射到一个循环中，这是很好的，因为系统是周期性的。"
+  },
+  {
+    "origin": "Once the patterns have been generated, the camera is opened and the patterns are projected, using fullscreen resolution. In this tutorial, a prosilica camera is used to capture gray images. When the first pattern is displayed by the projector, the user can press any key to start the projection sequence.",
+    "local": "一旦生成了图案，就打开相机，使用全屏分辨率投影图案。在本教程中，prosilica相机用于捕获灰度图像。当投影仪显示第一个图案时，用户可以按任意键开始投影序列。"
+  },
+  {
+    "origin": "In this tutorial, 30 images are projected so, each of the three patterns is projected ten times. The \"while\" loop takes care of the projection process. The captured images are stored in a vector of Mat. There is a 30 ms delay between two successive captures. When the projection is done, the user has to press \"Enter\" to start computing the phase maps.",
+    "local": "在本教程中，将投影30个图像，因此三种模式中的每一个都将投影10次。“while”循环负责投影过程。捕获的图像存储在Mat向量中。两次连续捕获之间有30毫秒的延迟。投影完成后，用户必须按“回车”开始计算相位图。"
+  },
+  {
+    "origin": "The phase maps are ready to be computed according to the selected method. For FTP, a phase map is computed for each projected pattern, but we need to compute the shadow mask from three successive patterns, as explained in",
+    "local": "相位图已准备好根据所选方法进行计算。对于FTP，为每个投影模式计算一个相位图，但是我们需要从三个连续的模式计算阴影遮罩，如中所述"
+  },
+  {
+    "origin": ". Therefore, three patterns are set in a vector called captures. Care is taken to fill this vector with three patterns, especially when we reach the last captures. The unwrapping algorithm needs to know the size of the captured images so, we make sure to give it to the \"unwrapPhaseMap\" method. The phase maps are converted to 8-bit images in order to save them as png.",
+    "local": ". 因此，在一个称为捕获的向量中设置了三种模式。注意用三种模式填充这个向量，特别是当我们到达最后一个捕获时。展开算法需要知道捕获图像的大小，因此，我们一定要把它交给“unwrapPhaseMap”方法。将相位图转换为8位图像以将其保存为png。"
+  },
+  {
+    "origin": "For PSP and FAPS, three projected images are used to compute a single phase map. These three images are set in \"captures\", a vector working as a FIFO.Here again, phase maps are converted to 8-bit images in order to save them as png.",
+    "local": "对于PSP和FAPS，使用三个投影图像来计算一个单相图。这三幅图像被设置为“捕获”（captures），一个用作FIFO的向量。这里，相位图被转换成8位图像，以便将它们保存为png。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:39为OpenCV生成，&#160；"
+  }
+]

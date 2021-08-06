@@ -1,0 +1,158 @@
+[
+  {
+    "origin": "OpenCV: Creating, Writing and Reading Datasets",
+    "local": "OpenCV：创建、编写和读取数据集"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Creating, Writing and Reading Datasets",
+    "local": "创建、写入和读取数据集"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "This tutorial shows you:",
+    "local": "本教程将向您展示："
+  },
+  {
+    "origin": "How to create a dataset?",
+    "local": "如何创建数据集？"
+  },
+  {
+    "origin": "How to write a",
+    "local": "如何写一本书"
+  },
+  {
+    "origin": "to a dataset?",
+    "local": "到数据集？"
+  },
+  {
+    "origin": "How to read a",
+    "local": "如何阅读"
+  },
+  {
+    "origin": "from a dataset?",
+    "local": "从数据集中？"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Currently, it supports only reading and writing",
+    "local": "目前，它只支持读写"
+  },
+  {
+    "origin": "and the matrix should be continuous in memory. Supports for other data types have not been implemented yet.",
+    "local": "矩阵在内存中应该是连续的。对其他数据类型的支持尚未实现。"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "The following code demonstrates writing a single channel matrix and a two-channel matrix to datasets and then reading them back.",
+    "local": "下面的代码演示如何将单通道矩阵和双通道矩阵写入数据集，然后将它们读回。"
+  },
+  {
+    "origin": "You can download the code from",
+    "local": "您可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "or find it in the file",
+    "local": "或者在档案里找到"
+  },
+  {
+    "origin": "of the opencv_contrib source code library.",
+    "local": "opencvèu contrib源代码库的。"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "The first step for creating a dataset is to open the file",
+    "local": "创建数据集的第一步是打开文件"
+  },
+  {
+    "origin": "For the function",
+    "local": "对于函数"
+  },
+  {
+    "origin": ", since the dataset name is",
+    "local": "，因为数据集名称是"
+  },
+  {
+    "origin": ", which is inside the root group, we can use",
+    "local": "，它位于根组中，我们可以使用"
+  },
+  {
+    "origin": "to write the data directly to the dataset without the need of creating it beforehand. Because it is created inside",
+    "local": "将数据直接写入数据集，而无需事先创建数据集。因为它是在里面创造的"
+  },
+  {
+    "origin": "automatically.",
+    "local": "自动地。"
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "This applies only to datasets that reside inside the root group.",
+    "local": "这仅适用于驻留在根组内的数据集。"
+  },
+  {
+    "origin": "Of course, we can create the dataset by ourselves:",
+    "local": "当然，我们可以自己创建数据集："
+  },
+  {
+    "origin": "To read data from a dataset, we use",
+    "local": "为了从数据集中读取数据，我们使用"
+  },
+  {
+    "origin": "by specifying the name of the dataset.",
+    "local": "通过指定数据集的名称。"
+  },
+  {
+    "origin": "We can check that the data read out is exactly the data written before by using",
+    "local": "我们可以通过使用"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "Figure 1 shows the result visualized using the tool HDFView for the file",
+    "local": "图1显示了使用该文件的工具HDFView可视化的结果"
+  },
+  {
+    "origin": ". The results of matrices for datasets that are not the direct children of the root group are given in Figure 2 and Figure 3, respectively.",
+    "local": ". 图2和图3分别给出了不是根组直接子级的数据集的矩阵结果。"
+  },
+  {
+    "origin": "Figure 1: Result for writing a single channel matrix to a dataset inside the root group",
+    "local": "图1：将单通道矩阵写入根组内的数据集的结果"
+  },
+  {
+    "origin": "Figure 2: Result for writing a single channel matrix to a dataset not in the root group",
+    "local": "图2：将单通道矩阵写入不在根组中的数据集的结果"
+  },
+  {
+    "origin": "Figure 3: Result for writing a two-channel matrix to a dataset not in the root group",
+    "local": "图3：将双通道矩阵写入不在根组中的数据集的结果"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:39为OpenCV生成，&#160；"
+  }
+]

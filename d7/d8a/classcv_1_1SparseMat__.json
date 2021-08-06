@@ -1,0 +1,2538 @@
+[
+  {
+    "origin": "OpenCV: cv::SparseMat_&lt; _Tp &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::SparseMat_&lt; _Tp &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Template sparse n-dimensional array class derived from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::SparseMat_&lt; _Tp &gt;:",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Public Types inherited from",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "=0x42FD0000,",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "=0x5bd1e995,",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "=0x80000000",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "the default constructor",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int",
+    "local": ""
+  },
+  {
+    "origin": ", const int *_sizes)",
+    "local": ""
+  },
+  {
+    "origin": "the full constructor equivalent to SparseMat(dims, _sizes, DataType&lt;_Tp&gt;::type)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m)",
+    "local": ""
+  },
+  {
+    "origin": "the copy constructor. If DataType&lt;_Tp&gt;.type != m.type(), the m elements are converted",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m)",
+    "local": ""
+  },
+  {
+    "origin": "the copy constructor. This is O(1) operation - no data is copied",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m)",
+    "local": ""
+  },
+  {
+    "origin": "converts dense matrix to the sparse form",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "returns sparse matrix iterator pointing to the first sparse matrix element",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns read-only sparse matrix iterator pointing to the first sparse matrix element",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the number of channels in each matrix element",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "makes full copy of the matrix. All the elements are duplicated",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int",
+    "local": ""
+  },
+  {
+    "origin": ", const int *_sizes)",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to cv::SparseMat::create(dims, _sizes, DataType&lt;_Tp&gt;::type)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns depth of the matrix elements",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "returns sparse matrix iterator pointing to the element following the last sparse matrix element",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns read-only sparse matrix iterator pointing to the element following the last sparse matrix element",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::value&lt;_Tp&gt;(i0, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::value&lt;_Tp&gt;(i0, i1, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, int i2, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::value&lt;_Tp&gt;(i0, i1, i2, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const int *idx, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::value&lt;_Tp&gt;(idx, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m)",
+    "local": ""
+  },
+  {
+    "origin": "converts the old-style sparse matrix to the C++ class. All the elements are copied",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m)",
+    "local": ""
+  },
+  {
+    "origin": "the assignment operator. This is O(1) operation - no data is copied",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m)",
+    "local": ""
+  },
+  {
+    "origin": "converts dense matrix to the sparse form",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::ref&lt;_Tp&gt;(i0, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::ref&lt;_Tp&gt;(i0, i1, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, int i2, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::ref&lt;_Tp&gt;(i0, i1, i2, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const int *idx, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::ref&lt;_Tp&gt;(idx, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "converts sparse matrix to the old-style CvSparseMat. All the elements are copied",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Various",
+    "local": ""
+  },
+  {
+    "origin": "constructors.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int",
+    "local": ""
+  },
+  {
+    "origin": ", const int *_sizes, int _type)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m)",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "the destructor",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "manually increments the reference counter to the header.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m, int",
+    "local": ""
+  },
+  {
+    "origin": "=-1) const",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the number of channels",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "sets all the sparse matrix elements to 0, which means clearing the hash table.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "creates full copy of the matrix",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m, int rtype, double alpha=1) const",
+    "local": ""
+  },
+  {
+    "origin": "multiplies all the matrix elements by the specified scale factor alpha and converts the results to the specified data type",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m, int rtype, double alpha=1, double beta=0) const",
+    "local": ""
+  },
+  {
+    "origin": "converts sparse matrix to dense n-dim matrix with optional type conversion and scaling.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m) const",
+    "local": ""
+  },
+  {
+    "origin": "copies all the data to the destination matrix. All the previous content of m is erased",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m) const",
+    "local": ""
+  },
+  {
+    "origin": "converts sparse matrix to dense matrix.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int",
+    "local": ""
+  },
+  {
+    "origin": ", const int *_sizes, int _type)",
+    "local": ""
+  },
+  {
+    "origin": "reallocates sparse matrix.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the depth of sparse matrix elements",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the matrix dimensionality",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "converts sparse matrix to the old-style representation; all the elements are copied.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns",
+    "local": ""
+  },
+  {
+    "origin": "/channels()",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "returns the sparse matrix iterator at the matrix end",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the read-only sparse matrix iterator at the matrix end",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "returns the typed sparse matrix iterator at the matrix end",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the typed read-only sparse matrix iterator at the matrix end",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "erases the specified element (2D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, int i2, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "erases the specified element (3D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const int *idx, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "erases the specified element (nD case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0) const",
+    "local": ""
+  },
+  {
+    "origin": "computes the element hash value (1D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1) const",
+    "local": ""
+  },
+  {
+    "origin": "computes the element hash value (2D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, int i2) const",
+    "local": ""
+  },
+  {
+    "origin": "computes the element hash value (3D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const int *idx) const",
+    "local": ""
+  },
+  {
+    "origin": "computes the element hash value (nD case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const int *idx, size_t hashval)",
+    "local": ""
+  },
+  {
+    "origin": "(size_t nidx)",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "(size_t nidx) const",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the number of non-zero elements (=the number of hash table nodes)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m)",
+    "local": ""
+  },
+  {
+    "origin": "assignment operator. This is O(1) operation, i.e. no data is copied",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;m)",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to the corresponding constructor",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(size_t hidx, size_t nidx, size_t previdx)",
+    "local": ""
+  },
+  {
+    "origin": "(size_t newsize)",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the array of sizes, or NULL if the matrix is not allocated",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i) const",
+    "local": ""
+  },
+  {
+    "origin": "returns the size of i-th matrix dimension (or 0)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns type of sparse matrix elements",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*n)",
+    "local": ""
+  },
+  {
+    "origin": "returns the value stored in the sparse martix node",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*n) const",
+    "local": ""
+  },
+  {
+    "origin": "returns the value stored in the sparse martix node",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, bool createMissing, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the specified element (1D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, bool createMissing, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the specified element (2D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, int i2, bool createMissing, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the specified element (3D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const int *idx, bool createMissing, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the specified element (nD case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "returns reference to the specified element (1D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "returns reference to the specified element (2D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, int i2, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "returns reference to the specified element (3D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *idx, size_t *hashval=0)",
+    "local": ""
+  },
+  {
+    "origin": "returns reference to the specified element (nD case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "returns value of the specified element (1D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "returns value of the specified element (2D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, int i2, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "returns value of the specified element (3D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *idx, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "returns value of the specified element (nD case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the specified element (1D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the specified element (2D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int i0, int i1, int i2, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the specified element (3D case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *idx, size_t *hashval=0) const",
+    "local": ""
+  },
+  {
+    "origin": "returns pointer to the specified element (nD case)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "returns the sparse matrix iterator at the matrix beginning",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "returns the sparse matrix iterator at the matrix beginning",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the read-only sparse matrix iterator at the matrix beginning",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the read-only sparse matrix iterator at the matrix beginning",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Public Attributes inherited from",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "class cv::SparseMat_&lt; _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "Template sparse n-dimensional array class derived from",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "is a thin wrapper on top of",
+    "local": ""
+  },
+  {
+    "origin": "created in the same way as",
+    "local": ""
+  },
+  {
+    "origin": ". It simplifies notation of some operations:",
+    "local": ""
+  },
+  {
+    "origin": "Member Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "const_iterator",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "iterator",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "SparseMat_()",
+    "local": ""
+  },
+  {
+    "origin": "[1/5]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the default constructor",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "SparseMat_()",
+    "local": ""
+  },
+  {
+    "origin": "[2/5]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dims",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_sizes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the full constructor equivalent to SparseMat(dims, _sizes, DataType&lt;_Tp&gt;::type)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "SparseMat_()",
+    "local": ""
+  },
+  {
+    "origin": "[3/5]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the copy constructor. If DataType&lt;_Tp&gt;.type != m.type(), the m elements are converted",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "SparseMat_()",
+    "local": ""
+  },
+  {
+    "origin": "[4/5]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the copy constructor. This is O(1) operation - no data is copied",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "SparseMat_()",
+    "local": ""
+  },
+  {
+    "origin": "[5/5]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "converts dense matrix to the sparse form",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "begin()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::begin",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "returns sparse matrix iterator pointing to the first sparse matrix element",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "begin()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::begin",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "returns read-only sparse matrix iterator pointing to the first sparse matrix element",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "channels()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::channels",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "returns the number of channels in each matrix element",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "clone()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::clone",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "makes full copy of the matrix. All the elements are duplicated",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "create()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::create",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dims",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_sizes",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to cv::SparseMat::create(dims, _sizes, DataType&lt;_Tp&gt;::type)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "depth()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::depth",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "returns depth of the matrix elements",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "end()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::end",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "returns sparse matrix iterator pointing to the element following the last sparse matrix element",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "end()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::end",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "returns read-only sparse matrix iterator pointing to the element following the last sparse matrix element",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[1/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "i0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hashval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::value&lt;_Tp&gt;(i0, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[2/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "i0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "i1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hashval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::value&lt;_Tp&gt;(i0, i1, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[3/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "i0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "i1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "i2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hashval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::value&lt;_Tp&gt;(i0, i1, i2, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[4/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "idx",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hashval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::value&lt;_Tp&gt;(idx, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator=()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "converts the old-style sparse matrix to the C++ class. All the elements are copied",
+    "local": ""
+  },
+  {
+    "origin": "the assignment operator. If DataType&lt;_Tp&gt;.type != m.type(), the m elements are converted",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator=()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the assignment operator. This is O(1) operation - no data is copied",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator=()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "converts dense matrix to the sparse form",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "ref()",
+    "local": ""
+  },
+  {
+    "origin": "[1/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::ref",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "i0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hashval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::ref&lt;_Tp&gt;(i0, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "ref()",
+    "local": ""
+  },
+  {
+    "origin": "[2/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::ref",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "i0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "i1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hashval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::ref&lt;_Tp&gt;(i0, i1, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "ref()",
+    "local": ""
+  },
+  {
+    "origin": "[3/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::ref",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "i0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "i1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "i2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hashval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::ref&lt;_Tp&gt;(i0, i1, i2, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "ref()",
+    "local": ""
+  },
+  {
+    "origin": "[4/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::ref",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "idx",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "hashval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "equivalent to SparseMat::ref&lt;_Tp&gt;(idx, hashval)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "type()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::type",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "converts sparse matrix to the old-style CvSparseMat. All the elements are copied",
+    "local": ""
+  },
+  {
+    "origin": "returns type of the matrix elements",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:43 for OpenCV by &#160;",
+    "local": ""
+  }
+]

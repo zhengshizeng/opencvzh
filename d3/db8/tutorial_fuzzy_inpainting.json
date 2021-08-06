@@ -1,0 +1,198 @@
+[
+  {
+    "origin": "OpenCV: Inpainting using F-transform",
+    "local": "OpenCV：使用F变换修复"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Inpainting using F-transform",
+    "local": "利用F变换进行修复"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial, you will learn how image inpainting using F-transform works. It consists in:",
+    "local": "在本教程中，您将学习如何使用F变换进行图像修复。它包括："
+  },
+  {
+    "origin": "basic theory behind,",
+    "local": "背后的基本理论，"
+  },
+  {
+    "origin": "three different algorithms.",
+    "local": "三种不同的算法。"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "The goal of this tutorial is to show that the inverse F-transform can be used for image reconstruction. By the image reconstruction, we mean a reconstruction of a corrupted image where corruption is everything that the original image does not include. It can be noise, text, scratch, etc. Proposal is to solve the problem of reconstruction with the help of an approximation technique. This means that we will be looking for an approximating image which is close to the given one and at the same time, does not contain what we recognize as the corruption. This task is called",
+    "local": "本教程的目标是展示逆F变换可以用于图像重建。我们所说的图像重建，是指一个损坏图像的重建，其中损坏是原始图像不包括的一切。它可以是噪声、文本、划痕等。建议使用近似技术来解决重建问题。这意味着，我们将寻找一个近似的形象，这是接近一个给定的，同时，不包含什么，我们认为是腐败。此任务称为"
+  },
+  {
+    "origin": "image inpainting",
+    "local": "图像修复"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Fuzzy transform application",
+    "local": "模糊变换应用"
+  },
+  {
+    "origin": "As I shown in previous tutorial, F-transform is a tool of fuzzy mathematics highly usable in image processing. Let me rewrite the formula using kernel \\(g\\) introduced before as well:",
+    "local": "正如我在上一个教程中所展示的，F变换是模糊数学的一个工具，在图像处理中非常有用。让我用前面介绍的kernel\\（g\\）重写公式："
+  },
+  {
+    "origin": "\\[ F^0_{kl}=\\frac{\\sum_{x=0}^{2h+1}\\sum_{y=0}^{2h+1} \\iota_{kl}(x,y) g(x,y)}{\\sum_{x=0}^{2h+1}\\sum_{y=0}^{2h+1} g(x,y)}, \\]",
+    "local": "\\[f ^0{kl}=\\frac{\\sum{x=0}^{2h+1}\\sum{y=0}^{2h+1}\\iota{kl}（x，y）g（x，y）}{\\sum{x=0}^{2h+1}\\sum{y=0}^{2h+1}g（x，y）}，\\]"
+  },
+  {
+    "origin": "where \\(\\iota_{kl} \\subset I\\) centered to pixel \\((k \\cdot h,l \\cdot h)\\) and \\(g\\) is a kernel. For purpose of image processing, a binary mask \\(S\\) is used such as",
+    "local": "其中，\\（\\iota{kl}\\子集I\\）以像素为中心，\\（（k\\cdot h，l\\cdot h）\\）和\\（g\\）是内核。为了图像处理的目的，使用二值掩码\\（S\\），例如"
+  },
+  {
+    "origin": "\\[ g^s_{kl} = g \\circ s_{kl} \\]",
+    "local": "\\g\\s{kl}\\g\\circs\\\\uxt}"
+  },
+  {
+    "origin": "where \\(s_{k,l} \\subset S\\). Subarea \\(s\\) of mask \\(S\\) corresponds with subarea \\(\\iota\\) of image \\(I\\). Operator \\(\\circ\\) is element-wise matrix multiplication (Hadamard product). Formula is updated to",
+    "local": "其中\\（s{k，l}\\s\\）。掩模\\（s\\）的子区\\（s\\）与图像\\（I\\）的子区\\（\\iota\\）相对应。运算符\\（\\circ\\）是按元素的矩阵乘法（Hadamard积）。公式更新为"
+  },
+  {
+    "origin": "\\[ F^0_{kl}=\\frac{\\sum_{x=0}^{2h+1}\\sum_{y=0}^{2h+1} \\iota_{kl}(x,y) g^s(x,y)}{\\sum_{x=0}^{2h+1}\\sum_{y=0}^{2h+1} g^s(x,y)}. \\]",
+    "local": "\\[F^0{kl}=\\frac{\\sum{x=0}^{2h+1}\\sum{y=0}^{2h+1}\\iota{kl}（x，y）g^s（x，y）}{\\sum{x=0}^{y=0}\\sum{y=0}^{2h+1}g^s（x，y）}}\\"
+  },
+  {
+    "origin": "More details can be found in related papers.",
+    "local": "更多细节见相关论文。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "The sample below demonstrates the usage of image inpainting. Three artificial images are created using the same input and three different type of corruption. In the real life usage, the input image will be already presented but here we created it by ourselves.",
+    "local": "下面的示例演示了图像修复的用法。使用相同的输入和三种不同类型的损坏创建三个人工图像。在实际使用中，输入图像已经呈现出来了，但是这里我们自己创建了它。"
+  },
+  {
+    "origin": "First of all, we must load our image and three masks used for artificial damage creation.",
+    "local": "首先，我们必须加载我们的图像和三个面具用于人为破坏创建。"
+  },
+  {
+    "origin": "See that mask must be loaded as",
+    "local": "你看面具必须装成"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "In the next step, the masks are used for damaging our input image.",
+    "local": "在下一步中，遮罩被用来破坏我们的输入图像。"
+  },
+  {
+    "origin": "Using the masks, we applied three different kind of corruption on the same input image. Here is the result.",
+    "local": "使用这些掩模，我们在同一个输入图像上应用了三种不同的损坏。这是结果。"
+  },
+  {
+    "origin": "input1, input2 and input3",
+    "local": "输入1、输入2和输入3"
+  },
+  {
+    "origin": "Do not forget that in real life usage, images",
+    "local": "不要忘记，在现实生活中使用，图像"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "are created naturally and used as the input directly.",
+    "local": "是自然生成的，直接用作输入。"
+  },
+  {
+    "origin": "Declaration of output images follows. In the following lines, the method of inpainting is applied. Let me explain three different algorithms one by one.",
+    "local": "输出图像的声明如下。在下面几行中，应用了修复方法。让我逐一解释三种不同的算法。"
+  },
+  {
+    "origin": "First of them is",
+    "local": "首先是"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "The",
+    "local": "这个"
+  },
+  {
+    "origin": "algorithm simply compute direct F-transform ignoring damaged parts using kernel with radius",
+    "local": "该算法利用带半径的核函数直接计算忽略损伤部分的直接F变换"
+  },
+  {
+    "origin": "(as specified in the method calling). Inverse F-transform fill up the missing area using values from the components nearby. It is up to you to choose radius which is big enough.",
+    "local": "（在方法调用中指定）。逆F变换使用附近组件的值填充缺失区域。你可以选择足够大的半径。"
+  },
+  {
+    "origin": "Second is",
+    "local": "其次是"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "algorithm works in the same way but defined radius (",
+    "local": "算法以相同的方式工作，但定义了半径("
+  },
+  {
+    "origin": "in this case) is automatically increased if it is found insufficient. If you want to fill up the hole and you are not sure how big radius you need, you can choose",
+    "local": "在这种情况下），如果发现不足，则自动增加。如果你想填补洞，你不知道你需要多大的半径，你可以选择"
+  },
+  {
+    "origin": "and let the computer decide. The lowest possible will be found.",
+    "local": "让电脑来决定。最低的可能会被找到。"
+  },
+  {
+    "origin": "Last one is",
+    "local": "最后一个是"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Best choice in majority of cases is",
+    "local": "大多数情况下最好的选择是"
+  },
+  {
+    "origin": ". This way of processing use small radius of basic functions for small kind of damage and higher ones for bigger holes.",
+    "local": ". 这种处理方法对小损伤采用小半径的基本函数，对大孔采用大半径的基本函数。"
+  },
+  {
+    "origin": "output1 (ONE_STEP), output2 (MULTI_STEP), output3 (MULTI_STEP), output4 (ITERATIVE)",
+    "local": "输出1（一步）、输出2（多步）、输出3（多步）、输出4（迭代）"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:38为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,1538 @@
+[
+  {
+    "origin": "OpenCV: SSE utilities",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "SSE utilities",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(__m128i &amp;v_r0, __m128i &amp;v_r1, __m128i &amp;v_g0, __m128i &amp;v_g1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128i &amp;v_r0, __m128i &amp;v_r1, __m128i &amp;v_g0, __m128i &amp;v_g1, __m128i &amp;v_b0, __m128i &amp;v_b1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128i &amp;v_r0, __m128i &amp;v_r1, __m128i &amp;v_g0, __m128i &amp;v_g1, __m128i &amp;v_b0, __m128i &amp;v_b1, __m128i &amp;v_a0, __m128i &amp;v_a1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128i &amp;v_r0, __m128i &amp;v_r1, __m128i &amp;v_g0, __m128i &amp;v_g1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128i &amp;v_r0, __m128i &amp;v_r1, __m128i &amp;v_g0, __m128i &amp;v_g1, __m128i &amp;v_b0, __m128i &amp;v_b1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128i &amp;v_r0, __m128i &amp;v_r1, __m128i &amp;v_g0, __m128i &amp;v_g1, __m128i &amp;v_b0, __m128i &amp;v_b1, __m128i &amp;v_a0, __m128i &amp;v_a1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128 &amp;v_r0, __m128 &amp;v_r1, __m128 &amp;v_g0, __m128 &amp;v_g1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128 &amp;v_r0, __m128 &amp;v_r1, __m128 &amp;v_g0, __m128 &amp;v_g1, __m128 &amp;v_b0, __m128 &amp;v_b1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128 &amp;v_r0, __m128 &amp;v_r1, __m128 &amp;v_g0, __m128 &amp;v_g1, __m128 &amp;v_b0, __m128 &amp;v_b1, __m128 &amp;v_a0, __m128 &amp;v_a1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128i &amp;v_r0, __m128i &amp;v_r1, __m128i &amp;v_g0, __m128i &amp;v_g1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128i &amp;v_r0, __m128i &amp;v_r1, __m128i &amp;v_g0, __m128i &amp;v_g1, __m128i &amp;v_b0, __m128i &amp;v_b1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128i &amp;v_r0, __m128i &amp;v_r1, __m128i &amp;v_g0, __m128i &amp;v_g1, __m128i &amp;v_b0, __m128i &amp;v_b1, __m128i &amp;v_a0, __m128i &amp;v_a1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128 &amp;v_r0, __m128 &amp;v_r1, __m128 &amp;v_g0, __m128 &amp;v_g1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128 &amp;v_r0, __m128 &amp;v_r1, __m128 &amp;v_g0, __m128 &amp;v_g1, __m128 &amp;v_b0, __m128 &amp;v_b1)",
+    "local": ""
+  },
+  {
+    "origin": "(__m128 &amp;v_r0, __m128 &amp;v_r1, __m128 &amp;v_g0, __m128 &amp;v_g1, __m128 &amp;v_b0, __m128 &amp;v_b1, __m128 &amp;v_a0, __m128 &amp;v_a1)",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_deinterleave_epi16()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_deinterleave_epi16",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_deinterleave_epi16()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_deinterleave_epi16",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_deinterleave_epi16()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_deinterleave_epi16",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_a0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_a1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_deinterleave_epi8()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_deinterleave_epi8",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_deinterleave_epi8()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_deinterleave_epi8",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_deinterleave_epi8()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_deinterleave_epi8",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_a0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_a1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_deinterleave_ps()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_deinterleave_ps",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_deinterleave_ps()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_deinterleave_ps",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_deinterleave_ps()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_deinterleave_ps",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_a0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_a1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_interleave_epi8()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_interleave_epi8",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_interleave_epi8()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_interleave_epi8",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_interleave_epi8()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_interleave_epi8",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_a0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128i &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_a1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_interleave_ps()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_interleave_ps",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_interleave_ps()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_interleave_ps",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "_mm_interleave_ps()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "void _mm_interleave_ps",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_g1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_b1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_a0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "__m128 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "v_a1",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by &#160;",
+    "local": ""
+  }
+]

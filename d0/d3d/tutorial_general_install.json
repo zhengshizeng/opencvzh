@@ -1,0 +1,454 @@
+[
+  {
+    "origin": "OpenCV: OpenCV installation overview",
+    "local": "OpenCV:OpenCV安装概述"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "OpenCV installation overview",
+    "local": "OpenCV安装概述"
+  },
+  {
+    "origin": "Table of Contents",
+    "local": "目录"
+  },
+  {
+    "origin": "Prebuilt version",
+    "local": "Prebuilt version(预构建版本)"
+  },
+  {
+    "origin": "Packages by OpenCV core team",
+    "local": "OpenCV核心团队的软件包"
+  },
+  {
+    "origin": "Third-party packages",
+    "local": "第三方软件包"
+  },
+  {
+    "origin": "Build from sources",
+    "local": "从源代码生成"
+  },
+  {
+    "origin": "Step 0: Prerequisites",
+    "local": "步骤0:先决条件"
+  },
+  {
+    "origin": "Step 1: Get software sources",
+    "local": "步骤1:获取软件源"
+  },
+  {
+    "origin": "Step 2: Configure",
+    "local": "第2步:配置"
+  },
+  {
+    "origin": "Step 3: Build",
+    "local": "步骤3:构建"
+  },
+  {
+    "origin": "Step 3: Install",
+    "local": "步骤3:安装"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "There are two ways of installing OpenCV on your machine: download prebuilt version for your platform or compile from sources.",
+    "local": "在您的计算机上安装OpenCV有两种方法:下载平台的预构建版本或从源代码处编译."
+  },
+  {
+    "origin": "Prebuilt version",
+    "local": "Prebuilt version(预构建版本)"
+  },
+  {
+    "origin": "In many cases you can find prebuilt version of OpenCV that will meet your needs.",
+    "local": "在许多情况下,您可以找到满足您需求的预构建版本的OpenCV."
+  },
+  {
+    "origin": "Packages by OpenCV core team",
+    "local": "OpenCV核心团队的软件包"
+  },
+  {
+    "origin": "Packages for Android, iOS and Windows built with default parameters and recent compilers are published for each release, they do not contain",
+    "local": "Android、iOS和Windows的软件包使用默认参数和最新的编译器构建,每个版本都会发布,它们不包含"
+  },
+  {
+    "origin": "opencv_contrib",
+    "local": "opencv_contrib "
+  },
+  {
+    "origin": "modules.",
+    "local": " modules."
+  },
+  {
+    "origin": "GitHub releases:",
+    "local": "GitHub releases:"
+  },
+  {
+    "origin": "https://github.com/opencv/opencv/releases",
+    "local": "https://github.com/opencv/opencv/releases"
+  },
+  {
+    "origin": "SourceForge.net:",
+    "local": "SourceForge.net:"
+  },
+  {
+    "origin": "https://sourceforge.net/projects/opencvlibrary/files/",
+    "local": "https://sourceforge.net/projects/opencvlibrary/files/"
+  },
+  {
+    "origin": "Third-party packages",
+    "local": "Third-party packages(第三方软件包)"
+  },
+  {
+    "origin": "Other organizations and people maintain their own binary distributions of OpenCV. For example:",
+    "local": "其他组织和人员维护自己的OpenCV二进制发行版.例如:"
+  },
+  {
+    "origin": "System packages in popular Linux distributions (",
+    "local": "流行Linux发行版中的系统包("
+  },
+  {
+    "origin": "https://pkgs.org/search/?q=opencv",
+    "local": "https://pkgs.org/search/?q=opencv"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "PyPI (",
+    "local": "PyPI ("
+  },
+  {
+    "origin": "https://pypi.org/search/?q=opencv",
+    "local": "https://pypi.org/search/?q=opencv"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Conda (",
+    "local": "Conda ("
+  },
+  {
+    "origin": "https://anaconda.org/search?q=opencv",
+    "local": "https://anaconda.org/search?q=opencv"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Conan (",
+    "local": "Conan ("
+  },
+  {
+    "origin": "https://github.com/conan-community/conan-opencv",
+    "local": "https://github.com/conan-community/conan-opencv"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "vcpkg (",
+    "local": "vcpkg ("
+  },
+  {
+    "origin": "https://github.com/microsoft/vcpkg/tree/master/ports/opencv",
+    "local": "https://github.com/microsoft/vcpkg/tree/master/ports/opencv"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "NuGet (",
+    "local": "NuGet ("
+  },
+  {
+    "origin": "https://www.nuget.org/packages?q=opencv",
+    "local": "https://www.nuget.org/packages?q=opencv"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Brew (",
+    "local": "Brew ("
+  },
+  {
+    "origin": "https://formulae.brew.sh/formula/opencv",
+    "local": "https://formulae.brew.sh/formula/opencv"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Maven (",
+    "local": "Maven ("
+  },
+  {
+    "origin": "https://search.maven.org/search?q=opencv",
+    "local": "https://search.maven.org/search?q=opencv"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Build from sources",
+    "local": "Build from sources(从源代码生成)"
+  },
+  {
+    "origin": "It can happen that existing binary packages are not applicable for your use case, then you'll have to build custom version of OpenCV by yourself. This section gives a high-level overview of the build process, check tutorial for specific platform for actual build instructions.",
+    "local": "可能现有的二进制软件包不适用于您的用例,那么您必须自己构建OpenCV的定制版本.本节提供了构建过程的高级概述,请参阅教程以了解具体平台的实际构建说明."
+  },
+  {
+    "origin": "OpenCV uses",
+    "local": "OpenCV uses"
+  },
+  {
+    "origin": "CMake",
+    "local": "CMake"
+  },
+  {
+    "origin": "build management system for configuration and build, so this section mostly describes generalized process of building software with CMake.",
+    "local": "构建配置和构建的管理系统,因此本节主要描述用CMake构建软件的一般过程."
+  },
+  {
+    "origin": "Step 0: Prerequisites",
+    "local": "步骤0:先决条件"
+  },
+  {
+    "origin": "Install C++ compiler and build tools. On *NIX platforms it is usually GCC/G++ or Clang compiler and Make or Ninja build tool. On Windows it can be Visual Studio IDE or MinGW-w64 compiler. Native toolchains for Android are provided in the Android NDK. XCode IDE is used to build software for OSX and iOS platforms.",
+    "local": "安装C++编译器和构建工具.在*NIX平台上,它通常是GCC/G++或Clang编译器和Make或Ninja构建工具.在Windows上,它可以是visualstudioide或MinGW-w64编译器.Android NDK中提供了Android的原生工具链.XCode IDE用于为OSX和iOS平台构建软件."
+  },
+  {
+    "origin": "Install CMake from the official site or some other source.",
+    "local": "从官方网站或其他来源安装CMake."
+  },
+  {
+    "origin": "Get other third-party dependencies: libraries with extra functionality like decoding videos or showing GUI elements; libraries providing optimized implementations of selected algorithms; tools used for documentation generation and other extras. Check",
+    "local": "获取其他第三方依赖项:具有解码视频或显示GUI元素等额外功能的库；提供选定算法的优化实现的库；用于生成文档和其他附加功能的工具.检查"
+  },
+  {
+    "origin": "for available options and corresponding dependencies.",
+    "local": "获取可用选项和相应的依赖项."
+  },
+  {
+    "origin": "Step 1: Get software sources",
+    "local": "步骤1:获取软件源"
+  },
+  {
+    "origin": "Typical software project consists of one or several code repositories. OpenCV have two repositories with code:",
+    "local": "典型的软件项目由一个或多个代码库组成. OpenCV有两个代码库:"
+  },
+  {
+    "origin": "opencv",
+    "local": "opencv"
+  },
+  {
+    "origin": "- main repository with stable and actively supported algorithms and",
+    "local": "具有稳定且积极支持的算法和"
+  },
+  {
+    "origin": "opencv_contrib",
+    "local": " opencv_contrib "
+  },
+  {
+    "origin": "which contains experimental and non-free (patented) algorithms; and one repository with test data:",
+    "local": "包含实验性和非自由(专利)算法；以及一个包含测试数据的存储库:"
+  },
+  {
+    "origin": "opencv_extra",
+    "local": " opencv_extra "
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "You can download a snapshot of repository in form of an archive or clone repository with full history.",
+    "local": "您可以下载存储库的快照,其形式为存档或具有完整历史记录的克隆存储库."
+  },
+  {
+    "origin": "To download snapshot archives:",
+    "local": "要下载快照存档,请执行以下操作:"
+  },
+  {
+    "origin": "Go to",
+    "local": "Go to"
+  },
+  {
+    "origin": "https://github.com/opencv/opencv/releases",
+    "local": "https://github.com/opencv/opencv/releases"
+  },
+  {
+    "origin": "and download \"Source code\" archive from any release.",
+    "local": "并从任何版本下载“源代码”存档."
+  },
+  {
+    "origin": "(optionally) Go to",
+    "local": "(可选)转到"
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_contrib/releases",
+    "local": "https://github.com/opencv/opencv_contrib/releases"
+  },
+  {
+    "origin": "and download \"Source code\" archive for the same release as",
+    "local": "并下载“源代码”存档,其版本与"
+  },
+  {
+    "origin": "opencv",
+    "local": " opencv "
+  },
+  {
+    "origin": "(optionally) Go to",
+    "local": "(可选)转到"
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_extra/releases",
+    "local": "https://github.com/opencv/opencv_extra/releases"
+  },
+  {
+    "origin": "and download \"Source code\" archive for the same release as",
+    "local": "并下载“源代码”存档,其版本与"
+  },
+  {
+    "origin": "opencv",
+    "local": " opencv "
+  },
+  {
+    "origin": "Unpack all archives to some location",
+    "local": "把所有的档案打包到某个地方"
+  },
+  {
+    "origin": "To clone repositories run the following commands in console (",
+    "local": "要克隆存储库,请在console中运行以下命令("
+  },
+  {
+    "origin": "git",
+    "local": "git"
+  },
+  {
+    "origin": "must be installed",
+    "local": "must be installed(git 必须安装)"
+  },
+  {
+    "origin": "):",
+    "local": "):"
+  },
+  {
+    "origin": "Note",
+    "local": "Note(注意)"
+  },
+  {
+    "origin": "If you want to build software using more than one repository, make sure all components are compatible with each other. For OpenCV it means that",
+    "local": "如果要使用多个存储库构建软件,请确保所有组件彼此兼容.对于OpenCV,这意味着"
+  },
+  {
+    "origin": "opencv",
+    "local": "opencv"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "opencv_contrib",
+    "local": "opencv_contrib"
+  },
+  {
+    "origin": "repositories must be checked out at the same tag or that all snapshot archives are downloaded from the same release.",
+    "local": "必须在同一标记处签出存储库,或者从同一版本下载所有快照存档."
+  },
+  {
+    "origin": "When choosing which version to download take in account your target platform and development tools versions, latest versions of OpenCV can have build problems with very old compilers and vice versa. We recommend using latest release and fresh OS/compiler combination.",
+    "local": "在选择要下载的版本时,请考虑您的目标平台和开发工具版本,最新版本的OpenCV可能会在非常旧的编译器上出现构建问题,反之亦然.我们建议使用最新版本和最新的OS/编译器组合."
+  },
+  {
+    "origin": "Step 2: Configure",
+    "local": "第2步:配置"
+  },
+  {
+    "origin": "At this step CMake will verify that all necessary tools and dependencies are available and compatible with the library and will generate intermediate files for the chosen build system. It could be Makefiles, IDE projects and solutions, etc. Usually this step is performed in newly created build directory:",
+    "local": "在这一步,CMake将验证所有必要的工具和依赖项是否可用并与库兼容,并为所选的构建系统生成中间文件.它可以是makefile、IDE项目和解决方案等.通常在新创建的构建目录中执行此步骤:"
+  },
+  {
+    "origin": "Note",
+    "local": "Note(注意)"
+  },
+  {
+    "origin": "application allows to see and modify available options using graphical user interface. See",
+    "local": "应用程序允许使用图形用户界面查看和修改可用选项.看到了吗"
+  },
+  {
+    "origin": "https://cmake.org/runningcmake/",
+    "local": "https://cmake.org/runningcmake/"
+  },
+  {
+    "origin": "for details.",
+    "local": "详情."
+  },
+  {
+    "origin": "Step 3: Build",
+    "local": "步骤3:构建"
+  },
+  {
+    "origin": "During build process source files are compiled into object files which are linked together or otherwise combined into libraries and applications. This step can be run using universal command:",
+    "local": "在构建过程中,源文件被编译成对象文件,这些文件被链接在一起或以其他方式组合到库和应用程序中.可以使用通用命令运行此步骤:"
+  },
+  {
+    "origin": "... or underlying build system can be called directly:",
+    "local": "... 或者可以直接调用底层生成系统:"
+  },
+  {
+    "origin": "Step 3: Install",
+    "local": "步骤3:安装"
+  },
+  {
+    "origin": "During installation procedure build results and other files from build directory will be copied to the install location. Default installation location is",
+    "local": "在安装过程中,生成目录中的生成结果和其他文件将复制到安装位置.默认安装位置为"
+  },
+  {
+    "origin": "on UNIX and",
+    "local": "在UNIX和"
+  },
+  {
+    "origin": "on Windows. This location can be changed at the configuration step by setting",
+    "local": "在窗户上.在配置步骤中,可以通过设置"
+  },
+  {
+    "origin": "option. To perform installation run the following command:",
+    "local": "选项.要执行安装,请运行以下命令:"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "This step is optional, OpenCV can be used directly from the build directory.",
+    "local": "这个步骤是可选的,OpenCV可以直接从build目录中使用."
+  },
+  {
+    "origin": "If the installation root location is a protected system directory, so the installation process must be run with superuser or administrator privileges (e.g.",
+    "local": "如果安装根目录是受保护的系统目录,则安装过程必须以超级用户或管理员权限(例如."
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:36为OpenCV生成 zsz"
+  }
+]

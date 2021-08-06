@@ -1,0 +1,162 @@
+[
+  {
+    "origin": "OpenCV: Contour Properties",
+    "local": "OpenCV:轮廓特性"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Contour Properties",
+    "local": "等高线特性"
+  },
+  {
+    "origin": "Here we will learn to extract some frequently used properties of objects like Solidity, Equivalent Diameter, Mask image, Mean Intensity etc. More features can be found at",
+    "local": "在这里，我们将学习提取物体的一些常用属性，如坚固性、等效直径、掩模图像、平均强度等。更多的特征可以在"
+  },
+  {
+    "origin": "Matlab regionprops documentation",
+    "local": "Matlab区域道具文档"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "*(NB : Centroid, Area, Perimeter etc also belong to this category, but we have seen it in last chapter)*",
+    "local": "*（注意：质心、面积、周长等也属于这一类，但我们在上一章中已经看到）*"
+  },
+  {
+    "origin": "1. Aspect Ratio",
+    "local": "1.纵横比"
+  },
+  {
+    "origin": "It is the ratio of width to height of bounding rect of the object.",
+    "local": "它是对象边界矩形的宽度与高度之比。"
+  },
+  {
+    "origin": "\\[Aspect \\; Ratio = \\frac{Width}{Height}\\]",
+    "local": "\\[方面\\；比率=\\frac{Width}{Height}\\]"
+  },
+  {
+    "origin": "2. Extent",
+    "local": "2.范围"
+  },
+  {
+    "origin": "Extent is the ratio of contour area to bounding rectangle area.",
+    "local": "范围是等高线面积与边框面积之比。"
+  },
+  {
+    "origin": "\\[Extent = \\frac{Object \\; Area}{Bounding \\; Rectangle \\; Area}\\]",
+    "local": "\\[范围=\\frac{Object\\；区域}{边界\\；矩形\\；区域}\\]"
+  },
+  {
+    "origin": "3. Solidity",
+    "local": "3.坚固性"
+  },
+  {
+    "origin": "Solidity is the ratio of contour area to its convex hull area.",
+    "local": "坚固性是等高线面积与其凸面外壳面积之比。"
+  },
+  {
+    "origin": "\\[Solidity = \\frac{Contour \\; Area}{Convex \\; Hull \\; Area}\\]",
+    "local": "\\[坚固性=\\frac{Contour\\；面积}{凸\\；船体\\；区域}\\]"
+  },
+  {
+    "origin": "4. Equivalent Diameter",
+    "local": "4.当量直径"
+  },
+  {
+    "origin": "Equivalent Diameter is the diameter of the circle whose area is same as the contour area.",
+    "local": "等效直径是面积与等高线面积相同的圆的直径。"
+  },
+  {
+    "origin": "\\[Equivalent \\; Diameter = \\sqrt{\\frac{4 \\times Contour \\; Area}{\\pi}}\\]",
+    "local": "\\[等效\\；直径=\\sqrt{\\frac{4\\倍等高线\\；面积}{\\pi}}\\]"
+  },
+  {
+    "origin": "5. Orientation",
+    "local": "5.定位"
+  },
+  {
+    "origin": "Orientation is the angle at which object is directed. Following method also gives the Major Axis and Minor Axis lengths.",
+    "local": "方向是物体被指向的角度。下面的方法也给出了长轴和短轴的长度。"
+  },
+  {
+    "origin": "6. Mask and Pixel Points",
+    "local": "6.遮罩和像素点"
+  },
+  {
+    "origin": "In some cases, we may need all the points which comprises that object. It can be done as follows:",
+    "local": "在某些情况下，我们可能需要组成该对象的所有点。具体做法如下："
+  },
+  {
+    "origin": "Here, two methods, one using Numpy functions, next one using OpenCV function (last commented line) are given to do the same. Results are also same, but with a slight difference. Numpy gives coordinates in **(row, column)** format, while OpenCV gives coordinates in **(x,y)** format. So basically the answers will be interchanged. Note that,",
+    "local": "这里给出了两种方法，一种使用Numpy函数，另一种使用OpenCV函数（最后一行注释）来实现相同的功能。结果也一样，但略有不同。Numpy以**（行，列）**格式给出坐标，OpenCV以**（x，y）**格式给出坐标。所以基本上答案会互换。注意，"
+  },
+  {
+    "origin": "row = y",
+    "local": "行=y"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "column = x",
+    "local": "列=x"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "7. Maximum Value, Minimum Value and their locations",
+    "local": "7.最大值、最小值及其位置"
+  },
+  {
+    "origin": "We can find these parameters using a mask image.",
+    "local": "我们可以使用掩模图像找到这些参数。"
+  },
+  {
+    "origin": "8. Mean Color or Mean Intensity",
+    "local": "8.平均颜色或平均强度"
+  },
+  {
+    "origin": "Here, we can find the average color of an object. Or it can be average intensity of the object in grayscale mode. We again use the same mask to do it.",
+    "local": "在这里，我们可以找到物体的平均颜色。也可以是灰度模式下物体的平均强度。我们又用同样的面具来做。"
+  },
+  {
+    "origin": "9. Extreme Points",
+    "local": "9.极值点"
+  },
+  {
+    "origin": "Extreme Points means topmost, bottommost, rightmost and leftmost points of the object.",
+    "local": "极值点是指物体的最上面、最下面、最右边和最左边的点。"
+  },
+  {
+    "origin": "For eg, if I apply it to an Indian map, I get the following result :",
+    "local": "例如，如果我将其应用于印度地图，我会得到以下结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Exercises",
+    "local": "练习"
+  },
+  {
+    "origin": "There are still some features left in matlab regionprops doc. Try to implement them.",
+    "local": "在MatlabRegionProps文档中仍然有一些特性。试着实现它们。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

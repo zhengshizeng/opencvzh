@@ -1,0 +1,274 @@
+[
+  {
+    "origin": "OpenCV: Out-of-focus Deblur Filter",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Out-of-focus Deblur Filter",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Karpushin Vladislav",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": ""
+  },
+  {
+    "origin": "what a degradation image model is",
+    "local": ""
+  },
+  {
+    "origin": "what the PSF of an out-of-focus image is",
+    "local": ""
+  },
+  {
+    "origin": "how to restore a blurred image",
+    "local": ""
+  },
+  {
+    "origin": "what is a Wiener filter",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The explanation is based on the books",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ". Also, you can refer to Matlab's tutorial",
+    "local": ""
+  },
+  {
+    "origin": "Image Deblurring in Matlab",
+    "local": ""
+  },
+  {
+    "origin": "and the article",
+    "local": ""
+  },
+  {
+    "origin": "SmartDeblur",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The out-of-focus image on this page is a real world image. The out-of-focus was achieved manually by camera optics.",
+    "local": ""
+  },
+  {
+    "origin": "What is a degradation image model?",
+    "local": ""
+  },
+  {
+    "origin": "Here is a mathematical model of the image degradation in frequency domain representation:",
+    "local": ""
+  },
+  {
+    "origin": "\\[S = H\\cdot U + N\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(S\\) is a spectrum of blurred (degraded) image, \\(U\\) is a spectrum of original true (undegraded) image, \\(H\\) is a frequency response of point spread function (PSF), \\(N\\) is a spectrum of additive noise.",
+    "local": ""
+  },
+  {
+    "origin": "The circular PSF is a good approximation of out-of-focus distortion. Such a PSF is specified by only one parameter - radius \\(R\\). Circular PSF is used in this work.",
+    "local": ""
+  },
+  {
+    "origin": "Circular point spread function",
+    "local": ""
+  },
+  {
+    "origin": "How to restore a blurred image?",
+    "local": ""
+  },
+  {
+    "origin": "The objective of restoration (deblurring) is to obtain an estimate of the original image. The restoration formula in frequency domain is:",
+    "local": ""
+  },
+  {
+    "origin": "\\[U&#39; = H_w\\cdot S\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(U&#39;\\) is the spectrum of estimation of original image \\(U\\), and \\(H_w\\) is the restoration filter, for example, the Wiener filter.",
+    "local": ""
+  },
+  {
+    "origin": "What is the Wiener filter?",
+    "local": ""
+  },
+  {
+    "origin": "The Wiener filter is a way to restore a blurred image. Let's suppose that the PSF is a real and symmetric signal, a power spectrum of the original true image and noise are not known, then a simplified Wiener formula is:",
+    "local": ""
+  },
+  {
+    "origin": "\\[H_w = \\frac{H}{|H|^2+\\frac{1}{SNR}} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(SNR\\) is signal-to-noise ratio.",
+    "local": ""
+  },
+  {
+    "origin": "So, in order to recover an out-of-focus image by Wiener filter, it needs to know the \\(SNR\\) and \\(R\\) of the circular PSF.",
+    "local": ""
+  },
+  {
+    "origin": "Source code",
+    "local": ""
+  },
+  {
+    "origin": "You can find source code in the",
+    "local": ""
+  },
+  {
+    "origin": "of the OpenCV source code library.",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "An out-of-focus image recovering algorithm consists of PSF generation, Wiener filter generation and filtering a blurred image in frequency domain:",
+    "local": ""
+  },
+  {
+    "origin": "A function calcPSF() forms a circular PSF according to input parameter radius \\(R\\):",
+    "local": ""
+  },
+  {
+    "origin": "A function calcWnrFilter() synthesizes the simplified Wiener filter \\(H_w\\) according to the formula described above:",
+    "local": ""
+  },
+  {
+    "origin": "A function fftshift() rearranges the PSF. This code was just copied from the tutorial",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "A function filter2DFreq() filters the blurred image in the frequency domain:",
+    "local": ""
+  },
+  {
+    "origin": "Result",
+    "local": ""
+  },
+  {
+    "origin": "Below you can see the real out-of-focus image:",
+    "local": ""
+  },
+  {
+    "origin": "Out-of-focus image",
+    "local": ""
+  },
+  {
+    "origin": "And the following result has been computed with \\(R\\) = 53 and \\(SNR\\) = 5200 parameters:",
+    "local": ""
+  },
+  {
+    "origin": "The restored (deblurred) image",
+    "local": ""
+  },
+  {
+    "origin": "The Wiener filter was used, and values of \\(R\\) and \\(SNR\\) were selected manually to give the best possible visual result. We can see that the result is not perfect, but it gives us a hint to the image's content. With some difficulty, the text is readable.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The parameter \\(R\\) is the most important. So you should adjust \\(R\\) first, then \\(SNR\\).",
+    "local": ""
+  },
+  {
+    "origin": "Sometimes you can observe the ringing effect in a restored image. This effect can be reduced with several methods. For example, you can taper input image edges.",
+    "local": ""
+  },
+  {
+    "origin": "You can also find a quick video demonstration of this on",
+    "local": ""
+  },
+  {
+    "origin": "YouTube",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "References",
+    "local": ""
+  },
+  {
+    "origin": "Image Deblurring in Matlab",
+    "local": ""
+  },
+  {
+    "origin": "- Image Deblurring in Matlab",
+    "local": ""
+  },
+  {
+    "origin": "SmartDeblur",
+    "local": ""
+  },
+  {
+    "origin": "- SmartDeblur site",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

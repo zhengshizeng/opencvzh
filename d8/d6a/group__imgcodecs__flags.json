@@ -1,0 +1,922 @@
+[
+  {
+    "origin": "OpenCV: Flags used for image file reading and writing",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Flags used for image file reading and writing",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= 16,",
+    "local": ""
+  },
+  {
+    "origin": "= 17,",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Imread flags.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "= 16,",
+    "local": ""
+  },
+  {
+    "origin": "= 17,",
+    "local": ""
+  },
+  {
+    "origin": "= 18,",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Imwrite flags.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Imwrite PAM specific tupletype flags used to define the 'TUPETYPE' field of a PAM file.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Imwrite PNG specific flags used to tune the compression algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Enumeration Type Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "ImreadModes",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "Imread flags.",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_UNCHANGED",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_UNCHANGED",
+    "local": ""
+  },
+  {
+    "origin": "If set, return the loaded image as is (with alpha channel, otherwise it gets cropped). Ignore EXIF orientation.",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_GRAYSCALE",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_GRAYSCALE",
+    "local": ""
+  },
+  {
+    "origin": "If set, always convert image to the single channel grayscale image (codec internal conversion).",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_COLOR",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_COLOR",
+    "local": ""
+  },
+  {
+    "origin": "If set, always convert image to the 3 channel BGR color image.",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_ANYDEPTH",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_ANYDEPTH",
+    "local": ""
+  },
+  {
+    "origin": "If set, return 16-bit/32-bit image when the input has the corresponding depth, otherwise convert it to 8-bit.",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_ANYCOLOR",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_ANYCOLOR",
+    "local": ""
+  },
+  {
+    "origin": "If set, the image is read in any possible color format.",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_LOAD_GDAL",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_LOAD_GDAL",
+    "local": ""
+  },
+  {
+    "origin": "If set, use the gdal driver for loading the image.",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_REDUCED_GRAYSCALE_2",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_REDUCED_GRAYSCALE_2",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_REDUCED_COLOR_2",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_REDUCED_COLOR_2",
+    "local": ""
+  },
+  {
+    "origin": "If set, always convert image to the 3 channel BGR color image and the image size reduced 1/2.",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_REDUCED_GRAYSCALE_4",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_REDUCED_GRAYSCALE_4",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_REDUCED_COLOR_4",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_REDUCED_COLOR_4",
+    "local": ""
+  },
+  {
+    "origin": "If set, always convert image to the 3 channel BGR color image and the image size reduced 1/4.",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_REDUCED_GRAYSCALE_8",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_REDUCED_GRAYSCALE_8",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_REDUCED_COLOR_8",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_REDUCED_COLOR_8",
+    "local": ""
+  },
+  {
+    "origin": "If set, always convert image to the 3 channel BGR color image and the image size reduced 1/8.",
+    "local": ""
+  },
+  {
+    "origin": "IMREAD_IGNORE_ORIENTATION",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMREAD_IGNORE_ORIENTATION",
+    "local": ""
+  },
+  {
+    "origin": "If set, do not rotate the image according to EXIF's orientation flag.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "ImwriteEXRCompressionFlags",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION_NO",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION_NO",
+    "local": ""
+  },
+  {
+    "origin": "no compression",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION_RLE",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION_RLE",
+    "local": ""
+  },
+  {
+    "origin": "run length encoding",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION_ZIPS",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION_ZIPS",
+    "local": ""
+  },
+  {
+    "origin": "zlib compression, one scan line at a time",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION_ZIP",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION_ZIP",
+    "local": ""
+  },
+  {
+    "origin": "zlib compression, in blocks of 16 scan lines",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION_PIZ",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION_PIZ",
+    "local": ""
+  },
+  {
+    "origin": "piz-based wavelet compression",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION_PXR24",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION_PXR24",
+    "local": ""
+  },
+  {
+    "origin": "lossy 24-bit float compression",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION_B44",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION_B44",
+    "local": ""
+  },
+  {
+    "origin": "lossy 4-by-4 pixel block compression, fixed compression rate",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION_B44A",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION_B44A",
+    "local": ""
+  },
+  {
+    "origin": "lossy 4-by-4 pixel block compression, flat fields are compressed more",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION_DWAA",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION_DWAA",
+    "local": ""
+  },
+  {
+    "origin": "lossy DCT based compression, in blocks of 32 scanlines. More efficient for partial buffer access.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION_DWAB",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION_DWAB",
+    "local": ""
+  },
+  {
+    "origin": "lossy DCT based compression, in blocks of 256 scanlines. More efficient space wise and faster to decode full frames than DWAA_COMPRESSION.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "ImwriteEXRTypeFlags",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_TYPE_HALF",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_TYPE_HALF",
+    "local": ""
+  },
+  {
+    "origin": "store as HALF (FP16)",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_TYPE_FLOAT",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_TYPE_FLOAT",
+    "local": ""
+  },
+  {
+    "origin": "store as FP32 (default)",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "ImwriteFlags",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "Imwrite flags.",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_JPEG_QUALITY",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_JPEG_QUALITY",
+    "local": ""
+  },
+  {
+    "origin": "For JPEG, it can be a quality from 0 to 100 (the higher is the better). Default value is 95.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_JPEG_PROGRESSIVE",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_JPEG_PROGRESSIVE",
+    "local": ""
+  },
+  {
+    "origin": "Enable JPEG features, 0 or 1, default is False.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_JPEG_OPTIMIZE",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_JPEG_OPTIMIZE",
+    "local": ""
+  },
+  {
+    "origin": "Enable JPEG features, 0 or 1, default is False.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_JPEG_RST_INTERVAL",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_JPEG_RST_INTERVAL",
+    "local": ""
+  },
+  {
+    "origin": "JPEG restart interval, 0 - 65535, default is 0 - no restart.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_JPEG_LUMA_QUALITY",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_JPEG_LUMA_QUALITY",
+    "local": ""
+  },
+  {
+    "origin": "Separate luma quality level, 0 - 100, default is 0 - don't use.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_JPEG_CHROMA_QUALITY",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_JPEG_CHROMA_QUALITY",
+    "local": ""
+  },
+  {
+    "origin": "Separate chroma quality level, 0 - 100, default is 0 - don't use.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PNG_COMPRESSION",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PNG_COMPRESSION",
+    "local": ""
+  },
+  {
+    "origin": "For PNG, it can be the compression level from 0 to 9. A higher value means a smaller size and longer compression time. If specified, strategy is changed to IMWRITE_PNG_STRATEGY_DEFAULT (Z_DEFAULT_STRATEGY). Default value is 1 (best speed setting).",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PNG_STRATEGY",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PNG_STRATEGY",
+    "local": ""
+  },
+  {
+    "origin": "One of",
+    "local": ""
+  },
+  {
+    "origin": ", default is IMWRITE_PNG_STRATEGY_RLE.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PNG_BILEVEL",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PNG_BILEVEL",
+    "local": ""
+  },
+  {
+    "origin": "Binary level PNG, 0 or 1, default is 0.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PXM_BINARY",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PXM_BINARY",
+    "local": ""
+  },
+  {
+    "origin": "For PPM, PGM, or PBM, it can be a binary format flag, 0 or 1. Default value is 1.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_TYPE",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_TYPE",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_EXR_COMPRESSION",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_EXR_COMPRESSION",
+    "local": ""
+  },
+  {
+    "origin": "override EXR storage type (FLOAT (FP32) is default)",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_WEBP_QUALITY",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_WEBP_QUALITY",
+    "local": ""
+  },
+  {
+    "origin": "override EXR compression type (ZIP_COMPRESSION = 3 is default)",
+    "local": ""
+  },
+  {
+    "origin": "For WEBP, it can be a quality from 1 to 100 (the higher is the better). By default (without any parameter) and for quality above 100 the lossless compression is used.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PAM_TUPLETYPE",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PAM_TUPLETYPE",
+    "local": ""
+  },
+  {
+    "origin": "For PAM, sets the TUPLETYPE field to the corresponding string value that is defined for the format.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_TIFF_RESUNIT",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_TIFF_RESUNIT",
+    "local": ""
+  },
+  {
+    "origin": "For TIFF, use to specify which DPI resolution unit to set; see libtiff documentation for valid values.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_TIFF_XDPI",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_TIFF_XDPI",
+    "local": ""
+  },
+  {
+    "origin": "For TIFF, use to specify the X direction DPI.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_TIFF_YDPI",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_TIFF_YDPI",
+    "local": ""
+  },
+  {
+    "origin": "For TIFF, use to specify the Y direction DPI.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_TIFF_COMPRESSION",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_TIFF_COMPRESSION",
+    "local": ""
+  },
+  {
+    "origin": "For TIFF, use to specify the image compression scheme. See libtiff for integer constants corresponding to compression formats. Note, for images whose depth is CV_32F, only libtiff's SGILOG compression scheme is used. For other supported depths, the compression scheme can be specified by this flag; LZW compression is the default.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_JPEG2000_COMPRESSION_X1000",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_JPEG2000_COMPRESSION_X1000",
+    "local": ""
+  },
+  {
+    "origin": "For JPEG2000, use to specify the target compression rate (multiplied by 1000). The value can be from 0 to 1000. Default is 1000.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "ImwritePAMFlags",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "Imwrite PAM specific tupletype flags used to define the 'TUPETYPE' field of a PAM file.",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PAM_FORMAT_NULL",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PAM_FORMAT_NULL",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PAM_FORMAT_BLACKANDWHITE",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PAM_FORMAT_BLACKANDWHITE",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PAM_FORMAT_GRAYSCALE",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PAM_FORMAT_GRAYSCALE",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PAM_FORMAT_GRAYSCALE_ALPHA",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PAM_FORMAT_RGB",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PAM_FORMAT_RGB",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PAM_FORMAT_RGB_ALPHA",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PAM_FORMAT_RGB_ALPHA",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "ImwritePNGFlags",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "Imwrite PNG specific flags used to tune the compression algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "These flags will be modify the way of PNG image compression and will be passed to the underlying zlib processing stage.",
+    "local": ""
+  },
+  {
+    "origin": "The effect of IMWRITE_PNG_STRATEGY_FILTERED is to force more Huffman coding and less string matching; it is somewhat intermediate between IMWRITE_PNG_STRATEGY_DEFAULT and IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PNG_STRATEGY_RLE is designed to be almost as fast as IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY, but give better compression for PNG image data.",
+    "local": ""
+  },
+  {
+    "origin": "The strategy parameter only affects the compression ratio but not the correctness of the compressed output even if it is not set appropriately.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PNG_STRATEGY_FIXED prevents the use of dynamic Huffman codes, allowing for a simpler decoder for special applications.",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PNG_STRATEGY_DEFAULT",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PNG_STRATEGY_DEFAULT",
+    "local": ""
+  },
+  {
+    "origin": "Use this value for normal data.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PNG_STRATEGY_FILTERED",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PNG_STRATEGY_FILTERED",
+    "local": ""
+  },
+  {
+    "origin": "Use this value for data produced by a filter (or predictor).Filtered data consists mostly of small values with a somewhat random distribution. In this case, the compression algorithm is tuned to compress them better.",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PNG_STRATEGY_HUFFMAN_ONLY",
+    "local": ""
+  },
+  {
+    "origin": "Use this value to force Huffman encoding only (no string match).",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PNG_STRATEGY_RLE",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PNG_STRATEGY_RLE",
+    "local": ""
+  },
+  {
+    "origin": "Use this value to limit match distances to one (run-length encoding).",
+    "local": ""
+  },
+  {
+    "origin": "IMWRITE_PNG_STRATEGY_FIXED",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.IMWRITE_PNG_STRATEGY_FIXED",
+    "local": ""
+  },
+  {
+    "origin": "Using this value prevents the use of dynamic Huffman codes, allowing for a simpler decoder for special applications.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by",
+    "local": ""
+  }
+]

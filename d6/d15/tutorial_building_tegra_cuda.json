@@ -1,0 +1,1462 @@
+[
+  {
+    "origin": "OpenCV: Building OpenCV for Tegra with CUDA",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Building OpenCV for Tegra with CUDA",
+    "local": ""
+  },
+  {
+    "origin": "Table of Contents",
+    "local": ""
+  },
+  {
+    "origin": "Getting the Source Code",
+    "local": ""
+  },
+  {
+    "origin": "Preparation and Prerequisites",
+    "local": ""
+  },
+  {
+    "origin": "Configuring OpenCV for Building",
+    "local": ""
+  },
+  {
+    "origin": "Building OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Testing OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Installing OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Building OpenCV 2.4.X",
+    "local": ""
+  },
+  {
+    "origin": "CMake Parameter Reference",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Randy J. Ray",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial is deprecated.",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV with CUDA for Tegra",
+    "local": ""
+  },
+  {
+    "origin": "This document is a basic guide to building the OpenCV libraries with CUDA support for use in the Tegra environment. It covers the basic elements of building the version 3.1.0 libraries from source code for three (3) different types of platforms:",
+    "local": ""
+  },
+  {
+    "origin": "NVIDIA",
+    "local": ""
+  },
+  {
+    "origin": "&reg;",
+    "local": ""
+  },
+  {
+    "origin": "Tegra",
+    "local": ""
+  },
+  {
+    "origin": "&reg;",
+    "local": ""
+  },
+  {
+    "origin": "Linux Driver Package (L4T)",
+    "local": ""
+  },
+  {
+    "origin": "Desktop Linux (Ubuntu 14.04 LTS and 16.04 LTS)",
+    "local": ""
+  },
+  {
+    "origin": "This document is not an exhaustive guide to all of the options available when building OpenCV. Specifically, it covers the basic options used when building each platform but does not cover any options that are not needed (or are unchanged from their default values). Additionally, the installation of the CUDA toolkit is not covered here.",
+    "local": ""
+  },
+  {
+    "origin": "This document is focused on building the 3.1.0 version of OpenCV, but the guidelines here may also work for building from the master branch of the git repository. There are differences in some of the CMake options for builds of the 2.4.13 version of OpenCV, which are summarized below in the",
+    "local": ""
+  },
+  {
+    "origin": "section.",
+    "local": ""
+  },
+  {
+    "origin": "Most of the configuration commands are based on the system having CUDA 8.0 installed. In the case of the Jetson TK1, an older CUDA is used because 8.0 is not supported for that platform. These instructions may also work with older versions of CUDA, but are only tested with 8.0.",
+    "local": ""
+  },
+  {
+    "origin": "A Note on Native Compilation vs. Cross-Compilation",
+    "local": ""
+  },
+  {
+    "origin": "The OpenCV build system supports native compilation for all the supported platforms, as well as cross-compilation for platforms such as ARM and others. The native compilation process is simpler, whereas the cross-compilation is generally faster.",
+    "local": ""
+  },
+  {
+    "origin": "At the present time, this document focuses only on native compilation.",
+    "local": ""
+  },
+  {
+    "origin": "Getting the Source Code",
+    "local": ""
+  },
+  {
+    "origin": "There are two (2) ways to get the OpenCV source code:",
+    "local": ""
+  },
+  {
+    "origin": "Direct download from the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV downloads",
+    "local": ""
+  },
+  {
+    "origin": "page",
+    "local": ""
+  },
+  {
+    "origin": "Cloning the git repositories hosted on",
+    "local": ""
+  },
+  {
+    "origin": "GitHub",
+    "local": ""
+  },
+  {
+    "origin": "For this guide, the focus is on using the git repositories. This is because the 3.1.0 version of OpenCV will not build with CUDA 8.0 without applying a few small upstream changes from the git repository.",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Start with the",
+    "local": ""
+  },
+  {
+    "origin": "repository:",
+    "local": ""
+  },
+  {
+    "origin": "# Clone the opencv repository locally: $ git clone https://github.com/opencv/opencv.git",
+    "local": ""
+  },
+  {
+    "origin": "To build the 3.1.0 version (as opposed to building the most-recent source), you must check out a branch based on the",
+    "local": ""
+  },
+  {
+    "origin": "tag:",
+    "local": ""
+  },
+  {
+    "origin": "$ cd opencv $ git checkout -b v3.1.0 3.1.0",
+    "local": ""
+  },
+  {
+    "origin": "Note:",
+    "local": ""
+  },
+  {
+    "origin": "This operation creates a new local branch in your clone's repository.",
+    "local": ""
+  },
+  {
+    "origin": "There are some upstream changes that must be applied via the",
+    "local": ""
+  },
+  {
+    "origin": "command. The first of these is to apply a fix for building specifically with the 8.0 version of CUDA that was not part of the 3.1.0 release:",
+    "local": ""
+  },
+  {
+    "origin": "You will see the following output from the command:",
+    "local": ""
+  },
+  {
+    "origin": "[v3.1.0 d6d69a7] GraphCut deprecated in CUDA 7.5 and removed in 8.0 Author: Vladislav Vinogradov &lt;vlad.vinogradov@itseez.com&gt; 1 file changed, 2 insertions(+), 1 deletion(-)",
+    "local": ""
+  },
+  {
+    "origin": "Secondly, there is a fix for a CMake macro call that is problematic on some systems:",
+    "local": ""
+  },
+  {
+    "origin": "$ git cherry pick cdb9c",
+    "local": ""
+  },
+  {
+    "origin": "You should see output similar to:",
+    "local": ""
+  },
+  {
+    "origin": "[v3.1.0-28613 e5ac2e4] gpu samples: fix REMOVE_ITEM error Author: Alexander Alekhin &lt;alexander.alekhin@itseez.com&gt; 1 file changed, 1 insertion(+), 1 deletion(-)",
+    "local": ""
+  },
+  {
+    "origin": "The last upstream fix that is needed deals with the",
+    "local": ""
+  },
+  {
+    "origin": "configuration file that is bundled with the developer package (",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "$ git cherry-pick 24dbb",
+    "local": ""
+  },
+  {
+    "origin": "You should see output similar to:",
+    "local": ""
+  },
+  {
+    "origin": "[v3.1.0 3a6d7ab] pkg-config: modules list contains only OpenCV modules (fixes #5852) Author: Alexander Alekhin &lt;alexander.alekhin@itseez.com&gt; 1 file changed, 7 insertions(+), 4 deletions(-)",
+    "local": ""
+  },
+  {
+    "origin": "At this point, the",
+    "local": ""
+  },
+  {
+    "origin": "repository is ready for building.",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Extra",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "repository contains extra data for the OpenCV library, including the data files used by the tests and demos. It must be cloned separately:",
+    "local": ""
+  },
+  {
+    "origin": "# In the same base directory from which you cloned OpenCV: $ git clone https://github.com/opencv/opencv_extra.git",
+    "local": ""
+  },
+  {
+    "origin": "As with the OpenCV source, you must use the same method as above to set the source tree to the 3.1.0 version. When you are building from a specific tag, both repositories must be checked out at that tag.",
+    "local": ""
+  },
+  {
+    "origin": "$ cd opencv_extra $ git checkout -b v3.1.0 3.1.0",
+    "local": ""
+  },
+  {
+    "origin": "You may opt to not fetch this repository if you do not plan on running the tests or installing the test-data along with the samples and example programs. If it is not referenced in the invocation of CMake, it will not be used.",
+    "local": ""
+  },
+  {
+    "origin": "Note:",
+    "local": ""
+  },
+  {
+    "origin": "If you plan to run the tests, some tests expect the data to be present and will fail without it.",
+    "local": ""
+  },
+  {
+    "origin": "Preparation and Prerequisites",
+    "local": ""
+  },
+  {
+    "origin": "To build OpenCV, you need a directory to create the configuration and build the libraries. You also need a number of 3rd-party libraries upon which OpenCV depends.",
+    "local": ""
+  },
+  {
+    "origin": "Prerequisites for Ubuntu Linux",
+    "local": ""
+  },
+  {
+    "origin": "These are the basic requirements for building OpenCV for Tegra on Linux:",
+    "local": ""
+  },
+  {
+    "origin": "CMake 2.8.10 or newer",
+    "local": ""
+  },
+  {
+    "origin": "CUDA toolkit 8.0 (7.0 or 7.5 may also be used)",
+    "local": ""
+  },
+  {
+    "origin": "Build tools (make, gcc, g++)",
+    "local": ""
+  },
+  {
+    "origin": "Python 2.6 or greater",
+    "local": ""
+  },
+  {
+    "origin": "These are the same regardless of the platform (DRIVE PX 2, Desktop, etc.).",
+    "local": ""
+  },
+  {
+    "origin": "A number of development packages are required for building on Linux:",
+    "local": ""
+  },
+  {
+    "origin": "libglew-dev",
+    "local": ""
+  },
+  {
+    "origin": "libtiff5-dev",
+    "local": ""
+  },
+  {
+    "origin": "zlib1g-dev",
+    "local": ""
+  },
+  {
+    "origin": "libjpeg-dev",
+    "local": ""
+  },
+  {
+    "origin": "libpng12-dev",
+    "local": ""
+  },
+  {
+    "origin": "libjasper-dev",
+    "local": ""
+  },
+  {
+    "origin": "libavcodec-dev",
+    "local": ""
+  },
+  {
+    "origin": "libavformat-dev",
+    "local": ""
+  },
+  {
+    "origin": "libavutil-dev",
+    "local": ""
+  },
+  {
+    "origin": "libpostproc-dev",
+    "local": ""
+  },
+  {
+    "origin": "libswscale-dev",
+    "local": ""
+  },
+  {
+    "origin": "libeigen3-dev",
+    "local": ""
+  },
+  {
+    "origin": "libtbb-dev",
+    "local": ""
+  },
+  {
+    "origin": "libgtk2.0-dev",
+    "local": ""
+  },
+  {
+    "origin": "pkg-config",
+    "local": ""
+  },
+  {
+    "origin": "Some of the packages above are in the",
+    "local": ""
+  },
+  {
+    "origin": "repository for Ubuntu Linux systems. If you have not already enabled that repository, you need to do the following before trying to install all of the packages listed above:",
+    "local": ""
+  },
+  {
+    "origin": "$ sudo apt-add-repository universe $ sudo apt-get update",
+    "local": ""
+  },
+  {
+    "origin": "The following command can be pasted into a shell in order to install the required packages:",
+    "local": ""
+  },
+  {
+    "origin": "$ sudo apt-get install \\ libglew-dev \\ libtiff5-dev \\ zlib1g-dev \\ libjpeg-dev \\ libpng12-dev \\ libjasper-dev \\ libavcodec-dev \\ libavformat-dev \\ libavutil-dev \\ libpostproc-dev \\ libswscale-dev \\ libeigen3-dev \\ libtbb-dev \\ libgtk2.0-dev \\ pkg-config",
+    "local": ""
+  },
+  {
+    "origin": "(Line-breaks and continuation characters are added for readability.)",
+    "local": ""
+  },
+  {
+    "origin": "If you want the Python bindings to be built, you will also need the appropriate packages for either or both of Python 2 and Python 3:",
+    "local": ""
+  },
+  {
+    "origin": "python-dev / python3-dev",
+    "local": ""
+  },
+  {
+    "origin": "python-numpy / python3-numpy",
+    "local": ""
+  },
+  {
+    "origin": "python-py / python3-py",
+    "local": ""
+  },
+  {
+    "origin": "python-pytest / python3-pytest",
+    "local": ""
+  },
+  {
+    "origin": "The commands that will do this:",
+    "local": ""
+  },
+  {
+    "origin": "$ sudo apt-get install python-dev python-numpy python-py python-pytest # And, optionally: $ sudo apt-get install python3-dev python3-numpy python3-py python3-pytest",
+    "local": ""
+  },
+  {
+    "origin": "Once all the necessary packages are installed, you can configure the build.",
+    "local": ""
+  },
+  {
+    "origin": "Preparing the Build Area",
+    "local": ""
+  },
+  {
+    "origin": "Software projects that use the CMake system for configuring their builds expect the actual builds to be done outside of the source tree itself. For configuring and building OpenCV, create a directory called \"build\" in the same base directory into which you cloned the git repositories:",
+    "local": ""
+  },
+  {
+    "origin": "$ mkdir build $ cd build",
+    "local": ""
+  },
+  {
+    "origin": "You are now ready to configure and build OpenCV.",
+    "local": ""
+  },
+  {
+    "origin": "Configuring OpenCV for Building",
+    "local": ""
+  },
+  {
+    "origin": "The build of OpenCV is configured with CMake. If run with no parameters, it detects what it needs to know about your system. However, it may have difficulty finding the CUDA files if they are not in a standard location, and it may try to build some options that you might otherwise not want included, so the following invocations of CMake are recommended.",
+    "local": ""
+  },
+  {
+    "origin": "In each",
+    "local": ""
+  },
+  {
+    "origin": "command listed in the following sub-sections, line-breaks and indentation are added for readability. Continuation characters are also added in examples for Linux-based platforms, allowing you to copy and paste the examples directly into a shell. When entering these commands by hand, enter the command and options as a single line. For a detailed explanation of the parameters passed to",
+    "local": ""
+  },
+  {
+    "origin": ", see the \"CMake Parameter Reference\" section.",
+    "local": ""
+  },
+  {
+    "origin": "For the Linux-based platforms, the shown value for the",
+    "local": ""
+  },
+  {
+    "origin": "parameter is",
+    "local": ""
+  },
+  {
+    "origin": ". You can set this to whatever you want, based on the layout of your system.",
+    "local": ""
+  },
+  {
+    "origin": "In each of the",
+    "local": ""
+  },
+  {
+    "origin": "invocations below, the last parameter,",
+    "local": ""
+  },
+  {
+    "origin": ", tells the build system where to find the test-data that is provided by the",
+    "local": ""
+  },
+  {
+    "origin": "repository. When this is included, a",
+    "local": ""
+  },
+  {
+    "origin": "installs this test-data alongside the libraries and example code, and a",
+    "local": ""
+  },
+  {
+    "origin": "automatically provides this path to the tests that have to load data from it. If you did not clone the",
+    "local": ""
+  },
+  {
+    "origin": "repository, do not include this parameter.",
+    "local": ""
+  },
+  {
+    "origin": "Vibrante V4L Configuration",
+    "local": ""
+  },
+  {
+    "origin": "$ cmake \\ -DCMAKE_BUILD_TYPE=Release \\ -DCMAKE_INSTALL_PREFIX=/usr \\ -DBUILD_PNG=OFF \\ -DBUILD_TIFF=OFF \\ -DBUILD_TBB=OFF \\ -DBUILD_JPEG=OFF \\ -DBUILD_JASPER=OFF \\ -DBUILD_ZLIB=OFF \\ -DBUILD_EXAMPLES=ON \\ -DBUILD_JAVA=OFF \\ -DBUILD_opencv_python2=ON \\ -DBUILD_opencv_python3=OFF \\ -DENABLE_NEON=ON \\ -DWITH_OPENCL=OFF \\ -DWITH_OPENMP=OFF \\ -DWITH_FFMPEG=ON \\ -DWITH_GSTREAMER=OFF \\ -DWITH_GSTREAMER_0_10=OFF \\ -DWITH_CUDA=ON \\ -DWITH_GTK=ON \\ -DWITH_VTK=OFF \\ -DWITH_TBB=ON \\ -DWITH_1394=OFF \\ -DWITH_OPENEXR=OFF \\ -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-8.0 \\ -DCUDA_ARCH_BIN=6.2 \\ -DCUDA_ARCH_PTX=\"\" \\ -DINSTALL_C_EXAMPLES=ON \\ -DINSTALL_TESTS=OFF \\ -DOPENCV_TEST_DATA_PATH=../opencv_extra/testdata \\ ../opencv",
+    "local": ""
+  },
+  {
+    "origin": "The configuration provided above builds the Python bindings for Python 2 (but not Python 3) as part of the build process. If you want the Python 3 bindings (or do not want the Python 2 bindings), change the values of",
+    "local": ""
+  },
+  {
+    "origin": "and/or",
+    "local": ""
+  },
+  {
+    "origin": "as needed. To enable bindings, set the value to",
+    "local": ""
+  },
+  {
+    "origin": ", to disable them set it to",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "-DBUILD_opencv_python2=OFF",
+    "local": ""
+  },
+  {
+    "origin": "Jetson L4T Configuration",
+    "local": ""
+  },
+  {
+    "origin": "Supported platforms:",
+    "local": ""
+  },
+  {
+    "origin": "Jetson TK1",
+    "local": ""
+  },
+  {
+    "origin": "Jetson TX1",
+    "local": ""
+  },
+  {
+    "origin": "Configuration is slightly different for the Jetson TK1 and the Jetson TX1 systems.",
+    "local": ""
+  },
+  {
+    "origin": "Jetson TK1",
+    "local": ""
+  },
+  {
+    "origin": "$ cmake \\ -DCMAKE_BUILD_TYPE=Release \\ -DCMAKE_INSTALL_PREFIX=/usr \\ -DCMAKE_CXX_FLAGS=-Wa,-mimplicit-it=thumb \\ -DBUILD_PNG=OFF \\ -DBUILD_TIFF=OFF \\ -DBUILD_TBB=OFF \\ -DBUILD_JPEG=OFF \\ -DBUILD_JASPER=OFF \\ -DBUILD_ZLIB=OFF \\ -DBUILD_EXAMPLES=ON \\ -DBUILD_JAVA=OFF \\ -DBUILD_opencv_python2=ON \\ -DBUILD_opencv_python3=OFF \\ -DENABLE_NEON=ON \\ -DWITH_OPENCL=OFF \\ -DWITH_OPENMP=OFF \\ -DWITH_FFMPEG=ON \\ -DWITH_GSTREAMER=OFF \\ -DWITH_GSTREAMER_0_10=OFF \\ -DWITH_CUDA=ON \\ -DWITH_GTK=ON \\ -DWITH_VTK=OFF \\ -DWITH_TBB=ON \\ -DWITH_1394=OFF \\ -DWITH_OPENEXR=OFF \\ -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-6.5 \\ -DCUDA_ARCH_BIN=3.2 \\ -DCUDA_ARCH_PTX=\"\" \\ -DINSTALL_C_EXAMPLES=ON \\ -DINSTALL_TESTS=OFF \\ -DOPENCV_TEST_DATA_PATH=../opencv_extra/testdata \\ ../opencv",
+    "local": ""
+  },
+  {
+    "origin": "Note:",
+    "local": ""
+  },
+  {
+    "origin": "This uses CUDA 6.5, not 8.0.",
+    "local": ""
+  },
+  {
+    "origin": "Jetson TX1",
+    "local": ""
+  },
+  {
+    "origin": "$ cmake \\ -DCMAKE_BUILD_TYPE=Release \\ -DCMAKE_INSTALL_PREFIX=/usr \\ -DBUILD_PNG=OFF \\ -DBUILD_TIFF=OFF \\ -DBUILD_TBB=OFF \\ -DBUILD_JPEG=OFF \\ -DBUILD_JASPER=OFF \\ -DBUILD_ZLIB=OFF \\ -DBUILD_EXAMPLES=ON \\ -DBUILD_JAVA=OFF \\ -DBUILD_opencv_python2=ON \\ -DBUILD_opencv_python3=OFF \\ -DENABLE_PRECOMPILED_HEADERS=OFF \\ -DWITH_OPENCL=OFF \\ -DWITH_OPENMP=OFF \\ -DWITH_FFMPEG=ON \\ -DWITH_GSTREAMER=OFF \\ -DWITH_GSTREAMER_0_10=OFF \\ -DWITH_CUDA=ON \\ -DWITH_GTK=ON \\ -DWITH_VTK=OFF \\ -DWITH_TBB=ON \\ -DWITH_1394=OFF \\ -DWITH_OPENEXR=OFF \\ -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-8.0 \\ -DCUDA_ARCH_BIN=5.3 \\ -DCUDA_ARCH_PTX=\"\" \\ -DINSTALL_C_EXAMPLES=ON \\ -DINSTALL_TESTS=OFF \\ -DOPENCV_TEST_DATA_PATH=../opencv_extra/testdata \\ ../opencv",
+    "local": ""
+  },
+  {
+    "origin": "Note:",
+    "local": ""
+  },
+  {
+    "origin": "This configuration does not set the",
+    "local": ""
+  },
+  {
+    "origin": "parameter.",
+    "local": ""
+  },
+  {
+    "origin": "Ubuntu Desktop Linux Configuration",
+    "local": ""
+  },
+  {
+    "origin": "Supported platforms:",
+    "local": ""
+  },
+  {
+    "origin": "Ubuntu Desktop Linux 14.04 LTS",
+    "local": ""
+  },
+  {
+    "origin": "Ubuntu Desktop Linux 16.04 LTS",
+    "local": ""
+  },
+  {
+    "origin": "The configuration options given to",
+    "local": ""
+  },
+  {
+    "origin": "$ cmake \\ -DCMAKE_BUILD_TYPE=Release \\ -DCMAKE_INSTALL_PREFIX=/usr \\ -DBUILD_PNG=OFF \\ -DBUILD_TIFF=OFF \\ -DBUILD_TBB=OFF \\ -DBUILD_JPEG=OFF \\ -DBUILD_JASPER=OFF \\ -DBUILD_ZLIB=OFF \\ -DBUILD_EXAMPLES=ON \\ -DBUILD_JAVA=OFF \\ -DBUILD_opencv_python2=ON \\ -DBUILD_opencv_python3=OFF \\ -DWITH_OPENCL=OFF \\ -DWITH_OPENMP=OFF \\ -DWITH_FFMPEG=ON \\ -DWITH_GSTREAMER=OFF \\ -DWITH_GSTREAMER_0_10=OFF \\ -DWITH_CUDA=ON \\ -DWITH_GTK=ON \\ -DWITH_VTK=OFF \\ -DWITH_TBB=ON \\ -DWITH_1394=OFF \\ -DWITH_OPENEXR=OFF \\ -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-8.0 \\ -DCUDA_ARCH_BIN='3.0 3.5 5.0 6.0 6.2' \\ -DCUDA_ARCH_PTX=\"\" \\ -DINSTALL_C_EXAMPLES=ON \\ -DINSTALL_TESTS=OFF \\ -DOPENCV_TEST_DATA_PATH=../opencv_extra/testdata \\ ../opencv",
+    "local": ""
+  },
+  {
+    "origin": "This configuration is nearly identical to that for V4L and L4T, except that the",
+    "local": ""
+  },
+  {
+    "origin": "parameter specifies multiple architectures so as to support a variety of GPU boards. For a desktop, you have the option of omitting this parameter, and CMake will instead run a small test program that probes for the supported architectures. However, the libraries produced might not work on Ubuntu systems with different cards.",
+    "local": ""
+  },
+  {
+    "origin": "As with previous examples, the configuration given above builds the Python bindings for Python 2 (but not Python 3) as part of the build process.",
+    "local": ""
+  },
+  {
+    "origin": "Building OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Once",
+    "local": ""
+  },
+  {
+    "origin": "finishes configuring OpenCV, building is done using the standard",
+    "local": ""
+  },
+  {
+    "origin": "utility.",
+    "local": ""
+  },
+  {
+    "origin": "Building with",
+    "local": ""
+  },
+  {
+    "origin": "The only parameter that is needed for the invocation of",
+    "local": ""
+  },
+  {
+    "origin": "is the",
+    "local": ""
+  },
+  {
+    "origin": "parameter for specifying how many parallel threads to use. This varies depending on the system and how much memory is available, other running processes, etc. The following table offers suggested values for this parameter:",
+    "local": ""
+  },
+  {
+    "origin": "Platform",
+    "local": ""
+  },
+  {
+    "origin": "Suggested value",
+    "local": ""
+  },
+  {
+    "origin": "Notes",
+    "local": ""
+  },
+  {
+    "origin": "Jetson TK1",
+    "local": ""
+  },
+  {
+    "origin": "If the build fails due to a compiler-related error, try again with a smaller number of threads. Also consider rebooting the system if it has been running for a long time since the last reboot.",
+    "local": ""
+  },
+  {
+    "origin": "Jetson TX1",
+    "local": ""
+  },
+  {
+    "origin": "Ubuntu Desktop",
+    "local": ""
+  },
+  {
+    "origin": "Based on the value you select, build (assuming you selected 6):",
+    "local": ""
+  },
+  {
+    "origin": "$ make -j6",
+    "local": ""
+  },
+  {
+    "origin": "By default, CMake hides the details of the build steps. If you need to see more detail about each compilation unit, etc., you can enable verbose output:",
+    "local": ""
+  },
+  {
+    "origin": "$ make -j6 VERBOSE=1",
+    "local": ""
+  },
+  {
+    "origin": "Testing OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Once the build completes successfully, you have the option of running the extensive set of tests that OpenCV provides. If you did not clone the",
+    "local": ""
+  },
+  {
+    "origin": "repository and specify the path to",
+    "local": ""
+  },
+  {
+    "origin": "in the",
+    "local": ""
+  },
+  {
+    "origin": "invocation, then testing is not recommended.",
+    "local": ""
+  },
+  {
+    "origin": "Testing under Linux",
+    "local": ""
+  },
+  {
+    "origin": "To run the basic tests under Linux, execute:",
+    "local": ""
+  },
+  {
+    "origin": "$ make test",
+    "local": ""
+  },
+  {
+    "origin": "This executes",
+    "local": ""
+  },
+  {
+    "origin": "to carry out the tests, as specified in CTest syntax within the OpenCV repository. The",
+    "local": ""
+  },
+  {
+    "origin": "harness takes many different parameters (too many to list here, see the manual page for CTest to see the full set), and if you wish to pass any of them, you can do so by specifying them in a",
+    "local": ""
+  },
+  {
+    "origin": "command-line parameter called",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "In this example, there are two (2) arguments passed to",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ". The first argument causes the output from",
+    "local": ""
+  },
+  {
+    "origin": "to be more detailed, and the second causes",
+    "local": ""
+  },
+  {
+    "origin": "to run as many as three (3) tests in parallel. As with choosing a thread count for building, base any choice for testing on the available number of processor cores, physical memory, etc. Some of the tests do attempt to allocate significant amounts of memory.",
+    "local": ""
+  },
+  {
+    "origin": "Known Issues with Tests",
+    "local": ""
+  },
+  {
+    "origin": "At present, not all of the tests in the OpenCV test suite pass. There are tests that fail whether or not CUDA is compiled, and there are tests that are only specific to CUDA that also do not currently pass.",
+    "local": ""
+  },
+  {
+    "origin": "Note:",
+    "local": ""
+  },
+  {
+    "origin": "There are no tests that pass without CUDA but fail only when CUDA is included.",
+    "local": ""
+  },
+  {
+    "origin": "As the full lists of failing tests vary based on platform, it is impractical to list them here.",
+    "local": ""
+  },
+  {
+    "origin": "Installing OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Installing OpenCV is very straightforward. For the Linux-based platforms, the command is:",
+    "local": ""
+  },
+  {
+    "origin": "$ make install",
+    "local": ""
+  },
+  {
+    "origin": "Depending on the chosen installation location, you may need root privilege to install.",
+    "local": ""
+  },
+  {
+    "origin": "Building OpenCV 2.4.X",
+    "local": ""
+  },
+  {
+    "origin": "If you wish to build your own version of the 2.4 version of OpenCV, there are only a few adjustments that must be made. At the time of this writing, the latest version on the 2.4 tree is 2.4.13. These instructions may work for later versions of 2.4, though they have not been tested for any earlier versions.",
+    "local": ""
+  },
+  {
+    "origin": "Note:",
+    "local": ""
+  },
+  {
+    "origin": "The 2.4.X OpenCV source does not have the extra modules and code for Tegra that was upstreamed into the 3.X versions of OpenCV. This part of the guide is only for cases where you want to build a vanilla version of OpenCV 2.4.",
+    "local": ""
+  },
+  {
+    "origin": "Selecting the 2.4 Source",
+    "local": ""
+  },
+  {
+    "origin": "First you must select the correct source branch or tag. If you want a specific version such as 2.4.13, you want to make a local branch based on the tag, as was done with the 3.1.0 tag above:",
+    "local": ""
+  },
+  {
+    "origin": "# Within the opencv directory: $ git checkout -b v2.4.13 2.4.13 # Within the opencv_extra directory: $ git checkout -b v2.4.13 2.4.13",
+    "local": ""
+  },
+  {
+    "origin": "If you simply want the newest code from the 2.4 line of OpenCV, there is a",
+    "local": ""
+  },
+  {
+    "origin": "branch already in the repository. You can check that out instead of a specific tag:",
+    "local": ""
+  },
+  {
+    "origin": "There is no need for the",
+    "local": ""
+  },
+  {
+    "origin": "commands used with 3.1.0 when building the 2.4.13 source.",
+    "local": ""
+  },
+  {
+    "origin": "Configuring",
+    "local": ""
+  },
+  {
+    "origin": "Configuring is done with CMake as before. The primary difference is that OpenCV 2.4 only provides Python bindings for Python 2, and thus does not distinguish between Python 2 and Python 3 in the CMake parameters. There is only one parameter,",
+    "local": ""
+  },
+  {
+    "origin": ". In addition, there is a build-related parameter that controls features in 2.4 that are not in 3.1.0. This parameter is",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Configuration still takes place in a separate directory that must be a sibling to the",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "directories.",
+    "local": ""
+  },
+  {
+    "origin": "Configuring Vibrante V4L",
+    "local": ""
+  },
+  {
+    "origin": "For DRIVE PX 2:",
+    "local": ""
+  },
+  {
+    "origin": "$ cmake \\ -DCMAKE_BUILD_TYPE=Release \\ -DCMAKE_INSTALL_PREFIX=/usr \\ -DBUILD_PNG=OFF \\ -DBUILD_TIFF=OFF \\ -DBUILD_TBB=OFF \\ -DBUILD_JPEG=OFF \\ -DBUILD_JASPER=OFF \\ -DBUILD_ZLIB=OFF \\ -DBUILD_EXAMPLES=ON \\ -DBUILD_JAVA=OFF \\ -DBUILD_opencv_nonfree=OFF \\ -DBUILD_opencv_python=ON \\ -DENABLE_NEON=ON \\ -DWITH_OPENCL=OFF \\ -DWITH_OPENMP=OFF \\ -DWITH_FFMPEG=ON \\ -DWITH_GSTREAMER=OFF \\ -DWITH_GSTREAMER_0_10=OFF \\ -DWITH_CUDA=ON \\ -DWITH_GTK=ON \\ -DWITH_VTK=OFF \\ -DWITH_TBB=ON \\ -DWITH_1394=OFF \\ -DWITH_OPENEXR=OFF \\ -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-8.0 \\ -DCUDA_ARCH_BIN=6.2 \\ -DCUDA_ARCH_PTX=\"\" \\ -DINSTALL_C_EXAMPLES=ON \\ -DINSTALL_TESTS=ON \\ -DOPENCV_TEST_DATA_PATH=../opencv_extra/testdata \\ ../opencv",
+    "local": ""
+  },
+  {
+    "origin": "Configuring Jetson L4T",
+    "local": ""
+  },
+  {
+    "origin": "For Jetson TK1:",
+    "local": ""
+  },
+  {
+    "origin": "$ cmake \\ -DCMAKE_BUILD_TYPE=Release \\ -DCMAKE_INSTALL_PREFIX=/usr \\ -DBUILD_PNG=OFF \\ -DBUILD_TIFF=OFF \\ -DBUILD_TBB=OFF \\ -DBUILD_JPEG=OFF \\ -DBUILD_JASPER=OFF \\ -DBUILD_ZLIB=OFF \\ -DBUILD_EXAMPLES=ON \\ -DBUILD_JAVA=OFF \\ -DBUILD_opencv_nonfree=OFF \\ -DBUILD_opencv_python=ON \\ -DENABLE_NEON=ON \\ -DWITH_OPENCL=OFF \\ -DWITH_OPENMP=OFF \\ -DWITH_FFMPEG=ON \\ -DWITH_GSTREAMER=OFF \\ -DWITH_GSTREAMER_0_10=OFF \\ -DWITH_CUDA=ON \\ -DWITH_GTK=ON \\ -DWITH_VTK=OFF \\ -DWITH_TBB=ON \\ -DWITH_1394=OFF \\ -DWITH_OPENEXR=OFF \\ -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-6.5 \\ -DCUDA_ARCH_BIN=3.2 \\ -DCUDA_ARCH_PTX=\"\" \\ -DINSTALL_C_EXAMPLES=ON \\ -DINSTALL_TESTS=ON \\ -DOPENCV_TEST_DATA_PATH=../opencv_extra/testdata \\ ../opencv",
+    "local": ""
+  },
+  {
+    "origin": "For Jetson TX1:",
+    "local": ""
+  },
+  {
+    "origin": "$ cmake \\ -DCMAKE_BUILD_TYPE=Release \\ -DCMAKE_INSTALL_PREFIX=/usr \\ -DBUILD_PNG=OFF \\ -DBUILD_TIFF=OFF \\ -DBUILD_TBB=OFF \\ -DBUILD_JPEG=OFF \\ -DBUILD_JASPER=OFF \\ -DBUILD_ZLIB=OFF \\ -DBUILD_EXAMPLES=ON \\ -DBUILD_JAVA=OFF \\ -DBUILD_opencv_nonfree=OFF \\ -DBUILD_opencv_python=ON \\ -DENABLE_PRECOMPILED_HEADERS=OFF \\ -DWITH_OPENCL=OFF \\ -DWITH_OPENMP=OFF \\ -DWITH_FFMPEG=ON \\ -DWITH_GSTREAMER=OFF \\ -DWITH_GSTREAMER_0_10=OFF \\ -DWITH_CUDA=ON \\ -DWITH_GTK=ON \\ -DWITH_VTK=OFF \\ -DWITH_TBB=ON \\ -DWITH_1394=OFF \\ -DWITH_OPENEXR=OFF \\ -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-8.0 \\ -DCUDA_ARCH_BIN=5.3 \\ -DCUDA_ARCH_PTX=\"\" \\ -DINSTALL_C_EXAMPLES=ON \\ -DINSTALL_TESTS=ON \\ -DOPENCV_TEST_DATA_PATH=../opencv_extra/testdata \\ ../opencv",
+    "local": ""
+  },
+  {
+    "origin": "Configuring Desktop Ubuntu Linux",
+    "local": ""
+  },
+  {
+    "origin": "For both 14.04 LTS and 16.04 LTS:",
+    "local": ""
+  },
+  {
+    "origin": "$ cmake \\ -DCMAKE_BUILD_TYPE=Release \\ -DCMAKE_INSTALL_PREFIX=/usr \\ -DBUILD_PNG=OFF \\ -DBUILD_TIFF=OFF \\ -DBUILD_TBB=OFF \\ -DBUILD_JPEG=OFF \\ -DBUILD_JASPER=OFF \\ -DBUILD_ZLIB=OFF \\ -DBUILD_EXAMPLES=ON \\ -DBUILD_JAVA=OFF \\ -DBUILD_opencv_nonfree=OFF \\ -DBUILD_opencv_python=ON \\ -DWITH_OPENCL=OFF \\ -DWITH_OPENMP=OFF \\ -DWITH_FFMPEG=ON \\ -DWITH_GSTREAMER=OFF \\ -DWITH_GSTREAMER_0_10=OFF \\ -DWITH_CUDA=ON \\ -DWITH_GTK=ON \\ -DWITH_VTK=OFF \\ -DWITH_TBB=ON \\ -DWITH_1394=OFF \\ -DWITH_OPENEXR=OFF \\ -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-8.0 \\ -DCUDA_ARCH_BIN='3.0 3.5 5.0 6.0 6.2' \\ -DCUDA_ARCH_PTX=\"\" \\ -DINSTALL_C_EXAMPLES=ON \\ -DINSTALL_TESTS=ON \\ -DOPENCV_TEST_DATA_PATH=../opencv_extra/testdata \\ ../opencv",
+    "local": ""
+  },
+  {
+    "origin": "Building, Testing and Installing",
+    "local": ""
+  },
+  {
+    "origin": "Once configured, the steps of building, testing, and installing are the same as above for the 3.1.0 source.",
+    "local": ""
+  },
+  {
+    "origin": "CMake Parameter Reference",
+    "local": ""
+  },
+  {
+    "origin": "The following is a table of all the parameters passed to CMake in the recommended invocations above. Some of these are parameters from CMake itself, while most are specific to OpenCV.",
+    "local": ""
+  },
+  {
+    "origin": "Parameter",
+    "local": ""
+  },
+  {
+    "origin": "Our Default Value",
+    "local": ""
+  },
+  {
+    "origin": "What It Does",
+    "local": ""
+  },
+  {
+    "origin": "Notes",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_EXAMPLES",
+    "local": ""
+  },
+  {
+    "origin": "ON",
+    "local": ""
+  },
+  {
+    "origin": "Governs whether the C/C++ examples are built",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_JASPER",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Governs whether the Jasper library (",
+    "local": ""
+  },
+  {
+    "origin": ") is built from source in the",
+    "local": ""
+  },
+  {
+    "origin": "directory",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_JPEG",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "As above, for",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_PNG",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "As above, for",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_TBB",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "As above, for",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_TIFF",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "As above, for",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_ZLIB",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "As above, for",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_JAVA",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Controls the building of the Java bindings for OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Building the Java bindings requires OpenCV libraries be built for static linking only",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_opencv_nonfree",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Controls the building of non-free (non-open-source) elements",
+    "local": ""
+  },
+  {
+    "origin": "Used only for building 2.4.X",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_opencv_python",
+    "local": ""
+  },
+  {
+    "origin": "ON",
+    "local": ""
+  },
+  {
+    "origin": "Controls the building of the Python 2 bindings in OpenCV 2.4.X",
+    "local": ""
+  },
+  {
+    "origin": "Used only for building 2.4.X",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_opencv_python2",
+    "local": ""
+  },
+  {
+    "origin": "ON",
+    "local": ""
+  },
+  {
+    "origin": "Controls the building of the Python 2 bindings in OpenCV 3.1.0",
+    "local": ""
+  },
+  {
+    "origin": "Not used in 2.4.X",
+    "local": ""
+  },
+  {
+    "origin": "BUILD_opencv_python3",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Controls the building of the Python 3 bindings in OpenCV 3.1.0",
+    "local": ""
+  },
+  {
+    "origin": "Not used in 2.4.X",
+    "local": ""
+  },
+  {
+    "origin": "CMAKE_BUILD_TYPE",
+    "local": ""
+  },
+  {
+    "origin": "Release",
+    "local": ""
+  },
+  {
+    "origin": "Selects the type of build (release vs. development)",
+    "local": ""
+  },
+  {
+    "origin": "Is generally either",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "CMAKE_INSTALL_PREFIX",
+    "local": ""
+  },
+  {
+    "origin": "/usr",
+    "local": ""
+  },
+  {
+    "origin": "Sets the root for installation of the libraries and header files",
+    "local": ""
+  },
+  {
+    "origin": "CUDA_ARCH_BIN",
+    "local": ""
+  },
+  {
+    "origin": "varies",
+    "local": ""
+  },
+  {
+    "origin": "Sets the CUDA architecture(s) for which code is compiled",
+    "local": ""
+  },
+  {
+    "origin": "Usually only passed for platforms with known specific cards. OpenCV includes a small program that determines the architectures of the system's installed card if you do not pass this parameter. Here, for Ubuntu desktop, the value is a list to maximize card support.",
+    "local": ""
+  },
+  {
+    "origin": "CUDA_ARCH_PTX",
+    "local": ""
+  },
+  {
+    "origin": "\"\"",
+    "local": ""
+  },
+  {
+    "origin": "Builds PTX intermediate code for the specified virtual PTX architectures",
+    "local": ""
+  },
+  {
+    "origin": "CUDA_TOOLKIT_ROOT_DIR",
+    "local": ""
+  },
+  {
+    "origin": "/usr/local/cuda-8.0 (for Linux)",
+    "local": ""
+  },
+  {
+    "origin": "Specifies the location of the CUDA include files and libraries",
+    "local": ""
+  },
+  {
+    "origin": "ENABLE_NEON",
+    "local": ""
+  },
+  {
+    "origin": "ON",
+    "local": ""
+  },
+  {
+    "origin": "Enables the use of NEON SIMD extensions for ARM chips",
+    "local": ""
+  },
+  {
+    "origin": "Only passed for builds on ARM platforms",
+    "local": ""
+  },
+  {
+    "origin": "ENABLE_PRECOMPILED_HEADERS",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Enables/disables support for pre-compiled headers",
+    "local": ""
+  },
+  {
+    "origin": "Only specified on some of the ARM platforms",
+    "local": ""
+  },
+  {
+    "origin": "INSTALL_C_EXAMPLES",
+    "local": ""
+  },
+  {
+    "origin": "ON",
+    "local": ""
+  },
+  {
+    "origin": "Enables the installation of the C example files as part of",
+    "local": ""
+  },
+  {
+    "origin": "INSTALL_TESTS",
+    "local": ""
+  },
+  {
+    "origin": "ON",
+    "local": ""
+  },
+  {
+    "origin": "Enables the installation of the tests as part of",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_TEST_DATA_PATH",
+    "local": ""
+  },
+  {
+    "origin": "../opencv_extra/testdata",
+    "local": ""
+  },
+  {
+    "origin": "Path to the",
+    "local": ""
+  },
+  {
+    "origin": "directory in the",
+    "local": ""
+  },
+  {
+    "origin": "repository",
+    "local": ""
+  },
+  {
+    "origin": "WITH_1394",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include IEEE-1394 support",
+    "local": ""
+  },
+  {
+    "origin": "WITH_CUDA",
+    "local": ""
+  },
+  {
+    "origin": "ON",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include CUDA support",
+    "local": ""
+  },
+  {
+    "origin": "WITH_FFMPEG",
+    "local": ""
+  },
+  {
+    "origin": "ON",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include FFMPEG support",
+    "local": ""
+  },
+  {
+    "origin": "WITH_GSTREAMER",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include GStreamer 1.0 support",
+    "local": ""
+  },
+  {
+    "origin": "WITH_GSTREAMER_0_10",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include GStreamer 0.10 support",
+    "local": ""
+  },
+  {
+    "origin": "WITH_GTK",
+    "local": ""
+  },
+  {
+    "origin": "ON",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include GTK 2.0 support",
+    "local": ""
+  },
+  {
+    "origin": "Only given on Linux platforms, not Microsoft Windows",
+    "local": ""
+  },
+  {
+    "origin": "WITH_OPENCL",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include OpenCL runtime support",
+    "local": ""
+  },
+  {
+    "origin": "WITH_OPENEXR",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include ILM support via OpenEXR",
+    "local": ""
+  },
+  {
+    "origin": "WITH_OPENMP",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include OpenMP runtime support",
+    "local": ""
+  },
+  {
+    "origin": "WITH_TBB",
+    "local": ""
+  },
+  {
+    "origin": "ON",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include Intel TBB support",
+    "local": ""
+  },
+  {
+    "origin": "WITH_VTK",
+    "local": ""
+  },
+  {
+    "origin": "OFF",
+    "local": ""
+  },
+  {
+    "origin": "Specifies whether to include VTK support",
+    "local": ""
+  },
+  {
+    "origin": "Copyright &copy; 2016, NVIDIA CORPORATION. All rights reserved.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

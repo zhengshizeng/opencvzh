@@ -1,0 +1,162 @@
+[
+  {
+    "origin": "OpenCV: Information Flow Alpha Matting",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Information Flow Alpha Matting",
+    "local": ""
+  },
+  {
+    "origin": "Student:",
+    "local": ""
+  },
+  {
+    "origin": "Muskaan Kularia",
+    "local": ""
+  },
+  {
+    "origin": "Mentor:",
+    "local": ""
+  },
+  {
+    "origin": "Sunita Nayak",
+    "local": ""
+  },
+  {
+    "origin": "Alphamatting is the problem of extracting the foreground with soft boundaries from a background image. The extracted foreground can be used for further operations like changing the background in an image.",
+    "local": ""
+  },
+  {
+    "origin": "Given an input image and its corresponding trimap, we try to extract the foreground from the background. Following is an example:",
+    "local": ""
+  },
+  {
+    "origin": "Input Image:",
+    "local": ""
+  },
+  {
+    "origin": "Input image should be preferably a RGB image.",
+    "local": ""
+  },
+  {
+    "origin": "Input Trimap:",
+    "local": ""
+  },
+  {
+    "origin": "The trimap image is a greyscale image that contains information about the foreground(white pixels), background(black pixels) and unknown(grey) pixels.",
+    "local": ""
+  },
+  {
+    "origin": "Output alpha Matte:",
+    "local": ""
+  },
+  {
+    "origin": "The computed alpha matte is saved as a greyscale image where the pixel values indicate the opacity of the extracted foreground object. These opacity values can be used to blend the foreground object into a diffferent backgound, as shown below:",
+    "local": ""
+  },
+  {
+    "origin": "Following are some more results.",
+    "local": ""
+  },
+  {
+    "origin": "The first column is input RGB image, the second column is input trimap, third column is the extracted alpha matte and the last two columns show the foreground object blended on new backgrounds.",
+    "local": ""
+  },
+  {
+    "origin": "This project is implementation of",
+    "local": ""
+  },
+  {
+    "origin": ". It also required implementation of parts of other papers [2,3,4].",
+    "local": ""
+  },
+  {
+    "origin": "Building",
+    "local": ""
+  },
+  {
+    "origin": "This module uses the Eigen package.",
+    "local": ""
+  },
+  {
+    "origin": "Build the sample code of the alphamat module using the following two cmake commands run inside the build folder:",
+    "local": ""
+  },
+  {
+    "origin": "Please refer to OpenCV building tutorials for further details, if needed.",
+    "local": ""
+  },
+  {
+    "origin": "Testing",
+    "local": ""
+  },
+  {
+    "origin": "The built target can be tested as follows:",
+    "local": ""
+  },
+  {
+    "origin": "Source Code of the sample",
+    "local": ""
+  },
+  {
+    "origin": "References",
+    "local": ""
+  },
+  {
+    "origin": "[1] Yagiz Aksoy, Tunc Ozan Aydin, Marc Pollefeys,",
+    "local": ""
+  },
+  {
+    "origin": "Designing Effective Inter-Pixel Information Flow for Natural Image Matting",
+    "local": ""
+  },
+  {
+    "origin": "[2] Roweis, Sam T., and Lawrence K. Saul.",
+    "local": ""
+  },
+  {
+    "origin": "Nonlinear dimensionality reduction by locally linear embedding",
+    "local": ""
+  },
+  {
+    "origin": ", Science 290.5500 (2000): 2323-2326.",
+    "local": ""
+  },
+  {
+    "origin": "[3] Anat Levin, Dani Lischinski, Yair Weiss,",
+    "local": ""
+  },
+  {
+    "origin": "A Closed Form Solution to Natural Image Matting",
+    "local": ""
+  },
+  {
+    "origin": "[4] Qifeng Chen, Dingzeyu Li, Chi-Keung Tang,",
+    "local": ""
+  },
+  {
+    "origin": "KNN Matting",
+    "local": ""
+  },
+  {
+    "origin": "[5] Yagiz Aksoy,",
+    "local": ""
+  },
+  {
+    "origin": "Affinity Based Matting Toolbox",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

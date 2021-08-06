@@ -1,0 +1,1726 @@
+[
+  {
+    "origin": "OpenCV: cv::Affine3&lt; T &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::Affine3&lt; T &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Affine transform.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": ", 3, 3 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": ", 4, 4 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": ", 3 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Default constructor. It represents a 4x4 identity matrix.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;affine)",
+    "local": ""
+  },
+  {
+    "origin": "Augmented affine matrix.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;R, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;t=",
+    "local": ""
+  },
+  {
+    "origin": "(0))",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": ", const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;t=",
+    "local": ""
+  },
+  {
+    "origin": "(0))",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;data, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;t=",
+    "local": ""
+  },
+  {
+    "origin": "(0))",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*vals)",
+    "local": ""
+  },
+  {
+    "origin": "From 16-element array.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Y &gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;affine) const",
+    "local": ""
+  },
+  {
+    "origin": "a.concatenate(affine) is equivalent to affine * a;",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int method=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;L)",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Y &gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;R) const",
+    "local": ""
+  },
+  {
+    "origin": "a.rotate(R) is equivalent to Affine(R, 0) * a;",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "a.rotate(rvec) is equivalent to Affine(rvec, 0) * a;",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;R)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;data)",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;t) const",
+    "local": ""
+  },
+  {
+    "origin": "a.translate(t) is equivalent to Affine(E, t) * a, where E is an identity matrix",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;t)",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Create an 4x4 identity transform.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "class cv::Affine3&lt; T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "Affine transform.",
+    "local": ""
+  },
+  {
+    "origin": "It represents a 4x4 homogeneous transformation matrix \\(T\\)",
+    "local": ""
+  },
+  {
+    "origin": "\\[T = \\begin{bmatrix} R &amp; t\\\\ 0 &amp; 1\\\\ \\end{bmatrix} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(R\\) is a 3x3 rotation matrix and \\(t\\) is a 3x1 translation vector.",
+    "local": ""
+  },
+  {
+    "origin": "You can specify \\(R\\) either by a 3x3 rotation matrix or by a 3x1 rotation vector, which is converted to a 3x3 rotation matrix by the Rodrigues formula.",
+    "local": ""
+  },
+  {
+    "origin": "To construct a matrix \\(T\\) representing first rotation around the axis \\(r\\) with rotation angle \\(|r|\\) in radian (right hand rule) and then translation by the vector \\(t\\), you can use",
+    "local": ""
+  },
+  {
+    "origin": "If you already have the rotation matrix \\(R\\), then you can use",
+    "local": ""
+  },
+  {
+    "origin": "To extract the rotation matrix \\(R\\) from \\(T\\), use",
+    "local": ""
+  },
+  {
+    "origin": "To extract the translation vector \\(t\\) from \\(T\\), use",
+    "local": ""
+  },
+  {
+    "origin": "To extract the rotation vector \\(r\\) from \\(T\\), use",
+    "local": ""
+  },
+  {
+    "origin": "Note that since the mapping from rotation vectors to rotation matrices is many to one. The returned rotation vector is not necessarily the one you used before to set the matrix.",
+    "local": ""
+  },
+  {
+    "origin": "If you have two transformations \\(T = T_1 * T_2\\), use",
+    "local": ""
+  },
+  {
+    "origin": "To get the inverse transform of \\(T\\), use",
+    "local": ""
+  },
+  {
+    "origin": "Member Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "float_type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef T",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Mat3",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": ", 3, 3&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Mat4",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": ", 4, 4&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Vec3",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": ", 3&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Affine3()",
+    "local": ""
+  },
+  {
+    "origin": "[1/6]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Default constructor. It represents a 4x4 identity matrix.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Affine3()",
+    "local": ""
+  },
+  {
+    "origin": "[2/6]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "affine",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Augmented affine matrix.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Affine3()",
+    "local": ""
+  },
+  {
+    "origin": "[3/6]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "The resulting 4x4 matrix is",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{bmatrix} R &amp; t\\\\ 0 &amp; 1\\\\ \\end{bmatrix} \\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "3x3 rotation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "3x1 translation vector.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Affine3()",
+    "local": ""
+  },
+  {
+    "origin": "[4/6]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "rvec",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Rodrigues vector.",
+    "local": ""
+  },
+  {
+    "origin": "The last row of the current matrix is set to [0,0,0,1].",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "rvec",
+    "local": ""
+  },
+  {
+    "origin": "3x1 rotation vector. Its direction indicates the rotation axis and its length indicates the rotation angle in radian (using right hand rule).",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "3x1 translation vector.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Affine3()",
+    "local": ""
+  },
+  {
+    "origin": "[5/6]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "data",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "explicit",
+    "local": ""
+  },
+  {
+    "origin": "Combines all constructors above. Supports 4x4, 3x4, 3x3, 1x3, 3x1 sizes of data matrix.",
+    "local": ""
+  },
+  {
+    "origin": "The last row of the current matrix is set to [0,0,0,1] when data is not 4x4.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "data",
+    "local": ""
+  },
+  {
+    "origin": "1-channel matrix. when it is 4x4, it is copied to the current matrix and t is not used. When it is 3x4, it is copied to the upper part 3x4 of the current matrix and t is not used. When it is 3x3, it is copied to the upper left 3x3 part of the current matrix. When it is 3x1 or 1x3, it is treated as a rotation vector and the Rodrigues formula is used to compute a 3x3 rotation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "3x1 translation vector. It is used only when data is neither 4x4 nor 3x4.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Affine3()",
+    "local": ""
+  },
+  {
+    "origin": "[6/6]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "vals",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "explicit",
+    "local": ""
+  },
+  {
+    "origin": "From 16-element array.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cast()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Y &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;Y&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::cast",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "concatenate()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::concatenate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "affine",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "a.concatenate(affine) is equivalent to affine * a;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "Identity()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::Identity",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Create an 4x4 identity transform.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "inv()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::inv",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "method",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "the inverse of the current matrix.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "linear()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::linear",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "L",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Copy the 3x3 matrix L to the upper left part of the current matrix",
+    "local": ""
+  },
+  {
+    "origin": "It sets the upper left 3x3 part of the matrix. The remaining part is unaffected.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "L",
+    "local": ""
+  },
+  {
+    "origin": "3x3 matrix.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "linear()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::linear",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "the upper left 3x3 part",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator Affine3",
+    "local": ""
+  },
+  {
+    "origin": "< Y >()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Y &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::operator",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Y &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "rotate()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::rotate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "a.rotate(R) is equivalent to Affine(R, 0) * a;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "rotate()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::rotate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "rvec",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "a.rotate(rvec) is equivalent to Affine(rvec, 0) * a;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "rotation()",
+    "local": ""
+  },
+  {
+    "origin": "[1/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::rotation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Rotation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "Copy the rotation matrix to the upper left 3x3 part of the current matrix. The remaining elements of the current matrix are not changed.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": "3x3 rotation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "rotation()",
+    "local": ""
+  },
+  {
+    "origin": "[2/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::rotation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "rvec",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Rodrigues vector.",
+    "local": ""
+  },
+  {
+    "origin": "It sets the upper left 3x3 part of the matrix. The remaining part is unaffected.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "rvec",
+    "local": ""
+  },
+  {
+    "origin": "3x1 rotation vector. The direction indicates the rotation axis and its length indicates the rotation angle in radian (using the right thumb convention).",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "rotation()",
+    "local": ""
+  },
+  {
+    "origin": "[3/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::rotation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "data",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Combines rotation methods above. Supports 3x3, 1x3, 3x1 sizes of data matrix.",
+    "local": ""
+  },
+  {
+    "origin": "It sets the upper left 3x3 part of the matrix. The remaining part is unaffected.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "data",
+    "local": ""
+  },
+  {
+    "origin": "1-channel matrix. When it is a 3x3 matrix, it sets the upper left 3x3 part of the current matrix. When it is a 1x3 or 3x1 matrix, it is used as a rotation vector. The Rodrigues formula is used to compute the rotation matrix and sets the upper left 3x3 part of the current matrix.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "rotation()",
+    "local": ""
+  },
+  {
+    "origin": "[4/4]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::rotation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "the upper left 3x3 part",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "rvec()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::rvec",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Rodrigues vector.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "a vector representing the upper left 3x3 rotation matrix of the current matrix.",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "Since the mapping between rotation vectors and rotation matrices is many to one, this function returns only one rotation vector that represents the current rotation matrix, which is not necessarily the same one set by",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "translate()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::translate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "a.translate(t) is equivalent to Affine(E, t) * a, where E is an identity matrix",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "translation()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::translation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Copy t to the first three elements of the last column of the current matrix",
+    "local": ""
+  },
+  {
+    "origin": "It sets the upper right 3x1 part of the matrix. The remaining part is unaffected.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "3x1 translation vector.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "translation()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::translation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "the upper right 3x1 part",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::matrix",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by &#160;",
+    "local": ""
+  }
+]

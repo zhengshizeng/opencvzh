@@ -1,0 +1,414 @@
+[
+  {
+    "origin": "OpenCV: High-level design overview",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "High-level design overview",
+    "local": ""
+  },
+  {
+    "origin": "Table of Contents",
+    "local": ""
+  },
+  {
+    "origin": "API layer",
+    "local": ""
+  },
+  {
+    "origin": "Graph compiler layer",
+    "local": ""
+  },
+  {
+    "origin": "Backends layer",
+    "local": ""
+  },
+  {
+    "origin": "Graph execution",
+    "local": ""
+  },
+  {
+    "origin": "G-API High-level design overview",
+    "local": ""
+  },
+  {
+    "origin": "G-API is a heterogeneous framework and provides an unified API to program image processing pipelines with a number of supported backends.",
+    "local": ""
+  },
+  {
+    "origin": "The key design idea is to keep pipeline code itself platform-neutral while specifying which kernels to use and which devices to utilize using extra parameters at graph compile (configuration) time. This requirement has led to the following architecture:",
+    "local": ""
+  },
+  {
+    "origin": "G-API framework architecture",
+    "local": ""
+  },
+  {
+    "origin": "There are three layers in this architecture:",
+    "local": ""
+  },
+  {
+    "origin": "API Layer",
+    "local": ""
+  },
+  {
+    "origin": "&ndash; this is the top layer, which implements G-API public interface, its building blocks and semantics. When user constructs a pipeline with G-API, he interacts with this layer directly, and the entities the user operates on (like",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ") are provided by this layer.",
+    "local": ""
+  },
+  {
+    "origin": "Graph Compiler Layer",
+    "local": ""
+  },
+  {
+    "origin": "&ndash; this is the intermediate layer which unrolls user computation into a graph and then applies a number of transformations to it (e.g. optimizations). This layer is built atop of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Backends Layer",
+    "local": ""
+  },
+  {
+    "origin": "&ndash; this is the lowest level layer, which lists a number of",
+    "local": ""
+  },
+  {
+    "origin": "Backends",
+    "local": ""
+  },
+  {
+    "origin": ". In contrast with the above two layers, backends are highly coupled with low-level platform details, with every backend standing for every platform. A backend operates on a processed graph (coming from the graph compiler) and executes this graph optimally for a specific platform or device.",
+    "local": ""
+  },
+  {
+    "origin": "API layer",
+    "local": ""
+  },
+  {
+    "origin": "API layer is what user interacts with when defining and using a pipeline (a Computation in G-API terms). API layer defines a set of G-API",
+    "local": ""
+  },
+  {
+    "origin": "dynamic",
+    "local": ""
+  },
+  {
+    "origin": "objects which can be used as inputs, outputs, and intermediate data objects within a graph:",
+    "local": ""
+  },
+  {
+    "origin": "(template class)",
+    "local": ""
+  },
+  {
+    "origin": "API layer specifies a list of Operations which are defined on these data objects &ndash; so called kernels. See G-API",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "namespaces for details on which operations G-API provides by default.",
+    "local": ""
+  },
+  {
+    "origin": "G-API is not limited to these operations only &ndash; users can define their own kernels easily using a special macro",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "API layer is also responsible for marshalling and storing operation parameters on pipeline creation. In addition to the aforementioned G-API dynamic objects, operations may also accept arbitrary parameters (more on this",
+    "local": ""
+  },
+  {
+    "origin": "), so API layer captures its values and stores internally upon the moment of execution.",
+    "local": ""
+  },
+  {
+    "origin": "Finally,",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "are the remaining important components of API layer. The former wraps a series of G-API expressions into an object (graph), and the latter is a product of graph",
+    "local": ""
+  },
+  {
+    "origin": "compilation",
+    "local": ""
+  },
+  {
+    "origin": "(see",
+    "local": ""
+  },
+  {
+    "origin": "for details).",
+    "local": ""
+  },
+  {
+    "origin": "Graph compiler layer",
+    "local": ""
+  },
+  {
+    "origin": "Every G-API computation is compiled before it executes. Compilation process is triggered in two ways:",
+    "local": ""
+  },
+  {
+    "origin": "implicitly",
+    "local": ""
+  },
+  {
+    "origin": ", when",
+    "local": ""
+  },
+  {
+    "origin": "is used. In this case, graph compilation is then immediately followed by execution.",
+    "local": ""
+  },
+  {
+    "origin": "explicitly",
+    "local": ""
+  },
+  {
+    "origin": ", when",
+    "local": ""
+  },
+  {
+    "origin": "is used. In this case, a",
+    "local": ""
+  },
+  {
+    "origin": "object is returned which then can be invoked as a C++ functor.",
+    "local": ""
+  },
+  {
+    "origin": "The first way is recommended for cases when input data format is not known in advance &ndash; e.g. when it comes from an arbitrary input file. The second way is recommended for deployment (production) scenarios where input data characteristics are usually predefined.",
+    "local": ""
+  },
+  {
+    "origin": "Graph compilation process is built atop of ADE Framework. Initially, a bipartite graph is generated from expressions captured by API layer. This graph contains nodes of two types:",
+    "local": ""
+  },
+  {
+    "origin": "Data",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "Operations",
+    "local": ""
+  },
+  {
+    "origin": ". Graph always starts and ends with a Data node(s), with Operations nodes in-between. Every Operation node has inputs and outputs, both are Data nodes.",
+    "local": ""
+  },
+  {
+    "origin": "After the initial graph is generated, it is actually processed by a number of graph transformations, called",
+    "local": ""
+  },
+  {
+    "origin": "passes",
+    "local": ""
+  },
+  {
+    "origin": ". ADE Framework acts as a compiler pass management engine, and passes are written specifically for G-API.",
+    "local": ""
+  },
+  {
+    "origin": "There are different passes which check graph validity, refine details on operations and data, organize nodes into clusters (\"Islands\") based on affinity or user-specified regioning[TBD], and more. Backends also are able to inject backend-specific passes into the compilation process, see more on this in the",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Result of graph compilation is a compiled object, represented by class",
+    "local": ""
+  },
+  {
+    "origin": ". A new",
+    "local": ""
+  },
+  {
+    "origin": "object is always created regardless if there was an explicit or implicit compilation request (see above). Actual graph execution happens within",
+    "local": ""
+  },
+  {
+    "origin": "and is determined by backends which participated in the graph compilation.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Backends layer",
+    "local": ""
+  },
+  {
+    "origin": "The above diagram lists two backends,",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "Fluid",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "is so-called \"reference backend\", which implements G-API operations using plain old OpenCV functions. This backend is useful for prototyping on a familiar development system.",
+    "local": ""
+  },
+  {
+    "origin": "Fluid",
+    "local": ""
+  },
+  {
+    "origin": "is a plugin for cache-efficient execution on CPU &ndash; it implements a different execution policy and operates with its own, special kernels. Fluid backend allows to achieve less memory footprint and better memory locality when running on CPU.",
+    "local": ""
+  },
+  {
+    "origin": "There may be more backends available, e.g. Halide, OpenCL, etc. &ndash; G-API provides an uniform internal API to develop backends so any enthusiast or a company are free to scale G-API on a new platform or accelerator. In terms of OpenCV infrastructure, every new backend is a new distinct OpenCV module, which extends G-API when build as a part of OpenCV.",
+    "local": ""
+  },
+  {
+    "origin": "Graph execution",
+    "local": ""
+  },
+  {
+    "origin": "The way graph executed is defined by backends selected for compilation. In fact, every backend builds its own execution script as the final stage of graph compilation process, when an executable (compiled) object is being generated. For example, in OpenCV backend, this script is just a topologically-sorted sequence of OpenCV functions to call; for Fluid backend, it is a similar thing &ndash; a topologically sorted list of",
+    "local": ""
+  },
+  {
+    "origin": "Agents",
+    "local": ""
+  },
+  {
+    "origin": "processing lines of input on every iteration.",
+    "local": ""
+  },
+  {
+    "origin": "Graph execution is triggered in two ways:",
+    "local": ""
+  },
+  {
+    "origin": "via",
+    "local": ""
+  },
+  {
+    "origin": ", with graph compiled in-place exactly for the given input data;",
+    "local": ""
+  },
+  {
+    "origin": "via",
+    "local": ""
+  },
+  {
+    "origin": ", when the graph has been precompiled.",
+    "local": ""
+  },
+  {
+    "origin": "Both methods are polimorphic and take a variadic number of arguments, with validity checks performed in runtime. If a number, shapes, and formats of passed data objects differ from expected, a run-time exception is thrown. G-API also provides",
+    "local": ""
+  },
+  {
+    "origin": "typed",
+    "local": ""
+  },
+  {
+    "origin": "wrappers to move these checks to the compile time &ndash; see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "G-API graph execution is declared stateless &ndash; it means that a compiled functor (",
+    "local": ""
+  },
+  {
+    "origin": ") acts like a pure C++ function and provides the same result for the same set of input arguments.",
+    "local": ""
+  },
+  {
+    "origin": "Both execution methods take \\(N+M\\) parameters, where \\(N\\) is a number of inputs, and \\(M\\) is a number of outputs on which a",
+    "local": ""
+  },
+  {
+    "origin": "is defined. Note that while G-API types (",
+    "local": ""
+  },
+  {
+    "origin": ", etc) are used in definition, the execution methods accept OpenCV's traditional data types (like",
+    "local": ""
+  },
+  {
+    "origin": ") which hold actual data &ndash; see table in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,714 @@
+[
+  {
+    "origin": "OpenCV: ColorMaps in OpenCV",
+    "local": "OpenCV:OpenCV中的颜色映射"
+  },
+  {
+    "origin": "OpenCV",
+    "local": "打开CV"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Enumerations",
+    "local": "枚举"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "ColorMaps in OpenCV",
+    "local": "OpenCV中的颜色映射"
+  },
+  {
+    "origin": "Enumerations",
+    "local": "枚举"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "{",
+    "local": "{"
+  },
+  {
+    "origin": "= 13,",
+    "local": "= 13,"
+  },
+  {
+    "origin": "= 14,",
+    "local": "= 14,"
+  },
+  {
+    "origin": "= 15,",
+    "local": "= 15,"
+  },
+  {
+    "origin": "= 16,",
+    "local": "= 16,"
+  },
+  {
+    "origin": "= 17,",
+    "local": "= 17,"
+  },
+  {
+    "origin": "= 18,",
+    "local": "= 18,"
+  },
+  {
+    "origin": "= 19,",
+    "local": "= 19,"
+  },
+  {
+    "origin": "= 20,",
+    "local": "= 20,"
+  },
+  {
+    "origin": "= 21",
+    "local": "= 21"
+  },
+  {
+    "origin": "}",
+    "local": "}"
+  },
+  {
+    "origin": "GNU Octave/MATLAB equivalent colormaps.",
+    "local": "GNU倍频程/MATLAB等效色映射。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src,",
+    "local": "src公司，"
+  },
+  {
+    "origin": "dst, int colormap)",
+    "local": "dst，int颜色映射）"
+  },
+  {
+    "origin": "Applies a GNU Octave/MATLAB equivalent colormap on a given image.",
+    "local": "在给定图像上应用GNU倍频程/MATLAB等效色映射。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src,",
+    "local": "src公司，"
+  },
+  {
+    "origin": "dst,",
+    "local": "夏令时，"
+  },
+  {
+    "origin": "userColor)",
+    "local": "用户颜色）"
+  },
+  {
+    "origin": "Applies a user colormap on a given image.",
+    "local": "在给定图像上应用用户颜色映射。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "The human perception isn't built for observing fine changes in grayscale images. Human eyes are more sensitive to observing changes between colors, so you often need to recolor your grayscale images to get a clue about them. OpenCV now comes with various colormaps to enhance the visualization in your computer vision application.",
+    "local": "人类的感知不是为了观察灰度图像的细微变化而建立的。人眼对观察颜色之间的变化更为敏感，所以你经常需要对灰度图像重新着色以获得有关它们的线索。OpenCV现在提供了各种颜色映射，以增强计算机视觉应用程序中的可视化效果。"
+  },
+  {
+    "origin": "In OpenCV you only need applyColorMap to apply a colormap on a given image. The following sample code reads the path to an image from command line, applies a Jet colormap on it and shows the result:",
+    "local": "在OpenCV中，您只需要applyColorMap就可以在给定的图像上应用颜色映射。以下示例代码从命令行读取图像的路径，对其应用Jet colormap并显示结果："
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "Enumeration Type Documentation",
+    "local": "枚举类型文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "ColormapTypes",
+    "local": "颜色映射类型"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "GNU Octave/MATLAB equivalent colormaps.",
+    "local": "GNU倍频程/MATLAB等效色映射。"
+  },
+  {
+    "origin": "Enumerator",
+    "local": "枚举器"
+  },
+  {
+    "origin": "COLORMAP_AUTUMN",
+    "local": "秋天的彩色地图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_AUTUMN",
+    "local": "Python:cv.COLORMAP\\u秋季"
+  },
+  {
+    "origin": "autumn",
+    "local": "秋天"
+  },
+  {
+    "origin": "COLORMAP_BONE",
+    "local": "骨颜色图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_BONE",
+    "local": "蟒蛇：cv.COLORMAP\\u BONE"
+  },
+  {
+    "origin": "bone",
+    "local": "骨"
+  },
+  {
+    "origin": "COLORMAP_JET",
+    "local": "彩色地图喷射"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_JET",
+    "local": "蟒蛇：cv.COLORMAP\\u JET"
+  },
+  {
+    "origin": "jet",
+    "local": "喷气式飞机"
+  },
+  {
+    "origin": "COLORMAP_WINTER",
+    "local": "冬季彩色地图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_WINTER",
+    "local": "Python:cv.COLORMAP\\u冬季"
+  },
+  {
+    "origin": "winter",
+    "local": "冬天"
+  },
+  {
+    "origin": "COLORMAP_RAINBOW",
+    "local": "彩虹彩色地图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_RAINBOW",
+    "local": "Python:cv.COLORMAP\\u彩虹"
+  },
+  {
+    "origin": "rainbow",
+    "local": "彩虹"
+  },
+  {
+    "origin": "COLORMAP_OCEAN",
+    "local": "海洋彩色地图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_OCEAN",
+    "local": "Python:cv.COLORMAP\\u海洋"
+  },
+  {
+    "origin": "ocean",
+    "local": "海洋"
+  },
+  {
+    "origin": "COLORMAP_SUMMER",
+    "local": "夏季彩色地图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_SUMMER",
+    "local": "Python:cv.COLORMAP\\u夏季"
+  },
+  {
+    "origin": "summer",
+    "local": "夏天"
+  },
+  {
+    "origin": "COLORMAP_SPRING",
+    "local": "COLORMAP\\u弹簧"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_SPRING",
+    "local": "Python:cv.COLORMAP\\u SPRING"
+  },
+  {
+    "origin": "spring",
+    "local": "春天"
+  },
+  {
+    "origin": "COLORMAP_COOL",
+    "local": "COLORMAP\\u酷"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_COOL",
+    "local": "Python:cv.COLORMAP\\u酷"
+  },
+  {
+    "origin": "cool",
+    "local": "凉爽的"
+  },
+  {
+    "origin": "COLORMAP_HSV",
+    "local": "彩色地图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_HSV",
+    "local": "Python:cv.COLORMAP\\u HSV"
+  },
+  {
+    "origin": "HSV",
+    "local": "高速列车"
+  },
+  {
+    "origin": "COLORMAP_PINK",
+    "local": "彩色地图\\u粉色"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_PINK",
+    "local": "Python:cv.COLORMAP\\u粉色"
+  },
+  {
+    "origin": "pink",
+    "local": "粉红色"
+  },
+  {
+    "origin": "COLORMAP_HOT",
+    "local": "彩色地图\\u热"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_HOT",
+    "local": "Python:cv.COLORMAP\\u热"
+  },
+  {
+    "origin": "hot",
+    "local": "热的"
+  },
+  {
+    "origin": "COLORMAP_PARULA",
+    "local": "彩色地图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_PARULA",
+    "local": "蟒蛇：cv.COLORMAP\\u PARULA"
+  },
+  {
+    "origin": "parula",
+    "local": "假释"
+  },
+  {
+    "origin": "COLORMAP_MAGMA",
+    "local": "岩浆颜色图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_MAGMA",
+    "local": "蟒蛇：cv.COLORMAP\\u MAGMA"
+  },
+  {
+    "origin": "magma",
+    "local": "岩浆"
+  },
+  {
+    "origin": "COLORMAP_INFERNO",
+    "local": "色彩地图地狱"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_INFERNO",
+    "local": "Python:cv.COLORMAP-u地狱"
+  },
+  {
+    "origin": "inferno",
+    "local": "地狱"
+  },
+  {
+    "origin": "COLORMAP_PLASMA",
+    "local": "彩色等离子体"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_PLASMA",
+    "local": "Python:cv.COLORMAP\\u等离子"
+  },
+  {
+    "origin": "plasma",
+    "local": "等离子体"
+  },
+  {
+    "origin": "COLORMAP_VIRIDIS",
+    "local": "绿色地图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_VIRIDIS",
+    "local": "蟒蛇：cv.COLORMAPèu VIRIDIS"
+  },
+  {
+    "origin": "viridis",
+    "local": "绿色"
+  },
+  {
+    "origin": "COLORMAP_CIVIDIS",
+    "local": "彩色地图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_CIVIDIS",
+    "local": "蟒蛇：cv.COLORMAP\\u CIVIDIS"
+  },
+  {
+    "origin": "cividis",
+    "local": "删除"
+  },
+  {
+    "origin": "COLORMAP_TWILIGHT",
+    "local": "暮色色彩图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_TWILIGHT",
+    "local": "Python:cv.COLORMAP\\u暮色"
+  },
+  {
+    "origin": "twilight",
+    "local": "暮光"
+  },
+  {
+    "origin": "COLORMAP_TWILIGHT_SHIFTED",
+    "local": "色彩贴图｜暮色｜"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_TWILIGHT_SHIFTED",
+    "local": "Python:cv.COLORMAP\\u TWILIGHT\\u"
+  },
+  {
+    "origin": "twilight shifted",
+    "local": "暮色移了"
+  },
+  {
+    "origin": "COLORMAP_TURBO",
+    "local": "彩色地图\\u TURBO"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_TURBO",
+    "local": "Python:cv.COLORMAP\\u TURBO"
+  },
+  {
+    "origin": "turbo",
+    "local": "涡轮"
+  },
+  {
+    "origin": "COLORMAP_DEEPGREEN",
+    "local": "深绿色彩色地图"
+  },
+  {
+    "origin": "Python: cv.COLORMAP_DEEPGREEN",
+    "local": "Python:cv.COLORMAP\\u深绿色"
+  },
+  {
+    "origin": "deepgreen",
+    "local": "深绿色"
+  },
+  {
+    "origin": "Function Documentation",
+    "local": "功能文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "applyColorMap()",
+    "local": "applyColorMap（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "void cv::applyColorMap",
+    "local": "void cv:：applyColorMap"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "colormap",
+    "local": "颜色表"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.applyColorMap(",
+    "local": "简历applyColorMap"
+  },
+  {
+    "origin": "src, colormap[, dst]",
+    "local": "src，颜色映射[，dst]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.applyColorMap(",
+    "local": "简历applyColorMap"
+  },
+  {
+    "origin": "src, userColor[, dst]",
+    "local": "src，用户颜色[，dst]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Applies a GNU Octave/MATLAB equivalent colormap on a given image.",
+    "local": "在给定图像上应用GNU倍频程/MATLAB等效色映射。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "The source image, grayscale or colored of type CV_8UC1 or CV_8UC3.",
+    "local": "源图像，灰度或彩色，类型为CVƅ8UC1或CVƅ8UC3。"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "The result is the colormapped source image. Note:",
+    "local": "结果是彩色映射的源图像。注："
+  },
+  {
+    "origin": "is called on dst.",
+    "local": "在dst上调用。"
+  },
+  {
+    "origin": "colormap",
+    "local": "颜色表"
+  },
+  {
+    "origin": "The colormap to apply, see",
+    "local": "要应用的颜色映射，请参见"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "applyColorMap()",
+    "local": "applyColorMap（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "void cv::applyColorMap",
+    "local": "void cv:：applyColorMap"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "userColor",
+    "local": "用户颜色"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.applyColorMap(",
+    "local": "简历applyColorMap"
+  },
+  {
+    "origin": "src, colormap[, dst]",
+    "local": "src，颜色映射[，dst]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.applyColorMap(",
+    "local": "简历applyColorMap"
+  },
+  {
+    "origin": "src, userColor[, dst]",
+    "local": "src，用户颜色[，dst]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Applies a user colormap on a given image.",
+    "local": "在给定图像上应用用户颜色映射。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "The source image, grayscale or colored of type CV_8UC1 or CV_8UC3.",
+    "local": "源图像，灰度或彩色，类型为CVƅ8UC1或CVƅ8UC3。"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "The result is the colormapped source image. Note:",
+    "local": "结果是彩色映射的源图像。注："
+  },
+  {
+    "origin": "is called on dst.",
+    "local": "在dst上调用。"
+  },
+  {
+    "origin": "userColor",
+    "local": "用户颜色"
+  },
+  {
+    "origin": "The colormap to apply of type CV_8UC1 or CV_8UC3 and size 256",
+    "local": "要应用的颜色映射类型为CV8uc1或CV8uc3，大小为256"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by",
+    "local": "于2021年4月2日星期五11:36:40为OpenCV生成"
+  }
+]

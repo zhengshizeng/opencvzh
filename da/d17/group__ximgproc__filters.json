@@ -1,0 +1,5526 @@
+[
+  {
+    "origin": "OpenCV: Filters",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Filters",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Interface for Adaptive Manifold Filter realizations.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Main interface for all disparity map filters.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Disparity map filter based on Weighted Least Squares filter (in form of Fast Global Smoother that is a lot faster than traditional Weighted Least Squares filter implementations) and optional use of left-right-consistency-based confidence to refine the results in half-occlusions and uniform areas.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Interface for realizations of Domain Transform filter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Sparse match interpolation algorithm based on modified locally-weighted affine estimator from",
+    "local": ""
+  },
+  {
+    "origin": "and Fast Global Smoother as post-processing filter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Interface for implementations of Fast Bilateral Solver.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Interface for implementations of Fast Global Smoother filter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Interface for realizations of Guided Filter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Sparse match interpolation algorithm based on modified piecewise locally-weighted affine estimator called Robust Interpolation method of Correspondences or RIC from",
+    "local": ""
+  },
+  {
+    "origin": "and Variational and Fast Global Smoother as post-processing filter. The",
+    "local": ""
+  },
+  {
+    "origin": "is a extension of the",
+    "local": ""
+  },
+  {
+    "origin": ". Main concept of this extension is an piece-wise affine model based on over-segmentation via SLIC superpixel estimation. The method contains an efficient propagation mechanism to estimate among the pieces-wise models.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Applies Ridge Detection Filter to an input image. Implements Ridge detection similar to the one in",
+    "local": ""
+  },
+  {
+    "origin": "Mathematica",
+    "local": ""
+  },
+  {
+    "origin": "using the eigen values from the Hessian Matrix of the input image using Sobel Derivatives. Additional refinement can be done using Skeletonization and Binarization. Adapted from",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Main interface for all filters, that take sparse matches as an input and produce a dense per-pixel matching (optical flow) as an output.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "joint,",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, double sigma_s, double sigma_r, bool adjust_outliers=false)",
+    "local": ""
+  },
+  {
+    "origin": "Simple one-line Adaptive Manifold Filter call.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, int fr=3, int numIter=1, double sigmaAlpha=-1., double sigmaAvg=-1.)",
+    "local": ""
+  },
+  {
+    "origin": "Applies the bilateral texture filter to an image. It performs structure-preserving texture filter. For more details about this filter see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img,",
+    "local": ""
+  },
+  {
+    "origin": "templ,",
+    "local": ""
+  },
+  {
+    "origin": "result)",
+    "local": ""
+  },
+  {
+    "origin": "Compares a color template against overlapped color image regions.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "GT,",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "ROI, int thresh=24)",
+    "local": ""
+  },
+  {
+    "origin": "Function for computing the percent of \"bad\" pixels in the disparity map (pixels where error is higher than a specified threshold)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "GT,",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "ROI)",
+    "local": ""
+  },
+  {
+    "origin": "Function for computing mean square error for disparity maps.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(double sigma_s, double sigma_r, bool adjust_outliers=false)",
+    "local": ""
+  },
+  {
+    "origin": "Factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and produce some initialization routines.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; matcher_left)",
+    "local": ""
+  },
+  {
+    "origin": "Convenience factory method that creates an instance of",
+    "local": ""
+  },
+  {
+    "origin": "and sets up all the relevant filter parameters automatically based on the matcher instance. Currently supports only",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(bool use_confidence)",
+    "local": ""
+  },
+  {
+    "origin": "More generic factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and execute basic initialization routines. When using this method you will need to set-up the ROI, matchers and other parameters by yourself.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide, double sigmaSpatial, double sigmaColor, int mode=",
+    "local": ""
+  },
+  {
+    "origin": ", int numIters=3)",
+    "local": ""
+  },
+  {
+    "origin": "Factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and produce initialization routines.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Factory method that creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide, double sigma_spatial, double sigma_luma, double sigma_chroma, double lambda=128.0, int num_iter=25, double max_tol=1e-5)",
+    "local": ""
+  },
+  {
+    "origin": "Factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and execute the initialization routines.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide, double lambda, double sigma_color, double lambda_attenuation=0.25, int num_iter=3)",
+    "local": ""
+  },
+  {
+    "origin": "Factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and execute the initialization routines.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide, int radius, double eps)",
+    "local": ""
+  },
+  {
+    "origin": "Factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and produce initialization routines.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img,",
+    "local": ""
+  },
+  {
+    "origin": "qimg)",
+    "local": ""
+  },
+  {
+    "origin": "creates a quaternion image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Factory method that creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; matcher_left)",
+    "local": ""
+  },
+  {
+    "origin": "Convenience method to set up the matcher for computing the right-view disparity map that is required in case of filtering with confidence.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide,",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, double sigmaSpatial, double sigmaColor, int mode=",
+    "local": ""
+  },
+  {
+    "origin": ", int numIters=3)",
+    "local": ""
+  },
+  {
+    "origin": "Simple one-line Domain Transform filter call. If you have multiple images to filter with the same guided image then use",
+    "local": ""
+  },
+  {
+    "origin": "interface to avoid extra computations on initialization stage.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide,",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "confidence,",
+    "local": ""
+  },
+  {
+    "origin": "dst, double sigma_spatial=8, double sigma_luma=8, double sigma_chroma=8, double lambda=128.0, int num_iter=25, double max_tol=1e-5)",
+    "local": ""
+  },
+  {
+    "origin": "Simple one-line Fast Bilateral Solver filter call. If you have multiple images to filter with the same guide then use",
+    "local": ""
+  },
+  {
+    "origin": "interface to avoid extra computations.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide,",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, double lambda, double sigma_color, double lambda_attenuation=0.25, int num_iter=3)",
+    "local": ""
+  },
+  {
+    "origin": "Simple one-line Fast Global Smoother filter call. If you have multiple images to filter with the same guide then use",
+    "local": ""
+  },
+  {
+    "origin": "interface to avoid extra computations.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, double scale=1.0)",
+    "local": ""
+  },
+  {
+    "origin": "Function for creating a disparity map visualization (clamped CV_8U image)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "op,",
+    "local": ""
+  },
+  {
+    "origin": "dst, double alpha, double omega)",
+    "local": ""
+  },
+  {
+    "origin": "Applies X Deriche filter to an image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "op,",
+    "local": ""
+  },
+  {
+    "origin": "dst, double alpha, double omega)",
+    "local": ""
+  },
+  {
+    "origin": "Applies Y Deriche filter to an image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "op,",
+    "local": ""
+  },
+  {
+    "origin": "_dst, double alpha, double omega)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "op,",
+    "local": ""
+  },
+  {
+    "origin": "_dst, double alpha, double omega)",
+    "local": ""
+  },
+  {
+    "origin": "Applies Paillou filter to an image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide,",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, int radius, double eps, int dDepth=-1)",
+    "local": ""
+  },
+  {
+    "origin": "Simple one-line Guided Filter call.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "joint,",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, int d, double sigmaColor, double sigmaSpace, int borderType=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies the joint bilateral filter to an image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, double lambda=0.02, double kappa=2.0)",
+    "local": ""
+  },
+  {
+    "origin": "Global image smoothing via L0 gradient minimization.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "qimg,",
+    "local": ""
+  },
+  {
+    "origin": "qcimg)",
+    "local": ""
+  },
+  {
+    "origin": "calculates conjugate of a quaternion image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img,",
+    "local": ""
+  },
+  {
+    "origin": "qimg, int flags, bool sideLeft)",
+    "local": ""
+  },
+  {
+    "origin": "Performs a forward or inverse Discrete quaternion Fourier transform of a 2D quaternion array.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src1,",
+    "local": ""
+  },
+  {
+    "origin": "src2,",
+    "local": ""
+  },
+  {
+    "origin": "dst)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates the per-element quaternion product of two arrays.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "qimg,",
+    "local": ""
+  },
+  {
+    "origin": "qnimg)",
+    "local": ""
+  },
+  {
+    "origin": "divides each element by its modulus.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src_path,",
+    "local": ""
+  },
+  {
+    "origin": "dst)",
+    "local": ""
+  },
+  {
+    "origin": "Function for reading ground truth disparity maps. Supports basic Middlebury and MPI-Sintel formats. Note that the resulting disparity map is scaled by 16.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, int d=-1, double sigmaColor=25, double sigmaSpace=3, int numOfIter=4, int borderType=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies the rolling guidance filter to an image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Enumeration Type Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "EdgeAwareFiltersList",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "DTF_NC",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.ximgproc.DTF_NC",
+    "local": ""
+  },
+  {
+    "origin": "DTF_IC",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.ximgproc.DTF_IC",
+    "local": ""
+  },
+  {
+    "origin": "DTF_RF",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.ximgproc.DTF_RF",
+    "local": ""
+  },
+  {
+    "origin": "GUIDED_FILTER",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.ximgproc.GUIDED_FILTER",
+    "local": ""
+  },
+  {
+    "origin": "AM_FILTER",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.ximgproc.AM_FILTER",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "amFilter()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::amFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "joint",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "adjust_outliers",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.amFilter(",
+    "local": ""
+  },
+  {
+    "origin": "joint, src, sigma_s, sigma_r[, dst[, adjust_outliers]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Simple one-line Adaptive Manifold Filter call.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "joint",
+    "local": ""
+  },
+  {
+    "origin": "joint (also called as guided) image or array of images with any numbers of channels.",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "filtering image with any numbers of channels.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output image.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": "spatial standard deviation.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": "color space standard deviation, it is similar to the sigma in the color space into bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "adjust_outliers",
+    "local": ""
+  },
+  {
+    "origin": "optional, specify perform outliers adjust operation or not, (Eq. 9) in the original paper.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Joint images with CV_8U and CV_16U depth converted to images with CV_32F depth and [0; 1] color range before processing. Hence color space sigma sigma_r must be in [0; 1] range, unlike same sigmas in bilateralFilter and dtFilter functions.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "bilateralTextureFilter()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::bilateralTextureFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "fr",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "numIter",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigmaAlpha",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigmaAvg",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.bilateralTextureFilter(",
+    "local": ""
+  },
+  {
+    "origin": "src[, dst[, fr[, numIter[, sigmaAlpha[, sigmaAvg]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies the bilateral texture filter to an image. It performs structure-preserving texture filter. For more details about this filter see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Source image whose depth is 8-bit UINT or 32-bit FLOAT",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Destination image of the same size and type as src.",
+    "local": ""
+  },
+  {
+    "origin": "fr",
+    "local": ""
+  },
+  {
+    "origin": "Radius of kernel to be used for filtering. It should be positive integer",
+    "local": ""
+  },
+  {
+    "origin": "numIter",
+    "local": ""
+  },
+  {
+    "origin": "Number of iterations of algorithm, It should be positive integer",
+    "local": ""
+  },
+  {
+    "origin": "sigmaAlpha",
+    "local": ""
+  },
+  {
+    "origin": "Controls the sharpness of the weight transition from edges to smooth/texture regions, where a bigger value means sharper transition. When the value is negative, it is automatically calculated.",
+    "local": ""
+  },
+  {
+    "origin": "sigmaAvg",
+    "local": ""
+  },
+  {
+    "origin": "blur parameter for texture blurring. Larger value makes result to be more blurred. When the value is negative, it is automatically calculated as described in the paper.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "colorMatchTemplate()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::colorMatchTemplate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "templ",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "result",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "result",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.colorMatchTemplate(",
+    "local": ""
+  },
+  {
+    "origin": "img, templ[, result]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Compares a color template against overlapped color image regions.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Image where the search is running. It must be 3 channels image",
+    "local": ""
+  },
+  {
+    "origin": "templ",
+    "local": ""
+  },
+  {
+    "origin": "Searched template. It must be not greater than the source image and have 3 channels",
+    "local": ""
+  },
+  {
+    "origin": "result",
+    "local": ""
+  },
+  {
+    "origin": "Map of comparison results. It must be single-channel 64-bit floating-point",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "computeBadPixelPercent()",
+    "local": ""
+  },
+  {
+    "origin": "double cv::ximgproc::computeBadPixelPercent",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "GT",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "ROI",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "thresh",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.computeBadPixelPercent(",
+    "local": ""
+  },
+  {
+    "origin": "GT, src, ROI[, thresh]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Function for computing the percent of \"bad\" pixels in the disparity map (pixels where error is higher than a specified threshold)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "GT",
+    "local": ""
+  },
+  {
+    "origin": "ground truth disparity map",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "disparity map to evaluate",
+    "local": ""
+  },
+  {
+    "origin": "ROI",
+    "local": ""
+  },
+  {
+    "origin": "region of interest",
+    "local": ""
+  },
+  {
+    "origin": "thresh",
+    "local": ""
+  },
+  {
+    "origin": "threshold used to determine \"bad\" pixels",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "returns mean square error between GT and src",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "computeMSE()",
+    "local": ""
+  },
+  {
+    "origin": "double cv::ximgproc::computeMSE",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "GT",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "ROI",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.computeMSE(",
+    "local": ""
+  },
+  {
+    "origin": "GT, src, ROI",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Function for computing mean square error for disparity maps.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "GT",
+    "local": ""
+  },
+  {
+    "origin": "ground truth disparity map",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "disparity map to evaluate",
+    "local": ""
+  },
+  {
+    "origin": "ROI",
+    "local": ""
+  },
+  {
+    "origin": "region of interest",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "returns mean square error between GT and src",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createAMFilter()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createAMFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "adjust_outliers",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createAMFilter(",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s, sigma_r[, adjust_outliers]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and produce some initialization routines.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "sigma_s",
+    "local": ""
+  },
+  {
+    "origin": "spatial standard deviation.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_r",
+    "local": ""
+  },
+  {
+    "origin": "color space standard deviation, it is similar to the sigma in the color space into bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "adjust_outliers",
+    "local": ""
+  },
+  {
+    "origin": "optional, specify perform outliers adjust operation or not, (Eq. 9) in the original paper.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about Adaptive Manifold Filter parameters, see the original article",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Joint images with CV_8U and CV_16U depth converted to images with CV_32F depth and [0; 1] color range before processing. Hence color space sigma sigma_r must be in [0; 1] range, unlike same sigmas in bilateralFilter and dtFilter functions.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createDisparityWLSFilter()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createDisparityWLSFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "matcher_left",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createDisparityWLSFilter(",
+    "local": ""
+  },
+  {
+    "origin": "matcher_left",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Convenience factory method that creates an instance of",
+    "local": ""
+  },
+  {
+    "origin": "and sets up all the relevant filter parameters automatically based on the matcher instance. Currently supports only",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "matcher_left",
+    "local": ""
+  },
+  {
+    "origin": "stereo matcher instance that will be used with the filter",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createDisparityWLSFilterGeneric()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createDisparityWLSFilterGeneric",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "use_confidence",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createDisparityWLSFilterGeneric(",
+    "local": ""
+  },
+  {
+    "origin": "use_confidence",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "More generic factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and execute basic initialization routines. When using this method you will need to set-up the ROI, matchers and other parameters by yourself.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "use_confidence",
+    "local": ""
+  },
+  {
+    "origin": "filtering with confidence requires two disparity maps (for the left and right views) and is approximately two times slower. However, quality is typically significantly better.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createDTFilter()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createDTFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigmaSpatial",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigmaColor",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "mode",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "numIters",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createDTFilter(",
+    "local": ""
+  },
+  {
+    "origin": "guide, sigmaSpatial, sigmaColor[, mode[, numIters]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and produce initialization routines.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": "guided image (used to build transformed distance, which describes edge structure of guided image).",
+    "local": ""
+  },
+  {
+    "origin": "sigmaSpatial",
+    "local": ""
+  },
+  {
+    "origin": "\\({\\sigma}_H\\) parameter in the original article, it's similar to the sigma in the coordinate space into bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "sigmaColor",
+    "local": ""
+  },
+  {
+    "origin": "\\({\\sigma}_r\\) parameter in the original article, it's similar to the sigma in the color space into bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "mode",
+    "local": ""
+  },
+  {
+    "origin": "one form three modes DTF_NC, DTF_RF and DTF_IC which corresponds to three modes for filtering 2D signals in the article.",
+    "local": ""
+  },
+  {
+    "origin": "numIters",
+    "local": ""
+  },
+  {
+    "origin": "optional number of iterations used for filtering, 3 is quite enough.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about Domain Transform filter parameters, see the original article",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "Domain Transform filter homepage",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createEdgeAwareInterpolator()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createEdgeAwareInterpolator",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createEdgeAwareInterpolator(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Factory method that creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createFastBilateralSolverFilter()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createFastBilateralSolverFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_spatial",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_luma",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_chroma",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "lambda",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "num_iter",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "max_tol",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createFastBilateralSolverFilter(",
+    "local": ""
+  },
+  {
+    "origin": "guide, sigma_spatial, sigma_luma, sigma_chroma[, lambda[, num_iter[, max_tol]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and execute the initialization routines.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": "image serving as guide for filtering. It should have 8-bit depth and either 1 or 3 channels.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_spatial",
+    "local": ""
+  },
+  {
+    "origin": "parameter, that is similar to spatial space sigma (bandwidth) in bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_luma",
+    "local": ""
+  },
+  {
+    "origin": "parameter, that is similar to luma space sigma (bandwidth) in bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_chroma",
+    "local": ""
+  },
+  {
+    "origin": "parameter, that is similar to chroma space sigma (bandwidth) in bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "lambda",
+    "local": ""
+  },
+  {
+    "origin": "smoothness strength parameter for solver.",
+    "local": ""
+  },
+  {
+    "origin": "num_iter",
+    "local": ""
+  },
+  {
+    "origin": "number of iterations used for solver, 25 is usually enough.",
+    "local": ""
+  },
+  {
+    "origin": "max_tol",
+    "local": ""
+  },
+  {
+    "origin": "convergence tolerance used for solver.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about the Fast Bilateral Solver parameters, see the original paper",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createFastGlobalSmootherFilter()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createFastGlobalSmootherFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "lambda",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_color",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "lambda_attenuation",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "num_iter",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createFastGlobalSmootherFilter(",
+    "local": ""
+  },
+  {
+    "origin": "guide, lambda, sigma_color[, lambda_attenuation[, num_iter]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and execute the initialization routines.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": "image serving as guide for filtering. It should have 8-bit depth and either 1 or 3 channels.",
+    "local": ""
+  },
+  {
+    "origin": "lambda",
+    "local": ""
+  },
+  {
+    "origin": "parameter defining the amount of regularization",
+    "local": ""
+  },
+  {
+    "origin": "sigma_color",
+    "local": ""
+  },
+  {
+    "origin": "parameter, that is similar to color space sigma in bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "lambda_attenuation",
+    "local": ""
+  },
+  {
+    "origin": "internal parameter, defining how much lambda decreases after each iteration. Normally, it should be 0.25. Setting it to 1.0 may lead to streaking artifacts.",
+    "local": ""
+  },
+  {
+    "origin": "num_iter",
+    "local": ""
+  },
+  {
+    "origin": "number of iterations used for filtering, 3 is usually enough.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about Fast Global Smoother parameters, see the original paper",
+    "local": ""
+  },
+  {
+    "origin": ". However, please note that there are several differences. Lambda attenuation described in the paper is implemented a bit differently so do not expect the results to be identical to those from the paper; sigma_color values from the paper should be multiplied by 255.0 to achieve the same effect. Also, in case of image filtering where source and guide image are the same, authors propose to dynamically update the guide image after each iteration. To maximize the performance this feature was not implemented here.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createGuidedFilter()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createGuidedFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "eps",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createGuidedFilter(",
+    "local": ""
+  },
+  {
+    "origin": "guide, radius, eps",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and produce initialization routines.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": "guided image (or array of images) with up to 3 channels, if it have more then 3 channels then only first 3 channels will be used.",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": "radius of Guided Filter.",
+    "local": ""
+  },
+  {
+    "origin": "eps",
+    "local": ""
+  },
+  {
+    "origin": "regularization term of Guided Filter. \\({eps}^2\\) is similar to the sigma in the color space into bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about Guided Filter parameters, see the original article",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createQuaternionImage()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::createQuaternionImage",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "qimg",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "qimg",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createQuaternionImage(",
+    "local": ""
+  },
+  {
+    "origin": "img[, qimg]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "creates a quaternion image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Source 8-bit, 32-bit or 64-bit image, with 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "qimg",
+    "local": ""
+  },
+  {
+    "origin": "result CV_64FC4 a quaternion image( 4 chanels zero channel and B,G,R).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createRICInterpolator()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createRICInterpolator",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createRICInterpolator(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Factory method that creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createRightMatcher()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createRightMatcher",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "matcher_left",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createRightMatcher(",
+    "local": ""
+  },
+  {
+    "origin": "matcher_left",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Convenience method to set up the matcher for computing the right-view disparity map that is required in case of filtering with confidence.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "matcher_left",
+    "local": ""
+  },
+  {
+    "origin": "main stereo matcher instance that will be used with the filter",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "dtFilter()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::dtFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigmaSpatial",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigmaColor",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "mode",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "numIters",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.dtFilter(",
+    "local": ""
+  },
+  {
+    "origin": "guide, src, sigmaSpatial, sigmaColor[, dst[, mode[, numIters]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Simple one-line Domain Transform filter call. If you have multiple images to filter with the same guided image then use",
+    "local": ""
+  },
+  {
+    "origin": "interface to avoid extra computations on initialization stage.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": "guided image (also called as joint image) with unsigned 8-bit or floating-point 32-bit depth and up to 4 channels.",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "filtering image with unsigned 8-bit or floating-point 32-bit depth and up to 4 channels.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "destination image",
+    "local": ""
+  },
+  {
+    "origin": "sigmaSpatial",
+    "local": ""
+  },
+  {
+    "origin": "\\({\\sigma}_H\\) parameter in the original article, it's similar to the sigma in the coordinate space into bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "sigmaColor",
+    "local": ""
+  },
+  {
+    "origin": "\\({\\sigma}_r\\) parameter in the original article, it's similar to the sigma in the color space into bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "mode",
+    "local": ""
+  },
+  {
+    "origin": "one form three modes DTF_NC, DTF_RF and DTF_IC which corresponds to three modes for filtering 2D signals in the article.",
+    "local": ""
+  },
+  {
+    "origin": "numIters",
+    "local": ""
+  },
+  {
+    "origin": "optional number of iterations used for filtering, 3 is quite enough.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "fastBilateralSolverFilter()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::fastBilateralSolverFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "confidence",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_spatial",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_luma",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_chroma",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "lambda",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "num_iter",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "max_tol",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.fastBilateralSolverFilter(",
+    "local": ""
+  },
+  {
+    "origin": "guide, src, confidence[, dst[, sigma_spatial[, sigma_luma[, sigma_chroma[, lambda[, num_iter[, max_tol]]]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Simple one-line Fast Bilateral Solver filter call. If you have multiple images to filter with the same guide then use",
+    "local": ""
+  },
+  {
+    "origin": "interface to avoid extra computations.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": "image serving as guide for filtering. It should have 8-bit depth and either 1 or 3 channels.",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "source image for filtering with unsigned 8-bit or signed 16-bit or floating-point 32-bit depth and up to 4 channels.",
+    "local": ""
+  },
+  {
+    "origin": "confidence",
+    "local": ""
+  },
+  {
+    "origin": "confidence image with unsigned 8-bit or floating-point 32-bit confidence and 1 channel.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "destination image.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_spatial",
+    "local": ""
+  },
+  {
+    "origin": "parameter, that is similar to spatial space sigma (bandwidth) in bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_luma",
+    "local": ""
+  },
+  {
+    "origin": "parameter, that is similar to luma space sigma (bandwidth) in bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "sigma_chroma",
+    "local": ""
+  },
+  {
+    "origin": "parameter, that is similar to chroma space sigma (bandwidth) in bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "lambda",
+    "local": ""
+  },
+  {
+    "origin": "smoothness strength parameter for solver.",
+    "local": ""
+  },
+  {
+    "origin": "num_iter",
+    "local": ""
+  },
+  {
+    "origin": "number of iterations used for solver, 25 is usually enough.",
+    "local": ""
+  },
+  {
+    "origin": "max_tol",
+    "local": ""
+  },
+  {
+    "origin": "convergence tolerance used for solver.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about the Fast Bilateral Solver parameters, see the original paper",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Confidence images with CV_8U depth are expected to in [0, 255] and CV_32F in [0, 1] range.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "fastGlobalSmootherFilter()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::fastGlobalSmootherFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "lambda",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigma_color",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "lambda_attenuation",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "num_iter",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.fastGlobalSmootherFilter(",
+    "local": ""
+  },
+  {
+    "origin": "guide, src, lambda, sigma_color[, dst[, lambda_attenuation[, num_iter]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Simple one-line Fast Global Smoother filter call. If you have multiple images to filter with the same guide then use",
+    "local": ""
+  },
+  {
+    "origin": "interface to avoid extra computations.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": "image serving as guide for filtering. It should have 8-bit depth and either 1 or 3 channels.",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "source image for filtering with unsigned 8-bit or signed 16-bit or floating-point 32-bit depth and up to 4 channels.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "destination image.",
+    "local": ""
+  },
+  {
+    "origin": "lambda",
+    "local": ""
+  },
+  {
+    "origin": "parameter defining the amount of regularization",
+    "local": ""
+  },
+  {
+    "origin": "sigma_color",
+    "local": ""
+  },
+  {
+    "origin": "parameter, that is similar to color space sigma in bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "lambda_attenuation",
+    "local": ""
+  },
+  {
+    "origin": "internal parameter, defining how much lambda decreases after each iteration. Normally, it should be 0.25. Setting it to 1.0 may lead to streaking artifacts.",
+    "local": ""
+  },
+  {
+    "origin": "num_iter",
+    "local": ""
+  },
+  {
+    "origin": "number of iterations used for filtering, 3 is usually enough.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getDisparityVis()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::getDisparityVis",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.getDisparityVis(",
+    "local": ""
+  },
+  {
+    "origin": "src[, dst[, scale]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Function for creating a disparity map visualization (clamped CV_8U image)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input disparity map (CV_16S depth)",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output visualization",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "disparity map will be multiplied by this value for visualization",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GradientDericheX()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::GradientDericheX",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "op",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "omega",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.GradientDericheX(",
+    "local": ""
+  },
+  {
+    "origin": "op, alpha, omega[, dst]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies X Deriche filter to an image.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about this implementation, please see",
+    "local": ""
+  },
+  {
+    "origin": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.5736&amp;rep=rep1&amp;type=pdf",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "op",
+    "local": ""
+  },
+  {
+    "origin": "Source 8-bit or 16bit image, 1-channel or 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "result CV_32FC image with same number of channel than _op.",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "double see paper",
+    "local": ""
+  },
+  {
+    "origin": "omega",
+    "local": ""
+  },
+  {
+    "origin": "double see paper",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GradientDericheY()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::GradientDericheY",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "op",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "omega",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.GradientDericheY(",
+    "local": ""
+  },
+  {
+    "origin": "op, alpha, omega[, dst]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies Y Deriche filter to an image.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about this implementation, please see",
+    "local": ""
+  },
+  {
+    "origin": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.5736&amp;rep=rep1&amp;type=pdf",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "op",
+    "local": ""
+  },
+  {
+    "origin": "Source 8-bit or 16bit image, 1-channel or 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "result CV_32FC image with same number of channel than _op.",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "double see paper",
+    "local": ""
+  },
+  {
+    "origin": "omega",
+    "local": ""
+  },
+  {
+    "origin": "double see paper",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GradientPaillouX()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::GradientPaillouX",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "op",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "omega",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "GradientPaillouY()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::GradientPaillouY",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "op",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "omega",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies Paillou filter to an image.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about this implementation, please see",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "op",
+    "local": ""
+  },
+  {
+    "origin": "Source",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ", 1-channel or 3-channels image.",
+    "local": ""
+  },
+  {
+    "origin": "_dst",
+    "local": ""
+  },
+  {
+    "origin": "result CV_32F image with same number of channel than op.",
+    "local": ""
+  },
+  {
+    "origin": "omega",
+    "local": ""
+  },
+  {
+    "origin": "double see paper",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "double see paper",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "guidedFilter()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::guidedFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "eps",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "dDepth",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.guidedFilter(",
+    "local": ""
+  },
+  {
+    "origin": "guide, src, radius, eps[, dst[, dDepth]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Simple one-line Guided Filter call.",
+    "local": ""
+  },
+  {
+    "origin": "If you have multiple images to filter with the same guided image then use",
+    "local": ""
+  },
+  {
+    "origin": "interface to avoid extra computations on initialization stage.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "guide",
+    "local": ""
+  },
+  {
+    "origin": "guided image (or array of images) with up to 3 channels, if it have more then 3 channels then only first 3 channels will be used.",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "filtering image with any numbers of channels.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output image.",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": "radius of Guided Filter.",
+    "local": ""
+  },
+  {
+    "origin": "eps",
+    "local": ""
+  },
+  {
+    "origin": "regularization term of Guided Filter. \\({eps}^2\\) is similar to the sigma in the color space into bilateralFilter.",
+    "local": ""
+  },
+  {
+    "origin": "dDepth",
+    "local": ""
+  },
+  {
+    "origin": "optional depth of the output image.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "jointBilateralFilter()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::jointBilateralFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "joint",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigmaColor",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigmaSpace",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.jointBilateralFilter(",
+    "local": ""
+  },
+  {
+    "origin": "joint, src, d, sigmaColor, sigmaSpace[, dst[, borderType]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies the joint bilateral filter to an image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "joint",
+    "local": ""
+  },
+  {
+    "origin": "Joint 8-bit or floating-point, 1-channel or 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Source 8-bit or floating-point, 1-channel or 3-channel image with the same depth as joint image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Destination image of the same size and type as src .",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": "Diameter of each pixel neighborhood that is used during filtering. If it is non-positive, it is computed from sigmaSpace .",
+    "local": ""
+  },
+  {
+    "origin": "sigmaColor",
+    "local": ""
+  },
+  {
+    "origin": "Filter sigma in the color space. A larger value of the parameter means that farther colors within the pixel neighborhood (see sigmaSpace ) will be mixed together, resulting in larger areas of semi-equal color.",
+    "local": ""
+  },
+  {
+    "origin": "sigmaSpace",
+    "local": ""
+  },
+  {
+    "origin": "Filter sigma in the coordinate space. A larger value of the parameter means that farther pixels will influence each other as long as their colors are close enough (see sigmaColor ). When d&gt;0 , it specifies the neighborhood size regardless of sigmaSpace . Otherwise, d is proportional to sigmaSpace .",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "bilateralFilter and jointBilateralFilter use",
+    "local": ""
+  },
+  {
+    "origin": "norm to compute difference between colors.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "l0Smooth()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::l0Smooth",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "lambda",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "kappa",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.l0Smooth(",
+    "local": ""
+  },
+  {
+    "origin": "src[, dst[, lambda[, kappa]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Global image smoothing via L0 gradient minimization.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "source image for filtering with unsigned 8-bit or signed 16-bit or floating-point depth.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "destination image.",
+    "local": ""
+  },
+  {
+    "origin": "lambda",
+    "local": ""
+  },
+  {
+    "origin": "parameter defining the smooth term weight.",
+    "local": ""
+  },
+  {
+    "origin": "kappa",
+    "local": ""
+  },
+  {
+    "origin": "parameter defining the increasing factor of the weight of the gradient data term.",
+    "local": ""
+  },
+  {
+    "origin": "For more details about L0 Smoother, see the original paper",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "qconj()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::qconj",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "qimg",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "qcimg",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "qcimg",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.qconj(",
+    "local": ""
+  },
+  {
+    "origin": "qimg[, qcimg]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "calculates conjugate of a quaternion image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "qimg",
+    "local": ""
+  },
+  {
+    "origin": "quaternion image.",
+    "local": ""
+  },
+  {
+    "origin": "qcimg",
+    "local": ""
+  },
+  {
+    "origin": "conjugate of qimg",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "qdft()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::qdft",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "qimg",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "sideLeft",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "qimg",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.qdft(",
+    "local": ""
+  },
+  {
+    "origin": "img, flags, sideLeft[, qimg]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Performs a forward or inverse Discrete quaternion Fourier transform of a 2D quaternion array.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "quaternion image.",
+    "local": ""
+  },
+  {
+    "origin": "qimg",
+    "local": ""
+  },
+  {
+    "origin": "quaternion image in dual space.",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "quaternion image in dual space. only DFT_INVERSE flags is supported",
+    "local": ""
+  },
+  {
+    "origin": "sideLeft",
+    "local": ""
+  },
+  {
+    "origin": "true the hypercomplex exponential is to be multiplied on the left (false on the right ).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "qmultiply()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::qmultiply",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.qmultiply(",
+    "local": ""
+  },
+  {
+    "origin": "src1, src2[, dst]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Calculates the per-element quaternion product of two arrays.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": "quaternion image.",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": "quaternion image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "product dst(I)=src1(I) . src2(I)",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "qunitary()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::qunitary",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "qimg",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "qnimg",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "qnimg",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.qunitary(",
+    "local": ""
+  },
+  {
+    "origin": "qimg[, qnimg]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "divides each element by its modulus.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "qimg",
+    "local": ""
+  },
+  {
+    "origin": "quaternion image.",
+    "local": ""
+  },
+  {
+    "origin": "qnimg",
+    "local": ""
+  },
+  {
+    "origin": "conjugate of qimg",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "readGT()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::ximgproc::readGT",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src_path",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.readGT(",
+    "local": ""
+  },
+  {
+    "origin": "src_path[, dst]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Function for reading ground truth disparity maps. Supports basic Middlebury and MPI-Sintel formats. Note that the resulting disparity map is scaled by 16.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src_path",
+    "local": ""
+  },
+  {
+    "origin": "path to the image, containing ground-truth disparity map",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output disparity map, CV_16S depth",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "returns zero if successfully read the ground truth",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "rollingGuidanceFilter()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::rollingGuidanceFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigmaColor",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "sigmaSpace",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "numOfIter",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.rollingGuidanceFilter(",
+    "local": ""
+  },
+  {
+    "origin": "src[, dst[, d[, sigmaColor[, sigmaSpace[, numOfIter[, borderType]]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies the rolling guidance filter to an image.",
+    "local": ""
+  },
+  {
+    "origin": "For more details, please see",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Source 8-bit or floating-point, 1-channel or 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Destination image of the same size and type as src.",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": "Diameter of each pixel neighborhood that is used during filtering. If it is non-positive, it is computed from sigmaSpace .",
+    "local": ""
+  },
+  {
+    "origin": "sigmaColor",
+    "local": ""
+  },
+  {
+    "origin": "Filter sigma in the color space. A larger value of the parameter means that farther colors within the pixel neighborhood (see sigmaSpace ) will be mixed together, resulting in larger areas of semi-equal color.",
+    "local": ""
+  },
+  {
+    "origin": "sigmaSpace",
+    "local": ""
+  },
+  {
+    "origin": "Filter sigma in the coordinate space. A larger value of the parameter means that farther pixels will influence each other as long as their colors are close enough (see sigmaColor ). When d&gt;0 , it specifies the neighborhood size regardless of sigmaSpace . Otherwise, d is proportional to sigmaSpace .",
+    "local": ""
+  },
+  {
+    "origin": "numOfIter",
+    "local": ""
+  },
+  {
+    "origin": "Number of iterations of joint edge-preserving filtering applied on the source image.",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "rollingGuidanceFilter uses jointBilateralFilter as the edge-preserving filter.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by",
+    "local": ""
+  }
+]

@@ -1,0 +1,282 @@
+[
+  {
+    "origin": "OpenCV: How to run deep networks on Android device",
+    "local": "OpenCV：如何在Android设备上运行深度网络"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "How to run deep networks on Android device",
+    "local": "如何在Android设备上运行深度网络"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Dmitry Kurtaev",
+    "local": "库尔塔耶夫；"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "In this tutorial you'll know how to run deep learning networks on Android device using OpenCV deep learning module.",
+    "local": "在本教程中，您将了解如何使用OpenCV深度学习模块在Android设备上运行深度学习网络。"
+  },
+  {
+    "origin": "Tutorial was written for the following versions of corresponding software:",
+    "local": "本教程针对以下版本的相应软件编写："
+  },
+  {
+    "origin": "OpenCV 3.3.0+",
+    "local": "OpenCV 3.3.0版+"
+  },
+  {
+    "origin": "Requirements",
+    "local": "要求"
+  },
+  {
+    "origin": "Download and install Android Studio from",
+    "local": "从下载并安装Android Studio"
+  },
+  {
+    "origin": "https://developer.android.com/studio",
+    "local": "https://developer.android.com/studio"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Get the latest pre-built OpenCV for Android release from",
+    "local": "获取最新的预构建OpenCV for Android版本"
+  },
+  {
+    "origin": "https://github.com/opencv/opencv/releases",
+    "local": "https://github.com/opencv/opencv/releases"
+  },
+  {
+    "origin": "and unpack it (for example,",
+    "local": "打开包装（例如，"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Download MobileNet object detection model from",
+    "local": "从下载MobileNet目标检测模型"
+  },
+  {
+    "origin": "https://github.com/chuanqi305/MobileNet-SSD",
+    "local": "https://github.com/chuanqi305/MobileNet-SSD"
+  },
+  {
+    "origin": ". We need a configuration file",
+    "local": ". 我们需要一个配置文件"
+  },
+  {
+    "origin": "and weights",
+    "local": "和重量"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Create an empty Android Studio project",
+    "local": "创建一个空的Android Studio项目"
+  },
+  {
+    "origin": "Open Android Studio. Start a new project. Let's call it",
+    "local": "打开Android Studio。开始一个新项目。我们就叫它吧"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Keep default target settings.",
+    "local": "保留默认目标设置。"
+  },
+  {
+    "origin": "Use \"Empty Activity\" template. Name activity as",
+    "local": "使用“空活动”模板。将活动命名为"
+  },
+  {
+    "origin": "with a corresponding layout",
+    "local": "具有相应的布局"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Wait until a project was created. Go to",
+    "local": "等到创建了一个项目。去"
+  },
+  {
+    "origin": ". Choose",
+    "local": ". 选择"
+  },
+  {
+    "origin": "as target device for runs.",
+    "local": "作为运行的目标设备。"
+  },
+  {
+    "origin": "Plug in your device and run the project. It should be installed and launched successfully before we'll go next.",
+    "local": "插入设备并运行项目。在我们下一步继续之前，它应该已经安装并成功启动。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Read",
+    "local": "阅读"
+  },
+  {
+    "origin": "in case of problems.",
+    "local": "以防出现问题。"
+  },
+  {
+    "origin": "Add OpenCV dependency",
+    "local": "添加OpenCV依赖项"
+  },
+  {
+    "origin": "Go to",
+    "local": "去"
+  },
+  {
+    "origin": "and provide a path to",
+    "local": "提供一条通往"
+  },
+  {
+    "origin": ". The name of module detects automatically. Disable all features that Android Studio will suggest you on the next window.",
+    "local": ". 模块名称自动检测。禁用Android Studio将在下一个窗口中建议您使用的所有功能。"
+  },
+  {
+    "origin": "Open two files:",
+    "local": "打开两个文件："
+  },
+  {
+    "origin": "Copy both",
+    "local": "两个都复制"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "from the first file to the second one.",
+    "local": "从第一个文件到第二个文件。"
+  },
+  {
+    "origin": "-&gt;",
+    "local": "-&燃气轮机；"
+  },
+  {
+    "origin": "-&gt;",
+    "local": "-&燃气轮机；"
+  },
+  {
+    "origin": "Make the project. There is no errors should be at this point.",
+    "local": "制定项目。此时不应出现任何错误。"
+  },
+  {
+    "origin": "Go to",
+    "local": "去"
+  },
+  {
+    "origin": ". Add OpenCV module dependency.",
+    "local": ". 添加OpenCV模块依赖项。"
+  },
+  {
+    "origin": "Install once an appropriate OpenCV manager from",
+    "local": "安装一个合适的OpenCV管理器"
+  },
+  {
+    "origin": "to target device.",
+    "local": "到目标设备。"
+  },
+  {
+    "origin": "Congratulations! We're ready now to make a sample using OpenCV.",
+    "local": "祝贺 你！我们现在可以使用OpenCV制作一个样本了。"
+  },
+  {
+    "origin": "Make a sample",
+    "local": "做一个样品"
+  },
+  {
+    "origin": "Our sample will takes pictures from a camera, forwards it into a deep network and receives a set of rectangles, class identifiers and confidence values in",
+    "local": "我们的示例将从照相机中拍摄照片，将其转发到深度网络中，并接收一组矩形、类标识符和信任值"
+  },
+  {
+    "origin": "range.",
+    "local": "射程。"
+  },
+  {
+    "origin": "First of all, we need to add a necessary widget which displays processed frames. Modify",
+    "local": "首先，我们需要添加一个必要的小部件来显示处理过的帧。修改"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Put downloaded",
+    "local": "放置已下载"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "into",
+    "local": "进入之内"
+  },
+  {
+    "origin": "folder.",
+    "local": "文件夹。"
+  },
+  {
+    "origin": "Modify",
+    "local": "修改"
+  },
+  {
+    "origin": "to enable full-screen mode, set up a correct screen orientation and allow to use a camera.",
+    "local": "要启用全屏模式，请设置正确的屏幕方向并允许使用相机。"
+  },
+  {
+    "origin": "Replace content of",
+    "local": "替换的内容"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Launch an application and make a fun!",
+    "local": "启动一个应用程序，创造一个乐趣！"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

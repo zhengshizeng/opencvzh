@@ -1,0 +1,190 @@
+[
+  {
+    "origin": "OpenCV: opencv2/stitching/detail/motion_estimators.hpp File Reference",
+    "local": "OpenCV:opencv2/stitching/detail/motion\\u estimators.hpp文件参考"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "Enumerations",
+    "local": "枚举"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "motion_estimators.hpp File Reference",
+    "local": "motion\\u estimators.hpp文件参考"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Affine transformation based estimator.",
+    "local": "基于仿射变换的估计器。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Bundle adjuster that expects affine transformation represented in homogeneous coordinates in R for each camera param. Implements camera parameters refinement algorithm which minimizes sum of the reprojection error squares.",
+    "local": "对于每个摄像机参数，期望仿射变换在R的齐次坐标中表示的束调整器。实现了最小化重投影误差平方和的摄像机参数优化算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Bundle adjuster that expects affine transformation with 4 DOF represented in homogeneous coordinates in R for each camera param. Implements camera parameters refinement algorithm which minimizes sum of the reprojection error squares.",
+    "local": "束调整器，期望仿射变换与4自由度表示在齐次坐标R为每个相机参数。实现了最小化重投影误差平方和的摄像机参数优化算法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Base class for all camera parameters refinement methods.",
+    "local": "所有相机参数求精方法的基类。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Implementation of the camera parameters refinement algorithm which minimizes sum of the distances between the rays passing through the camera center and a feature. :",
+    "local": "摄像机参数优化算法的实现，该算法使通过摄像机中心的光线与特征之间的距离之和最小化："
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Implementation of the camera parameters refinement algorithm which minimizes sum of the reprojection error squares.",
+    "local": "最小化重投影误差平方和的摄像机参数优化算法的实现。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Rotation estimator base class.",
+    "local": "旋转估计器基类。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Homography based rotation estimator.",
+    "local": "基于单应的旋转估计器。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Stub bundle adjuster that does nothing.",
+    "local": "什么也不做的存根束调整器。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": "“黑盒”表示与磁盘上的文件相关联的文件存储。"
+  },
+  {
+    "origin": "Enumerations",
+    "local": "枚举"
+  },
+  {
+    "origin": "{",
+    "local": "{"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "}",
+    "local": "}"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "(const std::vector&lt; Mat &gt; &amp;rmats)",
+    "local": "（const std：：向量&lt；材料&gt&amp；格式）"
+  },
+  {
+    "origin": "Tries to detect the wave correction kind depending on whether a panorama spans horizontally or vertically.",
+    "local": "尝试根据全景是水平还是垂直跨越来检测波浪修正类型。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(int num_images, const std::vector&lt; MatchesInfo &gt; &amp;pairwise_matches, Graph &amp;span_tree, std::vector&lt; int &gt; &amp;centers)",
+    "local": "（int num\\ u images，const std:：vector&lt；匹配信息&gt&amp；成对匹配，图形和；span\\u tree，std:：vector&lt；内部&gt&amp；中心）"
+  },
+  {
+    "origin": "(std::vector&lt; ImageFeatures &gt; &amp;features, std::vector&lt; MatchesInfo &gt; &amp;pairwise_matches, float conf_threshold)",
+    "local": "（标准：：向量&lt；图像功能&gt&amp；特征，std:：vector&lt；匹配信息&gt&amp；成对匹配，浮点配置（阈值）"
+  },
+  {
+    "origin": "(std::vector&lt; String &gt; &amp;pathes, std::vector&lt; MatchesInfo &gt; &amp;pairwise_matches, float conf_threshold)",
+    "local": "（标准：：向量&lt；字符串&gt&amp；路径，std：：向量&lt；匹配信息&gt&amp；成对匹配，浮点配置（阈值）"
+  },
+  {
+    "origin": "(std::vector&lt; Mat &gt; &amp;rmats, WaveCorrectKind kind)",
+    "local": "（标准：：向量&lt；材料&gt&amp；RMAS，WaveCorrectKind公司）"
+  },
+  {
+    "origin": "Tries to make panorama more horizontal (or vertical).",
+    "local": "尝试使全景更水平（或垂直）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:33为OpenCV生成，&#160；"
+  }
+]

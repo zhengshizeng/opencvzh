@@ -1,0 +1,614 @@
+[
+  {
+    "origin": "OpenCV: Omnidirectional Camera Calibration",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Omnidirectional Camera Calibration",
+    "local": ""
+  },
+  {
+    "origin": "This module includes calibration, rectification and stereo reconstruction of omnidirectional camearas. The camera model is described in this paper:",
+    "local": ""
+  },
+  {
+    "origin": "The model is capable of modeling catadioptric cameras and fisheye cameras, which may both have very large field of view.",
+    "local": ""
+  },
+  {
+    "origin": "The implementation of the calibration part is based on Li's calibration toolbox:",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial will introduce the following parts of omnidirectional camera calibartion module:",
+    "local": ""
+  },
+  {
+    "origin": "calibrate a single camera.",
+    "local": ""
+  },
+  {
+    "origin": "calibrate a stereo pair of cameras.",
+    "local": ""
+  },
+  {
+    "origin": "rectify images so that large distoration is removed.",
+    "local": ""
+  },
+  {
+    "origin": "reconstruct 3D from two stereo images, with large filed of view.",
+    "local": ""
+  },
+  {
+    "origin": "comparison with fisheye model in opencv/calib3d/",
+    "local": ""
+  },
+  {
+    "origin": "Single Camera Calibration",
+    "local": ""
+  },
+  {
+    "origin": "The first step to calibrate camera is to get a calibration pattern and take some photos. Several kinds of patterns are supported by OpenCV, like checkerborad and circle grid. A new pattern named random pattern can also be used, you can refer to opencv_contrib/modules/ccalib for more details.",
+    "local": ""
+  },
+  {
+    "origin": "Next step is to extract corners from calibration pattern. For checkerboard, use OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "; for circle grid, use",
+    "local": ""
+  },
+  {
+    "origin": ", for random pattern, use the",
+    "local": ""
+  },
+  {
+    "origin": "class in opencv_contrib/modules/ccalib/src/randomPattern.hpp. Save the positions of corners in images in a variable like",
+    "local": ""
+  },
+  {
+    "origin": ". The type of",
+    "local": ""
+  },
+  {
+    "origin": "may be",
+    "local": ""
+  },
+  {
+    "origin": ", the first vector stores corners in each frame, the second vector stores corners in an individual frame. The type can also be",
+    "local": ""
+  },
+  {
+    "origin": "where the",
+    "local": ""
+  },
+  {
+    "origin": "is",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Also, the corresponding 3D points in world (pattern) coordinate are required. You can compute they for yourself if you know the physical size of your pattern. Save 3D points in",
+    "local": ""
+  },
+  {
+    "origin": ", similar to",
+    "local": ""
+  },
+  {
+    "origin": ", it can be",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "where",
+    "local": ""
+  },
+  {
+    "origin": "is of type",
+    "local": ""
+  },
+  {
+    "origin": ". Note the size of",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "must be the same because they are corresponding to each other.",
+    "local": ""
+  },
+  {
+    "origin": "Another thing you should input is the size of images. The file opencv_contrib/modules/ccalib/tutorial/data/omni_calib_data.xml stores an example of objectPoints, imagePoints and imageSize. Use the following code to load them:",
+    "local": ""
+  },
+  {
+    "origin": "Then define some variables to store the output parameters and run the calibration function like:",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "are internal parameters and",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "are external parameters that store the pose of patterns. All of them have depth of",
+    "local": ""
+  },
+  {
+    "origin": ". The",
+    "local": ""
+  },
+  {
+    "origin": "is a single value variable of Mei's model.",
+    "local": ""
+  },
+  {
+    "origin": "is a",
+    "local": ""
+  },
+  {
+    "origin": "Mat that stores indices of images that are really used in calibration. This is due to some images are failed in the initialization step so they are not used in the final optimization. The returned value",
+    "local": ""
+  },
+  {
+    "origin": "rms",
+    "local": ""
+  },
+  {
+    "origin": "is the root mean square of reprojection errors.",
+    "local": ""
+  },
+  {
+    "origin": "The calibration supports some features,",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "is a enumeration for some features, including:",
+    "local": ""
+  },
+  {
+    "origin": "Your can specify",
+    "local": ""
+  },
+  {
+    "origin": "to fix parameters during calibration. Use 'plus' operator to set multiple features. For example,",
+    "local": ""
+  },
+  {
+    "origin": "means fixing skew and K1.",
+    "local": ""
+  },
+  {
+    "origin": "is the stopping criteria during optimization, set it to be, for example,",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": ", 200, 0.0001), which means using 200 iterations and stopping when relative change is smaller than 0.0001.",
+    "local": ""
+  },
+  {
+    "origin": "Stereo Calibration",
+    "local": ""
+  },
+  {
+    "origin": "Stereo calibration is to calibrate two cameras together. The output parameters include camera parameters of two cameras and the relative pose of them. To recover the relative pose, two cameras must observe the same pattern at the same time, so the",
+    "local": ""
+  },
+  {
+    "origin": "of two cameras are the same.",
+    "local": ""
+  },
+  {
+    "origin": "Now detect image corners for both cameras as discussed above to get",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ". Then compute the shared",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "An example of of stereo calibration data is stored in opencv_contrib/modules/ccalib/tutorial/data/omni_stereocalib_data.xml. Load the data by",
+    "local": ""
+  },
+  {
+    "origin": "Then do stereo calibration by",
+    "local": ""
+  },
+  {
+    "origin": "Here",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "are the transform between the first and the second camera.",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "are the transforms between patterns and the first camera.",
+    "local": ""
+  },
+  {
+    "origin": "Image Rectificaiton",
+    "local": ""
+  },
+  {
+    "origin": "Omnidirectional images have very large distortion, so it is not compatible with human's eye balls. For better view, rectification can be applied if camera parameters are known. Here is an example of omnidirectional image of 360 degrees of horizontal field of view.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "After rectification, a perspective like view is generated. Here is one example to run image rectification in this module:",
+    "local": ""
+  },
+  {
+    "origin": "The variable",
+    "local": ""
+  },
+  {
+    "origin": "distorted",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "undistorted",
+    "local": ""
+  },
+  {
+    "origin": "are the origional image and rectified image perspectively.",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "xi",
+    "local": ""
+  },
+  {
+    "origin": "are camera parameters.",
+    "local": ""
+  },
+  {
+    "origin": "KNew",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "new_size",
+    "local": ""
+  },
+  {
+    "origin": "are the camera matrix and image size for rectified image.",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "is the rectification type, it can be:",
+    "local": ""
+  },
+  {
+    "origin": "RECTIFY_PERSPECTIVE: rectify to perspective images, which will lose some filed of view.",
+    "local": ""
+  },
+  {
+    "origin": "RECTIFY_CYLINDRICAL: rectify to cylindrical images that preserve all view.",
+    "local": ""
+  },
+  {
+    "origin": "RECTIFY_STEREOGRAPHIC: rectify to stereographic images that may lose a little view.",
+    "local": ""
+  },
+  {
+    "origin": "RECTIFY_LONGLATI: rectify to longitude-latitude map like a world map of the earth. This rectification can be used to stereo reconstruction but may not be friendly for view. This map is described in paper:",
+    "local": ""
+  },
+  {
+    "origin": "Li S. Binocular spherical stereo[J]. Intelligent Transportation Systems, IEEE Transactions on, 2008, 9(4): 589-600.",
+    "local": ""
+  },
+  {
+    "origin": "The following four images are four types of rectified images discribed above:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "It can be observed that perspective rectified image perserves only a little field of view and is not goodlooking. Cylindrical rectification preserves all field of view and scene is unnatural only in the middle of bottom. The distortion of stereographic in the middle of bottom is smaller than cylindrical but the distortion of other places are larger, and it can not preserve all field of view. For images with very large distortion, the longitude-latitude rectification does not give a good result, but it is available to make epipolar constraint in a line so that stereo matching can be applied in omnidirectional images.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": ": To have a better result, you should carefully choose",
+    "local": ""
+  },
+  {
+    "origin": "and it is related to your camera. In general, a smaller focal length leads to a smaller field of view and vice versa. Here are recommonded settings.",
+    "local": ""
+  },
+  {
+    "origin": "For RECTIFY_PERSPECTIVE",
+    "local": ""
+  },
+  {
+    "origin": "For RECTIFY_CYLINDRICAL, RECTIFY_STEREOGRAPHIC, RECTIFY_LONGLATI",
+    "local": ""
+  },
+  {
+    "origin": "Maybe you need to change",
+    "local": ""
+  },
+  {
+    "origin": "to get a better view.",
+    "local": ""
+  },
+  {
+    "origin": "Stereo Reconstruction",
+    "local": ""
+  },
+  {
+    "origin": "Stereo reconstruction is to reconstruct 3D points from a calibrated stereo camera pair. It is a basic problem of computer vison. However, for omnidirectional camera, it is not very popular because of the large distortion make it a little difficult. Conventional methods rectify images to perspective ones and do stereo reconstruction in perspective images. However, the last section shows that recifying to perspective images lose too much field of view, which waste the advantage of omnidirectional camera, i.e. large field of view.",
+    "local": ""
+  },
+  {
+    "origin": "The first step of stereo reconstruction is stereo rectification so that epipolar lines are horizontal lines. Here, we use longitude-latitude rectification to preserve all filed of view, or perspective rectification which is available but is not recommended. The second step is stereo matching to get a disparity map. At last, 3D points can be generated from disparity map.",
+    "local": ""
+  },
+  {
+    "origin": "The API of stereo reconstruction for omnidrectional camera is",
+    "local": ""
+  },
+  {
+    "origin": ". Here we use an example to show how it works.",
+    "local": ""
+  },
+  {
+    "origin": "First, calibrate a stereo pair of cameras as described above and get parameters like",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ". Then read two images from the first and second camera respectively, for instance,",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ", which are shown below.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Second, run",
+    "local": ""
+  },
+  {
+    "origin": "like:",
+    "local": ""
+  },
+  {
+    "origin": "Here variable",
+    "local": ""
+  },
+  {
+    "origin": "indicates the recectify type, only",
+    "local": ""
+  },
+  {
+    "origin": "(recommend) and",
+    "local": ""
+  },
+  {
+    "origin": "make sense.",
+    "local": ""
+  },
+  {
+    "origin": "is the max disparity value and",
+    "local": ""
+  },
+  {
+    "origin": "is the window size of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "is a flag to define the type of point cloud,",
+    "local": ""
+  },
+  {
+    "origin": "each point is a 6-dimensional vector, the first three elements are xyz coordinate, the last three elements are rgb color information. Another type",
+    "local": ""
+  },
+  {
+    "origin": "means each point is 3-dimensional and has only xyz coordiante.",
+    "local": ""
+  },
+  {
+    "origin": "Moreover,",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "are rectified versions of the first and second images. The epipolar lines of them have the same y-coordinate so that stereo matching becomes easy. Here are an example of them:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "It can be observed that they are well aligned. The variable",
+    "local": ""
+  },
+  {
+    "origin": "is the disparity map computed by",
+    "local": ""
+  },
+  {
+    "origin": "from",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ". The disparity map of the above two images is:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "After we have disparity, we can compute 3D location for each pixel. The point cloud is stored in",
+    "local": ""
+  },
+  {
+    "origin": ", which is a 3-channel or 6-channel",
+    "local": ""
+  },
+  {
+    "origin": ". We show the point cloud in the following image.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

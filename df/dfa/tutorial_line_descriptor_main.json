@@ -1,0 +1,182 @@
+[
+  {
+    "origin": "OpenCV: Line Features Tutorial",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Line Features Tutorial",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial it will be shown how to:",
+    "local": ""
+  },
+  {
+    "origin": "use the",
+    "local": ""
+  },
+  {
+    "origin": "BinaryDescriptor",
+    "local": ""
+  },
+  {
+    "origin": "interface to extract lines and store them in",
+    "local": ""
+  },
+  {
+    "origin": "KeyLine",
+    "local": ""
+  },
+  {
+    "origin": "objects",
+    "local": ""
+  },
+  {
+    "origin": "use the same interface to compute descriptors for every extracted line",
+    "local": ""
+  },
+  {
+    "origin": "use the",
+    "local": ""
+  },
+  {
+    "origin": "BynaryDescriptorMatcher",
+    "local": ""
+  },
+  {
+    "origin": "to determine matches among descriptors obtained from different images",
+    "local": ""
+  },
+  {
+    "origin": "Lines extraction and descriptors computation",
+    "local": ""
+  },
+  {
+    "origin": "In the following snippet of code, it is shown how to detect lines from an image. The LSD extractor is initialized with",
+    "local": ""
+  },
+  {
+    "origin": "LSD_REFINE_ADV",
+    "local": ""
+  },
+  {
+    "origin": "This is the result obtained for famous cameraman image:",
+    "local": ""
+  },
+  {
+    "origin": "alternate text",
+    "local": ""
+  },
+  {
+    "origin": "Another way to extract lines is using",
+    "local": ""
+  },
+  {
+    "origin": "LSDDetector",
+    "local": ""
+  },
+  {
+    "origin": "class; such class uses the LSD extractor to compute lines. To obtain this result, it is sufficient to use the snippet code seen above, just modifying it by the rows",
+    "local": ""
+  },
+  {
+    "origin": "Here's the result returned by LSD detector again on cameraman picture:",
+    "local": ""
+  },
+  {
+    "origin": "alternate text",
+    "local": ""
+  },
+  {
+    "origin": "Once keylines have been detected, it is possible to compute their descriptors as shown in the following:",
+    "local": ""
+  },
+  {
+    "origin": "Matching among descriptors",
+    "local": ""
+  },
+  {
+    "origin": "If we have extracted descriptors from two different images, it is possible to search for matches among them. One way of doing it is matching exactly a descriptor to each input query descriptor, choosing the one at closest distance:",
+    "local": ""
+  },
+  {
+    "origin": "Sometimes, we could be interested in searching for the closest",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "descriptors, given an input one. This requires to modify slightly previous code:",
+    "local": ""
+  },
+  {
+    "origin": "In the above example, the closest 6 descriptors are returned for every query. In some cases, we could have a search radius and look for all descriptors distant at the most",
+    "local": ""
+  },
+  {
+    "origin": "r",
+    "local": ""
+  },
+  {
+    "origin": "from input query. Previous code must me modified:",
+    "local": ""
+  },
+  {
+    "origin": "Here's an example om matching among descriptors extratced from original cameraman image and its downsampled (and blurred) version:",
+    "local": ""
+  },
+  {
+    "origin": "alternate text",
+    "local": ""
+  },
+  {
+    "origin": "Querying internal database",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "BynaryDescriptorMatcher",
+    "local": ""
+  },
+  {
+    "origin": "class, owns an internal database that can be populated with descriptors extracted from different images and queried using one of the modalities described in previous section. Population of internal dataset can be done using the",
+    "local": ""
+  },
+  {
+    "origin": "add",
+    "local": ""
+  },
+  {
+    "origin": "function; such function doesn't directly add new data to database, but it just stores it them locally. The real update happens when function",
+    "local": ""
+  },
+  {
+    "origin": "train",
+    "local": ""
+  },
+  {
+    "origin": "is invoked or when any querying function is executed, since each of them invokes",
+    "local": ""
+  },
+  {
+    "origin": "train",
+    "local": ""
+  },
+  {
+    "origin": "before querying. When queried, internal database not only returns required descriptors, but, for every returned match, it is able to tell which image matched descriptor was extracted from. An example of internal dataset usage is described in the following code; after adding locally new descriptors, a radius search is invoked. This provokes local data to be transferred to dataset, which, in turn, is then queried.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": ""
+  }
+]

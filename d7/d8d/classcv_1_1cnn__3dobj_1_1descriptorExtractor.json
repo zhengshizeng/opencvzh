@@ -1,0 +1,542 @@
+[
+  {
+    "origin": "OpenCV: cv::cnn_3dobj::descriptorExtractor Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::cnn_3dobj::descriptorExtractor Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Caffe based 3D images descriptor. A class to extract features from an image. The so obtained descriptors can be used for classification and pose estimation goals",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;device_type, int device_id=0)",
+    "local": ""
+  },
+  {
+    "origin": "Set the device for feature extraction, if the GPU is used, there should be a device_id.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "inputimg,",
+    "local": ""
+  },
+  {
+    "origin": "feature,",
+    "local": ""
+  },
+  {
+    "origin": "feature_blob)",
+    "local": ""
+  },
+  {
+    "origin": "Extract features from a single image or from a vector of images. If loadNet was not called before, this method invocation will fail.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Get device ID information for feature extraction.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Get device type information for feature extraction.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;model_file, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;trained_file, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mean_file=&quot;&quot;)",
+    "local": ""
+  },
+  {
+    "origin": "Initiate a classification structure, the net work parameter is stored in model_file, the network structure is stored in trained_file, you can decide whether to use mean images or not.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const int &amp;device_id)",
+    "local": ""
+  },
+  {
+    "origin": "Set device ID information for feature extraction. Useful to change device without the need to reload the net. Only used for GPU.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;device_type)",
+    "local": ""
+  },
+  {
+    "origin": "Set device type information for feature extraction. Useful to change device without the need to reload the net.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Caffe based 3D images descriptor. A class to extract features from an image. The so obtained descriptors can be used for classification and pose estimation goals",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptorExtractor()",
+    "local": ""
+  },
+  {
+    "origin": "cv::cnn_3dobj::descriptorExtractor::descriptorExtractor",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "device_type",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "device_id",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Set the device for feature extraction, if the GPU is used, there should be a device_id.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "device_type",
+    "local": ""
+  },
+  {
+    "origin": "CPU or GPU.",
+    "local": ""
+  },
+  {
+    "origin": "device_id",
+    "local": ""
+  },
+  {
+    "origin": "ID of GPU.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "extract()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cnn_3dobj::descriptorExtractor::extract",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "inputimg",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "feature",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "feature_blob",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Extract features from a single image or from a vector of images. If loadNet was not called before, this method invocation will fail.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "inputimg",
+    "local": ""
+  },
+  {
+    "origin": "Input images.",
+    "local": ""
+  },
+  {
+    "origin": "feature",
+    "local": ""
+  },
+  {
+    "origin": "Output features.",
+    "local": ""
+  },
+  {
+    "origin": "feature_blob",
+    "local": ""
+  },
+  {
+    "origin": "Layer which the feature is extracted from.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getDeviceId()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::cnn_3dobj::descriptorExtractor::getDeviceId",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Get device ID information for feature extraction.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getDeviceType()",
+    "local": ""
+  },
+  {
+    "origin": "cv::cnn_3dobj::descriptorExtractor::getDeviceType",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Get device type information for feature extraction.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "loadNet()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cnn_3dobj::descriptorExtractor::loadNet",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "model_file",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "trained_file",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "mean_file",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Initiate a classification structure, the net work parameter is stored in model_file, the network structure is stored in trained_file, you can decide whether to use mean images or not.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "model_file",
+    "local": ""
+  },
+  {
+    "origin": "Path of caffemodel which including all parameters in CNN.",
+    "local": ""
+  },
+  {
+    "origin": "trained_file",
+    "local": ""
+  },
+  {
+    "origin": "Path of prototxt which defining the structure of CNN.",
+    "local": ""
+  },
+  {
+    "origin": "mean_file",
+    "local": ""
+  },
+  {
+    "origin": "Path of mean file(option).",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "setDeviceId()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cnn_3dobj::descriptorExtractor::setDeviceId",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "device_id",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Set device ID information for feature extraction. Useful to change device without the need to reload the net. Only used for GPU.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "device_id",
+    "local": ""
+  },
+  {
+    "origin": "ID of GPU.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "setDeviceType()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cnn_3dobj::descriptorExtractor::setDeviceType",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "device_type",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Set device type information for feature extraction. Useful to change device without the need to reload the net.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "device_type",
+    "local": ""
+  },
+  {
+    "origin": "CPU or GPU.",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:44 for OpenCV by &#160;",
+    "local": ""
+  }
+]

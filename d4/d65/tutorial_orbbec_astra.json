@@ -1,0 +1,265 @@
+[
+  {
+    "origin": "OpenCV: Using Orbbec Astra 3D cameras",
+    "local": "OpenCV:使用Orbbec Astra 3D相机"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Using Orbbec Astra 3D cameras",
+    "local": "使用Orbbec Astra 3D相机"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "This tutorial is devoted to the Astra Series of Orbbec 3D cameras (",
+    "local": "本教程专门介绍Astra系列的Orbbec 3D相机("
+  },
+  {
+    "origin": "https://orbbec3d.com/product-astra-pro/",
+    "local": "https://orbbec3d.com/product-astra-pro/"
+  },
+  {
+    "origin": "). That cameras have a depth sensor in addition to a common color sensor. The depth sensors can be read using the open source OpenNI API with",
+    "local": "). 除了普通的颜色传感器外，照相机还有一个深度传感器。深度传感器可以使用带有"
+  },
+  {
+    "origin": "class. The video stream is provided through the regular camera interface.",
+    "local": "班级。视频流通过常规摄像机接口提供。"
+  },
+  {
+    "origin": "Installation Instructions",
+    "local": "安装说明"
+  },
+  {
+    "origin": "In order to use the Astra camera's depth sensor with OpenCV you should do the following steps:",
+    "local": "要将Astra相机的深度传感器与OpenCV配合使用，应执行以下步骤："
+  },
+  {
+    "origin": "Download the latest version of Orbbec OpenNI SDK (from here",
+    "local": "从这里下载最新版本的Orbbec OpenNI SDK"
+  },
+  {
+    "origin": "https://orbbec3d.com/develop/",
+    "local": "https://orbbec3d.com/develop/"
+  },
+  {
+    "origin": "). Unzip the archive, choose the build according to your operating system and follow installation steps provided in the Readme file. For instance, if you use 64bit GNU/Linux run:",
+    "local": "). 解压缩归档文件，根据您的操作系统选择构建，并按照自述文件中提供的安装步骤进行操作。例如，如果使用64位GNU/Linux运行："
+  },
+  {
+    "origin": "When you are done with the installation, make sure to replug your device for udev rules to take effect. The camera should now work as a general camera device. Note that your current user should belong to group",
+    "local": "完成安装后，请确保重新安装设备，以便udev规则生效。相机现在应该作为一个通用的相机设备。请注意，您当前的用户应该属于组"
+  },
+  {
+    "origin": "to have access to the camera. Also, make sure to source",
+    "local": "才能接触到摄像机。另外，确保来源"
+  },
+  {
+    "origin": "file:",
+    "local": "文件："
+  },
+  {
+    "origin": "Run the following commands to verify that OpenNI library and header files can be found. You should see something similar in your terminal:",
+    "local": "运行以下命令以验证是否可以找到OpenNI库和头文件。您应该在终端中看到类似的内容："
+  },
+  {
+    "origin": "If the above two variables are empty, then you need to source",
+    "local": "如果上述两个变量为空，则需要"
+  },
+  {
+    "origin": "again. Now you can configure OpenCV with OpenNI support enabled by setting the",
+    "local": "再一次。现在您可以通过设置"
+  },
+  {
+    "origin": "flag in CMake. You may also like to enable the",
+    "local": "CMake中的标志。您还可以启用"
+  },
+  {
+    "origin": "flag to get a code sample working with your Astra camera. Run the following commands in the directory containing OpenCV source code to enable OpenNI support:",
+    "local": "标记以获取使用Astra相机的代码示例。在包含OpenCV源代码的目录中运行以下命令以启用OpenNI支持："
+  },
+  {
+    "origin": "If the OpenNI library is found, OpenCV will be built with OpenNI2 support. You can see the status of OpenNI2 support in the CMake log:"
+  },
+  {
+    "origin": "Build OpenCV:",
+    "local": "构建OpenCV:"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "The Astra Pro camera has two sensors &ndash; a depth sensor and a color sensor. The depth sensor can be read using the OpenNI interface with",
+    "local": "Astra Pro相机有两个传感器&ndash；深度传感器和颜色传感器。深度传感器可以通过OpenNI接口读取"
+  },
+  {
+    "origin": "class. The video stream is not available through OpenNI API and is only provided via the regular camera interface. So, to get both depth and color frames, two",
+    "local": "班级。视频流不能通过openniapi获得，只能通过常规的摄像头接口提供。所以，要得到深度和颜色框架，两个"
+  },
+  {
+    "origin": "objects should be created:",
+    "local": "应创建对象："
+  },
+  {
+    "origin": "The first object will use the OpenNI2 API to retrieve depth data. The second one uses the Video4Linux2 interface to access the color sensor. Note that the example above assumes that the Astra camera is the first camera in the system. If you have more than one camera connected, you may need to explicitly set the proper camera number.",
+    "local": "第一个对象将使用openni2api来检索深度数据。第二个使用Video4Linux2接口访问颜色传感器。注意，上面的例子假设Astra相机是系统中的第一个相机。如果连接了多个摄像头，则可能需要显式设置正确的摄像头编号。"
+  },
+  {
+    "origin": "Before using the created VideoCapture objects you may want to set up stream parameters by setting objects' properties. The most important parameters are frame width, frame height and fps. For this example, we’ll configure width and height of both streams to VGA resolution, which is the maximum resolution available for both sensors, and we’d like both stream parameters to be the same for easier color-to-depth data registration:",
+    "local": "在使用创建的VideoCapture对象之前，您可能希望通过设置对象的属性来设置流参数。最重要的参数是帧宽、帧高和fps。对于本例，我们将两个流的宽度和高度配置为VGA分辨率，这是两个传感器可用的最大分辨率，我们希望两个流参数相同，以便更容易地进行颜色到深度的数据注册："
+  },
+  {
+    "origin": "For setting and retrieving some property of sensor data generators use",
+    "local": "用于设置和检索传感器数据生成器的某些属性"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "methods respectively, e.g. :",
+    "local": "方法，例如："
+  },
+  {
+    "origin": "The following properties of cameras available through OpenNI interface are supported for the depth generator:",
+    "local": "深度生成器支持通过OpenNI接口提供的摄影机的以下属性："
+  },
+  {
+    "origin": "&ndash; Frame width in pixels.",
+    "local": "&恩达什；帧宽度（像素）。"
+  },
+  {
+    "origin": "&ndash; Frame height in pixels.",
+    "local": "&恩达什；帧高（像素）。"
+  },
+  {
+    "origin": "&ndash; Frame rate in FPS.",
+    "local": "&恩达什；帧速率（FPS）。"
+  },
+  {
+    "origin": "&ndash; Flag that registers the remapping depth map to image map by changing the depth generator's viewpoint (if the flag is \"on\") or sets this view point to its normal one (if the flag is \"off\"). The registration process’ resulting images are pixel-aligned, which means that every pixel in the image is aligned to a pixel in the depth image.",
+    "local": "&恩达什；通过更改深度生成器的视点（如果标志为“开”）或将此视点设置为其正常视点（如果标志为“关”），将重映射深度贴图注册为图像贴图的标志。配准过程产生的图像是像素对齐的，这意味着图像中的每个像素都与深度图像中的一个像素对齐。"
+  },
+  {
+    "origin": "&ndash; Flag to enable or disable mirroring for this stream. Set to 0 to disable mirroring",
+    "local": "&恩达什；为该流启用或禁用镜像的标志。设置为0以禁用镜像"
+  },
+  {
+    "origin": "Next properties are available for getting only:",
+    "local": "下一个属性仅可用于获取："
+  },
+  {
+    "origin": "&ndash; A maximum supported depth of the camera in mm.",
+    "local": "&恩达什；相机的最大支撑深度（mm）。"
+  },
+  {
+    "origin": "&ndash; Baseline value in mm.",
+    "local": "&恩达什；基线值（mm）。"
+  },
+  {
+    "origin": "After the VideoCapture objects have been set up, you can start reading frames from them.",
+    "local": "设置VideoCapture对象后，可以开始从中读取帧。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "OpenCV's VideoCapture provides synchronous API, so you have to grab frames in a new thread to avoid one stream blocking while another stream is being read. VideoCapture is not a thread-safe class, so you need to be careful to avoid any possible deadlocks or data races.",
+    "local": "OpenCV的VideoCapture提供了同步API，因此您必须在新线程中获取帧，以避免在读取另一个流时阻塞一个流。VideoCapture不是线程安全类，因此需要小心避免任何可能的死锁或数据争用。"
+  },
+  {
+    "origin": "As there are two video sources that should be read simultaneously, it’s necessary to create two threads to avoid blocking. Example implementation that gets frames from each sensor in a new thread and stores them in a list along with their timestamps:",
+    "local": "由于有两个视频源应该同时读取，因此有必要创建两个线程以避免阻塞。从新线程中的每个传感器获取帧并将其与时间戳一起存储在列表中的示例实现："
+  },
+  {
+    "origin": "VideoCapture can retrieve the following data:",
+    "local": "VideoCapture可以检索以下数据："
+  },
+  {
+    "origin": "data given from the depth generator:",
+    "local": "深度生成器提供的数据："
+  },
+  {
+    "origin": "- depth values in mm (CV_16UC1)",
+    "local": "-深度值（单位：mm）（CV16uc1）"
+  },
+  {
+    "origin": "- XYZ in meters (CV_32FC3)",
+    "local": "-XYZ（单位：米）（CV32fc3）"
+  },
+  {
+    "origin": "- disparity in pixels (CV_8UC1)",
+    "local": "-像素视差（CV8uc1）"
+  },
+  {
+    "origin": "- disparity in pixels (CV_32FC1)",
+    "local": "-像素视差（CV32fc1）"
+  },
+  {
+    "origin": "- mask of valid pixels (not occluded, not shaded, etc.) (CV_8UC1)",
+    "local": "-有效像素的遮罩（未遮挡、未着色等）（CV8uc1）"
+  },
+  {
+    "origin": "data given from the color sensor is a regular BGR image (CV_8UC3).",
+    "local": "颜色传感器提供的数据是常规BGR图像（CV8uc3）。"
+  },
+  {
+    "origin": "When new data are available, each reading thread notifies the main thread using a condition variable. A frame is stored in the ordered list &ndash; the first frame in the list is the earliest captured, the last frame is the latest captured. As depth and color frames are read from independent sources two video streams may become out of sync even when both streams are set up for the same frame rate. A post-synchronization procedure can be applied to the streams to combine depth and color frames into pairs. The sample code below demonstrates this procedure:",
+    "local": "当有新数据可用时，每个读取线程使用条件变量通知主线程。帧存储在有序列表中&ndash；列表中的第一帧是最早捕获的帧，最后一帧是最新捕获的帧。当从独立的源读取深度和颜色帧时，两个视频流可能变得不同步，即使两个流设置为相同的帧速率。后同步过程可应用于流以将深度帧和颜色帧组合成成对。下面的示例代码演示了此过程："
+  },
+  {
+    "origin": "In the code snippet above the execution is blocked until there are some frames in both frame lists. When there are new frames, their timestamps are being checked &ndash; if they differ more than a half of the frame period then one of the frames is dropped. If timestamps are close enough, then two frames are paired. Now, we have two frames: one containing color information and another one &ndash; depth information. In the example above retrieved frames are simply shown with",
+    "local": "在上面的代码段中，执行被阻止，直到两个帧列表中都有一些帧。当有新帧时，将检查它们的时间戳&ndash；如果它们相差超过帧周期的一半，则其中一帧被丢弃。如果时间戳足够接近，则两个帧配对。现在，我们有两个帧：一个包含颜色信息，另一个&ndash；深度信息。在上面的示例中，检索到的帧用"
+  },
+  {
+    "origin": "function, but you can insert any other processing code here.",
+    "local": "函数，但您可以在此处插入任何其他处理代码。"
+  },
+  {
+    "origin": "In the sample images below you can see the color frame and the depth frame representing the same scene. Looking at the color frame it's hard to distinguish plant leaves from leaves painted on a wall, but the depth data makes it easy.",
+    "local": "在下面的示例图像中，可以看到表示同一场景的颜色帧和深度帧。从颜色框架上看，很难区分植物叶子和画在墙上的叶子，但是深度数据让它变得很容易。"
+  },
+  {
+    "origin": "Color frame",
+    "local": "彩色镜框"
+  },
+  {
+    "origin": "Depth frame",
+    "local": "深度框架"
+  },
+  {
+    "origin": "The complete implementation can be found in",
+    "local": "完整的实现可以在"
+  },
+  {
+    "origin": "orbbec_astra.cpp",
+    "local": "奥贝阿斯特拉.cpp"
+  },
+  {
+    "origin": "in",
+    "local": "在里面"
+  },
+  {
+    "origin": "directory.",
+    "local": "目录。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

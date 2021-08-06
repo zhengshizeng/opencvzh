@@ -1,0 +1,550 @@
+[
+  {
+    "origin": "OpenCV: cv::cuda::BufferPool Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::BufferPool Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "for use with CUDA streams.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;stream)",
+    "local": ""
+  },
+  {
+    "origin": "Gets the",
+    "local": ""
+  },
+  {
+    "origin": "for the given stream.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns the allocator associated with the stream.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int rows, int cols, int type)",
+    "local": ""
+  },
+  {
+    "origin": "Allocates a new",
+    "local": ""
+  },
+  {
+    "origin": "of given size and type.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "size, int type)",
+    "local": ""
+  },
+  {
+    "origin": "Allocates a new",
+    "local": ""
+  },
+  {
+    "origin": "of given size and type.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "for use with CUDA streams.",
+    "local": ""
+  },
+  {
+    "origin": "utilizes",
+    "local": ""
+  },
+  {
+    "origin": "'s allocator to create new buffers for",
+    "local": ""
+  },
+  {
+    "origin": "'s. It is only useful when enabled with",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "must be called",
+    "local": ""
+  },
+  {
+    "origin": "before",
+    "local": ""
+  },
+  {
+    "origin": "any",
+    "local": ""
+  },
+  {
+    "origin": "declaration.",
+    "local": ""
+  },
+  {
+    "origin": "Users may specify custom allocator for",
+    "local": ""
+  },
+  {
+    "origin": "and may implement their own stream based functions utilizing the same underlying GPU memory management.",
+    "local": ""
+  },
+  {
+    "origin": "If custom allocator is not specified,",
+    "local": ""
+  },
+  {
+    "origin": "utilizes StackAllocator by default. StackAllocator allocates a chunk of GPU device memory beforehand, and when",
+    "local": ""
+  },
+  {
+    "origin": "is declared later on, it is given the pre-allocated memory. This kind of strategy reduces the number of calls for memory allocating APIs such as cudaMalloc or cudaMallocPitch.",
+    "local": ""
+  },
+  {
+    "origin": "Below is an example that utilizes",
+    "local": ""
+  },
+  {
+    "origin": "with StackAllocator:",
+    "local": ""
+  },
+  {
+    "origin": "If we allocate another",
+    "local": ""
+  },
+  {
+    "origin": "on pool1 in the above example, it will be carried out by the DefaultAllocator since the stack for pool1 is full.",
+    "local": ""
+  },
+  {
+    "origin": "If a third stream is declared in the above example, allocating with",
+    "local": ""
+  },
+  {
+    "origin": "within that stream will also be carried out by the DefaultAllocator because we've run out of stacks.",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "When utilizing StackAllocator, deallocation order is important.",
+    "local": ""
+  },
+  {
+    "origin": "Just like a stack, deallocation must be done in LIFO order. Below is an example of erroneous usage that violates LIFO rule. If OpenCV is compiled in Debug mode, this sample code will emit CV_Assert error.",
+    "local": ""
+  },
+  {
+    "origin": "Since C++ local variables are destroyed in the reverse order of construction, the code sample below satisfies the LIFO rule. Local",
+    "local": ""
+  },
+  {
+    "origin": "'s are deallocated and the corresponding memory is automatically returned to the pool for later usage.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "BufferPool()",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::BufferPool::BufferPool",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "stream",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "explicit",
+    "local": ""
+  },
+  {
+    "origin": "Gets the",
+    "local": ""
+  },
+  {
+    "origin": "for the given stream.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getAllocator()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::cuda::BufferPool::getAllocator",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda_BufferPool.getAllocator(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Returns the allocator associated with the stream.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getBuffer()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::BufferPool::getBuffer",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "rows",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "cols",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda_BufferPool.getBuffer(",
+    "local": ""
+  },
+  {
+    "origin": "rows, cols, type",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda_BufferPool.getBuffer(",
+    "local": ""
+  },
+  {
+    "origin": "size, type",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Allocates a new",
+    "local": ""
+  },
+  {
+    "origin": "of given size and type.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getBuffer()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::BufferPool::getBuffer",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "size",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda_BufferPool.getBuffer(",
+    "local": ""
+  },
+  {
+    "origin": "rows, cols, type",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda_BufferPool.getBuffer(",
+    "local": ""
+  },
+  {
+    "origin": "size, type",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Allocates a new",
+    "local": ""
+  },
+  {
+    "origin": "of given size and type.",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:44 for OpenCV by",
+    "local": ""
+  }
+]

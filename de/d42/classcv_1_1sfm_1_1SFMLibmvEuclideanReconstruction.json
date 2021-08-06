@@ -1,0 +1,1102 @@
+[
+  {
+    "origin": "OpenCV: cv::sfm::SFMLibmvEuclideanReconstruction Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::sfm::SFMLibmvEuclideanReconstruction Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "abstract",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "class provides an interface with the Libmv Structure From Motion pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::sfm::SFMLibmvEuclideanReconstruction:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Rs,",
+    "local": ""
+  },
+  {
+    "origin": "Ts)",
+    "local": ""
+  },
+  {
+    "origin": "Returns the estimated camera extrinsic parameters.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns the computed reprojection error.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Returns the refined camera calibration matrix.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points3d)",
+    "local": ""
+  },
+  {
+    "origin": "Returns the estimated 3d points.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d)",
+    "local": ""
+  },
+  {
+    "origin": "Calls the pipeline in order to perform Eclidean reconstruction.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "Rs,",
+    "local": ""
+  },
+  {
+    "origin": "Ts,",
+    "local": ""
+  },
+  {
+    "origin": "points3d)",
+    "local": ""
+  },
+  {
+    "origin": "Calls the pipeline in order to perform Eclidean reconstruction.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;images)",
+    "local": ""
+  },
+  {
+    "origin": "Calls the pipeline in order to perform Eclidean reconstruction.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;images,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "Rs,",
+    "local": ""
+  },
+  {
+    "origin": "Ts,",
+    "local": ""
+  },
+  {
+    "origin": "points3d)",
+    "local": ""
+  },
+  {
+    "origin": "Calls the pipeline in order to perform Eclidean reconstruction.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;libmv_camera_intrinsics_options)",
+    "local": ""
+  },
+  {
+    "origin": "Setter method for camera intrinsic options.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;libmv_reconstruction_options)",
+    "local": ""
+  },
+  {
+    "origin": "Setter method for reconstruction options.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;camera_instrinsic_options=",
+    "local": ""
+  },
+  {
+    "origin": "(), const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;reconstruction_options=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": "class. Initializes Libmv.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "class provides an interface with the Libmv Structure From Motion pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "create()",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::sfm::SFMLibmvEuclideanReconstruction::create",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "camera_instrinsic_options",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "reconstruction_options",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": "class. Initializes Libmv.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getCameras()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::sfm::SFMLibmvEuclideanReconstruction::getCameras",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Rs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Ts",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Returns the estimated camera extrinsic parameters.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "Rs",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of 3x3 rotations of the camera.",
+    "local": ""
+  },
+  {
+    "origin": "Ts",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of 3x1 translations of the camera.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getError()",
+    "local": ""
+  },
+  {
+    "origin": "virtual double cv::sfm::SFMLibmvEuclideanReconstruction::getError",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Returns the computed reprojection error.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getIntrinsics()",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "cv::sfm::SFMLibmvEuclideanReconstruction::getIntrinsics",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Returns the refined camera calibration matrix.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getPoints()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::sfm::SFMLibmvEuclideanReconstruction::getPoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Returns the estimated 3d points.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": "Output array with estimated 3d points.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[1/4]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::sfm::SFMLibmvEuclideanReconstruction::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Calls the pipeline in order to perform Eclidean reconstruction.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points2d",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of vectors of 2d points (the inner vector is per image).",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Tracks must be as precise as possible. It does not handle outliers and is very sensible to them.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[2/4]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::sfm::SFMLibmvEuclideanReconstruction::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Rs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Ts",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Calls the pipeline in order to perform Eclidean reconstruction.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points2d",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of vectors of 2d points (the inner vector is per image).",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Input/Output camera matrix \\(K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\). Input parameters used as initial guess.",
+    "local": ""
+  },
+  {
+    "origin": "Rs",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of 3x3 rotations of the camera.",
+    "local": ""
+  },
+  {
+    "origin": "Ts",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of 3x1 translations of the camera.",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": "Output array with estimated 3d points.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Tracks must be as precise as possible. It does not handle outliers and is very sensible to them.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[3/4]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::sfm::SFMLibmvEuclideanReconstruction::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "images",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Calls the pipeline in order to perform Eclidean reconstruction.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "images",
+    "local": ""
+  },
+  {
+    "origin": "a vector of string with the images paths.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The images must be ordered as they were an image sequence. Additionally, each frame should be as close as posible to the previous and posterior.",
+    "local": ""
+  },
+  {
+    "origin": "For now DAISY features are used in order to compute the 2d points tracks and it only works for 3-4 images.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[4/4]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::sfm::SFMLibmvEuclideanReconstruction::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "images",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Rs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Ts",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Calls the pipeline in order to perform Eclidean reconstruction.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "images",
+    "local": ""
+  },
+  {
+    "origin": "a vector of string with the images paths.",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Input/Output camera matrix \\(K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\). Input parameters used as initial guess.",
+    "local": ""
+  },
+  {
+    "origin": "Rs",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of 3x3 rotations of the camera.",
+    "local": ""
+  },
+  {
+    "origin": "Ts",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of 3x1 translations of the camera.",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": "Output array with estimated 3d points.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The images must be ordered as they were an image sequence. Additionally, each frame should be as close as posible to the previous and posterior.",
+    "local": ""
+  },
+  {
+    "origin": "For now DAISY features are used in order to compute the 2d points tracks and it only works for 3-4 images.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "setCameraIntrinsicOptions()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::sfm::SFMLibmvEuclideanReconstruction::setCameraIntrinsicOptions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "libmv_camera_intrinsics_options",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Setter method for camera intrinsic options.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "libmv_camera_intrinsics_options",
+    "local": ""
+  },
+  {
+    "origin": "struct with camera intrinsic options such as camera model and the internal camera parameters.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "setReconstructionOptions()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::sfm::SFMLibmvEuclideanReconstruction::setReconstructionOptions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "libmv_reconstruction_options",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Setter method for reconstruction options.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "libmv_reconstruction_options",
+    "local": ""
+  },
+  {
+    "origin": "struct with reconstruction options such as initial keyframes, automatic keyframe selection, parameters to refine and the verbosity level.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/sfm/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by &#160;",
+    "local": ""
+  }
+]

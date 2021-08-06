@@ -1,0 +1,394 @@
+[
+  {
+    "origin": "OpenCV: High Level API: TextDetectionModel and TextRecognitionModel",
+    "local": "OpenCV：高级API:TextDetectionModel和TextRecognitionModel"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "High Level API: TextDetectionModel and TextRecognitionModel",
+    "local": "高级API:TextDetectionModel和TextRecognitionModel"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Wenqing Zhang",
+    "local": "张文清"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "In this tutorial, we will introduce the APIs for TextRecognitionModel and TextDetectionModel in detail.",
+    "local": "在本教程中，我们将详细介绍TextRecognitionModel和TextDetectionModel的API。"
+  },
+  {
+    "origin": "TextRecognitionModel:",
+    "local": "文本识别模型："
+  },
+  {
+    "origin": "In the current version,",
+    "local": "在当前版本中，"
+  },
+  {
+    "origin": "only supports CNN+RNN+CTC based algorithms, and the greedy decoding method for CTC is provided. For more information, please refer to the",
+    "local": "仅支持基于CNN+RNN+CTC的算法，并给出了CTC的贪婪译码方法。有关更多信息，请参阅"
+  },
+  {
+    "origin": "original paper",
+    "local": "原稿"
+  },
+  {
+    "origin": "Before recognition, you should",
+    "local": "在被认出来之前，你应该"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "\"CTC-greedy\", the output of the text recognition model should be a probability matrix. The shape should be",
+    "local": "“CTC贪心”，文本识别模型的输出应该是一个概率矩阵。形状应该是"
+  },
+  {
+    "origin": ", where",
+    "local": "，在哪里"
+  },
+  {
+    "origin": "is the sequence length",
+    "local": "是序列长度"
+  },
+  {
+    "origin": "is the batch size (only support",
+    "local": "是批量大小（仅支持"
+  },
+  {
+    "origin": "in inference)",
+    "local": "（推论中）"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "is the main function for text recognition.",
+    "local": "是文本识别的主要功能。"
+  },
+  {
+    "origin": "The input image should be a cropped text image or an image with",
+    "local": "输入的图像应该是剪切的文本图像或带有"
+  },
+  {
+    "origin": "Other decoding methods may supported in the future",
+    "local": "将来可能支持其他解码方法"
+  },
+  {
+    "origin": "TextDetectionModel:",
+    "local": "文本检测模型："
+  },
+  {
+    "origin": "API provides these methods for text detection:",
+    "local": "API为文本检测提供以下方法："
+  },
+  {
+    "origin": "returns the results in std::vector&lt;std::vector&lt;Point&gt;&gt; (4-points quadrangles)",
+    "local": "以std:：vector&lt；格式返回结果；标准：：向量&lt；点&gt&燃气轮机(四点四边形）"
+  },
+  {
+    "origin": "returns the results in std::vector&lt;cv::RotatedRect&gt; (RBOX-like)",
+    "local": "以std:：vector&lt；格式返回结果；cv：：旋转方向&gt(（RBOX类）"
+  },
+  {
+    "origin": "In the current version,",
+    "local": "在当前版本中，"
+  },
+  {
+    "origin": "supports these algorithms:",
+    "local": "支持以下算法："
+  },
+  {
+    "origin": "use",
+    "local": "使用"
+  },
+  {
+    "origin": "with \"DB\" models",
+    "local": "“DB”型号"
+  },
+  {
+    "origin": "and use",
+    "local": "使用"
+  },
+  {
+    "origin": "with \"EAST\" models",
+    "local": "与“东方”模式"
+  },
+  {
+    "origin": "The following provided pretrained models are variants of DB (w/o deformable convolution), and the performance can be referred to the Table.1 in the",
+    "local": "以下提供的预训练模型是DB（w/o可变形卷积）的变体，其性能可参考表1"
+  },
+  {
+    "origin": "paper",
+    "local": "纸张"
+  },
+  {
+    "origin": ". For more information, please refer to the",
+    "local": ". 有关更多信息，请参阅"
+  },
+  {
+    "origin": "official code",
+    "local": "官方代码"
+  },
+  {
+    "origin": "You can train your own model with more data, and convert it into ONNX format. We encourage you to add new algorithms to these APIs.",
+    "local": "您可以使用更多数据来训练自己的模型，并将其转换为ONNX格式。我们鼓励您向这些api添加新算法。"
+  },
+  {
+    "origin": "Pretrained Models",
+    "local": "预训练模型"
+  },
+  {
+    "origin": "TextRecognitionModel:",
+    "local": "文本识别模型："
+  },
+  {
+    "origin": "More models can be found in",
+    "local": "更多型号可在"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ", which are taken from",
+    "local": "，从"
+  },
+  {
+    "origin": "clovaai",
+    "local": "克洛瓦"
+  },
+  {
+    "origin": ". You can train more models by",
+    "local": ". 你可以训练更多的模特"
+  },
+  {
+    "origin": "CRNN",
+    "local": "CRNN公司"
+  },
+  {
+    "origin": ", and convert models by",
+    "local": "，并根据"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "TextDetectionModel:",
+    "local": "文本检测模型："
+  },
+  {
+    "origin": "We will release more models of DB",
+    "local": "我们将发布更多型号的数据库"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "in the future.",
+    "local": "未来。"
+  },
+  {
+    "origin": "Images for Testing",
+    "local": "测试图像"
+  },
+  {
+    "origin": "Example for Text Recognition",
+    "local": "文本识别示例"
+  },
+  {
+    "origin": "Step1. Loading images and models with a vocabulary",
+    "local": "第一步。使用词汇表加载图像和模型"
+  },
+  {
+    "origin": "Step2. Setting Parameters",
+    "local": "第二步。设置参数"
+  },
+  {
+    "origin": "Step3. Inference",
+    "local": "第三步。推论"
+  },
+  {
+    "origin": "Input image:",
+    "local": "输入图像："
+  },
+  {
+    "origin": "Picture example",
+    "local": "图片示例"
+  },
+  {
+    "origin": "Output:",
+    "local": "输出："
+  },
+  {
+    "origin": "Example for Text Detection",
+    "local": "文本检测示例"
+  },
+  {
+    "origin": "Step1. Loading images and models",
+    "local": "第一步。加载图像和模型"
+  },
+  {
+    "origin": "Step2.a Setting Parameters (DB)",
+    "local": "步骤2.a设置参数（DB）"
+  },
+  {
+    "origin": "Step2.b Setting Parameters (EAST)",
+    "local": "步骤2.b设置参数（东）"
+  },
+  {
+    "origin": "Step3. Inference",
+    "local": "第三步。推论"
+  },
+  {
+    "origin": "Output:",
+    "local": "输出："
+  },
+  {
+    "origin": "Picture example",
+    "local": "图片示例"
+  },
+  {
+    "origin": "Example for Text Spotting",
+    "local": "文本定位示例"
+  },
+  {
+    "origin": "After following the steps above, it is easy to get the detection results of an input image. Then, you can do transformation and crop text images for recognition. For more information, please refer to",
+    "local": "通过上述步骤，可以容易地得到输入图像的检测结果。然后，您可以进行转换并裁剪文本图像以进行识别。有关更多信息，请参阅"
+  },
+  {
+    "origin": "Detailed Sample",
+    "local": "详细样品"
+  },
+  {
+    "origin": "Output Examples:",
+    "local": "输出示例："
+  },
+  {
+    "origin": "Picture example",
+    "local": "图片示例"
+  },
+  {
+    "origin": "Picture example",
+    "local": "图片示例"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "The",
+    "local": "这个"
+  },
+  {
+    "origin": "source code",
+    "local": "源代码"
+  },
+  {
+    "origin": "of these APIs can be found in the DNN module.",
+    "local": "在DNN模块中可以找到其中一个api。"
+  },
+  {
+    "origin": "Detailed Sample",
+    "local": "详细样品"
+  },
+  {
+    "origin": "For more information, please refer to:",
+    "local": "有关更多信息，请参阅："
+  },
+  {
+    "origin": "samples/dnn/scene_text_recognition.cpp",
+    "local": "示例/dnn/scene\\u text\\u recognition.cpp"
+  },
+  {
+    "origin": "samples/dnn/scene_text_detection.cpp",
+    "local": "示例/dnn/scene\\u text\\u detection.cpp"
+  },
+  {
+    "origin": "samples/dnn/text_detection.cpp",
+    "local": "样本/dnn/text\\u detection.cpp"
+  },
+  {
+    "origin": "samples/dnn/scene_text_spotting.cpp",
+    "local": "示例/dnn/scene\\u text\\u spotting.cpp"
+  },
+  {
+    "origin": "Test with an image",
+    "local": "用图像测试"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": "Test on public datasets",
+    "local": "公共数据集测试"
+  },
+  {
+    "origin": "Text Recognition:",
+    "local": "文本识别："
+  },
+  {
+    "origin": "The download link for testing images can be found in the",
+    "local": "测试图像的下载链接可以在"
+  },
+  {
+    "origin": "Images for Testing",
+    "local": "测试图像"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": "Text Detection:",
+    "local": "文本检测："
+  },
+  {
+    "origin": "The download links for testing images can be found in the",
+    "local": "测试图像的下载链接可以在"
+  },
+  {
+    "origin": "Images for Testing",
+    "local": "测试图像"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

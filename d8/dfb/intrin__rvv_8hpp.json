@@ -1,0 +1,9918 @@
+[
+  {
+    "origin": "OpenCV: opencv2/core/hal/intrin_rvv.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Variables",
+    "local": ""
+  },
+  {
+    "origin": "intrin_rvv.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;1",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;1",
+    "local": ""
+  },
+  {
+    "origin": "(_Tprvec, _Tpvec, suffix)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _rTpvec, _nwTpvec, sub, rshr, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, func, intrin, width)",
+    "local": ""
+  },
+  {
+    "origin": "(bin_op, _Tpvec, intrin, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, suffix)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, suffix, shift, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpwvec, _Tp, _Tpvec, width, suffix, wcvt)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, suffix, width, vmv)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, suffix, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, op, intrin, suffix, width)",
+    "local": ""
+  },
+  {
+    "origin": "(bin_op, intrin)",
+    "local": ""
+  },
+  {
+    "origin": "(bin_op, intrin)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpv, _Tp, width, suffix)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, width, suffix1, suffix2)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, op, intrin, suffix, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, suffix, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _nTpvec, _Tp, hvl, width, suffix)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, suffix, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tpwvec, _Tpw, suffix, wmul, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _wTpvec)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, suffix, width, n)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpwvec, _Tpvec, _wTp, wcvt, suffix, width, n)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec1, _Tpvec2, _nTpvec1, _nTpvec2, suffix1, suffix2, nsuffix1, nsuffix2, width1, width2)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, _wTpvec, _wTp, width, suffix, rshr, shr)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, _wTpvec, _wTp, width, suffix, rshr, cast)",
+    "local": ""
+  },
+  {
+    "origin": "(_rTpvec, _Tpvec, _rTp, _Tp, suffix)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, func, scalartype, suffix, width, red)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, scalartype)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _wTpvec, _nwTpvec, scalartype, suffix, wsuffix, wwidth, red)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, width, suffix)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, suffix, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, suffix)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, merge, ne, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, suffix)&#160;&#160;&#160;inline v_##_Tpvec v_reinterpret_as_##suffix(const v_##_Tpvec&amp; v) { return v; }",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, suffix, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, suffix, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, suffix, width, shift)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, suffix)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, _Tp, width, suffix)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, suffix, width)",
+    "local": ""
+  },
+  {
+    "origin": "(_Tpvec, suffix, width)",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, int n)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2 &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint8x16 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int8x16 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint16x8 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int16x8 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint32x4 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int32x4 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint64x2 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int64x2 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float32x4 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float64x2 v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b, const v_int32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b, const v_int64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b, const v_uint32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b, const v_int32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b, const v_uint64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b, const v_int64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b, const v_float64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b, const v_uint32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b, const v_int32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b, const v_uint64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b, const v_int64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b, const v_float64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b, const v_int32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b, const v_int64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, v_uint16x8 &amp;b0, v_uint16x8 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, v_int16x8 &amp;b0, v_int16x8 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, v_uint32x4 &amp;b0, v_uint32x4 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, v_int32x4 &amp;b0, v_int32x4 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, v_uint64x2 &amp;b0, v_uint64x2 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, v_int64x2 &amp;b0, v_int64x2 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int s&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int s&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int s&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int s&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int s&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int s&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int s&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int s&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int s&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int s&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint8x16 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int8x16 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint16x8 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int16x8 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint32x4 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int32x4 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(v_uint64x2 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(v_int64x2 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float32x4 v)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int i&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(v_float64x2 v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b, const v_float32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b, const v_int32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b, const v_float64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;x)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;x)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_uint8x16 &amp;a, v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_uint8x16 &amp;a, v_uint8x16 &amp;b, v_uint8x16 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_uint8x16 &amp;a, v_uint8x16 &amp;b, v_uint8x16 &amp;c, v_uint8x16 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_int8x16 &amp;a, v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_int8x16 &amp;a, v_int8x16 &amp;b, v_int8x16 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_int8x16 &amp;a, v_int8x16 &amp;b, v_int8x16 &amp;c, v_int8x16 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_uint16x8 &amp;a, v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_uint16x8 &amp;a, v_uint16x8 &amp;b, v_uint16x8 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_uint16x8 &amp;a, v_uint16x8 &amp;b, v_uint16x8 &amp;c, v_uint16x8 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr, v_int16x8 &amp;a, v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr, v_int16x8 &amp;a, v_int16x8 &amp;b, v_int16x8 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr, v_int16x8 &amp;a, v_int16x8 &amp;b, v_int16x8 &amp;c, v_int16x8 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr, v_uint32x4 &amp;a, v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr, v_uint32x4 &amp;a, v_uint32x4 &amp;b, v_uint32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr, v_uint32x4 &amp;a, v_uint32x4 &amp;b, v_uint32x4 &amp;c, v_uint32x4 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr, v_int32x4 &amp;a, v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr, v_int32x4 &amp;a, v_int32x4 &amp;b, v_int32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr, v_int32x4 &amp;a, v_int32x4 &amp;b, v_int32x4 &amp;c, v_int32x4 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr, v_float32x4 &amp;a, v_float32x4 &amp;b, v_float32x4 &amp;c, v_float32x4 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr, v_float32x4 &amp;a, v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr, v_float32x4 &amp;a, v_float32x4 &amp;b, v_float32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_uint64x2 &amp;a, v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_uint64x2 &amp;a, v_uint64x2 &amp;b, v_uint64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_uint64x2 &amp;a, v_uint64x2 &amp;b, v_uint64x2 &amp;c, v_uint64x2 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_int64x2 &amp;a, v_int64x2 &amp;b, v_int64x2 &amp;c, v_int64x2 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_int64x2 &amp;a, v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, v_int64x2 &amp;a, v_int64x2 &amp;b, v_int64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr, v_float64x2 &amp;a, v_float64x2 &amp;b, v_float64x2 &amp;c, v_float64x2 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr, v_float64x2 &amp;a, v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr, v_float64x2 &amp;a, v_float64x2 &amp;b, v_float64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_reg&lt; float, simd128_width/sizeof(float)&gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float16_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr0, const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr0, const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr0, const short *ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr0, const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr0, const int *ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr0, const float *ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr0, const unsigned *ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr0, const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr0, const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr0, const double *ptr1)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const short *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const double *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const short *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int64_t *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *tab, const v_int32x4 &amp;idxvec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *tab, const v_int32x4 &amp;idxvec)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float *tab, const v_int32x4 &amp;idxvec)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const double *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const double *tab, const v_int32x4 &amp;idxvec)",
+    "local": ""
+  },
+  {
+    "origin": "(const float *tab, const v_int32x4 &amp;idxvec, v_float32x4 &amp;x, v_float32x4 &amp;y)",
+    "local": ""
+  },
+  {
+    "origin": "(const double *tab, const v_int32x4 &amp;idxvec, v_float64x2 &amp;x, v_float64x2 &amp;y)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const short *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const double *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const short *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "*tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const unsigned *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float *tab, const int *idx)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v, const v_float32x4 &amp;m0, const v_float32x4 &amp;m1, const v_float32x4 &amp;m2, const v_float32x4 &amp;m3)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v, const v_float32x4 &amp;m0, const v_float32x4 &amp;m1, const v_float32x4 &amp;m2, const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b, v_uint16x8 &amp;c, v_uint16x8 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b, v_int16x8 &amp;c, v_int16x8 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b, v_uint32x4 &amp;c, v_uint32x4 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b, v_int32x4 &amp;c, v_int32x4 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b, v_uint64x2 &amp;c, v_uint64x2 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b, const v_float32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b, const v_int32x4 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b, const v_float64x2 &amp;c)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b, const v_uint32x4 &amp;c, const v_uint32x4 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b, const v_uint64x2 &amp;c, const v_uint64x2 &amp;d, const v_uint64x2 &amp;e, const v_uint64x2 &amp;f, const v_uint64x2 &amp;g, const v_uint64x2 &amp;h)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(float16_t *ptr, const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;vec)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b, v_uint8x16 &amp;c, v_uint8x16 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b, v_int8x16 &amp;c, v_int8x16 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b, v_uint16x8 &amp;c, v_uint16x8 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b, v_int16x8 &amp;c, v_int16x8 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b, v_uint32x4 &amp;c, v_uint32x4 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b, v_int32x4 &amp;c, v_int32x4 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b, v_float32x4 &amp;c, v_float32x4 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b, v_float64x2 &amp;c, v_float64x2 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b, const v_float32x4 &amp;c, const v_float32x4 &amp;d)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;v)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a, const v_uint64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a, const v_int64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;mask, const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;mask, const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;mask, const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;mask, const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;mask, const v_uint32x4 &amp;a, const v_uint32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;mask, const v_int32x4 &amp;a, const v_int32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;mask, const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;mask, const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a, const v_float32x4 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a, const v_float64x2 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;x)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;x)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint8x16 &amp;a, hal::StoreMode)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int8x16 &amp;a, hal::StoreMode)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a, hal::StoreMode)",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int16x8 &amp;a, hal::StoreMode)",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint32x4 &amp;a, hal::StoreMode)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int32x4 &amp;a, hal::StoreMode)",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint64x2 &amp;a, hal::StoreMode)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int64x2 &amp;a, hal::StoreMode)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(float *ptr, const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(float *ptr, const v_float32x4 &amp;a, hal::StoreMode)",
+    "local": ""
+  },
+  {
+    "origin": "(double *ptr, const v_float64x2 &amp;a, hal::StoreMode)",
+    "local": ""
+  },
+  {
+    "origin": "(double *ptr, const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(float *ptr, const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(double *ptr, const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(float *ptr, const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(double *ptr, const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(float *ptr, const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(double *ptr, const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint8x16 &amp;a, const v_uint8x16 &amp;b, const v_uint8x16 &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint8x16 &amp;a, const v_uint8x16 &amp;b, const v_uint8x16 &amp;c, const v_uint8x16 &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint8x16 &amp;a, const v_uint8x16 &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int8x16 &amp;a, const v_int8x16 &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int8x16 &amp;a, const v_int8x16 &amp;b, const v_int8x16 &amp;c, const v_int8x16 &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int8x16 &amp;a, const v_int8x16 &amp;b, const v_int8x16 &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a, const v_uint16x8 &amp;b, const v_uint16x8 &amp;c, const v_uint16x8 &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a, const v_uint16x8 &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a, const v_uint16x8 &amp;b, const v_uint16x8 &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int16x8 &amp;a, const v_int16x8 &amp;b, const v_int16x8 &amp;c, const v_int16x8 &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int16x8 &amp;a, const v_int16x8 &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int16x8 &amp;a, const v_int16x8 &amp;b, const v_int16x8 &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint32x4 &amp;a, const v_uint32x4 &amp;b, const v_uint32x4 &amp;c, const v_uint32x4 &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint32x4 &amp;a, const v_uint32x4 &amp;b, const v_uint32x4 &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint32x4 &amp;a, const v_uint32x4 &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int32x4 &amp;a, const v_int32x4 &amp;b, const v_int32x4 &amp;c, const v_int32x4 &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int32x4 &amp;a, const v_int32x4 &amp;b, const v_int32x4 &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int32x4 &amp;a, const v_int32x4 &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(float *ptr, const v_float32x4 &amp;a, const v_float32x4 &amp;b, const v_float32x4 &amp;c, const v_float32x4 &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(float *ptr, const v_float32x4 &amp;a, const v_float32x4 &amp;b, const v_float32x4 &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(float *ptr, const v_float32x4 &amp;a, const v_float32x4 &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint64x2 &amp;a, const v_uint64x2 &amp;b, const v_uint64x2 &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint64x2 &amp;a, const v_uint64x2 &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint64x2 &amp;a, const v_uint64x2 &amp;b, const v_uint64x2 &amp;c, const v_uint64x2 &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int64x2 &amp;a, const v_int64x2 &amp;b, const v_int64x2 &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int64x2 &amp;a, const v_int64x2 &amp;b, const v_int64x2 &amp;c, const v_int64x2 &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int64x2 &amp;a, const v_int64x2 &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(double *ptr, const v_float64x2 &amp;a, const v_float64x2 &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(double *ptr, const v_float64x2 &amp;a, const v_float64x2 &amp;b, const v_float64x2 &amp;c, const v_float64x2 &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(double *ptr, const v_float64x2 &amp;a, const v_float64x2 &amp;b, const v_float64x2 &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int8x16 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(short *ptr, const v_int16x8 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned *ptr, const v_uint32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(int *ptr, const v_int32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_uint64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*ptr, const v_int64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(float *ptr, const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(double *ptr, const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a, const v_uint8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a, const v_int8x16 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a, const v_uint16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a, const v_int16x8 &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a0, const v_uint32x4 &amp;a1, const v_uint32x4 &amp;a2, const v_uint32x4 &amp;a3, v_uint32x4 &amp;b0, v_uint32x4 &amp;b1, v_uint32x4 &amp;b2, v_uint32x4 &amp;b3)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a0, const v_int32x4 &amp;a1, const v_int32x4 &amp;a2, const v_int32x4 &amp;a3, v_int32x4 &amp;b0, v_int32x4 &amp;b1, v_int32x4 &amp;b2, v_int32x4 &amp;b3)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a0, const v_float32x4 &amp;a1, const v_float32x4 &amp;a2, const v_float32x4 &amp;a3, v_float32x4 &amp;b0, v_float32x4 &amp;b1, v_float32x4 &amp;b2, v_float32x4 &amp;b3)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint8x16 &amp;a0, const v_uint8x16 &amp;a1, v_uint8x16 &amp;b0, v_uint8x16 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int8x16 &amp;a0, const v_int8x16 &amp;a1, v_int8x16 &amp;b0, v_int8x16 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint16x8 &amp;a0, const v_uint16x8 &amp;a1, v_uint16x8 &amp;b0, v_uint16x8 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int16x8 &amp;a0, const v_int16x8 &amp;a1, v_int16x8 &amp;b0, v_int16x8 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_uint32x4 &amp;a0, const v_uint32x4 &amp;a1, v_uint32x4 &amp;b0, v_uint32x4 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_int32x4 &amp;a0, const v_int32x4 &amp;a1, v_int32x4 &amp;b0, v_int32x4 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float32x4 &amp;a0, const v_float32x4 &amp;a1, v_float32x4 &amp;b0, v_float32x4 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "(const v_float64x2 &amp;a0, const v_float64x2 &amp;a1, v_float64x2 &amp;b0, v_float64x2 &amp;b1)",
+    "local": ""
+  },
+  {
+    "origin": "vint16mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int16_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "vuint16mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const uint16_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "vfloat32mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float32_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "vint32mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int32_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "vuint32mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const uint32_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "vfloat64mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const float64_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "vint64mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int64_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "vuint64mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const uint64_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "vint8mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int8_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "vint8mf4_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const int8_t *base)",
+    "local": ""
+  },
+  {
+    "origin": "vuint8mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const uint8_t *ptr)",
+    "local": ""
+  },
+  {
+    "origin": "vuint8mf4_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const uint8_t *base)",
+    "local": ""
+  },
+  {
+    "origin": "(int16_t *ptr, vint16mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "(uint16_t *ptr, vuint16mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "(float32_t *ptr, vfloat32mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "(int32_t *ptr, vint32mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "(uint32_t *ptr, vuint32mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "(float64_t *ptr, vfloat64mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "(int64_t *ptr, vint64mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "(uint64_t *ptr, vuint64mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "(int8_t *ptr, vint8mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "(uint8_t *ptr, vuint8mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "vint16m1_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(vint8mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "vint16mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(vint8mf4_t src)",
+    "local": ""
+  },
+  {
+    "origin": "vint32m1_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(vint16mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "vint64m1_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(vint32mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "vuint16m1_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(vuint8mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "vuint16mf2_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(vuint8mf4_t src)",
+    "local": ""
+  },
+  {
+    "origin": "vuint32m1_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(vuint16mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "vuint64m1_t&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(vuint32mf2_t v)",
+    "local": ""
+  },
+  {
+    "origin": "Init with zero",
+    "local": ""
+  },
+  {
+    "origin": "Create new vector with zero elements",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Init with value",
+    "local": ""
+  },
+  {
+    "origin": "Create new vector with elements set to a specific value",
+    "local": ""
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "val)",
+    "local": ""
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "val)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "val)",
+    "local": ""
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(short val)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(unsigned val)",
+    "local": ""
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(int val)",
+    "local": ""
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "val)",
+    "local": ""
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "val)",
+    "local": ""
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(float val)",
+    "local": ""
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(double val)",
+    "local": ""
+  },
+  {
+    "origin": "Variables",
+    "local": ""
+  },
+  {
+    "origin": "[]",
+    "local": ""
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_SIMD128",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_SIMD128&#160;&#160;&#160;1",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_SIMD128_64F",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_SIMD128_64F&#160;&#160;&#160;1",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_ABS",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_ABS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tprvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_ABSDIFF",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_ABSDIFF",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_ABSDIFF_S",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_ABSDIFF_S",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_rTpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_nwTpvec,",
+    "local": ""
+  },
+  {
+    "origin": "sub,",
+    "local": ""
+  },
+  {
+    "origin": "rshr,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_BIN_FUNC",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_BIN_FUNC",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "func,",
+    "local": ""
+  },
+  {
+    "origin": "intrin,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_BIN_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_BIN_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "bin_op,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "intrin,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_BROADCAST",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_BROADCAST",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_CHECK_ALLANY",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_CHECK_ALLANY",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "shift,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_EXPAND",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_EXPAND",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpwvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_EXTRACT",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_EXTRACT",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_FLOAT_CMP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_FLOAT_CMP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_FLOAT_CMP_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "op,",
+    "local": ""
+  },
+  {
+    "origin": "intrin,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_FLT64_BIT_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_FLT64_BIT_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "bin_op,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_FLT_BIT_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_FLT_BIT_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "bin_op,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_INIT_FP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_INIT_FP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpv,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_INIT_INTEGER",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_INIT_INTEGER",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": "suffix1,",
+    "local": ""
+  },
+  {
+    "origin": "suffix2&#160;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_INT_CMP_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_INT_CMP_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "op,",
+    "local": ""
+  },
+  {
+    "origin": "intrin,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_INTERLEAVED",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_INTERLEAVED",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_LOADSTORE_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_LOADSTORE_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_nTpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "hvl,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_LOGIC_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_LOGIC_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_MUL_EXPAND",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_MUL_EXPAND",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpwvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpw,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "wmul,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_MUL_SAT",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_MUL_SAT",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_NATIVE_LOADSTORE_MF2",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_NATIVE_LOADSTORE_MF2",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_NATIVE_WCVT",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_NATIVE_WCVT",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpwvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_wTp,",
+    "local": ""
+  },
+  {
+    "origin": "wcvt,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_ONE_TIME_REINTERPRET",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_ONE_TIME_REINTERPRET",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec1,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec2,",
+    "local": ""
+  },
+  {
+    "origin": "_nTpvec1,",
+    "local": ""
+  },
+  {
+    "origin": "_nTpvec2,",
+    "local": ""
+  },
+  {
+    "origin": "suffix1,",
+    "local": ""
+  },
+  {
+    "origin": "suffix2,",
+    "local": ""
+  },
+  {
+    "origin": "nsuffix1,",
+    "local": ""
+  },
+  {
+    "origin": "nsuffix2,",
+    "local": ""
+  },
+  {
+    "origin": "width1,",
+    "local": ""
+  },
+  {
+    "origin": "width2&#160;",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_PACK",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_PACK",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "_wTpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_wTp,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "rshr,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_PACK_TRIPLETS",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_PACK_TRIPLETS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_PACK_U",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_PACK_U",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "_wTpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_wTp,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "rshr,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_POPCOUNT_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_POPCOUNT_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_rTpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_rTp,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_REDUCE",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_REDUCE",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "func,",
+    "local": ""
+  },
+  {
+    "origin": "scalartype,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_REDUCE_SAD",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_REDUCE_SAD",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_REDUCE_SUM",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_REDUCE_SUM",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_wTpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_nwTpvec,",
+    "local": ""
+  },
+  {
+    "origin": "scalartype,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "wsuffix,",
+    "local": ""
+  },
+  {
+    "origin": "wwidth,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_REVERSE",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_REVERSE",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_ROTATE_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_ROTATE_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_SCAN_FORWOARD_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_SCAN_FORWOARD_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_SELECT",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_SELECT",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "merge,",
+    "local": ""
+  },
+  {
+    "origin": "ne,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_SELF_REINTERPRET",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_SELF_REINTERPRET",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;inline v_##_Tpvec v_reinterpret_as_##suffix(const v_##_Tpvec&amp; v) { return v; }",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_SIGNED_CMP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_SIGNED_CMP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_SIGNED_SHIFT_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_SIGNED_SHIFT_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_SIGNMASK_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_SIGNMASK_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_TRANSPOSE4x4",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_TRANSPOSE4x4",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_UNPACKS",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_UNPACKS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "_Tp,",
+    "local": ""
+  },
+  {
+    "origin": "width,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_UNSIGNED_CMP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_HAL_IMPL_RVV_UNSIGNED_SHIFT_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_HAL_IMPL_RVV_UNSIGNED_SHIFT_OP",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_Tpvec,",
+    "local": ""
+  },
+  {
+    "origin": "suffix,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

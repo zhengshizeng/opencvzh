@@ -1,0 +1,826 @@
+[
+  {
+    "origin": "OpenCV: Eroding and Dilating",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Eroding and Dilating",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Apply two very common morphological operators: Erosion and Dilation. For this purpose, you will use the following OpenCV functions:",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The explanation below belongs to the book",
+    "local": ""
+  },
+  {
+    "origin": "Learning OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "by Bradski and Kaehler.",
+    "local": ""
+  },
+  {
+    "origin": "Morphological Operations",
+    "local": ""
+  },
+  {
+    "origin": "In short: A set of operations that process images based on shapes. Morphological operations apply a",
+    "local": ""
+  },
+  {
+    "origin": "structuring element",
+    "local": ""
+  },
+  {
+    "origin": "to an input image and generate an output image.",
+    "local": ""
+  },
+  {
+    "origin": "The most basic morphological operations are: Erosion and Dilation. They have a wide array of uses, i.e. :",
+    "local": ""
+  },
+  {
+    "origin": "Removing noise",
+    "local": ""
+  },
+  {
+    "origin": "Isolation of individual elements and joining disparate elements in an image.",
+    "local": ""
+  },
+  {
+    "origin": "Finding of intensity bumps or holes in an image",
+    "local": ""
+  },
+  {
+    "origin": "We will explain dilation and erosion briefly, using the following image as an example:",
+    "local": ""
+  },
+  {
+    "origin": "Dilation",
+    "local": ""
+  },
+  {
+    "origin": "This operations consists of convolving an image \\(A\\) with some kernel ( \\(B\\)), which can have any shape or size, usually a square or circle.",
+    "local": ""
+  },
+  {
+    "origin": "The kernel \\(B\\) has a defined",
+    "local": ""
+  },
+  {
+    "origin": "anchor point",
+    "local": ""
+  },
+  {
+    "origin": ", usually being the center of the kernel.",
+    "local": ""
+  },
+  {
+    "origin": "As the kernel \\(B\\) is scanned over the image, we compute the maximal pixel value overlapped by \\(B\\) and replace the image pixel in the anchor point position with that maximal value. As you can deduce, this maximizing operation causes bright regions within an image to \"grow\" (therefore the name",
+    "local": ""
+  },
+  {
+    "origin": "dilation",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "The dilatation operation is: \\(\\texttt{dst} (x,y) = \\max _{(x&#39;,y&#39;): \\, \\texttt{element} (x&#39;,y&#39;) \\ne0 } \\texttt{src} (x+x&#39;,y+y&#39;)\\)",
+    "local": ""
+  },
+  {
+    "origin": "Take the above image as an example. Applying dilation we can get:",
+    "local": ""
+  },
+  {
+    "origin": "The bright area of the letter dilates around the black regions of the background.",
+    "local": ""
+  },
+  {
+    "origin": "Erosion",
+    "local": ""
+  },
+  {
+    "origin": "This operation is the sister of dilation. It computes a local minimum over the area of given kernel.",
+    "local": ""
+  },
+  {
+    "origin": "As the kernel \\(B\\) is scanned over the image, we compute the minimal pixel value overlapped by \\(B\\) and replace the image pixel under the anchor point with that minimal value.",
+    "local": ""
+  },
+  {
+    "origin": "The erosion operation is: \\(\\texttt{dst} (x,y) = \\min _{(x&#39;,y&#39;): \\, \\texttt{element} (x&#39;,y&#39;) \\ne0 } \\texttt{src} (x+x&#39;,y+y&#39;)\\)",
+    "local": ""
+  },
+  {
+    "origin": "Analagously to the example for dilation, we can apply the erosion operator to the original image (shown above). You can see in the result below that the bright areas of the image get thinner, whereas the dark zones gets bigger.",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial's code is shown below. You can also download it",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial's code is shown below. You can also download it",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial's code is shown below. You can also download it",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Most of the material shown here is trivial (if you have any doubt, please refer to the tutorials in previous sections). Let's check the general structure of the C++ program:",
+    "local": ""
+  },
+  {
+    "origin": "Load an image (can be BGR or grayscale)",
+    "local": ""
+  },
+  {
+    "origin": "Create two windows (one for dilation output, the other for erosion)",
+    "local": ""
+  },
+  {
+    "origin": "Create a set of two Trackbars for each operation:",
+    "local": ""
+  },
+  {
+    "origin": "The first trackbar \"Element\" returns either",
+    "local": ""
+  },
+  {
+    "origin": "erosion_elem",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "dilation_elem",
+    "local": ""
+  },
+  {
+    "origin": "The second trackbar \"Kernel size\" return",
+    "local": ""
+  },
+  {
+    "origin": "erosion_size",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "dilation_size",
+    "local": ""
+  },
+  {
+    "origin": "for the corresponding operation.",
+    "local": ""
+  },
+  {
+    "origin": "Call once erosion and dilation to show the initial image.",
+    "local": ""
+  },
+  {
+    "origin": "Every time we move any slider, the user's function",
+    "local": ""
+  },
+  {
+    "origin": "Erosion",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "Dilation",
+    "local": ""
+  },
+  {
+    "origin": "will be called and it will update the output image based on the current trackbar values.",
+    "local": ""
+  },
+  {
+    "origin": "Let's analyze these two functions:",
+    "local": ""
+  },
+  {
+    "origin": "The erosion function",
+    "local": ""
+  },
+  {
+    "origin": "The function that performs the",
+    "local": ""
+  },
+  {
+    "origin": "erosion",
+    "local": ""
+  },
+  {
+    "origin": "operation is",
+    "local": ""
+  },
+  {
+    "origin": ". As we can see, it receives three arguments:",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ": The source image",
+    "local": ""
+  },
+  {
+    "origin": "erosion_dst",
+    "local": ""
+  },
+  {
+    "origin": ": The output image",
+    "local": ""
+  },
+  {
+    "origin": "element",
+    "local": ""
+  },
+  {
+    "origin": ": This is the kernel we will use to perform the operation. If we do not specify, the default is a simple",
+    "local": ""
+  },
+  {
+    "origin": "matrix. Otherwise, we can specify its shape. For this, we need to use the function",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "We can choose any of three shapes for our kernel:",
+    "local": ""
+  },
+  {
+    "origin": "Rectangular box: MORPH_RECT",
+    "local": ""
+  },
+  {
+    "origin": "Cross: MORPH_CROSS",
+    "local": ""
+  },
+  {
+    "origin": "Ellipse: MORPH_ELLIPSE",
+    "local": ""
+  },
+  {
+    "origin": "Then, we just have to specify the size of our kernel and the",
+    "local": ""
+  },
+  {
+    "origin": "anchor point",
+    "local": ""
+  },
+  {
+    "origin": ". If not specified, it is assumed to be in the center.",
+    "local": ""
+  },
+  {
+    "origin": "That is all. We are ready to perform the erosion of our image.",
+    "local": ""
+  },
+  {
+    "origin": "The dilation function",
+    "local": ""
+  },
+  {
+    "origin": "The code is below. As you can see, it is completely similar to the snippet of code for",
+    "local": ""
+  },
+  {
+    "origin": "erosion",
+    "local": ""
+  },
+  {
+    "origin": ". Here we also have the option of defining our kernel, its anchor point and the size of the operator to be used.",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Most of the material shown here is trivial (if you have any doubt, please refer to the tutorials in previous sections). Let's check however the general structure of the java class. There are 4 main parts in the java class:",
+    "local": ""
+  },
+  {
+    "origin": "the class constructor which setups the window that will be filled with window components",
+    "local": ""
+  },
+  {
+    "origin": "the",
+    "local": ""
+  },
+  {
+    "origin": "method, which fills out the window",
+    "local": ""
+  },
+  {
+    "origin": "the",
+    "local": ""
+  },
+  {
+    "origin": "method, which determines what happens when the user changes any value",
+    "local": ""
+  },
+  {
+    "origin": "the",
+    "local": ""
+  },
+  {
+    "origin": "method, which is the entry point of the program",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial we will focus on the",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "methods. However, for completion the steps followed in the constructor are:",
+    "local": ""
+  },
+  {
+    "origin": "Load an image (can be BGR or grayscale)",
+    "local": ""
+  },
+  {
+    "origin": "Create a window",
+    "local": ""
+  },
+  {
+    "origin": "Add various control components with",
+    "local": ""
+  },
+  {
+    "origin": "show the window",
+    "local": ""
+  },
+  {
+    "origin": "The components were added by the following method:",
+    "local": ""
+  },
+  {
+    "origin": "In short we",
+    "local": ""
+  },
+  {
+    "origin": "create a panel for the sliders",
+    "local": ""
+  },
+  {
+    "origin": "create a combo box for the element types",
+    "local": ""
+  },
+  {
+    "origin": "create a slider for the kernel size",
+    "local": ""
+  },
+  {
+    "origin": "create a combo box for the morphology function to use (erosion or dilation)",
+    "local": ""
+  },
+  {
+    "origin": "The action and state changed listeners added call at the end the",
+    "local": ""
+  },
+  {
+    "origin": "method which updates the image based on the current slider values. So every time we move any slider, the",
+    "local": ""
+  },
+  {
+    "origin": "method is triggered.",
+    "local": ""
+  },
+  {
+    "origin": "Updating the image",
+    "local": ""
+  },
+  {
+    "origin": "To update the image we used the following implementation:",
+    "local": ""
+  },
+  {
+    "origin": "In other words we",
+    "local": ""
+  },
+  {
+    "origin": "get the structuring element the user chose",
+    "local": ""
+  },
+  {
+    "origin": "execute the",
+    "local": ""
+  },
+  {
+    "origin": "erosion",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "dilation",
+    "local": ""
+  },
+  {
+    "origin": "function based on",
+    "local": ""
+  },
+  {
+    "origin": "reload the image with the morphology applied",
+    "local": ""
+  },
+  {
+    "origin": "repaint the frame",
+    "local": ""
+  },
+  {
+    "origin": "Let's analyze the",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "methods:",
+    "local": ""
+  },
+  {
+    "origin": "The erosion method",
+    "local": ""
+  },
+  {
+    "origin": "The function that performs the",
+    "local": ""
+  },
+  {
+    "origin": "erosion",
+    "local": ""
+  },
+  {
+    "origin": "operation is",
+    "local": ""
+  },
+  {
+    "origin": ". As we can see, it receives three arguments:",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ": The source image",
+    "local": ""
+  },
+  {
+    "origin": "erosion_dst",
+    "local": ""
+  },
+  {
+    "origin": ": The output image",
+    "local": ""
+  },
+  {
+    "origin": "element",
+    "local": ""
+  },
+  {
+    "origin": ": This is the kernel we will use to perform the operation. For specifying the shape, we need to use the function",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "We can choose any of three shapes for our kernel:",
+    "local": ""
+  },
+  {
+    "origin": "Rectangular box: CV_SHAPE_RECT",
+    "local": ""
+  },
+  {
+    "origin": "Cross: CV_SHAPE_CROSS",
+    "local": ""
+  },
+  {
+    "origin": "Ellipse: CV_SHAPE_ELLIPSE",
+    "local": ""
+  },
+  {
+    "origin": "Together with the shape we specify the size of our kernel and the",
+    "local": ""
+  },
+  {
+    "origin": "anchor point",
+    "local": ""
+  },
+  {
+    "origin": ". If the anchor point is not specified, it is assumed to be in the center.",
+    "local": ""
+  },
+  {
+    "origin": "That is all. We are ready to perform the erosion of our image.",
+    "local": ""
+  },
+  {
+    "origin": "The dilation function",
+    "local": ""
+  },
+  {
+    "origin": "The code is below. As you can see, it is completely similar to the snippet of code for",
+    "local": ""
+  },
+  {
+    "origin": "erosion",
+    "local": ""
+  },
+  {
+    "origin": ". Here we also have the option of defining our kernel, its anchor point and the size of the operator to be used.",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Most of the material shown here is trivial (if you have any doubt, please refer to the tutorials in previous sections). Let's check the general structure of the python script:",
+    "local": ""
+  },
+  {
+    "origin": "Load an image (can be BGR or grayscale)",
+    "local": ""
+  },
+  {
+    "origin": "Create two windows (one for erosion output, the other for dilation) with a set of trackbars each",
+    "local": ""
+  },
+  {
+    "origin": "The first trackbar \"Element\" returns the value for the morphological type that will be mapped (1 = rectangle, 2 = cross, 3 = ellipse)",
+    "local": ""
+  },
+  {
+    "origin": "The second trackbar \"Kernel size\" returns the size of the element for the corresponding operation",
+    "local": ""
+  },
+  {
+    "origin": "Call once erosion and dilation to show the initial image",
+    "local": ""
+  },
+  {
+    "origin": "Every time we move any slider, the user's function",
+    "local": ""
+  },
+  {
+    "origin": "erosion",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "dilation",
+    "local": ""
+  },
+  {
+    "origin": "will be called and it will update the output image based on the current trackbar values.",
+    "local": ""
+  },
+  {
+    "origin": "Let's analyze these two functions:",
+    "local": ""
+  },
+  {
+    "origin": "The erosion function",
+    "local": ""
+  },
+  {
+    "origin": "The function that performs the",
+    "local": ""
+  },
+  {
+    "origin": "erosion",
+    "local": ""
+  },
+  {
+    "origin": "operation is",
+    "local": ""
+  },
+  {
+    "origin": ". As we can see, it receives two arguments and returns the processed image:",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ": The source image",
+    "local": ""
+  },
+  {
+    "origin": "element",
+    "local": ""
+  },
+  {
+    "origin": ": The kernel we will use to perform the operation. We can specify its shape by using the function",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "We can choose any of three shapes for our kernel:",
+    "local": ""
+  },
+  {
+    "origin": "Rectangular box: MORPH_RECT",
+    "local": ""
+  },
+  {
+    "origin": "Cross: MORPH_CROSS",
+    "local": ""
+  },
+  {
+    "origin": "Ellipse: MORPH_ELLIPSE",
+    "local": ""
+  },
+  {
+    "origin": "Then, we just have to specify the size of our kernel and the",
+    "local": ""
+  },
+  {
+    "origin": "anchor point",
+    "local": ""
+  },
+  {
+    "origin": ". If the anchor point not specified, it is assumed to be in the center.",
+    "local": ""
+  },
+  {
+    "origin": "That is all. We are ready to perform the erosion of our image.",
+    "local": ""
+  },
+  {
+    "origin": "The dilation function",
+    "local": ""
+  },
+  {
+    "origin": "The code is below. As you can see, it is completely similar to the snippet of code for",
+    "local": ""
+  },
+  {
+    "origin": "erosion",
+    "local": ""
+  },
+  {
+    "origin": ". Here we also have the option of defining our kernel, its anchor point and the size of the operator to be used.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Additionally, there are further parameters that allow you to perform multiple erosions/dilations (iterations) at once and also set the border type and value. However, We haven't used those in this simple tutorial. You can check out the reference for more details.",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "Compile the code above and execute it (or run the script if using python) with an image as argument. If you do not provide an image as argument the default sample image (",
+    "local": ""
+  },
+  {
+    "origin": "LinuxLogo.jpg",
+    "local": ""
+  },
+  {
+    "origin": ") will be used.",
+    "local": ""
+  },
+  {
+    "origin": "For instance, using this image:",
+    "local": ""
+  },
+  {
+    "origin": "We get the results below. Varying the indices in the Trackbars give different output images, naturally. Try them out! You can even try to add a third Trackbar to control the number of iterations.",
+    "local": ""
+  },
+  {
+    "origin": "(depending on the programming language the output might vary a little or be only 1 window)",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": ""
+  }
+]

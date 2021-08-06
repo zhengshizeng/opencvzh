@@ -1,0 +1,374 @@
+[
+  {
+    "origin": "OpenCV: cv::detail::Estimator Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::detail::Estimator Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "abstract",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Rotation estimator base class.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::detail::Estimator:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;features, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;pairwise_matches, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;cameras)",
+    "local": ""
+  },
+  {
+    "origin": "Estimates camera parameters.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;features, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;pairwise_matches, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "This method must implement camera parameters estimation logic in order to make the wrapper detail::Estimator::operator()_ work.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Rotation estimator base class.",
+    "local": ""
+  },
+  {
+    "origin": "It takes features of all images, pairwise matches between all images and estimates rotations of all cameras.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The coordinate system origin is implementation-dependent, but you can always normalize the rotations in respect to the first camera, for instance. :",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "~Estimator()",
+    "local": ""
+  },
+  {
+    "origin": "virtual cv::detail::Estimator::~Estimator",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "estimate()",
+    "local": ""
+  },
+  {
+    "origin": "virtual bool cv::detail::Estimator::estimate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "features",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "pairwise_matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "cameras",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "protected",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "This method must implement camera parameters estimation logic in order to make the wrapper detail::Estimator::operator()_ work.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "features",
+    "local": ""
+  },
+  {
+    "origin": "Features of images",
+    "local": ""
+  },
+  {
+    "origin": "pairwise_matches",
+    "local": ""
+  },
+  {
+    "origin": "Pairwise matches of images",
+    "local": ""
+  },
+  {
+    "origin": "cameras",
+    "local": ""
+  },
+  {
+    "origin": "Estimated camera parameters",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "True in case of success, false otherwise",
+    "local": ""
+  },
+  {
+    "origin": "Implemented in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::detail::Estimator::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "features",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "pairwise_matches",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "cameras",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Estimates camera parameters.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "features",
+    "local": ""
+  },
+  {
+    "origin": "Features of images",
+    "local": ""
+  },
+  {
+    "origin": "pairwise_matches",
+    "local": ""
+  },
+  {
+    "origin": "Pairwise matches of images",
+    "local": ""
+  },
+  {
+    "origin": "cameras",
+    "local": ""
+  },
+  {
+    "origin": "Estimated camera parameters",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "True in case of success, false otherwise",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/stitching/detail/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:46 for OpenCV by &#160;",
+    "local": ""
+  }
+]

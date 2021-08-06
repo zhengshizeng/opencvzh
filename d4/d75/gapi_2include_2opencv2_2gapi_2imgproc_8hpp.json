@@ -1,0 +1,934 @@
+[
+  {
+    "origin": "OpenCV: opencv2/gapi/imgproc.hpp File Reference",
+    "local": "OpenCV:opencv2/gapi/imgproc.hpp文件参考"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "Typedefs",
+    "local": "类型定义"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "imgproc.hpp File Reference",
+    "local": "imgproc.hpp文件参考"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": "“黑盒”表示与磁盘上的文件相关联的文件存储。"
+  },
+  {
+    "origin": "Typedefs",
+    "local": "类型定义"
+  },
+  {
+    "origin": "= ContourApproximationModes",
+    "local": "=等高线近似模式"
+  },
+  {
+    "origin": "= std::tuple&lt; GArray&lt; GArray&lt; Point &gt; &gt;, GArray&lt; Vec4i &gt; &gt;",
+    "local": "=标准：：元组&lt；加里&lt；加里&lt；点&gt&gt；，加里&lt；Vec4i&gt&燃气轮机；"
+  },
+  {
+    "origin": "= std::tuple&lt; GMat, GMat &gt;",
+    "local": "=标准：：元组&lt；GMat，GMat&gt；"
+  },
+  {
+    "origin": "= std::tuple&lt; GMat, GMat, GMat &gt;",
+    "local": "=标准：：元组&lt；GMat，GMat，GMat&gt；"
+  },
+  {
+    "origin": "= RetrievalModes",
+    "local": "=检索模式"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "(const GMat &amp;src_gr)",
+    "local": "（const gmat&amp；SRC GR"
+  },
+  {
+    "origin": "Converts an image from BayerGR color space to RGB. The function converts an input image from BayerGR color space to RGB. The conventional ranges for G, R, and B channel values are 0 to 255.",
+    "local": "将图像从颜色空间转换为RGB。该函数用于将输入图像从颜色空间转换为RGB。G、R和B通道值的常规范围为0到255。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from BGR color space to gray-scaled.",
+    "local": "将图像从BGR颜色空间转换为灰度。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from BGR color space to I420 color space.",
+    "local": "将图像从BGR颜色空间转换为I420颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from BGR color space to LUV color space.",
+    "local": "将图像从BGR颜色空间转换为LUV颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from BGR color space to RGB color space.",
+    "local": "将图像从BGR颜色空间转换为RGB颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from BGR color space to YUV color space.",
+    "local": "将图像从BGR颜色空间转换为YUV颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, int d, double sigmaColor, double sigmaSpace, int borderType=BORDER_DEFAULT)",
+    "local": "（const GMat&amp；src，int d，double sigmaColor，double sigmaSpace，int borderType=BORDER（默认）"
+  },
+  {
+    "origin": "Applies the bilateral filter to an image.",
+    "local": "对图像应用双边滤波器。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, const Size &amp;ksize, const Point &amp;anchor=Point(-1,-1), int borderType=BORDER_DEFAULT, const Scalar &amp;borderValue=Scalar(0))",
+    "local": "（const GMat&amp；src、const Size和；ksize、const Point和；anchor=Point（-1，-1），int borderType=BORDER\\u DEFAULT，const Scalar&amp；borderValue=标量（0））"
+  },
+  {
+    "origin": "Blurs an image using the normalized box filter.",
+    "local": "使用规范化的长方体过滤器模糊图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Calculates the up-right bounding rectangle of a point set or non-zero pixels of gray-scale image.",
+    "local": "计算点集的右上边界矩形或灰度图像的非零像素。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GArray&lt; Point2i &gt; &amp;src)",
+    "local": "（康斯特加里&lt；点2i&gt&amp；（src）"
+  },
+  {
+    "origin": "(const GArray&lt; Point2f &gt; &amp;src)",
+    "local": "（康斯特加里&lt；点2f&gt&amp；（src）"
+  },
+  {
+    "origin": "(const GMat &amp;src, int dtype, const Size &amp;ksize, const Point &amp;anchor=Point(-1,-1), bool normalize=true, int borderType=BORDER_DEFAULT, const Scalar &amp;borderValue=Scalar(0))",
+    "local": "（const GMat&amp；src、int dtype、const Size和；ksize、const Point和；anchor=Point（-1，-1），bool normalize=true，int borderType=BORDER\\u DEFAULT，const Scalar&amp；borderValue=标量（0））"
+  },
+  {
+    "origin": "Blurs an image using the box filter.",
+    "local": "使用长方体过滤器模糊图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;image, double threshold1, double threshold2, int apertureSize=3, bool L2gradient=false)",
+    "local": "（const GMat&amp；图像，双阈值1，双阈值2，int apertureSize=3，bool L2gradient=false）"
+  },
+  {
+    "origin": "Finds edges in an image using the Canny algorithm.",
+    "local": "使用Canny算法在图像中查找边缘。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, const Mat &amp;kernel, const Point &amp;anchor=Point(-1,-1), int iterations=1, int borderType=BORDER_CONSTANT, const Scalar &amp;borderValue=morphologyDefaultBorderValue())",
+    "local": "（const GMat&amp；src，施工材料；内核、常量点和；锚点=点（-1，-1），int迭代次数=1，int borderType=BORDER\\u常量，常量标量&amp；borderValue=morphologyDefaultBorderValue（））"
+  },
+  {
+    "origin": "Dilates an image by using a specific structuring element.",
+    "local": "通过使用特定的结构元素来扩展图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, int iterations=1, int borderType=BORDER_CONSTANT, const Scalar &amp;borderValue=morphologyDefaultBorderValue())",
+    "local": "（const GMat&amp；src，int iterations=1，int borderType=BORDER\\u常量，const Scalar&amp；borderValue=morphologyDefaultBorderValue（））"
+  },
+  {
+    "origin": "Dilates an image by using 3 by 3 rectangular structuring element.",
+    "local": "使用3×3的矩形结构元素来扩展图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "(const GMat &amp;src, const Mat &amp;kernel, const Point &amp;anchor=Point(-1,-1), int iterations=1, int borderType=BORDER_CONSTANT, const Scalar &amp;borderValue=morphologyDefaultBorderValue())",
+    "local": "（const GMat&amp；src，施工材料；内核、常量点和；锚点=点（-1，-1），int迭代次数=1，int borderType=BORDER\\u常量，常量标量&amp；borderValue=morphologyDefaultBorderValue（））"
+  },
+  {
+    "origin": "Erodes an image by using a specific structuring element.",
+    "local": "使用特定的结构元素侵蚀图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, int iterations=1, int borderType=BORDER_CONSTANT, const Scalar &amp;borderValue=morphologyDefaultBorderValue())",
+    "local": "（const GMat&amp；src，int iterations=1，int borderType=BORDER\\u常量，const Scalar&amp；borderValue=morphologyDefaultBorderValue（））"
+  },
+  {
+    "origin": "Erodes an image by using 3 by 3 rectangular structuring element.",
+    "local": "用3×3的矩形结构元素腐蚀图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, int ddepth, const Mat &amp;kernel, const Point &amp;anchor=Point(-1,-1), const Scalar &amp;delta=Scalar(0), int borderType=BORDER_DEFAULT, const Scalar &amp;borderValue=Scalar(0))",
+    "local": "（const GMat&amp；src、int ddepth、const Mat和；内核、常量点和；锚点=点（-1，-1），常量标量；delta=标量（0），int borderType=BORDER\\u默认值，const Scalar&amp；borderValue=标量（0））"
+  },
+  {
+    "origin": "Convolves an image with the kernel.",
+    "local": "将图像与内核卷积。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, const RetrievalModes mode, const ContourApproximationModes method, const GOpaque&lt; Point &gt; &amp;offset)",
+    "local": "（const GMat&amp；src，const RetrievalModes mode，const ContourApproximationModes method，const GOpaque&lt；点&gt&amp；偏移量）"
+  },
+  {
+    "origin": "Finds contours in a binary image.",
+    "local": "在二值图像中查找轮廓。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, const RetrievalModes mode, const ContourApproximationModes method)",
+    "local": "（const GMat&amp；src，const RetrievalModes mode，const contourtoproximationmodes方法）"
+  },
+  {
+    "origin": "std::tuple&lt; GArray&lt; GArray&lt; Point &gt; &gt;, GArray&lt; Vec4i &gt; &gt;&#160;",
+    "local": "标准：：元组&lt；加里&lt；加里&lt；点&gt&gt；，加里&lt；Vec4i&gt&燃气轮机&#160;"
+  },
+  {
+    "origin": "(const GMat &amp;src, const RetrievalModes mode, const ContourApproximationModes method, const GOpaque&lt; Point &gt; &amp;offset)",
+    "local": "（const GMat&amp；src，const RetrievalModes mode，const ContourApproximationModes method，const GOpaque&lt；点&gt&amp；偏移量）"
+  },
+  {
+    "origin": "Finds contours and their hierarchy in a binary image.",
+    "local": "在二值图像中查找轮廓及其层次结构。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "std::tuple&lt; GArray&lt; GArray&lt; Point &gt; &gt;, GArray&lt; Vec4i &gt; &gt;&#160;",
+    "local": "标准：：元组&lt；加里&lt；加里&lt；点&gt&gt；，加里&lt；Vec4i&gt&燃气轮机&#160;"
+  },
+  {
+    "origin": "(const GMat &amp;src, const RetrievalModes mode, const ContourApproximationModes method)",
+    "local": "（const GMat&amp；src，const RetrievalModes mode，const contourtoproximationmodes方法）"
+  },
+  {
+    "origin": "GOpaque&lt; Vec4f &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GMat &amp;src, const DistanceTypes distType, const double param=0., const double reps=0., const double aeps=0.)",
+    "local": "（const GMat&amp；src，const DistanceTypes distType，const double param=0.，const double reps=0.，const double aeps=0.）"
+  },
+  {
+    "origin": "Fits a line to a 2D point set.",
+    "local": "将直线拟合到二维点集。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "GOpaque&lt; Vec4f &gt;&#160;",
+    "local": "高派克&lt；Vec4f&gt&#160;"
+  },
+  {
+    "origin": "(const GArray&lt; Point2i &gt; &amp;src, const DistanceTypes distType, const double param=0., const double reps=0., const double aeps=0.)",
+    "local": "（康斯特加里&lt；点2i&gt&amp；src，const DistanceTypes distType，const double param=0.，const double reps=0.，const double aeps=0.）"
+  },
+  {
+    "origin": "GOpaque&lt; Vec4f &gt;&#160;",
+    "local": "高派克&lt；Vec4f&gt&#160;"
+  },
+  {
+    "origin": "(const GArray&lt; Point2f &gt; &amp;src, const DistanceTypes distType, const double param=0., const double reps=0., const double aeps=0.)",
+    "local": "（康斯特加里&lt；点2f&gt&amp；src，const DistanceTypes distType，const double param=0.，const double reps=0.，const double aeps=0.）"
+  },
+  {
+    "origin": "GOpaque&lt; Vec4f &gt;&#160;",
+    "local": "高派克&lt；Vec4f&gt&#160;"
+  },
+  {
+    "origin": "(const GArray&lt; Point2d &gt; &amp;src, const DistanceTypes distType, const double param=0., const double reps=0., const double aeps=0.)",
+    "local": "（康斯特加里&lt；点2D&gt&amp；src，const DistanceTypes distType，const double param=0.，const double reps=0.，const double aeps=0.）"
+  },
+  {
+    "origin": "GOpaque&lt; Vec6f &gt;&#160;",
+    "local": "高派克&lt；Vec6f&gt&#160;"
+  },
+  {
+    "origin": "(const GMat &amp;src, const DistanceTypes distType, const double param=0., const double reps=0., const double aeps=0.)",
+    "local": "（const GMat&amp；src，const DistanceTypes distType，const double param=0.，const double reps=0.，const double aeps=0.）"
+  },
+  {
+    "origin": "Fits a line to a 3D point set.",
+    "local": "将直线拟合到三维点集。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "GOpaque&lt; Vec6f &gt;&#160;",
+    "local": "高派克&lt；Vec6f&gt&#160;"
+  },
+  {
+    "origin": "(const GArray&lt; Point3i &gt; &amp;src, const DistanceTypes distType, const double param=0., const double reps=0., const double aeps=0.)",
+    "local": "（康斯特加里&lt；点3i&gt&amp；src，const DistanceTypes distType，const double param=0.，const double reps=0.，const double aeps=0.）"
+  },
+  {
+    "origin": "GOpaque&lt; Vec6f &gt;&#160;",
+    "local": "高派克&lt；Vec6f&gt&#160;"
+  },
+  {
+    "origin": "(const GArray&lt; Point3f &gt; &amp;src, const DistanceTypes distType, const double param=0., const double reps=0., const double aeps=0.)",
+    "local": "（康斯特加里&lt；点3f&gt&amp；src，const DistanceTypes distType，const double param=0.，const double reps=0.，const double aeps=0.）"
+  },
+  {
+    "origin": "GOpaque&lt; Vec6f &gt;&#160;",
+    "local": "高派克&lt；Vec6f&gt&#160;"
+  },
+  {
+    "origin": "(const GArray&lt; Point3d &gt; &amp;src, const DistanceTypes distType, const double param=0., const double reps=0., const double aeps=0.)",
+    "local": "（康斯特加里&lt；Point3d&gt&amp；src，const DistanceTypes distType，const double param=0.，const double reps=0.，const double aeps=0.）"
+  },
+  {
+    "origin": "(GFilter2D,&lt; GMat(GMat, int, Mat, Point, Scalar, int, Scalar)&gt;,&quot;org.opencv.imgproc.filters.filter2D&quot;)",
+    "local": "（GFilter2D，&lt；GMat（GMat，int，Mat，Point，Scalar，int，Scalar）&gt&引用；org.opencv.imgproc.filters.filter2D&quot；）"
+  },
+  {
+    "origin": "(GSepFilter,&lt; GMat(GMat, int, Mat, Mat, Point, Scalar, int, Scalar)&gt;, &quot;org.opencv.imgproc.filters.sepfilter&quot;)",
+    "local": "（GSepFilter，&lt；GMat（GMat，int，Mat，Mat，Point，Scalar，int，Scalar）&gt&引用；org.opencv.imgproc.filters.sepfilter&quot；）"
+  },
+  {
+    "origin": "(GBoxFilter,&lt; GMat(GMat, int, Size, Point, bool, int, Scalar)&gt;, &quot;org.opencv.imgproc.filters.boxfilter&quot;)",
+    "local": "（GBoxFilter，&lt；GMat（GMat，int，Size，Point，bool，int，Scalar）&gt&引用；org.opencv.imgproc.filters.boxfilter&quot；）"
+  },
+  {
+    "origin": "(GBlur,&lt; GMat(GMat, Size, Point, int, Scalar)&gt;, &quot;org.opencv.imgproc.filters.blur&quot;)",
+    "local": "（GBlur，&lt；GMat（GMat，Size，Point，int，Scalar）&gt&引用；org.opencv.imgproc.filters.blur&quot；）"
+  },
+  {
+    "origin": "(GGaussBlur,&lt; GMat(GMat, Size, double, double, int, Scalar)&gt;, &quot;org.opencv.imgproc.filters.gaussianBlur&quot;)",
+    "local": "（g高斯布鲁尔，&lt；GMat（GMat，Size，double，double，int，Scalar）&gt&引用；org.opencv.imgproc.filters.gaussianBlur&quot；）"
+  },
+  {
+    "origin": "(GMedianBlur,&lt; GMat(GMat, int)&gt;, &quot;org.opencv.imgproc.filters.medianBlur&quot;)",
+    "local": "（GMedianBlur，&lt；GMat（GMat，国际）&gt&引用；org.opencv.imgproc.filters.medianBlur&quot；）"
+  },
+  {
+    "origin": "(GErode,&lt; GMat(GMat, Mat, Point, int, int, Scalar)&gt;, &quot;org.opencv.imgproc.filters.erode&quot;)",
+    "local": "（格罗德，&lt；GMat（GMat，Mat，Point，int，int，Scalar）&gt&引用；org.opencv.imgproc.filters.侵蚀&quot；）"
+  },
+  {
+    "origin": "(GDilate,&lt; GMat(GMat, Mat, Point, int, int, Scalar)&gt;, &quot;org.opencv.imgproc.filters.dilate&quot;)",
+    "local": "（GDilate，&lt；GMat（GMat，Mat，Point，int，int，Scalar）&gt&引用；org.opencv.imgproc.filters.explicate&quot；）"
+  },
+  {
+    "origin": "(GMorphologyEx,&lt; GMat(GMat, MorphTypes, Mat, Point, int, BorderTypes, Scalar)&gt;, &quot;org.opencv.imgproc.filters.morphologyEx&quot;)",
+    "local": "（GMorphologyEx，&lt；GMat（GMat，MorphTypes，Mat，Point，int，BorderTypes，Scalar）&gt&引用；org.opencv.imgproc.filters.morphologyEx&quot；）"
+  },
+  {
+    "origin": "(GSobel,&lt; GMat(GMat, int, int, int, int, double, double, int, Scalar)&gt;, &quot;org.opencv.imgproc.filters.sobel&quot;)",
+    "local": "（GSobel，&lt；GMat（GMat，int，int，int，int，int，double，double，int，Scalar）&gt&引用；org.opencv.imgproc.filters.sobel&quot；）"
+  },
+  {
+    "origin": "(GLaplacian,&lt; GMat(GMat, int, int, double, double, int)&gt;, &quot;org.opencv.imgproc.filters.laplacian&quot;)",
+    "local": "（格拉普拉斯语，&lt；GMat（GMat，int，int，double，double，int）&gt&引用；org.opencv.imgproc.filters.laplacian&quot；）"
+  },
+  {
+    "origin": "(GBilateralFilter,&lt; GMat(GMat, int, double, double, int)&gt;, &quot;org.opencv.imgproc.filters.bilateralfilter&quot;)",
+    "local": "（GBilateralFilter，&lt；GMat（GMat，int，double，double，int）&gt&引用；org.opencv.imgproc.filters.bilateralfilter&quot；）"
+  },
+  {
+    "origin": "(GEqHist,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.equalizeHist&quot;)",
+    "local": "（GEqHist，&lt；GMat（GMat）&gt&引用；org.opencv.imgproc.equalizeHist&quot；）"
+  },
+  {
+    "origin": "(GCanny,&lt; GMat(GMat, double, double, int, bool)&gt;, &quot;org.opencv.imgproc.feature.canny&quot;)",
+    "local": "（GCanny，&lt；GMat（GMat，double，double，int，bool）&gt&引用；org.opencv.imgproc.feature.canny&quot；）"
+  },
+  {
+    "origin": "(GGoodFeatures,&lt;",
+    "local": "（GGoodFeatures，&lt；"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;(GMat, int, double, double, Mat, int, bool, double)&gt;, &quot;org.opencv.imgproc.feature.goodFeaturesToTrack&quot;)",
+    "local": "&燃气轮机(GMat，int，double，double，Mat，int，bool，double）&gt&引用；org.opencv.imgproc.feature.goodFeaturesToTrack&quot；）"
+  },
+  {
+    "origin": "(GFindContours,&lt; GArray&lt; GArray&lt; Point &gt;&gt;(GMat, RetrMode, ContMethod, GOpaque&lt; Point &gt;)&gt;, &quot;org.opencv.imgproc.shape.findContours&quot;)",
+    "local": "（GFindContours，&lt；加里&lt；加里&lt；点&gt&燃气轮机(GMat、RetrMode、ContMethod、GOpaque&lt；点（&gt；）&gt&引用；org.opencv.imgproc.shape.findContours&quot；）"
+  },
+  {
+    "origin": "(GFindContoursNoOffset,&lt; GArray&lt; GArray&lt; Point &gt;&gt;(GMat, RetrMode, ContMethod)&gt;, &quot;org.opencv.imgproc.shape.findContoursNoOffset&quot;)",
+    "local": "（GFindContoursOffset&lt；加雷&lt；加雷&lt；&点gt；（GMAT、RetrMode、ContMethod）&gt；、&|&quot；org.opencv.imgproc.shape.findContoursOffset&quot；）"
+  },
+  {
+    "origin": "(GFindContoursH,&lt; GFindContoursOutput(GMat, RetrMode, ContMethod, GOpaque&lt; Point &gt;)&gt;, &quot;org.opencv.imgproc.shape.findContoursH&quot;)",
+    "local": "（Gfindsh，&lt；GFindContoursOutput（GMat、RetrMode、ContMethod、GOpaque&lt；点（&gt；）&&gt；C、C&引用；org.opencv.imgproc.shape.findContoursH&quot；）"
+  },
+  {
+    "origin": "(GFindContoursHNoOffset,&lt; GFindContoursOutput(GMat, RetrMode, ContMethod)&gt;, &quot;org.opencv.imgproc.shape.findContoursHNoOffset&quot;)",
+    "local": "（GfindShnoOffset，&lt；GFindContoursOutput（GMat、RetrMode、ContMethod）&引用；org.opencv.imgproc.shape.findContoursHNoOffset&quot；）"
+  },
+  {
+    "origin": "(GBoundingRectMat,&lt; GOpaque&lt; Rect &gt;(GMat)&gt;, &quot;org.opencv.imgproc.shape.boundingRectMat&quot;)",
+    "local": "（GBOUNDINGRECTMAT&lt；Gopaque&lt；矩形（&gt）（GMAT）&gt；，&gt；&quot；org.opencv.imgproc.shape.boundingrectmat&quot；）"
+  },
+  {
+    "origin": "(GBoundingRectVector32S,&lt; GOpaque&lt; Rect &gt;(GArray&lt; Point2i &gt;)&gt;, &quot;org.opencv.imgproc.shape.boundingRectVector32S&quot;)",
+    "local": "（GBoundingRectVector32S，&lt；高派克&lt；矩形&gt(加里&lt；点2i&gt；）&gt&引用；org.opencv.imgproc.shape.boundingRectVector32S&quot；）"
+  },
+  {
+    "origin": "(GBoundingRectVector32F,&lt; GOpaque&lt; Rect &gt;(GArray&lt; Point2f &gt;)&gt;, &quot;org.opencv.imgproc.shape.boundingRectVector32F&quot;)",
+    "local": "（GBOUNDINGRECTVECTOR32F&LT；Gopaque&lt；矩形（&gt）（加雷&lt；项目2f&gt；）&gt；，&个&quot；org.opencv.imgproc.shape.boundingrectvector32f&quot；）"
+  },
+  {
+    "origin": "(GFitLine2DMat,&lt; GOpaque&lt; Vec4f &gt;(GMat, DistanceTypes, double, double, double)&gt;, &quot;org.opencv.imgproc.shape.fitLine2DMat&quot;)",
+    "local": "（GFitLine2DMat，&lt；高派克&lt；Vec4f&gt(GMat，距离类型，双精度，双精度，双精度）&gt&引用；org.opencv.imgproc.shape.fitLine2DMat&quot；）"
+  },
+  {
+    "origin": "(GFitLine2DVector32S,&lt; GOpaque&lt; Vec4f &gt;(GArray&lt; Point2i &gt;, DistanceTypes, double, double, double)&gt;, &quot;org.opencv.imgproc.shape.fitLine2DVector32S&quot;)",
+    "local": "（GFitLine2DVector32S，&lt；高派克&lt；Vec4f&gt(加里&lt；点2i&gt；，距离类型，双精度，双精度，双精度）&gt&引用；org.opencv.imgproc.shape.fitLine2DVector32S&quot；）"
+  },
+  {
+    "origin": "(GFitLine2DVector32F,&lt; GOpaque&lt; Vec4f &gt;(GArray&lt; Point2f &gt;, DistanceTypes, double, double, double)&gt;, &quot;org.opencv.imgproc.shape.fitLine2DVector32F&quot;)",
+    "local": "（GFitLine2DVector32F，&lt；高派克&lt；Vec4f&gt(加里&lt；点2f&gt；，距离类型，双精度，双精度，双精度）&gt&引用；org.opencv.imgproc.shape.fitLine2DVector32F&quot；）"
+  },
+  {
+    "origin": "(GFitLine2DVector64F,&lt; GOpaque&lt; Vec4f &gt;(GArray&lt; Point2d &gt;, DistanceTypes, double, double, double)&gt;, &quot;org.opencv.imgproc.shape.fitLine2DVector64F&quot;)",
+    "local": "（GFitLine2DVector64F，&lt；高派克&lt；Vec4f&gt(加里&lt；点2d&gt；，距离类型，双精度，双精度，双精度）&gt&引用；org.opencv.imgproc.shape.fitLine2DVector64F&quot；）"
+  },
+  {
+    "origin": "(GFitLine3DMat,&lt; GOpaque&lt; Vec6f &gt;(GMat, DistanceTypes, double, double, double)&gt;, &quot;org.opencv.imgproc.shape.fitLine3DMat&quot;)",
+    "local": "（GFitLine3DMat，&lt；高派克&lt；Vec6f&gt(GMat，距离类型，双精度，双精度，双精度）&gt&引用；org.opencv.imgproc.shape.fitLine3DMat&quot；）"
+  },
+  {
+    "origin": "(GFitLine3DVector32S,&lt; GOpaque&lt; Vec6f &gt;(GArray&lt; Point3i &gt;, DistanceTypes, double, double, double)&gt;, &quot;org.opencv.imgproc.shape.fitLine3DVector32S&quot;)",
+    "local": "（GFitLine3DVector32S，&lt；高派克&lt；Vec6f&gt(加里&lt；点3i&gt；，距离类型，双精度，双精度，双精度）&gt&引用；org.opencv.imgproc.shape.fitLine3DVector32S&quot；）"
+  },
+  {
+    "origin": "(GFitLine3DVector32F,&lt; GOpaque&lt; Vec6f &gt;(GArray&lt; Point3f &gt;, DistanceTypes, double, double, double)&gt;, &quot;org.opencv.imgproc.shape.fitLine3DVector32F&quot;)",
+    "local": "（GFitLine3DVector32F，&lt；高派克&lt；Vec6f&gt(加里&lt；点3f&gt；，距离类型，双精度，双精度，双精度）&gt&引用；org.opencv.imgproc.shape.fitLine3DVector32F&quot；）"
+  },
+  {
+    "origin": "(GFitLine3DVector64F,&lt; GOpaque&lt; Vec6f &gt;(GArray&lt; Point3d &gt;, DistanceTypes, double, double, double)&gt;, &quot;org.opencv.imgproc.shape.fitLine3DVector64F&quot;)",
+    "local": "（GFitLine3DVector64F，&lt；高派克&lt；Vec6f&gt(加里&lt；Point3d&gt；，距离类型，双精度，双精度，双精度）&gt&引用；org.opencv.imgproc.shape.fitLine3DVector64F&quot；）"
+  },
+  {
+    "origin": "(GBGR2RGB,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.bgr2rgb&quot;)",
+    "local": "（GBGR2RGB，&lt；GMat（GMat）&gt；&gt；引用；org.opencv.imgproc.colorconvert.bgr2rgb&quot；）"
+  },
+  {
+    "origin": "(GRGB2YUV,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.rgb2yuv&quot;)",
+    "local": "（GRGB2YUV，&lt；GMat（GMat）&gt&引用；org.opencv.imgproc.colorconvert.rgb2yuv&quot；）"
+  },
+  {
+    "origin": "(GYUV2RGB,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.yuv2rgb&quot;)",
+    "local": "（GYUV2RGB，&lt；GMat（GMat）&gt&引用；org.opencv.imgproc.colorconvert.yuv2rgb&quot；）"
+  },
+  {
+    "origin": "(GBGR2I420,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.bgr2i420&quot;)",
+    "local": "（GBGR2I420，&lt；GMat（GMat）&gt；&gt；引用；org.opencv.imgproc.colorconvert.bgr2i420&quot；）"
+  },
+  {
+    "origin": "(GRGB2I420,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.rgb2i420&quot;)",
+    "local": "（GRGB2I420，&lt；GMat（GMat）&gt&引用；org.opencv.imgproc.colorconvert.rgb2i420&quot；）"
+  },
+  {
+    "origin": "(GI4202BGR,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.i4202bgr&quot;)",
+    "local": "（GI4202BGR，&lt；GMat（GMat）&gt&引用；org.opencv.imgproc.colorconvert.i4202bgr&quot；）"
+  },
+  {
+    "origin": "(GI4202RGB,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.i4202rgb&quot;)",
+    "local": "（GI4202RGB，&lt；GMat（GMat）&gt&引用；org.opencv.imgproc.colorconvert.i4202rgb&quot；）"
+  },
+  {
+    "origin": "(GNV12toRGB,&lt; GMat(GMat, GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.nv12torgb&quot;)",
+    "local": "（GNV12Torgb，&lt；GMAT（GMAT，GMAT）&gt；，&gt；quot；org.opencv.imgproc.colorconvert.nv12torgb&quot；）"
+  },
+  {
+    "origin": "(GNV12toBGR,&lt; GMat(GMat, GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.nv12tobgr&quot;)",
+    "local": "（GNV12目标，&lt；GMat（GMat，GMat）&gt&引用；org.opencv.imgproc.colorconvert.nv12tobgr&quot；）"
+  },
+  {
+    "origin": "(GRGB2Lab,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.rgb2lab&quot;)",
+    "local": "（GRGB2Lab，&lt；GMat（GMat）&gt&引用；org.opencv.imgproc.colorconvert.rgb2lab&quot；）"
+  },
+  {
+    "origin": "(GBGR2LUV,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.bgr2luv&quot;)",
+    "local": "（GBGR2LUV，&lt；GMat（GMat）&gt；&gt；引用；org.opencv.imgproc.colorconvert.bgr2luv&quot；）"
+  },
+  {
+    "origin": "(GLUV2BGR,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.luv2bgr&quot;)",
+    "local": "（GLUV2BGR，&lt；GMat（GMat）&gt&引用；org.opencv.imgproc.colorconvert.luv2bgr&quot；）"
+  },
+  {
+    "origin": "(GYUV2BGR,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.yuv2bgr&quot;)",
+    "local": "（GYUV2BGR，&lt；GMat（GMat）&gt&引用；org.opencv.imgproc.colorconvert.yuv2bgr&quot；）"
+  },
+  {
+    "origin": "(GBGR2YUV,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.bgr2yuv&quot;)",
+    "local": "（GBGR2YUV，&lt；GMat（GMat）&gt；&gt；引用；org.opencv.imgproc.colorconvert.bgr2yuv&quot；）"
+  },
+  {
+    "origin": "(GRGB2Gray,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.rgb2gray&quot;)",
+    "local": "（GRGB2Gray，&lt；GMat（GMat）&gt&引用；org.opencv.imgproc.colorconvert.rgb2gray&quot；）"
+  },
+  {
+    "origin": "(GRGB2GrayCustom,&lt; GMat(GMat, float, float, float)&gt;, &quot;org.opencv.imgproc.colorconvert.rgb2graycustom&quot;)",
+    "local": "（GRGB2GrayCustom，&lt；GMat（GMat，float，float，float）&gt&引用；org.opencv.imgproc.colorconvert.rgb2graycustom&quot；）"
+  },
+  {
+    "origin": "(GBGR2Gray,&lt; GMat(GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.bgr2gray&quot;)",
+    "local": "（GBGR2Gray，&lt；GMat（GMat）&gt；&gt；引用；org.opencv.imgproc.colorconvert.bgr2gray&quot；）"
+  },
+  {
+    "origin": "(GBayerGR2RGB,&lt;",
+    "local": "（GBayerGR2RGB，&lt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")&gt;, &quot;org.opencv.imgproc.colorconvert.bayergr2rgb&quot;)",
+    "local": ")&gt；，&gt；&gt；&引用；org.opencv.imgproc.colorconvert.bayergr2rgb&quot；）"
+  },
+  {
+    "origin": "(GRGB2HSV,&lt;",
+    "local": "（GRGB2HSV，&lt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")&gt;, &quot;org.opencv.imgproc.colorconvert.rgb2hsv&quot;)",
+    "local": ")&gt；，&gt；&gt；&引用；org.opencv.imgproc.colorconvert.rgb2hsv&quot；）"
+  },
+  {
+    "origin": "(GRGB2YUV422,&lt;",
+    "local": "（GRGB2YUV422，&lt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")&gt;, &quot;org.opencv.imgproc.colorconvert.rgb2yuv422&quot;)",
+    "local": ")&gt；，&gt；&gt；&引用；org.opencv.imgproc.colorconvert.rgb2yuv422&quot；）"
+  },
+  {
+    "origin": "(GNV12toRGBp,&lt; GMatP(GMat, GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.nv12torgbp&quot;)",
+    "local": "（gnv12torgbp，&lt；GMATP（GMAT，GMAT）&gt；，&gt；quot；org.opencv.imgproc.colorconvert.nv12torgbp&quot；）"
+  },
+  {
+    "origin": "(GNV12toGray,&lt; GMat(GMat, GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.nv12togray&quot;)",
+    "local": "（GNV12toGray，&lt；GMat（GMat，GMat）&gt&引用；org.opencv.imgproc.colorconvert.nv12togray&quot；）"
+  },
+  {
+    "origin": "(GNV12toBGRp,&lt; GMatP(GMat, GMat)&gt;, &quot;org.opencv.imgproc.colorconvert.nv12tobgrp&quot;)",
+    "local": "（GNV12toBGRp，&lt；GMatP（GMat，GMat）&gt&引用；org.opencv.imgproc.colorconvert.nv12tobgrp&quot；）"
+  },
+  {
+    "origin": "(GSobelXY,&lt; GMat2(GMat, int, int, int, double, double, int, Scalar)&gt;, &quot;org.opencv.imgproc.filters.sobelxy&quot;)",
+    "local": "（GSobelXY，&lt；GMat2（GMat，int，int，int，double，double，int，Scalar）&gt&引用；org.opencv.imgproc.filters.sobelxy&quot；）"
+  },
+  {
+    "origin": "(const GMat &amp;src, const Size &amp;ksize, double sigmaX, double sigmaY=0, int borderType=BORDER_DEFAULT, const Scalar &amp;borderValue=Scalar(0))",
+    "local": "（const GMat&amp；src、const Size和；ksize，double sigmaX，double sigmaY=0，int borderType=BORDER\\u DEFAULT，const Scalar&amp；borderValue=标量（0））"
+  },
+  {
+    "origin": "Blurs an image using a Gaussian filter.",
+    "local": "使用高斯滤波器模糊图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "GArray&lt; Point2f &gt;&#160;",
+    "local": "加里&lt；点2f&gt&#160;"
+  },
+  {
+    "origin": "(const GMat &amp;image, int maxCorners, double qualityLevel, double minDistance, const Mat &amp;mask=Mat(), int blockSize=3, bool useHarrisDetector=false, double k=0.04)",
+    "local": "（const GMat&amp；图像、int maxCorners、双质量级别、双思维距离、const Mat&amp；mask=Mat（），int blockSize=3，bool usehrisdetector=false，double k=0.04）"
+  },
+  {
+    "origin": "Determines strong corners on an image.",
+    "local": "确定图像上的强角点。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from I420 color space to BGR color space.",
+    "local": "将图像从I420颜色空间转换为BGR颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from I420 color space to BGR color space.",
+    "local": "将图像从I420颜色空间转换为BGR颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, int ddepth, int ksize=1, double scale=1, double delta=0, int borderType=BORDER_DEFAULT)",
+    "local": "（const GMat&amp；src，int ddepth，int ksize=1，double scale=1，double delta=0，int borderType=BORDER（默认）"
+  },
+  {
+    "origin": "Calculates the Laplacian of an image.",
+    "local": "计算图像的拉普拉斯函数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from LUV color space to BGR color space.",
+    "local": "将图像从LUV颜色空间转换为BGR颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, int ksize)",
+    "local": "（const GMat&amp；src，int ksize（内部大小）"
+  },
+  {
+    "origin": "Blurs an image using the median filter.",
+    "local": "使用中值滤波器模糊图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, const MorphTypes op, const Mat &amp;kernel, const Point &amp;anchor=Point(-1,-1), const int iterations=1, const BorderTypes borderType=BORDER_CONSTANT, const Scalar &amp;borderValue=morphologyDefaultBorderValue())",
+    "local": "（const GMat&amp；src、const、op、const Mat&amp；内核、常量点和；anchor=Point（-1，-1），const int iterations=1，const BorderTypes borderType=BORDER\\u常量，const Scalar&amp；borderValue=morphologyDefaultBorderValue（））"
+  },
+  {
+    "origin": "Performs advanced morphological transformations.",
+    "local": "执行高级形态变换。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src_y, const GMat &amp;src_uv)",
+    "local": "（const gmat&amp；src y，const gmat&amp；（4比索，PHP 4）"
+  },
+  {
+    "origin": "Converts an image from NV12 (YUV420p) color space to BGR. The function converts an input image from NV12 color space to RGB. The conventional ranges for Y, U, and V channel values are 0 to 255.",
+    "local": "将图像从NV12（YUV420p）颜色空间转换为BGR。该函数将输入图像从NV12颜色空间转换为RGB。Y、U和V通道值的常规范围为0到255。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src_y, const GMat &amp;src_uv)",
+    "local": "（const gmat&amp；src y，const gmat&amp；（4比索，PHP 4）"
+  },
+  {
+    "origin": "Converts an image from NV12 (YUV420p) color space to BGR. The function converts an input image from NV12 color space to BGR. The conventional ranges for Y, U, and V channel values are 0 to 255.",
+    "local": "将图像从NV12（YUV420p）颜色空间转换为BGR。该函数将输入图像从NV12颜色空间转换为BGR。Y、U和V通道值的常规范围为0到255。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src_y, const GMat &amp;src_uv)",
+    "local": "（const gmat&amp；src y，const gmat&amp；（4比索，PHP 4）"
+  },
+  {
+    "origin": "Converts an image from NV12 (YUV420p) color space to gray-scaled. The function converts an input image from NV12 color space to gray-scaled. The conventional ranges for Y, U, and V channel values are 0 to 255.",
+    "local": "将图像从NV12（YUV420p）颜色空间转换为灰度。该函数将输入图像从NV12颜色空间转换为灰度。Y、U和V通道值的常规范围为0到255。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src_y, const GMat &amp;src_uv)",
+    "local": "（const gmat&amp；src y，const gmat&amp；（4比索，PHP 4）"
+  },
+  {
+    "origin": "Converts an image from NV12 (YUV420p) color space to RGB. The function converts an input image from NV12 color space to RGB. The conventional ranges for Y, U, and V channel values are 0 to 255.",
+    "local": "将图像从NV12（YUV420p）颜色空间转换为RGB。该函数将输入图像从NV12颜色空间转换为RGB。Y、U和V通道值的常规范围为0到255。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src_y, const GMat &amp;src_uv)",
+    "local": "（const gmat&amp；src y，const gmat&amp；（4比索，PHP 4）"
+  },
+  {
+    "origin": "Converts an image from NV12 (YUV420p) color space to RGB. The function converts an input image from NV12 color space to RGB. The conventional ranges for Y, U, and V channel values are 0 to 255.",
+    "local": "将图像从NV12（YUV420p）颜色空间转换为RGB。该函数将输入图像从NV12颜色空间转换为RGB。Y、U和V通道值的常规范围为0到255。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from RGB color space to gray-scaled.",
+    "local": "将图像从RGB颜色空间转换为灰度。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, float rY, float gY, float bY)",
+    "local": "（const GMat&amp；src、float rY、float gY、float bY）"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from RGB color space to HSV. The function converts an input image from RGB color space to HSV. The conventional ranges for R, G, and B channel values are 0 to 255.",
+    "local": "将图像从RGB颜色空间转换为HSV。该函数用于将输入图像从RGB颜色空间转换为HSV。R、G和B通道值的常规范围为0到255。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from RGB color space to I420 color space.",
+    "local": "将图像从RGB颜色空间转换为I420颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from RGB color space to Lab color space.",
+    "local": "将图像从RGB颜色空间转换为实验室颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from RGB color space to YUV color space.",
+    "local": "将图像从RGB颜色空间转换为YUV颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from RGB color space to YUV422. The function converts an input image from RGB color space to YUV422. The conventional ranges for R, G, and B channel values are 0 to 255.",
+    "local": "将图像从RGB颜色空间转换为YUV422。该函数将输入图像从RGB颜色空间转换为YUV422。R、G和B通道值的常规范围为0到255。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, int ddepth, const Mat &amp;kernelX, const Mat &amp;kernelY, const Point &amp;anchor, const Scalar &amp;delta, int borderType=BORDER_DEFAULT, const Scalar &amp;borderValue=Scalar(0))",
+    "local": "（const GMat&amp；src、int ddepth、const Mat和；kernelX、const Mat和；克内利，康斯特点；锚定、常量和标量；delta，int borderType=BORDER\\u DEFAULT，const Scalar&amp；borderValue=标量（0））"
+  },
+  {
+    "origin": "Applies a separable linear filter to a matrix(image).",
+    "local": "对矩阵（图像）应用可分离线性滤波器。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, int ddepth, int dx, int dy, int ksize=3, double scale=1, double delta=0, int borderType=BORDER_DEFAULT, const Scalar &amp;borderValue=Scalar(0))",
+    "local": "（const GMat&amp；src，int ddepth，int dx，int dy，int ksize=3，double scale=1，double delta=0，int borderType=BORDER\\u DEFAULT，const Scalar&amp；borderValue=标量（0））"
+  },
+  {
+    "origin": "Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator.",
+    "local": "使用扩展的Sobel运算符计算第一、第二、第三或混合图像导数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src, int ddepth, int order, int ksize=3, double scale=1, double delta=0, int borderType=BORDER_DEFAULT, const Scalar &amp;borderValue=Scalar(0))",
+    "local": "（const GMat&amp；src，int ddepth，int order，int ksize=3，double scale=1，double delta=0，int borderType=BORDER\\u DEFAULT，const Scalar&amp；borderValue=标量（0））"
+  },
+  {
+    "origin": "Calculates the first, second, third, or mixed image derivatives using an extended Sobel operator.",
+    "local": "使用扩展的Sobel运算符计算第一、第二、第三或混合图像导数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from YUV color space to BGR color space.",
+    "local": "将图像从YUV颜色空间转换为BGR颜色空间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;src)",
+    "local": "（const gmat&amp；SRC）"
+  },
+  {
+    "origin": "Converts an image from YUV color space to RGB. The function converts an input image from YUV color space to RGB. The conventional ranges for Y, U, and V channel values are 0 to 255.",
+    "local": "将图像从YUV颜色空间转换为RGB。该函数将输入图像从YUV颜色空间转换为RGB。Y、U和V通道值的常规范围为0到255。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:33为OpenCV生成，&#160；"
+  }
+]

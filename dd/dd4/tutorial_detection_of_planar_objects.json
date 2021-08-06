@@ -1,0 +1,122 @@
+[
+  {
+    "origin": "OpenCV: Detection of planar objects",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Detection of planar objects",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Victor Eruhimov",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "The goal of this tutorial is to learn how to use",
+    "local": ""
+  },
+  {
+    "origin": "features2d",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "calib3d",
+    "local": ""
+  },
+  {
+    "origin": "modules for detecting known planar objects in scenes.",
+    "local": ""
+  },
+  {
+    "origin": "Test data",
+    "local": ""
+  },
+  {
+    "origin": ": use images in your data folder, for instance, box.png and box_in_scene.png.",
+    "local": ""
+  },
+  {
+    "origin": "Create a new console project. Read two input images. :",
+    "local": ""
+  },
+  {
+    "origin": "Mat img1 = imread(argv[1], IMREAD_GRAYSCALE); Mat img2 = imread(argv[2], IMREAD_GRAYSCALE);",
+    "local": ""
+  },
+  {
+    "origin": "Detect keypoints in both images and compute descriptors for each of the keypoints. :",
+    "local": ""
+  },
+  {
+    "origin": "// detecting keypoints Ptr&lt;Feature2D&gt; surf = SURF::create(); vector&lt;KeyPoint&gt; keypoints1; Mat descriptors1; surf-&gt;detectAndCompute(img1, Mat(), keypoints1, descriptors1); ... // do the same for the second image",
+    "local": ""
+  },
+  {
+    "origin": "Now, find the closest matches between descriptors from the first image to the second: :",
+    "local": ""
+  },
+  {
+    "origin": "// matching descriptors BruteForceMatcher&lt;L2&lt;float&gt; &gt; matcher; vector&lt;DMatch&gt; matches; matcher.match(descriptors1, descriptors2, matches);",
+    "local": ""
+  },
+  {
+    "origin": "Visualize the results: :",
+    "local": ""
+  },
+  {
+    "origin": "// drawing the results namedWindow(\"matches\", 1); Mat img_matches; drawMatches(img1, keypoints1, img2, keypoints2, matches, img_matches); imshow(\"matches\", img_matches); waitKey(0);",
+    "local": ""
+  },
+  {
+    "origin": "Find the homography transformation between two sets of points: :",
+    "local": ""
+  },
+  {
+    "origin": "vector&lt;Point2f&gt; points1, points2; // fill the arrays with the points .... Mat H = findHomography(Mat(points1), Mat(points2), RANSAC, ransacReprojThreshold);",
+    "local": ""
+  },
+  {
+    "origin": "Create a set of inlier matches and draw them. Use perspectiveTransform function to map points with homography:",
+    "local": ""
+  },
+  {
+    "origin": "Mat points1Projected; perspectiveTransform(Mat(points1), points1Projected, H);",
+    "local": ""
+  },
+  {
+    "origin": "Use drawMatches for drawing inliers.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

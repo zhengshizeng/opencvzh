@@ -1,0 +1,338 @@
+[
+  {
+    "origin": "OpenCV: Singular value matrix decomposition",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Singular value matrix decomposition",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(float *src, size_t src_step, float *w, float *u, size_t u_step, float *vt, size_t vt_step, int m, int n, int flags)",
+    "local": ""
+  },
+  {
+    "origin": "(double *src, size_t src_step, double *w, double *u, size_t u_step, double *vt, size_t vt_step, int m, int n, int flags)",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Performs singular value decomposition of \\(M\\times N\\)( \\(M&gt;N\\)) matrix \\(A = U*\\Sigma*V^T\\).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "pointer to input \\(M\\times N\\) matrix \\(A\\) stored in column major order. After finish of work src will be filled with rows of \\(U\\) or not modified (depends of flag CV_HAL_SVD_MODIFY_A).",
+    "local": ""
+  },
+  {
+    "origin": "src_step",
+    "local": ""
+  },
+  {
+    "origin": "number of bytes between two consequent columns of matrix \\(A\\).",
+    "local": ""
+  },
+  {
+    "origin": "w",
+    "local": ""
+  },
+  {
+    "origin": "pointer to array for singular values of matrix \\(A\\) (i. e. first \\(N\\) diagonal elements of matrix \\(\\Sigma\\)).",
+    "local": ""
+  },
+  {
+    "origin": "u",
+    "local": ""
+  },
+  {
+    "origin": "pointer to output \\(M\\times N\\) or \\(M\\times M\\) matrix \\(U\\) (size depends of flags). Pointer must be valid if flag CV_HAL_SVD_MODIFY_A not used.",
+    "local": ""
+  },
+  {
+    "origin": "u_step",
+    "local": ""
+  },
+  {
+    "origin": "number of bytes between two consequent rows of matrix \\(U\\).",
+    "local": ""
+  },
+  {
+    "origin": "vt",
+    "local": ""
+  },
+  {
+    "origin": "pointer to array for \\(N\\times N\\) matrix \\(V^T\\).",
+    "local": ""
+  },
+  {
+    "origin": "vt_step",
+    "local": ""
+  },
+  {
+    "origin": "number of bytes between two consequent rows of matrix \\(V^T\\).",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": "number fo rows in matrix \\(A\\).",
+    "local": ""
+  },
+  {
+    "origin": "n",
+    "local": ""
+  },
+  {
+    "origin": "number of columns in matrix \\(A\\).",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "algorithm options (combination of CV_HAL_SVD_FULL_UV, ...).",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "hal_ni_SVD32f()",
+    "local": ""
+  },
+  {
+    "origin": "int hal_ni_SVD32f",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src_step",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "w",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "u",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "u_step",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "vt",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "vt_step",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "n",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "hal_ni_SVD64f()",
+    "local": ""
+  },
+  {
+    "origin": "int hal_ni_SVD64f",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src_step",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "w",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "u",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "u_step",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "vt",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "vt_step",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "m",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "n",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by &#160;",
+    "local": ""
+  }
+]

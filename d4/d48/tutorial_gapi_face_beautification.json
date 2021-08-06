@@ -1,0 +1,626 @@
+[
+  {
+    "origin": "OpenCV: Implementing a face beautification algorithm with G-API",
+    "local": "OpenCV：用G-API实现人脸美化算法"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Implementing a face beautification algorithm with G-API",
+    "local": "用G-API实现人脸美化算法"
+  },
+  {
+    "origin": "Table of Contents",
+    "local": "目录"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "Prerequisites",
+    "local": "先决条件"
+  },
+  {
+    "origin": "Face beautification algorithm",
+    "local": "人脸美化算法"
+  },
+  {
+    "origin": "Constructing a G-API pipeline",
+    "local": "构建G-API管道"
+  },
+  {
+    "origin": "Declaring Deep Learning topologies",
+    "local": "声明深度学习拓扑"
+  },
+  {
+    "origin": "Describing the processing graph",
+    "local": "描述处理图"
+  },
+  {
+    "origin": "Unsharp mask in G-API",
+    "local": "G-API中的反锐化掩码"
+  },
+  {
+    "origin": "Custom operations",
+    "local": "自定义操作"
+  },
+  {
+    "origin": "Face detector post-processing",
+    "local": "人脸检测后处理"
+  },
+  {
+    "origin": "Facial landmarks post-processing",
+    "local": "人脸标志后处理"
+  },
+  {
+    "origin": "Getting an eye contour",
+    "local": "获取眼睛轮廓"
+  },
+  {
+    "origin": "Getting a forehead contour",
+    "local": "额头轮廓"
+  },
+  {
+    "origin": "Drawing masks",
+    "local": "绘图遮罩"
+  },
+  {
+    "origin": "Configuring and running the pipeline",
+    "local": "配置和运行管道"
+  },
+  {
+    "origin": "DNN parameters",
+    "local": "DNN参数"
+  },
+  {
+    "origin": "Kernel packages",
+    "local": "内核包"
+  },
+  {
+    "origin": "Compiling the streaming pipeline",
+    "local": "编译流媒体管道"
+  },
+  {
+    "origin": "Running the streaming pipeline",
+    "local": "运行流媒体管道"
+  },
+  {
+    "origin": "Conclusion",
+    "local": "结论"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": "在本教程中，您将学习："
+  },
+  {
+    "origin": "Basics of a sample face beautification algorithm;",
+    "local": "一个简单的人脸美化算法；"
+  },
+  {
+    "origin": "How to infer different networks inside a pipeline with G-API;",
+    "local": "如何利用G-API推断管道内部的不同网络；"
+  },
+  {
+    "origin": "How to run a G-API pipeline on a video stream.",
+    "local": "如何在视频流上运行G-API管道。"
+  },
+  {
+    "origin": "Prerequisites",
+    "local": "先决条件"
+  },
+  {
+    "origin": "This sample requires:",
+    "local": "此示例要求："
+  },
+  {
+    "origin": "PC with GNU/Linux or Microsoft Windows (Apple macOS is supported but was not tested);",
+    "local": "带有GNU/Linux或Microsoft Windows的PC（支持Apple macOS，但未经测试）；"
+  },
+  {
+    "origin": "OpenCV 4.2 or later built with Intel® Distribution of",
+    "local": "OpenCV 4.2或更高版本，采用Intel构建® 分配"
+  },
+  {
+    "origin": "OpenVINO™ Toolkit",
+    "local": "开维诺™ 工具箱"
+  },
+  {
+    "origin": "(building with",
+    "local": "（建筑物）"
+  },
+  {
+    "origin": "Intel® TBB",
+    "local": "Intel公司® TBB公司"
+  },
+  {
+    "origin": "is a plus);",
+    "local": "是加号）；"
+  },
+  {
+    "origin": "The following topologies from OpenVINO™ Toolkit",
+    "local": "来自OpenVINO的以下拓扑™ 工具箱"
+  },
+  {
+    "origin": "Open Model Zoo",
+    "local": "开放模型动物园"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": ";",
+    "local": ";"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Face beautification algorithm",
+    "local": "人脸美化算法"
+  },
+  {
+    "origin": "We will implement a simple face beautification algorithm using a combination of modern Deep Learning techniques and traditional Computer Vision. The general idea behind the algorithm is to make face skin smoother while preserving face features like eyes or a mouth contrast. The algorithm identifies parts of the face using a DNN inference, applies different filters to the parts found, and then combines it into the final result using basic image arithmetics:",
+    "local": "我们将结合现代的深度学习技术和传统的计算机视觉来实现一个简单的人脸美化算法。该算法的基本思想是在保持面部特征（如眼睛或嘴巴对比度）的同时，使面部皮肤更平滑。该算法使用DNN推理识别人脸的各个部分，对找到的部分应用不同的过滤器，然后使用基本的图像算法将其组合成最终结果："
+  },
+  {
+    "origin": "This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.",
+    "local": "此浏览器无法显示SVG：请改用Firefox、Chrome、Safari或Opera。"
+  },
+  {
+    "origin": "Briefly the algorithm is described as follows:",
+    "local": "算法简述如下："
+  },
+  {
+    "origin": "Input image \\(I\\) is passed to unsharp mask and bilateral filters ( \\(U\\) and \\(L\\) respectively);",
+    "local": "输入图像\\（I\\）被传递到反锐化掩模和双边滤波器（U\\）和L\\）；"
+  },
+  {
+    "origin": "Input image \\(I\\) is passed to an SSD-based face detector;",
+    "local": "输入图像\\（I\\）被传递到基于SSD的面部检测器；"
+  },
+  {
+    "origin": "SSD result (a \\([1 \\times 1 \\times 200 \\times 7]\\) blob) is parsed and converted to an array of faces;",
+    "local": "SSD结果（一个\\（[1\\times 1\\times 200\\times 7]\\）blob）被解析并转换为一个面数组；"
+  },
+  {
+    "origin": "Every face is passed to a landmarks detector;",
+    "local": "每一张脸都被传送到地标探测器；"
+  },
+  {
+    "origin": "Based on landmarks found for every face, three image masks are generated:",
+    "local": "基于为每个人脸找到的地标，生成三个图像遮罩："
+  },
+  {
+    "origin": "A background mask \\(b\\) &ndash; indicating which areas from the original image to keep as-is;",
+    "local": "背景遮罩\\（b\\）&ndash；指示要保持原样的原始图像中的哪些区域；"
+  },
+  {
+    "origin": "A face part mask \\(p\\) &ndash; identifying regions to preserve (sharpen).",
+    "local": "面部面具\\（p\\）&ndash；识别要保留（锐化）的区域。"
+  },
+  {
+    "origin": "A face skin mask \\(s\\) &ndash; identifying regions to blur;",
+    "local": "面膜；识别要模糊的区域；"
+  },
+  {
+    "origin": "The final result \\(O\\) is a composition of features above calculated as \\(O = b*I + p*U + s*L\\).",
+    "local": "最终结果\\（O\\）是上述特征的合成，计算为\\（O=b*I+p*U+s*L\\）。"
+  },
+  {
+    "origin": "Generating face element masks based on a limited set of features (just 35 per face, including all its parts) is not very trivial and is described in the sections below.",
+    "local": "基于一组有限的特征（每个人脸只有35个，包括所有的部分）生成人脸元素遮罩并不是一件很简单的事情，下面将对其进行描述。"
+  },
+  {
+    "origin": "Constructing a G-API pipeline",
+    "local": "构建G-API管道"
+  },
+  {
+    "origin": "Declaring Deep Learning topologies",
+    "local": "声明深度学习拓扑"
+  },
+  {
+    "origin": "This sample is using two DNN detectors. Every network takes one input and produces one output. In G-API, networks are defined with macro",
+    "local": "此样本使用两个DNN探测器。每个网络接受一个输入并产生一个输出。在G-API中，网络是用宏定义的"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "To get more information, see",
+    "local": "要获取更多信息，请参阅"
+  },
+  {
+    "origin": "described in the \"Face Analytics pipeline\" tutorial.",
+    "local": "在“Face Analytics pipeline”教程中介绍。"
+  },
+  {
+    "origin": "Describing the processing graph",
+    "local": "描述处理图"
+  },
+  {
+    "origin": "The code below generates a graph for the algorithm above:",
+    "local": "下面的代码为上述算法生成一个图形："
+  },
+  {
+    "origin": "The resulting graph is a mixture of G-API's standard operations, user-defined operations (namespace",
+    "local": "结果图是G-API的标准操作、用户定义操作（命名空间）的混合"
+  },
+  {
+    "origin": "), and DNN inference. The generic function",
+    "local": ")，和DNN推断。泛型函数"
+  },
+  {
+    "origin": "allows to trigger inference within the pipeline; networks to infer are specified as template parameters. The sample code is using two versions of",
+    "local": "允许在管道内触发推理；要推断的网络被指定为模板参数。示例代码使用的是"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "A frame-oriented one is used to detect faces on the input frame.",
+    "local": "一个面向帧的方法用于检测输入帧上的人脸。"
+  },
+  {
+    "origin": "An ROI-list oriented one is used to run landmarks inference on a list of faces &ndash; this version produces an array of landmarks per every face.",
+    "local": "一个面向ROI列表的方法用于对人脸列表进行路标推断&ndash；这个版本为每个面生成一个地标数组。"
+  },
+  {
+    "origin": "More on this in \"Face Analytics pipeline\" (",
+    "local": "更多关于这方面的信息，请参见“Face Analytics pipeline”("
+  },
+  {
+    "origin": "section).",
+    "local": "节）。"
+  },
+  {
+    "origin": "Unsharp mask in G-API",
+    "local": "G-API中的反锐化掩码"
+  },
+  {
+    "origin": "The unsharp mask \\(U\\) for image \\(I\\) is defined as:",
+    "local": "图像\\（I\\）的反锐化掩码\\（U\\）定义为："
+  },
+  {
+    "origin": "\\[U = I - s * L(M(I)),\\]",
+    "local": "\\\\[U=I-s*L（M（I）），\\]"
+  },
+  {
+    "origin": "where \\(M()\\) is a median filter, \\(L()\\) is the Laplace operator, and \\(s\\) is a strength coefficient. While G-API doesn't provide this function out-of-the-box, it is expressed naturally with the existing G-API operations:",
+    "local": "其中\\（M（）\\）是中值滤波器，\\（L（）\\）是拉普拉斯算子，\\（s\\）是强度系数。虽然G-API不提供开箱即用的功能，但它是用现有的G-API操作自然表达的："
+  },
+  {
+    "origin": "Note that the code snipped above is a regular C++ function defined with G-API types. Users can write functions like this to simplify graph construction; when called, this function just puts the relevant nodes to the pipeline it is used in.",
+    "local": "注意，上面所剪的代码是一个用G-API类型定义的规则C++函数。用户可以编写这样的函数来简化图形的构造；调用时，此函数只是将相关节点放到它所使用的管道中。"
+  },
+  {
+    "origin": "Custom operations",
+    "local": "自定义操作"
+  },
+  {
+    "origin": "The face beautification graph is using custom operations extensively. This chapter focuses on the most interesting kernels, refer to",
+    "local": "人脸美化图广泛使用自定义操作。本章重点介绍最有趣的内核，请参阅"
+  },
+  {
+    "origin": "for general information on defining operations and implementing kernels in G-API.",
+    "local": "有关在G-API中定义操作和实现内核的一般信息。"
+  },
+  {
+    "origin": "Face detector post-processing",
+    "local": "人脸检测后处理"
+  },
+  {
+    "origin": "A face detector output is converted to an array of faces with the following kernel:",
+    "local": "人脸检测器输出转换为具有以下内核的人脸数组："
+  },
+  {
+    "origin": "Facial landmarks post-processing",
+    "local": "人脸标志后处理"
+  },
+  {
+    "origin": "The algorithm infers locations of face elements (like the eyes, the mouth and the head contour itself) using a generic facial landmarks detector (",
+    "local": "该算法使用一个通用的面部地标检测器来推断面部元素（如眼睛、嘴巴和头部轮廓本身）的位置("
+  },
+  {
+    "origin": "details",
+    "local": "细节"
+  },
+  {
+    "origin": ") from OpenVINO™ Open Model Zoo. However, the detected landmarks as-is are not enough to generate masks &mdash; this operation requires regions of interest on the face represented by closed contours, so some interpolation is applied to get them. This landmarks processing and interpolation is performed by the following kernel:",
+    "local": ")来自OpenVINO™ 打开模型动物园。但是，检测到的地标不足以生成掩码&mdash；此操作需要在由闭合轮廓表示的面上显示感兴趣的区域，因此应用一些插值来获得它们。此地标处理和插值由以下内核执行："
+  },
+  {
+    "origin": "The kernel takes two arrays of denormalized landmarks coordinates and returns an array of elements' closed contours and an array of faces' closed contours; in other words, outputs are, the first, an array of contours of image areas to be sharpened and, the second, another one to be smoothed.",
+    "local": "该核取两个非标准化地标坐标数组，返回元素闭合轮廓数组和人脸闭合轮廓数组；换句话说，输出是，第一个是要锐化的图像区域的轮廓阵列，第二个是要平滑的另一个。"
+  },
+  {
+    "origin": "Here and below",
+    "local": "这里和下面"
+  },
+  {
+    "origin": "is a vector of points.",
+    "local": "是点的向量。"
+  },
+  {
+    "origin": "Getting an eye contour",
+    "local": "获取眼睛轮廓"
+  },
+  {
+    "origin": "Eye contours are estimated with the following function:",
+    "local": "通过以下功能估计眼睛轮廓："
+  },
+  {
+    "origin": "Briefly, this function restores the bottom side of an eye by a half-ellipse based on two points in left and right eye corners. In fact,",
+    "local": "简单地说，这个函数基于左右眼角的两个点将眼睛的底部恢复半椭圆。事实上，"
+  },
+  {
+    "origin": "is used to approximate the eye region, and the function only defines ellipse parameters based on just two points:",
+    "local": "用于近似眼睛区域，函数仅基于两点定义椭圆参数："
+  },
+  {
+    "origin": "The ellipse center and the \\(X\\) half-axis calculated by two eye Points;",
+    "local": "由两个眼点计算的椭圆中心和（X）半轴；"
+  },
+  {
+    "origin": "The \\(Y\\) half-axis calculated according to the assumption that an average eye width is \\(1/3\\) of its length;",
+    "local": "（Y）半轴，根据平均眼睛宽度为其长度的（1/3）的假设计算；"
+  },
+  {
+    "origin": "The start and the end angles which are 0 and 180 (refer to",
+    "local": "起始角和结束角为0和180（参见"
+  },
+  {
+    "origin": "documentation);",
+    "local": "文件）；"
+  },
+  {
+    "origin": "The angle delta: how much points to produce in the contour;",
+    "local": "角度增量：在等高线中生成多少点；"
+  },
+  {
+    "origin": "The inclination angle of the axes.",
+    "local": "轴的倾斜角度。"
+  },
+  {
+    "origin": "The use of the",
+    "local": "使用"
+  },
+  {
+    "origin": "instead of just",
+    "local": "而不仅仅是"
+  },
+  {
+    "origin": "in function",
+    "local": "在功能上"
+  },
+  {
+    "origin": "is essential as it allows to return a negative value depending on the",
+    "local": "是必需的，因为它允许根据"
+  },
+  {
+    "origin": "and the",
+    "local": "以及"
+  },
+  {
+    "origin": "signs so we can get the right angle even in case of upside-down face arrangement (if we put the points in the right order, of course).",
+    "local": "所以我们可以得到正确的角度，即使在倒立面对安排（如果我们把点在正确的顺序，当然）。"
+  },
+  {
+    "origin": "Getting a forehead contour",
+    "local": "额头轮廓"
+  },
+  {
+    "origin": "The function approximates the forehead contour:",
+    "local": "该函数近似额头轮廓："
+  },
+  {
+    "origin": "As we have only jaw points in our detected landmarks, we have to get a half-ellipse based on three points of a jaw: the leftmost, the rightmost and the lowest one. The jaw width is assumed to be equal to the forehead width and the latter is calculated using the left and the right points. Speaking of the \\(Y\\) axis, we have no points to get it directly, and instead assume that the forehead height is about \\(2/3\\) of the jaw height, which can be figured out from the face center (the middle between the left and right points) and the lowest jaw point.",
+    "local": "因为在我们检测到的地标中只有下巴点，所以我们必须根据下巴的三个点得到一个半椭圆：最左边的，最右边的和最低的。假设下巴宽度等于额头宽度，额头宽度用左右两个点计算。说到（Y）轴，我们没有点可以直接得到它，而是假设前额高度大约是下巴高度的（2/3），这可以从脸部中心（左右点之间的中间）和下巴最低点算出。"
+  },
+  {
+    "origin": "Drawing masks",
+    "local": "绘图遮罩"
+  },
+  {
+    "origin": "When we have all the contours needed, we are able to draw masks:",
+    "local": "当我们有了所有需要的轮廓，我们就能画出面具："
+  },
+  {
+    "origin": "The steps to get the masks are:",
+    "local": "获取面具的步骤如下："
+  },
+  {
+    "origin": "the \"sharp\" mask calculation:",
+    "local": "“锐利”面具计算："
+  },
+  {
+    "origin": "fill the contours that should be sharpened;",
+    "local": "填充需要锐化的轮廓；"
+  },
+  {
+    "origin": "blur that to get the \"sharp\" mask (",
+    "local": "把它弄模糊以得到“锋利”的面具("
+  },
+  {
+    "origin": ");",
+    "local": ");"
+  },
+  {
+    "origin": "the \"bilateral\" mask calculation:",
+    "local": "“双边”掩码计算："
+  },
+  {
+    "origin": "fill all the face contours fully;",
+    "local": "充分填充所有面部轮廓；"
+  },
+  {
+    "origin": "blur that;",
+    "local": "模糊这个；"
+  },
+  {
+    "origin": "subtract areas which intersect with the \"sharp\" mask &mdash; and get the \"bilateral\" mask (",
+    "local": "减去与“锐利”遮罩相交的区域&mdash；戴上“双边”面具("
+  },
+  {
+    "origin": ");",
+    "local": ");"
+  },
+  {
+    "origin": "the background mask calculation:",
+    "local": "背景遮罩计算："
+  },
+  {
+    "origin": "add two previous masks",
+    "local": "添加前两个遮罩"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "revert the output (by",
+    "local": "恢复输出（通过"
+  },
+  {
+    "origin": ") to get the background mask (",
+    "local": ")获取背景遮罩("
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Configuring and running the pipeline",
+    "local": "配置和运行管道"
+  },
+  {
+    "origin": "Once the graph is fully expressed, we can finally compile it and run on real data. G-API graph compilation is the stage where the G-API framework actually understands which kernels and networks to use. This configuration happens via G-API compilation arguments.",
+    "local": "一旦图形被完全表达，我们最终可以编译它并在实际数据上运行。G-API图形编译是G-API框架实际了解要使用哪些内核和网络的阶段。此配置通过G-API编译参数进行。"
+  },
+  {
+    "origin": "DNN parameters",
+    "local": "DNN参数"
+  },
+  {
+    "origin": "This sample is using OpenVINO™ Toolkit Inference Engine backend for DL inference, which is configured the following way:",
+    "local": "此示例使用的是OpenVINO™ 用于DL推理的工具箱推理引擎后端，其配置方式如下："
+  },
+  {
+    "origin": "Every",
+    "local": "每"
+  },
+  {
+    "origin": "object is related to the network specified in its template argument. We should pass there the network type we have defined in",
+    "local": "对象与其模板参数中指定的网络相关。我们应该在那里传递在中定义的网络类型"
+  },
+  {
+    "origin": "in the early beginning of the tutorial.",
+    "local": "在本教程的早期开始。"
+  },
+  {
+    "origin": "Network parameters are then wrapped in",
+    "local": "然后将网络参数包装在"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "More details in \"Face Analytics Pipeline\" (",
+    "local": "更多详情请参见“Face Analytics Pipeline”("
+  },
+  {
+    "origin": "section).",
+    "local": "节）。"
+  },
+  {
+    "origin": "Kernel packages",
+    "local": "内核包"
+  },
+  {
+    "origin": "In this example we use a lot of custom kernels, in addition to that we use Fluid backend to optimize out memory for G-API's standard kernels where applicable. The resulting kernel package is formed like this:",
+    "local": "在本例中，我们使用了许多自定义内核，此外，我们还使用Fluid backend优化G-API标准内核的内存（如果适用）。生成的内核包如下所示："
+  },
+  {
+    "origin": "Compiling the streaming pipeline",
+    "local": "编译流媒体管道"
+  },
+  {
+    "origin": "G-API optimizes execution for video streams when compiled in the \"Streaming\" mode.",
+    "local": "在“流”模式下编译时，G-API优化了视频流的执行。"
+  },
+  {
+    "origin": "More on this in \"Face Analytics Pipeline\" (",
+    "local": "更多关于这方面的信息，请参见“Face Analytics Pipeline”("
+  },
+  {
+    "origin": "section).",
+    "local": "节）。"
+  },
+  {
+    "origin": "Running the streaming pipeline",
+    "local": "运行流媒体管道"
+  },
+  {
+    "origin": "In order to run the G-API streaming pipeline, all we need is to specify the input video source, call",
+    "local": "为了运行G-API流媒体管道，我们只需要指定输入视频源，调用"
+  },
+  {
+    "origin": ", and then fetch the pipeline processing results:",
+    "local": "，然后获取管道处理结果："
+  },
+  {
+    "origin": "Once results are ready and can be pulled from the pipeline we display it on the screen and handle GUI events.",
+    "local": "一旦结果准备好并且可以从管道中提取，我们就会在屏幕上显示它并处理GUI事件。"
+  },
+  {
+    "origin": "See",
+    "local": "看到了吗"
+  },
+  {
+    "origin": "section in the \"Face Analytics Pipeline\" tutorial for more details.",
+    "local": "有关详细信息，请参阅“Face Analytics Pipeline”教程的一节。"
+  },
+  {
+    "origin": "Conclusion",
+    "local": "结论"
+  },
+  {
+    "origin": "The tutorial has two goals: to show the use of brand new features of G-API introduced in OpenCV 4.2, and give a basic understanding on a sample face beautification algorithm.",
+    "local": "本教程有两个目标：展示opencv4.2中引入的G-API的全新特性的使用，并对一个样例人脸美化算法有一个基本的了解。"
+  },
+  {
+    "origin": "The result of the algorithm application:",
+    "local": "算法应用结果："
+  },
+  {
+    "origin": "Face Beautification example",
+    "local": "美脸实例"
+  },
+  {
+    "origin": "On the test machine (Intel® Core™ i7-8700) the G-API-optimized video pipeline outperforms its serial (non-pipelined) version by a factor of",
+    "local": "在测试机上（英特尔® 核心™ i7-8700）经过G-API优化的视频管道比串行（非管道）版本的性能高出一倍"
+  },
+  {
+    "origin": "&ndash; meaning that for such a non-trivial graph, the proper pipelining can bring almost 3x increase in performance.",
+    "local": "&恩达什；这意味着对于这样一个非平凡的图，适当的流水线可以带来几乎3倍的性能提高。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

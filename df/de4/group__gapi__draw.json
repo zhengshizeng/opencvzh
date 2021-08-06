@@ -1,0 +1,102 @@
+[
+  {
+    "origin": "OpenCV: G-API Drawing and composition functionality",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Modules",
+    "local": ""
+  },
+  {
+    "origin": "G-API Drawing and composition functionality",
+    "local": ""
+  },
+  {
+    "origin": "Functions for in-graph drawing.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Modules",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Functions for in-graph drawing.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This is a Work in Progress functionality and APIs may change in the future releases.",
+    "local": ""
+  },
+  {
+    "origin": "G-API can do some in-graph drawing with a generic operations and a set of",
+    "local": ""
+  },
+  {
+    "origin": ". In contrast with traditional OpenCV, in G-API user need to form a",
+    "local": ""
+  },
+  {
+    "origin": "rendering list",
+    "local": ""
+  },
+  {
+    "origin": "of primitives to draw. This list can be built manually or generated within a graph. This list is passed to",
+    "local": ""
+  },
+  {
+    "origin": "where all primitives are interpreted and applied to the image.",
+    "local": ""
+  },
+  {
+    "origin": "For example, in a complex pipeline a list of detected objects can be translated in-graph to a list of",
+    "local": ""
+  },
+  {
+    "origin": "primitives to highlight those with bounding boxes, or a list of detected faces can be translated in-graph to a list of",
+    "local": ""
+  },
+  {
+    "origin": "primitives to hide sensitive content or protect privacy.",
+    "local": ""
+  },
+  {
+    "origin": "Like any other operations, rendering in G-API can be reimplemented by different backends. Currently only an OpenCV-based backend is available.",
+    "local": ""
+  },
+  {
+    "origin": "In addition to the graph-level operations, there are also regular (immediate) OpenCV-like functions are available &ndash; see",
+    "local": ""
+  },
+  {
+    "origin": ". These functions are just wrappers over regular G-API and build the rendering graphs on the fly, so take compilation arguments as parameters.",
+    "local": ""
+  },
+  {
+    "origin": "Currently this API is more machine-oriented than human-oriented. The main purpose is to translate a set of domain-specific objects to a list of primitives to draw. For example, in order to generate a picture like this:",
+    "local": ""
+  },
+  {
+    "origin": "Rendering list needs to be generated as follows:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by &#160;",
+    "local": ""
+  }
+]

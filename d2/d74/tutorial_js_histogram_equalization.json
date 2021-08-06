@@ -1,0 +1,150 @@
+[
+  {
+    "origin": "OpenCV: Histograms - 2: Histogram Equalization",
+    "local": "OpenCV：直方图-2：直方图均衡化"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Histograms - 2: Histogram Equalization",
+    "local": "直方图-2：直方图均衡化"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "We will learn the concepts of histogram equalization and use it to improve the contrast of our images.",
+    "local": "我们将学习直方图均衡化的概念，并使用它来提高图像的对比度。"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "Consider an image whose pixel values are confined to some specific range of values only. For eg, brighter image will have all pixels confined to high values. But a good image will have pixels from all regions of the image. So you need to stretch this histogram to either ends (as given in below image, from wikipedia) and that is what Histogram Equalization does (in simple words). This normally improves the contrast of the image.",
+    "local": "考虑一个图像，其像素值仅限于某些特定的值范围。例如，较亮的图像将所有像素限制在高值。但是一个好的图像会有来自图像所有区域的像素。所以你需要把这个直方图拉伸到两端（如下图所示，来自维基百科），这就是直方图均衡化的作用（简单地说）。这通常会提高图像的对比度。"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "I would recommend you to read the wikipedia page on",
+    "local": "我建议你阅读维基百科的网页"
+  },
+  {
+    "origin": "Histogram Equalization",
+    "local": "直方图均衡化"
+  },
+  {
+    "origin": "for more details about it. It has a very good explanation with worked out examples, so that you would understand almost everything after reading that.",
+    "local": "更多细节。它有一个很好的解释与制定的例子，所以你会明白几乎所有阅读后。"
+  },
+  {
+    "origin": "Histograms Equalization in OpenCV",
+    "local": "OpenCV中的直方图均衡"
+  },
+  {
+    "origin": "We use the function:",
+    "local": "我们使用函数："
+  },
+  {
+    "origin": "(src, dst)",
+    "local": "（src、dst）"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "source 8-bit single channel image.",
+    "local": "源8位单通道图像。"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "destination image of the same size and type as src.",
+    "local": "与src大小和类型相同的目标图像。"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "CLAHE (Contrast Limited Adaptive Histogram Equalization)",
+    "local": "对比度受限自适应直方图均衡化"
+  },
+  {
+    "origin": "In",
+    "local": "在"
+  },
+  {
+    "origin": "adaptive histogram equalization",
+    "local": "自适应直方图均衡化"
+  },
+  {
+    "origin": ", image is divided into small blocks called \"tiles\" (tileSize is 8x8 by default in OpenCV). Then each of these blocks are histogram equalized as usual. So in a small area, histogram would confine to a small region (unless there is noise). If noise is there, it will be amplified. To avoid this,",
+    "local": "，图像被分成称为“tiles”的小块（在OpenCV中，tileSize默认为8x8）。然后像往常一样对每个块进行直方图均衡。所以在一个很小的区域，直方图会局限在一个很小的区域（除非有噪声）。如果有噪音，它就会被放大。为了避免这种情况，"
+  },
+  {
+    "origin": "contrast limiting",
+    "local": "对比度限制"
+  },
+  {
+    "origin": "is applied. If any histogram bin is above the specified contrast limit (by default 40 in OpenCV), those pixels are clipped and distributed uniformly to other bins before applying histogram equalization. After equalization, to remove artifacts in tile borders, bilinear interpolation is applied.",
+    "local": "已应用。如果任何直方图单元高于指定的对比度限制（OpenCV中默认为40），则在应用直方图均衡化之前，这些像素将被剪裁并均匀分布到其他单元。均衡后，为了消除瓷砖边界中的伪影，应用双线性插值。"
+  },
+  {
+    "origin": "We use the class:",
+    "local": "我们使用类："
+  },
+  {
+    "origin": "(clipLimit = 40, tileGridSize = new cv.Size(8, 8))",
+    "local": "（clipLimit=40，tileGridSize=新cv大小（8，8））"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "clipLimit",
+    "local": "克里普利米特"
+  },
+  {
+    "origin": "threshold for contrast limiting.",
+    "local": "对比度限制阈值。"
+  },
+  {
+    "origin": "tileGridSize",
+    "local": "平铺网格化"
+  },
+  {
+    "origin": "size of grid for histogram equalization. Input image will be divided into equally sized rectangular tiles. tileGridSize defines the number of tiles in row and column.",
+    "local": "直方图均衡化的网格大小。输入图像将被分成大小相等的矩形块。tileGridSize定义行和列中的平铺数。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Don't forget to delete CLAHE!",
+    "local": "别忘了删除CLAHE！"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

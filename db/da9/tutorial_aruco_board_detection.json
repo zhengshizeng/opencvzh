@@ -1,0 +1,450 @@
+[
+  {
+    "origin": "OpenCV: Detection of ArUco Boards",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Detection of ArUco Boards",
+    "local": ""
+  },
+  {
+    "origin": "An ArUco Board is a set of markers that acts like a single marker in the sense that it provides a single pose for the camera.",
+    "local": ""
+  },
+  {
+    "origin": "The most popular board is the one with all the markers in the same plane, since it can be easily printed:",
+    "local": ""
+  },
+  {
+    "origin": "However, boards are not limited to this arrangement and can represent any 2d or 3d layout.",
+    "local": ""
+  },
+  {
+    "origin": "The difference between a Board and a set of independent markers is that the relative position between the markers in the Board is known a priori. This allows that the corners of all the markers can be used for estimating the pose of the camera respect to the whole Board.",
+    "local": ""
+  },
+  {
+    "origin": "When you use a set of independent markers, you can estimate the pose for each marker individually, since you dont know the relative position of the markers in the environment.",
+    "local": ""
+  },
+  {
+    "origin": "The main benefits of using Boards are:",
+    "local": ""
+  },
+  {
+    "origin": "The pose estimation is much more versatile. Only some markers are necessary to perform pose estimation. Thus, the pose can be calculated even in the presence of occlusions or partial views.",
+    "local": ""
+  },
+  {
+    "origin": "The obtained pose is usually more accurate since a higher amount of point correspondences (marker corners) are employed.",
+    "local": ""
+  },
+  {
+    "origin": "The aruco module allows the use of Boards. The main class is the",
+    "local": ""
+  },
+  {
+    "origin": "class which defines the Board layout:",
+    "local": ""
+  },
+  {
+    "origin": "A object of type",
+    "local": ""
+  },
+  {
+    "origin": "has three parameters:",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "structure is the list of corner positions in the 3d Board reference system, i.e. its layout. For each marker, its four corners are stored in the standard order, i.e. in clockwise order and starting with the top left corner.",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "parameter indicates to which marker dictionary the Board markers belong to.",
+    "local": ""
+  },
+  {
+    "origin": "Finally, the",
+    "local": ""
+  },
+  {
+    "origin": "structure indicates the identifiers of each of the markers in",
+    "local": ""
+  },
+  {
+    "origin": "respect to the specified",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Board Detection",
+    "local": ""
+  },
+  {
+    "origin": "A Board detection is similar to the standard marker detection. The only difference is in the pose estimation step. In fact, to use marker boards, a standard marker detection should be done before estimating the Board pose.",
+    "local": ""
+  },
+  {
+    "origin": "The aruco module provides a specific function,",
+    "local": ""
+  },
+  {
+    "origin": ", to perform pose estimation for boards:",
+    "local": ""
+  },
+  {
+    "origin": "The parameters of estimatePoseBoard are:",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ": structures of detected markers from",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": ": the",
+    "local": ""
+  },
+  {
+    "origin": "object that defines the board layout and its ids",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ": camera calibration parameters necessary for pose estimation.",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ": estimated pose of the Board. If not empty then treated as initial guess.",
+    "local": ""
+  },
+  {
+    "origin": "The function returns the total number of markers employed for estimating the board pose. Note that not all the markers provided in",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "should be used, since only the markers whose ids are listed in the",
+    "local": ""
+  },
+  {
+    "origin": "structure are considered.",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "function can be used to check the obtained pose. For instance:",
+    "local": ""
+  },
+  {
+    "origin": "Board with axis",
+    "local": ""
+  },
+  {
+    "origin": "And this is another example with the board partially occluded:",
+    "local": ""
+  },
+  {
+    "origin": "Board with occlusions",
+    "local": ""
+  },
+  {
+    "origin": "As it can be observed, although some markers have not been detected, the Board pose can still be estimated from the rest of markers.",
+    "local": ""
+  },
+  {
+    "origin": "Grid Board",
+    "local": ""
+  },
+  {
+    "origin": "Creating the",
+    "local": ""
+  },
+  {
+    "origin": "object requires specifying the corner positions for each marker in the environment. However, in many cases, the board will be just a set of markers in the same plane and in a grid layout, so it can be easily printed and used.",
+    "local": ""
+  },
+  {
+    "origin": "Fortunately, the aruco module provides the basic functionality to create and print these types of markers easily.",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "class is a specialized class that inherits from the",
+    "local": ""
+  },
+  {
+    "origin": "class and which represents a Board with all the markers in the same plane and in a grid layout, as in the following image:",
+    "local": ""
+  },
+  {
+    "origin": "Image with aruco board",
+    "local": ""
+  },
+  {
+    "origin": "Concretely, the coordinate system in a Grid Board is positioned in the board plane, centered in the bottom left corner of the board and with the Z pointing out, like in the following image (X:red, Y:green, Z:blue):",
+    "local": ""
+  },
+  {
+    "origin": "Board with axis",
+    "local": ""
+  },
+  {
+    "origin": "A",
+    "local": ""
+  },
+  {
+    "origin": "object can be defined using the following parameters:",
+    "local": ""
+  },
+  {
+    "origin": "Number of markers in the X direction.",
+    "local": ""
+  },
+  {
+    "origin": "Number of markers in the Y direction.",
+    "local": ""
+  },
+  {
+    "origin": "Length of the marker side.",
+    "local": ""
+  },
+  {
+    "origin": "Length of the marker separation.",
+    "local": ""
+  },
+  {
+    "origin": "The dictionary of the markers.",
+    "local": ""
+  },
+  {
+    "origin": "Ids of all the markers (X*Y markers).",
+    "local": ""
+  },
+  {
+    "origin": "This object can be easily created from these parameters using the",
+    "local": ""
+  },
+  {
+    "origin": "static function:",
+    "local": ""
+  },
+  {
+    "origin": "The first and second parameters are the number of markers in the X and Y direction respectively.",
+    "local": ""
+  },
+  {
+    "origin": "The third and fourth parameters are the marker length and the marker separation respectively. They can be provided in any unit, having in mind that the estimated pose for this board will be measured in the same units (in general, meters are used).",
+    "local": ""
+  },
+  {
+    "origin": "Finally, the dictionary of the markers is provided.",
+    "local": ""
+  },
+  {
+    "origin": "So, this board will be composed by 5x7=35 markers. The ids of each of the markers are assigned, by default, in ascending order starting on 0, so they will be 0, 1, 2, ..., 34. This can be easily customized by accessing to the ids vector through",
+    "local": ""
+  },
+  {
+    "origin": ", like in the",
+    "local": ""
+  },
+  {
+    "origin": "parent class.",
+    "local": ""
+  },
+  {
+    "origin": "After creating a Grid Board, we probably want to print it and use it. A function to generate the image of a",
+    "local": ""
+  },
+  {
+    "origin": "is provided in",
+    "local": ""
+  },
+  {
+    "origin": ". For example:",
+    "local": ""
+  },
+  {
+    "origin": "The first parameter is the size of the output image in pixels. In this case 600x500 pixels. If this is not proportional to the board dimensions, it will be centered on the image.",
+    "local": ""
+  },
+  {
+    "origin": ": the output image with the board.",
+    "local": ""
+  },
+  {
+    "origin": "Finally, the size of the marker border, similarly to",
+    "local": ""
+  },
+  {
+    "origin": "The output image will be something like this:",
+    "local": ""
+  },
+  {
+    "origin": "A full working example of board creation is included in the",
+    "local": ""
+  },
+  {
+    "origin": "inside the module samples folder.",
+    "local": ""
+  },
+  {
+    "origin": "Note: The samples now take input via commandline via the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Commandline Parser",
+    "local": ""
+  },
+  {
+    "origin": ". For this file the example parameters will look like",
+    "local": ""
+  },
+  {
+    "origin": "Finally, a full example of board detection:",
+    "local": ""
+  },
+  {
+    "origin": "Sample video:",
+    "local": ""
+  },
+  {
+    "origin": "A full working example is included in the",
+    "local": ""
+  },
+  {
+    "origin": "inside the module samples folder.",
+    "local": ""
+  },
+  {
+    "origin": "Note: The samples now take input via commandline via the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Commandline Parser",
+    "local": ""
+  },
+  {
+    "origin": ". For this file the example parameters will look like",
+    "local": ""
+  },
+  {
+    "origin": "Refine marker detection",
+    "local": ""
+  },
+  {
+    "origin": "ArUco boards can also be used to improve the detection of markers. If we have detected a subset of the markers that belongs to the board, we can use these markers and the board layout information to try to find the markers that have not been previously detected.",
+    "local": ""
+  },
+  {
+    "origin": "This can be done using the",
+    "local": ""
+  },
+  {
+    "origin": "function, which should be called after calling",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The main parameters of this function are the original image where markers were detected, the Board object, the detected marker corners, the detected marker ids and the rejected marker corners.",
+    "local": ""
+  },
+  {
+    "origin": "The rejected corners can be obtained from the",
+    "local": ""
+  },
+  {
+    "origin": "function and are also known as marker candidates. This candidates are square shapes that have been found in the original image but have failed to pass the identification step (i.e. their inner codification presents too many errors) and thus they have not been recognized as markers.",
+    "local": ""
+  },
+  {
+    "origin": "However, these candidates are sometimes actual markers that have not been correctly identified due to high noise in the image, very low resolution or other related problems that affect to the binary code extraction. The",
+    "local": ""
+  },
+  {
+    "origin": "function finds correspondences between these candidates and the missing markers of the board. This search is based on two parameters:",
+    "local": ""
+  },
+  {
+    "origin": "Distance between the candidate and the projection of the missing marker. To obtain these projections, it is necessary to have detected at least one marker of the board. The projections are obtained using the camera parameters (camera matrix and distortion coefficients) if they are provided. If not, the projections are obtained from local homography and only planar board are allowed (i.e. the Z coordinate of all the marker corners should be the same). The",
+    "local": ""
+  },
+  {
+    "origin": "parameter in",
+    "local": ""
+  },
+  {
+    "origin": "determines the minimum euclidean distance between the candidate corners and the projected marker corners (default value 10).",
+    "local": ""
+  },
+  {
+    "origin": "Binary codification. If a candidate surpasses the minimum distance condition, its internal bits are analyzed again to determine if it is actually the projected marker or not. However, in this case, the condition is not so strong and the number of allowed erroneous bits can be higher. This is indicated in the",
+    "local": ""
+  },
+  {
+    "origin": "parameter (default value 3.0). If a negative value is provided, the internal bits are not analyzed at all and only the corner distances are evaluated.",
+    "local": ""
+  },
+  {
+    "origin": "This is an example of using the",
+    "local": ""
+  },
+  {
+    "origin": "function:",
+    "local": ""
+  },
+  {
+    "origin": "It must also be noted that, in some cases, if the number of detected markers in the first place is too low (for instance only 1 or 2 markers), the projections of the missing markers can be of bad quality, producing erroneous correspondences.",
+    "local": ""
+  },
+  {
+    "origin": "See module samples for a more detailed implementation.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "origin": "OpenCV: Arithmetic Operations on Images",
+    "local": "OpenCV：图像的算术运算"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Arithmetic Operations on Images",
+    "local": "图像的算术运算"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "Learn several arithmetic operations on images, like addition, subtraction, bitwise operations, and etc.",
+    "local": "学习图像的几种算术运算，如加法、减法、位运算等。"
+  },
+  {
+    "origin": "Learn these functions:",
+    "local": "了解以下功能："
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", etc.",
+    "local": "等等。"
+  },
+  {
+    "origin": "Image Addition",
+    "local": "图像加法"
+  },
+  {
+    "origin": "You can add two images with the OpenCV function,",
+    "local": "你可以用OpenCV函数添加两个图像，"
+  },
+  {
+    "origin": ", or simply by the numpy operation res = img1 + img2. Both images should be of same depth and type, or the second image can just be a scalar value.",
+    "local": "，或者简单地通过numpy操作res=img1+img2。两个图像应该具有相同的深度和类型，或者第二个图像可以只是一个标量值。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "There is a difference between OpenCV addition and Numpy addition. OpenCV addition is a saturated operation while Numpy addition is a modulo operation.",
+    "local": "OpenCV加法和Numpy加法有区别。OpenCV加法是一种饱和运算，而Numpy加法是一种模运算。"
+  },
+  {
+    "origin": "For example, consider the below sample:",
+    "local": "例如，考虑以下示例："
+  },
+  {
+    "origin": "This will be more visible when you add two images. Stick with OpenCV functions, because they will provide a better result.",
+    "local": "当您添加两个图像时，这将更加明显。坚持使用OpenCV函数，因为它们将提供更好的结果。"
+  },
+  {
+    "origin": "Image Blending",
+    "local": "图像融合"
+  },
+  {
+    "origin": "This is also image addition, but different weights are given to images in order to give a feeling of blending or transparency. Images are added as per the equation below:",
+    "local": "这也是图像添加，但不同的权重赋予图像，以给人一种混合或透明的感觉。图像按以下公式添加："
+  },
+  {
+    "origin": "\\[g(x) = (1 - \\alpha)f_{0}(x) + \\alpha f_{1}(x)\\]",
+    "local": "\\[g（x）=（1-\\alpha）f{0}（x）+\\alpha f{1}（x）\\]"
+  },
+  {
+    "origin": "By varying \\(\\alpha\\) from \\(0 \\rightarrow 1\\), you can perform a cool transition between one image to another.",
+    "local": "通过将\\（\\alpha\\）从\\（0\\rightarrow 1\\）改变，可以在一个图像到另一个图像之间执行冷转换。"
+  },
+  {
+    "origin": "Here I took two images to blend together. The first image is given a weight of 0.7 and the second image is given 0.3.",
+    "local": "在这里，我采取了两个图像融合在一起。第一幅图像的权重为0.7，第二幅图像的权重为0.3。"
+  },
+  {
+    "origin": "applies the following equation to the image:",
+    "local": "将以下公式应用于图像："
+  },
+  {
+    "origin": "\\[dst = \\alpha \\cdot img1 + \\beta \\cdot img2 + \\gamma\\]",
+    "local": "\\[dst=\\alpha\\cdot img1+\\beta\\cdot img2+\\gamma]"
+  },
+  {
+    "origin": "Here \\(\\gamma\\) is taken as zero.",
+    "local": "这里\\（\\gamma\\）取零。"
+  },
+  {
+    "origin": "Check the result below:",
+    "local": "检查以下结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Bitwise Operations",
+    "local": "位运算"
+  },
+  {
+    "origin": "This includes the bitwise AND, OR, NOT, and XOR operations. They will be highly useful while extracting any part of the image (as we will see in coming chapters), defining and working with non-rectangular ROI's, and etc. Below we will see an example of how to change a particular region of an image.",
+    "local": "这包括按位AND、OR、NOT和XOR操作。在提取图像的任何部分（我们将在接下来的章节中看到）、定义和处理非矩形ROI等时，它们将非常有用。下面我们将看到如何更改图像特定区域的示例。"
+  },
+  {
+    "origin": "I want to put the OpenCV logo above an image. If I add two images, it will change the color. If I blend them, I get a transparent effect. But I want it to be opaque. If it was a rectangular region, I could use ROI as we did in the last chapter. But the OpenCV logo is a not a rectangular shape. So you can do it with bitwise operations as shown below:",
+    "local": "我想把OpenCV的标志上面的图像。如果我添加两个图像，它会改变颜色。如果我混合它们，我会得到一个透明的效果。但我希望它是不透明的。如果是矩形区域，我可以像上一章一样使用ROI。但是OpenCV的标志不是矩形的。因此，您可以使用如下所示的按位操作："
+  },
+  {
+    "origin": "See the result below. Left image shows the mask we created. Right image shows the final result. For more understanding, display all the intermediate images in the above code, especially img1_bg and img2_fg.",
+    "local": "请参见下面的结果。左图显示了我们创建的遮罩。右图显示最终结果。为便于理解，请显示上述代码中的所有中间图像，特别是img1泳u bg和img2泳u fg。"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Exercises",
+    "local": "练习"
+  },
+  {
+    "origin": "Create a slide show of images in a folder with smooth transition between images using",
+    "local": "创建文件夹中图像的幻灯片放映，使用"
+  },
+  {
+    "origin": "function",
+    "local": "功能"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

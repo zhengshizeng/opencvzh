@@ -1,0 +1,306 @@
+[
+  {
+    "origin": "OpenCV: High Dynamic Range Imaging",
+    "local": "高动态范围成像"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "High Dynamic Range Imaging",
+    "local": "高动态范围成像"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Fedor Morozov",
+    "local": "莫罗佐夫软呢帽"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "Today most digital images and imaging devices use 8 bits per channel thus limiting the dynamic range of the device to two orders of magnitude (actually 256 levels), while human eye can adapt to lighting conditions varying by ten orders of magnitude. When we take photographs of a real world scene bright regions may be overexposed, while the dark ones may be underexposed, so we can’t capture all details using a single exposure. HDR imaging works with images that use more that 8 bits per channel (usually 32-bit float values), allowing much wider dynamic range.",
+    "local": "如今，大多数数字图像和成像设备每通道使用8位，因此将设备的动态范围限制在两个数量级（实际上是256个级别），而人眼可以适应10个数量级的照明条件。当我们拍摄真实场景时，明亮的区域可能曝光过度，而黑暗的区域可能曝光不足，所以我们不能用一次曝光来捕捉所有细节。HDR成像适用于每个通道使用8位以上的图像（通常为32位浮点值），允许更宽的动态范围。"
+  },
+  {
+    "origin": "There are different ways to obtain HDR images, but the most common one is to use photographs of the scene taken with different exposure values. To combine this exposures it is useful to know your camera’s response function and there are algorithms to estimate it. After the HDR image has been blended it has to be converted back to 8-bit to view it on usual displays. This process is called tonemapping. Additional complexities arise when objects of the scene or camera move between shots, since images with different exposures should be registered and aligned.",
+    "local": "获取HDR图像有不同的方法，但最常见的方法是使用不同曝光值拍摄的场景照片。要结合这些曝光，了解相机的响应函数是很有用的，并且有一些算法可以估计它。HDR图像混合后，必须将其转换回8位才能在常规显示器上查看。这个过程称为色调映射。当场景或相机的对象在两个镜头之间移动时，会产生额外的复杂性，因为具有不同曝光的图像应该被注册和对齐。"
+  },
+  {
+    "origin": "In this tutorial we show how to generate and display HDR image from an exposure sequence. In our case images are already aligned and there are no moving objects. We also demonstrate an alternative approach called exposure fusion that produces low dynamic range image. Each step of HDR pipeline can be implemented using different algorithms so take a look at the reference manual to see them all.",
+    "local": "在本教程中，我们将演示如何从曝光序列生成和显示HDR图像。在我们的例子中，图像已经对齐，没有移动的对象。我们还演示了另一种称为曝光融合的方法，它可以生成低动态范围的图像。HDR管道的每一步都可以使用不同的算法来实现，所以请查看参考手册来了解它们。"
+  },
+  {
+    "origin": "Exposure sequence",
+    "local": "曝光顺序"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": "本教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": "本教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": "本教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Sample images",
+    "local": "示例图像"
+  },
+  {
+    "origin": "Data directory that contains images, exposure times and",
+    "local": "包含图像、曝光时间和"
+  },
+  {
+    "origin": "file can be downloaded from",
+    "local": "文件可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Load images and exposure times",
+    "local": "加载图像和曝光时间"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Firstly we load input images and exposure times from user-defined folder. The folder should contain images and",
+    "local": "首先从用户定义的文件夹中加载输入图像和曝光时间。文件夹应包含图像和"
+  },
+  {
+    "origin": "list.txt",
+    "local": "列表.txt"
+  },
+  {
+    "origin": "- file that contains file names and inverse exposure times.",
+    "local": "-包含文件名和反向曝光时间的文件。"
+  },
+  {
+    "origin": "For our image sequence the list is following:",
+    "local": "对于我们的图像序列，列表如下："
+  },
+  {
+    "origin": "Estimate camera response",
+    "local": "估计摄像机响应"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "It is necessary to know camera response function (CRF) for a lot of HDR construction algorithms. We use one of the calibration algorithms to estimate inverse CRF for all 256 pixel values.",
+    "local": "许多HDR构造算法都需要了解摄像机响应函数（CRF）。我们使用其中一个校准算法来估计所有256个像素值的逆CRF。"
+  },
+  {
+    "origin": "Make HDR image",
+    "local": "生成HDR图像"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "We use Debevec's weighting scheme to construct HDR image using response calculated in the previous item.",
+    "local": "我们使用Debevec的加权方案，利用上一项计算的响应来构造HDR图像。"
+  },
+  {
+    "origin": "Tonemap HDR image",
+    "local": "HDR图像"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Since we want to see our results on common LDR display we have to map our HDR image to 8-bit range preserving most details. It is the main goal of tonemapping methods. We use tonemapper with bilateral filtering and set 2.2 as the value for gamma correction.",
+    "local": "因为我们想在普通LDR显示器上看到我们的结果，所以我们必须将HDR图像映射到8位范围，保留大部分细节。这是色调映射方法的主要目标。我们使用带双边滤波的色调映射，并设置2.2作为gamma校正值。"
+  },
+  {
+    "origin": "Perform exposure fusion",
+    "local": "进行曝光融合"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "There is an alternative way to merge our exposures in case when we don't need HDR image. This process is called exposure fusion and produces LDR image that doesn't require gamma correction. It also doesn't use exposure values of the photographs.",
+    "local": "有另一种方法来合并我们的曝光，以防我们不需要HDR图像。这个过程称为曝光融合，产生的LDR图像不需要伽马校正。它也不使用照片的曝光值。"
+  },
+  {
+    "origin": "Write results",
+    "local": "写入结果"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Now it's time to look at the results. Note that HDR image can't be stored in one of common image formats, so we save it to Radiance image (.hdr). Also all HDR imaging functions return results in [0, 1] range so we should multiply result by 255.",
+    "local": "现在是时候看看结果了。请注意，HDR图像不能以一种常见的图像格式存储，因此我们将其保存为Radiance image（.HDR）。此外，所有HDR成像函数都返回[0，1]范围内的结果，因此我们应该将结果乘以255。"
+  },
+  {
+    "origin": "You can try other tonemap algorithms:",
+    "local": "您可以尝试其他色调映射算法："
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "You can also adjust the parameters in the HDR calibration and tonemap methods for your own photos.",
+    "local": "您还可以调整HDR校准和色调映射方法中的参数，以获取自己的照片。"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "Tonemapped image",
+    "local": "色调映射图像"
+  },
+  {
+    "origin": "Exposure fusion",
+    "local": "曝光融合"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Paul E Debevec and Jitendra Malik. Recovering high dynamic range radiance maps from photographs. In ACM SIGGRAPH 2008 classes, page 31. ACM, 2008.",
+    "local": "保罗·德贝维奇和吉滕德拉·马利克。从照片中恢复高动态范围辐射图。在ACM SIGGRAPH 2008类中，第31页。ACM，2008。"
+  },
+  {
+    "origin": "Mark A Robertson, Sean Borman, and Robert L Stevenson. Dynamic range improvement through multiple exposures. In Image Processing, 1999. ICIP 99. Proceedings. 1999 International Conference on, volume 3, pages 159–163. IEEE, 1999.",
+    "local": "马克·罗伯逊、肖恩·博曼和罗伯特·史蒂文森。通过多次曝光提高动态范围。图像处理，1999。ICIP 99。会议记录。1999年国际电子工程会议，第3卷，第159-163页。IEEE，1999年。"
+  },
+  {
+    "origin": "Tom Mertens, Jan Kautz, and Frank Van Reeth. Exposure fusion. In Computer Graphics and Applications, 2007. PG'07. 15th Pacific Conference on, pages 382–390. IEEE, 2007.",
+    "local": "Tom Mertens，Jan Kautz和Frank Van Reeth。曝光融合。《计算机图形学与应用》，2007年，第7页，第15届太平洋会议，第382-390页，IEEE，2007年。"
+  },
+  {
+    "origin": "Wikipedia-HDR",
+    "local": "维基百科HDR"
+  },
+  {
+    "origin": "Recovering High Dynamic Range Radiance Maps from Photographs (webpage)",
+    "local": "从照片中恢复高动态范围辐射图（网页）"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

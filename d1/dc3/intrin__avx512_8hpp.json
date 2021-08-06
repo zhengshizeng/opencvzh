@@ -1,0 +1,1078 @@
+[
+  {
+    "origin": "OpenCV: opencv2/core/hal/intrin_avx512.hpp File Reference",
+    "local": "OpenCV:opencv2/core/hal/intrin\\u avx512.hpp文件参考"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "Macros",
+    "local": "宏"
+  },
+  {
+    "origin": "intrin_avx512.hpp File Reference",
+    "local": "intrin\\u avx512.hpp文件参考"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": "“黑盒”表示与磁盘上的文件相关联的文件存储。"
+  },
+  {
+    "origin": "Macros",
+    "local": "宏"
+  },
+  {
+    "origin": "(a)&#160;&#160;&#160;_mm512_castps256_ps512(_mm512_cvtpd_ps(a))",
+    "local": "（a） &350；160；&35；160;35;160；美国mm512、castps256、ps512（mm512、cvtpd、ps（a））"
+  },
+  {
+    "origin": "(a63, a62, a61, a60, a59, a58, a57, a56, a55, a54, a53, a52, a51, a50, a49, a48, a47, a46, a45, a44, a43, a42, a41, a40, a39, a38, a37, a36, a35, a34, a33, a32, a31, a30, a29, a28, a27, a26, a25, a24, a23, a22, a21, a20, a19, a18, a17, a16, a15, a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0)",
+    "local": "a63、a63、a62、a62、a61、A60、A60、A60、59、a58、a57、a57、a53、a53、a52、a52、a52、a51、a50、a50、a50、a50、a50、a50、a53、a52、a50、a57、a57、a57、a57、a57、a57、a56、a5、a5 5 5、a5 5 5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、aA12、a11、a10、a9、a8、a7、a6、a5、a4、a3、a2、a1、a0）"
+  },
+  {
+    "origin": "(a31, a30, a29, a28, a27, a26, a25, a24, a23, a22, a21, a20, a19, a18, a17, a16, a15, a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0)",
+    "local": "（a31、a30、a29、a28、a27、a26、a25、a24、a23、a22、a21、a20、a19、a18、a17、a16、a15、a14、a13、a12、a11、a10、a9、8、a7、a5、a4、a3、a2、a1、a0）"
+  },
+  {
+    "origin": "(a15, a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0)",
+    "local": "（a15、a14、a13、a12、a11、a10、a9、a8、a7、a6、a5、a4、a3、a2、a1、a0）"
+  },
+  {
+    "origin": "(a7, a6, a5, a4, a3, a2, a1, a0)&#160;&#160;&#160;_mm512_set_epi64((",
+    "local": "（a7、a6、a5、a4、a3、a2、a1、a0）35；160；350；160;35;160；美国设置m512"
+  },
+  {
+    "origin": ")(a7),(",
+    "local": ")（a7）("
+  },
+  {
+    "origin": ")(a6),(",
+    "local": ")（a6）("
+  },
+  {
+    "origin": ")(a5),(",
+    "local": ")（a5）("
+  },
+  {
+    "origin": ")(a4),(",
+    "local": ")（a4）("
+  },
+  {
+    "origin": ")(a3),(",
+    "local": ")（a3）("
+  },
+  {
+    "origin": ")(a2),(",
+    "local": ")（a2）("
+  },
+  {
+    "origin": ")(a1),(",
+    "local": ")（a1）("
+  },
+  {
+    "origin": ")(a0))",
+    "local": ")（a0））"
+  },
+  {
+    "origin": "(a63, a62, a61, a60, a59, a58, a57, a56, a55, a54, a53, a52, a51, a50, a49, a48, a47, a46, a45, a44, a43, a42, a41, a40, a39, a38, a37, a36, a35, a34, a33, a32, a31, a30, a29, a28, a27, a26, a25, a24, a23, a22, a21, a20, a19, a18, a17, a16, a15, a14, a13, a12, a11, a10, a9, a8, a7, a6, a5, a4, a3, a2, a1, a0)",
+    "local": "a63、a63、a62、a62、a61、A60、A60、A60、59、a58、a57、a57、a53、a53、a52、a52、a52、a51、a50、a50、a50、a50、a50、a50、a53、a52、a50、a57、a57、a57、a57、a57、a57、a56、a5、a5 5 5、a5 5 5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、a5、aA12、a11、a10、a9、a8、a7、a6、a5、a4、a3、a2、a1、a0）"
+  },
+  {
+    "origin": "&#160;&#160;&#160;1",
+    "local": "&#160;&#160;&#160;1"
+  },
+  {
+    "origin": "&#160;&#160;&#160;1",
+    "local": "&#160;&#160;&#160;1"
+  },
+  {
+    "origin": "&#160;&#160;&#160;0",
+    "local": "&#160;&#160;&#160;0"
+  },
+  {
+    "origin": "&#160;&#160;&#160;0",
+    "local": "&#160;&#160;&#160;0"
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": "宏定义文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_mm512_cvtpd_pslo",
+    "local": "_mm512\\ cvtpd\\ pslo"
+  },
+  {
+    "origin": "#define _mm512_cvtpd_pslo",
+    "local": "#定义\\u mm512 \\u cvtpd \\u pslo"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "a",
+    "local": "一"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;_mm512_castps256_ps512(_mm512_cvtpd_ps(a))",
+    "local": "与#160；#160；#160MM512 CASTPS256 PS512（MM512 CVTPD PS（A））"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_v512_set_epi8",
+    "local": "_v512\\设置\\ epi8"
+  },
+  {
+    "origin": "#define _v512_set_epi8",
+    "local": "#定义v512集epi8"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "a63,",
+    "local": "a63型，"
+  },
+  {
+    "origin": "a62,",
+    "local": "a62型，"
+  },
+  {
+    "origin": "a61,",
+    "local": "a61型，"
+  },
+  {
+    "origin": "a60,",
+    "local": "a60型，"
+  },
+  {
+    "origin": "a59,",
+    "local": "a59型，"
+  },
+  {
+    "origin": "a58,",
+    "local": "a58型，"
+  },
+  {
+    "origin": "a57,",
+    "local": "a57型，"
+  },
+  {
+    "origin": "a56,",
+    "local": "a56型，"
+  },
+  {
+    "origin": "a55,",
+    "local": "a55型，"
+  },
+  {
+    "origin": "a54,",
+    "local": "a54型，"
+  },
+  {
+    "origin": "a53,",
+    "local": "a53型，"
+  },
+  {
+    "origin": "a52,",
+    "local": "a52型，"
+  },
+  {
+    "origin": "a51,",
+    "local": "a51型，"
+  },
+  {
+    "origin": "a50,",
+    "local": "a50型，"
+  },
+  {
+    "origin": "a49,",
+    "local": "a49型，"
+  },
+  {
+    "origin": "a48,",
+    "local": "a48型，"
+  },
+  {
+    "origin": "a47,",
+    "local": "a47型，"
+  },
+  {
+    "origin": "a46,",
+    "local": "a46型，"
+  },
+  {
+    "origin": "a45,",
+    "local": "a45型，"
+  },
+  {
+    "origin": "a44,",
+    "local": "a44型，"
+  },
+  {
+    "origin": "a43,",
+    "local": "a43型，"
+  },
+  {
+    "origin": "a42,",
+    "local": "a42型，"
+  },
+  {
+    "origin": "a41,",
+    "local": "a41型，"
+  },
+  {
+    "origin": "a40,",
+    "local": "a40型，"
+  },
+  {
+    "origin": "a39,",
+    "local": "a39飞机，"
+  },
+  {
+    "origin": "a38,",
+    "local": "a38飞机，"
+  },
+  {
+    "origin": "a37,",
+    "local": "a37飞机，"
+  },
+  {
+    "origin": "a36,",
+    "local": "a36飞机，"
+  },
+  {
+    "origin": "a35,",
+    "local": "a35飞机，"
+  },
+  {
+    "origin": "a34,",
+    "local": "a34飞机，"
+  },
+  {
+    "origin": "a33,",
+    "local": "a33飞机，"
+  },
+  {
+    "origin": "a32,",
+    "local": "a32飞机，"
+  },
+  {
+    "origin": "a31,",
+    "local": "a31飞机，"
+  },
+  {
+    "origin": "a30,",
+    "local": "a30飞机，"
+  },
+  {
+    "origin": "a29,",
+    "local": "a29号，"
+  },
+  {
+    "origin": "a28,",
+    "local": "a28级，"
+  },
+  {
+    "origin": "a27,",
+    "local": "a27号，"
+  },
+  {
+    "origin": "a26,",
+    "local": "a26号，"
+  },
+  {
+    "origin": "a25,",
+    "local": "a25级，"
+  },
+  {
+    "origin": "a24,",
+    "local": "a24号，"
+  },
+  {
+    "origin": "a23,",
+    "local": "a23号，"
+  },
+  {
+    "origin": "a22,",
+    "local": "a22型，"
+  },
+  {
+    "origin": "a21,",
+    "local": "a21号，"
+  },
+  {
+    "origin": "a20,",
+    "local": "a20级，"
+  },
+  {
+    "origin": "a19,",
+    "local": "a19号，"
+  },
+  {
+    "origin": "a18,",
+    "local": "a18型，"
+  },
+  {
+    "origin": "a17,",
+    "local": "a17型，"
+  },
+  {
+    "origin": "a16,",
+    "local": "a16型，"
+  },
+  {
+    "origin": "a15,",
+    "local": "a15型，"
+  },
+  {
+    "origin": "a14,",
+    "local": "a14型，"
+  },
+  {
+    "origin": "a13,",
+    "local": "a13号，"
+  },
+  {
+    "origin": "a12,",
+    "local": "a12型，"
+  },
+  {
+    "origin": "a11,",
+    "local": "a11号，"
+  },
+  {
+    "origin": "a10,",
+    "local": "a10号，"
+  },
+  {
+    "origin": "a9,",
+    "local": "a9级，"
+  },
+  {
+    "origin": "a8,",
+    "local": "a8级，"
+  },
+  {
+    "origin": "a7,",
+    "local": "a7级，"
+  },
+  {
+    "origin": "a6,",
+    "local": "a6级，"
+  },
+  {
+    "origin": "a5,",
+    "local": "a5级，"
+  },
+  {
+    "origin": "a4,",
+    "local": "a4级，"
+  },
+  {
+    "origin": "a3,",
+    "local": "a3级，"
+  },
+  {
+    "origin": "a2,",
+    "local": "a2级，"
+  },
+  {
+    "origin": "a1,",
+    "local": "a1级，"
+  },
+  {
+    "origin": "a0&#160;",
+    "local": "a0和#160；"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Value:",
+    "local": "价值："
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_v512_set_epu16",
+    "local": "我要和你一起去。"
+  },
+  {
+    "origin": "#define _v512_set_epu16",
+    "local": "#定义\\u v512 \\u设置\\u epu16"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "a31,",
+    "local": "a31飞机，"
+  },
+  {
+    "origin": "a30,",
+    "local": "a30飞机，"
+  },
+  {
+    "origin": "a29,",
+    "local": "a29号，"
+  },
+  {
+    "origin": "a28,",
+    "local": "a28级，"
+  },
+  {
+    "origin": "a27,",
+    "local": "a27号，"
+  },
+  {
+    "origin": "a26,",
+    "local": "a26号，"
+  },
+  {
+    "origin": "a25,",
+    "local": "a25级，"
+  },
+  {
+    "origin": "a24,",
+    "local": "a24号，"
+  },
+  {
+    "origin": "a23,",
+    "local": "a23号，"
+  },
+  {
+    "origin": "a22,",
+    "local": "a22型，"
+  },
+  {
+    "origin": "a21,",
+    "local": "a21号，"
+  },
+  {
+    "origin": "a20,",
+    "local": "a20级，"
+  },
+  {
+    "origin": "a19,",
+    "local": "a19号，"
+  },
+  {
+    "origin": "a18,",
+    "local": "a18型，"
+  },
+  {
+    "origin": "a17,",
+    "local": "a17型，"
+  },
+  {
+    "origin": "a16,",
+    "local": "a16型，"
+  },
+  {
+    "origin": "a15,",
+    "local": "a15型，"
+  },
+  {
+    "origin": "a14,",
+    "local": "a14型，"
+  },
+  {
+    "origin": "a13,",
+    "local": "a13号，"
+  },
+  {
+    "origin": "a12,",
+    "local": "a12型，"
+  },
+  {
+    "origin": "a11,",
+    "local": "a11号，"
+  },
+  {
+    "origin": "a10,",
+    "local": "a10号，"
+  },
+  {
+    "origin": "a9,",
+    "local": "a9级，"
+  },
+  {
+    "origin": "a8,",
+    "local": "a8级，"
+  },
+  {
+    "origin": "a7,",
+    "local": "a7级，"
+  },
+  {
+    "origin": "a6,",
+    "local": "a6级，"
+  },
+  {
+    "origin": "a5,",
+    "local": "a5级，"
+  },
+  {
+    "origin": "a4,",
+    "local": "a4级，"
+  },
+  {
+    "origin": "a3,",
+    "local": "a3级，"
+  },
+  {
+    "origin": "a2,",
+    "local": "a2级，"
+  },
+  {
+    "origin": "a1,",
+    "local": "a1级，"
+  },
+  {
+    "origin": "a0&#160;",
+    "local": "a0和#160；"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Value:",
+    "local": "价值："
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_v512_set_epu32",
+    "local": "我哪儿也不去。"
+  },
+  {
+    "origin": "#define _v512_set_epu32",
+    "local": "#定义\\u v512 \\u设置\\u epu32"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "a15,",
+    "local": "a15型，"
+  },
+  {
+    "origin": "a14,",
+    "local": "a14型，"
+  },
+  {
+    "origin": "a13,",
+    "local": "a13号，"
+  },
+  {
+    "origin": "a12,",
+    "local": "a12型，"
+  },
+  {
+    "origin": "a11,",
+    "local": "a11号，"
+  },
+  {
+    "origin": "a10,",
+    "local": "a10号，"
+  },
+  {
+    "origin": "a9,",
+    "local": "a9级，"
+  },
+  {
+    "origin": "a8,",
+    "local": "a8级，"
+  },
+  {
+    "origin": "a7,",
+    "local": "a7级，"
+  },
+  {
+    "origin": "a6,",
+    "local": "a6级，"
+  },
+  {
+    "origin": "a5,",
+    "local": "a5级，"
+  },
+  {
+    "origin": "a4,",
+    "local": "a4级，"
+  },
+  {
+    "origin": "a3,",
+    "local": "a3级，"
+  },
+  {
+    "origin": "a2,",
+    "local": "a2级，"
+  },
+  {
+    "origin": "a1,",
+    "local": "a1级，"
+  },
+  {
+    "origin": "a0&#160;",
+    "local": "a0和#160；"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Value:",
+    "local": "价值："
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_v512_set_epu64",
+    "local": "我哪儿也不去。"
+  },
+  {
+    "origin": "#define _v512_set_epu64",
+    "local": "#定义\\u v512 \\u设置\\u epu64"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "a7,",
+    "local": "a7级，"
+  },
+  {
+    "origin": "a6,",
+    "local": "a6级，"
+  },
+  {
+    "origin": "a5,",
+    "local": "a5级，"
+  },
+  {
+    "origin": "a4,",
+    "local": "a4级，"
+  },
+  {
+    "origin": "a3,",
+    "local": "a3级，"
+  },
+  {
+    "origin": "a2,",
+    "local": "a2级，"
+  },
+  {
+    "origin": "a1,",
+    "local": "a1级，"
+  },
+  {
+    "origin": "a0&#160;",
+    "local": "a0和#160；"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#160;&#160;&#160;_mm512_set_epi64((",
+    "local": "&#160;&#160;&#160;_mm512\\设置\\ epi64(("
+  },
+  {
+    "origin": ")(a7),(",
+    "local": ")（a7）("
+  },
+  {
+    "origin": ")(a6),(",
+    "local": ")（a6）("
+  },
+  {
+    "origin": ")(a5),(",
+    "local": ")（a5）("
+  },
+  {
+    "origin": ")(a4),(",
+    "local": ")（a4）("
+  },
+  {
+    "origin": ")(a3),(",
+    "local": ")（a3）("
+  },
+  {
+    "origin": ")(a2),(",
+    "local": ")（a2）("
+  },
+  {
+    "origin": ")(a1),(",
+    "local": ")（a1）("
+  },
+  {
+    "origin": ")(a0))",
+    "local": ")（a0））"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_v512_set_epu8",
+    "local": "我哪儿也不去。"
+  },
+  {
+    "origin": "#define _v512_set_epu8",
+    "local": "#定义v512集epu8"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "a63,",
+    "local": "a63型，"
+  },
+  {
+    "origin": "a62,",
+    "local": "a62型，"
+  },
+  {
+    "origin": "a61,",
+    "local": "a61型，"
+  },
+  {
+    "origin": "a60,",
+    "local": "a60型，"
+  },
+  {
+    "origin": "a59,",
+    "local": "a59型，"
+  },
+  {
+    "origin": "a58,",
+    "local": "a58型，"
+  },
+  {
+    "origin": "a57,",
+    "local": "a57型，"
+  },
+  {
+    "origin": "a56,",
+    "local": "a56型，"
+  },
+  {
+    "origin": "a55,",
+    "local": "a55型，"
+  },
+  {
+    "origin": "a54,",
+    "local": "a54型，"
+  },
+  {
+    "origin": "a53,",
+    "local": "a53型，"
+  },
+  {
+    "origin": "a52,",
+    "local": "a52型，"
+  },
+  {
+    "origin": "a51,",
+    "local": "a51型，"
+  },
+  {
+    "origin": "a50,",
+    "local": "a50型，"
+  },
+  {
+    "origin": "a49,",
+    "local": "a49型，"
+  },
+  {
+    "origin": "a48,",
+    "local": "a48型，"
+  },
+  {
+    "origin": "a47,",
+    "local": "a47型，"
+  },
+  {
+    "origin": "a46,",
+    "local": "a46型，"
+  },
+  {
+    "origin": "a45,",
+    "local": "a45型，"
+  },
+  {
+    "origin": "a44,",
+    "local": "a44型，"
+  },
+  {
+    "origin": "a43,",
+    "local": "a43型，"
+  },
+  {
+    "origin": "a42,",
+    "local": "a42型，"
+  },
+  {
+    "origin": "a41,",
+    "local": "a41型，"
+  },
+  {
+    "origin": "a40,",
+    "local": "a40型，"
+  },
+  {
+    "origin": "a39,",
+    "local": "a39飞机，"
+  },
+  {
+    "origin": "a38,",
+    "local": "a38飞机，"
+  },
+  {
+    "origin": "a37,",
+    "local": "a37飞机，"
+  },
+  {
+    "origin": "a36,",
+    "local": "a36飞机，"
+  },
+  {
+    "origin": "a35,",
+    "local": "a35飞机，"
+  },
+  {
+    "origin": "a34,",
+    "local": "a34飞机，"
+  },
+  {
+    "origin": "a33,",
+    "local": "a33飞机，"
+  },
+  {
+    "origin": "a32,",
+    "local": "a32飞机，"
+  },
+  {
+    "origin": "a31,",
+    "local": "a31飞机，"
+  },
+  {
+    "origin": "a30,",
+    "local": "a30飞机，"
+  },
+  {
+    "origin": "a29,",
+    "local": "a29号，"
+  },
+  {
+    "origin": "a28,",
+    "local": "a28级，"
+  },
+  {
+    "origin": "a27,",
+    "local": "a27号，"
+  },
+  {
+    "origin": "a26,",
+    "local": "a26号，"
+  },
+  {
+    "origin": "a25,",
+    "local": "a25级，"
+  },
+  {
+    "origin": "a24,",
+    "local": "a24号，"
+  },
+  {
+    "origin": "a23,",
+    "local": "a23号，"
+  },
+  {
+    "origin": "a22,",
+    "local": "a22型，"
+  },
+  {
+    "origin": "a21,",
+    "local": "a21号，"
+  },
+  {
+    "origin": "a20,",
+    "local": "a20级，"
+  },
+  {
+    "origin": "a19,",
+    "local": "a19号，"
+  },
+  {
+    "origin": "a18,",
+    "local": "a18型，"
+  },
+  {
+    "origin": "a17,",
+    "local": "a17型，"
+  },
+  {
+    "origin": "a16,",
+    "local": "a16型，"
+  },
+  {
+    "origin": "a15,",
+    "local": "a15型，"
+  },
+  {
+    "origin": "a14,",
+    "local": "a14型，"
+  },
+  {
+    "origin": "a13,",
+    "local": "a13号，"
+  },
+  {
+    "origin": "a12,",
+    "local": "a12型，"
+  },
+  {
+    "origin": "a11,",
+    "local": "a11号，"
+  },
+  {
+    "origin": "a10,",
+    "local": "a10号，"
+  },
+  {
+    "origin": "a9,",
+    "local": "a9级，"
+  },
+  {
+    "origin": "a8,",
+    "local": "a8级，"
+  },
+  {
+    "origin": "a7,",
+    "local": "a7级，"
+  },
+  {
+    "origin": "a6,",
+    "local": "a6级，"
+  },
+  {
+    "origin": "a5,",
+    "local": "a5级，"
+  },
+  {
+    "origin": "a4,",
+    "local": "a4级，"
+  },
+  {
+    "origin": "a3,",
+    "local": "a3级，"
+  },
+  {
+    "origin": "a2,",
+    "local": "a2级，"
+  },
+  {
+    "origin": "a1,",
+    "local": "a1级，"
+  },
+  {
+    "origin": "a0&#160;",
+    "local": "a0和#160；"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Value:",
+    "local": "价值："
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_SIMD512",
+    "local": "CV\\ SIMD512"
+  },
+  {
+    "origin": "#define CV_SIMD512&#160;&#160;&#160;1",
+    "local": "#定义CV SIMD512&#160&#160;&#160;1"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_SIMD512_64F",
+    "local": "CV\\ SIMD512\\ 64F"
+  },
+  {
+    "origin": "#define CV_SIMD512_64F&#160;&#160;&#160;1",
+    "local": "#定义CVŠSIMD512Š64F&Š160&#160;&#160;1"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CV_SIMD512_FP16",
+    "local": "CV\\ SIMD512\\ FP16"
+  },
+  {
+    "origin": "#define CV_SIMD512_FP16&#160;&#160;&#160;0",
+    "local": "#定义CV SIMD512 FP16&#160&#160;&#160;0"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "CVT_ROUND_MODES_IMPLEMENTED",
+    "local": "CVT\\u ROUND\\u MODES\\u IMPLEMENTED"
+  },
+  {
+    "origin": "#define CVT_ROUND_MODES_IMPLEMENTED&#160;&#160;&#160;0",
+    "local": "#定义实施的CVT循环模式&#160&#160;&#160;0"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:33为OpenCV生成，&#160；"
+  }
+]

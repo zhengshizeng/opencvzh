@@ -1,0 +1,502 @@
+[
+  {
+    "origin": "OpenCV: usac",
+    "local": "OpenCV:美国陆军司令部"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "usac",
+    "local": "美国空军"
+  },
+  {
+    "origin": "author:",
+    "local": "作者："
+  },
+  {
+    "origin": "Maksym Ivashechkin bibliography: 'bibs.bib' csl: 'acm-sigchi-proceedings.csl' date: August 2020 title: 'Google Summer of Code: Improvement of Random Sample Consensus in OpenCV' ...",
+    "local": "Maksym Ivashechkin参考书目：“bibs.bib”csl:“acm sigchi productions.csl”日期：2020年8月标题：“Google代码之夏：OpenCV中随机样本共识的改进”。。。"
+  },
+  {
+    "origin": "Contribution",
+    "local": "贡献"
+  },
+  {
+    "origin": "The integrated part to OpenCV",
+    "local": "OpenCV的集成部分"
+  },
+  {
+    "origin": "module is RANSAC-based universal framework USAC (",
+    "local": "模块是基于RANSAC的通用框架USAC("
+  },
+  {
+    "origin": ") written in C++. The framework includes different state-of-the-arts methods for sampling, verification or local optimization. The main advantage of the framework is its independence to any estimation problem and modular structure. Therefore, new solvers or methods can be added/removed easily. So far it includes the following components:",
+    "local": "）用C++编写。该框架包括用于抽样、验证或局部优化的各种最新方法。该框架的主要优点是独立于任何估计问题和模块化结构。因此，可以很容易地添加/删除新的解算器或方法。到目前为止，它包括以下组件："
+  },
+  {
+    "origin": "Sampling method:",
+    "local": "取样方法："
+  },
+  {
+    "origin": "Uniform – standard RANSAC sampling proposed in [8] which draw minimal subset independently uniformly at random.",
+    "local": "均匀-标准RANSAC抽样在[8]中提出，它在随机的情况下独立地均匀地抽取最小子集。"
+  },
+  {
+    "origin": "The default option in proposed framework",
+    "local": "拟议框架中的默认选项"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "PROSAC – method [4] that assumes input data points sorted by quality so sampling can start from the most promising points. Correspondences for this method can be sorted e.g., by ratio of descriptor distances of the best to second match obtained from SIFT detector.",
+    "local": "PROSAC–方法[4]，假设输入数据点按质量排序，因此采样可以从最有希望的点开始。该方法的对应可以例如通过从SIFT检测器获得的最佳匹配与第二匹配的描述符距离的比率来排序。"
+  },
+  {
+    "origin": "This is method is recommended to use because it can find good model and terminate much earlier",
+    "local": "建议使用此方法，因为它可以找到好的模型并提前终止"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "NAPSAC – sampling method [10] which takes initial point uniformly at random and the rest of points for minimal sample in the neighborhood of initial point. This is method can be potentially useful when models are localized. For example, for plane fitting. However, in practise struggles from degenerate issues and defining optimal neighborhood size.",
+    "local": "NAPSAC–抽样方法[10]，随机均匀地选取初始点，其余点在初始点附近进行最小抽样。这种方法在模型本地化时可能很有用。例如，对于平面拟合。然而，在实践中，从退化的问题和确定最佳邻域大小的斗争。"
+  },
+  {
+    "origin": "Progressive-NAPSAC – sampler [2] which is similar to NAPSAC, although it starts from local and gradually converges to global sampling. This method can be quite useful if local models are expected but distribution of data can be arbitrary. The implemented version assumes data points to be sorted by quality as in PROSAC.",
+    "local": "渐进式NAPSAC–采样器[2]，类似于NAPSAC，但它从局部开始，逐渐收敛到全局采样。如果需要局部模型，但数据的分布可能是任意的，则此方法非常有用。实现的版本假设数据点按照PROSAC中的质量进行排序。"
+  },
+  {
+    "origin": "Score Method. USAC as well as standard RANSAC finds model which minimizes total loss. Loss can be represented by following functions:",
+    "local": "评分法。USAC和标准RANSAC找到了使总损失最小化的模型。损失可以用以下函数表示："
+  },
+  {
+    "origin": "RANSAC – binary 0 / 1 loss. 1 for outlier, 0 for inlier.",
+    "local": "RANSAC–二进制0/1损失。1表示异常值，0表示内部值。"
+  },
+  {
+    "origin": "Good option if the goal is to find as many inliers as possible.",
+    "local": "如果目标是找到尽可能多的内联线，那么这是一个不错的选择。"
+  },
+  {
+    "origin": "MSAC – truncated squared error distance of point to model.",
+    "local": "MSAC–点到模型的截断平方误差距离。"
+  },
+  {
+    "origin": "The default option in framework",
+    "local": "框架中的默认选项"
+  },
+  {
+    "origin": ". The model might not have as many inliers as using RANSAC score, however will be more accurate.",
+    "local": ". 该模型可能没有使用RANSAC评分的内联线那么多，但是会更准确。"
+  },
+  {
+    "origin": "MAGSAC – threshold-free method [3] to compute score. Using, although, maximum sigma (standard deviation of noise) level to marginalize residual of point over sigma. Score of the point represents likelihood of point being inlier.",
+    "local": "MAGSAC–无阈值方法[3]计算得分。使用，虽然，最大西格玛（标准偏差噪声）水平边缘化剩余的点超过西格玛。得分代表得分更高的可能性。"
+  },
+  {
+    "origin": "Recommended option when image noise is unknown since method does not require threshold",
+    "local": "图像噪声未知时的推荐选项，因为方法不需要阈值"
+  },
+  {
+    "origin": ". However, it is still recommended to provide at least approximated threshold, because termination itself is based on number of points which error is less than threshold. By giving 0 threshold the method will output model after maximum number of iterations reached.",
+    "local": ". 然而，仍然建议至少提供近似阈值，因为终止本身基于误差小于阈值的点数。通过给定0阈值，该方法将在达到最大迭代次数后输出模型。"
+  },
+  {
+    "origin": "LMeds – the least median of squared error distances. In the framework finding median is efficiently implement with $O(n)$ complexity using quick-sort algorithm. Note, LMeds does not have to work properly when inlier ratio is less than 50%, in other cases this method is robust and does not require threshold.",
+    "local": "LMeds–平方误差距离的最小中值。在该框架中，采用快速排序算法，以$O（n）$的复杂度有效地实现了中值的查找。注意，当输入比小于50%时，LMeds不必正常工作，在其他情况下，这种方法是健壮的，不需要阈值。"
+  },
+  {
+    "origin": "Error metric which describes error distance of point to estimated model.",
+    "local": "描述点到估计模型的误差距离的误差度量。"
+  },
+  {
+    "origin": "Re-projection distance – used for affine, homography and projection matrices. For homography also symmetric re-projection distance can be used.",
+    "local": "重投影距离–用于仿射矩阵、单应矩阵和投影矩阵。对于单应也可以使用对称重投影距离。"
+  },
+  {
+    "origin": "Sampson distance – used for Fundamental matrix.",
+    "local": "桑普森距离-用于基本矩阵。"
+  },
+  {
+    "origin": "Symmetric Geometric distance – used for Essential matrix.",
+    "local": "对称几何距离-用于基本矩阵。"
+  },
+  {
+    "origin": "Degeneracy:",
+    "local": "简并度："
+  },
+  {
+    "origin": "DEGENSAC – method [7] which for Fundamental matrix estimation efficiently verifies and recovers model which has at least 5 points in minimal sample lying on the dominant plane.",
+    "local": "DEGENSAC–基本矩阵估计的方法[7]有效地验证和恢复了至少有5个最小样本点位于主平面上的模型。"
+  },
+  {
+    "origin": "Collinearity test – for affine and homography matrix estimation checks if no 3 points lying on the line. For homography matrix since points are planar is applied test which checks if points in minimal sample lie on the same side w.r.t. to any line crossing any two points in sample (does not assume reflection).",
+    "local": "共线测试-用于仿射和单应矩阵估计，检查线上是否没有3个点。对于单应矩阵，由于点是平面的，所以应用测试，检查最小样本中的点是否位于与样本中任意两点相交的任何直线的同一侧（不假设反射）。"
+  },
+  {
+    "origin": "Oriented epipolar constraint – method [6] for epipolar geometry which verifies model (fundamental and essential matrix) to have points visible in the front of the camera.",
+    "local": "定向外极线约束–外极线几何的方法[6]，用于验证模型（基本矩阵和基本矩阵）是否在相机前面有可见点。"
+  },
+  {
+    "origin": "SPRT verification – method [9] which verifies model by its evaluation on randomly shuffled points using statistical properties given by probability of inlier, relative time for estimation, average number of output models etc. Significantly speeding up framework, because bad model can be rejected very quickly without explicitly computing error for every point.",
+    "local": "SPRT验证–方法[9]通过使用输入概率、估计相对时间、输出模型平均数等给出的统计特性对随机洗牌点进行评估来验证模型，大大加快了框架速度，因为坏模型可以很快被拒绝，而不必为每个点显式计算错误。"
+  },
+  {
+    "origin": "Local Optimization:",
+    "local": "局部优化："
+  },
+  {
+    "origin": "Locally Optimized RANSAC – method [5] that iteratively improves so-far-the-best model by non-minimal estimation.",
+    "local": "局部优化RANSAC–方法[5]，通过非最小估计迭代改进迄今为止的最佳模型。"
+  },
+  {
+    "origin": "The default option in framework. This procedure is the fastest and not worse than others local optimization methods.",
+    "local": "框架中的默认选项。这个程序是最快的，也不比其他局部优化方法差。"
+  },
+  {
+    "origin": "Graph-Cut RANSAC – method [1] that refine so-far-the-best model, however, it exploits spatial coherence of the data points.",
+    "local": "Graph Cut RANSAC–方法[1]优化了迄今为止最好的模型，然而，它利用了数据点的空间一致性。"
+  },
+  {
+    "origin": "This procedure is quite precise however computationally slower.",
+    "local": "这个过程非常精确，但计算速度较慢。"
+  },
+  {
+    "origin": "Sigma Consensus – method [3] which improves model by applying non-minimal weighted estimation, where weights are computed with the same logic as in MAGSAC score. This method is better to use together with MAGSAC score.",
+    "local": "西格玛共识——方法[3]，通过应用非最小加权估计改进模型，其中权重的计算逻辑与MAGSAC得分相同。这种方法最好与MAGSAC评分结合使用。"
+  },
+  {
+    "origin": "Termination:",
+    "local": "终止："
+  },
+  {
+    "origin": "Standard – standard equation for independent and uniform sampling.",
+    "local": "标准-独立和均匀取样的标准方程式。"
+  },
+  {
+    "origin": "PROSAC – termination for PROSAC.",
+    "local": "PROSAC–PROSAC终止。"
+  },
+  {
+    "origin": "SPRT – termination for SPRT.",
+    "local": "SPRT–SPRT终止。"
+  },
+  {
+    "origin": "Solver. In the framework there are minimal and non-minimal solvers. In minimal solver standard methods for estimation is applied. In non-minimal solver usually the covariance matrix is built and the model is found as the eigen vector corresponding to the highest eigen value.",
+    "local": "解算器。在这个框架中有极小解算器和非极小解算器。在最小解算器中，采用了标准的估计方法。在非最小解算器中，通常建立协方差矩阵，将模型作为对应于最高特征值的特征向量。"
+  },
+  {
+    "origin": "Affine2D matrix",
+    "local": "仿射二维矩阵"
+  },
+  {
+    "origin": "Homography matrix – for minimal solver is used RHO (Gaussian elimination) algorithm from OpenCV.",
+    "local": "单应矩阵-用于最小解算器的是来自OpenCV的RHO（高斯消元）算法。"
+  },
+  {
+    "origin": "Fundamental matrix – for 7-points algorithm two null vectors are found using Gaussian elimination (eliminating to upper triangular matrix and back-substitution) instead of SVD and then solving 3-degrees polynomial. For 8-points solver Gaussian elimination is used too.",
+    "local": "基本矩阵-对于7点算法，使用高斯消去法（消除上三角矩阵和后代换）而不是SVD，然后求解3次多项式来找到两个零向量。对于8点解算器高斯消去也被使用。"
+  },
+  {
+    "origin": "Essential matrix – 4 null vectors are found using Gaussian elimination. Then the solver based on Gröbner basis described in [11] is used. Essential matrix can be computed only if",
+    "local": "基本矩阵–使用高斯消元法找到4个零向量。然后基于Gr的求解器ö使用[11]中描述的bner基。只有在下列条件下才能计算本质矩阵"
+  },
+  {
+    "origin": "LAPACK",
+    "local": "拉帕克"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "Eigen",
+    "local": "本征"
+  },
+  {
+    "origin": "are installed as it requires eigen decomposition with complex eigen values.",
+    "local": "因为它需要具有复杂特征值的特征分解而安装。"
+  },
+  {
+    "origin": "Perspective-n-Point – the minimal solver is classical 3 points with up to 4 solutions. For RANSAC the low number of sample size plays significant role as it requires less iterations, furthermore in average P3P solver has around 1.39 estimated models. Also, in new version of",
+    "local": "透视n点-最小解算器是经典的3点，最多4个解。对于RANSAC，低样本量起着重要作用，因为它需要较少的迭代，而且平均P3P解算器有大约1.39个估计模型。另外，在新版"
+  },
+  {
+    "origin": "with",
+    "local": "具有"
+  },
+  {
+    "origin": "there is an options to pass empty intrinsic matrix",
+    "local": "有一个选项可以传递空的内在矩阵"
+  },
+  {
+    "origin": ". If matrix is empty than using Direct Linear Transformation algorithm (PnP with 6 points) framework outputs not only rotation and translation vector but also calibration matrix.",
+    "local": ". 如果矩阵为空，则采用直接线性变换算法（6点PnP）框架不仅输出旋转和平移矢量，而且输出校准矩阵。"
+  },
+  {
+    "origin": "Also, the framework can be run in parallel. The parallelization is done in the way that multiple RANSACs are created and they share two atomic variables",
+    "local": "此外，该框架还可以并行运行。并行化的方式是创建多个ransac，它们共享两个原子变量"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "which determines when all RANSACs must terminate. If one of RANSAC terminated successfully then all other RANSAC will terminate as well. In the end the best model is synchronized from all threads. If PROSAC sampler is used then threads must share the same sampler since sampling is done sequentially. However, using default options of framework parallel RANSAC is not deterministic since it depends on how often each thread is running. The easiest way to make it deterministic is using PROSAC sampler without SPRT and Local Optimization and not for Fundamental matrix, because they internally use random generators.\\ \\ For NAPSAC, Progressive NAPSAC or Graph-Cut methods is required to build a neighborhood graph. In framework there are 3 options to do it:",
+    "local": "它决定了所有RANSACs何时必须终止。如果其中一个RANSAC成功终止，那么所有其他RANSAC也将终止。最后，从所有线程同步最佳模型。如果使用PROSAC采样器，那么线程必须共享同一采样器，因为采样是按顺序进行的。然而，使用frameworkparallelransac的默认选项是不确定的，因为它取决于每个线程运行的频率。使其具有确定性的最简单方法是使用PROSAC采样器，而不使用SPRT和局部优化，而不使用基本矩阵，因为它们内部使用随机生成器。对于NAPSAC，需要使用渐进NAPSAC或图切割方法来构建邻域图。在框架中，有3种选择："
+  },
+  {
+    "origin": "– estimate neighborhood graph using OpenCV FLANN K nearest-neighbors. The default value for KNN is 7. KNN method may work good for sampling but not good for GC-RANSAC.",
+    "local": "–使用OpenCV FLANN K近邻估计邻域图。KNN的默认值为7。KNN方法可能适用于采样，但不适用于GC-RANSAC。"
+  },
+  {
+    "origin": "– similarly as in previous case finds neighbor points which distance is less than 20 pixels.",
+    "local": "–与前一种情况类似，查找距离小于20像素的相邻点。"
+  },
+  {
+    "origin": "– for finding points’ neighborhood tiles points in cells using hash-table. The method is described in [2]. Less accurate than",
+    "local": "–用于使用哈希表在单元格中查找点的邻域点。方法见[2]。不如"
+  },
+  {
+    "origin": ", although significantly faster.",
+    "local": "，尽管速度明显加快。"
+  },
+  {
+    "origin": "Note,",
+    "local": "注意，"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "are not able to PnP solver, since there are 3D object points.\\ \\ New flags:",
+    "local": "无法PnP解算器，因为存在三维对象点。\\\\n新标志："
+  },
+  {
+    "origin": "– has standard LO-RANSAC.",
+    "local": "–具有标准LO-RANSAC。"
+  },
+  {
+    "origin": "– has LO-RANSAC and RANSACs run in parallel.",
+    "local": "–LO-RANSAC和RANSAC并行运行。"
+  },
+  {
+    "origin": "– has GC-RANSAC.",
+    "local": "–有GC-RANSAC。"
+  },
+  {
+    "origin": "– has LO-RANSAC with smaller number iterations in local optimization step. Uses RANSAC score to maximize number of inliers and terminate earlier.",
+    "local": "–在局部优化步骤中具有迭代次数较少的LO-RANSAC。使用RANSAC分数最大化内联线的数量并提前终止。"
+  },
+  {
+    "origin": "– has PROSAC sampling. Note, points must be sorted.",
+    "local": "–具有PROSAC采样。注意，必须对点进行排序。"
+  },
+  {
+    "origin": "– has LO-RANSAC. Only valid for Fundamental matrix with 8-points solver.",
+    "local": "–有LO-RANSAC。仅对具有8点解算器的基本矩阵有效。"
+  },
+  {
+    "origin": "– has MAGSAC++.",
+    "local": "–有MAGSAC++。"
+  },
+  {
+    "origin": "Every flag uses SPRT verification. And in the end the final so-far-the-best model is polished by non minimal estimation of all found inliers.\\ \\ A few other important parameters:",
+    "local": "每个标志都使用SPRT验证。最后，通过对所有发现的内联线进行非最小估计，最终得到迄今为止最好的模型。\\\\n其他一些重要参数："
+  },
+  {
+    "origin": "– since every USAC solver is deterministic in OpenCV (i.e., for the same points and parameters returns the same result) by providing new state it will output new model.",
+    "local": "–由于每个USAC解算器在OpenCV中都是确定性的（即，对于相同的点和参数返回相同的结果），通过提供新的状态，它将输出新的模型。"
+  },
+  {
+    "origin": "– number of iterations for Local Optimization method.",
+    "local": "–局部优化方法的迭代次数。"
+  },
+  {
+    "origin": ". By increasing",
+    "local": ". 通过增加"
+  },
+  {
+    "origin": "the output model could be more accurate, however, the computationial time may also increase.",
+    "local": "输出模型可能更精确，但是计算时间也可能增加。"
+  },
+  {
+    "origin": "– maximum sample number for Local Optimization.",
+    "local": "–局部优化的最大样本数。"
+  },
+  {
+    "origin": "The default value is 14",
+    "local": "默认值为14"
+  },
+  {
+    "origin": ". Note, that by increasing",
+    "local": ". 注意，通过增加"
+  },
+  {
+    "origin": "the accuracy of model can increase as well as the computational time. However, it is recommended to keep value less than 100, because estimation on low number of points is faster and more robust.",
+    "local": "模型的精度可以提高，计算时间也可以增加。但是，建议将值保持在100以下，因为对低点数的估计速度更快、更稳健。"
+  },
+  {
+    "origin": "Samples:",
+    "local": "样品："
+  },
+  {
+    "origin": "There are three new sample files in opencv/samples directory.",
+    "local": "opencv/samples目录中有三个新的示例文件。"
+  },
+  {
+    "origin": "– input arguments of",
+    "local": "–输入参数"
+  },
+  {
+    "origin": "function are two pathes to images. Then correspondences are found using SIFT detector. Fundamental matrix is found using RANSAC from tentaive correspondences and epipolar lines are plot.",
+    "local": "函数是通向图像的两条路径。然后利用SIFT检测器找到对应关系。利用天幕对应的RANSAC求基本矩阵，绘制极线图。"
+  },
+  {
+    "origin": "– input arguments are path to data file containing image names and single intrinsic matrix and directory where these images located. Correspondences are found using SIFT. The essential matrix is estimated using RANSAC and decomposed to rotation and translation. Then by building two relative poses with projection matrices image points are triangulated to object points. By running RANSAC with 3D plane fitting object points as well as correspondences are clustered into planes.",
+    "local": "–输入参数是数据文件的路径，其中包含图像名称、单个内在矩阵和这些图像所在的目录。通过SIFT找到对应关系。利用RANSAC估计基本矩阵，并将其分解为旋转和平移。然后利用投影矩阵建立两个相对姿态，将图像点三角化为目标点。通过运行具有三维平面拟合的RANSAC，将目标点以及对应点聚类成平面。"
+  },
+  {
+    "origin": "– the same functionality as in .cpp file, however instead of clustering points to plane the 3D map of object points is plot.",
+    "local": "–与.cpp文件中的功能相同，但不是聚集点以平面显示对象点的三维地图，而是打印。"
+  },
+  {
+    "origin": "References:",
+    "local": "参考文献："
+  },
+  {
+    "origin": "1. Daniel Barath and Jiří Matas. 2018. Graph-Cut RANSAC. In",
+    "local": "1.丹尼尔·巴拉特和吉ří 马塔斯。2018。图切兰萨克。在"
+  },
+  {
+    "origin": "Proceedings of the iEEE conference on computer vision and pattern recognition",
+    "local": "iEEE计算机视觉与模式识别会议论文集"
+  },
+  {
+    "origin": ", 6733–6741.",
+    "local": ", 6733–6741."
+  },
+  {
+    "origin": "2. Daniel Barath, Maksym Ivashechkin, and Jiri Matas. 2019. Progressive NAPSAC: Sampling from gradually growing neighborhoods.",
+    "local": "2.丹尼尔·巴拉特、马克西姆·伊瓦谢金和吉里·马塔斯。2019.渐进式NAPSAC：从逐渐增长的社区取样。"
+  },
+  {
+    "origin": "arXiv preprint arXiv:1906.02295",
+    "local": "arXiv预印本arXiv:1906.02295"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "3. Daniel Barath, Jana Noskova, Maksym Ivashechkin, and Jiri Matas.",
+    "local": "3.丹尼尔·巴拉思、贾娜·诺斯科娃、马克西姆·伊瓦舍金和吉里·马塔斯。"
+  },
+  {
+    "origin": "MAGSAC++, a fast, reliable and accurate robust estimator. In",
+    "local": "MAGSAC++，一种快速、可靠、准确的鲁棒估计方法。在"
+  },
+  {
+    "origin": "Proceedings of the iEEE/CVF conference on computer vision and pattern recognition (cVPR)",
+    "local": "iEEE/CVF计算机视觉与模式识别会议论文集"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "4. O. Chum and J. Matas. 2005. Matching with PROSAC-progressive sample consensus. In",
+    "local": "4.O。密友和J。马塔斯。2005.与PROSAC渐进式样本一致性匹配。在"
+  },
+  {
+    "origin": "Computer vision and pattern recognition",
+    "local": "计算机视觉与模式识别"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "5. O. Chum, J. Matas, and J. Kittler. 2003. Locally optimized RANSAC. In",
+    "local": "5.O。朋友，J。Matas和J。基特勒。2003.局部优化RANSAC。在"
+  },
+  {
+    "origin": "Joint pattern recognition symposium",
+    "local": "联合模式识别研讨会"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "6. O. Chum, T. Werner, and J. Matas. 2004. Epipolar geometry estimation via RANSAC benefits from the oriented epipolar constraint. In",
+    "local": "6.O。朋友，T。沃纳和J。马塔斯。通过RANSAC的外极几何估计得益于定向外极约束。在"
+  },
+  {
+    "origin": "International conference on pattern recognition",
+    "local": "国际模式识别会议"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "7. Ondrej Chum, Tomas Werner, and Jiri Matas. 2005. Two-view geometry estimation unaffected by a dominant plane. In",
+    "local": "7.翁德雷杰·丘姆、托马斯·沃纳和吉里·马塔斯。不受主平面影响的双视图几何估计。在"
+  },
+  {
+    "origin": "2005 iEEE computer society conference on computer vision and pattern recognition (cVPR’05)",
+    "local": "2005年iEEE计算机学会计算机视觉和模式识别会议（cVPR'05）"
+  },
+  {
+    "origin": ", 772–779.",
+    "local": ", 772–779."
+  },
+  {
+    "origin": "8. M. A. Fischler and R. C. Bolles. 1981. Random sample consensus: A paradigm for model fitting with applications to image analysis and automated cartography.",
+    "local": "8米。A.费施勒和R。C.波尔斯。随机样本一致性：模型拟合的范例，应用于图像分析和自动制图。"
+  },
+  {
+    "origin": "Communications of the ACM",
+    "local": "ACM通信"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "9. Jiri Matas and Ondrej Chum. 2005. Randomized RANSAC with sequential probability ratio test. In",
+    "local": "9.Jiri Matas和Ondrej Chum。随机RANSAC序列概率比检验。在"
+  },
+  {
+    "origin": ", 1727–1732.",
+    "local": ", 1727–1732."
+  },
+  {
+    "origin": "10. D. R. Myatt, P. H. S. Torr, S. J. Nasuto, J. M. Bishop, and R. Craddock. 2002. NAPSAC: High noise, high dimensional robust estimation. In",
+    "local": "10.D。R。迈亚特，P。H。S。托尔，S。J。纳苏托，J。M。毕晓普和R。克拉多克。2002.NAPSAC：高噪声、高维稳健估计。在"
+  },
+  {
+    "origin": "In bMVC02",
+    "local": "在bMVC02中"
+  },
+  {
+    "origin": ", 458–467.",
+    "local": ", 458–467."
+  },
+  {
+    "origin": "11. Henrik Stewénius, Christopher Engels, and David Nistér. 2006. Recent developments on direct relative orientation.",
+    "local": "11.亨里克炖肉é纽斯、克里斯托弗·恩格斯和大卫·尼斯特ér。2006.直接相对定向的最新进展。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,214 @@
+[
+  {
+    "origin": "OpenCV: Using Kinect and other OpenNI compatible depth sensors",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Using Kinect and other OpenNI compatible depth sensors",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Depth sensors compatible with OpenNI (Kinect, XtionPRO, ...) are supported through VideoCapture class. Depth map, BGR image and some other formats of output can be retrieved by using familiar interface of VideoCapture.",
+    "local": ""
+  },
+  {
+    "origin": "In order to use depth sensor with OpenCV you should do the following preliminary steps:",
+    "local": ""
+  },
+  {
+    "origin": "Install OpenNI library (from here",
+    "local": ""
+  },
+  {
+    "origin": "http://www.openni.org/downloadfiles",
+    "local": ""
+  },
+  {
+    "origin": ") and PrimeSensor Module for OpenNI (from here",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/avin2/SensorKinect",
+    "local": ""
+  },
+  {
+    "origin": "). The installation should be done to default folders listed in the instructions of these products, e.g.:",
+    "local": ""
+  },
+  {
+    "origin": "If one or both products were installed to the other folders, the user should change corresponding CMake variables OPENNI_LIB_DIR, OPENNI_INCLUDE_DIR or/and OPENNI_PRIME_SENSOR_MODULE_BIN_DIR.",
+    "local": ""
+  },
+  {
+    "origin": "Configure OpenCV with OpenNI support by setting WITH_OPENNI flag in CMake. If OpenNI is found in install folders OpenCV will be built with OpenNI library (see a status OpenNI in CMake log) whereas PrimeSensor Modules can not be found (see a status OpenNI PrimeSensor Modules in CMake log). Without PrimeSensor module OpenCV will be successfully compiled with OpenNI library, but VideoCapture object will not grab data from Kinect sensor.",
+    "local": ""
+  },
+  {
+    "origin": "Build OpenCV.",
+    "local": ""
+  },
+  {
+    "origin": "VideoCapture can retrieve the following data:",
+    "local": ""
+  },
+  {
+    "origin": "data given from depth generator:",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_DEPTH_MAP - depth values in mm (CV_16UC1)",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_POINT_CLOUD_MAP - XYZ in meters (CV_32FC3)",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_DISPARITY_MAP - disparity in pixels (CV_8UC1)",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_DISPARITY_MAP_32F - disparity in pixels (CV_32FC1)",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_VALID_DEPTH_MASK - mask of valid pixels (not occluded, not shaded etc.) (CV_8UC1)",
+    "local": ""
+  },
+  {
+    "origin": "data given from BGR image generator:",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_BGR_IMAGE - color image (CV_8UC3)",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_GRAY_IMAGE - gray image (CV_8UC1)",
+    "local": ""
+  },
+  {
+    "origin": "In order to get depth map from depth sensor use VideoCapture::operator &gt;&gt;, e. g. :",
+    "local": ""
+  },
+  {
+    "origin": "For getting several data maps use VideoCapture::grab and VideoCapture::retrieve, e.g. :",
+    "local": ""
+  },
+  {
+    "origin": "For setting and getting some property of sensor` data generators use VideoCapture::set and VideoCapture::get methods respectively, e.g. :",
+    "local": ""
+  },
+  {
+    "origin": "Since two types of sensor's data generators are supported (image generator and depth generator), there are two flags that should be used to set/get property of the needed generator:",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_IMAGE_GENERATOR &ndash; A flag for access to the image generator properties.",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_DEPTH_GENERATOR &ndash; A flag for access to the depth generator properties. This flag value is assumed by default if neither of the two possible values of the property is not set.",
+    "local": ""
+  },
+  {
+    "origin": "Some depth sensors (for example XtionPRO) do not have image generator. In order to check it you can get CAP_OPENNI_IMAGE_GENERATOR_PRESENT property.",
+    "local": ""
+  },
+  {
+    "origin": "Flags specifying the needed generator type must be used in combination with particular generator property. The following properties of cameras available through OpenNI interfaces are supported:",
+    "local": ""
+  },
+  {
+    "origin": "For image generator:",
+    "local": ""
+  },
+  {
+    "origin": "CAP_PROP_OPENNI_OUTPUT_MODE &ndash; Three output modes are supported: CAP_OPENNI_VGA_30HZ used by default (image generator returns images in VGA resolution with 30 FPS), CAP_OPENNI_SXGA_15HZ (image generator returns images in SXGA resolution with 15 FPS) and CAP_OPENNI_SXGA_30HZ (image generator returns images in SXGA resolution with 30 FPS, the mode is supported by XtionPRO Live); depth generator's maps are always in VGA resolution.",
+    "local": ""
+  },
+  {
+    "origin": "For depth generator:",
+    "local": ""
+  },
+  {
+    "origin": "CAP_PROP_OPENNI_REGISTRATION &ndash; Flag that registers the remapping depth map to image map by changing depth generator's view point (if the flag is \"on\") or sets this view point to its normal one (if the flag is \"off\"). The registration process’s resulting images are pixel-aligned,which means that every pixel in the image is aligned to a pixel in the depth image.",
+    "local": ""
+  },
+  {
+    "origin": "Next properties are available for getting only:",
+    "local": ""
+  },
+  {
+    "origin": "CAP_PROP_OPENNI_FRAME_MAX_DEPTH &ndash; A maximum supported depth of Kinect in mm.",
+    "local": ""
+  },
+  {
+    "origin": "CAP_PROP_OPENNI_BASELINE &ndash; Baseline value in mm.",
+    "local": ""
+  },
+  {
+    "origin": "CAP_PROP_OPENNI_FOCAL_LENGTH &ndash; A focal length in pixels.",
+    "local": ""
+  },
+  {
+    "origin": "CAP_PROP_FRAME_WIDTH &ndash; Frame width in pixels.",
+    "local": ""
+  },
+  {
+    "origin": "CAP_PROP_FRAME_HEIGHT &ndash; Frame height in pixels.",
+    "local": ""
+  },
+  {
+    "origin": "CAP_PROP_FPS &ndash; Frame rate in FPS.",
+    "local": ""
+  },
+  {
+    "origin": "Some typical flags combinations \"generator type + property\" are defined as single flags:",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_IMAGE_GENERATOR_OUTPUT_MODE = CAP_OPENNI_IMAGE_GENERATOR + CAP_PROP_OPENNI_OUTPUT_MODE",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_DEPTH_GENERATOR_BASELINE = CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_BASELINE",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_DEPTH_GENERATOR_FOCAL_LENGTH = CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_FOCAL_LENGTH",
+    "local": ""
+  },
+  {
+    "origin": "CAP_OPENNI_DEPTH_GENERATOR_REGISTRATION = CAP_OPENNI_DEPTH_GENERATOR + CAP_PROP_OPENNI_REGISTRATION",
+    "local": ""
+  },
+  {
+    "origin": "For more information please refer to the example of usage",
+    "local": ""
+  },
+  {
+    "origin": "videocapture_openni.cpp",
+    "local": ""
+  },
+  {
+    "origin": "in opencv/samples/cpp folder.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

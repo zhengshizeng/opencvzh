@@ -1,0 +1,494 @@
+[
+  {
+    "origin": "OpenCV: Color conversions",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Color conversions",
+    "local": ""
+  },
+  {
+    "origin": "See",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "document other conversion modes",
+    "local": ""
+  },
+  {
+    "origin": "RGB \\(\\leftrightarrow\\) GRAY",
+    "local": ""
+  },
+  {
+    "origin": "Transformations within RGB space like adding/removing the alpha channel, reversing the channel order, conversion to/from 16-bit RGB color (R5:G6:B5 or R5:G5:B5), as well as conversion to/from grayscale using:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\text{RGB[A] to Gray:} \\quad Y \\leftarrow 0.299 \\cdot R + 0.587 \\cdot G + 0.114 \\cdot B\\]",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\text{Gray to RGB[A]:} \\quad R \\leftarrow Y, G \\leftarrow Y, B \\leftarrow Y, A \\leftarrow \\max (ChannelRange)\\]",
+    "local": ""
+  },
+  {
+    "origin": "The conversion from a RGB image to gray is done with:",
+    "local": ""
+  },
+  {
+    "origin": "More advanced channel reordering can also be done with",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "RGB \\(\\leftrightarrow\\) CIE XYZ.Rec 709 with D65 white point",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{bmatrix} X \\\\ Y \\\\ Z \\end{bmatrix} \\leftarrow \\begin{bmatrix} 0.412453 &amp; 0.357580 &amp; 0.180423 \\\\ 0.212671 &amp; 0.715160 &amp; 0.072169 \\\\ 0.019334 &amp; 0.119193 &amp; 0.950227 \\end{bmatrix} \\cdot \\begin{bmatrix} R \\\\ G \\\\ B \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{bmatrix} R \\\\ G \\\\ B \\end{bmatrix} \\leftarrow \\begin{bmatrix} 3.240479 &amp; -1.53715 &amp; -0.498535 \\\\ -0.969256 &amp; 1.875991 &amp; 0.041556 \\\\ 0.055648 &amp; -0.204043 &amp; 1.057311 \\end{bmatrix} \\cdot \\begin{bmatrix} X \\\\ Y \\\\ Z \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\(X\\), \\(Y\\) and \\(Z\\) cover the whole value range (in case of floating-point images, \\(Z\\) may exceed 1).",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "RGB \\(\\leftrightarrow\\) YCrCb JPEG (or YCC)",
+    "local": ""
+  },
+  {
+    "origin": "\\[Y \\leftarrow 0.299 \\cdot R + 0.587 \\cdot G + 0.114 \\cdot B\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[Cr \\leftarrow (R-Y) \\cdot 0.713 + delta\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[Cb \\leftarrow (B-Y) \\cdot 0.564 + delta\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[R \\leftarrow Y + 1.403 \\cdot (Cr - delta)\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[G \\leftarrow Y - 0.714 \\cdot (Cr - delta) - 0.344 \\cdot (Cb - delta)\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[B \\leftarrow Y + 1.773 \\cdot (Cb - delta)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where",
+    "local": ""
+  },
+  {
+    "origin": "\\[delta = \\left \\{ \\begin{array}{l l} 128 &amp; \\mbox{for 8-bit images} \\\\ 32768 &amp; \\mbox{for 16-bit images} \\\\ 0.5 &amp; \\mbox{for floating-point images} \\end{array} \\right .\\]",
+    "local": ""
+  },
+  {
+    "origin": "Y, Cr, and Cb cover the whole value range.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "RGB \\(\\leftrightarrow\\) HSV",
+    "local": ""
+  },
+  {
+    "origin": "In case of 8-bit and 16-bit images, R, G, and B are converted to the floating-point format and scaled to fit the 0 to 1 range.",
+    "local": ""
+  },
+  {
+    "origin": "\\[V \\leftarrow max(R,G,B)\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[S \\leftarrow \\fork{\\frac{V-min(R,G,B)}{V}}{if \\(V \\neq 0\\)}{0}{otherwise}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[H \\leftarrow \\forkfour{{60(G - B)}/{(V-min(R,G,B))}}{if \\(V=R\\)} {{120+60(B - R)}/{(V-min(R,G,B))}}{if \\(V=G\\)} {{240+60(R - G)}/{(V-min(R,G,B))}}{if \\(V=B\\)} {0}{if \\(R=G=B\\)}\\]",
+    "local": ""
+  },
+  {
+    "origin": "If \\(H&lt;0\\) then \\(H \\leftarrow H+360\\) . On output \\(0 \\leq V \\leq 1\\), \\(0 \\leq S \\leq 1\\), \\(0 \\leq H \\leq 360\\) .",
+    "local": ""
+  },
+  {
+    "origin": "The values are then converted to the destination data type:",
+    "local": ""
+  },
+  {
+    "origin": "8-bit images: \\(V \\leftarrow 255 V, S \\leftarrow 255 S, H \\leftarrow H/2 \\text{(to fit to 0 to 255)}\\)",
+    "local": ""
+  },
+  {
+    "origin": "16-bit images: (currently not supported) \\(V &lt;- 65535 V, S &lt;- 65535 S, H &lt;- H\\)",
+    "local": ""
+  },
+  {
+    "origin": "32-bit images: H, S, and V are left as is",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "RGB \\(\\leftrightarrow\\) HLS",
+    "local": ""
+  },
+  {
+    "origin": "In case of 8-bit and 16-bit images, R, G, and B are converted to the floating-point format and scaled to fit the 0 to 1 range.",
+    "local": ""
+  },
+  {
+    "origin": "\\[V_{max} \\leftarrow {max}(R,G,B)\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[V_{min} \\leftarrow {min}(R,G,B)\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[L \\leftarrow \\frac{V_{max} + V_{min}}{2}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[S \\leftarrow \\fork { \\frac{V_{max} - V_{min}}{V_{max} + V_{min}} }{if \\(L &lt; 0.5\\) } { \\frac{V_{max} - V_{min}}{2 - (V_{max} + V_{min})} }{if \\(L \\ge 0.5\\) }\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[H \\leftarrow \\forkfour {{60(G - B)}/{(V_{max}-V_{min})}}{if \\(V_{max}=R\\) } {{120+60(B - R)}/{(V_{max}-V_{min})}}{if \\(V_{max}=G\\) } {{240+60(R - G)}/{(V_{max}-V_{min})}}{if \\(V_{max}=B\\) } {0}{if \\(R=G=B\\) }\\]",
+    "local": ""
+  },
+  {
+    "origin": "If \\(H&lt;0\\) then \\(H \\leftarrow H+360\\) . On output \\(0 \\leq L \\leq 1\\), \\(0 \\leq S \\leq 1\\), \\(0 \\leq H \\leq 360\\) .",
+    "local": ""
+  },
+  {
+    "origin": "The values are then converted to the destination data type:",
+    "local": ""
+  },
+  {
+    "origin": "8-bit images: \\(V \\leftarrow 255 \\cdot V, S \\leftarrow 255 \\cdot S, H \\leftarrow H/2 \\; \\text{(to fit to 0 to 255)}\\)",
+    "local": ""
+  },
+  {
+    "origin": "16-bit images: (currently not supported) \\(V &lt;- 65535 \\cdot V, S &lt;- 65535 \\cdot S, H &lt;- H\\)",
+    "local": ""
+  },
+  {
+    "origin": "32-bit images: H, S, V are left as is",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "RGB \\(\\leftrightarrow\\) CIE L*a*b*",
+    "local": ""
+  },
+  {
+    "origin": "In case of 8-bit and 16-bit images, R, G, and B are converted to the floating-point format and scaled to fit the 0 to 1 range.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\vecthree{X}{Y}{Z} \\leftarrow \\vecthreethree{0.412453}{0.357580}{0.180423}{0.212671}{0.715160}{0.072169}{0.019334}{0.119193}{0.950227} \\cdot \\vecthree{R}{G}{B}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[X \\leftarrow X/X_n, \\text{where} X_n = 0.950456\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[Z \\leftarrow Z/Z_n, \\text{where} Z_n = 1.088754\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[L \\leftarrow \\fork{116*Y^{1/3}-16}{for \\(Y&gt;0.008856\\)}{903.3*Y}{for \\(Y \\le 0.008856\\)}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[a \\leftarrow 500 (f(X)-f(Y)) + delta\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[b \\leftarrow 200 (f(Y)-f(Z)) + delta\\]",
+    "local": ""
+  },
+  {
+    "origin": "where",
+    "local": ""
+  },
+  {
+    "origin": "\\[f(t)= \\fork{t^{1/3}}{for \\(t&gt;0.008856\\)}{7.787 t+16/116}{for \\(t\\leq 0.008856\\)}\\]",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "\\[delta = \\fork{128}{for 8-bit images}{0}{for floating-point images}\\]",
+    "local": ""
+  },
+  {
+    "origin": "This outputs \\(0 \\leq L \\leq 100\\), \\(-127 \\leq a \\leq 127\\), \\(-127 \\leq b \\leq 127\\) . The values are then converted to the destination data type:",
+    "local": ""
+  },
+  {
+    "origin": "8-bit images: \\(L \\leftarrow L*255/100, \\; a \\leftarrow a + 128, \\; b \\leftarrow b + 128\\)",
+    "local": ""
+  },
+  {
+    "origin": "16-bit images: (currently not supported)",
+    "local": ""
+  },
+  {
+    "origin": "32-bit images: L, a, and b are left as is",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "RGB \\(\\leftrightarrow\\) CIE L*u*v*",
+    "local": ""
+  },
+  {
+    "origin": "In case of 8-bit and 16-bit images, R, G, and B are converted to the floating-point format and scaled to fit 0 to 1 range.",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\vecthree{X}{Y}{Z} \\leftarrow \\vecthreethree{0.412453}{0.357580}{0.180423}{0.212671}{0.715160}{0.072169}{0.019334}{0.119193}{0.950227} \\cdot \\vecthree{R}{G}{B}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[L \\leftarrow \\fork{116*Y^{1/3} - 16}{for \\(Y&gt;0.008856\\)}{903.3 Y}{for \\(Y\\leq 0.008856\\)}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[u&#39; \\leftarrow 4*X/(X + 15*Y + 3 Z)\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[v&#39; \\leftarrow 9*Y/(X + 15*Y + 3 Z)\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[u \\leftarrow 13*L*(u&#39; - u_n) \\quad \\text{where} \\quad u_n=0.19793943\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[v \\leftarrow 13*L*(v&#39; - v_n) \\quad \\text{where} \\quad v_n=0.46831096\\]",
+    "local": ""
+  },
+  {
+    "origin": "This outputs \\(0 \\leq L \\leq 100\\), \\(-134 \\leq u \\leq 220\\), \\(-140 \\leq v \\leq 122\\) .",
+    "local": ""
+  },
+  {
+    "origin": "The values are then converted to the destination data type:",
+    "local": ""
+  },
+  {
+    "origin": "8-bit images: \\(L \\leftarrow 255/100 L, \\; u \\leftarrow 255/354 (u + 134), \\; v \\leftarrow 255/262 (v + 140)\\)",
+    "local": ""
+  },
+  {
+    "origin": "16-bit images: (currently not supported)",
+    "local": ""
+  },
+  {
+    "origin": "32-bit images: L, u, and v are left as is",
+    "local": ""
+  },
+  {
+    "origin": "Note that when converting integer Luv images to RGB the intermediate X, Y and Z values are truncated to \\( [0, 2] \\) range to fit white point limitations. It may lead to incorrect representation of colors with odd XYZ values.",
+    "local": ""
+  },
+  {
+    "origin": "The above formulae for converting RGB to/from various color spaces have been taken from multiple sources on the web, primarily from the Charles Poynton site",
+    "local": ""
+  },
+  {
+    "origin": "http://www.poynton.com/ColorFAQ.html",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Bayer \\(\\rightarrow\\) RGB",
+    "local": ""
+  },
+  {
+    "origin": "The Bayer pattern is widely used in CCD and CMOS cameras. It enables you to get color pictures from a single plane where R,G, and B pixels (sensors of a particular component) are interleaved as follows:",
+    "local": ""
+  },
+  {
+    "origin": "Bayer pattern",
+    "local": ""
+  },
+  {
+    "origin": "The output RGB components of a pixel are interpolated from 1, 2, or 4 neighbors of the pixel having the same color. There are several modifications of the above pattern that can be achieved by shifting the pattern one pixel left and/or one pixel up. The two letters \\(C_1\\) and \\(C_2\\) in the conversion constants CV_Bayer \\(C_1 C_2\\) 2BGR and CV_Bayer \\(C_1 C_2\\) 2RGB indicate the particular pattern type. These are components from the second row, second and third columns, respectively. For example, the above pattern has a very popular \"BG\" type.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

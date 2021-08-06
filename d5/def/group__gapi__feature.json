@@ -1,0 +1,562 @@
+[
+  {
+    "origin": "OpenCV: Graph API: Image Feature Detection",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Graph API: Image Feature Detection",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image, double threshold1, double threshold2, int apertureSize=3, bool L2gradient=false)",
+    "local": ""
+  },
+  {
+    "origin": "Finds edges in an image using the Canny algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image, int maxCorners, double qualityLevel, double minDistance, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "(), int blockSize=3, bool useHarrisDetector=false, double k=0.04)",
+    "local": ""
+  },
+  {
+    "origin": "Determines strong corners on an image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "Canny()",
+    "local": ""
+  },
+  {
+    "origin": "cv::gapi::Canny",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "threshold1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "threshold2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "apertureSize",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "L2gradient",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Finds edges in an image using the Canny algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "The function finds edges in the input image and marks them in the output map edges using the Canny algorithm. The smallest value between threshold1 and threshold2 is used for edge linking. The largest value is used to find initial segments of strong edges. See",
+    "local": ""
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Canny_edge_detector",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Function textual ID is \"org.opencv.imgproc.feature.canny\"",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "8-bit input image.",
+    "local": ""
+  },
+  {
+    "origin": "threshold1",
+    "local": ""
+  },
+  {
+    "origin": "first threshold for the hysteresis procedure.",
+    "local": ""
+  },
+  {
+    "origin": "threshold2",
+    "local": ""
+  },
+  {
+    "origin": "second threshold for the hysteresis procedure.",
+    "local": ""
+  },
+  {
+    "origin": "apertureSize",
+    "local": ""
+  },
+  {
+    "origin": "aperture size for the Sobel operator.",
+    "local": ""
+  },
+  {
+    "origin": "L2gradient",
+    "local": ""
+  },
+  {
+    "origin": "a flag, indicating whether a more accurate \\(L_2\\) norm \\(=\\sqrt{(dI/dx)^2 + (dI/dy)^2}\\) should be used to calculate the image gradient magnitude ( L2gradient=true ), or whether the default \\(L_1\\) norm \\(=|dI/dx|+|dI/dy|\\) is enough ( L2gradient=false ).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "goodFeaturesToTrack()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::gapi::goodFeaturesToTrack",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "maxCorners",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "qualityLevel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "minDistance",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "useHarrisDetector",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.gapi.goodFeaturesToTrack(",
+    "local": ""
+  },
+  {
+    "origin": "image, maxCorners, qualityLevel, minDistance[, mask[, blockSize[, useHarrisDetector[, k]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Determines strong corners on an image.",
+    "local": ""
+  },
+  {
+    "origin": "The function finds the most prominent corners in the image or in the specified image region, as described in",
+    "local": ""
+  },
+  {
+    "origin": "Function calculates the corner quality measure at every source image pixel using the",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Function performs a non-maximum suppression (the local maximums in",
+    "local": ""
+  },
+  {
+    "origin": "3 x 3",
+    "local": ""
+  },
+  {
+    "origin": "neighborhood are retained).",
+    "local": ""
+  },
+  {
+    "origin": "The corners with the minimal eigenvalue less than \\(\\texttt{qualityLevel} \\cdot \\max_{x,y} qualityMeasureMap(x,y)\\) are rejected.",
+    "local": ""
+  },
+  {
+    "origin": "The remaining corners are sorted by the quality measure in the descending order.",
+    "local": ""
+  },
+  {
+    "origin": "Function throws away each corner for which there is a stronger corner at a distance less than maxDistance.",
+    "local": ""
+  },
+  {
+    "origin": "The function can be used to initialize a point-based tracker of an object.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If the function is called with different values A and B of the parameter qualityLevel , and A &gt; B, the vector of returned corners with qualityLevel=A will be the prefix of the output vector with qualityLevel=B .",
+    "local": ""
+  },
+  {
+    "origin": "Function textual ID is \"org.opencv.imgproc.feature.goodFeaturesToTrack\"",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Input 8-bit or floating-point 32-bit, single-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "maxCorners",
+    "local": ""
+  },
+  {
+    "origin": "Maximum number of corners to return. If there are more corners than are found, the strongest of them is returned.",
+    "local": ""
+  },
+  {
+    "origin": "implies that no limit on the maximum is set and all detected corners are returned.",
+    "local": ""
+  },
+  {
+    "origin": "qualityLevel",
+    "local": ""
+  },
+  {
+    "origin": "Parameter characterizing the minimal accepted quality of image corners. The parameter value is multiplied by the best corner quality measure, which is the minimal eigenvalue (see",
+    "local": ""
+  },
+  {
+    "origin": ") or the Harris function response (see",
+    "local": ""
+  },
+  {
+    "origin": "). The corners with the quality measure less than the product are rejected. For example, if the best corner has the quality measure = 1500, and the qualityLevel=0.01 , then all the corners with the quality measure less than 15 are rejected.",
+    "local": ""
+  },
+  {
+    "origin": "minDistance",
+    "local": ""
+  },
+  {
+    "origin": "Minimum possible Euclidean distance between the returned corners.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Optional region of interest. If the image is not empty (it needs to have the type CV_8UC1 and the same size as image ), it specifies the region in which the corners are detected.",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": "Size of an average block for computing a derivative covariation matrix over each pixel neighborhood. See cornerEigenValsAndVecs .",
+    "local": ""
+  },
+  {
+    "origin": "useHarrisDetector",
+    "local": ""
+  },
+  {
+    "origin": "Parameter indicating whether to use a Harris detector (see",
+    "local": ""
+  },
+  {
+    "origin": ") or",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "Free parameter of the Harris detector.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "vector of detected corners.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

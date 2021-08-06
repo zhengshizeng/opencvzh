@@ -1,0 +1,126 @@
+[
+  {
+    "origin": "OpenCV: Camera calibration with square chessboard",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Camera calibration with square chessboard",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Victor Eruhimov",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 4.0",
+    "local": ""
+  },
+  {
+    "origin": "The goal of this tutorial is to learn how to calibrate a camera given a set of chessboard images.",
+    "local": ""
+  },
+  {
+    "origin": "Test data",
+    "local": ""
+  },
+  {
+    "origin": ": use images in your data/chess folder.",
+    "local": ""
+  },
+  {
+    "origin": "Compile OpenCV with samples by setting BUILD_EXAMPLES to ON in cmake configuration.",
+    "local": ""
+  },
+  {
+    "origin": "Go to bin folder and use imagelist_creator to create an XML/YAML list of your images.",
+    "local": ""
+  },
+  {
+    "origin": "Then, run calibration sample to get camera parameters. Use square size equal to 3cm.",
+    "local": ""
+  },
+  {
+    "origin": "Pose estimation",
+    "local": ""
+  },
+  {
+    "origin": "Now, let us write code that detects a chessboard in an image and finds its distance from the camera. You can apply this method to any object with known 3D geometry; which you detect in an image.",
+    "local": ""
+  },
+  {
+    "origin": "Test data",
+    "local": ""
+  },
+  {
+    "origin": ": use chess_test*.jpg images from your data folder.",
+    "local": ""
+  },
+  {
+    "origin": "Create an empty console project. Load a test image :",
+    "local": ""
+  },
+  {
+    "origin": "Mat img = imread(argv[1], IMREAD_GRAYSCALE);",
+    "local": ""
+  },
+  {
+    "origin": "Detect a chessboard in this image using findChessboard function :",
+    "local": ""
+  },
+  {
+    "origin": "bool found = findChessboardCorners( img, boardSize, ptvec, CALIB_CB_ADAPTIVE_THRESH );",
+    "local": ""
+  },
+  {
+    "origin": "Now, write a function that generates a vector&lt;Point3f&gt; array of 3d coordinates of a chessboard in any coordinate system. For simplicity, let us choose a system such that one of the chessboard corners is in the origin and the board is in the plane",
+    "local": ""
+  },
+  {
+    "origin": "Read camera parameters from XML/YAML file :",
+    "local": ""
+  },
+  {
+    "origin": "FileStorage fs( filename, FileStorage::READ ); Mat intrinsics, distortion; fs[\"camera_matrix\"] &gt;&gt; intrinsics; fs[\"distortion_coefficients\"] &gt;&gt; distortion;",
+    "local": ""
+  },
+  {
+    "origin": "Now we are ready to find a chessboard pose by running `solvePnP` :",
+    "local": ""
+  },
+  {
+    "origin": "vector&lt;Point3f&gt; boardPoints; // fill the array ... solvePnP(Mat(boardPoints), Mat(foundBoardCorners), cameraMatrix, distCoeffs, rvec, tvec, false);",
+    "local": ""
+  },
+  {
+    "origin": "Calculate reprojection error like it is done in calibration sample (see opencv/samples/cpp/calibration.cpp, function computeReprojectionErrors).",
+    "local": ""
+  },
+  {
+    "origin": "Question: how would you calculate distance from the camera origin to any one of the corners? Answer: As our image lies in a 3D space, firstly we would calculate the relative camera pose. This would give us 3D to 2D correspondences. Next, we can apply a simple L2 norm to calculate distance between any point (end point for corners).",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

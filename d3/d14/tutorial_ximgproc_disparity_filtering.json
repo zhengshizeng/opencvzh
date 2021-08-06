@@ -1,0 +1,118 @@
+[
+  {
+    "origin": "OpenCV: Disparity map post-filtering",
+    "local": "OpenCV：视差图后滤波"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Disparity map post-filtering",
+    "local": "视差图后滤波"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "Stereo matching algorithms, especially highly-optimized ones that are intended for real-time processing on CPU, tend to make quite a few errors on challenging sequences. These errors are usually concentrated in uniform texture-less areas, half-occlusions and regions near depth discontinuities. One way of dealing with stereo-matching errors is to use various techniques of detecting potentially inaccurate disparity values and invalidate them, therefore making the disparity map semi-sparse. Several such techniques are already implemented in the StereoBM and StereoSGBM algorithms. Another way would be to use some kind of filtering procedure to align the disparity map edges with those of the source image and to propagate the disparity values from high- to low-confidence regions like half-occlusions. Recent advances in edge-aware filtering have enabled performing such post-filtering under the constraints of real-time processing on CPU.",
+    "local": "立体匹配算法，特别是高度优化的，用于CPU上实时处理的算法，往往会在具有挑战性的序列上产生相当多的错误。这些误差通常集中在均匀无纹理区域、半遮挡区域和接近深度不连续的区域。处理立体匹配错误的一种方法是使用各种技术检测可能不准确的视差值并使其无效，从而使视差图半稀疏。在StereoBM和stereogbm算法中已经实现了几种这样的技术。另一种方法是使用某种滤波过程将视差图边缘与源图像的边缘对齐，并将视差值从高置信度区域（如半遮挡）传播到低置信度区域。边缘感知滤波的最新进展使得能够在CPU上实时处理的约束下执行这种后滤波。"
+  },
+  {
+    "origin": "In this tutorial you will learn how to use the disparity map post-filtering to improve the results of StereoBM and StereoSGBM algorithms.",
+    "local": "在本教程中，您将学习如何使用视差贴图后期过滤来改进StereoBM和stereogbm算法的结果。"
+  },
+  {
+    "origin": "Source Stereoscopic Image",
+    "local": "源立体图像"
+  },
+  {
+    "origin": "Left view",
+    "local": "左视图"
+  },
+  {
+    "origin": "Right view",
+    "local": "右视图"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "We will be using snippets from the example application, that can be downloaded",
+    "local": "我们将使用示例应用程序中的片段，这些片段可以下载"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "The provided example has several options that yield different trade-offs between the speed and the quality of the resulting disparity map. Both the speed and the quality are measured if the user has provided the ground-truth disparity map. In this tutorial we will take a detailed look at the default pipeline, that was designed to provide the best possible quality under the constraints of real-time processing on CPU.",
+    "local": "所提供的示例有几个选项，这些选项在生成的视差图的速度和质量之间产生不同的权衡。如果用户提供了地面真实视差图，则可以测量速度和质量。在本教程中，我们将详细介绍默认管道，它的设计目的是在CPU上的实时处理约束下提供尽可能好的质量。"
+  },
+  {
+    "origin": "Load left and right views",
+    "local": "加载左视图和右视图"
+  },
+  {
+    "origin": "We start by loading the source stereopair. For this tutorial we will take a somewhat challenging example from the MPI-Sintel dataset with a lot of texture-less regions.",
+    "local": "我们从加载源立体像对开始。在本教程中，我们将从MPI Sintel数据集中获取一个具有一定挑战性的示例，其中包含许多无纹理区域。"
+  },
+  {
+    "origin": "Prepare the views for matching",
+    "local": "准备视图以进行匹配"
+  },
+  {
+    "origin": "We perform downscaling of the views to speed-up the matching stage at the cost of minor quality degradation. To get the best possible quality downscaling should be avoided.",
+    "local": "我们对视图进行缩小以加快匹配阶段的速度，但代价是轻微的质量下降。为了获得最好的质量，应该避免缩小尺度。"
+  },
+  {
+    "origin": "Perform matching and create the filter instance",
+    "local": "执行匹配并创建筛选器实例"
+  },
+  {
+    "origin": "We are using StereoBM for faster processing. If speed is not critical, though, StereoSGBM would provide better quality. The filter instance is created by providing the StereoMatcher instance that we intend to use. Another matcher instance is returned by the createRightMatcher function. These two matcher instances are then used to compute disparity maps both for the left and right views, that are required by the filter.",
+    "local": "我们使用StereoBM来加快处理速度。但是，如果速度不是关键，那么GBM将提供更好的质量。过滤器实例是通过提供我们想要使用的StereoMatcher实例来创建的。createRightMatcher函数返回另一个matcher实例。然后使用这两个匹配器实例计算过滤器所需的左视图和右视图的视差贴图。"
+  },
+  {
+    "origin": "Perform filtering",
+    "local": "执行筛选"
+  },
+  {
+    "origin": "Disparity maps computed by the respective matcher instances, as well as the source left view are passed to the filter. Note that we are using the original non-downscaled view to guide the filtering process. The disparity map is automatically upscaled in an edge-aware fashion to match the original view resolution. The result is stored in filtered_disp.",
+    "local": "由各个匹配器实例计算的视差图以及源左视图被传递到过滤器。注意，我们使用原始的非缩尺视图来指导过滤过程。视差贴图会以边缘感知方式自动放大，以匹配原始视图分辨率。结果存储在过滤的显示中。"
+  },
+  {
+    "origin": "Visualize the disparity maps",
+    "local": "可视化视差图"
+  },
+  {
+    "origin": "We use a convenience function getDisparityVis to visualize the disparity maps. The second parameter defines the contrast (all disparity values are scaled by this value in the visualization).",
+    "local": "我们使用一个方便的函数getDisparityVis来可视化视差图。第二个参数定义对比度（在可视化中，所有视差值都按此值缩放）。"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "Result of the StereoBM",
+    "local": "StereoBM结果"
+  },
+  {
+    "origin": "Result of the demonstrated pipeline (StereoBM on downscaled views with post-filtering)",
+    "local": "演示管道的结果（使用后过滤的缩小视图上的StereoBM）"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:40为OpenCV生成，&#160；"
+  }
+]

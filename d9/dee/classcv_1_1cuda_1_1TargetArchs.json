@@ -1,0 +1,702 @@
+[
+  {
+    "origin": "OpenCV: cv::cuda::TargetArchs Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::TargetArchs Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "Class providing a set of static methods to check what NVIDIA* card architecture the CUDA module was built for.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static bool",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "feature_set)",
+    "local": ""
+  },
+  {
+    "origin": "The following method checks whether the module was built with the support of the given feature:",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static bool",
+    "local": ""
+  },
+  {
+    "origin": "(int major, int minor)",
+    "local": ""
+  },
+  {
+    "origin": "There is a set of methods to check whether the module contains intermediate (PTX) or binary CUDA code for the given architecture(s):",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static bool",
+    "local": ""
+  },
+  {
+    "origin": "(int major, int minor)",
+    "local": ""
+  },
+  {
+    "origin": "static bool",
+    "local": ""
+  },
+  {
+    "origin": "(int major, int minor)",
+    "local": ""
+  },
+  {
+    "origin": "static bool",
+    "local": ""
+  },
+  {
+    "origin": "(int major, int minor)",
+    "local": ""
+  },
+  {
+    "origin": "static bool",
+    "local": ""
+  },
+  {
+    "origin": "(int major, int minor)",
+    "local": ""
+  },
+  {
+    "origin": "static bool",
+    "local": ""
+  },
+  {
+    "origin": "(int major, int minor)",
+    "local": ""
+  },
+  {
+    "origin": "static bool",
+    "local": ""
+  },
+  {
+    "origin": "(int major, int minor)",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Class providing a set of static methods to check what NVIDIA* card architecture the CUDA module was built for.",
+    "local": ""
+  },
+  {
+    "origin": "According to the CUDA C Programming Guide Version 3.2: \"PTX code produced for some specific compute capability can always be compiled to binary code of greater or equal compute capability\".",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "builtWith()",
+    "local": ""
+  },
+  {
+    "origin": "static bool cv::cuda::TargetArchs::builtWith",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "feature_set",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "The following method checks whether the module was built with the support of the given feature:",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "feature_set",
+    "local": ""
+  },
+  {
+    "origin": "Features to be checked. See :ocvcuda::FeatureSet.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "has()",
+    "local": ""
+  },
+  {
+    "origin": "static bool cv::cuda::TargetArchs::has",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "major",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda.TargetArchs_has(",
+    "local": ""
+  },
+  {
+    "origin": "major, minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "There is a set of methods to check whether the module contains intermediate (PTX) or binary CUDA code for the given architecture(s):",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "major",
+    "local": ""
+  },
+  {
+    "origin": "Major compute capability version.",
+    "local": ""
+  },
+  {
+    "origin": "minor",
+    "local": ""
+  },
+  {
+    "origin": "Minor compute capability version.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "hasBin()",
+    "local": ""
+  },
+  {
+    "origin": "static bool cv::cuda::TargetArchs::hasBin",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "major",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda.TargetArchs_hasBin(",
+    "local": ""
+  },
+  {
+    "origin": "major, minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "hasEqualOrGreater()",
+    "local": ""
+  },
+  {
+    "origin": "static bool cv::cuda::TargetArchs::hasEqualOrGreater",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "major",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda.TargetArchs_hasEqualOrGreater(",
+    "local": ""
+  },
+  {
+    "origin": "major, minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "hasEqualOrGreaterBin()",
+    "local": ""
+  },
+  {
+    "origin": "static bool cv::cuda::TargetArchs::hasEqualOrGreaterBin",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "major",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda.TargetArchs_hasEqualOrGreaterBin(",
+    "local": ""
+  },
+  {
+    "origin": "major, minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "hasEqualOrGreaterPtx()",
+    "local": ""
+  },
+  {
+    "origin": "static bool cv::cuda::TargetArchs::hasEqualOrGreaterPtx",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "major",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda.TargetArchs_hasEqualOrGreaterPtx(",
+    "local": ""
+  },
+  {
+    "origin": "major, minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "hasEqualOrLessPtx()",
+    "local": ""
+  },
+  {
+    "origin": "static bool cv::cuda::TargetArchs::hasEqualOrLessPtx",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "major",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda.TargetArchs_hasEqualOrLessPtx(",
+    "local": ""
+  },
+  {
+    "origin": "major, minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "hasPtx()",
+    "local": ""
+  },
+  {
+    "origin": "static bool cv::cuda::TargetArchs::hasPtx",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "major",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda.TargetArchs_hasPtx(",
+    "local": ""
+  },
+  {
+    "origin": "major, minor",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:44 for OpenCV by",
+    "local": ""
+  }
+]

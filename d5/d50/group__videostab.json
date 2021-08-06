@@ -1,0 +1,522 @@
+[
+  {
+    "origin": "OpenCV: Video Stabilization",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Modules",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Video Stabilization",
+    "local": ""
+  },
+  {
+    "origin": "Modules",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(int method=",
+    "local": ""
+  },
+  {
+    "origin": ", double",
+    "local": ""
+  },
+  {
+    "origin": "=2.)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int idx, std::vector&lt; T &gt; &amp;items)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int idx, const std::vector&lt; T &gt; &amp;items)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;frame)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;flowX, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;flowY, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;errors, float maxError, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask0, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask1,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;flowMask)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;flowMask, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;flowX, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;flowY, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;frame1, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask1, float distThresh,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;frame0,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask0)",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "The video stabilization module contains a set of functions and classes that can be used to solve the problem of video stabilization. There are a few methods implemented, most of them are described in the papers",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ". However, there are some extensions and deviations from the original paper methods.",
+    "local": ""
+  },
+  {
+    "origin": "References",
+    "local": ""
+  },
+  {
+    "origin": "\"Full-Frame Video Stabilization with Motion Inpainting\" Yasuyuki Matsushita, Eyal Ofek, Weina Ge, Xiaoou Tang, Senior Member, and Heung-Yeung Shum",
+    "local": ""
+  },
+  {
+    "origin": "\"Auto-Directed Video Stabilization with Robust L1 Optimal Camera Paths\" Matthias Grundmann, Vivek Kwatra, Irfan Essa",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "ColorInpainter()",
+    "local": ""
+  },
+  {
+    "origin": "cv::videostab::ColorInpainter::ColorInpainter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "method",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "at()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "T&amp; cv::videostab::at",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "idx",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "items",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "at()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "const T&amp; cv::videostab::at",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "idx",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "items",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "calcBlurriness()",
+    "local": ""
+  },
+  {
+    "origin": "float cv::videostab::calcBlurriness",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "frame",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "calcFlowMask()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::videostab::calcFlowMask",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "flowX",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "flowY",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "errors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "maxError",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "mask0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "mask1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "flowMask",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "completeFrameAccordingToFlow()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::videostab::completeFrameAccordingToFlow",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "flowMask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "flowX",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "flowY",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "frame1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "mask1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "distThresh",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "frame0",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask0",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by &#160;",
+    "local": ""
+  }
+]

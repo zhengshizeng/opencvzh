@@ -1,0 +1,418 @@
+[
+  {
+    "origin": "OpenCV: Laplace Operator",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Laplace Operator",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "to implement a discrete analog of the",
+    "local": ""
+  },
+  {
+    "origin": "Laplacian operator",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "In the previous tutorial we learned how to use the",
+    "local": ""
+  },
+  {
+    "origin": "Sobel Operator",
+    "local": ""
+  },
+  {
+    "origin": ". It was based on the fact that in the edge area, the pixel intensity shows a \"jump\" or a high variation of intensity. Getting the first derivative of the intensity, we observed that an edge is characterized by a maximum, as it can be seen in the figure:",
+    "local": ""
+  },
+  {
+    "origin": "And...what happens if we take the second derivative?",
+    "local": ""
+  },
+  {
+    "origin": "You can observe that the second derivative is zero! So, we can also use this criterion to attempt to detect edges in an image. However, note that zeros will not only appear in edges (they can actually appear in other meaningless locations); this can be solved by applying filtering where needed.",
+    "local": ""
+  },
+  {
+    "origin": "Laplacian Operator",
+    "local": ""
+  },
+  {
+    "origin": "From the explanation above, we deduce that the second derivative can be used to",
+    "local": ""
+  },
+  {
+    "origin": "detect edges",
+    "local": ""
+  },
+  {
+    "origin": ". Since images are \"*2D*\", we would need to take the derivative in both dimensions. Here, the Laplacian operator comes handy.",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "Laplacian operator",
+    "local": ""
+  },
+  {
+    "origin": "is defined by:",
+    "local": ""
+  },
+  {
+    "origin": "\\[Laplace(f) = \\dfrac{\\partial^{2} f}{\\partial x^{2}} + \\dfrac{\\partial^{2} f}{\\partial y^{2}}\\]",
+    "local": ""
+  },
+  {
+    "origin": "The Laplacian operator is implemented in OpenCV by the function",
+    "local": ""
+  },
+  {
+    "origin": ". In fact, since the Laplacian uses the gradient of images, it calls internally the",
+    "local": ""
+  },
+  {
+    "origin": "Sobel",
+    "local": ""
+  },
+  {
+    "origin": "operator to perform its computation.",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "What does this program do?",
+    "local": ""
+  },
+  {
+    "origin": "Loads an image",
+    "local": ""
+  },
+  {
+    "origin": "Remove noise by applying a Gaussian blur and then convert the original image to grayscale",
+    "local": ""
+  },
+  {
+    "origin": "Applies a Laplacian operator to the grayscale image and stores the output image",
+    "local": ""
+  },
+  {
+    "origin": "Display the result in a window",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Declare variables",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Load source image",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Reduce noise",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Grayscale",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Laplacian operator",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "The arguments are:",
+    "local": ""
+  },
+  {
+    "origin": "src_gray",
+    "local": ""
+  },
+  {
+    "origin": ": The input image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ": Destination (output) image",
+    "local": ""
+  },
+  {
+    "origin": "ddepth",
+    "local": ""
+  },
+  {
+    "origin": ": Depth of the destination image. Since our input is",
+    "local": ""
+  },
+  {
+    "origin": "CV_8U",
+    "local": ""
+  },
+  {
+    "origin": "we define",
+    "local": ""
+  },
+  {
+    "origin": "ddepth",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "CV_16S",
+    "local": ""
+  },
+  {
+    "origin": "to avoid overflow",
+    "local": ""
+  },
+  {
+    "origin": "kernel_size",
+    "local": ""
+  },
+  {
+    "origin": ": The kernel size of the Sobel operator to be applied internally. We use 3 in this example.",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "delta",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "BORDER_DEFAULT",
+    "local": ""
+  },
+  {
+    "origin": ": We leave them as default values.",
+    "local": ""
+  },
+  {
+    "origin": "Convert output to a",
+    "local": ""
+  },
+  {
+    "origin": "CV_8U",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Display the result",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "After compiling the code above, we can run it giving as argument the path to an image. For example, using as an input:",
+    "local": ""
+  },
+  {
+    "origin": "We obtain the following result. Notice how the trees and the silhouette of the cow are approximately well defined (except in areas in which the intensity are very similar, i.e. around the cow's head). Also, note that the roof of the house behind the trees (right side) is notoriously marked. This is due to the fact that the contrast is higher in that region.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": ""
+  }
+]

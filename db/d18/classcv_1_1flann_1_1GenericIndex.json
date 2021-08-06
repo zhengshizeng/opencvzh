@@ -1,0 +1,1098 @@
+[
+  {
+    "origin": "OpenCV: cv::flann::GenericIndex&lt; Distance &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::GenericIndex&lt; Distance &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "The FLANN nearest neighbor index class. This class is templated with the type of elements for which the index is built.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;features, const ::cvflann::IndexParams &amp;params, Distance distance=Distance())",
+    "local": ""
+  },
+  {
+    "origin": "Constructs a nearest neighbor search index for a given dataset.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;query, std::vector&lt; int &gt; &amp;indices, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;dists, int knn, const ::cvflann::SearchParams &amp;params)",
+    "local": ""
+  },
+  {
+    "origin": "Performs a K-nearest neighbor search for a given query point using the index.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;queries,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;indices,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;dists, int knn, const ::cvflann::SearchParams &amp;params)",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;query, std::vector&lt; int &gt; &amp;indices, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;dists,",
+    "local": ""
+  },
+  {
+    "origin": "radius, const ::cvflann::SearchParams &amp;params)",
+    "local": ""
+  },
+  {
+    "origin": "Performs a radius nearest neighbor search for a given query point using the index.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;query,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;indices,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;dists,",
+    "local": ""
+  },
+  {
+    "origin": "radius, const ::cvflann::SearchParams &amp;params)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "filename)",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance&gt;",
+    "local": ""
+  },
+  {
+    "origin": "class cv::flann::GenericIndex&lt; Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "The FLANN nearest neighbor index class. This class is templated with the type of elements for which the index is built.",
+    "local": ""
+  },
+  {
+    "origin": "functor specifies the metric to be used to calculate the distance between two points. There are several",
+    "local": ""
+  },
+  {
+    "origin": "functors that are readily available:",
+    "local": ""
+  },
+  {
+    "origin": "cv::cvflann::L2_Simple - Squared Euclidean distance functor. This is the simpler, unrolled version. This is preferable for very low dimensionality data (eg 3D points)",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::L2 - Squared Euclidean distance functor, optimized version.",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::L1 - Manhattan distance functor, optimized version.",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::MinkowskiDistance - The Minkowsky distance functor. This is highly optimised with loop unrolling. The computation of squared root at the end is omitted for efficiency.",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::MaxDistance - The max distance functor. It computes the maximum distance between two vectors. This distance is not a valid kdtree distance, it's not dimensionwise additive.",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::HammingLUT - Hamming distance functor. It counts the bit differences between two strings using a lookup table implementation.",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::Hamming - Hamming distance functor. Population count is performed using library calls, if available. Lookup table implementation is used as a fallback.",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::Hamming2 - Hamming distance functor. Population count is implemented in 12 arithmetic operations (one of which is multiplication).",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::DNAmmingLUT - Adaptation of the",
+    "local": ""
+  },
+  {
+    "origin": "distance functor to DNA comparison. As the four bases A, C, G, T of the DNA (or A, G, C, U for RNA) can be coded on 2 bits, it counts the bits pairs differences between two sequences using a lookup table implementation.",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::DNAmming2 - Adaptation of the",
+    "local": ""
+  },
+  {
+    "origin": "distance functor to DNA comparison. Bases differences count are vectorised thanks to arithmetic operations using standard registers (AVX2 and AVX-512 should come in a near future).",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::HistIntersectionDistance - The histogram intersection distance functor.",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::HellingerDistance - The Hellinger distance functor.",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::ChiSquareDistance - The chi-square distance functor.",
+    "local": ""
+  },
+  {
+    "origin": "cv::flann::KL_Divergence - The Kullback-Leibler divergence functor.",
+    "local": ""
+  },
+  {
+    "origin": "Although the provided implementations cover a vast range of cases, it is also possible to use a custom implementation. The distance functor is a class whose",
+    "local": ""
+  },
+  {
+    "origin": "computes the distance between two features. If the distance is also a kd-tree compatible distance, it should also provide an",
+    "local": ""
+  },
+  {
+    "origin": "method that computes the distance between individual feature dimensions.",
+    "local": ""
+  },
+  {
+    "origin": "In addition to",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ", a distance functor should also define the",
+    "local": ""
+  },
+  {
+    "origin": "and the",
+    "local": ""
+  },
+  {
+    "origin": "as the types of the elements it operates on and the type of the result it computes. If a distance functor can be used as a kd-tree distance (meaning that the full distance between a pair of features can be accumulated from the partial distances between the individual dimensions) a typedef",
+    "local": ""
+  },
+  {
+    "origin": "should be present inside the distance functor. If the distance is not a kd-tree distance, but it's a distance in a vector space (the individual dimensions of the elements it operates on can be accessed independently) a typedef",
+    "local": ""
+  },
+  {
+    "origin": "should be defined inside the functor. If neither typedef is defined, the distance is assumed to be a metric distance and will only be used with indexes operating on generic metric distances.",
+    "local": ""
+  },
+  {
+    "origin": "Member Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "DistanceType",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef Distance::ResultType",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "ElementType",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef Distance::ElementType",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "GenericIndex()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "features",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "distance",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Constructs a nearest neighbor search index for a given dataset.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "features",
+    "local": ""
+  },
+  {
+    "origin": "Matrix of containing the features(points) to index. The size of the matrix is num_features x feature_dimensionality and the data type of the elements in the matrix must coincide with the type of the index.",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": "Structure containing the index parameters. The type of index that will be constructed depends on the type of this parameter. See the description.",
+    "local": ""
+  },
+  {
+    "origin": "distance",
+    "local": ""
+  },
+  {
+    "origin": "The method constructs a fast search structure from a set of features using the specified algorithm with specified parameters, as defined by params. params is a reference to one of the following class IndexParams descendants:",
+    "local": ""
+  },
+  {
+    "origin": "LinearIndexParams",
+    "local": ""
+  },
+  {
+    "origin": "When passing an object of this type, the index will perform a linear, brute-force search. :",
+    "local": ""
+  },
+  {
+    "origin": "KDTreeIndexParams",
+    "local": ""
+  },
+  {
+    "origin": "When passing an object of this type the index constructed will consist of a set of randomized kd-trees which will be searched in parallel. :",
+    "local": ""
+  },
+  {
+    "origin": "HierarchicalClusteringIndexParams",
+    "local": ""
+  },
+  {
+    "origin": "When passing an object of this type the index constructed will be a hierarchical tree of clusters, dividing each set of points into n clusters whose centers are picked among the points without further refinement of their position. This algorithm fits both floating, integer and binary vectors. :",
+    "local": ""
+  },
+  {
+    "origin": "KMeansIndexParams",
+    "local": ""
+  },
+  {
+    "origin": "When passing an object of this type the index constructed will be a hierarchical k-means tree (one tree by default), dividing each set of points into n clusters whose barycenters are refined iteratively. Note that this algorithm has been extended to the support of binary vectors as an alternative to LSH when knn search speed is the criterium. It will also outperform LSH when processing directly (i.e. without the use of MCA/PCA) datasets whose points share mostly the same values for most of the dimensions. It is recommended to set more than one tree with binary data. :",
+    "local": ""
+  },
+  {
+    "origin": "CompositeIndexParams",
+    "local": ""
+  },
+  {
+    "origin": "When using a parameters object of this type the index created combines the randomized kd-trees and the hierarchical k-means tree. :",
+    "local": ""
+  },
+  {
+    "origin": "LshIndexParams",
+    "local": ""
+  },
+  {
+    "origin": "When using a parameters object of this type the index created uses multi-probe LSH (by Multi-Probe LSH: Efficient Indexing for High-Dimensional Similarity Search by Qin Lv, William Josephson, Zhe Wang, Moses Charikar, Kai Li., Proceedings of the 33rd International Conference on Very Large Data Bases (VLDB). Vienna, Austria. September 2007). This algorithm is designed for binary vectors. :",
+    "local": ""
+  },
+  {
+    "origin": "AutotunedIndexParams",
+    "local": ""
+  },
+  {
+    "origin": "When passing an object of this type the index created is automatically tuned to offer the best performance, by choosing the optimal index type (randomized kd-trees, hierarchical kmeans, linear) and parameters for the dataset provided. :",
+    "local": ""
+  },
+  {
+    "origin": "SavedIndexParams",
+    "local": ""
+  },
+  {
+    "origin": "This object type is used for loading a previously saved index from the disk. :",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "~GenericIndex()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::~",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getIndexParameters()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "const ::cvflann::IndexParams*",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::getIndexParameters",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getParameters()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "::cvflann::IndexParams",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::getParameters",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "knnSearch()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::knnSearch",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "query",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "indices",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "dists",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "knn",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Performs a K-nearest neighbor search for a given query point using the index.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "query",
+    "local": ""
+  },
+  {
+    "origin": "The query point",
+    "local": ""
+  },
+  {
+    "origin": "indices",
+    "local": ""
+  },
+  {
+    "origin": "Vector that will contain the indices of the K-nearest neighbors found. It must have at least knn size.",
+    "local": ""
+  },
+  {
+    "origin": "dists",
+    "local": ""
+  },
+  {
+    "origin": "Vector that will contain the distances to the K-nearest neighbors found. It must have at least knn size.",
+    "local": ""
+  },
+  {
+    "origin": "knn",
+    "local": ""
+  },
+  {
+    "origin": "Number of nearest neighbors to search for.",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": "SearchParams",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "knnSearch()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::knnSearch",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "queries",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "indices",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dists",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "knn",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "radiusSearch()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::radiusSearch",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "query",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "indices",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "dists",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Performs a radius nearest neighbor search for a given query point using the index.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "query",
+    "local": ""
+  },
+  {
+    "origin": "The query point.",
+    "local": ""
+  },
+  {
+    "origin": "indices",
+    "local": ""
+  },
+  {
+    "origin": "Vector that will contain the indices of the nearest neighbors found.",
+    "local": ""
+  },
+  {
+    "origin": "dists",
+    "local": ""
+  },
+  {
+    "origin": "Vector that will contain the distances to the nearest neighbors found. It has the same number of elements as indices.",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": "The search radius.",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": "SearchParams",
+    "local": ""
+  },
+  {
+    "origin": "This function returns the number of nearest neighbors found.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "radiusSearch()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::radiusSearch",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "query",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "indices",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dists",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "params",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "save()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::save",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "size()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::size",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "veclen()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Distance &gt;",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Distance &gt;::veclen",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:47 for OpenCV by &#160;",
+    "local": ""
+  }
+]

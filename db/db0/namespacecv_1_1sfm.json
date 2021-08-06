@@ -1,0 +1,974 @@
+[
+  {
+    "origin": "OpenCV: cv::sfm Namespace Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "cv::sfm Namespace Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "base class",
+    "local": ""
+  },
+  {
+    "origin": "declares a common API that would be used in a typical scene reconstruction scenario",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Data structure describing the camera model and its parameters.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Data structure describing the reconstruction options.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class provides an interface with the Libmv Structure From Motion pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Different supported file formats.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Different camera models that libmv supports.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "= (1 &lt;&lt; 0),",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "= (1 &lt;&lt; 1),",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "= (1 &lt;&lt; 2),",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "= (1 &lt;&lt; 4)",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "All internal camera parameters that libmv is able to refine.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points,",
+    "local": ""
+  },
+  {
+    "origin": "T,",
+    "local": ""
+  },
+  {
+    "origin": "transformed_points)",
+    "local": ""
+  },
+  {
+    "origin": "Apply Transformation to points.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x1,",
+    "local": ""
+  },
+  {
+    "origin": "x2,",
+    "local": ""
+  },
+  {
+    "origin": "R,",
+    "local": ""
+  },
+  {
+    "origin": "t, double s)",
+    "local": ""
+  },
+  {
+    "origin": "Computes Absolute or Exterior Orientation (Pose Estimation) between 2 sets of 3D point.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "R,",
+    "local": ""
+  },
+  {
+    "origin": "t,",
+    "local": ""
+  },
+  {
+    "origin": "X)",
+    "local": ""
+  },
+  {
+    "origin": "Returns the depth of a point transformed by a rigid transform.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "F,",
+    "local": ""
+  },
+  {
+    "origin": "K1,",
+    "local": ""
+  },
+  {
+    "origin": "K2,",
+    "local": ""
+  },
+  {
+    "origin": "E)",
+    "local": ""
+  },
+  {
+    "origin": "Get Essential matrix from Fundamental and Camera matrices.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "R1,",
+    "local": ""
+  },
+  {
+    "origin": "t1,",
+    "local": ""
+  },
+  {
+    "origin": "R2,",
+    "local": ""
+  },
+  {
+    "origin": "t2,",
+    "local": ""
+  },
+  {
+    "origin": "E)",
+    "local": ""
+  },
+  {
+    "origin": "Get Essential matrix from Motion (R's and t's ).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst)",
+    "local": ""
+  },
+  {
+    "origin": "Converts points from Euclidean to homogeneous space. E.g., ((x,y)-&gt;(x,y,1))",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x1,",
+    "local": ""
+  },
+  {
+    "origin": "x2, double max_error,",
+    "local": ""
+  },
+  {
+    "origin": "F,",
+    "local": ""
+  },
+  {
+    "origin": "inliers, double outliers_probability=1e-2)",
+    "local": ""
+  },
+  {
+    "origin": "Estimate robustly the fundamental matrix between two dataset of 2D point (image coords space).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x1,",
+    "local": ""
+  },
+  {
+    "origin": "x2, double max_error,",
+    "local": ""
+  },
+  {
+    "origin": "F,",
+    "local": ""
+  },
+  {
+    "origin": "inliers, double outliers_probability=1e-2)",
+    "local": ""
+  },
+  {
+    "origin": "Estimate robustly the fundamental matrix between two dataset of 2D point (image coords space).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "E,",
+    "local": ""
+  },
+  {
+    "origin": "K1,",
+    "local": ""
+  },
+  {
+    "origin": "K2,",
+    "local": ""
+  },
+  {
+    "origin": "F)",
+    "local": ""
+  },
+  {
+    "origin": "Get Essential matrix from Fundamental and Camera matrices.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "P1,",
+    "local": ""
+  },
+  {
+    "origin": "P2,",
+    "local": ""
+  },
+  {
+    "origin": "F)",
+    "local": ""
+  },
+  {
+    "origin": "Get Fundamental matrix from Projection matrices.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst)",
+    "local": ""
+  },
+  {
+    "origin": "Converts point coordinates from homogeneous to euclidean pixel coordinates. E.g., ((x,y,z)-&gt;(x/z, y/z))",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;file,",
+    "local": ""
+  },
+  {
+    "origin": "Rs,",
+    "local": ""
+  },
+  {
+    "origin": "Ts,",
+    "local": ""
+  },
+  {
+    "origin": "Ks,",
+    "local": ""
+  },
+  {
+    "origin": "points3d, int file_format=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Import a reconstruction file.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points,",
+    "local": ""
+  },
+  {
+    "origin": "T)",
+    "local": ""
+  },
+  {
+    "origin": "Point conditioning (isotropic).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "P,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "R,",
+    "local": ""
+  },
+  {
+    "origin": "t)",
+    "local": ""
+  },
+  {
+    "origin": "Get K, R and t from projection matrix P, decompose using the RQ decomposition.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "A,",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "variance)",
+    "local": ""
+  },
+  {
+    "origin": "Computes the mean and variance of a given matrix along its rows.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "E,",
+    "local": ""
+  },
+  {
+    "origin": "Rs,",
+    "local": ""
+  },
+  {
+    "origin": "ts)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Rs,",
+    "local": ""
+  },
+  {
+    "origin": "ts,",
+    "local": ""
+  },
+  {
+    "origin": "K1,",
+    "local": ""
+  },
+  {
+    "origin": "x1,",
+    "local": ""
+  },
+  {
+    "origin": "K2,",
+    "local": ""
+  },
+  {
+    "origin": "x2)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x1,",
+    "local": ""
+  },
+  {
+    "origin": "x2,",
+    "local": ""
+  },
+  {
+    "origin": "F)",
+    "local": ""
+  },
+  {
+    "origin": "Estimate the fundamental matrix between two dataset of 2D point (image coords space).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "F,",
+    "local": ""
+  },
+  {
+    "origin": "F_normalized)",
+    "local": ""
+  },
+  {
+    "origin": "Normalizes the Fundamental matrix.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points,",
+    "local": ""
+  },
+  {
+    "origin": "normalized_points,",
+    "local": ""
+  },
+  {
+    "origin": "T)",
+    "local": ""
+  },
+  {
+    "origin": "This function normalizes points. (isotropic).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points,",
+    "local": ""
+  },
+  {
+    "origin": "normalized_points,",
+    "local": ""
+  },
+  {
+    "origin": "T)",
+    "local": ""
+  },
+  {
+    "origin": "This function normalizes points (non isotropic).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points,",
+    "local": ""
+  },
+  {
+    "origin": "T)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "R,",
+    "local": ""
+  },
+  {
+    "origin": "t,",
+    "local": ""
+  },
+  {
+    "origin": "P)",
+    "local": ""
+  },
+  {
+    "origin": "Get projection matrix P from K, R and t.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "F,",
+    "local": ""
+  },
+  {
+    "origin": "P1,",
+    "local": ""
+  },
+  {
+    "origin": "P2)",
+    "local": ""
+  },
+  {
+    "origin": "Get projection matrices from Fundamental matrix.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d,",
+    "local": ""
+  },
+  {
+    "origin": "Ps,",
+    "local": ""
+  },
+  {
+    "origin": "points3d,",
+    "local": ""
+  },
+  {
+    "origin": "K, bool is_projective=false)",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d correspondences while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d,",
+    "local": ""
+  },
+  {
+    "origin": "Rs,",
+    "local": ""
+  },
+  {
+    "origin": "Ts,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "points3d, bool is_projective=false)",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d correspondences while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; images,",
+    "local": ""
+  },
+  {
+    "origin": "Ps,",
+    "local": ""
+  },
+  {
+    "origin": "points3d,",
+    "local": ""
+  },
+  {
+    "origin": "K, bool is_projective=false)",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d images while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; images,",
+    "local": ""
+  },
+  {
+    "origin": "Rs,",
+    "local": ""
+  },
+  {
+    "origin": "Ts,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "points3d, bool is_projective=false)",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d images while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "R1,",
+    "local": ""
+  },
+  {
+    "origin": "t1,",
+    "local": ""
+  },
+  {
+    "origin": "R2,",
+    "local": ""
+  },
+  {
+    "origin": "t2,",
+    "local": ""
+  },
+  {
+    "origin": "R,",
+    "local": ""
+  },
+  {
+    "origin": "t)",
+    "local": ""
+  },
+  {
+    "origin": "Computes the relative camera motion between two cameras.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x)",
+    "local": ""
+  },
+  {
+    "origin": "Returns the 3x3 skew symmetric matrix of a vector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d,",
+    "local": ""
+  },
+  {
+    "origin": "projection_matrices,",
+    "local": ""
+  },
+  {
+    "origin": "points3d)",
+    "local": ""
+  },
+  {
+    "origin": "Reconstructs bunch of points by triangulation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by &#160;",
+    "local": ""
+  }
+]

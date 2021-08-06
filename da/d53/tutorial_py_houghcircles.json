@@ -1,0 +1,74 @@
+[
+  {
+    "origin": "OpenCV: Hough Circle Transform",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Hough Circle Transform",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this chapter,",
+    "local": ""
+  },
+  {
+    "origin": "We will learn to use Hough Transform to find circles in an image.",
+    "local": ""
+  },
+  {
+    "origin": "We will see these functions:",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "A circle is represented mathematically as \\((x-x_{center})^2 + (y - y_{center})^2 = r^2\\) where \\((x_{center},y_{center})\\) is the center of the circle, and \\(r\\) is the radius of the circle. From equation, we can see we have 3 parameters, so we need a 3D accumulator for hough transform, which would be highly ineffective. So OpenCV uses more trickier method,",
+    "local": ""
+  },
+  {
+    "origin": "Hough Gradient Method",
+    "local": ""
+  },
+  {
+    "origin": "which uses the gradient information of edges.",
+    "local": ""
+  },
+  {
+    "origin": "The function we use here is",
+    "local": ""
+  },
+  {
+    "origin": ". It has plenty of arguments which are well explained in the documentation. So we directly go to the code.",
+    "local": ""
+  },
+  {
+    "origin": "Result is shown below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

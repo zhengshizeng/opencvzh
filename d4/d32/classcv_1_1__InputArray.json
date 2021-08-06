@@ -1,0 +1,2986 @@
+[
+  {
+    "origin": "OpenCV: cv::_InputArray Class Reference",
+    "local": "OpenCV:cv:：InputArray类引用"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Public Types",
+    "local": "公共类型"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": "静态公共成员函数"
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": "受保护的成员函数"
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": "受保护的属性"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::_InputArray Class Reference",
+    "local": "cv:：InputArray类参考"
+  },
+  {
+    "origin": "&raquo;",
+    "local": "&引用；"
+  },
+  {
+    "origin": "This is the proxy class for passing read-only input arrays into OpenCV functions.",
+    "local": "这是一个代理类，用于将只读输入数组传递到OpenCV函数中。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Inheritance diagram for cv::_InputArray:",
+    "local": "cv:：_InputArray的继承关系图："
+  },
+  {
+    "origin": "Public Types",
+    "local": "公共类型"
+  },
+  {
+    "origin": "{",
+    "local": "{"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 16,",
+    "local": "= 16,"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 0x8000 &lt;&lt; KIND_SHIFT,",
+    "local": "=0x8000&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 0x4000 &lt;&lt; KIND_SHIFT,",
+    "local": "=0x4000&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 31 &lt;&lt; KIND_SHIFT,",
+    "local": "=31&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 0 &lt;&lt; KIND_SHIFT,",
+    "local": "=0&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 1 &lt;&lt; KIND_SHIFT,",
+    "local": "=1&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 2 &lt;&lt; KIND_SHIFT,",
+    "local": "=2&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 3 &lt;&lt; KIND_SHIFT,",
+    "local": "=3&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 4 &lt;&lt; KIND_SHIFT,",
+    "local": "=4&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 5 &lt;&lt; KIND_SHIFT,",
+    "local": "=5&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 6 &lt;&lt; KIND_SHIFT,",
+    "local": "=6&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 7 &lt;&lt; KIND_SHIFT,",
+    "local": "=7&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 8 &lt;&lt; KIND_SHIFT,",
+    "local": "=8&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 9 &lt;&lt; KIND_SHIFT,",
+    "local": "=9&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "=10 &lt;&lt; KIND_SHIFT,",
+    "local": "=10&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "=11 &lt;&lt; KIND_SHIFT,",
+    "local": "=11&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "=12 &lt;&lt; KIND_SHIFT,",
+    "local": "=12&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 13 &lt;&lt; KIND_SHIFT,",
+    "local": "=13&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "=14 &lt;&lt; KIND_SHIFT,",
+    "local": "=14&lt&书信电报；换班的时候，"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "=15 &lt;&lt; KIND_SHIFT",
+    "local": "=15&lt&书信电报；类型\\u移位"
+  },
+  {
+    "origin": "}",
+    "local": "}"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "(int _flags, void *_obj)",
+    "local": "（int\\u标志，void*\\u obj）"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;m)",
+    "local": "&amp；米）"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;expr)",
+    "local": "&amp；快递）"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;vec)",
+    "local": "&燃气轮机&amp；vec公司）"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;m)",
+    "local": "&左；（u）Tp&gt&amp；（米）"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "(const std::vector&lt; _Tp &gt; &amp;vec)",
+    "local": "（const std：：向量&lt；“uTp&gt&amp；vec公司）"
+  },
+  {
+    "origin": "(const std::vector&lt; bool &gt; &amp;vec)",
+    "local": "（const std：：向量&lt；布尔&gt&amp；vec公司）"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "(const std::vector&lt; std::vector&lt; _Tp &gt; &gt; &amp;vec)",
+    "local": "（const std：：向量&lt；标准：：向量&lt；Tp&gt&燃气轮机&amp；vec公司）"
+  },
+  {
+    "origin": "(const std::vector&lt; std::vector&lt; bool &gt; &gt; &amp;)=delete",
+    "local": "（const std：：向量&lt；标准：：向量&lt；布尔&gt&燃气轮机&amp；）=删除"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&lt; _Tp &gt; &gt; &amp;vec)",
+    "local": "&lt_Tp&gt；&gt；&gt；gt；amp；（向量）"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "(const _Tp *vec, int n)",
+    "local": "（常数*vec，int n）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int m, int n&gt;",
+    "local": "模板&lt；typename\\u Tp，int m，int n&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&lt; _Tp, m, n &gt; &amp;matx)",
+    "local": "&lt_Tp、m、n&gt；amp；材料）"
+  },
+  {
+    "origin": "(const double &amp;val)",
+    "local": "（const double&amp；瓦尔）"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;d_mat)",
+    "local": "&amp；d\\垫）"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;d_mat_array)",
+    "local": "&燃气轮机&amp；d\\材料（阵列）"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;buf)",
+    "local": "&amp；（单位：buf）"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;cuda_mem)",
+    "local": "&amp；_选择）"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;m)",
+    "local": "&左；（u）Tp&gt&amp；（米）"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;um)",
+    "local": "&amp；嗯）"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;umv)",
+    "local": "&燃气轮机&amp；（umv）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , std::size_t _Nm&gt;",
+    "local": "模板&lt；typename\\u Tp，std:：size\\u t\\u Nm&gt；"
+  },
+  {
+    "origin": "(const std::array&lt; _Tp, _Nm &gt; &amp;arr)",
+    "local": "（const std：：数组&lt_Tp，\\u Nm&gt&amp；阿里尔）"
+  },
+  {
+    "origin": "template&lt;std::size_t _Nm&gt;",
+    "local": "模板&lt；标准：：尺寸\\u t\\u Nm&gt；"
+  },
+  {
+    "origin": "(const std::array&lt;",
+    "local": "（const std：：数组&lt；"
+  },
+  {
+    "origin": ", _Nm &gt; &amp;arr)",
+    "local": "，\\u纳米&gt&amp；阿里尔）"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;arr) const",
+    "local": "&amp；arr）常数"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;arr, const",
+    "local": "&amp；啊，康斯特"
+  },
+  {
+    "origin": "&amp;mask) const",
+    "local": "&amp；掩码）常量"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": "（标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;gpumv) const",
+    "local": "&gt；gt；amp；gpumv）常数"
+  },
+  {
+    "origin": "(int idx=-1) const",
+    "local": "（int idx=-1）const"
+  },
+  {
+    "origin": "(int idx=-1) const",
+    "local": "（int idx=-1）const"
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": "（标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;mv) const",
+    "local": "&gt；gt；amp；mv）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "(int idx=-1) const",
+    "local": "（int idx=-1）const"
+  },
+  {
+    "origin": "(std::vector&lt;",
+    "local": "（标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;umv) const",
+    "local": "&gt；&quot；&amp；（umv）常数"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;arr) const",
+    "local": "&amp；arr）常数"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "(int *",
+    "local": "（内景）*"
+  },
+  {
+    "origin": ", int i=-1) const",
+    "local": "，int i=-1）常数"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "(int i=-1) const",
+    "local": "（int i=-1）常数"
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": "静态公共成员函数"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "(const std::vector&lt; _Tp &gt; &amp;vec)",
+    "local": "（const std：：向量&lt；“uTp&gt&amp；vec公司）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , std::size_t _Nm&gt;",
+    "local": "模板&lt；typename\\u Tp，std:：size\\u t\\u Nm&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "(const std::array&lt; _Tp, _Nm &gt; &amp;arr)",
+    "local": "（const std：：数组&lt_Tp，\\u Nm&gt&amp；阿里尔）"
+  },
+  {
+    "origin": "Protected Member Functions",
+    "local": "受保护的成员函数"
+  },
+  {
+    "origin": "(int _flags, const void *_obj)",
+    "local": "（int flags，const void*obj）"
+  },
+  {
+    "origin": "(int _flags, const void *_obj,",
+    "local": "（int flags，const void*obj）"
+  },
+  {
+    "origin": "_sz)",
+    "local": "_深圳）"
+  },
+  {
+    "origin": "Protected Attributes",
+    "local": "受保护的属性"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "This is the proxy class for passing read-only input arrays into OpenCV functions.",
+    "local": "这是一个代理类，用于将只读输入数组传递到OpenCV函数中。"
+  },
+  {
+    "origin": "It is defined as:",
+    "local": "定义为："
+  },
+  {
+    "origin": "where",
+    "local": "哪里"
+  },
+  {
+    "origin": "is a class that can be constructed from",
+    "local": "是一个可以从"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": ". It can also be constructed from a matrix expression.",
+    "local": ". 它也可以由矩阵表达式构造。"
+  },
+  {
+    "origin": "Since this is mostly implementation-level class, and its interface may change in future versions, we do not describe it in details. There are a few key things, though, that should be kept in mind:",
+    "local": "由于这主要是实现级别的类，并且它的接口在将来的版本中可能会更改，所以我们不详细描述它。不过，有几件关键的事情需要记住："
+  },
+  {
+    "origin": "When you see in the reference manual or in OpenCV source code a function that takes InputArray, it means that you can actually pass",
+    "local": "当您在参考手册或OpenCV源代码中看到接受InputArray的函数时，这意味着您实际上可以传递"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "etc. (see above the complete list).",
+    "local": "等等（见以上完整清单）。"
+  },
+  {
+    "origin": "Optional input arguments: If some of the input arrays may be empty, pass",
+    "local": "可选输入参数：如果某些输入数组可能为空，则传递"
+  },
+  {
+    "origin": "(or simply",
+    "local": "（或者干脆"
+  },
+  {
+    "origin": "as you probably did before).",
+    "local": "就像你以前可能做的那样）。"
+  },
+  {
+    "origin": "The class is designed solely for passing parameters. That is, normally you",
+    "local": "该类专门为传递参数而设计。也就是说，通常你"
+  },
+  {
+    "origin": "should not",
+    "local": "不应该"
+  },
+  {
+    "origin": "declare class members, local and global variables of this type.",
+    "local": "声明此类型的类成员、局部和全局变量。"
+  },
+  {
+    "origin": "If you want to design your own function or a class method that can operate of arrays of multiple types, you can use InputArray (or OutputArray) for the respective parameters. Inside a function you should use",
+    "local": "如果您想设计自己的函数或类方法来操作多种类型的数组，那么可以对相应的参数使用InputArray（或OutputArray）。在你应该使用的函数中"
+  },
+  {
+    "origin": "method to construct a matrix header for the array (without copying data).",
+    "local": "方法为数组构造矩阵头（不复制数据）。"
+  },
+  {
+    "origin": "can be used to distinguish",
+    "local": "可以用来区分"
+  },
+  {
+    "origin": "from",
+    "local": "从"
+  },
+  {
+    "origin": "etc., but normally it is not needed.",
+    "local": "等等，但通常不需要。"
+  },
+  {
+    "origin": "Here is how you can use a function that takes InputArray :",
+    "local": "下面是如何使用接受InputArray的函数："
+  },
+  {
+    "origin": "That is, we form an STL vector containing points, and apply in-place affine transformation to the vector using the 2x3 matrix created inline as",
+    "local": "也就是说，我们形成一个包含点的STL向量，并使用内联创建的2x3矩阵对该向量进行就地仿射变换"
+  },
+  {
+    "origin": "instance.",
+    "local": "实例。"
+  },
+  {
+    "origin": "Here is how such a function can be implemented (for simplicity, we implement a very specific case of it, according to the assertion statement inside) :",
+    "local": "下面是如何实现这样一个函数（为了简单起见，我们根据里面的断言语句实现了一个非常具体的例子）："
+  },
+  {
+    "origin": "There is another related type, InputArrayOfArrays, which is currently defined as a synonym for InputArray:",
+    "local": "还有另一个相关类型InputArrayOfArrays，它当前被定义为InputArray的同义词："
+  },
+  {
+    "origin": "It denotes function arguments that are either vectors of vectors or vectors of matrices. A separate synonym is needed to generate Python/Java etc. wrappers properly. At the function implementation level their use is similar, but _InputArray::getMat(idx) should be used to get header for the idx-th component of the outer vector and",
+    "local": "它表示向量向量或矩阵向量的函数参数。正确地生成Python/Java等包装器需要一个单独的同义词。在函数实现级别，它们的用法是类似的，但是应该使用_InputArray:：getMat（idx）来获取外部向量和"
+  },
+  {
+    "origin": ".area() should be used to find the number of components (vectors/matrices) of the outer vector.",
+    "local": ".area（）应用于查找外部向量的组件（向量/矩阵）数。"
+  },
+  {
+    "origin": "In general, type support is limited to",
+    "local": "一般来说，类型支持仅限于"
+  },
+  {
+    "origin": "types. Other types are forbidden. But in some cases we need to support passing of custom non-general",
+    "local": "类型。其他类型是禁止的。但在某些情况下，我们需要支持非通用的海关通行证"
+  },
+  {
+    "origin": "types, like arrays of",
+    "local": "类型，比如"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", etc. This data is not intended to be interpreted as an image data, or processed somehow like regular",
+    "local": "此数据不打算被解释为图像数据，或以某种方式像常规数据一样进行处理"
+  },
+  {
+    "origin": ". To pass such custom type use",
+    "local": ". 通过这种自定义类型使用"
+  },
+  {
+    "origin": "/",
+    "local": "/"
+  },
+  {
+    "origin": "/",
+    "local": "/"
+  },
+  {
+    "origin": "wrappers. Custom type is wrapped as Mat-compatible",
+    "local": "包装纸。自定义类型包装为Mat兼容"
+  },
+  {
+    "origin": "values (N = sizeof(T), N &lt;= CV_CN_MAX).",
+    "local": "值（N=sizeof（T），N&lt；=CV（最大值）。"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": ", and",
+    "local": "，和"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Member Enumeration Documentation",
+    "local": "成员枚举文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "KindFlag",
+    "local": "KindFlag公司"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "Enumerator",
+    "local": "枚举器"
+  },
+  {
+    "origin": "removed:",
+    "local": "远离的："
+  },
+  {
+    "origin": "removed:",
+    "local": "远离的："
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": "建造商和；析构函数文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[1/23]",
+    "local": "[1/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[2/23]",
+    "local": "[2/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "_flags",
+    "local": "_标志"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "_obj",
+    "local": "对象"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[3/23]",
+    "local": "[3/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[4/23]",
+    "local": "[4/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "expr",
+    "local": "出口"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[5/23]",
+    "local": "[5/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "vec",
+    "local": "向量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[6/23]",
+    "local": "[6/23]"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[7/23]",
+    "local": "[7/23]"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "vec",
+    "local": "向量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[8/23]",
+    "local": "[8/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "vec",
+    "local": "向量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[9/23]",
+    "local": "[9/23]"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "vec",
+    "local": "向量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[10/23]",
+    "local": "[10/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "delete",
+    "local": "删除"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[11/23]",
+    "local": "[11/23]"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "vec",
+    "local": "向量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[12/23]",
+    "local": "[12/23]"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "vec",
+    "local": "向量"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "n",
+    "local": "n"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[13/23]",
+    "local": "[13/23]"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int m, int n&gt;",
+    "local": "模板&lt；typename\\u Tp，int m，int n&gt；"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "matx",
+    "local": "马特克斯"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[14/23]",
+    "local": "[14/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val",
+    "local": "瓦尔"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[15/23]",
+    "local": "[15/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "d_mat",
+    "local": "地毡"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[16/23]",
+    "local": "[16/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "d_mat_array",
+    "local": "d\\ mat\\ U阵列"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[17/23]",
+    "local": "[17/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "buf",
+    "local": "缓冲器"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[18/23]",
+    "local": "[18/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "cuda_mem",
+    "local": "_谢绝"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[19/23]",
+    "local": "[19/23]"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "m",
+    "local": "米"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[20/23]",
+    "local": "[20/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "um",
+    "local": "嗯"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[21/23]",
+    "local": "[21/23]"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "umv",
+    "local": "umv公司"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[22/23]",
+    "local": "[22/23]"
+  },
+  {
+    "origin": "template&lt;typename _Tp , std::size_t _Nm&gt;",
+    "local": "模板&lt；typename\\u Tp，std:：size\\u t\\u Nm&gt；"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "arr",
+    "local": "阿里尔"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "_InputArray()",
+    "local": "InputArray（）"
+  },
+  {
+    "origin": "[23/23]",
+    "local": "[23/23]"
+  },
+  {
+    "origin": "template&lt;std::size_t _Nm&gt;",
+    "local": "模板&lt；标准：：尺寸\\u t\\u Nm&gt；"
+  },
+  {
+    "origin": "cv::_InputArray::_InputArray",
+    "local": "简历：：输入数组：：输入数组"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::array&lt;",
+    "local": "const std：：数组&lt；"
+  },
+  {
+    "origin": "arr",
+    "local": "阿里尔"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "~_InputArray()",
+    "local": "~\\u InputArray（）"
+  },
+  {
+    "origin": "cv::_InputArray::~_InputArray",
+    "local": "cv:：\\U输入阵列：：~ \\U输入阵列"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "channels()",
+    "local": "频道（）"
+  },
+  {
+    "origin": "int cv::_InputArray::channels",
+    "local": "int cv:：_InputArray：：通道"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "cols()",
+    "local": "Cols（）"
+  },
+  {
+    "origin": "int cv::_InputArray::cols",
+    "local": "int cv:：_InputArray:：cols"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "copyTo()",
+    "local": "复制到（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "void cv::_InputArray::copyTo",
+    "local": "无效cv：：：InputArray：：copyTo"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "arr",
+    "local": "阿里尔"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "copyTo()",
+    "local": "复制到（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "void cv::_InputArray::copyTo",
+    "local": "无效cv：：：InputArray：：copyTo"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "arr",
+    "local": "阿里尔"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "depth()",
+    "local": "深度（）"
+  },
+  {
+    "origin": "int cv::_InputArray::depth",
+    "local": "int cv：：输入数组：：深度"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "dims()",
+    "local": "尺寸（）"
+  },
+  {
+    "origin": "int cv::_InputArray::dims",
+    "local": "int cv：：输入数组：：dims"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "empty()",
+    "local": "空（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::empty",
+    "local": "bool cv:：_InputArray：：空"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getFlags()",
+    "local": "getFlags（）"
+  },
+  {
+    "origin": "int cv::_InputArray::getFlags",
+    "local": "int cv:：_InputArray:：getFlags"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getGpuMat()",
+    "local": "getGpuMat（）"
+  },
+  {
+    "origin": "cv::_InputArray::getGpuMat",
+    "local": "cv:：“InputArray:：getGpuMat”"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getGpuMatVector()",
+    "local": "getGpuMatVector（）"
+  },
+  {
+    "origin": "void cv::_InputArray::getGpuMatVector",
+    "local": "void cv:：_InputArray:：getGpuMatVector"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "gpumv",
+    "local": "GPUMV"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getMat()",
+    "local": "getMat（）"
+  },
+  {
+    "origin": "cv::_InputArray::getMat",
+    "local": "简历：：输入数组：：getMat"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "idx",
+    "local": "idx公司"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getMat_()",
+    "local": "getMat（）"
+  },
+  {
+    "origin": "cv::_InputArray::getMat_",
+    "local": "简历：：输入数组：：getMat_"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "idx",
+    "local": "idx公司"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getMatVector()",
+    "local": "getMatVector（）"
+  },
+  {
+    "origin": "void cv::_InputArray::getMatVector",
+    "local": "void cv:：_InputArray:：getMatVector"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "mv",
+    "local": "毫伏"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getObj()",
+    "local": "getObj（）"
+  },
+  {
+    "origin": "void* cv::_InputArray::getObj",
+    "local": "void*cv:：_InputArray:：getObj"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getOGlBuffer()",
+    "local": "getOGlBuffer（）"
+  },
+  {
+    "origin": "cv::_InputArray::getOGlBuffer",
+    "local": "简历：：InputArray：：getOGlBuffer"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getSz()",
+    "local": "获取（）"
+  },
+  {
+    "origin": "cv::_InputArray::getSz",
+    "local": "简历：*u InputArray:：getSz"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getUMat()",
+    "local": "格图马特（）"
+  },
+  {
+    "origin": "cv::_InputArray::getUMat",
+    "local": "cv:-u输入阵列：：getUMat"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "idx",
+    "local": "idx公司"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getUMatVector()",
+    "local": "getUMatVector（）"
+  },
+  {
+    "origin": "void cv::_InputArray::getUMatVector",
+    "local": "void cv:：_InputArray:：getUMatVector"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "umv",
+    "local": "umv公司"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "init()",
+    "local": "初始化（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "void cv::_InputArray::init",
+    "local": "void cv:：_InputArray:：init"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "_flags",
+    "local": "_标志"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "_obj",
+    "local": "对象"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "init()",
+    "local": "初始化（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "void cv::_InputArray::init",
+    "local": "void cv:：_InputArray:：init"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "_flags",
+    "local": "_标志"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "_obj",
+    "local": "对象"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "_sz",
+    "local": "_深圳"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isContinuous()",
+    "local": "isContinuous（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::isContinuous",
+    "local": "bool cv:：_InputArray:：isContinuous"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isGpuMat()",
+    "local": "isGpuMat（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::isGpuMat",
+    "local": "bool cv:：_InputArray:：isGpuMat"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isGpuMatVector()",
+    "local": "isGpuMatVector（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::isGpuMatVector",
+    "local": "bool cv:：_InputArray:：isGpuMatVector"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isMat()",
+    "local": "伊斯马特（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::isMat",
+    "local": "bool cv：：输入数组：：isMat"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isMatVector()",
+    "local": "isMatVector（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::isMatVector",
+    "local": "bool cv：：输入数组：：isMatVector"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isMatx()",
+    "local": "isMatx（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::isMatx",
+    "local": "bool cv：：输入数组：：isMatx"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isSubmatrix()",
+    "local": "isSubmatrix（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::isSubmatrix",
+    "local": "bool cv:[u InputArray:：isSubmatrix"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isUMat()",
+    "local": "isUMat（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::isUMat",
+    "local": "bool cv:：_InputArray:：isUMat"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isUMatVector()",
+    "local": "isUMatVector（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::isUMatVector",
+    "local": "bool cv:：_InputArray:：isUMatVector"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "isVector()",
+    "local": "isVector（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::isVector",
+    "local": "bool cv：：输入数组：：isVector"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "kind()",
+    "local": "种类（）"
+  },
+  {
+    "origin": "cv::_InputArray::kind",
+    "local": "简历：：输入数组：：种类"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "offset()",
+    "local": "偏移（）"
+  },
+  {
+    "origin": "size_t cv::_InputArray::offset",
+    "local": "大小：：输入数组：：偏移量"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "rawIn()",
+    "local": "拉温（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "cv::_InputArray::rawIn",
+    "local": "简历：：输入数组：：rawIn"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "vec",
+    "local": "向量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "rawIn()",
+    "local": "拉温（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "template&lt;typename _Tp , std::size_t _Nm&gt;",
+    "local": "模板&lt；typename\\u Tp，std:：size\\u t\\u Nm&gt；"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "cv::_InputArray::rawIn",
+    "local": "简历：：输入数组：：rawIn"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "arr",
+    "local": "阿里尔"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static",
+    "local": "静止的"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "rows()",
+    "local": "行（）"
+  },
+  {
+    "origin": "int cv::_InputArray::rows",
+    "local": "int cv:：_InputArray:：行"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "sameSize()",
+    "local": "sameSize（）"
+  },
+  {
+    "origin": "bool cv::_InputArray::sameSize",
+    "local": "bool cv:：_InputArray:：sameSize"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "arr",
+    "local": "阿里尔"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "size()",
+    "local": "大小（）"
+  },
+  {
+    "origin": "cv::_InputArray::size",
+    "local": "简历：：输入数组：：大小"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "sizend()",
+    "local": "sizend（）"
+  },
+  {
+    "origin": "int cv::_InputArray::sizend",
+    "local": "int cv:：_InputArray:：sizend"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "sz",
+    "local": "深圳"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "step()",
+    "local": "步骤（）"
+  },
+  {
+    "origin": "size_t cv::_InputArray::step",
+    "local": "大小：：输入数组：：步长"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "total()",
+    "local": "总计（）"
+  },
+  {
+    "origin": "size_t cv::_InputArray::total",
+    "local": "大小：：输入数组：：总计"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "type()",
+    "local": "类型（）"
+  },
+  {
+    "origin": "int cv::_InputArray::type",
+    "local": "int cv：：输入数组：：类型"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "i",
+    "local": "我"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": "成员数据文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": "int cv::_InputArray::flags",
+    "local": "int cv：：uInputArray：：标志"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "obj",
+    "local": "对象"
+  },
+  {
+    "origin": "void* cv::_InputArray::obj",
+    "local": "void*cv:：_InputArray:：obj"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "sz",
+    "local": "深圳"
+  },
+  {
+    "origin": "cv::_InputArray::sz",
+    "local": "简历：：输入数组：：sz"
+  },
+  {
+    "origin": "protected",
+    "local": "受保护的"
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": "opencv2/核心/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:42为OpenCV生成，&#160；"
+  }
+]

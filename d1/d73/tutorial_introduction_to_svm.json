@@ -1,0 +1,526 @@
+[
+  {
+    "origin": "OpenCV: Introduction to Support Vector Machines",
+    "local": "OpenCV：支持向量机简介"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Introduction to Support Vector Machines",
+    "local": "支持向量机简介"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Fernando Iglesias García",
+    "local": "费尔南多·伊格莱西亚斯·加西亚"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt；=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "Use the OpenCV functions",
+    "local": "使用OpenCV函数"
+  },
+  {
+    "origin": "to build a classifier based on SVMs and",
+    "local": "建立基于支持向量机的分类器"
+  },
+  {
+    "origin": "to test its performance.",
+    "local": "测试它的性能。"
+  },
+  {
+    "origin": "What is a SVM?",
+    "local": "什么是支持向量机？"
+  },
+  {
+    "origin": "A Support Vector Machine (SVM) is a discriminative classifier formally defined by a separating hyperplane. In other words, given labeled training data (",
+    "local": "支持向量机（SVM）是一种由分离超平面形式化定义的判别分类器。换句话说，给定有标记的训练数据("
+  },
+  {
+    "origin": "supervised learning",
+    "local": "监督学习"
+  },
+  {
+    "origin": "), the algorithm outputs an optimal hyperplane which categorizes new examples.",
+    "local": ")算法输出一个最优超平面，对新实例进行分类。"
+  },
+  {
+    "origin": "In which sense is the hyperplane obtained optimal? Let's consider the following simple problem:",
+    "local": "在什么意义上得到的超平面是最优的？让我们考虑以下简单问题："
+  },
+  {
+    "origin": "For a linearly separable set of 2D-points which belong to one of two classes, find a separating straight line.",
+    "local": "对于属于两类中的一类的二维点的线性可分集合，求一条分离直线。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "In this example we deal with lines and points in the Cartesian plane instead of hyperplanes and vectors in a high dimensional space. This is a simplification of the problem.It is important to understand that this is done only because our intuition is better built from examples that are easy to imagine. However, the same concepts apply to tasks where the examples to classify lie in a space whose dimension is higher than two.",
+    "local": "在这个例子中，我们处理笛卡尔平面上的线和点，而不是高维空间中的超平面和向量。这是问题的一个简化，重要的是要明白，这样做只是因为我们的直觉更好地建立在容易想象的例子上。然而，同样的概念也适用于那些要分类的例子位于维度高于2的空间中的任务。"
+  },
+  {
+    "origin": "In the above picture you can see that there exists multiple lines that offer a solution to the problem. Is any of them better than the others? We can intuitively define a criterion to estimate the worth of the lines:",
+    "local": "在上面的图片中，您可以看到有多条线提供了问题的解决方案。他们中有谁比其他人好？我们可以直观地定义一个标准来估计线路的价值："
+  },
+  {
+    "origin": "A line is bad if it passes too close to the points because it will be noise sensitive and it will not generalize correctly.",
+    "local": "如果一条线太靠近这些点，那它就是不好的，因为它对噪声很敏感，而且不能正确地概括。"
+  },
+  {
+    "origin": "Therefore, our goal should be to find the line passing as far as possible from all points.",
+    "local": "因此，我们的目标应该是找到尽可能远离所有点的线。"
+  },
+  {
+    "origin": "Then, the operation of the SVM algorithm is based on finding the hyperplane that gives the largest minimum distance to the training examples. Twice, this distance receives the important name of",
+    "local": "然后，支持向量机算法的操作是基于寻找到训练样本的最大-最小距离的超平面。两次，这个距离被称为"
+  },
+  {
+    "origin": "margin",
+    "local": "边缘"
+  },
+  {
+    "origin": "within SVM's theory. Therefore, the optimal separating hyperplane",
+    "local": "在支持向量机理论中。因此，最优分离超平面"
+  },
+  {
+    "origin": "maximizes",
+    "local": "最大化"
+  },
+  {
+    "origin": "the margin of the training data.",
+    "local": "训练数据的边距。"
+  },
+  {
+    "origin": "How is the optimal hyperplane computed?",
+    "local": "如何计算最优超平面？"
+  },
+  {
+    "origin": "Let's introduce the notation used to define formally a hyperplane:",
+    "local": "让我们介绍一下用于正式定义超平面的符号："
+  },
+  {
+    "origin": "\\[f(x) = \\beta_{0} + \\beta^{T} x,\\]",
+    "local": "\\[f（x）=\\beta{0}+\\beta^{T}x，\\]"
+  },
+  {
+    "origin": "where \\(\\beta\\) is known as the",
+    "local": "其中\\（\\beta\\）称为"
+  },
+  {
+    "origin": "weight vector",
+    "local": "权重向量"
+  },
+  {
+    "origin": "and \\(\\beta_{0}\\) as the",
+    "local": "以及\\（\\beta{0}\\）作为"
+  },
+  {
+    "origin": "bias",
+    "local": "偏倚"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Separating Hyperplanes",
+    "local": "分离超平面"
+  },
+  {
+    "origin": ") of the book:",
+    "local": ")本书的主题："
+  },
+  {
+    "origin": "Elements of Statistical Learning",
+    "local": "统计学习要素"
+  },
+  {
+    "origin": "by T. Hastie, R. Tibshirani and J. H. Friedman (",
+    "local": "由T。黑斯蒂，R。Tibshirani和J。H。弗里德曼("
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "The optimal hyperplane can be represented in an infinite number of different ways by scaling of \\(\\beta\\) and \\(\\beta_{0}\\). As a matter of convention, among all the possible representations of the hyperplane, the one chosen is",
+    "local": "最优超平面可以通过缩放\\（\\beta\\）和\\（\\beta{0}\\）以无数种不同的方式表示。作为惯例，在超平面的所有可能表示中，选择的是"
+  },
+  {
+    "origin": "\\[|\\beta_{0} + \\beta^{T} x| = 1\\]",
+    "local": "\\[|\\beta{0}+\\beta ^{T}x |=1\\]"
+  },
+  {
+    "origin": "where \\(x\\) symbolizes the training examples closest to the hyperplane. In general, the training examples that are closest to the hyperplane are called",
+    "local": "其中\\（x\\）表示最接近超平面的训练示例。通常，最接近超平面的训练示例称为"
+  },
+  {
+    "origin": "support vectors",
+    "local": "支持向量"
+  },
+  {
+    "origin": ". This representation is known as the",
+    "local": ". 这种表示称为"
+  },
+  {
+    "origin": "canonical hyperplane",
+    "local": "规范超平面"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Now, we use the result of geometry that gives the distance between a point \\(x\\) and a hyperplane \\((\\beta, \\beta_{0})\\):",
+    "local": "现在，我们使用几何体的结果，它给出了一个点\\（x\\）和一个超平面\\（（\\beta，\\beta{0}）\\）之间的距离："
+  },
+  {
+    "origin": "\\[\\mathrm{distance} = \\frac{|\\beta_{0} + \\beta^{T} x|}{||\\beta||}.\\]",
+    "local": "\\[\\mathrm{distance}=\\frac{beta{0}+\\beta^{T}x}{beta}.\\]"
+  },
+  {
+    "origin": "In particular, for the canonical hyperplane, the numerator is equal to one and the distance to the support vectors is",
+    "local": "特别地，对于正则超平面，分子等于1，到支持向量的距离为"
+  },
+  {
+    "origin": "\\[\\mathrm{distance}_{\\text{ support vectors}} = \\frac{|\\beta_{0} + \\beta^{T} x|}{||\\beta||} = \\frac{1}{||\\beta||}.\\]",
+    "local": "\\[\\mathrm{distance}{\\text{support vectors}}=\\frac{{124;\\ beta{0}+\\beta^{T}x}{124;}=\\ frac{1}{124;\\ beta}.\\]"
+  },
+  {
+    "origin": "Recall that the margin introduced in the previous section, here denoted as \\(M\\), is twice the distance to the closest examples:",
+    "local": "回想一下，上一节中引入的边距，这里表示为\\（M\\），是距离最近示例距离的两倍："
+  },
+  {
+    "origin": "\\[M = \\frac{2}{||\\beta||}\\]",
+    "local": "\\[M=\\frac{2}{| |β|}\\]"
+  },
+  {
+    "origin": "Finally, the problem of maximizing \\(M\\) is equivalent to the problem of minimizing a function \\(L(\\beta)\\) subject to some constraints. The constraints model the requirement for the hyperplane to classify correctly all the training examples \\(x_{i}\\). Formally,",
+    "local": "最后，最大化\\（M\\）问题等价于在一定约束条件下最小化函数\\（L（\\beta）\\）的问题。约束为超平面正确分类所有训练示例（x{i}）的需求建模。正式地，"
+  },
+  {
+    "origin": "\\[\\min_{\\beta, \\beta_{0}} L(\\beta) = \\frac{1}{2}||\\beta||^{2} \\text{ subject to } y_{i}(\\beta^{T} x_{i} + \\beta_{0}) \\geq 1 \\text{ } \\forall i,\\]",
+    "local": "\\[\\min{\\beta，\\beta{0}}L（\\beta）=\\frac{1}{2}{124;}\\ beta{124; ^{2}\\text{subject to}y{i}（\\beta^{T}x{i}+\\beta{0}）\\geq 1\\text{}\\forall i，\\]"
+  },
+  {
+    "origin": "where \\(y_{i}\\) represents each of the labels of the training examples.",
+    "local": "其中\\（y{i}\\）表示训练示例的每个标签。"
+  },
+  {
+    "origin": "This is a problem of Lagrangian optimization that can be solved using Lagrange multipliers to obtain the weight vector \\(\\beta\\) and the bias \\(\\beta_{0}\\) of the optimal hyperplane.",
+    "local": "这是一个拉格朗日优化问题，可以用拉格朗日乘子求解，得到最优超平面的权向量\\（\\beta\\）和偏差\\（\\beta{0}\\）。"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Set up the training data",
+    "local": "设置培训数据"
+  },
+  {
+    "origin": "The training data of this exercise is formed by a set of labeled 2D-points that belong to one of two different classes; one of the classes consists of one point and the other of three points.",
+    "local": "这个练习的训练数据是由一组属于两个不同类别中的一个的二维点组成的；其中一个类包含一个点，另一个类包含三个点。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "The function",
+    "local": "函数"
+  },
+  {
+    "origin": "that will be used afterwards requires the training data to be stored as",
+    "local": "需要将训练数据存储为"
+  },
+  {
+    "origin": "objects of floats. Therefore, we create these objects from the arrays defined above:",
+    "local": "浮动对象。因此，我们从上面定义的数组中创建这些对象："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Set up SVM's parameters",
+    "local": "设置支持向量机的参数"
+  },
+  {
+    "origin": "In this tutorial we have introduced the theory of SVMs in the most simple case, when the training examples are spread into two classes that are linearly separable. However, SVMs can be used in a wide variety of problems (e.g. problems with non-linearly separable data, a SVM using a kernel function to raise the dimensionality of the examples, etc). As a consequence of this, we have to define some parameters before training the SVM. These parameters are stored in an object of the class",
+    "local": "在本教程中，我们介绍了支持向量机的理论，在最简单的情况下，当训练实例被分成两个线性可分的类。然而，支持向量机可以应用于各种各样的问题（例如，具有非线性可分离数据的问题、使用核函数提高实例维数的支持向量机等）。因此，在训练支持向量机之前，我们必须定义一些参数。这些参数存储在类的对象中"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Here:",
+    "local": "在这里："
+  },
+  {
+    "origin": "Type of SVM",
+    "local": "支持向量机类型"
+  },
+  {
+    "origin": ". We choose here the type",
+    "local": ". 我们在这里选择"
+  },
+  {
+    "origin": "that can be used for n-class classification (n \\(\\geq\\) 2). The important feature of this type is that it deals with imperfect separation of classes (i.e. when the training data is non-linearly separable). This feature is not important here since the data is linearly separable and we chose this SVM type only for being the most commonly used.",
+    "local": "可用于n类分类（n\\（\\geq\\）2）。这种类型的重要特征是它处理不完全的类分离（即当训练数据是非线性可分离的）。这个特征在这里并不重要，因为数据是线性可分离的，我们选择这种支持向量机类型只是因为它是最常用的。"
+  },
+  {
+    "origin": "Type of SVM kernel",
+    "local": "支持向量机核类型"
+  },
+  {
+    "origin": ". We have not talked about kernel functions since they are not interesting for the training data we are dealing with. Nevertheless, let's explain briefly now the main idea behind a kernel function. It is a mapping done to the training data to improve its resemblance to a linearly separable set of data. This mapping consists of increasing the dimensionality of the data and is done efficiently using a kernel function. We choose here the type",
+    "local": ". 我们没有讨论核函数，因为它们对我们正在处理的训练数据不感兴趣。不过，现在让我们简单地解释一下内核函数背后的主要思想。它是对训练数据进行映射，以提高其与线性可分数据集的相似性。这种映射包括增加数据的维数，并使用核函数有效地完成。我们在这里选择"
+  },
+  {
+    "origin": "which means that no mapping is done. This parameter is defined using",
+    "local": "也就是说没有映射。此参数使用"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Termination criteria of the algorithm",
+    "local": "算法的终止准则"
+  },
+  {
+    "origin": ". The SVM training procedure is implemented solving a constrained quadratic optimization problem in an",
+    "local": ". 支持向量机的训练过程是在求解一个约束二次优化问题时实现的"
+  },
+  {
+    "origin": "iterative",
+    "local": "迭代"
+  },
+  {
+    "origin": "fashion. Here we specify a maximum number of iterations and a tolerance error so we allow the algorithm to finish in less number of steps even if the optimal hyperplane has not been computed yet. This parameter is defined in a structure",
+    "local": "时尚。在这里，我们指定了一个最大迭代次数和一个公差误差，这样即使最优超平面还没有计算出来，我们也允许算法以较少的步数完成。此参数在结构中定义"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Train the SVM",
+    "local": "训练支持向量机"
+  },
+  {
+    "origin": "We call the method",
+    "local": "我们称之为方法"
+  },
+  {
+    "origin": "to build the SVM model.",
+    "local": "建立支持向量机模型。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Regions classified by the SVM",
+    "local": "支持向量机分类区域"
+  },
+  {
+    "origin": "The method",
+    "local": "方法"
+  },
+  {
+    "origin": "is used to classify an input sample using a trained SVM. In this example we have used this method in order to color the space depending on the prediction done by the SVM. In other words, an image is traversed interpreting its pixels as points of the Cartesian plane. Each of the points is colored depending on the class predicted by the SVM; in green if it is the class with label 1 and in blue if it is the class with label -1.",
+    "local": "利用训练好的支持向量机对输入样本进行分类。在这个例子中，我们使用这种方法，以颜色的空间取决于预测所做的支持向量机。换句话说，图像被遍历，将其像素解释为笛卡尔平面的点。根据支持向量机预测的类别对每个点进行着色；如果是标签为1的类，则为绿色；如果是标签为-1的类，则为蓝色。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Support vectors",
+    "local": "支持向量"
+  },
+  {
+    "origin": "We use here a couple of methods to obtain information about the support vectors. The method",
+    "local": "我们在这里使用两种方法来获取有关支持向量的信息。方法"
+  },
+  {
+    "origin": "obtain all of the support vectors. We have used this methods here to find the training examples that are support vectors and highlight them.",
+    "local": "获取所有支持向量。我们在这里使用了这些方法来找到作为支持向量的训练示例并突出显示它们。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "The code opens an image and shows the training examples of both classes. The points of one class are represented with white circles and black ones are used for the other class.",
+    "local": "代码将打开一个图像并显示这两个类的训练示例。一类的点用白色圆圈表示，另一类用黑色圆圈表示。"
+  },
+  {
+    "origin": "The SVM is trained and used to classify all the pixels of the image. This results in a division of the image in a blue region and a green region. The boundary between both regions is the optimal separating hyperplane.",
+    "local": "训练支持向量机对图像中的所有像素进行分类。这导致在蓝色区域和绿色区域中分割图像。两个区域之间的边界是最优分离超平面。"
+  },
+  {
+    "origin": "Finally the support vectors are shown using gray rings around the training examples.",
+    "local": "最后在训练样本周围用灰色环表示支持向量。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "origin": "OpenCV: Feature Matching + Homography to find Objects",
+    "local": "OpenCV：特征匹配+单应来寻找对象"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Feature Matching + Homography to find Objects",
+    "local": "特征匹配+单应性寻找目标"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this chapter,",
+    "local": "在本章中，"
+  },
+  {
+    "origin": "We will mix up the feature matching and findHomography from calib3d module to find known objects in a complex image.",
+    "local": "我们将特征匹配和calib3d模块中的findHomography相结合，在复杂的图像中找到已知的物体。"
+  },
+  {
+    "origin": "Basics",
+    "local": "基础"
+  },
+  {
+    "origin": "So what we did in last session? We used a queryImage, found some feature points in it, we took another trainImage, found the features in that image too and we found the best matches among them. In short, we found locations of some parts of an object in another cluttered image. This information is sufficient to find the object exactly on the trainImage.",
+    "local": "上节课我们做了什么？我们使用了一个查询图像，在其中找到了一些特征点，我们拍摄了另一个火车图像，在该图像中也找到了特征，我们找到了其中最好的匹配。简而言之，我们在另一张杂乱的图像中找到了物体某些部分的位置。这些信息足以在火车图像上准确地找到物体。"
+  },
+  {
+    "origin": "For that, we can use a function from calib3d module, ie",
+    "local": "为此，我们可以使用calib3d模块中的一个函数，即"
+  },
+  {
+    "origin": ". If we pass the set of points from both the images, it will find the perspective transformation of that object. Then we can use",
+    "local": ". 如果我们从两个图像中传递一组点，它将找到该对象的透视变换。然后我们可以用"
+  },
+  {
+    "origin": "to find the object. It needs atleast four correct points to find the transformation.",
+    "local": "找到目标。它至少需要四个正确的点才能找到变换。"
+  },
+  {
+    "origin": "We have seen that there can be some possible errors while matching which may affect the result. To solve this problem, algorithm uses RANSAC or LEAST_MEDIAN (which can be decided by the flags). So good matches which provide correct estimation are called inliers and remaining are called outliers.",
+    "local": "我们已经看到，在匹配时可能会有一些错误，这可能会影响结果。为了解决这个问题，算法使用了RANSAC或LEAST\\ u中位数（这可以由标志决定）。因此，提供正确估计的好匹配称为内联，其余的称为离群。"
+  },
+  {
+    "origin": "returns a mask which specifies the inlier and outlier points.",
+    "local": "返回一个指定内点和外点的掩码。"
+  },
+  {
+    "origin": "So let's do it !!!",
+    "local": "所以让我们开始吧！！！"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "First, as usual, let's find SIFT features in images and apply the ratio test to find the best matches.",
+    "local": "首先，像往常一样，让我们在图像中找到SIFT特征并应用比率测试来找到最佳匹配。"
+  },
+  {
+    "origin": "Now we set a condition that atleast 10 matches (defined by MIN_MATCH_COUNT) are to be there to find the object. Otherwise simply show a message saying not enough matches are present.",
+    "local": "现在我们设置了一个条件，即至少有10个匹配项（由minmatch\\u COUNT定义）在那里查找对象。否则，只需显示一条消息，说明没有足够的匹配项。"
+  },
+  {
+    "origin": "If enough matches are found, we extract the locations of matched keypoints in both the images. They are passed to find the perspective transformation. Once we get this 3x3 transformation matrix, we use it to transform the corners of queryImage to corresponding points in trainImage. Then we draw it.",
+    "local": "如果找到足够的匹配点，则提取两幅图像中匹配关键点的位置。它们被传递来寻找透视变换。一旦我们得到这个3x3变换矩阵，我们就用它把查询图像的角点变换到trainImage中相应的点上。然后我们画出来。"
+  },
+  {
+    "origin": "Finally we draw our inliers (if successfully found the object) or matching keypoints (if failed).",
+    "local": "最后，我们绘制内联线（如果成功找到对象）或匹配的关键点（如果失败）。"
+  },
+  {
+    "origin": "See the result below. Object is marked in white color in cluttered image:",
+    "local": "请参见下面的结果。在杂乱的图像中，对象以白色标记："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Exercises",
+    "local": "练习"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

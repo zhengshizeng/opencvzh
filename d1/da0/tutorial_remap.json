@@ -1,0 +1,446 @@
+[
+  {
+    "origin": "OpenCV: Remapping",
+    "local": "OpenCV:重新映射"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Remapping",
+    "local": "重新映射"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "安娜·华曼"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt；=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "a. Use the OpenCV function",
+    "local": "答。使用OpenCV函数"
+  },
+  {
+    "origin": "to implement simple remapping routines.",
+    "local": "实现简单的重映射例程。"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "What is remapping?",
+    "local": "什么是重映射？"
+  },
+  {
+    "origin": "It is the process of taking pixels from one place in the image and locating them in another position in a new image.",
+    "local": "它是从图像中的一个位置提取像素并将它们定位到新图像中另一个位置的过程。"
+  },
+  {
+    "origin": "To accomplish the mapping process, it might be necessary to do some interpolation for non-integer pixel locations, since there will not always be a one-to-one-pixel correspondence between source and destination images.",
+    "local": "为了完成映射过程，可能需要对非整数像素位置进行一些插值，因为源图像和目标图像之间并不总是存在一对一的像素对应关系。"
+  },
+  {
+    "origin": "We can express the remap for every pixel location \\((x,y)\\) as:",
+    "local": "我们可以将每个像素位置的重映射\\（（x，y）\\）表示为："
+  },
+  {
+    "origin": "\\[g(x,y) = f ( h(x,y) )\\]",
+    "local": "\\\\[g（x，y）=f（h（x，y））\\]"
+  },
+  {
+    "origin": "where \\(g()\\) is the remapped image, \\(f()\\) the source image and \\(h(x,y)\\) is the mapping function that operates on \\((x,y)\\).",
+    "local": "其中\\（g（）\\）是重新映射的图像，\\（f（）\\）是源图像，\\（h（x，y）\\）是对\\（（x，y）\\）进行操作的映射函数。"
+  },
+  {
+    "origin": "Let's think in a quick example. Imagine that we have an image \\(I\\) and, say, we want to do a remap such that:",
+    "local": "让我们举个简单的例子。假设我们有一个图像\\（I\\），比如说，我们想做一个重映射，这样："
+  },
+  {
+    "origin": "\\[h(x,y) = (I.cols - x, y )\\]",
+    "local": "\\\\[h（x，y）=（I.cols-x，y）\\]"
+  },
+  {
+    "origin": "What would happen? It is easily seen that the image would flip in the \\(x\\) direction. For instance, consider the input image:",
+    "local": "会发生什么？很容易看出图像会在\\（x\\）方向上翻转。例如，考虑输入图像："
+  },
+  {
+    "origin": "observe how the red circle changes positions with respect to x (considering \\(x\\) the horizontal direction):",
+    "local": "观察红圈相对于x的位置变化（考虑水平方向的\\（x\\）："
+  },
+  {
+    "origin": "In OpenCV, the function",
+    "local": "在OpenCV中，函数"
+  },
+  {
+    "origin": "offers a simple remapping implementation.",
+    "local": "提供了一个简单的重新映射实现。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "What does this program do?",
+    "local": "这个程序做什么？"
+  },
+  {
+    "origin": "Loads an image",
+    "local": "加载图像"
+  },
+  {
+    "origin": "Each second, apply 1 of 4 different remapping processes to the image and display them indefinitely in a window.",
+    "local": "每秒钟，对图像应用4个不同的重映射过程中的1个，并在窗口中无限期地显示它们。"
+  },
+  {
+    "origin": "Wait for the user to exit the program",
+    "local": "等待用户退出程序"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": "教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": "教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": "教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Load an image:",
+    "local": "加载图像："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Create the destination image and the two mapping matrices (for x and y )",
+    "local": "创建目标图像和两个映射矩阵（用于x和y）"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Create a window to display results",
+    "local": "创建一个窗口来显示结果"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Establish a loop. Each 1000 ms we update our mapping matrices (",
+    "local": "建立一个循环。每1000毫秒我们更新一次映射矩阵("
+  },
+  {
+    "origin": "mat_x",
+    "local": "材料"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "mat_y",
+    "local": "材料"
+  },
+  {
+    "origin": ") and apply them to our source image:",
+    "local": ")并将其应用于源图像："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "The function that applies the remapping is",
+    "local": "应用重新映射的函数是"
+  },
+  {
+    "origin": ". We give the following arguments:",
+    "local": ". 我们给出以下论据："
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ": Source image",
+    "local": "：源图像"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ": Destination image of same size as",
+    "local": "：与相同大小的目标图像"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "map_x",
+    "local": "地图\\u x"
+  },
+  {
+    "origin": ": The mapping function in the x direction. It is equivalent to the first component of \\(h(i,j)\\)",
+    "local": "：x方向的映射函数。它相当于\\（h（i，j）\\）的第一个分量"
+  },
+  {
+    "origin": "map_y",
+    "local": "地图"
+  },
+  {
+    "origin": ": Same as above, but in y direction. Note that",
+    "local": "：同上，但在y方向。请注意"
+  },
+  {
+    "origin": "map_y",
+    "local": "地图"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "map_x",
+    "local": "地图\\u x"
+  },
+  {
+    "origin": "are both of the same size as",
+    "local": "都和你的一样大"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "INTER_LINEAR",
+    "local": "内部线性"
+  },
+  {
+    "origin": ": The type of interpolation to use for non-integer pixels. This is by default.",
+    "local": "：用于非整数像素的插值类型。这是默认设置。"
+  },
+  {
+    "origin": "BORDER_CONSTANT",
+    "local": "边界常数"
+  },
+  {
+    "origin": ": Default",
+    "local": "：默认值"
+  },
+  {
+    "origin": "How do we update our mapping matrices",
+    "local": "如何更新映射矩阵"
+  },
+  {
+    "origin": "mat_x",
+    "local": "材料"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "mat_y",
+    "local": "材料"
+  },
+  {
+    "origin": "? Go on reading:",
+    "local": "? 继续阅读："
+  },
+  {
+    "origin": "Updating the mapping matrices:",
+    "local": "更新映射矩阵："
+  },
+  {
+    "origin": "We are going to perform 4 different mappings:",
+    "local": "我们将执行4种不同的映射："
+  },
+  {
+    "origin": "Reduce the picture to half its size and will display it in the middle:",
+    "local": "将图片缩小到一半大小，并在中间显示："
+  },
+  {
+    "origin": "\\[h(i,j) = ( 2 \\times i - src.cols/2 + 0.5, 2 \\times j - src.rows/2 + 0.5)\\]",
+    "local": "\\[h（i，j）=（2\\times i-src.cols/2+0.5，2\\times j-src.rows/2+0.5）\\]"
+  },
+  {
+    "origin": "for all pairs \\((i,j)\\) such that: \\(\\dfrac{src.cols}{4}&lt;i&lt;\\dfrac{3 \\cdot src.cols}{4}\\) and \\(\\dfrac{src.rows}{4}&lt;j&lt;\\dfrac{3 \\cdot src.rows}{4}\\)",
+    "local": "对于所有对\\（（i，j）\\），例如：\\（\\dfrac{src.cols}{4}&lt；我&lt\\dfrac{3\\cdot src.cols}{4}\\）和\\（\\dfrac{src.rows}{4}&lt；j&lt\\dfrac{3\\cdot src.rows}{4}\\）"
+  },
+  {
+    "origin": "Turn the image upside down: \\(h( i, j ) = (i, src.rows - j)\\)",
+    "local": "将图像倒置：\\（h（i，j）=（i，src.rows-j）\\）"
+  },
+  {
+    "origin": "Reflect the image from left to right: \\(h(i,j) = ( src.cols - i, j )\\)",
+    "local": "从左到右反射图像：\\（h（i，j）=（src.cols-i，j）\\）"
+  },
+  {
+    "origin": "Combination of b and c: \\(h(i,j) = ( src.cols - i, src.rows - j )\\)",
+    "local": "b和c的组合：\\（h（i，j）=（src.cols-i，src.rows-j）\\）"
+  },
+  {
+    "origin": "This is expressed in the following snippet. Here,",
+    "local": "这在下面的代码段中表示。在这里，"
+  },
+  {
+    "origin": "map_x",
+    "local": "地图\\u x"
+  },
+  {
+    "origin": "represents the first coordinate of",
+    "local": "表示的第一个坐标"
+  },
+  {
+    "origin": "h(i,j)",
+    "local": "h（i，j）"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "map_y",
+    "local": "地图"
+  },
+  {
+    "origin": "the second coordinate.",
+    "local": "第二个坐标。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Result",
+    "local": "结果"
+  },
+  {
+    "origin": "After compiling the code above, you can execute it giving as argument an image path. For instance, by using the following image:",
+    "local": "编译完上面的代码后，您可以将其作为一个图像路径参数来执行。例如，使用以下图像："
+  },
+  {
+    "origin": "This is the result of reducing it to half the size and centering it:",
+    "local": "这是将其缩小到一半大小并使其居中的结果："
+  },
+  {
+    "origin": "Turning it upside down:",
+    "local": "把它倒过来："
+  },
+  {
+    "origin": "Reflecting it in the x direction:",
+    "local": "在x方向反射："
+  },
+  {
+    "origin": "Reflecting it in both directions:",
+    "local": "从两个方向反映："
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:35为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,478 @@
+[
+  {
+    "origin": "OpenCV: cv::sfm::libmv_CameraIntrinsicsOptions Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::sfm::libmv_CameraIntrinsicsOptions Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Data structure describing the camera model and its parameters.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const int _distortion_model=0, const double _focal_length_x=0, const double _focal_length_y=0, const double _principal_point_x=0, const double _principal_point_y=0, const double _polynomial_k1=0, const double _polynomial_k2=0, const double _polynomial_k3=0, const double _polynomial_p1=0, const double _polynomial_p2=0)",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Data structure describing the camera model and its parameters.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "_distortion_model",
+    "local": ""
+  },
+  {
+    "origin": "Type of camera model.",
+    "local": ""
+  },
+  {
+    "origin": "_focal_length_x",
+    "local": ""
+  },
+  {
+    "origin": "focal length of the camera (in pixels).",
+    "local": ""
+  },
+  {
+    "origin": "_focal_length_y",
+    "local": ""
+  },
+  {
+    "origin": "focal length of the camera (in pixels).",
+    "local": ""
+  },
+  {
+    "origin": "_principal_point_x",
+    "local": ""
+  },
+  {
+    "origin": "principal point of the camera in the x direction (in pixels).",
+    "local": ""
+  },
+  {
+    "origin": "_principal_point_y",
+    "local": ""
+  },
+  {
+    "origin": "principal point of the camera in the y direction (in pixels).",
+    "local": ""
+  },
+  {
+    "origin": "_polynomial_k1",
+    "local": ""
+  },
+  {
+    "origin": "radial distortion parameter.",
+    "local": ""
+  },
+  {
+    "origin": "_polynomial_k2",
+    "local": ""
+  },
+  {
+    "origin": "radial distortion parameter.",
+    "local": ""
+  },
+  {
+    "origin": "_polynomial_k3",
+    "local": ""
+  },
+  {
+    "origin": "radial distortion parameter.",
+    "local": ""
+  },
+  {
+    "origin": "_polynomial_p1",
+    "local": ""
+  },
+  {
+    "origin": "radial distortion parameter.",
+    "local": ""
+  },
+  {
+    "origin": "_polynomial_p2",
+    "local": ""
+  },
+  {
+    "origin": "radial distortion parameter.",
+    "local": ""
+  },
+  {
+    "origin": "Is assumed that modern cameras have their principal point in the image center.",
+    "local": ""
+  },
+  {
+    "origin": "In case that the camera model was SFM_DISTORTION_MODEL_DIVISION, it's only needed to provide _polynomial_k1 and _polynomial_k2 which will be assigned as division distortion parameters.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "libmv_CameraIntrinsicsOptions()",
+    "local": ""
+  },
+  {
+    "origin": "cv::sfm::libmv_CameraIntrinsicsOptions::libmv_CameraIntrinsicsOptions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_distortion_model",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_focal_length_x",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_focal_length_y",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_principal_point_x",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_principal_point_y",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_polynomial_k1",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_polynomial_k2",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_polynomial_k3",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_polynomial_p1",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_polynomial_p2",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "distortion_model",
+    "local": ""
+  },
+  {
+    "origin": "int cv::sfm::libmv_CameraIntrinsicsOptions::distortion_model",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "division_k1",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::division_k1",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "division_k2",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::division_k2",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "focal_length_x",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::focal_length_x",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "focal_length_y",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::focal_length_y",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "image_height",
+    "local": ""
+  },
+  {
+    "origin": "int cv::sfm::libmv_CameraIntrinsicsOptions::image_height",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "image_width",
+    "local": ""
+  },
+  {
+    "origin": "int cv::sfm::libmv_CameraIntrinsicsOptions::image_width",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "polynomial_k1",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::polynomial_k1",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "polynomial_k2",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::polynomial_k2",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "polynomial_k3",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::polynomial_k3",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "polynomial_p1",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::polynomial_p1",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "polynomial_p2",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::polynomial_p2",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "principal_point_x",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::principal_point_x",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "principal_point_y",
+    "local": ""
+  },
+  {
+    "origin": "double cv::sfm::libmv_CameraIntrinsicsOptions::principal_point_y",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/sfm/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,35 @@
+html parse test.html
+node F:\html-i18n-cli-master\bin\html.js parse intro.html
+
+html translate test.json
+
+html convert test.json
+
+
+node F:\html-i18n-cli-master\bin\html.js render intro.html intro.json
+
+
+node F:\html-i18n-cli-master\bin\html.js render tutorial_table_of_content_introduction.html tutorial_table_of_content_introduction.json
+
+
+node F:\html-i18n-cli-master\bin\html.js render tutorial_config_reference.html tutorial_config_reference.json
+
+node F:\html-i18n-cli-master\bin\html.js render tutorial_mat_the_basic_image_container.html tutorial_mat_the_basic_image_container.json
+
+
+html convert  tutorial_table_of_content_core.json
+
+node F:\html-i18n-cli-master\bin\html.js render tutorial_mat_the_basic_image_container.html tutorial_mat_the_basic_image_container.json
+
+node F:\html-i18n-cli-master\bin\html.js  translate 
+
+从JSON 转换 HTML 文件到中文
+node F:\html-i18n-cli-master\bin\html.js render .html .json
+
+JSON 转 EXCEL
+
+html convert test.json
+
+EXCEL 转 JSON
+
+html convert test.xlsx

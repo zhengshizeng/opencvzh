@@ -1,0 +1,318 @@
+[
+  {
+    "origin": "OpenCV: Adding (blending) two images using OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Adding (blending) two images using OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "We will learn how to blend two images!",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": ""
+  },
+  {
+    "origin": "what is",
+    "local": ""
+  },
+  {
+    "origin": "linear blending",
+    "local": ""
+  },
+  {
+    "origin": "and why it is useful;",
+    "local": ""
+  },
+  {
+    "origin": "how to add two images using",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The explanation below belongs to the book",
+    "local": ""
+  },
+  {
+    "origin": "Computer Vision: Algorithms and Applications",
+    "local": ""
+  },
+  {
+    "origin": "by Richard Szeliski",
+    "local": ""
+  },
+  {
+    "origin": "From our previous tutorial, we know already a bit of",
+    "local": ""
+  },
+  {
+    "origin": "Pixel operators",
+    "local": ""
+  },
+  {
+    "origin": ". An interesting dyadic (two-input) operator is the",
+    "local": ""
+  },
+  {
+    "origin": "linear blend operator",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "\\[g(x) = (1 - \\alpha)f_{0}(x) + \\alpha f_{1}(x)\\]",
+    "local": ""
+  },
+  {
+    "origin": "By varying \\(\\alpha\\) from \\(0 \\rightarrow 1\\) this operator can be used to perform a temporal",
+    "local": ""
+  },
+  {
+    "origin": "cross-dissolve",
+    "local": ""
+  },
+  {
+    "origin": "between two images or videos, as seen in slide shows and film productions (cool, eh?)",
+    "local": ""
+  },
+  {
+    "origin": "Source Code",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Download the source code from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Download the source code from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Download the source code from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Since we are going to perform:",
+    "local": ""
+  },
+  {
+    "origin": "\\[g(x) = (1 - \\alpha)f_{0}(x) + \\alpha f_{1}(x)\\]",
+    "local": ""
+  },
+  {
+    "origin": "We need two source images ( \\(f_{0}(x)\\) and \\(f_{1}(x)\\)). So, we load them in the usual way:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "We used the following images:",
+    "local": ""
+  },
+  {
+    "origin": "LinuxLogo.jpg",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "WindowsLogo.jpg",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "Since we are",
+    "local": ""
+  },
+  {
+    "origin": "adding",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": ", they both have to be of the same size (width and height) and type.",
+    "local": ""
+  },
+  {
+    "origin": "Now we need to generate the",
+    "local": ""
+  },
+  {
+    "origin": "image. For this, the function",
+    "local": ""
+  },
+  {
+    "origin": "comes quite handy:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Numpy version of above line (but cv function is around 2x faster):",
+    "local": ""
+  },
+  {
+    "origin": "since",
+    "local": ""
+  },
+  {
+    "origin": "produces:",
+    "local": ""
+  },
+  {
+    "origin": "\\[dst = \\alpha \\cdot src1 + \\beta \\cdot src2 + \\gamma\\]",
+    "local": ""
+  },
+  {
+    "origin": "In this case,",
+    "local": ""
+  },
+  {
+    "origin": "is the argument \\(0.0\\) in the code above.",
+    "local": ""
+  },
+  {
+    "origin": "Create windows, show the images and wait for the user to end the program.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Result",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

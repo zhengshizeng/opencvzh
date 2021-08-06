@@ -1,0 +1,2102 @@
+[
+  {
+    "origin": "OpenCV: cv::cuda::SURF_CUDA Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::SURF_CUDA Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "Class used for extracting Speeded Up Robust Features (SURF) from an image. :",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "the default constructor",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(double _hessianThreshold, int _nOctaves=4, int _nOctaveLayers=2, bool _extended=false, float _keypointsRatio=0.01f, bool _upright=false)",
+    "local": ""
+  },
+  {
+    "origin": "the full constructor taking all the necessary parameters",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the default norm type",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "returns the descriptor size in float's (64 or 128)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;img, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;keypoints)",
+    "local": ""
+  },
+  {
+    "origin": "Finds the keypoints using fast hessian detector used in SURF.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;img, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;keypoints,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;descriptors, bool useProvidedKeypoints=false)",
+    "local": ""
+  },
+  {
+    "origin": "Finds the keypoints and computes their descriptors using fast hessian detector used in SURF.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;descriptorsGPU, std::vector&lt; float &gt; &amp;descriptors)",
+    "local": ""
+  },
+  {
+    "origin": "download descriptors from device to host memory",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;keypointsGPU, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keypoints)",
+    "local": ""
+  },
+  {
+    "origin": "download keypoints from device to host memory",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;img, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;keypoints)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;img, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;keypoints,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;descriptors, bool useProvidedKeypoints=false)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;img, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keypoints)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;img, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keypoints,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;descriptors, bool useProvidedKeypoints=false)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;img, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keypoints, std::vector&lt; float &gt; &amp;descriptors, bool useProvidedKeypoints=false)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keypoints,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;keypointsGPU)",
+    "local": ""
+  },
+  {
+    "origin": "upload host keypoints to device memory",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(double _hessianThreshold, int _nOctaves=4, int _nOctaveLayers=2, bool _extended=false, float _keypointsRatio=0.01f, bool _upright=false)",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "max keypoints = min(keypointsRatio *",
+    "local": ""
+  },
+  {
+    "origin": ".area(), 65535)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Class used for extracting Speeded Up Robust Features (SURF) from an image. :",
+    "local": ""
+  },
+  {
+    "origin": "The class",
+    "local": ""
+  },
+  {
+    "origin": "implements Speeded Up Robust Features descriptor. There is a fast multi-scale Hessian keypoint detector that can be used to find the keypoints (which is the default option). But the descriptors can also be computed for the user-specified keypoints. Only 8-bit grayscale images are supported.",
+    "local": ""
+  },
+  {
+    "origin": "The class",
+    "local": ""
+  },
+  {
+    "origin": "can store results in the GPU and CPU memory. It provides functions to convert results between CPU and GPU version ( uploadKeypoints, downloadKeypoints, downloadDescriptors ). The format of CPU results is the same as SURF results. GPU results are stored in",
+    "local": ""
+  },
+  {
+    "origin": ". The keypoints matrix is \\(\\texttt{nFeatures} \\times 7\\) matrix with the CV_32FC1 type.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints.ptr&lt;float&gt;(X_ROW)[i] contains x coordinate of the i-th feature.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints.ptr&lt;float&gt;(Y_ROW)[i] contains y coordinate of the i-th feature.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints.ptr&lt;float&gt;(LAPLACIAN_ROW)[i] contains the laplacian sign of the i-th feature.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints.ptr&lt;float&gt;(OCTAVE_ROW)[i] contains the octave of the i-th feature.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints.ptr&lt;float&gt;(SIZE_ROW)[i] contains the size of the i-th feature.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints.ptr&lt;float&gt;(ANGLE_ROW)[i] contain orientation of the i-th feature.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints.ptr&lt;float&gt;(HESSIAN_ROW)[i] contains the response of the i-th feature.",
+    "local": ""
+  },
+  {
+    "origin": "The descriptors matrix is \\(\\texttt{nFeatures} \\times \\texttt{descriptorSize}\\) matrix with the CV_32FC1 type.",
+    "local": ""
+  },
+  {
+    "origin": "The class",
+    "local": ""
+  },
+  {
+    "origin": "uses some buffers and provides access to it. All buffers can be safely released between function calls.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "SURF",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "An example for using the SURF keypoint matcher on GPU can be found at opencv_source_code/samples/gpu/surf_keypoint_matcher.cpp",
+    "local": ""
+  },
+  {
+    "origin": "Member Enumeration Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "KeypointLayout",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "X_ROW",
+    "local": ""
+  },
+  {
+    "origin": "Y_ROW",
+    "local": ""
+  },
+  {
+    "origin": "LAPLACIAN_ROW",
+    "local": ""
+  },
+  {
+    "origin": "OCTAVE_ROW",
+    "local": ""
+  },
+  {
+    "origin": "SIZE_ROW",
+    "local": ""
+  },
+  {
+    "origin": "ANGLE_ROW",
+    "local": ""
+  },
+  {
+    "origin": "HESSIAN_ROW",
+    "local": ""
+  },
+  {
+    "origin": "ROWS_COUNT",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "SURF_CUDA()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::SURF_CUDA::SURF_CUDA",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "the default constructor",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "SURF_CUDA()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::SURF_CUDA::SURF_CUDA",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "_hessianThreshold",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "_nOctaves",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "_nOctaveLayers",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "_extended",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "_keypointsRatio",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "_upright",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "explicit",
+    "local": ""
+  },
+  {
+    "origin": "the full constructor taking all the necessary parameters",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "create()",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::cuda::SURF_CUDA::create",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "_hessianThreshold",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "_nOctaves",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "_nOctaveLayers",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "_extended",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "_keypointsRatio",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "_upright",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda.SURF_CUDA_create(",
+    "local": ""
+  },
+  {
+    "origin": "_hessianThreshold[, _nOctaves[, _nOctaveLayers[, _extended[, _keypointsRatio[, _upright]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "_hessianThreshold",
+    "local": ""
+  },
+  {
+    "origin": "Threshold for hessian keypoint detector used in SURF.",
+    "local": ""
+  },
+  {
+    "origin": "_nOctaves",
+    "local": ""
+  },
+  {
+    "origin": "Number of pyramid octaves the keypoint detector will use.",
+    "local": ""
+  },
+  {
+    "origin": "_nOctaveLayers",
+    "local": ""
+  },
+  {
+    "origin": "Number of octave layers within each octave.",
+    "local": ""
+  },
+  {
+    "origin": "_extended",
+    "local": ""
+  },
+  {
+    "origin": "Extended descriptor flag (true - use extended 128-element descriptors; false - use 64-element descriptors).",
+    "local": ""
+  },
+  {
+    "origin": "_keypointsRatio",
+    "local": ""
+  },
+  {
+    "origin": "_upright",
+    "local": ""
+  },
+  {
+    "origin": "Up-right or rotated features flag (true - do not compute orientation of features; false - compute orientation).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "defaultNorm()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::cuda::SURF_CUDA::defaultNorm",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda_SURF_CUDA.defaultNorm(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "returns the default norm type",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "descriptorSize()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::cuda::SURF_CUDA::descriptorSize",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda_SURF_CUDA.descriptorSize(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "returns the descriptor size in float's (64 or 128)",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "detect()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::detect",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda_SURF_CUDA.detect(",
+    "local": ""
+  },
+  {
+    "origin": "img, mask[, keypoints]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Finds the keypoints using fast hessian detector used in SURF.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Source image, currently supports only CV_8UC1 images.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "A mask image same size as src and of type CV_8UC1.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": "Detected keypoints.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "detectWithDescriptors()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::detectWithDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "useProvidedKeypoints",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "keypoints, descriptors",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda_SURF_CUDA.detectWithDescriptors(",
+    "local": ""
+  },
+  {
+    "origin": "img, mask[, keypoints[, descriptors[, useProvidedKeypoints]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Finds the keypoints and computes their descriptors using fast hessian detector used in SURF.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Source image, currently supports only CV_8UC1 images.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "A mask image same size as src and of type CV_8UC1.",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": "Detected keypoints.",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": "Keypoint descriptors.",
+    "local": ""
+  },
+  {
+    "origin": "useProvidedKeypoints",
+    "local": ""
+  },
+  {
+    "origin": "Compute descriptors for the user-provided keypoints and recompute keypoints direction.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "downloadDescriptors()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::downloadDescriptors",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptorsGPU",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; float &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "download descriptors from device to host memory",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "downloadKeypoints()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::downloadKeypoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypointsGPU",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.cuda_SURF_CUDA.downloadKeypoints(",
+    "local": ""
+  },
+  {
+    "origin": "keypointsGPU",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "download keypoints from device to host memory",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[1/5]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "finds the keypoints using fast hessian detector used in SURF supports CV_8UC1 images keypoints will have nFeature cols and 6 rows keypoints.ptr&lt;float&gt;(X_ROW)[i] will contain x coordinate of i'th feature keypoints.ptr&lt;float&gt;(Y_ROW)[i] will contain y coordinate of i'th feature keypoints.ptr&lt;float&gt;(LAPLACIAN_ROW)[i] will contain laplacian sign of i'th feature keypoints.ptr&lt;float&gt;(OCTAVE_ROW)[i] will contain octave of i'th feature keypoints.ptr&lt;float&gt;(SIZE_ROW)[i] will contain size of i'th feature keypoints.ptr&lt;float&gt;(ANGLE_ROW)[i] will contain orientation of i'th feature keypoints.ptr&lt;float&gt;(HESSIAN_ROW)[i] will contain response of i'th feature",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[2/5]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "useProvidedKeypoints",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "finds the keypoints and computes their descriptors. Optionally it can compute descriptors for the user-provided keypoints and recompute keypoints direction",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[3/5]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[4/5]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "useProvidedKeypoints",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[5/5]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; float &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "descriptors",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "useProvidedKeypoints",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "releaseMemory()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::releaseMemory",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "uploadKeypoints()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::cuda::SURF_CUDA::uploadKeypoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypoints",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "keypointsGPU",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "upload host keypoints to device memory",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "det",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::SURF_CUDA::det",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "extended",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::cuda::SURF_CUDA::extended",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "hessianThreshold",
+    "local": ""
+  },
+  {
+    "origin": "double cv::cuda::SURF_CUDA::hessianThreshold",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "keypointsRatio",
+    "local": ""
+  },
+  {
+    "origin": "float cv::cuda::SURF_CUDA::keypointsRatio",
+    "local": ""
+  },
+  {
+    "origin": "max keypoints = min(keypointsRatio *",
+    "local": ""
+  },
+  {
+    "origin": ".area(), 65535)",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "mask1",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::SURF_CUDA::mask1",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "maskSum",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::SURF_CUDA::maskSum",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "maxPosBuffer",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::SURF_CUDA::maxPosBuffer",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "nOctaveLayers",
+    "local": ""
+  },
+  {
+    "origin": "int cv::cuda::SURF_CUDA::nOctaveLayers",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "nOctaves",
+    "local": ""
+  },
+  {
+    "origin": "int cv::cuda::SURF_CUDA::nOctaves",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "sum",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::SURF_CUDA::sum",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "trace",
+    "local": ""
+  },
+  {
+    "origin": "cv::cuda::SURF_CUDA::trace",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "upright",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::cuda::SURF_CUDA::upright",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/xfeatures2d/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:44 for OpenCV by",
+    "local": ""
+  }
+]

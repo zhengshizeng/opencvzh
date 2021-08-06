@@ -1,0 +1,286 @@
+[
+  {
+    "origin": "OpenCV: Image Thresholding",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Image Thresholding",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial, you will learn simple thresholding, adaptive thresholding and Otsu's thresholding.",
+    "local": ""
+  },
+  {
+    "origin": "You will learn the functions",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Simple Thresholding",
+    "local": ""
+  },
+  {
+    "origin": "Here, the matter is straight-forward. For every pixel, the same threshold value is applied. If the pixel value is smaller than the threshold, it is set to 0, otherwise it is set to a maximum value. The function",
+    "local": ""
+  },
+  {
+    "origin": "is used to apply the thresholding. The first argument is the source image, which",
+    "local": ""
+  },
+  {
+    "origin": "should be a grayscale image",
+    "local": ""
+  },
+  {
+    "origin": ". The second argument is the threshold value which is used to classify the pixel values. The third argument is the maximum value which is assigned to pixel values exceeding the threshold. OpenCV provides different types of thresholding which is given by the fourth parameter of the function. Basic thresholding as described above is done by using the type",
+    "local": ""
+  },
+  {
+    "origin": ". All simple thresholding types are:",
+    "local": ""
+  },
+  {
+    "origin": "See the documentation of the types for the differences.",
+    "local": ""
+  },
+  {
+    "origin": "The method returns two outputs. The first is the threshold that was used and the second output is the",
+    "local": ""
+  },
+  {
+    "origin": "thresholded image",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "This code compares the different simple thresholding types:",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "To plot multiple images, we have used the plt.subplot() function. Please checkout the matplotlib docs for more details.",
+    "local": ""
+  },
+  {
+    "origin": "The code yields this result:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Adaptive Thresholding",
+    "local": ""
+  },
+  {
+    "origin": "In the previous section, we used one global value as a threshold. But this might not be good in all cases, e.g. if an image has different lighting conditions in different areas. In that case, adaptive thresholding can help. Here, the algorithm determines the threshold for a pixel based on a small region around it. So we get different thresholds for different regions of the same image which gives better results for images with varying illumination.",
+    "local": ""
+  },
+  {
+    "origin": "In addition to the parameters described above, the method",
+    "local": ""
+  },
+  {
+    "origin": "takes three input parameters:",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "adaptiveMethod",
+    "local": ""
+  },
+  {
+    "origin": "decides how the threshold value is calculated:",
+    "local": ""
+  },
+  {
+    "origin": ": The threshold value is the mean of the neighbourhood area minus the constant",
+    "local": ""
+  },
+  {
+    "origin": "C",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": ": The threshold value is a gaussian-weighted sum of the neighbourhood values minus the constant",
+    "local": ""
+  },
+  {
+    "origin": "C",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": "determines the size of the neighbourhood area and",
+    "local": ""
+  },
+  {
+    "origin": "C",
+    "local": ""
+  },
+  {
+    "origin": "is a constant that is subtracted from the mean or weighted sum of the neighbourhood pixels.",
+    "local": ""
+  },
+  {
+    "origin": "The code below compares global thresholding and adaptive thresholding for an image with varying illumination:",
+    "local": ""
+  },
+  {
+    "origin": "Result:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Otsu's Binarization",
+    "local": ""
+  },
+  {
+    "origin": "In global thresholding, we used an arbitrary chosen value as a threshold. In contrast, Otsu's method avoids having to choose a value and determines it automatically.",
+    "local": ""
+  },
+  {
+    "origin": "Consider an image with only two distinct image values (",
+    "local": ""
+  },
+  {
+    "origin": "bimodal image",
+    "local": ""
+  },
+  {
+    "origin": "), where the histogram would only consist of two peaks. A good threshold would be in the middle of those two values. Similarly, Otsu's method determines an optimal global threshold value from the image histogram.",
+    "local": ""
+  },
+  {
+    "origin": "In order to do so, the",
+    "local": ""
+  },
+  {
+    "origin": "function is used, where",
+    "local": ""
+  },
+  {
+    "origin": "is passed as an extra flag. The threshold value can be chosen arbitrary. The algorithm then finds the optimal threshold value which is returned as the first output.",
+    "local": ""
+  },
+  {
+    "origin": "Check out the example below. The input image is a noisy image. In the first case, global thresholding with a value of 127 is applied. In the second case, Otsu's thresholding is applied directly. In the third case, the image is first filtered with a 5x5 gaussian kernel to remove the noise, then Otsu thresholding is applied. See how noise filtering improves the result.",
+    "local": ""
+  },
+  {
+    "origin": "Result:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "How does Otsu's Binarization work?",
+    "local": ""
+  },
+  {
+    "origin": "This section demonstrates a Python implementation of Otsu's binarization to show how it actually works. If you are not interested, you can skip this.",
+    "local": ""
+  },
+  {
+    "origin": "Since we are working with bimodal images, Otsu's algorithm tries to find a threshold value (t) which minimizes the",
+    "local": ""
+  },
+  {
+    "origin": "weighted within-class variance",
+    "local": ""
+  },
+  {
+    "origin": "given by the relation:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma_w^2(t) = q_1(t)\\sigma_1^2(t)+q_2(t)\\sigma_2^2(t)\\]",
+    "local": ""
+  },
+  {
+    "origin": "where",
+    "local": ""
+  },
+  {
+    "origin": "\\[q_1(t) = \\sum_{i=1}^{t} P(i) \\quad \\&amp; \\quad q_2(t) = \\sum_{i=t+1}^{I} P(i)\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\mu_1(t) = \\sum_{i=1}^{t} \\frac{iP(i)}{q_1(t)} \\quad \\&amp; \\quad \\mu_2(t) = \\sum_{i=t+1}^{I} \\frac{iP(i)}{q_2(t)}\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma_1^2(t) = \\sum_{i=1}^{t} [i-\\mu_1(t)]^2 \\frac{P(i)}{q_1(t)} \\quad \\&amp; \\quad \\sigma_2^2(t) = \\sum_{i=t+1}^{I} [i-\\mu_2(t)]^2 \\frac{P(i)}{q_2(t)}\\]",
+    "local": ""
+  },
+  {
+    "origin": "It actually finds a value of t which lies in between two peaks such that variances to both classes are minimal. It can be simply implemented in Python as follows:",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Digital Image Processing, Rafael C. Gonzalez",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "There are some optimizations available for Otsu's binarization. You can search and implement it.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

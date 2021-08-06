@@ -1,0 +1,390 @@
+[
+  {
+    "origin": "OpenCV: Conversion of PyTorch Segmentation Models and Launch with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Conversion of PyTorch Segmentation Models and Launch with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "convert PyTorch segmentation models",
+    "local": ""
+  },
+  {
+    "origin": "run converted PyTorch model with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "obtain an evaluation of the PyTorch and OpenCV DNN models",
+    "local": ""
+  },
+  {
+    "origin": "We will explore the above-listed points by the example of the FCN ResNet-50 architecture.",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "The key points involved in the transition pipeline of the",
+    "local": ""
+  },
+  {
+    "origin": "PyTorch classification",
+    "local": ""
+  },
+  {
+    "origin": "and segmentation models with OpenCV API are equal. The first step is model transferring into",
+    "local": ""
+  },
+  {
+    "origin": "ONNX",
+    "local": ""
+  },
+  {
+    "origin": "format with PyTorch",
+    "local": ""
+  },
+  {
+    "origin": "built-in function. Further the obtained",
+    "local": ""
+  },
+  {
+    "origin": "model is passed into",
+    "local": ""
+  },
+  {
+    "origin": ", which returns",
+    "local": ""
+  },
+  {
+    "origin": "object ready for DNN manipulations.",
+    "local": ""
+  },
+  {
+    "origin": "Practice",
+    "local": ""
+  },
+  {
+    "origin": "In this part we are going to cover the following points:",
+    "local": ""
+  },
+  {
+    "origin": "create a segmentation model conversion pipeline and provide the inference",
+    "local": ""
+  },
+  {
+    "origin": "evaluate and test segmentation models",
+    "local": ""
+  },
+  {
+    "origin": "If you'd like merely to run evaluation or test model pipelines, the \"Model Conversion Pipeline\" part can be skipped.",
+    "local": ""
+  },
+  {
+    "origin": "Model Conversion Pipeline",
+    "local": ""
+  },
+  {
+    "origin": "The code in this subchapter is located in the",
+    "local": ""
+  },
+  {
+    "origin": "module and can be executed with the line:",
+    "local": ""
+  },
+  {
+    "origin": "`` python -m dnn_model_runner.dnn_conversion.pytorch.segmentation.py_to_py_fcnresnet50 ``",
+    "local": ""
+  },
+  {
+    "origin": "The following code contains the description of the below-listed steps:",
+    "local": ""
+  },
+  {
+    "origin": "instantiate PyTorch model",
+    "local": ""
+  },
+  {
+    "origin": "convert PyTorch model into",
+    "local": ""
+  },
+  {
+    "origin": "read the transferred network with OpenCV API",
+    "local": ""
+  },
+  {
+    "origin": "prepare input data",
+    "local": ""
+  },
+  {
+    "origin": "provide inference",
+    "local": ""
+  },
+  {
+    "origin": "get colored masks from predictions",
+    "local": ""
+  },
+  {
+    "origin": "visualize results",
+    "local": ""
+  },
+  {
+    "origin": "To provide the model inference we will use the below picture from the",
+    "local": ""
+  },
+  {
+    "origin": "PASCAL VOC",
+    "local": ""
+  },
+  {
+    "origin": "validation dataset:",
+    "local": ""
+  },
+  {
+    "origin": "The target segmented result is:",
+    "local": ""
+  },
+  {
+    "origin": "For the PASCAL VOC colors decoding and its mapping with the predicted masks, we also need",
+    "local": ""
+  },
+  {
+    "origin": "file, which contains the full list of the PASCAL VOC classes and corresponding colors.",
+    "local": ""
+  },
+  {
+    "origin": "Let's go deeper into each code step by the example of pretrained PyTorch FCN ResNet-50:",
+    "local": ""
+  },
+  {
+    "origin": "instantiate PyTorch FCN ResNet-50 model:",
+    "local": ""
+  },
+  {
+    "origin": "convert PyTorch model into ONNX format:",
+    "local": ""
+  },
+  {
+    "origin": "The code from this step does not differ from the classification conversion case. Thus, after the successful execution of the above code, we will get",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "read the transferred network with",
+    "local": ""
+  },
+  {
+    "origin": "passing the obtained in the previous step ONNX model into it:",
+    "local": ""
+  },
+  {
+    "origin": "prepare input data:",
+    "local": ""
+  },
+  {
+    "origin": "In this step we read the image and prepare model input with cv2.dnn.blobFromImage function, which returns 4-dimensional blob. It should be noted that firstly in",
+    "local": ""
+  },
+  {
+    "origin": "mean value is subtracted and only then pixel values are scaled. Thus,",
+    "local": ""
+  },
+  {
+    "origin": "is multiplied by",
+    "local": ""
+  },
+  {
+    "origin": "to reproduce the original image preprocessing order:",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "inference:",
+    "local": ""
+  },
+  {
+    "origin": "After the above code execution we will get the following output:",
+    "local": ""
+  },
+  {
+    "origin": "Each prediction channel out of 21, where 21 represents the number of PASCAL VOC classes, contains probabilities, which indicate how likely the pixel corresponds to the PASCAL VOC class.",
+    "local": ""
+  },
+  {
+    "origin": "PyTorch FCN ResNet-50 model inference:",
+    "local": ""
+  },
+  {
+    "origin": "After the above code launching we will get the following output:",
+    "local": ""
+  },
+  {
+    "origin": "PyTorch prediction also contains probabilities corresponding to each class prediction.",
+    "local": ""
+  },
+  {
+    "origin": "get colored masks from predictions:",
+    "local": ""
+  },
+  {
+    "origin": "In this step we map the probabilities from segmentation masks with appropriate colors of the predicted classes. Let's have a look at the results:",
+    "local": ""
+  },
+  {
+    "origin": "For the extended evaluation of the models, we can use",
+    "local": ""
+  },
+  {
+    "origin": "script of the",
+    "local": ""
+  },
+  {
+    "origin": "module. This module part will be described in the next subchapter.",
+    "local": ""
+  },
+  {
+    "origin": "Evaluation of the Models",
+    "local": ""
+  },
+  {
+    "origin": "The proposed in",
+    "local": ""
+  },
+  {
+    "origin": "module allows to run the full evaluation pipeline on the PASCAL VOC dataset and test execution for the following PyTorch segmentation models:",
+    "local": ""
+  },
+  {
+    "origin": "This list can be also extended with further appropriate evaluation pipeline configuration.",
+    "local": ""
+  },
+  {
+    "origin": "Evaluation Mode",
+    "local": ""
+  },
+  {
+    "origin": "The below line represents running of the module in the evaluation mode:",
+    "local": ""
+  },
+  {
+    "origin": "Chosen from the list segmentation model will be read into OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "object. Evaluation results of PyTorch and OpenCV models (pixel accuracy, mean IoU, inference time) will be written into the log file. Inference time values will be also depicted in a chart to generalize the obtained model information.",
+    "local": ""
+  },
+  {
+    "origin": "Necessary evaluation configurations are defined in the",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "These values can be modified in accordance with chosen model pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "To initiate the evaluation of the PyTorch FCN ResNet-50, run the following line:",
+    "local": ""
+  },
+  {
+    "origin": "Test Mode",
+    "local": ""
+  },
+  {
+    "origin": "The below line represents running of the module in the test mode, which provides the steps for the model inference:",
+    "local": ""
+  },
+  {
+    "origin": "Here",
+    "local": ""
+  },
+  {
+    "origin": "key defines whether you'd like to parametrize the model test process with some particular values or use the default values, for example,",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Test configuration is represented in",
+    "local": ""
+  },
+  {
+    "origin": "class:",
+    "local": ""
+  },
+  {
+    "origin": "The default image preprocessing options are defined in",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "The basis of the model testing is represented in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "can be executed autonomously with provided converted model in",
+    "local": ""
+  },
+  {
+    "origin": "and populated parameters for",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "To reproduce from scratch the described in \"Model Conversion Pipeline\" OpenCV steps with",
+    "local": ""
+  },
+  {
+    "origin": "execute the below line:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

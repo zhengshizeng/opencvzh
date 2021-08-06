@@ -1,0 +1,302 @@
+[
+  {
+    "origin": "OpenCV: Inpainting",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Inpainting",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "inpaintMask,",
+    "local": ""
+  },
+  {
+    "origin": "dst, double inpaintRadius, int flags)",
+    "local": ""
+  },
+  {
+    "origin": "Restores the selected region in an image using the region neighborhood.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "the inpainting algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Enumeration Type Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "INPAINT_NS",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.INPAINT_NS",
+    "local": ""
+  },
+  {
+    "origin": "Use Navier-Stokes based method.",
+    "local": ""
+  },
+  {
+    "origin": "INPAINT_TELEA",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.INPAINT_TELEA",
+    "local": ""
+  },
+  {
+    "origin": "Use the algorithm proposed by Alexandru Telea",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "inpaint()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::inpaint",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "inpaintMask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "inpaintRadius",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.inpaint(",
+    "local": ""
+  },
+  {
+    "origin": "src, inpaintMask, inpaintRadius, flags[, dst]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Restores the selected region in an image using the region neighborhood.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Input 8-bit, 16-bit unsigned or 32-bit float 1-channel or 8-bit 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "inpaintMask",
+    "local": ""
+  },
+  {
+    "origin": "Inpainting mask, 8-bit 1-channel image. Non-zero pixels indicate the area that needs to be inpainted.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Output image with the same size and type as src .",
+    "local": ""
+  },
+  {
+    "origin": "inpaintRadius",
+    "local": ""
+  },
+  {
+    "origin": "Radius of a circular neighborhood of each point inpainted that is considered by the algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "Inpainting method that could be",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "The function reconstructs the selected image area from the pixel near the area boundary. The function may be used to remove dust and scratches from a scanned photo, or to remove undesirable objects from still images or video. See",
+    "local": ""
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Inpainting",
+    "local": ""
+  },
+  {
+    "origin": "for more details.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "An example using the inpainting technique can be found at opencv_source_code/samples/cpp/inpaint.cpp",
+    "local": ""
+  },
+  {
+    "origin": "(Python) An example using the inpainting technique can be found at opencv_source_code/samples/python/inpaint.py",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

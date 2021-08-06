@@ -1,0 +1,298 @@
+[
+  {
+    "origin": "OpenCV: opencv2/gapi/video.hpp File Reference",
+    "local": "OpenCV:opencv2/gapi/video.hpp文件参考"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "Typedefs",
+    "local": "类型定义"
+  },
+  {
+    "origin": "Enumerations",
+    "local": "枚举"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "video.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Structure for the Background Subtractor operation's initialization parameters.",
+    "local": "背景减法器操作的初始化参数的结构。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Structure for the Kalman filter's initialization parameters.",
+    "local": "卡尔曼滤波器初始化参数的结构。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": "类型定义"
+  },
+  {
+    "origin": "= std::tuple&lt; GArray&lt; GMat &gt;, GScalar &gt;",
+    "local": "=标准：：元组&lt；加里&lt；GMat&gt；，GScalar&gt；"
+  },
+  {
+    "origin": "= std::tuple&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;,",
+    "local": ""
+  },
+  {
+    "origin": "&lt; float &gt; &gt;",
+    "local": "&lt；浮动&gt；&gt；燃气轮机；"
+  },
+  {
+    "origin": "Enumerations",
+    "local": "枚举"
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": "}"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "(const GMat &amp;src, const",
+    "local": "（const gmat&amp；SRC，const"
+  },
+  {
+    "origin": "&amp;bsParams)",
+    "local": ""
+  },
+  {
+    "origin": "Gaussian Mixture-based or K-nearest neighbours-based Background/Foreground Segmentation",
+    "local": ""
+  },
+  {
+    "origin": ". The operation generates a foreground mask.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;img, const Size &amp;winSize, const GScalar &amp;maxLevel, bool withDerivatives=true, int pyrBorder=BORDER_REFLECT_101, int derivBorder=BORDER_CONSTANT, bool tryReuseInputImage=true)",
+    "local": ""
+  },
+  {
+    "origin": "Constructs the image pyramid which can be passed to calcOpticalFlowPyrLK.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "std::tuple&lt; GArray&lt; Point2f &gt;, GArray&lt;",
+    "local": "标准：：元组&lt；加里&lt；点2f&gt；，加里&lt；"
+  },
+  {
+    "origin": "(const GMat &amp;prevImg, const GMat &amp;nextImg, const GArray&lt; Point2f &gt; &amp;prevPts, const GArray&lt; Point2f &gt; &amp;predPts, const Size &amp;winSize=Size(21, 21), const GScalar &amp;maxLevel=3, const TermCriteria &amp;criteria=TermCriteria(TermCriteria::COUNT|TermCriteria::EPS, 30, 0.01), int flags=0, double minEigThresh=1e-4)",
+    "local": "（const GMat&amp；prevImg、const GMat和；下一个，康斯特加里&lt；点2f&gt&amp；普雷夫茨，康斯特加里&lt；点2f&gt&amp；predPts、const Size和；winSize=Size（21，21），const GScalar&amp；maxLevel=3，const term标准&amp；criteria=TermCriteria（TermCriteria:：COUNT | TermCriteria:：EPS，30，0.01），int flags=0，double minEigThresh=1e-4）"
+  },
+  {
+    "origin": "Calculates an optical flow for a sparse feature set using the iterative Lucas-Kanade method with pyramids.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "std::tuple&lt; GArray&lt; Point2f &gt;, GArray&lt;",
+    "local": "标准：：元组&lt；加里&lt；点2f&gt；，加里&lt；"
+  },
+  {
+    "origin": "(const GArray&lt; GMat &gt; &amp;prevPyr, const GArray&lt; GMat &gt; &amp;nextPyr, const GArray&lt; Point2f &gt; &amp;prevPts, const GArray&lt; Point2f &gt; &amp;predPts, const Size &amp;winSize=Size(21, 21), const GScalar &amp;maxLevel=3, const TermCriteria &amp;criteria=TermCriteria(TermCriteria::COUNT|TermCriteria::EPS, 30, 0.01), int flags=0, double minEigThresh=1e-4)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;kfParams, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;measurement, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;control={})",
+    "local": ""
+  },
+  {
+    "origin": "(GBuildOptFlowPyramid,&lt; GBuildPyrOutput(GMat, Size, GScalar, bool, int, int, bool)&gt;, &quot;org.opencv.video.buildOpticalFlowPyramid&quot;)",
+    "local": "（GBuildOptFlowPyramid，&lt；GBuildPyrOutput（GMat、Size、GScalar、bool、int、int、bool）&gt&&引用；org.opencv.video.buildOpticalFlowPyramid&quot；）"
+  },
+  {
+    "origin": "(GCalcOptFlowLK,&lt; GOptFlowLKOutput(GMat, GMat,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;,",
+    "local": "&gt；，"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;, Size, GScalar, TermCriteria, int, double)&gt;, &quot;org.opencv.video.calcOpticalFlowPyrLK&quot;)",
+    "local": ""
+  },
+  {
+    "origin": "(GCalcOptFlowLKForPyr,&lt; GOptFlowLKOutput(",
+    "local": "（GCalcOptFlowLKForPyr，&lt；GOPTFLOWLK输出("
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;,",
+    "local": "&gt；，"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;,",
+    "local": "&gt；，"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;,",
+    "local": "&gt；，"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;, Size, GScalar, TermCriteria, int, double)&gt;, &quot;org.opencv.video.calcOpticalFlowPyrLKForPyr&quot;)",
+    "local": ""
+  },
+  {
+    "origin": "(GBackgroundSubtractor,&lt; GMat(GMat, BackgroundSubtractorParams)&gt;, &quot;org.opencv.video.BackgroundSubtractor&quot;)",
+    "local": ""
+  },
+  {
+    "origin": "(GKalmanFilter,&lt; GMat(GMat, GOpaque&lt; bool &gt;, GMat, KalmanParams)&gt;, &quot;org.opencv.video.KalmanFilter&quot;)",
+    "local": ""
+  },
+  {
+    "origin": "(const GMat &amp;measurement, const GOpaque&lt; bool &gt; &amp;haveMeasurement, const GMat &amp;control, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;kfParams)",
+    "local": "&amp；（参数）"
+  },
+  {
+    "origin": "Standard Kalman filter algorithm",
+    "local": "标准卡尔曼滤波算法"
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Kalman_filter",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const GMat &amp;measurement, const GOpaque&lt; bool &gt; &amp;haveMeasurement, const",
+    "local": "（const GMat&amp；测量，const GOpaque&lt；布尔&gt&amp；测量，常数"
+  },
+  {
+    "origin": "&amp;kfParams)",
+    "local": "&amp；（参数）"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,1022 @@
+[
+  {
+    "origin": "OpenCV: Math with F0-transform support",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Math with F0-transform support",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "matrix,",
+    "local": ""
+  },
+  {
+    "origin": "kernel,",
+    "local": ""
+  },
+  {
+    "origin": "components,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Computes components of the array using direct \\(F^0\\)-transform.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "matrix, const int radius,",
+    "local": ""
+  },
+  {
+    "origin": "output)",
+    "local": ""
+  },
+  {
+    "origin": "Sligtly less accurate version of \\(F^0\\)-transfrom computation optimized for higher speed. The methods counts with linear basic function.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "matrix, const int radius,",
+    "local": ""
+  },
+  {
+    "origin": "output)",
+    "local": ""
+  },
+  {
+    "origin": "Sligtly less accurate version of \\(F^0\\)-transfrom computation optimized for higher speed. The methods counts with linear basic function.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "components,",
+    "local": ""
+  },
+  {
+    "origin": "kernel,",
+    "local": ""
+  },
+  {
+    "origin": "output, int width, int height)",
+    "local": ""
+  },
+  {
+    "origin": "Computes inverse \\(F^0\\)-transfrom.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "matrix,",
+    "local": ""
+  },
+  {
+    "origin": "kernel,",
+    "local": ""
+  },
+  {
+    "origin": "output,",
+    "local": ""
+  },
+  {
+    "origin": "mask,",
+    "local": ""
+  },
+  {
+    "origin": "maskOutput, bool firstStop)",
+    "local": ""
+  },
+  {
+    "origin": "Computes \\(F^0\\)-transfrom and inverse \\(F^0\\)-transfrom at once and return state.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "matrix,",
+    "local": ""
+  },
+  {
+    "origin": "kernel,",
+    "local": ""
+  },
+  {
+    "origin": "output,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Computes \\(F^0\\)-transfrom and inverse \\(F^0\\)-transfrom at once.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Fuzzy transform ( \\(F^0\\)-transform) of the 0th degree transforms whole image to a matrix of its components. These components are used in latter computation where each of them represents average color of certain subarea.",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "FT02D_components()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ft::FT02D_components",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "components",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "components",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ft.FT02D_components(",
+    "local": ""
+  },
+  {
+    "origin": "matrix, kernel[, components[, mask]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes components of the array using direct \\(F^0\\)-transform.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": "Input array.",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": "Kernel used for processing. Function",
+    "local": ""
+  },
+  {
+    "origin": "can be used.",
+    "local": ""
+  },
+  {
+    "origin": "components",
+    "local": ""
+  },
+  {
+    "origin": "Output 32-bit float array for the components.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Mask can be used for unwanted area marking.",
+    "local": ""
+  },
+  {
+    "origin": "The function computes components using predefined kernel and mask.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "FT02D_FL_process()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ft::FT02D_FL_process",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ft.FT02D_FL_process(",
+    "local": ""
+  },
+  {
+    "origin": "matrix, radius[, output]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Sligtly less accurate version of \\(F^0\\)-transfrom computation optimized for higher speed. The methods counts with linear basic function.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": "Input 3 channels matrix.",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": "Radius of the",
+    "local": ""
+  },
+  {
+    "origin": "basic function.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "Output array.",
+    "local": ""
+  },
+  {
+    "origin": "This function computes F-transfrom and inverse F-transfotm using linear basic function in one step. It is ~10 times faster than",
+    "local": ""
+  },
+  {
+    "origin": "method.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "FT02D_FL_process_float()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ft::FT02D_FL_process_float",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ft.FT02D_FL_process_float(",
+    "local": ""
+  },
+  {
+    "origin": "matrix, radius[, output]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Sligtly less accurate version of \\(F^0\\)-transfrom computation optimized for higher speed. The methods counts with linear basic function.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": "Input 3 channels matrix.",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": "Radius of the",
+    "local": ""
+  },
+  {
+    "origin": "basic function.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "Output array.",
+    "local": ""
+  },
+  {
+    "origin": "This function computes F-transfrom and inverse F-transfotm using linear basic function in one step. It is ~9 times faster then",
+    "local": ""
+  },
+  {
+    "origin": "method and more accurate than",
+    "local": ""
+  },
+  {
+    "origin": "method.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "FT02D_inverseFT()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ft::FT02D_inverseFT",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "components",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "width",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "height",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ft.FT02D_inverseFT(",
+    "local": ""
+  },
+  {
+    "origin": "components, kernel, width, height[, output]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes inverse \\(F^0\\)-transfrom.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "components",
+    "local": ""
+  },
+  {
+    "origin": "Input 32-bit float single channel array for the components.",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": "Kernel used for processing. Function",
+    "local": ""
+  },
+  {
+    "origin": "can be used.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "Output 32-bit float array.",
+    "local": ""
+  },
+  {
+    "origin": "width",
+    "local": ""
+  },
+  {
+    "origin": "Width of the output array.",
+    "local": ""
+  },
+  {
+    "origin": "height",
+    "local": ""
+  },
+  {
+    "origin": "Height of the output array.",
+    "local": ""
+  },
+  {
+    "origin": "Computation of inverse F-transform.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "FT02D_iteration()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::ft::FT02D_iteration",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "maskOutput",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "firstStop",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, output, maskOutput",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ft.FT02D_iteration(",
+    "local": ""
+  },
+  {
+    "origin": "matrix, kernel, mask, firstStop[, output[, maskOutput]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes \\(F^0\\)-transfrom and inverse \\(F^0\\)-transfrom at once and return state.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": "Input matrix.",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": "Kernel used for processing. Function",
+    "local": ""
+  },
+  {
+    "origin": "can be used.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "Output 32-bit float array.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Mask used for unwanted area marking.",
+    "local": ""
+  },
+  {
+    "origin": "maskOutput",
+    "local": ""
+  },
+  {
+    "origin": "Mask after one iteration.",
+    "local": ""
+  },
+  {
+    "origin": "firstStop",
+    "local": ""
+  },
+  {
+    "origin": "If",
+    "local": ""
+  },
+  {
+    "origin": "true",
+    "local": ""
+  },
+  {
+    "origin": "function returns -1 when first problem appears. In case of",
+    "local": ""
+  },
+  {
+    "origin": "the process is completed and summation of all problems returned.",
+    "local": ""
+  },
+  {
+    "origin": "This function computes iteration of F-transfrom and inverse F-transfotm and handle image and mask change. The function is used in",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "FT02D_process()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ft::FT02D_process",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ft.FT02D_process(",
+    "local": ""
+  },
+  {
+    "origin": "matrix, kernel[, output[, mask]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes \\(F^0\\)-transfrom and inverse \\(F^0\\)-transfrom at once.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": "Input matrix.",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": "Kernel used for processing. Function",
+    "local": ""
+  },
+  {
+    "origin": "can be used.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "Output 32-bit float array.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "Mask used for unwanted area marking.",
+    "local": ""
+  },
+  {
+    "origin": "This function computes F-transfrom and inverse F-transfotm in one step. It is fully sufficient and optimized for",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

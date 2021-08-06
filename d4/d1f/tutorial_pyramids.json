@@ -1,0 +1,502 @@
+[
+  {
+    "origin": "OpenCV: Image Pyramids",
+    "local": "OpenCV:图像棱锥体"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Image Pyramids",
+    "local": "影像金字塔"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "安娜·华曼"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "Use the OpenCV functions",
+    "local": "使用OpenCV函数"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "to downsample or upsample a given image.",
+    "local": "对给定的图像进行下采样或上采样。"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "The explanation below belongs to the book",
+    "local": "下面的解释属于这本书"
+  },
+  {
+    "origin": "Learning OpenCV",
+    "local": "学习OpenCV"
+  },
+  {
+    "origin": "by Bradski and Kaehler.",
+    "local": "布拉德斯基和凯勒。"
+  },
+  {
+    "origin": "Usually we need to convert an image to a size different than its original. For this, there are two possible options:",
+    "local": "通常我们需要将图像转换成不同于原始图像的大小。为此，有两种可能的选择："
+  },
+  {
+    "origin": "Upsize",
+    "local": "升迁"
+  },
+  {
+    "origin": "the image (zoom in) or",
+    "local": "图像（放大）或"
+  },
+  {
+    "origin": "Downsize",
+    "local": "缩小规模"
+  },
+  {
+    "origin": "it (zoom out).",
+    "local": "它（缩小）。"
+  },
+  {
+    "origin": "Although there is a",
+    "local": "虽然有一个"
+  },
+  {
+    "origin": "geometric transformation",
+    "local": "几何变换"
+  },
+  {
+    "origin": "function in OpenCV that -literally- resize an image (",
+    "local": "OpenCV中的函数，它可以按字面意思调整图像大小("
+  },
+  {
+    "origin": "resize",
+    "local": "调整大小"
+  },
+  {
+    "origin": ", which we will show in a future tutorial), in this section we analyze first the use of",
+    "local": "，我们将在以后的教程中展示），在本节中，我们首先分析"
+  },
+  {
+    "origin": "Image Pyramids",
+    "local": "影像金字塔"
+  },
+  {
+    "origin": ", which are widely applied in a huge range of vision applications.",
+    "local": "在视觉领域有着广泛的应用。"
+  },
+  {
+    "origin": "Image Pyramid",
+    "local": "图像金字塔"
+  },
+  {
+    "origin": "An image pyramid is a collection of images - all arising from a single original image - that are successively downsampled until some desired stopping point is reached.",
+    "local": "图像金字塔是一组图像的集合，所有的图像都来自于一个原始图像，这些图像依次被下采样，直到达到某个期望的停止点。"
+  },
+  {
+    "origin": "There are two common kinds of image pyramids:",
+    "local": "有两种常见的图像金字塔："
+  },
+  {
+    "origin": "Gaussian pyramid:",
+    "local": "高斯金字塔："
+  },
+  {
+    "origin": "Used to downsample images",
+    "local": "用于下载示例图像"
+  },
+  {
+    "origin": "Laplacian pyramid:",
+    "local": "拉普拉斯金字塔："
+  },
+  {
+    "origin": "Used to reconstruct an upsampled image from an image lower in the pyramid (with less resolution)",
+    "local": "用于从金字塔中较低的图像重建上采样图像（分辨率较低）"
+  },
+  {
+    "origin": "In this tutorial we'll use the",
+    "local": "在本教程中，我们将使用"
+  },
+  {
+    "origin": "Gaussian pyramid",
+    "local": "高斯金字塔"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Gaussian Pyramid",
+    "local": "高斯金字塔"
+  },
+  {
+    "origin": "Imagine the pyramid as a set of layers in which the higher the layer, the smaller the size.",
+    "local": "把金字塔想象成一组层，层越高，尺寸越小。"
+  },
+  {
+    "origin": "Every layer is numbered from bottom to top, so layer \\((i+1)\\) (denoted as \\(G_{i+1}\\) is smaller than layer \\(i\\) ( \\(G_{i}\\)).",
+    "local": "每一层都从下到上编号，所以层\\（（i+1）\\）（表示为\\（G{i+1}\\）比层\\（i）\\）（\\（G{i}\\）小。"
+  },
+  {
+    "origin": "To produce layer \\((i+1)\\) in the Gaussian pyramid, we do the following:",
+    "local": "要在高斯金字塔中生成层\\（（i+1）\\），我们执行以下操作："
+  },
+  {
+    "origin": "Convolve \\(G_{i}\\) with a Gaussian kernel:",
+    "local": "用高斯核卷积\\（G{i}\\）："
+  },
+  {
+    "origin": "\\[\\frac{1}{16} \\begin{bmatrix} 1 &amp; 4 &amp; 6 &amp; 4 &amp; 1 \\\\ 4 &amp; 16 &amp; 24 &amp; 16 &amp; 4 \\\\ 6 &amp; 24 &amp; 36 &amp; 24 &amp; 6 \\\\ 4 &amp; 16 &amp; 24 &amp; 16 &amp; 4 \\\\ 1 &amp; 4 &amp; 6 &amp; 4 &amp; 1 \\end{bmatrix}\\]",
+    "local": "\\\\frac{1}{16}\\开始{bmatrix}1&amp；4&amp；6和；4&amp；1\\\\\\ 4和；16&amp；24小时；16&amp；4\\\\\\6和；24小时；36&amp；24小时；6\\\\\\4和；16&amp；24小时；16&amp；4\\\\\\1和；4&amp；6和；4&amp；1\\end{bmatrix}]"
+  },
+  {
+    "origin": "Remove every even-numbered row and column.",
+    "local": "删除每个偶数行和列。"
+  },
+  {
+    "origin": "You can easily notice that the resulting image will be exactly one-quarter the area of its predecessor. Iterating this process on the input image \\(G_{0}\\) (original image) produces the entire pyramid.",
+    "local": "您可以很容易地注意到，生成的图像的面积正好是其前身的四分之一。在输入图像\\（G{0}\\）（原始图像）上迭代这个过程会生成整个金字塔。"
+  },
+  {
+    "origin": "The procedure above was useful to downsample an image. What if we want to make it bigger?: columns filled with zeros ( \\(0 \\))",
+    "local": "上面的过程对减少图像采样很有用。如果我们想把它变大怎么办？：用零（\\（0\\）填充的列）"
+  },
+  {
+    "origin": "First, upsize the image to twice the original in each dimension, with the new even rows and",
+    "local": "首先，在每个维度将图像升迁到原始图像的两倍，使用新的偶数行和"
+  },
+  {
+    "origin": "Perform a convolution with the same kernel shown above (multiplied by 4) to approximate the values of the \"missing pixels\"",
+    "local": "使用上面显示的相同内核执行卷积（乘以4）以近似“缺失像素”的值"
+  },
+  {
+    "origin": "These two procedures (downsampling and upsampling as explained above) are implemented by the OpenCV functions",
+    "local": "这两个过程（如上所述的下采样和上采样）由OpenCV函数实现"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ", as we will see in an example with the code below:",
+    "local": "，我们将在下面的代码示例中看到："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "When we reduce the size of an image, we are actually",
+    "local": "当我们缩小图像的尺寸时，我们实际上"
+  },
+  {
+    "origin": "losing",
+    "local": "失败的"
+  },
+  {
+    "origin": "information of the image.",
+    "local": "图像的信息。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "This tutorial code's is shown lines below.",
+    "local": "本教程代码如下所示。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "You can also download it from",
+    "local": "你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "You can also download it from",
+    "local": "你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "You can also download it from",
+    "local": "你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Let's check the general structure of the program:",
+    "local": "让我们检查一下程序的总体结构："
+  },
+  {
+    "origin": "Load an image",
+    "local": "加载图像"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Create window",
+    "local": "创建窗口"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Loop",
+    "local": "回路"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Perform an infinite loop waiting for user input. Our program exits if the user presses",
+    "local": "执行无限循环等待用户输入。如果用户按下，我们的程序就会退出"
+  },
+  {
+    "origin": "ESC",
+    "local": "电子稳定控制系统"
+  },
+  {
+    "origin": ". Besides, it has two options:",
+    "local": ". 此外，它还有两种选择："
+  },
+  {
+    "origin": "Perform upsampling - Zoom 'i'n (after pressing 'i')",
+    "local": "执行上采样-缩放“i'n”（按“i”后）"
+  },
+  {
+    "origin": "We use the function",
+    "local": "我们使用函数"
+  },
+  {
+    "origin": "with three arguments:",
+    "local": "有三个参数："
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ": The current and destination image (to be shown on screen, supposedly the double of the input image)",
+    "local": "：当前和目标图像（显示在屏幕上，假设是输入图像的两倍）"
+  },
+  {
+    "origin": "Size( tmp.cols*2, tmp.rows*2 )",
+    "local": "大小（tmp.cols*2，tmp.rows*2）"
+  },
+  {
+    "origin": ": The destination size. Since we are upsampling,",
+    "local": "：目标大小。既然我们在上采样，"
+  },
+  {
+    "origin": "expects a size double than the input image (in this case",
+    "local": "期望大小是输入图像的两倍（在本例中"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Perform downsampling - Zoom 'o'ut (after pressing 'o')",
+    "local": "执行下采样-缩放“o”ut（按“o”后）"
+  },
+  {
+    "origin": "We use the function",
+    "local": "我们使用函数"
+  },
+  {
+    "origin": "with three arguments (similarly to",
+    "local": "有三个参数（类似于"
+  },
+  {
+    "origin": "):",
+    "local": "):"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ": The current and destination image (to be shown on screen, supposedly half the input image)",
+    "local": "：当前和目标图像（显示在屏幕上，假设为输入图像的一半）"
+  },
+  {
+    "origin": "Size( tmp.cols/2, tmp.rows/2 )",
+    "local": "大小（tmp.cols/2，tmp.rows/2）"
+  },
+  {
+    "origin": ": The destination size. Since we are downsampling,",
+    "local": "：目标大小。因为我们正在进行下采样，"
+  },
+  {
+    "origin": "expects half the size the input image (in this case",
+    "local": "需要输入图像的一半大小（在本例中"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Notice that it is important that the input image can be divided by a factor of two (in both dimensions). Otherwise, an error will be shown.",
+    "local": "请注意，输入图像可以除以2的因子（在两个维度中），这一点很重要。否则，将显示错误。"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "The program calls by default an image",
+    "local": "程序默认调用图像"
+  },
+  {
+    "origin": "chicky_512.png",
+    "local": "小鸡512.png"
+  },
+  {
+    "origin": "that comes in the",
+    "local": "那是在"
+  },
+  {
+    "origin": "folder. Notice that this image is \\(512 \\times 512\\), hence a downsample won't generate any error ( \\(512 = 2^{9}\\)). The original image is shown below:",
+    "local": "文件夹。请注意，此图像是\\（512乘以512\\），因此下采样不会产生任何错误（\\（512=2^{9}\\）。原图如下："
+  },
+  {
+    "origin": "First we apply two successive",
+    "local": "首先我们应用两个连续的"
+  },
+  {
+    "origin": "operations by pressing 'd'. Our output is:",
+    "local": "按“d”进行操作。我们的产出是："
+  },
+  {
+    "origin": "Note that we should have lost some resolution due to the fact that we are diminishing the size of the image. This is evident after we apply",
+    "local": "注意，我们应该已经失去了一些分辨率，因为我们正在缩小图像的大小。这在我们申请之后就很明显了"
+  },
+  {
+    "origin": "twice (by pressing 'u'). Our output is now:",
+    "local": "两次（按“u”）。我们现在的产出是："
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:36为OpenCV生成，&#160；"
+  }
+]

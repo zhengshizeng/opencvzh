@@ -1,0 +1,454 @@
+[
+  {
+    "origin": "OpenCV: File Input and Output using XML and YAML files",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "File Input and Output using XML and YAML files",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Bernát Gábor",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "You'll find answers for the following questions:",
+    "local": ""
+  },
+  {
+    "origin": "How to print and read text entries to a file and OpenCV using YAML or XML files?",
+    "local": ""
+  },
+  {
+    "origin": "How to do the same for OpenCV data structures?",
+    "local": ""
+  },
+  {
+    "origin": "How to do this for your data structures?",
+    "local": ""
+  },
+  {
+    "origin": "Usage of OpenCV data structures such as",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Source code",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "You can",
+    "local": ""
+  },
+  {
+    "origin": "download this from here",
+    "local": ""
+  },
+  {
+    "origin": "or find it in the",
+    "local": ""
+  },
+  {
+    "origin": "of the OpenCV source code library.",
+    "local": ""
+  },
+  {
+    "origin": "Here's a sample code of how to achieve all the stuff enumerated at the goal list.",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "You can",
+    "local": ""
+  },
+  {
+    "origin": "download this from here",
+    "local": ""
+  },
+  {
+    "origin": "or find it in the",
+    "local": ""
+  },
+  {
+    "origin": "of the OpenCV source code library.",
+    "local": ""
+  },
+  {
+    "origin": "Here's a sample code of how to achieve all the stuff enumerated at the goal list.",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Here we talk only about XML and YAML file inputs. Your output (and its respective input) file may have only one of these extensions and the structure coming from this. They are two kinds of data structures you may serialize:",
+    "local": ""
+  },
+  {
+    "origin": "mappings",
+    "local": ""
+  },
+  {
+    "origin": "(like the STL map and the Python dictionary) and",
+    "local": ""
+  },
+  {
+    "origin": "element sequence",
+    "local": ""
+  },
+  {
+    "origin": "(like the STL vector). The difference between these is that in a map every element has a unique name through what you may access it. For sequences you need to go through them to query a specific item.",
+    "local": ""
+  },
+  {
+    "origin": "XML/YAML File Open and Close.",
+    "local": ""
+  },
+  {
+    "origin": "Before you write any content to such file you need to open it and at the end to close it. The XML/YAML data structure in OpenCV is",
+    "local": ""
+  },
+  {
+    "origin": ". To specify that this structure to which file binds on your hard drive you can use either its constructor or the",
+    "local": ""
+  },
+  {
+    "origin": "function of this:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Either one of this you use the second argument is a constant specifying the type of operations you'll be able to on them: WRITE, READ or APPEND. The extension specified in the file name also determinates the output format that will be used. The output may be even compressed if you specify an extension such as *.xml.gz*.",
+    "local": ""
+  },
+  {
+    "origin": "The file automatically closes when the",
+    "local": ""
+  },
+  {
+    "origin": "objects is destroyed. However, you may explicitly call for this by using the",
+    "local": ""
+  },
+  {
+    "origin": "release",
+    "local": ""
+  },
+  {
+    "origin": "function:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Input and Output of text and numbers.",
+    "local": ""
+  },
+  {
+    "origin": "In C++, the data structure uses the &lt;&lt; output operator in the STL library. In Python,",
+    "local": ""
+  },
+  {
+    "origin": "is used instead. For outputting any type of data structure we need first to specify its name. We do this by just simply pushing the name of this to the stream in C++. In Python, the first parameter for the write function is the name. For basic types you may follow this with the print of the value :",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Reading in is a simple addressing (via the [] operator) and casting operation or a read via the &gt;&gt; operator. In Python, we address with getNode() and use real() :",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Input/Output of OpenCV Data structures.",
+    "local": ""
+  },
+  {
+    "origin": "Well these behave exactly just as the basic C++ and Python types:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Input/Output of vectors (arrays) and associative maps.",
+    "local": ""
+  },
+  {
+    "origin": "As I mentioned beforehand, we can output maps and sequences (array, vector) too. Again we first print the name of the variable and then we have to specify if our output is either a sequence or map.",
+    "local": ""
+  },
+  {
+    "origin": "For sequence before the first element print the \"[\" character and after the last one the \"]\" character. With Python, call",
+    "local": ""
+  },
+  {
+    "origin": ", where",
+    "local": ""
+  },
+  {
+    "origin": "is",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "to start writing the structure. Call",
+    "local": ""
+  },
+  {
+    "origin": "to finish the structure:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "For maps the drill is the same however now we use the \"{\" and \"}\" delimiter characters:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "To read from these we use the",
+    "local": ""
+  },
+  {
+    "origin": "and the",
+    "local": ""
+  },
+  {
+    "origin": "data structures. The [] operator of the",
+    "local": ""
+  },
+  {
+    "origin": "class (or the getNode() function in Python) returns a",
+    "local": ""
+  },
+  {
+    "origin": "data type. If the node is sequential we can use the",
+    "local": ""
+  },
+  {
+    "origin": "to iterate through the items. In Python, the",
+    "local": ""
+  },
+  {
+    "origin": "function can be used to address elements of the sequence and the",
+    "local": ""
+  },
+  {
+    "origin": "function returns the length of the sequence:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "For maps you can use the [] operator (",
+    "local": ""
+  },
+  {
+    "origin": "function in Python) again to access the given item (or the &gt;&gt; operator too):",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Read and write your own data structures.",
+    "local": ""
+  },
+  {
+    "origin": "Suppose you have a data structure such as:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "In C++, it's possible to serialize this through the OpenCV I/O XML/YAML interface (just as in case of the OpenCV data structures) by adding a read and a write function inside and outside of your class. In Python, you can get close to this by implementing a read and write function inside the class. For the inside part:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "In C++, you need to add the following functions definitions outside the class:",
+    "local": ""
+  },
+  {
+    "origin": "Here you can observe that in the read section we defined what happens if the user tries to read a non-existing node. In this case we just return the default initialization value, however a more verbose solution would be to return for instance a minus one value for an object ID.",
+    "local": ""
+  },
+  {
+    "origin": "Once you added these four functions use the &gt;&gt; operator for write and the &lt;&lt; operator for read (or the defined input/output functions for Python):",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Or to try out reading a non-existing read:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Result",
+    "local": ""
+  },
+  {
+    "origin": "Well mostly we just print out the defined numbers. On the screen of your console you could see:",
+    "local": ""
+  },
+  {
+    "origin": "Nevertheless, it's much more interesting what you may see in the output xml file:",
+    "local": ""
+  },
+  {
+    "origin": "Or the YAML file:",
+    "local": ""
+  },
+  {
+    "origin": "You may observe a runtime instance of this on the",
+    "local": ""
+  },
+  {
+    "origin": "YouTube here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

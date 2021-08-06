@@ -1,0 +1,162 @@
+[
+  {
+    "origin": "OpenCV: opencv2/ximgproc/disparity_filter.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "disparity_filter.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Main interface for all disparity map filters.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Disparity map filter based on Weighted Least Squares filter (in form of Fast Global Smoother that is a lot faster than traditional Weighted Least Squares filter implementations) and optional use of left-right-consistency-based confidence to refine the results in half-occlusions and uniform areas.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray GT, InputArray src, Rect ROI, int thresh=24)",
+    "local": ""
+  },
+  {
+    "origin": "Function for computing the percent of \"bad\" pixels in the disparity map (pixels where error is higher than a specified threshold)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray GT, InputArray src, Rect ROI)",
+    "local": ""
+  },
+  {
+    "origin": "Function for computing mean square error for disparity maps.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(Ptr&lt; StereoMatcher &gt; matcher_left)",
+    "local": ""
+  },
+  {
+    "origin": "Convenience factory method that creates an instance of",
+    "local": ""
+  },
+  {
+    "origin": "and sets up all the relevant filter parameters automatically based on the matcher instance. Currently supports only",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(bool use_confidence)",
+    "local": ""
+  },
+  {
+    "origin": "More generic factory method, create instance of",
+    "local": ""
+  },
+  {
+    "origin": "and execute basic initialization routines. When using this method you will need to set-up the ROI, matchers and other parameters by yourself.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(Ptr&lt; StereoMatcher &gt; matcher_left)",
+    "local": ""
+  },
+  {
+    "origin": "Convenience method to set up the matcher for computing the right-view disparity map that is required in case of filtering with confidence.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, double scale=1.0)",
+    "local": ""
+  },
+  {
+    "origin": "Function for creating a disparity map visualization (clamped CV_8U image)",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(String src_path, OutputArray dst)",
+    "local": ""
+  },
+  {
+    "origin": "Function for reading ground truth disparity maps. Supports basic Middlebury and MPI-Sintel formats. Note that the resulting disparity map is scaled by 16.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

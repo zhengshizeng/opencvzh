@@ -1,0 +1,1126 @@
+[
+  {
+    "origin": "OpenCV: cv::segmentation::IntelligentScissorsMB Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::segmentation::IntelligentScissorsMB Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "Intelligent Scissors image segmentation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image)",
+    "local": ""
+  },
+  {
+    "origin": "Specify input image and extract image features.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "non_edge,",
+    "local": ""
+  },
+  {
+    "origin": "gradient_direction,",
+    "local": ""
+  },
+  {
+    "origin": "gradient_magnitude,",
+    "local": ""
+  },
+  {
+    "origin": "image=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Specify custom features of imput image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;sourcePt)",
+    "local": ""
+  },
+  {
+    "origin": "Prepares a map of optimal paths for the given source point on the image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;targetPt,",
+    "local": ""
+  },
+  {
+    "origin": "contour, bool backward=false) const",
+    "local": ""
+  },
+  {
+    "origin": "Extracts optimal contour for the given target point on the image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(double threshold1, double threshold2, int apertureSize=3, bool L2gradient=false)",
+    "local": ""
+  },
+  {
+    "origin": "Switch edge feature extractor to use Canny edge detector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(float gradient_magnitude_min_value=0.0f)",
+    "local": ""
+  },
+  {
+    "origin": "Switch to \"Laplacian Zero-Crossing\" edge feature extractor and specify its parameters.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(float gradient_magnitude_threshold_max=0.0f)",
+    "local": ""
+  },
+  {
+    "origin": "Specify gradient magnitude max value threshold.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "(float weight_non_edge, float weight_gradient_direction, float weight_gradient_magnitude)",
+    "local": ""
+  },
+  {
+    "origin": "Specify weights of feature functions.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Intelligent Scissors image segmentation.",
+    "local": ""
+  },
+  {
+    "origin": "This class is used to find the path (contour) between two points which can be used for image segmentation.",
+    "local": ""
+  },
+  {
+    "origin": "Usage example:",
+    "local": ""
+  },
+  {
+    "origin": "Reference:",
+    "local": ""
+  },
+  {
+    "origin": "\"Intelligent Scissors for Image Composition\"",
+    "local": ""
+  },
+  {
+    "origin": "algorithm designed by Eric N. Mortensen and William A. Barrett, Brigham Young University",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "IntelligentScissorsMB()",
+    "local": ""
+  },
+  {
+    "origin": "cv::segmentation::IntelligentScissorsMB::IntelligentScissorsMB",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "&lt;segmentation_IntelligentScissorsMB object&gt;",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.segmentation_IntelligentScissorsMB(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "applyImage()",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::segmentation::IntelligentScissorsMB::applyImage",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.segmentation_IntelligentScissorsMB.applyImage(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Specify input image and extract image features.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "input image. Type is",
+    "local": ""
+  },
+  {
+    "origin": "/",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "applyImageFeatures()",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::segmentation::IntelligentScissorsMB::applyImageFeatures",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "non_edge",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "gradient_direction",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "gradient_magnitude",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.segmentation_IntelligentScissorsMB.applyImageFeatures(",
+    "local": ""
+  },
+  {
+    "origin": "non_edge, gradient_direction, gradient_magnitude[, image]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Specify custom features of imput image.",
+    "local": ""
+  },
+  {
+    "origin": "Customized advanced variant of",
+    "local": ""
+  },
+  {
+    "origin": "call.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "non_edge",
+    "local": ""
+  },
+  {
+    "origin": "Specify cost of non-edge pixels. Type is CV_8UC1. Expected values are",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "gradient_direction",
+    "local": ""
+  },
+  {
+    "origin": "Specify gradient direction feature. Type is CV_32FC2. Values are expected to be normalized:",
+    "local": ""
+  },
+  {
+    "origin": "gradient_magnitude",
+    "local": ""
+  },
+  {
+    "origin": "Specify cost of gradient magnitude function: Type is CV_32FC1. Values should be in range",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Optional parameter",
+    "local": ""
+  },
+  {
+    "origin": ". Must be specified if subset of features is specified (non-specified features are calculated internally)",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "buildMap()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::segmentation::IntelligentScissorsMB::buildMap",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "sourcePt",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.segmentation_IntelligentScissorsMB.buildMap(",
+    "local": ""
+  },
+  {
+    "origin": "sourcePt",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Prepares a map of optimal paths for the given source point on the image.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "/",
+    "local": ""
+  },
+  {
+    "origin": "must be called before this call",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "sourcePt",
+    "local": ""
+  },
+  {
+    "origin": "The source point used to find the paths",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "getContour()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::segmentation::IntelligentScissorsMB::getContour",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "targetPt",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "contour",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "backward",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "contour",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.segmentation_IntelligentScissorsMB.getContour(",
+    "local": ""
+  },
+  {
+    "origin": "targetPt[, contour[, backward]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Extracts optimal contour for the given target point on the image.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "must be called before this call",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "targetPt",
+    "local": ""
+  },
+  {
+    "origin": "The target point",
+    "local": ""
+  },
+  {
+    "origin": "[out]",
+    "local": ""
+  },
+  {
+    "origin": "contour",
+    "local": ""
+  },
+  {
+    "origin": "The list of pixels which contains optimal path between the source and the target points of the image. Type is CV_32SC2 (compatible with",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "backward",
+    "local": ""
+  },
+  {
+    "origin": "Flag to indicate reverse order of retrived pixels (use \"true\" value to fetch points from the target to the source point)",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setEdgeFeatureCannyParameters()",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::segmentation::IntelligentScissorsMB::setEdgeFeatureCannyParameters",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "threshold1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "threshold2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "apertureSize",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "L2gradient",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.segmentation_IntelligentScissorsMB.setEdgeFeatureCannyParameters(",
+    "local": ""
+  },
+  {
+    "origin": "threshold1, threshold2[, apertureSize[, L2gradient]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Switch edge feature extractor to use Canny edge detector.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "\"Laplacian Zero-Crossing\" feature extractor is used by default (following to original article)",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setEdgeFeatureZeroCrossingParameters()",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::segmentation::IntelligentScissorsMB::setEdgeFeatureZeroCrossingParameters",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "gradient_magnitude_min_value",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.segmentation_IntelligentScissorsMB.setEdgeFeatureZeroCrossingParameters(",
+    "local": ""
+  },
+  {
+    "origin": "[, gradient_magnitude_min_value]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Switch to \"Laplacian Zero-Crossing\" edge feature extractor and specify its parameters.",
+    "local": ""
+  },
+  {
+    "origin": "This feature extractor is used by default according to article.",
+    "local": ""
+  },
+  {
+    "origin": "Implementation has additional filtering for regions with low-amplitude noise. This filtering is enabled through parameter of minimal gradient amplitude (use some small value 4, 8, 16).",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Current implementation of this feature extractor is based on processing of grayscale images (color image is converted to grayscale image first).",
+    "local": ""
+  },
+  {
+    "origin": "Canny edge detector is a bit slower, but provides better results (especially on color images): use",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "gradient_magnitude_min_value",
+    "local": ""
+  },
+  {
+    "origin": "Minimal gradient magnitude value for edge pixels (default: 0, check is disabled)",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setGradientMagnitudeMaxLimit()",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::segmentation::IntelligentScissorsMB::setGradientMagnitudeMaxLimit",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "gradient_magnitude_threshold_max",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.segmentation_IntelligentScissorsMB.setGradientMagnitudeMaxLimit(",
+    "local": ""
+  },
+  {
+    "origin": "[, gradient_magnitude_threshold_max]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Specify gradient magnitude max value threshold.",
+    "local": ""
+  },
+  {
+    "origin": "Zero limit value is used to disable gradient magnitude thresholding (default behavior, as described in original article). Otherwize pixels with",
+    "local": ""
+  },
+  {
+    "origin": "have zero cost.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Thresholding should be used for images with irregular regions (to avoid stuck on parameters from high-contract areas, like embedded logos).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "gradient_magnitude_threshold_max",
+    "local": ""
+  },
+  {
+    "origin": "Specify gradient magnitude max value threshold (default: 0, disabled)",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setWeights()",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::segmentation::IntelligentScissorsMB::setWeights",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "weight_non_edge",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "weight_gradient_direction",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "weight_gradient_magnitude",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.segmentation_IntelligentScissorsMB.setWeights(",
+    "local": ""
+  },
+  {
+    "origin": "weight_non_edge, weight_gradient_direction, weight_gradient_magnitude",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Specify weights of feature functions.",
+    "local": ""
+  },
+  {
+    "origin": "Consider keeping weights normalized (sum of weights equals to 1.0) Discrete dynamic programming (DP) goal is minimization of costs between pixels.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "weight_non_edge",
+    "local": ""
+  },
+  {
+    "origin": "Specify cost of non-edge pixels (default: 0.43f)",
+    "local": ""
+  },
+  {
+    "origin": "weight_gradient_direction",
+    "local": ""
+  },
+  {
+    "origin": "Specify cost of gradient direction function (default: 0.43f)",
+    "local": ""
+  },
+  {
+    "origin": "weight_gradient_magnitude",
+    "local": ""
+  },
+  {
+    "origin": "Specify cost of gradient magnitude function (default: 0.14f)",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/imgproc/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by",
+    "local": ""
+  }
+]

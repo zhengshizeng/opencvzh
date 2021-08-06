@@ -1,0 +1,598 @@
+[
+  {
+    "origin": "OpenCV: Adding borders to your images",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Adding borders to your images",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "to set the borders (extra padding to your image).",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The explanation below belongs to the book",
+    "local": ""
+  },
+  {
+    "origin": "Learning OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "by Bradski and Kaehler.",
+    "local": ""
+  },
+  {
+    "origin": "In our previous tutorial we learned to use convolution to operate on images. One problem that naturally arises is how to handle the boundaries. How can we convolve them if the evaluated points are at the edge of the image?",
+    "local": ""
+  },
+  {
+    "origin": "What most of OpenCV functions do is to copy a given image onto another slightly larger image and then automatically pads the boundary (by any of the methods explained in the sample code just below). This way, the convolution can be performed over the needed pixels without problems (the extra padding is cut after the operation is done).",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial, we will briefly explore two ways of defining the extra padding (border) for an image:",
+    "local": ""
+  },
+  {
+    "origin": "BORDER_CONSTANT",
+    "local": ""
+  },
+  {
+    "origin": ": Pad the image with a constant value (i.e. black or \\(0\\)",
+    "local": ""
+  },
+  {
+    "origin": "BORDER_REPLICATE",
+    "local": ""
+  },
+  {
+    "origin": ": The row or column at the very edge of the original is replicated to the extra border.",
+    "local": ""
+  },
+  {
+    "origin": "This will be seen more clearly in the Code section.",
+    "local": ""
+  },
+  {
+    "origin": "What does this program do?",
+    "local": ""
+  },
+  {
+    "origin": "Load an image",
+    "local": ""
+  },
+  {
+    "origin": "Let the user choose what kind of padding use in the input image. There are two options:",
+    "local": ""
+  },
+  {
+    "origin": "Constant value border",
+    "local": ""
+  },
+  {
+    "origin": ": Applies a padding of a constant value for the whole border. This value will be updated randomly each 0.5 seconds.",
+    "local": ""
+  },
+  {
+    "origin": "Replicated border",
+    "local": ""
+  },
+  {
+    "origin": ": The border will be replicated from the pixel values at the edges of the original image.",
+    "local": ""
+  },
+  {
+    "origin": "The user chooses either option by pressing 'c' (constant) or 'r' (replicate)",
+    "local": ""
+  },
+  {
+    "origin": "The program finishes when the user presses 'ESC'",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code's is shown lines below.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Declare the variables",
+    "local": ""
+  },
+  {
+    "origin": "First we declare the variables we are going to use:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Especial attention deserves the variable",
+    "local": ""
+  },
+  {
+    "origin": "rng",
+    "local": ""
+  },
+  {
+    "origin": "which is a random number generator. We use it to generate the random border color, as we will see soon.",
+    "local": ""
+  },
+  {
+    "origin": "Load an image",
+    "local": ""
+  },
+  {
+    "origin": "As usual we load our source image",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Create a window",
+    "local": ""
+  },
+  {
+    "origin": "After giving a short intro of how to use the program, we create a window:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Initialize arguments",
+    "local": ""
+  },
+  {
+    "origin": "Now we initialize the argument that defines the size of the borders (",
+    "local": ""
+  },
+  {
+    "origin": "top",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bottom",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "left",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "right",
+    "local": ""
+  },
+  {
+    "origin": "). We give them a value of 5% the size of",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Loop",
+    "local": ""
+  },
+  {
+    "origin": "The program runs in an infinite loop while the key",
+    "local": ""
+  },
+  {
+    "origin": "ESC",
+    "local": ""
+  },
+  {
+    "origin": "isn't pressed. If the user presses '",
+    "local": ""
+  },
+  {
+    "origin": "c",
+    "local": ""
+  },
+  {
+    "origin": "' or '",
+    "local": ""
+  },
+  {
+    "origin": "r",
+    "local": ""
+  },
+  {
+    "origin": "', the",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "variable takes the value of",
+    "local": ""
+  },
+  {
+    "origin": "BORDER_CONSTANT",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "BORDER_REPLICATE",
+    "local": ""
+  },
+  {
+    "origin": "respectively:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Random color",
+    "local": ""
+  },
+  {
+    "origin": "In each iteration (after 0.5 seconds), the random border color (",
+    "local": ""
+  },
+  {
+    "origin": "value",
+    "local": ""
+  },
+  {
+    "origin": ") is updated...",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "This value is a set of three numbers picked randomly in the range \\([0,255]\\).",
+    "local": ""
+  },
+  {
+    "origin": "Form a border around the image",
+    "local": ""
+  },
+  {
+    "origin": "Finally, we call the function",
+    "local": ""
+  },
+  {
+    "origin": "to apply the respective padding:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "The arguments are:",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ": Source image",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ": Destination image",
+    "local": ""
+  },
+  {
+    "origin": "top",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bottom",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "left",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "right",
+    "local": ""
+  },
+  {
+    "origin": ": Length in pixels of the borders at each side of the image. We define them as being 5% of the original size of the image.",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": ": Define what type of border is applied. It can be constant or replicate for this example.",
+    "local": ""
+  },
+  {
+    "origin": "value",
+    "local": ""
+  },
+  {
+    "origin": ": If",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "is",
+    "local": ""
+  },
+  {
+    "origin": "BORDER_CONSTANT",
+    "local": ""
+  },
+  {
+    "origin": ", this is the value used to fill the border pixels.",
+    "local": ""
+  },
+  {
+    "origin": "Display the results",
+    "local": ""
+  },
+  {
+    "origin": "We display our output image in the image created previously",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "After compiling the code above, you can execute it giving as argument the path of an image. The result should be:",
+    "local": ""
+  },
+  {
+    "origin": "By default, it begins with the border set to BORDER_CONSTANT. Hence, a succession of random colored borders will be shown.",
+    "local": ""
+  },
+  {
+    "origin": "If you press 'r', the border will become a replica of the edge pixels.",
+    "local": ""
+  },
+  {
+    "origin": "If you press 'c', the random colored borders will appear again",
+    "local": ""
+  },
+  {
+    "origin": "If you press 'ESC' the program will exit.",
+    "local": ""
+  },
+  {
+    "origin": "Below some screenshot showing how the border changes color and how the",
+    "local": ""
+  },
+  {
+    "origin": "BORDER_REPLICATE",
+    "local": ""
+  },
+  {
+    "origin": "option looks:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": ""
+  }
+]

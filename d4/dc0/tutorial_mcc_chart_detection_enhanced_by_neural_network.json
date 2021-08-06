@@ -1,0 +1,118 @@
+[
+  {
+    "origin": "OpenCV: Detecting colorcheckers using neural network",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Detecting colorcheckers using neural network",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to use the neural network to boost up the accuracy of the chart detection algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "Building",
+    "local": ""
+  },
+  {
+    "origin": "When building OpenCV, run the following command to build all the contrib module:",
+    "local": ""
+  },
+  {
+    "origin": "Or only build the mcc module:",
+    "local": ""
+  },
+  {
+    "origin": "Or make sure you check the mcc module in the GUI version of CMake: cmake-gui.",
+    "local": ""
+  },
+  {
+    "origin": "Source Code of the sample",
+    "local": ""
+  },
+  {
+    "origin": "You can run the sample code by doing",
+    "local": ""
+  },
+  {
+    "origin": "Simple run on CPU (GPU wont be used) /home/opencv/build/bin/example_mcc_chart_detection_with_network -t=0 -m=/home/model.pb &ndash;pb=/home/model.pbtxt -v=mcc24.mp4",
+    "local": ""
+  },
+  {
+    "origin": "To run on GPU /home/opencv/build/bin/example_mcc_chart_detection_with_network -t=0 -m=/home/model.pb &ndash;pb=/home/model.pbtxt -v=mcc24.mp4 &ndash;use_gpu",
+    "local": ""
+  },
+  {
+    "origin": "To run on GPU and detect the best 5 charts (Detections can be less than 5 but not more than 5) /home/opencv/build/bin/example_mcc_chart_detection_with_network -t=0 -m=/home/model.pb &ndash;pb=/home/model.pbtxt -v=mcc24.mp4 &ndash;use_gpu &ndash;nc=5 ```",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Set header and namespaces",
+    "local": ""
+  },
+  {
+    "origin": "If you want you can set the namespace like the code above.",
+    "local": ""
+  },
+  {
+    "origin": "Create the detector object",
+    "local": ""
+  },
+  {
+    "origin": "This is just to create the object.",
+    "local": ""
+  },
+  {
+    "origin": "Load the model",
+    "local": ""
+  },
+  {
+    "origin": "Load the model, here the model supplied with model was trained in tensorflow so we are loading it in tensorflow, but if you have some other model trained in some other framework you can use that also.",
+    "local": ""
+  },
+  {
+    "origin": "**(Optional) Set the dnn backend to CUDA**",
+    "local": ""
+  },
+  {
+    "origin": "Models run much faster on CUDA, so use CUDA if possible.",
+    "local": ""
+  },
+  {
+    "origin": "Run the detector",
+    "local": ""
+  },
+  {
+    "origin": "If the detector successfully detects atleast one chart, it return true otherwise it returns false. In the above given code we print a failure message if no chart were detected. Otherwise if it were successful, the list of colorcharts is stored inside the detector itself, we will see in the next step on how to extract it. The fourth parameter is for deciding whether to use the net or not.",
+    "local": ""
+  },
+  {
+    "origin": "Get List of ColorCheckers",
+    "local": ""
+  },
+  {
+    "origin": "All the colorcheckers that were detected are now stored in the 'checkers' vector.",
+    "local": ""
+  },
+  {
+    "origin": "Draw the colorcheckers back to the image",
+    "local": ""
+  },
+  {
+    "origin": "Loop through all the checkers one by one and then draw them.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": ""
+  }
+]

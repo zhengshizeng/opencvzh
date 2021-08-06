@@ -1,0 +1,106 @@
+[
+  {
+    "origin": "OpenCV: Scene Reconstruction",
+    "local": "OpenCV:场景重建"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Scene Reconstruction",
+    "local": "场景重建"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to use the reconstruction api for sparse reconstruction:",
+    "local": "在本教程中，您将学习如何使用重建api进行稀疏重建："
+  },
+  {
+    "origin": "Load and file with a list of image paths.",
+    "local": "使用图像路径列表加载和归档。"
+  },
+  {
+    "origin": "Run libmv reconstruction pipeline.",
+    "local": "运行libmv改造管道。"
+  },
+  {
+    "origin": "Show obtained results using Viz.",
+    "local": "使用Viz显示获得的结果。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Firstly, we need to load the file containing list of image paths in order to feed the reconstruction api:",
+    "local": "首先，我们需要加载包含图像路径列表的文件，以便提供重建api："
+  },
+  {
+    "origin": "Secondly, the built container will be used to feed the reconstruction api. It is important outline that the estimated results must be stored in a vector&lt;Mat&gt;. In this case is called the overloaded signature for real images which from the images, internally extracts and compute the sparse 2d features using DAISY descriptors in order to be matched using FlannBasedMatcher and build the tracks structure.",
+    "local": "其次，将使用构建的容器来提供重构api。重要的是，估计结果必须存储在向量中&lt；材料&gt；。在这种情况下，我们称之为真实图像的重载签名，它从图像中，使用菊花描述符内部提取并计算稀疏的二维特征，以便使用FlannBasedMatcher进行匹配并构建轨迹结构。"
+  },
+  {
+    "origin": "Finally, the obtained results will be shown in Viz.",
+    "local": "最后，所得结果将显示在Viz中。"
+  },
+  {
+    "origin": "Usage and Results",
+    "local": "用法和结果"
+  },
+  {
+    "origin": "In order to run this sample we need to specify the path to the image paths files, the focal length of the camera in addition to the center projection coordinates (in pixels).",
+    "local": "为了运行此示例，我们需要指定图像路径文件的路径、相机的焦距以及中心投影坐标（以像素为单位）。"
+  },
+  {
+    "origin": "1. Middlebury temple",
+    "local": "1.米德尔伯里神庙"
+  },
+  {
+    "origin": "Using following image sequence [1] and the followings camera parameters we can compute the sparse 3d reconstruction:",
+    "local": "使用以下图像序列[1]和以下相机参数，我们可以计算稀疏三维重建："
+  },
+  {
+    "origin": "The following picture shows the obtained camera motion in addition to the estimated sparse 3d reconstruction:",
+    "local": "下图显示了除了估计的稀疏三维重建之外获得的相机运动："
+  },
+  {
+    "origin": "2. Sagrada Familia",
+    "local": "2.萨格拉达家族"
+  },
+  {
+    "origin": "Using following image sequence [2] and the followings camera parameters we can compute the sparse 3d reconstruction:",
+    "local": "使用以下图像序列[2]和以下相机参数，我们可以计算稀疏三维重建："
+  },
+  {
+    "origin": "The following picture shows the obtained camera motion in addition to the estimated sparse 3d reconstruction:",
+    "local": "下图显示了除了估计的稀疏三维重建之外获得的相机运动："
+  },
+  {
+    "origin": "[1]",
+    "local": "[1]"
+  },
+  {
+    "origin": "http://vision.middlebury.edu/mview/data",
+    "local": "http://vision.middlebury.edu/mview/data"
+  },
+  {
+    "origin": "[2] Penate Sanchez, A. and Moreno-Noguer, F. and Andrade Cetto, J. and Fleuret, F. (2014). LETHA: Learning from High Quality Inputs for 3D Pose Estimation in Low Quality Images. Proceedings of the International Conference on 3D vision (3DV).",
+    "local": "[2] Penate Sanchez，A。莫雷诺·诺格，F。Andrade Cetto，J。弗莱雷特，F(2014). LETHA：从高质量输入中学习低质量图像中的三维姿态估计。国际三维视觉会议论文集。"
+  },
+  {
+    "origin": "URL",
+    "local": "统一资源定位地址"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:39为OpenCV生成，&#160；"
+  }
+]

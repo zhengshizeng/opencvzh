@@ -1,0 +1,314 @@
+[
+  {
+    "origin": "OpenCV: Histograms - 1 : Find, Plot, Analyze !!!",
+    "local": "OpenCV：直方图-1：查找，绘图，分析！！！"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Histograms - 1 : Find, Plot, Analyze !!!",
+    "local": "直方图-1：发现，绘制，分析！！！"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "Learn to",
+    "local": "学会"
+  },
+  {
+    "origin": "Find histograms, using both OpenCV and Numpy functions",
+    "local": "使用OpenCV和Numpy函数查找直方图"
+  },
+  {
+    "origin": "Plot histograms, using OpenCV and Matplotlib functions",
+    "local": "使用OpenCV和Matplotlib函数绘制直方图"
+  },
+  {
+    "origin": "You will see these functions :",
+    "local": "您将看到以下功能："
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "np.histogram()",
+    "local": "np.直方图（）"
+  },
+  {
+    "origin": "etc.",
+    "local": "等。"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "So what is histogram ? You can consider histogram as a graph or plot, which gives you an overall idea about the intensity distribution of an image. It is a plot with pixel values (ranging from 0 to 255, not always) in X-axis and corresponding number of pixels in the image on Y-axis.",
+    "local": "那么直方图是什么呢？您可以将直方图视为一个图形或绘图，它可以让您全面了解图像的强度分布。它是一个在X轴上有像素值（范围从0到255，不总是）和在Y轴上有图像中相应像素数的图。"
+  },
+  {
+    "origin": "It is just another way of understanding the image. By looking at the histogram of an image, you get intuition about contrast, brightness, intensity distribution etc of that image. Almost all image processing tools today, provides features on histogram. Below is an image from",
+    "local": "这只是理解图像的另一种方式。通过观察图像的直方图，你可以直观地了解图像的对比度、亮度、强度分布等。现在几乎所有的图像处理工具都提供了直方图特征。下面是来自"
+  },
+  {
+    "origin": "Cambridge in Color website",
+    "local": "剑桥彩色网站"
+  },
+  {
+    "origin": ", and I recommend you to visit the site for more details.",
+    "local": "，我建议您访问该网站了解更多详细信息。"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "You can see the image and its histogram. (Remember, this histogram is drawn for grayscale image, not color image). Left region of histogram shows the amount of darker pixels in image and right region shows the amount of brighter pixels. From the histogram, you can see dark region is more than brighter region, and amount of midtones (pixel values in mid-range, say around 127) are very less.",
+    "local": "您可以看到图像及其直方图(记住，这个直方图是为灰度图像而不是彩色图像绘制的。直方图的左侧区域显示图像中较暗像素的数量，右侧区域显示较亮像素的数量。从直方图中，你可以看到暗区比亮区多，中间色调的数量（像素值在中间范围内，比如127左右）非常少。"
+  },
+  {
+    "origin": "Find Histogram",
+    "local": "查找直方图"
+  },
+  {
+    "origin": "Now we have an idea on what is histogram, we can look into how to find this. Both OpenCV and Numpy come with in-built function for this. Before using those functions, we need to understand some terminologies related with histograms.",
+    "local": "现在我们知道什么是直方图了，我们可以研究如何找到这个。OpenCV和Numpy都有内置函数。在使用这些函数之前，我们需要了解一些与直方图相关的术语。"
+  },
+  {
+    "origin": "BINS",
+    "local": "箱子"
+  },
+  {
+    "origin": ":The above histogram shows the number of pixels for every pixel value, ie from 0 to 255. ie you need 256 values to show the above histogram. But consider, what if you need not find the number of pixels for all pixel values separately, but number of pixels in a interval of pixel values? say for example, you need to find the number of pixels lying between 0 to 15, then 16 to 31, ..., 240 to 255. You will need only 16 values to represent the histogram. And that is what is shown in example given in",
+    "local": "：上面的直方图显示每个像素值的像素数，即从0到255。即需要256个值来显示上面的直方图。但是，考虑一下，如果您不需要分别查找所有像素值的像素数，而需要查找像素值间隔中的像素数，该怎么办？比如说，你需要找到0到15之间的像素数，然后是16到31，…，240到255。你只需要16个值来表示直方图。下面的例子就是这个"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "So what you do is simply split the whole histogram to 16 sub-parts and value of each sub-part is the sum of all pixel count in it. This each sub-part is called \"BIN\". In first case, number of bins were 256 (one for each pixel) while in second case, it is only 16. BINS is represented by the term",
+    "local": "所以你要做的就是简单地把整个直方图分成16个子部分，每个子部分的值就是其中所有像素数的总和。每个子部分称为“BIN”。在第一种情况下，箱子的数量是256个（每个像素一个），而在第二种情况下，箱子的数量只有16个"
+  },
+  {
+    "origin": "histSize",
+    "local": "直方图"
+  },
+  {
+    "origin": "in OpenCV docs.",
+    "local": "在OpenCV文档中。"
+  },
+  {
+    "origin": "DIMS",
+    "local": "暗淡"
+  },
+  {
+    "origin": "RANGE",
+    "local": "射程"
+  },
+  {
+    "origin": ": It is the range of intensity values you want to measure. Normally, it is [0,256], ie all intensity values.",
+    "local": "：它是要测量的强度值的范围。通常为[0256]，即所有强度值。"
+  },
+  {
+    "origin": "1. Histogram Calculation in OpenCV",
+    "local": "1.OpenCV中的直方图计算"
+  },
+  {
+    "origin": "So now we use",
+    "local": "所以现在我们用"
+  },
+  {
+    "origin": "function to find the histogram. Let's familiarize with the function and its parameters :",
+    "local": "函数来查找直方图。让我们熟悉一下函数及其参数："
+  },
+  {
+    "origin": "cv.calcHist(images, channels, mask, histSize, ranges[, hist[, accumulate]])",
+    "local": "cv.calcHist（图像、通道、掩码、历史大小、范围[、历史[、累积]]）"
+  },
+  {
+    "origin": "images : it is the source image of type uint8 or float32. it should be given in square brackets, ie, \"[img]\".",
+    "local": "图像：是uint8或float32类型的源图像。它应该放在方括号内，即“[img]”。"
+  },
+  {
+    "origin": "channels : it is also given in square brackets. It is the index of channel for which we calculate histogram. For example, if input is grayscale image, its value is [0]. For color image, you can pass [0], [1] or [2] to calculate histogram of blue, green or red channel respectively.",
+    "local": "通道：也用方括号表示。它是我们计算直方图的通道索引。例如，如果输入是灰度图像，则其值为[0]。对于彩色图像，可以通过[0]、[1]或[2]分别计算蓝色、绿色或红色通道的直方图。"
+  },
+  {
+    "origin": "mask : mask image. To find histogram of full image, it is given as \"None\". But if you want to find histogram of particular region of image, you have to create a mask image for that and give it as mask. (I will show an example later.)",
+    "local": "遮罩：遮罩图像。为了找到完整图像的直方图，它被赋予“无”。但是如果你想找到图像中特定区域的直方图，你必须为它创建一个遮罩图像并将其作为遮罩(稍后我将展示一个示例。）"
+  },
+  {
+    "origin": "histSize : this represents our BIN count. Need to be given in square brackets. For full scale, we pass [256].",
+    "local": "histSize：这代表我们的垃圾箱数量。必须放在方括号内。对于满标度，我们通过[256]。"
+  },
+  {
+    "origin": "ranges : this is our RANGE. Normally, it is [0,256].",
+    "local": "靶场：这是我们的靶场。通常是[0256]。"
+  },
+  {
+    "origin": "So let's start with a sample image. Simply load an image in grayscale mode and find its full histogram.",
+    "local": "让我们从一个示例图像开始。只需在灰度模式下加载图像，并找到其完整的直方图。"
+  },
+  {
+    "origin": "hist is a 256x1 array, each value corresponds to number of pixels in that image with its corresponding pixel value.",
+    "local": "hist是一个256x1数组，每个值对应于该图像中的像素数及其对应的像素值。"
+  },
+  {
+    "origin": "2. Histogram Calculation in Numpy",
+    "local": "2.Numpy直方图计算"
+  },
+  {
+    "origin": "Numpy also provides you a function,",
+    "local": "Numpy还提供了一个函数，"
+  },
+  {
+    "origin": "np.histogram()",
+    "local": "np.直方图（）"
+  },
+  {
+    "origin": ". So instead of",
+    "local": ". 所以"
+  },
+  {
+    "origin": "function, you can try below line :",
+    "local": "函数，您可以尝试以下行："
+  },
+  {
+    "origin": "hist is same as we calculated before. But bins will have 257 elements, because Numpy calculates bins as 0-0.99, 1-1.99, 2-2.99 etc. So final range would be 255-255.99. To represent that, they also add 256 at end of bins. But we don't need that 256. Upto 255 is sufficient.",
+    "local": "历史和我们以前计算的一样。但是bins将有257个元素，因为Numpy将bins计算为0-0.99、1-1.99、2-2.99等，所以最终的范围是255-255.99。为了表示这一点，他们还在垃圾箱的末尾添加了256个。但我们不需要256。最多255就够了。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Numpy has another function,",
+    "local": "Numpy还有一个功能，"
+  },
+  {
+    "origin": "np.bincount()",
+    "local": "example.bincount（）"
+  },
+  {
+    "origin": "which is much faster than (around 10X) np.histogram(). So for one-dimensional histograms, you can better try that. Don't forget to set minlength = 256 in np.bincount. For example, hist = np.bincount(img.ravel(),minlength=256)",
+    "local": "这比np.histogram（）快得多（大约10倍）。所以对于一维直方图，你可以试试看。别忘了在np.bincount中设置minlength=256。例如，hist=np.bincount（img.ravel（），minlength=256）"
+  },
+  {
+    "origin": "OpenCV function is faster than (around 40X) than np.histogram(). So stick with OpenCV function.",
+    "local": "OpenCV函数比np.histogram（）快（大约40倍）。所以请坚持使用OpenCV函数。"
+  },
+  {
+    "origin": "Now we should plot histograms, but how?",
+    "local": "现在我们应该绘制直方图，但是如何绘制呢？"
+  },
+  {
+    "origin": "Plotting Histograms",
+    "local": "绘制直方图"
+  },
+  {
+    "origin": "There are two ways for this,",
+    "local": "有两种方法，"
+  },
+  {
+    "origin": "Short Way : use Matplotlib plotting functions",
+    "local": "捷径：使用Matplotlib绘图函数"
+  },
+  {
+    "origin": "Long Way : use OpenCV drawing functions",
+    "local": "长途跋涉：使用OpenCV绘图函数"
+  },
+  {
+    "origin": "1. Using Matplotlib",
+    "local": "1.使用Matplotlib"
+  },
+  {
+    "origin": "Matplotlib comes with a histogram plotting function : matplotlib.pyplot.hist()",
+    "local": "Matplotlib附带一个直方图打印函数：Matplotlib.pyplot.hist（）"
+  },
+  {
+    "origin": "It directly finds the histogram and plot it. You need not use",
+    "local": "它直接找到直方图并绘制它。你不需要使用"
+  },
+  {
+    "origin": "or np.histogram() function to find the histogram. See the code below:",
+    "local": "或np.histogram（）函数来查找直方图。请参见下面的代码："
+  },
+  {
+    "origin": "You will get a plot as below :",
+    "local": "您将得到如下图："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Or you can use normal plot of matplotlib, which would be good for BGR plot. For that, you need to find the histogram data first. Try below code:",
+    "local": "或者您可以使用matplotlib的普通绘图，这对于BGR绘图是很好的。为此，首先需要找到直方图数据。请尝试以下代码："
+  },
+  {
+    "origin": "Result:",
+    "local": "结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "You can deduct from the above graph that, blue has some high value areas in the image (obviously it should be due to the sky)",
+    "local": "你可以从上面的图表中推断出，蓝色在图像中有一些高值区域（显然应该是因为天空）"
+  },
+  {
+    "origin": "2. Using OpenCV",
+    "local": "2.使用OpenCV"
+  },
+  {
+    "origin": "Well, here you adjust the values of histograms along with its bin values to look like x,y coordinates so that you can draw it using",
+    "local": "好吧，这里你调整直方图的值和它的bin值，使之看起来像x，y坐标，这样你就可以用"
+  },
+  {
+    "origin": "or cv.polyline() function to generate same image as above. This is already available with OpenCV-Python2 official samples. Check the code at samples/python/hist.py.",
+    "local": "或cv.polyline（）函数生成与上述相同的图像。OpenCV-Python2官方示例已经提供了这一功能。检查samples/python/hist.py中的代码。"
+  },
+  {
+    "origin": "Application of Mask",
+    "local": "面罩的应用"
+  },
+  {
+    "origin": "We used",
+    "local": "我们曾经"
+  },
+  {
+    "origin": "to find the histogram of the full image. What if you want to find histograms of some regions of an image? Just create a mask image with white color on the region you want to find histogram and black otherwise. Then pass this as the mask.",
+    "local": "找到完整图像的直方图。如果你想找到图像中某些区域的直方图呢？只需在你想要找到直方图的区域创建一个白色的遮罩图像，否则为黑色。然后把这个当作面具传过去。"
+  },
+  {
+    "origin": "See the result. In the histogram plot, blue line shows histogram of full image while green line shows histogram of masked region.",
+    "local": "看看结果。在直方图图中，蓝线表示完整图像的直方图，绿线表示遮罩区域的直方图。"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Cambridge in Color website",
+    "local": "剑桥彩色网站"
+  },
+  {
+    "origin": "Exercises",
+    "local": "练习"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "origin": "OpenCV: cv::cudev::GlobPtr&lt; T &gt; Struct Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::cudev::GlobPtr&lt; T &gt; Struct Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Structure similar to",
+    "local": ""
+  },
+  {
+    "origin": "but containing only a pointer and row step.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::cudev::GlobPtr&lt; T &gt;:",
+    "local": ""
+  },
+  {
+    "origin": "Public Types",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(int y, int x)",
+    "local": ""
+  },
+  {
+    "origin": "(int y, int x) const",
+    "local": ""
+  },
+  {
+    "origin": "(int y)",
+    "local": ""
+  },
+  {
+    "origin": "(int y) const",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "stride between two consecutive rows in bytes. Step is stored always and everywhere in bytes!!!",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "struct cv::cudev::GlobPtr&lt; T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "Structure similar to",
+    "local": ""
+  },
+  {
+    "origin": "but containing only a pointer and row step.",
+    "local": ""
+  },
+  {
+    "origin": "Width and height fields are excluded due to performance reasons. The structure is intended for internal use or for users who write device code.",
+    "local": ""
+  },
+  {
+    "origin": "Member Typedef Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "index_type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef int",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "value_type",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "typedef T",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "__device__ __forceinline__ T&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "y",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator()()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "__device__ __forceinline__ const T&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::operator()",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "y",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "row()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "__device__ __forceinline__ T*",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::row",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "y",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "row()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "__device__ __forceinline__ const T*",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::row",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "y",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "data",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "T*",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::data",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "step",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T&gt;",
+    "local": ""
+  },
+  {
+    "origin": "size_t",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt;::step",
+    "local": ""
+  },
+  {
+    "origin": "stride between two consecutive rows in bytes. Step is stored always and everywhere in bytes!!!",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this struct was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/cudev/ptr2d/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:45 for OpenCV by &#160;",
+    "local": ""
+  }
+]

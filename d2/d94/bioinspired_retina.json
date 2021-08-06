@@ -1,0 +1,878 @@
+[
+  {
+    "origin": "OpenCV: Bioinspired Module Retina Introduction",
+    "local": "OpenCV：生物启发模块视网膜介绍"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Bioinspired Module Retina Introduction",
+    "local": "生物启发模块简介"
+  },
+  {
+    "origin": "Retina class overview",
+    "local": "视网膜类概述"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "do not forget that the retina model is included in the following namespace :",
+    "local": "不要忘记retina模型包含在以下命名空间中："
+  },
+  {
+    "origin": "with C++ and in",
+    "local": "用C++和IN"
+  },
+  {
+    "origin": "with Python",
+    "local": "用Python"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "This class provides the main controls of the Gipsa/Listic labs human retina model. This is a non separable spatio-temporal filter modelling the two main retina information channels :",
+    "local": "此类提供Gipsa/Listic labs人类视网膜模型的主要控件。这是一个不可分离的时空滤波器，模拟两个主要的视网膜信息通道："
+  },
+  {
+    "origin": "foveal vision for detailed color vision : the parvocellular pathway.",
+    "local": "详细颜色视觉的中心凹视觉：小细胞途径。"
+  },
+  {
+    "origin": "peripheral vision for sensitive transient signals detection (motion and events) : the magnocellular pathway.",
+    "local": "用于敏感瞬态信号检测（运动和事件）的周边视觉：大细胞途径。"
+  },
+  {
+    "origin": "This model originates from Jeanny Herault work",
+    "local": "这个模型源于杰尼·赫劳特的作品"
+  },
+  {
+    "origin": ". It has been involved in Alexandre Benoit phd and his current research",
+    "local": ". 它一直参与亚历山德贝诺伊特博士和他目前的研究"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ". He currently maintains this module within OpenCV. It includes the work of other Jeanny's phd student such as",
+    "local": ". 他目前在OpenCV中维护这个模块。它包括其他珍妮的博士生的工作，如"
+  },
+  {
+    "origin": "and the log polar transformations of Barthelemy Durette described in Jeanny's book.",
+    "local": "以及珍妮书中描述的巴塞莱米·杜雷特的对数极性变换。"
+  },
+  {
+    "origin": "More into details here is an overview of the retina properties that are implemented here :",
+    "local": "这里的更多细节是这里实现的视网膜属性的概述："
+  },
+  {
+    "origin": "regarding luminance and details enhancement :",
+    "local": "关于亮度和细节增强："
+  },
+  {
+    "origin": "local logarithmic luminance compression (at the entry point by photoreceptors and at the output by ganglion cells).",
+    "local": "局部对数亮度压缩（在光感受器进入点和神经节细胞输出点）。"
+  },
+  {
+    "origin": "spectral whitening at the Outer Plexiform Layer level (photoreceptors and horizontal cells spatio-temporal filtering).",
+    "local": "外丛状层的光谱白化（光感受器和水平细胞时空滤波）。"
+  },
+  {
+    "origin": "The former behavior compresses luminance range and allows very bright areas and very dark ones to be visible on the same picture with lots of details. The latter reduces low frequency luminance energy (mean luminance) and enhances mid-frequencies (details). Applied all together, retina well prepares visual signals prior high level analysis. Those properties are really interesting with videos where light changes are dramatically reduced with an interesting temporal consistency.",
+    "local": "前一种行为压缩了亮度范围，并允许非常明亮的区域和非常黑暗的区域可以在同一张图片上看到很多细节。后者降低低频亮度能量（平均亮度），增强中频（细节）。综合应用后，视网膜在高水平分析前能很好地准备视觉信号。这些特性在视频中非常有趣，视频中的光照变化以有趣的时间一致性显著减少。"
+  },
+  {
+    "origin": "regarding noise filtering :",
+    "local": "关于噪声过滤："
+  },
+  {
+    "origin": "high frequency spatial and temporal noise is filtered out. Both outputs Parvo and Magno pathways benefit from this. Noise reduction benefits from the non separable spatio-temporal filtering.",
+    "local": "滤除高频空间和时间噪声。Parvo和Magno通路都从中受益。不可分离的时空滤波有利于降噪。"
+  },
+  {
+    "origin": "at the Parvo output, static textures are enhanced and noise is filtered (on videos, temporal noise is nicely removed). However, as human behaviors, moving textures are smoothed. Then, moving object details can be only enhanced if the retina tracks it and keeps it static from its point of view.",
+    "local": "在Parvo输出中，静态纹理被增强，噪声被过滤（在视频中，时间噪声被很好地去除）。但是，作为人类行为，移动纹理是平滑的。然后，只有当视网膜跟踪并保持静止时，才能增强运动物体的细节。"
+  },
+  {
+    "origin": "at Magno output, it allows a cleaner detection of events (motion, changes) with reduced noise errors even in difficult lighting conditions. As a compromise, the Magno output is a low spatial frequency signal and allows events' blobs to be reliably extracted (check the TransientAreasSegmentationModule module for that).",
+    "local": "在Magno输出，它允许更清晰的事件（运动，变化）检测与减少噪音误差，即使在困难的照明条件。作为折衷方案，Magno输出是一个低空间频率信号，允许可靠地提取事件的blob（检查transientreasegmentation模块）。"
+  },
+  {
+    "origin": "Use",
+    "local": "使用"
+  },
+  {
+    "origin": "This model can be used as a preprocessing stage in the aim of :",
+    "local": "该模型可用作预处理阶段，目的是："
+  },
+  {
+    "origin": "performing texture analysis with enhanced signal to noise ratio and enhanced details which are robust against input images luminance ranges (check out the parvocellular retina channel output, by using the provided",
+    "local": "使用增强的信噪比和增强的细节执行纹理分析，增强的细节对输入图像亮度范围具有鲁棒性（使用提供的"
+  },
+  {
+    "origin": "getParvo",
+    "local": "格特帕沃。"
+  },
+  {
+    "origin": "methods)",
+    "local": "方法）"
+  },
+  {
+    "origin": "performing motion analysis that is also taking advantage of the previously cited properties (check out the magnocellular retina channel output, by using the provided",
+    "local": "执行运动分析，同时利用前面提到的特性（使用提供的"
+  },
+  {
+    "origin": "getMagno",
+    "local": "格特马诺"
+  },
+  {
+    "origin": "methods)",
+    "local": "方法）"
+  },
+  {
+    "origin": "general image/video sequence description using either one or both channels. An example of the use of Retina in a Bag of Words approach is given in",
+    "local": "使用一个或两个通道的一般图像/视频序列描述。文中给出了一个在一袋单词中使用视网膜的例子"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "For ease of use in computer vision applications, the two retina channels are applied on all the input images. This does not follow the real retina topology but it is practical from an image processing point of view. If retina mapping (foveal and parafoveal vision) is required, use the log sampling capabilities proposed within the class.",
+    "local": "为了便于在计算机视觉应用中使用，两个视网膜通道应用于所有的输入图像。这并不遵循真实的视网膜拓扑结构，但从图像处理的角度来看是可行的。如果需要视网膜映射（中心凹和旁中心凹视觉），请使用类中建议的对数采样功能。"
+  },
+  {
+    "origin": "Please do not hesitate to contribute by extending the retina description, code, use cases for complementary explanations and demonstrations.",
+    "local": "请不要犹豫，通过扩展视网膜的描述，代码，补充解释和演示用例作出贡献。"
+  },
+  {
+    "origin": "Use case illustrations",
+    "local": "用例图"
+  },
+  {
+    "origin": "Image preprocessing using the Parvocellular pathway (parvo retina output)",
+    "local": "利用小细胞途径进行图像预处理（小视网膜输出）"
+  },
+  {
+    "origin": "As a preliminary presentation, let's start with a visual example. We propose to apply the filter on a low quality color jpeg image with backlight problems. Here is the considered input... *\"Well,i could see more with my eyes than what i captured with my camera...\"*",
+    "local": "作为初步演示，让我们从一个可视化示例开始。我们建议将此滤波器应用于有背光问题的低品质彩色jpeg影像。这是经过考虑的输入……”嗯，我用眼睛能看到比我用相机拍到的更多的东西……”*"
+  },
+  {
+    "origin": "a low quality color jpeg image with backlight problems.",
+    "local": "有背光问题的低质量彩色jpeg图像。"
+  },
+  {
+    "origin": "Below, the retina foveal model applied on the entire image with default parameters. Details are enforced whatever the local luminance is. Here there contours are strongly enforced but the noise level is kept low. Halo effects are voluntary visible with this configuration. See parameters discussion below and increase horizontalCellsGain near 1 to remove them.",
+    "local": "下面，视网膜中心凹模型应用于带有默认参数的整个图像。无论局部亮度如何，细节都是强制的。这里有强烈的轮廓，但噪音水平保持低。光晕效应在这种配置下是可见的。请参阅下面的参数讨论，并将水平单元格增加到1附近以将其删除。"
+  },
+  {
+    "origin": "the retina foveal model applied on the entire image with default parameters. Here contours are enforced, luminance is corrected and halo effects are voluntary visible with this configuration, increase horizontalCellsGain near 1 to remove them.",
+    "local": "视网膜中心凹模型应用于具有默认参数的整个图像。在这里，轮廓是强制的，亮度是校正的，光晕效果是自愿可见的，用这个配置，增加水平细胞数接近1，以消除它们。"
+  },
+  {
+    "origin": "Below, a second retina foveal model output applied on the entire image with a parameters setup focused on naturalness perception. *\"Hey, i now recognize my cat, looking at the mountains at the end of the day !\"*. Here contours are enforced, luminance is corrected but halos are avoided with this configuration. The backlight effect is corrected and highlight details are still preserved. Then, even on a low quality jpeg image, if some luminance's information remains, the retina is able to reconstruct a proper visual signal. Such configuration is also useful for High Dynamic Range (",
+    "local": "下面，第二个视网膜中心凹模型输出应用于整个图像，参数设置侧重于自然感知。*”嘿，我现在认出我的猫了，在一天结束的时候看着群山！“*。在这里轮廓是强制的，亮度是修正的，但光晕是避免与此配置。背光效果得到校正，高亮细节仍然保留。然后，即使在低质量的jpeg图像上，如果某些亮度信息仍然存在，视网膜也能够重建一个合适的视觉信号。这种配置也适用于高动态范围("
+  },
+  {
+    "origin": "HDR",
+    "local": "HDR公司"
+  },
+  {
+    "origin": ") images compression to 8bit images as discussed in",
+    "local": ")将图像压缩为8位图像，如中所述"
+  },
+  {
+    "origin": "and in the demonstration codes discussed below. As shown at the end of the page, parameter changes from defaults are :",
+    "local": "在下面讨论的演示代码中。如页面末尾所示，默认参数的更改如下："
+  },
+  {
+    "origin": "photoreceptorsLocalAdaptationSensitivity=ganglioncellsSensitivity=0.89.",
+    "local": "光感受器自适应灵敏度=神经节细胞灵敏度=0.89。"
+  },
+  {
+    "origin": "the retina foveal model applied on the entire image with 'naturalness' parameters. Here contours are enforced but halo effects are avoided with this configuration, horizontalCellsGain is 0.3 and photoreceptorsLocalAdaptationSensitivity=ganglioncellsSensitivity=0.89.",
+    "local": "视网膜中心凹模型应用于具有“自然度”参数的整个图像。在这里轮廓是强制的，但光晕效应是避免与此配置，水平细胞增益是0.3和光感受器自适应灵敏度=神经节细胞灵敏度=0.89。"
+  },
+  {
+    "origin": "As observed in this preliminary demo, the retina can be settled up with various parameters, by default, as shown on the figure above, the retina strongly reduces mean luminance energy and enforces all details of the visual scene. Luminance energy and halo effects can be modulated (exaggerated to cancelled as shown on the two examples). In order to use your own parameters, you can use at least one time the",
+    "local": "正如在这个初步演示中所观察到的，视网膜可以用各种参数来确定，默认情况下，如上图所示，视网膜强烈地降低了平均亮度能量并加强了视觉场景的所有细节。亮度能量和光晕效果可以被调制（如两个例子所示，被放大到被取消）。为了使用自己的参数，您至少可以使用"
+  },
+  {
+    "origin": "write(String fs)",
+    "local": "写入（字符串fs）"
+  },
+  {
+    "origin": "method which will write a proper XML file with all default parameters. Then, tweak it on your own and reload them at any time using method",
+    "local": "方法，该方法将使用所有默认参数编写正确的XML文件。然后，自己调整它，并随时使用方法重新加载它们"
+  },
+  {
+    "origin": "setup(String fs)",
+    "local": "设置（字符串fs）"
+  },
+  {
+    "origin": ". These methods update a",
+    "local": ". 这些方法更新了"
+  },
+  {
+    "origin": "Retina::RetinaParameters",
+    "local": "视网膜：：视网膜参数"
+  },
+  {
+    "origin": "member structure that is described hereafter. XML parameters file samples are shown at the end of the page.",
+    "local": "下文所述的构件结构。XML参数文件示例显示在页面末尾。"
+  },
+  {
+    "origin": "Tone mapping processing capability using the Parvocellular pathway (parvo retina output)",
+    "local": "使用微小细胞通路（微小视网膜输出）的色调映射处理能力"
+  },
+  {
+    "origin": "This retina model naturally handles luminance range compression. Local adaptation stages and spectral whitening contribute to luminance range compression. In addition, high frequency noise that often corrupts tone mapped images is removed at early stages of the process thus leading to natural perception and noise free tone mapping.",
+    "local": "这种视网膜模型自然处理亮度范围压缩。局部适应阶段和光谱白化有助于亮度范围压缩。此外，高频噪声往往会破坏色调映射图像是在早期阶段的过程中删除，从而导致自然感知和无噪声色调映射。"
+  },
+  {
+    "origin": "Compared to the demos shown above, setup differences are the following ones: (see bioinspired/samples/OpenEXRimages_HDR_Retina_toneMapping.cpp for more details)",
+    "local": "与上面显示的演示相比，设置差异如下：（有关详细信息，请参阅bioinsived/samples/OpenEXRimages\\u HDR\\u Retina\\u toneMapping.cpp）"
+  },
+  {
+    "origin": "load HDR images (OpenEXR format is supported by OpenCV) and cut histogram borders at ~5% and 95% to eliminate salt&amp;pepper like pixel's corruption.",
+    "local": "加载HDR图像（OpenCV支持OpenEXR格式）并以~5%和95%的比例剪切直方图边框以消除salt&amp；胡椒像像素的腐败。"
+  },
+  {
+    "origin": "apply retina with default parameters along with the following changes (generic parameters used for the presented illustrations of the section) :",
+    "local": "使用默认参数应用retina，并进行以下更改（用于本节图示的通用参数）："
+  },
+  {
+    "origin": "localAdaptation_photoreceptors=0.99 (a little higher than default value to enforce local adaptation)",
+    "local": "localAdaptation\\u photoreceptors=0.99（略高于默认值以强制本地自适应）"
+  },
+  {
+    "origin": "localAdaptation_Gcells=0.95 (also slightly higher than default for local adaptation enforcement)",
+    "local": "localadaption_Gcells=0.95（也略高于本地自适应强制的默认值）"
+  },
+  {
+    "origin": "get the parvo output using the",
+    "local": "使用"
+  },
+  {
+    "origin": "getParvo()",
+    "local": "getParvo（）"
+  },
+  {
+    "origin": "method.",
+    "local": "方法。"
+  },
+  {
+    "origin": "Have a look at the end of this page to see how to specify these parameters in a configuration file.",
+    "local": "查看本页末尾，了解如何在配置文件中指定这些参数。"
+  },
+  {
+    "origin": "The following two illustrations show the effect of such configuration on 2 image samples.",
+    "local": "以下两个插图显示了这种配置对2个图像样本的影响。"
+  },
+  {
+    "origin": "HDR image tone mapping example with generic parameters. Original image comes from http://openexr.com/ samples (openexr-images-1.7.0/ScanLines/CandleGlass.exr)",
+    "local": "具有通用参数的HDR图像色调映射示例。原始图像来自http://openexr.com/ 示例（openexr-images-1.7.0/ScanLines/CandleGlass.exr）"
+  },
+  {
+    "origin": "HDR image tone mapping example with the same generic parameters. Original image comes from http://www.pauldebevec.com/Research/HDR/memorial.exr)",
+    "local": "HDR图像色调映射示例，具有相同的通用参数。原始图像来自http://www.pauldebevec.com/Research/HDR/memorial.exr)"
+  },
+  {
+    "origin": "Motion and event detection using the Magnocellular pathway (magno retina output)",
+    "local": "运动和事件检测使用大细胞途径（大视网膜输出）"
+  },
+  {
+    "origin": "Spatio-temporal events can be easily detected using",
+    "local": "时空事件可以很容易地检测到使用"
+  },
+  {
+    "origin": "magno",
+    "local": "震级"
+  },
+  {
+    "origin": "output of the retina (use the",
+    "local": "视网膜输出（使用"
+  },
+  {
+    "origin": "getMagno()",
+    "local": "getMagno（）"
+  },
+  {
+    "origin": "method). Its energy linearly increases with motion speed. An event blob detector is proposed with the TransientAreasSegmentationModule class also provided in the bioinspired module. The basic idea is to detect local energy drops with regard of the neighborhood and then to apply a threshold. Such process has been used in a bag of words description of videos on the TRECVid challenge",
+    "local": "方法）。它的能量随运动速度线性增加。提出了一种事件blob检测器，并在biospired模块中提供了transientreasegmentationmodule类。其基本思想是检测邻域的局部能量下降，然后应用一个阈值。这样的过程已经被用在TRECVid挑战赛视频的文字描述中"
+  },
+  {
+    "origin": "and only allows video frames description on transient areas.",
+    "local": "并且只允许对瞬态区域进行视频帧描述。"
+  },
+  {
+    "origin": "We present here some illustrations of the retina outputs on some examples taken from",
+    "local": "我们在这里给出了一些视网膜输出的例子，这些例子取自"
+  },
+  {
+    "origin": "http://changedetection.net/",
+    "local": "http://changedetection.net/"
+  },
+  {
+    "origin": "with RGB and thermal videos.",
+    "local": "与RGB和热视频。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "here, we use the default retina setup that generates halos around strong edges. Note that temporal constants allow a temporal effect to be visible on moting objects (useful for still image illustrations of a video). Halos can be removed by increasing retina Hcells gain while temporal effects can be reduced by decreasing temporal constant values. Also take into account that the two retina outputs are rescaled in range [0:255] such that magno output can show a lot of \"noise\" when nothing moves while drawing it. However, its energy remains low if you retrieve it using",
+    "local": "在这里，我们使用默认的视网膜设置，在强边周围生成光晕。注意，时间常数允许时间效果在运动对象上可见（对于视频的静止图像插图有用）。光晕可以通过增加视网膜细胞的增益来消除，而时间效应可以通过减少时间常数来减少。还要考虑到两个视网膜输出在[0:255]范围内重新缩放，这样magno输出在绘制时没有任何移动时会显示大量“噪声”。但是，如果你使用"
+  },
+  {
+    "origin": "getMagnoRAW",
+    "local": "getMagnoRAW公司"
+  },
+  {
+    "origin": "getter instead.",
+    "local": "取而代之的是getter。"
+  },
+  {
+    "origin": "Retina processing on RGB image sequence : example from http://changedetection.net/ (baseline/PETS2006). Parvo enforces static signals but smooths moving persons since they do not remain static from its point of view. Magno channel highligths moving persons, observe the energy mapping on the one on top, partly behind a dark glass.",
+    "local": "RGB图像序列的视网膜处理http://changedetection.net/ （基线/PETS2006）。Parvo强制执行静态信号，但平滑移动的人，因为从它的角度看，他们不保持静态。玛格诺通道高光移动的人，观察能量地图上的一个顶部，部分后面的一个黑暗的玻璃。"
+  },
+  {
+    "origin": "Retina processing on gray levels image sequence : example from http://changedetection.net/ (thermal/park). On such grayscale images, parvo channel enforces contrasts while magno strongly reacts on moving pedestrians",
+    "local": "基于灰度图像序列的视网膜处理http://changedetection.net/ （热/停车）。在这样的灰度图像上，parvo通道增强了对比度，而magno对移动的行人有强烈的反应"
+  },
+  {
+    "origin": "Literature",
+    "local": "文学类"
+  },
+  {
+    "origin": "For more information, refer to the following papers :",
+    "local": "有关更多信息，请参阅以下文件："
+  },
+  {
+    "origin": "Model description :",
+    "local": "型号说明："
+  },
+  {
+    "origin": "Model use in a Bag of Words approach :",
+    "local": "一袋话中的示范用法："
+  },
+  {
+    "origin": "Please have a look at the reference work of Jeanny Herault that you can read in his book :",
+    "local": "请看一下Jeanny Herault的参考著作，你可以在他的书中看到："
+  },
+  {
+    "origin": "This retina filter code includes the research contributions of phd/research colleagues from which code has been redrawn by the author :",
+    "local": "这个视网膜过滤代码包括博士/研究同事的研究贡献，作者从中重新绘制了代码："
+  },
+  {
+    "origin": "take a look at the",
+    "local": "看一看这个"
+  },
+  {
+    "origin": "retinacolor.hpp",
+    "local": "红色.hpp"
+  },
+  {
+    "origin": "module to discover Brice Chaix de Lavarene phD color mosaicing/demosaicing and his reference paper:",
+    "local": "Brice Chaix de Lavarene phD彩色镶嵌/脱色模块及其参考文件："
+  },
+  {
+    "origin": "take a look at",
+    "local": "看一看"
+  },
+  {
+    "origin": "imagelogpolprojection.hpp",
+    "local": "imagelogplortion.htion"
+  },
+  {
+    "origin": "to discover retina spatial log sampling which originates from Barthelemy Durette phd with Jeanny Herault. A Retina / V1 cortex projection is also proposed and originates from Jeanny's discussions. More informations in the above cited Jeanny Heraults's book.",
+    "local": "发现源自Barthelemy Durette博士和Jeanny Herault的视网膜空间对数采样。视网膜/V1皮质投射也被提出，并起源于珍妮的讨论。以上更多信息引用了Jeanny Heraults的书。"
+  },
+  {
+    "origin": "Meylan&amp;al work on HDR tone mapping that is implemented as a specific method within the model :",
+    "local": "Meylan公司；在模型中作为特定方法实现的HDR音调映射的所有工作："
+  },
+  {
+    "origin": "Retina programming interfaces",
+    "local": "视网膜编程接口"
+  },
+  {
+    "origin": "The proposed class allows the",
+    "local": "建议的类允许"
+  },
+  {
+    "origin": "Gipsa",
+    "local": "吉普萨"
+  },
+  {
+    "origin": "(preliminary work) /",
+    "local": "（准备工作）/"
+  },
+  {
+    "origin": "Listic",
+    "local": "李斯特的"
+  },
+  {
+    "origin": "labs retina model to be used. It can be applied on still images, images sequences and video sequences.",
+    "local": "使用实验室视网膜模型。它可以应用于静止图像、图像序列和视频序列。"
+  },
+  {
+    "origin": "Here is an overview of the Retina interface, allocate one instance with the",
+    "local": "下面是Retina接口的概述，用"
+  },
+  {
+    "origin": "Retina::create()",
+    "local": "视网膜：：创建（）"
+  },
+  {
+    "origin": "functions (C++, Java, Python) :",
+    "local": "函数（C++、java、python）："
+  },
+  {
+    "origin": "Setting up Retina",
+    "local": "建立视网膜"
+  },
+  {
+    "origin": "Managing the configuration file",
+    "local": "管理配置文件"
+  },
+  {
+    "origin": "When using the",
+    "local": "当使用"
+  },
+  {
+    "origin": "Retina::write",
+    "local": "视网膜：：写入"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "Retina::load",
+    "local": "视网膜：：加载"
+  },
+  {
+    "origin": "methods, you create or load a XML file that stores Retina configuration.",
+    "local": "方法创建或加载存储视网膜配置的XML文件。"
+  },
+  {
+    "origin": "The default configuration is presented below.",
+    "local": "默认配置如下所示。"
+  },
+  {
+    "origin": "Here are some words about all those parameters, tweak them as you wish to amplify or moderate retina effects (contours enforcement, halos effects, motion sensitivity, motion blurring, etc.)",
+    "local": "这里有一些关于所有这些参数的话，调整他们，因为你想放大或适度的视网膜效果（轮廓执法，光晕效应，运动敏感性，运动模糊等）"
+  },
+  {
+    "origin": "Basic parameters",
+    "local": "基本参数"
+  },
+  {
+    "origin": "The simplest parameters are as follows :",
+    "local": "最简单的参数如下："
+  },
+  {
+    "origin": "colorMode",
+    "local": "色彩模式"
+  },
+  {
+    "origin": ": let the retina process color information (if 1) or gray scale images (if 0). In that last case, only the first channels of the input will be processed.",
+    "local": "：让视网膜处理颜色信息（如果1）或灰度图像（如果0）。在最后一种情况下，只处理输入的第一个通道。"
+  },
+  {
+    "origin": "normaliseOutput",
+    "local": "正常输出"
+  },
+  {
+    "origin": ": each channel has such parameter: if the value is set to 1, then the considered channel's output is rescaled between 0 and 255. Be aware at this case of the Magnocellular output level (motion/transient channel detection). Residual noise will also be rescaled !",
+    "local": "：每个通道都有这样的参数：如果该值设置为1，则所考虑的通道的输出将在0和255之间重新缩放。在这种情况下，请注意Magnocellular输出电平（运动/瞬态通道检测）。残余噪音也将被重新缩放！"
+  },
+  {
+    "origin": "Note :",
+    "local": "注："
+  },
+  {
+    "origin": "using color requires color channels multiplexing/demultipexing which also demands more processing. You can expect much faster processing using gray levels : it would require around 30 product per pixel for all of the retina processes and it has recently been parallelized for multicore architectures.",
+    "local": "使用彩色需要彩色通道复用/解复用，这也需要更多的处理。您可以期望使用灰度级进行更快的处理：对于所有视网膜处理，每像素大约需要30个产品，而且最近已经针对多核架构进行了并行化。"
+  },
+  {
+    "origin": "Photo-receptors parameters",
+    "local": "光受体参数"
+  },
+  {
+    "origin": "The following parameters act on the entry point of the retina - photo-receptors - and has impact on all of the following processes. These sensors are low pass spatio-temporal filters that smooth temporal and spatial data and also adjust their sensitivity to local luminance,thus, leads to improving details extraction and high frequency noise canceling.",
+    "local": "以下参数作用于视网膜的入口点——光受体——并影响以下所有过程。这些传感器是低通时空滤波器，平滑时间和空间数据，并调整其对局部亮度的敏感性，从而改进细节提取和高频噪声消除。"
+  },
+  {
+    "origin": "photoreceptorsLocalAdaptationSensitivity",
+    "local": "光受体定位适应灵敏度"
+  },
+  {
+    "origin": "between 0 and 1. Values close to 1 allow high luminance log compression's effect at the photo-receptors level. Values closer to 0 provide a more linear sensitivity. Increased alone, it can burn the",
+    "local": "介于0和1之间。接近1的值允许在光受体级别上实现高亮度对数压缩的效果。接近0的值提供更为线性的灵敏度。单独增加，它可以燃烧"
+  },
+  {
+    "origin": "Parvo (details channel)",
+    "local": "愚蠢（细节频道）"
+  },
+  {
+    "origin": "output image. If adjusted in collaboration with",
+    "local": "输出图像。如果协同调整"
+  },
+  {
+    "origin": "ganglionCellsSensitivity",
+    "local": "神经节细胞敏感性"
+  },
+  {
+    "origin": ",images can be very contrasted whatever the local luminance there is... at the cost of a naturalness decrease.",
+    "local": "，无论局部亮度如何，图像的对比度都非常高。。。以自然度下降为代价。"
+  },
+  {
+    "origin": "photoreceptorsTemporalConstant",
+    "local": "光感受器时间常数"
+  },
+  {
+    "origin": "this setups the temporal constant of the low pass filter effect at the entry of the retina. High value leads to strong temporal smoothing effect : moving objects are blurred and can disappear while static object are favored. But when starting the retina processing, stable state is reached later.",
+    "local": "这就在视网膜的入口处设置了低通滤波效应的时间常数。高值会产生很强的时间平滑效果：移动对象会变得模糊，并且会消失，而静态对象则会受到青睐。但当视网膜开始加工时，稳定状态会在以后达到。"
+  },
+  {
+    "origin": "photoreceptorsSpatialConstant",
+    "local": "光感受器空间常数"
+  },
+  {
+    "origin": "specifies the spatial constant related to photo-receptors' low pass filter's effect. Those parameters specify the minimum value of the spatial signal period allowed in what follows. Typically, this filter should cut high frequency noise. On the other hand, a 0 value cuts none of the noise while higher values start to cut high spatial frequencies, and progressively lower frequencies... Be aware to not go to high levels if you want to see some details of the input images ! A good compromise for color images is a 0.53 value since such choice won't affect too much the color spectrum. Higher values would lead to gray and blurred output images.",
+    "local": "指定与光接收器的低通滤波器效果相关的空间常数。这些参数指定了以下内容中允许的空间信号周期的最小值。通常情况下，该滤波器应能抑制高频噪声。另一方面，0值不削减任何噪声，而较高的值开始削减高空间频率，并逐步降低频率。。。如果您想查看输入图像的一些细节，请注意不要转到高级别！对于彩色图像来说，一个很好的折衷值是0.53，因为这样的选择不会对颜色光谱产生太大的影响。较高的值将导致输出图像的灰度和模糊。"
+  },
+  {
+    "origin": "Horizontal cells parameters",
+    "local": "水平单元格参数"
+  },
+  {
+    "origin": "This parameter set tunes the neural network connected to the photo-receptors, the horizontal cells. It modulates photo-receptors sensitivity and completes the processing for final spectral whitening (part of the spatial band pass effect thus favoring visual details enhancement).",
+    "local": "这个参数集调整与光受体（水平细胞）相连的神经网络。它调节光受体的灵敏度并完成最终光谱白化的处理（空间带通效应的一部分，因此有利于视觉细节增强）。"
+  },
+  {
+    "origin": "horizontalCellsGain",
+    "local": "水平单元格"
+  },
+  {
+    "origin": "here is a critical parameter ! If you are not interested with the mean luminance and want just to focus on details enhancement, then, set this parameterto zero. However, if you want to keep some environment luminance's data, let some low spatial frequencies pass into the system and set a higher value (&lt;1).",
+    "local": "这是一个关键参数！如果您对平均亮度不感兴趣，只想关注细节增强，那么将此参数设置为零。但是，如果要保留某些环境亮度的数据，请将一些较低的空间频率传入系统并设置较高的值（&lt；1)."
+  },
+  {
+    "origin": "hcellsTemporalConstant",
+    "local": "HcellsteTemporalConstant公司"
+  },
+  {
+    "origin": "similar to photo-receptors, this parameter acts on the temporal constant of a low pass temporal filter that smoothes input data. Here, a high value generates a high retina after effect while a lower value makes the retina more reactive. This value should be lower than",
+    "local": "与光受体类似，该参数作用于平滑输入数据的低通时间滤波器的时间常数。在这里，高值产生高视网膜后效，而低值使视网膜更具反应性。此值应低于"
+  },
+  {
+    "origin": "photoreceptorsTemporalConstant",
+    "local": "光感受器时间常数"
+  },
+  {
+    "origin": "to limit strong retina after effects.",
+    "local": "限制强烈的视网膜后遗症。"
+  },
+  {
+    "origin": "hcellsSpatialConstant",
+    "local": "HCells空间常数"
+  },
+  {
+    "origin": "is the spatial constant of these cells filter's low pass one. It specifies the lowest spatial frequency allowed in what follows. Visually, a high value leads to very low spatial frequencies processing and leads to salient halo effects. Lower values reduce this effect but has the limit of not go lower than the value of",
+    "local": "是这些单元滤波器的低通滤波器的空间常数。它指定了下面允许的最低空间频率。从视觉上看，高值会导致非常低的空间频率处理，并导致显著的光晕效应。较低的值会减少这种影响，但其限制是不低于的值"
+  },
+  {
+    "origin": "photoreceptorsSpatialConstant",
+    "local": "光感受器空间常数"
+  },
+  {
+    "origin": ". Those 2 parameters actually specify the spatial band-pass of the retina.",
+    "local": ". 这两个参数实际上指定了视网膜的空间带通。"
+  },
+  {
+    "origin": "NOTE",
+    "local": "注意"
+  },
+  {
+    "origin": "Once the processing managed by the previous parameters is done, input data is cleaned from noise and luminance is already partly enhanced. The following parameters act on the last processing stages of the two outing retina signals.",
+    "local": "一旦完成了由前一个参数管理的处理，输入数据就会从噪声中清除，亮度已经部分增强。以下参数作用于两个外出视网膜信号的最后处理阶段。"
+  },
+  {
+    "origin": "Parvo (details channel) dedicated parameter",
+    "local": "Parvo（细节通道）专用参数"
+  },
+  {
+    "origin": "ganglionCellsSensitivity",
+    "local": "神经节细胞敏感性"
+  },
+  {
+    "origin": "specifies the strength of the final local adaptation occurring at the output of this details' dedicated channel. Parameter values remain between 0 and 1. Low value tend to give a linear response while higher values enforce the remaining low contrasted areas.",
+    "local": "指定在该细节的专用通道的输出处发生的最终本地适配的强度。参数值保持在0和1之间。较低的值倾向于提供线性响应，而较高的值强制执行其余的低对比度区域。"
+  },
+  {
+    "origin": "Note :",
+    "local": "注："
+  },
+  {
+    "origin": "this parameter can correct eventual burned images by favoring low energetic details of the visual scene, even in bright areas.",
+    "local": "这个参数可以通过支持视觉场景的低能量细节来校正最终烧毁的图像，即使在明亮的区域也是如此。"
+  },
+  {
+    "origin": "IPL Magno (motion/transient channel) parameters",
+    "local": "IPL Magno（运动/瞬态通道）参数"
+  },
+  {
+    "origin": "Once image's information are cleaned, this channel acts as a high pass temporal filter that selects only the signals related to transient signals (events, motion, etc.). A low pass spatial filter smoothes extracted transient data while a final logarithmic compression enhances low transient events thus enhancing event sensitivity.",
+    "local": "一旦图像信息被清除，这个通道就充当一个高通时间滤波器，它只选择与瞬时信号（事件、运动等）相关的信号。低通空间滤波器平滑提取的瞬态数据，而最终对数压缩增强了低瞬态事件，从而提高了事件敏感性。"
+  },
+  {
+    "origin": "parasolCells_beta",
+    "local": "副细胞β"
+  },
+  {
+    "origin": "parasolCells_tau",
+    "local": "副嗅细胞"
+  },
+  {
+    "origin": "the temporal smoothing effect that can be added",
+    "local": "可以添加的时间平滑效果"
+  },
+  {
+    "origin": "parasolCells_k",
+    "local": "副嗅细胞"
+  },
+  {
+    "origin": "the spatial constant of the spatial filtering effect, set it at a high value to favor low spatial frequency signals that are lower subject for residual noise.",
+    "local": "空间滤波效果的空间常数，将其设置为一个较高的值，以利于低空间频率的信号，这是残余噪声较低的主题。"
+  },
+  {
+    "origin": "amacrinCellsTemporalCutFrequency",
+    "local": "无长时间余频"
+  },
+  {
+    "origin": "specifies the temporal constant of the high pass filter. High values let slow transient events to be selected.",
+    "local": "指定高通滤波器的时间常数。高值允许选择缓慢的瞬态事件。"
+  },
+  {
+    "origin": "V0CompressionParameter",
+    "local": "V0压缩参数"
+  },
+  {
+    "origin": "specifies the strength of the log compression. Similar behaviors to previous description but here enforces sensitivity of transient events.",
+    "local": "指定原木压缩的强度。类似于前面描述的行为，但这里加强了瞬态事件的敏感性。"
+  },
+  {
+    "origin": "localAdaptintegration_tau",
+    "local": "本地自适应集成\\u tau"
+  },
+  {
+    "origin": "generally set to 0, has no real use actually in here.",
+    "local": "一般设置为0，在这里实际没有什么用处。"
+  },
+  {
+    "origin": "localAdaptintegration_k",
+    "local": "本地自适应集成"
+  },
+  {
+    "origin": "specifies the size of the area on which local adaptation is performed. Low values lead to short range local adaptation (higher sensitivity to noise), high values secure log compression.",
+    "local": "指定执行局部自适应的区域的大小。低值导致短距离局部适应（对噪声更敏感），高值安全日志压缩。"
+  },
+  {
+    "origin": "Demos and experiments !",
+    "local": "演示和实验！"
+  },
+  {
+    "origin": "First time experiments",
+    "local": "首次实验"
+  },
+  {
+    "origin": "Here are some code snippets to shortly show how to use Retina with default parameters (with halo effects). Next section redirects to more complete demos provided with the main retina class.",
+    "local": "下面是一些代码片段，简要介绍如何使用带有默认参数的Retina（带有光晕效果）。下一节将重定向到主retina类提供的更完整的演示。"
+  },
+  {
+    "origin": "Here is presented how to process a webcam stream with the following steps :",
+    "local": "下面介绍如何通过以下步骤处理网络摄像头流："
+  },
+  {
+    "origin": "load a frist input image to get its size",
+    "local": "加载第一个输入图像以获取其大小"
+  },
+  {
+    "origin": "allocate a retina instance with appropriate input size",
+    "local": "分配一个具有适当输入大小的retina实例"
+  },
+  {
+    "origin": "loop over grabbed frames :",
+    "local": "在抓取的帧上循环："
+  },
+  {
+    "origin": "grab a new frame",
+    "local": "抓住一个新的框架"
+  },
+  {
+    "origin": "run on a frame",
+    "local": "在框架上运行"
+  },
+  {
+    "origin": "call the two output getters",
+    "local": "调用两个输出getter"
+  },
+  {
+    "origin": "display retina outputs",
+    "local": "显示视网膜输出"
+  },
+  {
+    "origin": "C++ version (see bioinspired/samples/basicRetina.cpp) :",
+    "local": "C++版本（参见BioSimult/Simult/Basic视网膜）"
+  },
+  {
+    "origin": "Compile this C++ code with the following command :",
+    "local": "用以下命令编译此C++代码："
+  },
+  {
+    "origin": "Python version",
+    "local": "Python版本"
+  },
+  {
+    "origin": "More complete demos",
+    "local": "更完整的演示"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Complementary to the following examples, have a look at the Retina tutorial in the tutorial/contrib section for complementary explanations.**",
+    "local": "作为对以下示例的补充，请查看tutorial/contrib部分中的Retina教程以获取补充说明**"
+  },
+  {
+    "origin": "Take a look at the provided C++ examples provided with OpenCV :",
+    "local": "看一下OpenCV提供的C++实例："
+  },
+  {
+    "origin": "samples/cpp/retinademo.cpp",
+    "local": "示例/cpp/retinademo.cpp"
+  },
+  {
+    "origin": "shows how to use the retina module for details enhancement (Parvo channel output) and transient maps observation (Magno channel output). You can play with images, video sequences and webcam video. Typical uses are (provided your OpenCV installation is situated in folder",
+    "local": "演示如何使用视网膜模块进行细节增强（细小通道输出）和瞬态图观察（磁振通道输出）。您可以播放图像、视频序列和网络摄像头视频。典型的用途是（前提是您的OpenCV安装位于文件夹中）"
+  },
+  {
+    "origin": "OpenCVReleaseFolder",
+    "local": "打开CVReleaseFolder"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "image processing :",
+    "local": "图像处理："
+  },
+  {
+    "origin": "OpenCVReleaseFolder/bin/retinademo -image myPicture.jpg",
+    "local": "OpenCVReleaseFolder/bin/retinademo-image myPicture.jpg"
+  },
+  {
+    "origin": "video processing :",
+    "local": "视频处理："
+  },
+  {
+    "origin": "OpenCVReleaseFolder/bin/retinademo -video myMovie.avi",
+    "local": "OpenCVReleaseFolder/bin/retinademo-视频myMovie.avi"
+  },
+  {
+    "origin": "webcam processing:",
+    "local": "网络摄像头处理："
+  },
+  {
+    "origin": "OpenCVReleaseFolder/bin/retinademo -video",
+    "local": "OpenCVReleaseFolder/bin/retinademo-视频"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "This demo generates the file",
+    "local": "此演示生成文件"
+  },
+  {
+    "origin": "RetinaDefaultParameters.xml",
+    "local": "RetinaDefaultParameters.xml文件"
+  },
+  {
+    "origin": "which contains the default parameters of the retina. Then, rename this as",
+    "local": "包含视网膜的默认参数。然后，将其重命名为"
+  },
+  {
+    "origin": "RetinaSpecificParameters.xml",
+    "local": "具体参数"
+  },
+  {
+    "origin": ", adjust the parameters the way you want and reload the program to check the effect.",
+    "local": "，按所需方式调整参数并重新加载程序以检查效果。"
+  },
+  {
+    "origin": "samples/cpp/OpenEXRimages_HDR_Retina_toneMapping.cpp",
+    "local": "示例/cpp/OpenEXRimages\\u HDR\\u Retina\\u toneMapping.cpp"
+  },
+  {
+    "origin": "shows how to use the retina to perform High Dynamic Range (HDR) luminance compression",
+    "local": "演示如何使用视网膜执行高动态范围（HDR）亮度压缩"
+  },
+  {
+    "origin": "Then, take a HDR image using bracketing with your camera and generate an OpenEXR image and then process it using the demo.",
+    "local": "然后，使用相机的支架拍摄HDR图像，生成OpenEXR图像，然后使用演示进行处理。"
+  },
+  {
+    "origin": "Typical use, assuming that you have the OpenEXR image such as",
+    "local": "典型用法，假设您拥有OpenEXR图像，例如"
+  },
+  {
+    "origin": "memorial.exr",
+    "local": "纪念.exr"
+  },
+  {
+    "origin": "(present in the samples/cpp/ folder)",
+    "local": "（位于samples/cpp/文件夹中）"
+  },
+  {
+    "origin": "OpenCVReleaseFolder/bin/OpenEXRimages_HDR_Retina_toneMapping memorial.exr [optional: 'fast']",
+    "local": "OpenCVReleaseFolder/bin/OpenEXRimages\\u HDR\\u Retina\\u toneMapping memorial.exr[可选：'快速']"
+  },
+  {
+    "origin": "Note that some sliders are made available to allow you to play with luminance compression.",
+    "local": "请注意，某些滑块可用于播放亮度压缩。"
+  },
+  {
+    "origin": "If not using the 'fast' option, then, tone mapping is performed using the full retina model",
+    "local": "如果不使用“快速”选项，则使用全视网膜模型执行色调映射"
+  },
+  {
+    "origin": ". It includes spectral whitening that allows luminance energy to be reduced. When using the 'fast' option, a simpler method is used, it is an adaptation of the algorithm presented in",
+    "local": ". 它包括允许亮度能量降低的光谱白化。在使用“快速”选项时，使用了一种更简单的方法，它是对中所示算法的一种调整"
+  },
+  {
+    "origin": ". This method also gives good results and it is faster to process but it sometimes requires some more parameters adjustement.",
+    "local": ". 这种方法也给出了很好的结果，处理速度更快，但有时需要更多的参数调整。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

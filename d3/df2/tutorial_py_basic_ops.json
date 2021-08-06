@@ -1,0 +1,298 @@
+[
+  {
+    "origin": "OpenCV: Basic Operations on Images",
+    "local": "OpenCV：图像的基本操作"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Basic Operations on Images",
+    "local": "图像的基本操作"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "Learn to:",
+    "local": "学会："
+  },
+  {
+    "origin": "Access pixel values and modify them",
+    "local": "访问像素值并修改它们"
+  },
+  {
+    "origin": "Access image properties",
+    "local": "访问图像属性"
+  },
+  {
+    "origin": "Set a Region of Interest (ROI)",
+    "local": "设置感兴趣区域（ROI）"
+  },
+  {
+    "origin": "Split and merge images",
+    "local": "拆分和合并图像"
+  },
+  {
+    "origin": "Almost all the operations in this section are mainly related to Numpy rather than OpenCV. A good knowledge of Numpy is required to write better optimized code with OpenCV.",
+    "local": "本节中几乎所有的操作都主要与Numpy相关，而不是OpenCV。要使用OpenCV编写更好的优化代码，需要对Numpy有很好的了解。"
+  },
+  {
+    "origin": "*( Examples will be shown in a Python terminal, since most of them are just single lines of code )*",
+    "local": "*（示例将在Python终端中显示，因为大多数示例只是单行代码）*"
+  },
+  {
+    "origin": "Accessing and Modifying pixel values",
+    "local": "访问和修改像素值"
+  },
+  {
+    "origin": "Let's load a color image first:",
+    "local": "先加载彩色图像："
+  },
+  {
+    "origin": "You can access a pixel value by its row and column coordinates. For BGR image, it returns an array of Blue, Green, Red values. For grayscale image, just corresponding intensity is returned.",
+    "local": "可以通过像素的行和列坐标来访问像素值。对于BGR图像，它返回一个蓝色、绿色和红色值的数组。对于灰度图像，只返回相应的强度。"
+  },
+  {
+    "origin": "You can modify the pixel values the same way.",
+    "local": "可以用相同的方法修改像素值。"
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "Numpy is an optimized library for fast array calculations. So simply accessing each and every pixel value and modifying it will be very slow and it is discouraged.",
+    "local": "Numpy是一个用于快速数组计算的优化库。因此，简单地访问每一个像素值和修改它将是非常缓慢的，这是不鼓励的。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "The above method is normally used for selecting a region of an array, say the first 5 rows and last 3 columns. For individual pixel access, the Numpy array methods, array.item() and array.itemset() are considered better. They always return a scalar, however, so if you want to access all the B,G,R values, you will need to call array.item() separately for each value.",
+    "local": "上面的方法通常用于选择数组的区域，例如前5行和后3列。对于单个像素访问，Numpy数组方法array.item（）和array.itemset（）被认为是更好的方法。但是，它们总是返回标量，因此如果要访问所有B、G、R值，则需要分别为每个值调用array.item（）。"
+  },
+  {
+    "origin": "Better pixel accessing and editing method :",
+    "local": "更好的像素访问和编辑方法："
+  },
+  {
+    "origin": "Accessing Image Properties",
+    "local": "访问图像属性"
+  },
+  {
+    "origin": "Image properties include number of rows, columns, and channels; type of image data; number of pixels; etc.",
+    "local": "图像属性包括行数、列数和通道数；图像数据类型；像素数；等。"
+  },
+  {
+    "origin": "The shape of an image is accessed by img.shape. It returns a tuple of the number of rows, columns, and channels (if the image is color):",
+    "local": "图像的形状由img.shape访问。它返回行、列和通道数的元组（如果图像是彩色的）："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "If an image is grayscale, the tuple returned contains only the number of rows and columns, so it is a good method to check whether the loaded image is grayscale or color.",
+    "local": "如果图像是灰度的，则返回的元组只包含行数和列数，因此检查加载的图像是灰度的还是彩色的是一种很好的方法。"
+  },
+  {
+    "origin": "Total number of pixels is accessed by",
+    "local": "访问的像素总数"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Image datatype is obtained by `img.dtype`:",
+    "local": "图像数据类型由“img.dtype”获得："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "img.dtype is very important while debugging because a large number of errors in OpenCV-Python code are caused by invalid datatype.",
+    "local": "调试时img.dtype非常重要，因为OpenCV Python代码中的大量错误都是由无效的数据类型引起的。"
+  },
+  {
+    "origin": "Image ROI",
+    "local": "图像ROI"
+  },
+  {
+    "origin": "Sometimes, you will have to play with certain regions of images. For eye detection in images, first face detection is done over the entire image. When a face is obtained, we select the face region alone and search for eyes inside it instead of searching the whole image. It improves accuracy (because eyes are always on faces :D ) and performance (because we search in a small area).",
+    "local": "有时，你需要处理图像的某些区域。对于图像中的眼睛检测，首先对整个图像进行人脸检测。当得到一张人脸时，我们选择单独的人脸区域并搜索其中的眼睛，而不是搜索整个图像。它提高了精确度（因为眼睛总是盯着脸：D）和性能（因为我们在一个小区域内搜索）。"
+  },
+  {
+    "origin": "ROI is again obtained using Numpy indexing. Here I am selecting the ball and copying it to another region in the image:",
+    "local": "使用Numpy索引再次获得ROI。在这里，我选择球并将其复制到图像中的另一个区域："
+  },
+  {
+    "origin": "Check the results below:",
+    "local": "检查以下结果："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Splitting and Merging Image Channels",
+    "local": "分割和合并图像通道"
+  },
+  {
+    "origin": "Sometimes you will need to work separately on the B,G,R channels of an image. In this case, you need to split the BGR image into single channels. In other cases, you may need to join these individual channels to create a BGR image. You can do this simply by:",
+    "local": "有时您需要分别处理图像的B、G、R通道。在这种情况下，您需要将BGR映像拆分为单个通道。在其他情况下，您可能需要加入这些单独的通道来创建BGR映像。您可以简单地通过以下方式实现："
+  },
+  {
+    "origin": "Or",
+    "local": "或者"
+  },
+  {
+    "origin": "Suppose you want to set all the red pixels to zero - you do not need to split the channels first. Numpy indexing is faster:",
+    "local": "假设您想将所有红色像素设置为零-您不需要首先分割通道。Numpy索引速度更快："
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "is a costly operation (in terms of time). So use it only if necessary. Otherwise go for Numpy indexing.",
+    "local": "是一项代价高昂的行动（就时间而言）。所以只有在必要的时候才使用。否则去Numpy索引。"
+  },
+  {
+    "origin": "Making Borders for Images (Padding)",
+    "local": "为图像制作边框（填充）"
+  },
+  {
+    "origin": "If you want to create a border around an image, something like a photo frame, you can use",
+    "local": "如果要在图像周围创建边框，例如相框，可以使用"
+  },
+  {
+    "origin": ". But it has more applications for convolution operation, zero padding etc. This function takes following arguments:",
+    "local": ". 但它在卷积运算、零填充等方面有更多的应用。此函数采用以下参数："
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "- input image",
+    "local": "-输入图像"
+  },
+  {
+    "origin": "top",
+    "local": "顶部"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "bottom",
+    "local": "底部"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "left",
+    "local": "左边"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "right",
+    "local": "正确的"
+  },
+  {
+    "origin": "- border width in number of pixels in corresponding directions",
+    "local": "-以相应方向上的像素数表示的边框宽度"
+  },
+  {
+    "origin": "borderType",
+    "local": "桌子"
+  },
+  {
+    "origin": "- Flag defining what kind of border to be added. It can be following types:",
+    "local": "-定义要添加的边框类型的标志。可以是以下类型："
+  },
+  {
+    "origin": "- Adds a constant colored border. The value should be given as next argument.",
+    "local": "-添加恒定的彩色边框。该值应作为下一个参数给出。"
+  },
+  {
+    "origin": "- Border will be mirror reflection of the border elements, like this :",
+    "local": "-边框将是边框元素的镜像，如下所示："
+  },
+  {
+    "origin": "fedcba|abcdefgh|hgfedcb",
+    "local": "联邦通信局124；abcdefgh"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "- Same as above, but with a slight change, like this :",
+    "local": "-同上，但略有变化，如下所示："
+  },
+  {
+    "origin": "gfedcb|abcdefgh|gfedcba",
+    "local": "gfedcb.abcdefgh.gfedcba文件"
+  },
+  {
+    "origin": "- Last element is replicated throughout, like this:",
+    "local": "-最后一个元素被复制，如下所示："
+  },
+  {
+    "origin": "aaaaaa|abcdefgh|hhhhhhh",
+    "local": "aaaaaaaa-124abcdefgh-124hhhhhhhhhh"
+  },
+  {
+    "origin": "- Can't explain, it will look like this :",
+    "local": "-无法解释，它看起来是这样的："
+  },
+  {
+    "origin": "cdefgh|abcdefgh|abcdefg",
+    "local": "cdefgh[UNK]cdefgh[UNK]cdefg"
+  },
+  {
+    "origin": "value",
+    "local": "价值"
+  },
+  {
+    "origin": "- Color of border if border type is",
+    "local": "-边框类型为时边框的颜色"
+  },
+  {
+    "origin": "Below is a sample code demonstrating all these border types for better understanding:",
+    "local": "下面是一个示例代码，演示了所有这些边框类型，以便更好地理解："
+  },
+  {
+    "origin": "See the result below. (Image is displayed with matplotlib. So RED and BLUE channels will be interchanged):",
+    "local": "请参见下面的结果(图像用matplotlib显示。因此，红色和蓝色通道将互换）："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Additional Resources",
+    "local": "额外资源"
+  },
+  {
+    "origin": "Exercises",
+    "local": "练习"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

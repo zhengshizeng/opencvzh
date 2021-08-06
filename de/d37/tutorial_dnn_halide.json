@@ -1,0 +1,206 @@
+[
+  {
+    "origin": "OpenCV: How to enable Halide backend for improve efficiency",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "How to enable Halide backend for improve efficiency",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Dmitry Kurtaev",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial guidelines how to run your models in OpenCV deep learning module using Halide language backend. Halide is an open-source project that let us write image processing algorithms in well-readable format, schedule computations according to specific device and evaluate it with a quite good efficiency.",
+    "local": ""
+  },
+  {
+    "origin": "An official website of the Halide project:",
+    "local": ""
+  },
+  {
+    "origin": "http://halide-lang.org/",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "An up to date efficiency comparison:",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/opencv/opencv/wiki/DNN-Efficiency",
+    "local": ""
+  },
+  {
+    "origin": "Requirements",
+    "local": ""
+  },
+  {
+    "origin": "LLVM compiler",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "LLVM compilation might take a long time.",
+    "local": ""
+  },
+  {
+    "origin": "Download LLVM source code from",
+    "local": ""
+  },
+  {
+    "origin": "http://releases.llvm.org/4.0.0/llvm-4.0.0.src.tar.xz",
+    "local": ""
+  },
+  {
+    "origin": ". Unpack it. Let",
+    "local": ""
+  },
+  {
+    "origin": "llvm_root",
+    "local": ""
+  },
+  {
+    "origin": "is a root directory of source code.",
+    "local": ""
+  },
+  {
+    "origin": "Create directory",
+    "local": ""
+  },
+  {
+    "origin": "llvm_root",
+    "local": ""
+  },
+  {
+    "origin": "/tools/clang",
+    "local": ""
+  },
+  {
+    "origin": "Download Clang with the same version as LLVM. In our case it will be from",
+    "local": ""
+  },
+  {
+    "origin": "http://releases.llvm.org/4.0.0/cfe-4.0.0.src.tar.xz",
+    "local": ""
+  },
+  {
+    "origin": ". Unpack it into",
+    "local": ""
+  },
+  {
+    "origin": "llvm_root",
+    "local": ""
+  },
+  {
+    "origin": "/tools/clang. Note that it should be a root for Clang source code.",
+    "local": ""
+  },
+  {
+    "origin": "Build LLVM on Linux",
+    "local": ""
+  },
+  {
+    "origin": "Build LLVM on Windows (Developer Command Prompt)",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "are different directories.",
+    "local": ""
+  },
+  {
+    "origin": "Halide language.",
+    "local": ""
+  },
+  {
+    "origin": "Download source code from GitHub repository,",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/halide/Halide",
+    "local": ""
+  },
+  {
+    "origin": "or using git. The root directory will be a",
+    "local": ""
+  },
+  {
+    "origin": "halide_root",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Build Halide on Linux",
+    "local": ""
+  },
+  {
+    "origin": "Build Halide on Windows (Developer Command Prompt)",
+    "local": ""
+  },
+  {
+    "origin": "Build OpenCV with Halide backend",
+    "local": ""
+  },
+  {
+    "origin": "When you build OpenCV add the following configuration flags:",
+    "local": ""
+  },
+  {
+    "origin": "- enable Halide linkage",
+    "local": ""
+  },
+  {
+    "origin": "- path to Halide build directory",
+    "local": ""
+  },
+  {
+    "origin": "Set Halide as a preferable backend",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

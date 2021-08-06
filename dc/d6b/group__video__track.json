@@ -1,0 +1,2538 @@
+[
+  {
+    "origin": "OpenCV: Object Tracking",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Object Tracking",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "DIS optical flow algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Class computing a dense optical flow using the Gunnar Farneback's algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Kalman filter class.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Base interface for sparse optical flow algorithms.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Class used for calculating a sparse optical flow.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Base abstract class for the long-term tracker.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "the GOTURN (Generic Object Tracking Using Regression Networks) tracker",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "The MIL algorithm trains a classifier in an online manner to separate the object from the background.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Variational optical flow refinement.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img,",
+    "local": ""
+  },
+  {
+    "origin": "pyramid,",
+    "local": ""
+  },
+  {
+    "origin": "winSize, int maxLevel, bool withDerivatives=true, int pyrBorder=",
+    "local": ""
+  },
+  {
+    "origin": ", int derivBorder=",
+    "local": ""
+  },
+  {
+    "origin": ", bool tryReuseInputImage=true)",
+    "local": ""
+  },
+  {
+    "origin": "Constructs the image pyramid which can be passed to calcOpticalFlowPyrLK.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "prev,",
+    "local": ""
+  },
+  {
+    "origin": "next,",
+    "local": ""
+  },
+  {
+    "origin": "flow, double pyr_scale, int levels, int winsize, int iterations, int poly_n, double poly_sigma, int flags)",
+    "local": ""
+  },
+  {
+    "origin": "Computes a dense optical flow using the Gunnar Farneback's algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "prevImg,",
+    "local": ""
+  },
+  {
+    "origin": "nextImg,",
+    "local": ""
+  },
+  {
+    "origin": "prevPts,",
+    "local": ""
+  },
+  {
+    "origin": "nextPts,",
+    "local": ""
+  },
+  {
+    "origin": "status,",
+    "local": ""
+  },
+  {
+    "origin": "err,",
+    "local": ""
+  },
+  {
+    "origin": "winSize=",
+    "local": ""
+  },
+  {
+    "origin": "criteria=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": ", 30, 0.01), int flags=0, double minEigThreshold=1e-4)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates an optical flow for a sparse feature set using the iterative Lucas-Kanade method with pyramids.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "probImage,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;window,",
+    "local": ""
+  },
+  {
+    "origin": "criteria)",
+    "local": ""
+  },
+  {
+    "origin": "Finds an object center, size, and orientation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage,",
+    "local": ""
+  },
+  {
+    "origin": "inputImage,",
+    "local": ""
+  },
+  {
+    "origin": "inputMask=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "Computes the Enhanced Correlation Coefficient value between two images",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, bool fullAffine)",
+    "local": ""
+  },
+  {
+    "origin": "Computes an optimal affine transformation between two 2D point sets.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage,",
+    "local": ""
+  },
+  {
+    "origin": "inputImage,",
+    "local": ""
+  },
+  {
+    "origin": "warpMatrix, int motionType,",
+    "local": ""
+  },
+  {
+    "origin": "criteria,",
+    "local": ""
+  },
+  {
+    "origin": "inputMask, int gaussFiltSize)",
+    "local": ""
+  },
+  {
+    "origin": "Finds the geometric transform (warp) between two images in terms of the ECC criterion",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage,",
+    "local": ""
+  },
+  {
+    "origin": "inputImage,",
+    "local": ""
+  },
+  {
+    "origin": "warpMatrix, int motionType=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "criteria=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "+",
+    "local": ""
+  },
+  {
+    "origin": ", 50, 0.001),",
+    "local": ""
+  },
+  {
+    "origin": "inputMask=",
+    "local": ""
+  },
+  {
+    "origin": "())",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "probImage,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;window,",
+    "local": ""
+  },
+  {
+    "origin": "criteria)",
+    "local": ""
+  },
+  {
+    "origin": "Finds an object on a back projection image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;path)",
+    "local": ""
+  },
+  {
+    "origin": "Read a .flo file.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;path,",
+    "local": ""
+  },
+  {
+    "origin": "flow)",
+    "local": ""
+  },
+  {
+    "origin": "Write a .flo to disk.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Enumeration Type Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "OPTFLOW_USE_INITIAL_FLOW",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.OPTFLOW_USE_INITIAL_FLOW",
+    "local": ""
+  },
+  {
+    "origin": "OPTFLOW_LK_GET_MIN_EIGENVALS",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.OPTFLOW_LK_GET_MIN_EIGENVALS",
+    "local": ""
+  },
+  {
+    "origin": "OPTFLOW_FARNEBACK_GAUSSIAN",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.OPTFLOW_FARNEBACK_GAUSSIAN",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "MOTION_TRANSLATION",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.MOTION_TRANSLATION",
+    "local": ""
+  },
+  {
+    "origin": "MOTION_EUCLIDEAN",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.MOTION_EUCLIDEAN",
+    "local": ""
+  },
+  {
+    "origin": "MOTION_AFFINE",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.MOTION_AFFINE",
+    "local": ""
+  },
+  {
+    "origin": "MOTION_HOMOGRAPHY",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.MOTION_HOMOGRAPHY",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "buildOpticalFlowPyramid()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::buildOpticalFlowPyramid",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "pyramid",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "winSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "maxLevel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "withDerivatives",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "pyrBorder",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "derivBorder",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "tryReuseInputImage",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, pyramid",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.buildOpticalFlowPyramid(",
+    "local": ""
+  },
+  {
+    "origin": "img, winSize, maxLevel[, pyramid[, withDerivatives[, pyrBorder[, derivBorder[, tryReuseInputImage]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Constructs the image pyramid which can be passed to calcOpticalFlowPyrLK.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "8-bit input image.",
+    "local": ""
+  },
+  {
+    "origin": "pyramid",
+    "local": ""
+  },
+  {
+    "origin": "output pyramid.",
+    "local": ""
+  },
+  {
+    "origin": "winSize",
+    "local": ""
+  },
+  {
+    "origin": "window size of optical flow algorithm. Must be not less than winSize argument of calcOpticalFlowPyrLK. It is needed to calculate required padding for pyramid levels.",
+    "local": ""
+  },
+  {
+    "origin": "maxLevel",
+    "local": ""
+  },
+  {
+    "origin": "0-based maximal pyramid level number.",
+    "local": ""
+  },
+  {
+    "origin": "withDerivatives",
+    "local": ""
+  },
+  {
+    "origin": "set to precompute gradients for the every pyramid level. If pyramid is constructed without the gradients then calcOpticalFlowPyrLK will calculate them internally.",
+    "local": ""
+  },
+  {
+    "origin": "pyrBorder",
+    "local": ""
+  },
+  {
+    "origin": "the border mode for pyramid layers.",
+    "local": ""
+  },
+  {
+    "origin": "derivBorder",
+    "local": ""
+  },
+  {
+    "origin": "the border mode for gradients.",
+    "local": ""
+  },
+  {
+    "origin": "tryReuseInputImage",
+    "local": ""
+  },
+  {
+    "origin": "put ROI of input image into the pyramid if possible. You can pass false to force data copying.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "number of levels in constructed pyramid. Can be less than maxLevel.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "calcOpticalFlowFarneback()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::calcOpticalFlowFarneback",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "prev",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "next",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "flow",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "pyr_scale",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "levels",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "winsize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "iterations",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "poly_n",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "poly_sigma",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "flow",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.calcOpticalFlowFarneback(",
+    "local": ""
+  },
+  {
+    "origin": "prev, next, flow, pyr_scale, levels, winsize, iterations, poly_n, poly_sigma, flags",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes a dense optical flow using the Gunnar Farneback's algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "prev",
+    "local": ""
+  },
+  {
+    "origin": "first 8-bit single-channel input image.",
+    "local": ""
+  },
+  {
+    "origin": "next",
+    "local": ""
+  },
+  {
+    "origin": "second input image of the same size and the same type as prev.",
+    "local": ""
+  },
+  {
+    "origin": "flow",
+    "local": ""
+  },
+  {
+    "origin": "computed flow image that has the same size as prev and type CV_32FC2.",
+    "local": ""
+  },
+  {
+    "origin": "pyr_scale",
+    "local": ""
+  },
+  {
+    "origin": "parameter, specifying the image scale (&lt;1) to build pyramids for each image; pyr_scale=0.5 means a classical pyramid, where each next layer is twice smaller than the previous one.",
+    "local": ""
+  },
+  {
+    "origin": "levels",
+    "local": ""
+  },
+  {
+    "origin": "number of pyramid layers including the initial image; levels=1 means that no extra layers are created and only the original images are used.",
+    "local": ""
+  },
+  {
+    "origin": "winsize",
+    "local": ""
+  },
+  {
+    "origin": "averaging window size; larger values increase the algorithm robustness to image noise and give more chances for fast motion detection, but yield more blurred motion field.",
+    "local": ""
+  },
+  {
+    "origin": "iterations",
+    "local": ""
+  },
+  {
+    "origin": "number of iterations the algorithm does at each pyramid level.",
+    "local": ""
+  },
+  {
+    "origin": "poly_n",
+    "local": ""
+  },
+  {
+    "origin": "size of the pixel neighborhood used to find polynomial expansion in each pixel; larger values mean that the image will be approximated with smoother surfaces, yielding more robust algorithm and more blurred motion field, typically poly_n =5 or 7.",
+    "local": ""
+  },
+  {
+    "origin": "poly_sigma",
+    "local": ""
+  },
+  {
+    "origin": "standard deviation of the Gaussian that is used to smooth derivatives used as a basis for the polynomial expansion; for poly_n=5, you can set poly_sigma=1.1, for poly_n=7, a good value would be poly_sigma=1.5.",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "operation flags that can be a combination of the following:",
+    "local": ""
+  },
+  {
+    "origin": "OPTFLOW_USE_INITIAL_FLOW",
+    "local": ""
+  },
+  {
+    "origin": "uses the input flow as an initial flow approximation.",
+    "local": ""
+  },
+  {
+    "origin": "OPTFLOW_FARNEBACK_GAUSSIAN",
+    "local": ""
+  },
+  {
+    "origin": "uses the Gaussian \\(\\texttt{winsize}\\times\\texttt{winsize}\\) filter instead of a box filter of the same size for optical flow estimation; usually, this option gives z more accurate flow than with a box filter, at the cost of lower speed; normally, winsize for a Gaussian window should be set to a larger value to achieve the same level of robustness.",
+    "local": ""
+  },
+  {
+    "origin": "The function finds an optical flow for each prev pixel using the",
+    "local": ""
+  },
+  {
+    "origin": "algorithm so that",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{prev} (y,x) \\sim \\texttt{next} ( y + \\texttt{flow} (y,x)[1], x + \\texttt{flow} (y,x)[0])\\]",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "An example using the optical flow algorithm described by Gunnar Farneback can be found at opencv_source_code/samples/cpp/fback.cpp",
+    "local": ""
+  },
+  {
+    "origin": "(Python) An example using the optical flow algorithm described by Gunnar Farneback can be found at opencv_source_code/samples/python/opt_flow.py",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "calcOpticalFlowPyrLK()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::calcOpticalFlowPyrLK",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "prevImg",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "nextImg",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "prevPts",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "nextPts",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "status",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "err",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "winSize",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "maxLevel",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "minEigThreshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "nextPts, status, err",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.calcOpticalFlowPyrLK(",
+    "local": ""
+  },
+  {
+    "origin": "prevImg, nextImg, prevPts, nextPts[, status[, err[, winSize[, maxLevel[, criteria[, flags[, minEigThreshold]]]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Calculates an optical flow for a sparse feature set using the iterative Lucas-Kanade method with pyramids.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "prevImg",
+    "local": ""
+  },
+  {
+    "origin": "first 8-bit input image or pyramid constructed by buildOpticalFlowPyramid.",
+    "local": ""
+  },
+  {
+    "origin": "nextImg",
+    "local": ""
+  },
+  {
+    "origin": "second input image or pyramid of the same size and the same type as prevImg.",
+    "local": ""
+  },
+  {
+    "origin": "prevPts",
+    "local": ""
+  },
+  {
+    "origin": "vector of 2D points for which the flow needs to be found; point coordinates must be single-precision floating-point numbers.",
+    "local": ""
+  },
+  {
+    "origin": "nextPts",
+    "local": ""
+  },
+  {
+    "origin": "output vector of 2D points (with single-precision floating-point coordinates) containing the calculated new positions of input features in the second image; when OPTFLOW_USE_INITIAL_FLOW flag is passed, the vector must have the same size as in the input.",
+    "local": ""
+  },
+  {
+    "origin": "status",
+    "local": ""
+  },
+  {
+    "origin": "output status vector (of unsigned chars); each element of the vector is set to 1 if the flow for the corresponding features has been found, otherwise, it is set to 0.",
+    "local": ""
+  },
+  {
+    "origin": "err",
+    "local": ""
+  },
+  {
+    "origin": "output vector of errors; each element of the vector is set to an error for the corresponding feature, type of the error measure can be set in flags parameter; if the flow wasn't found then the error is not defined (use the status parameter to find such cases).",
+    "local": ""
+  },
+  {
+    "origin": "winSize",
+    "local": ""
+  },
+  {
+    "origin": "size of the search window at each pyramid level.",
+    "local": ""
+  },
+  {
+    "origin": "maxLevel",
+    "local": ""
+  },
+  {
+    "origin": "0-based maximal pyramid level number; if set to 0, pyramids are not used (single level), if set to 1, two levels are used, and so on; if pyramids are passed to input then algorithm will use as many levels as pyramids have but no more than maxLevel.",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "parameter, specifying the termination criteria of the iterative search algorithm (after the specified maximum number of iterations criteria.maxCount or when the search window moves by less than criteria.epsilon.",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "operation flags:",
+    "local": ""
+  },
+  {
+    "origin": "OPTFLOW_USE_INITIAL_FLOW",
+    "local": ""
+  },
+  {
+    "origin": "uses initial estimations, stored in nextPts; if the flag is not set, then prevPts is copied to nextPts and is considered the initial estimate.",
+    "local": ""
+  },
+  {
+    "origin": "OPTFLOW_LK_GET_MIN_EIGENVALS",
+    "local": ""
+  },
+  {
+    "origin": "use minimum eigen values as an error measure (see minEigThreshold description); if the flag is not set, then",
+    "local": ""
+  },
+  {
+    "origin": "distance between patches around the original and a moved point, divided by number of pixels in a window, is used as a error measure.",
+    "local": ""
+  },
+  {
+    "origin": "minEigThreshold",
+    "local": ""
+  },
+  {
+    "origin": "the algorithm calculates the minimum eigen value of a 2x2 normal matrix of optical flow equations (this matrix is called a spatial gradient matrix in",
+    "local": ""
+  },
+  {
+    "origin": "), divided by number of pixels in a window; if this value is less than minEigThreshold, then a corresponding feature is filtered out and its flow is not processed, so it allows to remove bad points and get a performance boost.",
+    "local": ""
+  },
+  {
+    "origin": "The function implements a sparse iterative version of the Lucas-Kanade optical flow in pyramids. See",
+    "local": ""
+  },
+  {
+    "origin": ". The function is parallelized with the TBB library.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "An example using the Lucas-Kanade optical flow algorithm can be found at opencv_source_code/samples/cpp/lkdemo.cpp",
+    "local": ""
+  },
+  {
+    "origin": "(Python) An example using the Lucas-Kanade optical flow algorithm can be found at opencv_source_code/samples/python/lk_track.py",
+    "local": ""
+  },
+  {
+    "origin": "(Python) An example using the Lucas-Kanade tracker for homography matching can be found at opencv_source_code/samples/python/lk_homography.py",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "CamShift()",
+    "local": ""
+  },
+  {
+    "origin": "cv::CamShift",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "probImage",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "window",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, window",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.CamShift(",
+    "local": ""
+  },
+  {
+    "origin": "probImage, window, criteria",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Finds an object center, size, and orientation.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "probImage",
+    "local": ""
+  },
+  {
+    "origin": "Back projection of the object histogram. See calcBackProject.",
+    "local": ""
+  },
+  {
+    "origin": "window",
+    "local": ""
+  },
+  {
+    "origin": "Initial search window.",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "Stop criteria for the underlying meanShift. returns (in old interfaces) Number of iterations CAMSHIFT took to converge The function implements the CAMSHIFT object tracking algorithm",
+    "local": ""
+  },
+  {
+    "origin": ". First, it finds an object center using meanShift and then adjusts the window size and finds the optimal rotation. The function returns the rotated rectangle structure that includes the object position, size, and orientation. The next position of the search window can be obtained with",
+    "local": ""
+  },
+  {
+    "origin": "See the OpenCV sample camshiftdemo.c that tracks colored objects.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "(Python) A sample explaining the camshift tracking algorithm can be found at opencv_source_code/samples/python/camshift.py",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "computeECC()",
+    "local": ""
+  },
+  {
+    "origin": "double cv::computeECC",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "inputImage",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "inputMask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.computeECC(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage, inputImage[, inputMask]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes the Enhanced Correlation Coefficient value between two images",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "templateImage",
+    "local": ""
+  },
+  {
+    "origin": "single-channel template image; CV_8U or CV_32F array.",
+    "local": ""
+  },
+  {
+    "origin": "inputImage",
+    "local": ""
+  },
+  {
+    "origin": "single-channel input image to be warped to provide an image similar to templateImage, same type as templateImage.",
+    "local": ""
+  },
+  {
+    "origin": "inputMask",
+    "local": ""
+  },
+  {
+    "origin": "An optional mask to indicate valid values of inputImage.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "estimateRigidTransform()",
+    "local": ""
+  },
+  {
+    "origin": "cv::estimateRigidTransform",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "fullAffine",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Computes an optimal affine transformation between two 2D point sets.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "First input 2D point set stored in std::vector or",
+    "local": ""
+  },
+  {
+    "origin": ", or an image stored in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Second input 2D point set of the same size and the same type as A, or another image.",
+    "local": ""
+  },
+  {
+    "origin": "fullAffine",
+    "local": ""
+  },
+  {
+    "origin": "If true, the function finds an optimal affine transformation with no additional restrictions (6 degrees of freedom). Otherwise, the class of transformations to choose from is limited to combinations of translation, rotation, and uniform scaling (4 degrees of freedom).",
+    "local": ""
+  },
+  {
+    "origin": "The function finds an optimal affine transform",
+    "local": ""
+  },
+  {
+    "origin": "[A|b]",
+    "local": ""
+  },
+  {
+    "origin": "(a 2 x 3 floating-point matrix) that approximates best the affine transformation between:",
+    "local": ""
+  },
+  {
+    "origin": "Two point sets Two raster images. In this case, the function first finds some features in the src image and finds the corresponding features in dst image. After that, the problem is reduced to the first case.",
+    "local": ""
+  },
+  {
+    "origin": "In case of point sets, the problem is formulated as follows: you need to find a 2x2 matrix",
+    "local": ""
+  },
+  {
+    "origin": "A",
+    "local": ""
+  },
+  {
+    "origin": "and 2x1 vector",
+    "local": ""
+  },
+  {
+    "origin": "b",
+    "local": ""
+  },
+  {
+    "origin": "so that:",
+    "local": ""
+  },
+  {
+    "origin": "\\[[A^*|b^*] = arg \\min _{[A|b]} \\sum _i \\| \\texttt{dst}[i] - A { \\texttt{src}[i]}^T - b \\| ^2\\]",
+    "local": ""
+  },
+  {
+    "origin": "where src[i] and dst[i] are the i-th points in src and dst, respectively \\([A|b]\\) can be either arbitrary (when fullAffine=true ) or have a form of",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{bmatrix} a_{11} &amp; a_{12} &amp; b_1 \\\\ -a_{12} &amp; a_{11} &amp; b_2 \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "when fullAffine=false.",
+    "local": ""
+  },
+  {
+    "origin": "Use",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "instead. If you are using this function with images, extract points using",
+    "local": ""
+  },
+  {
+    "origin": "and then use the estimation functions.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "findTransformECC()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "double cv::findTransformECC",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "inputImage",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "warpMatrix",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "motionType",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "inputMask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "gaussFiltSize",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, warpMatrix",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.findTransformECC(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage, inputImage, warpMatrix, motionType, criteria, inputMask, gaussFiltSize",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval, warpMatrix",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.findTransformECC(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage, inputImage, warpMatrix[, motionType[, criteria[, inputMask]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Finds the geometric transform (warp) between two images in terms of the ECC criterion",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "templateImage",
+    "local": ""
+  },
+  {
+    "origin": "single-channel template image; CV_8U or CV_32F array.",
+    "local": ""
+  },
+  {
+    "origin": "inputImage",
+    "local": ""
+  },
+  {
+    "origin": "single-channel input image which should be warped with the final warpMatrix in order to provide an image similar to templateImage, same type as templateImage.",
+    "local": ""
+  },
+  {
+    "origin": "warpMatrix",
+    "local": ""
+  },
+  {
+    "origin": "floating-point \\(2\\times 3\\) or \\(3\\times 3\\) mapping matrix (warp).",
+    "local": ""
+  },
+  {
+    "origin": "motionType",
+    "local": ""
+  },
+  {
+    "origin": "parameter, specifying the type of motion:",
+    "local": ""
+  },
+  {
+    "origin": "MOTION_TRANSLATION",
+    "local": ""
+  },
+  {
+    "origin": "sets a translational motion model; warpMatrix is \\(2\\times 3\\) with the first \\(2\\times 2\\) part being the unity matrix and the rest two parameters being estimated.",
+    "local": ""
+  },
+  {
+    "origin": "MOTION_EUCLIDEAN",
+    "local": ""
+  },
+  {
+    "origin": "sets a Euclidean (rigid) transformation as motion model; three parameters are estimated; warpMatrix is \\(2\\times 3\\).",
+    "local": ""
+  },
+  {
+    "origin": "MOTION_AFFINE",
+    "local": ""
+  },
+  {
+    "origin": "sets an affine motion model (DEFAULT); six parameters are estimated; warpMatrix is \\(2\\times 3\\).",
+    "local": ""
+  },
+  {
+    "origin": "MOTION_HOMOGRAPHY",
+    "local": ""
+  },
+  {
+    "origin": "sets a homography as a motion model; eight parameters are estimated;`warpMatrix` is \\(3\\times 3\\).",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "parameter, specifying the termination criteria of the ECC algorithm; criteria.epsilon defines the threshold of the increment in the correlation coefficient between two iterations (a negative criteria.epsilon makes criteria.maxcount the only termination criterion). Default values are shown in the declaration above.",
+    "local": ""
+  },
+  {
+    "origin": "inputMask",
+    "local": ""
+  },
+  {
+    "origin": "An optional mask to indicate valid values of inputImage.",
+    "local": ""
+  },
+  {
+    "origin": "gaussFiltSize",
+    "local": ""
+  },
+  {
+    "origin": "An optional value indicating size of gaussian blur filter; (DEFAULT: 5)",
+    "local": ""
+  },
+  {
+    "origin": "The function estimates the optimum transformation (warpMatrix) with respect to ECC criterion (",
+    "local": ""
+  },
+  {
+    "origin": "), that is",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{warpMatrix} = \\arg\\max_{W} \\texttt{ECC}(\\texttt{templateImage}(x,y),\\texttt{inputImage}(x',y'))\\]",
+    "local": ""
+  },
+  {
+    "origin": "where",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{bmatrix} x' \\\\ y' \\end{bmatrix} = W \\cdot \\begin{bmatrix} x \\\\ y \\\\ 1 \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "(the equation holds with homogeneous coordinates for homography). It returns the final enhanced correlation coefficient, that is the correlation coefficient between the template image and the final warped input image. When a \\(3\\times 3\\) matrix is given with motionType =0, 1 or 2, the third row is ignored.",
+    "local": ""
+  },
+  {
+    "origin": "Unlike findHomography and estimateRigidTransform, the function findTransformECC implements an area-based alignment that builds on intensity similarities. In essence, the function updates the initial transformation that roughly aligns the images. If this information is missing, the identity warp (unity matrix) is used as an initialization. Note that if images undergo strong displacements/rotations, an initial transformation that roughly aligns the images is necessary (e.g., a simple euclidean/similarity transform that allows for the images showing the same image content approximately). Use inverse warping in the second image to take an image close to the first one, i.e. use the flag WARP_INVERSE_MAP with warpAffine or warpPerspective. See also the OpenCV sample image_alignment.cpp that demonstrates the use of the function. Note that the function throws an exception if algorithm does not converges.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "findTransformECC()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "double cv::findTransformECC",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "inputImage",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "warpMatrix",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "motionType",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "inputMask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, warpMatrix",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.findTransformECC(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage, inputImage, warpMatrix, motionType, criteria, inputMask, gaussFiltSize",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval, warpMatrix",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.findTransformECC(",
+    "local": ""
+  },
+  {
+    "origin": "templateImage, inputImage, warpMatrix[, motionType[, criteria[, inputMask]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "meanShift()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::meanShift",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "probImage",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "window",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval, window",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.meanShift(",
+    "local": ""
+  },
+  {
+    "origin": "probImage, window, criteria",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Finds an object on a back projection image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "probImage",
+    "local": ""
+  },
+  {
+    "origin": "Back projection of the object histogram. See calcBackProject for details.",
+    "local": ""
+  },
+  {
+    "origin": "window",
+    "local": ""
+  },
+  {
+    "origin": "Initial search window.",
+    "local": ""
+  },
+  {
+    "origin": "criteria",
+    "local": ""
+  },
+  {
+    "origin": "Stop criteria for the iterative search algorithm. returns : Number of iterations CAMSHIFT took to converge. The function implements the iterative object search algorithm. It takes the input back projection of an object and the initial position. The mass center in window of the back projection image is computed and the search window center shifts to the mass center. The procedure is repeated until the specified number of iterations criteria.maxCount is done or until the window center shifts by less than criteria.epsilon. The algorithm is used inside CamShift and, unlike CamShift , the search window size or orientation do not change during the search. You can simply pass the output of calcBackProject to this function. But better results can be obtained if you pre-filter the back projection and remove the noise. For example, you can do this by retrieving connected components with findContours , throwing away contours with small area ( contourArea ), and rendering the remaining contours with drawContours.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "readOpticalFlow()",
+    "local": ""
+  },
+  {
+    "origin": "cv::readOpticalFlow",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "path",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.readOpticalFlow(",
+    "local": ""
+  },
+  {
+    "origin": "path",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Read a .flo file.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "path",
+    "local": ""
+  },
+  {
+    "origin": "Path to the file to be loaded",
+    "local": ""
+  },
+  {
+    "origin": "The function readOpticalFlow loads a flow field from a file and returns it as a single matrix. Resulting",
+    "local": ""
+  },
+  {
+    "origin": "has a type CV_32FC2 - floating-point, 2-channel. First channel corresponds to the flow in the horizontal direction (u), second - vertical (v).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "writeOpticalFlow()",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::writeOpticalFlow",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "path",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "flow",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.writeOpticalFlow(",
+    "local": ""
+  },
+  {
+    "origin": "path, flow",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Write a .flo to disk.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "path",
+    "local": ""
+  },
+  {
+    "origin": "Path to the file to be written",
+    "local": ""
+  },
+  {
+    "origin": "flow",
+    "local": ""
+  },
+  {
+    "origin": "Flow field to be stored",
+    "local": ""
+  },
+  {
+    "origin": "The function stores a flow field in a file, returns true on success, false otherwise. The flow field must be a 2-channel, floating-point matrix (CV_32FC2). First channel corresponds to the flow in the horizontal direction (u), second - vertical (v).",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by",
+    "local": ""
+  }
+]

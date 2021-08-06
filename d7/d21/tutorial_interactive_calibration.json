@@ -1,0 +1,466 @@
+[
+  {
+    "origin": "OpenCV: Interactive camera calibration application",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Interactive camera calibration application",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Vladislav Sovrasov",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "According to classical calibration technique user must collect all data first and when run",
+    "local": ""
+  },
+  {
+    "origin": "function to obtain camera parameters. If average re-projection error is huge or if estimated parameters seems to be wrong, process of selection or collecting data and starting of",
+    "local": ""
+  },
+  {
+    "origin": "repeats.",
+    "local": ""
+  },
+  {
+    "origin": "Interactive calibration process assumes that after each new data portion user can see results and errors estimation, also he can delete last data portion and finally, when dataset for calibration is big enough starts process of auto data selection.",
+    "local": ""
+  },
+  {
+    "origin": "Main application features",
+    "local": ""
+  },
+  {
+    "origin": "The sample application will:",
+    "local": ""
+  },
+  {
+    "origin": "Determine the distortion matrix and confidence interval for each element",
+    "local": ""
+  },
+  {
+    "origin": "Determine the camera matrix and confidence interval for each element",
+    "local": ""
+  },
+  {
+    "origin": "Take input from camera or video file",
+    "local": ""
+  },
+  {
+    "origin": "Read configuration from XML file",
+    "local": ""
+  },
+  {
+    "origin": "Save the results into XML file",
+    "local": ""
+  },
+  {
+    "origin": "Calculate re-projection error",
+    "local": ""
+  },
+  {
+    "origin": "Reject patterns views on sharp angles to prevent appear of ill-conditioned jacobian blocks",
+    "local": ""
+  },
+  {
+    "origin": "Auto switch calibration flags (fix aspect ratio and elements of distortion matrix if needed)",
+    "local": ""
+  },
+  {
+    "origin": "Auto detect when calibration is done by using several criteria",
+    "local": ""
+  },
+  {
+    "origin": "Auto capture of static patterns (user doesn't need press any keys to capture frame, just don't move pattern for a second)",
+    "local": ""
+  },
+  {
+    "origin": "Supported patterns:",
+    "local": ""
+  },
+  {
+    "origin": "Black-white chessboard",
+    "local": ""
+  },
+  {
+    "origin": "Asymmetrical circle pattern",
+    "local": ""
+  },
+  {
+    "origin": "Dual asymmetrical circle pattern",
+    "local": ""
+  },
+  {
+    "origin": "chAruco (chessboard with Aruco markers)",
+    "local": ""
+  },
+  {
+    "origin": "Description of parameters",
+    "local": ""
+  },
+  {
+    "origin": "Application has two groups of parameters: primary (passed through command line) and advances (passed through XML file).",
+    "local": ""
+  },
+  {
+    "origin": "Primary parameters:",
+    "local": ""
+  },
+  {
+    "origin": "All of this parameters are passed to application through a command line.",
+    "local": ""
+  },
+  {
+    "origin": "-[parameter]=[default value]: description",
+    "local": ""
+  },
+  {
+    "origin": "-ci=[0]: get video from camera with specified id",
+    "local": ""
+  },
+  {
+    "origin": "-flip=[false]: vertical flip of input frames",
+    "local": ""
+  },
+  {
+    "origin": "-t=[circles]: pattern for calibration (circles, chessboard, dualCircles, chAruco)",
+    "local": ""
+  },
+  {
+    "origin": "-sz=[16.3]: distance between two nearest centers of circles or squares on calibration board",
+    "local": ""
+  },
+  {
+    "origin": "-dst=[295] distance between white and black parts of daulCircles pattern",
+    "local": ""
+  },
+  {
+    "origin": "-w=[width]: width of pattern (in corners or circles)",
+    "local": ""
+  },
+  {
+    "origin": "-h=[height]: height of pattern (in corners or circles)",
+    "local": ""
+  },
+  {
+    "origin": "-of=[camParams.xml]: output file name",
+    "local": ""
+  },
+  {
+    "origin": "-ft=[true]: auto tuning of calibration flags",
+    "local": ""
+  },
+  {
+    "origin": "-vis=[grid]: captured boards visualization (grid, window)",
+    "local": ""
+  },
+  {
+    "origin": "-d=[0.8]: delay between captures in seconds",
+    "local": ""
+  },
+  {
+    "origin": "-pf=[defaultConfig.xml]: advanced application parameters file",
+    "local": ""
+  },
+  {
+    "origin": "Advanced parameters:",
+    "local": ""
+  },
+  {
+    "origin": "By default values of advanced parameters are stored in defaultConfig.xml",
+    "local": ""
+  },
+  {
+    "origin": "charuco_dict",
+    "local": ""
+  },
+  {
+    "origin": ": name of special dictionary, which has been used for generation of chAruco pattern",
+    "local": ""
+  },
+  {
+    "origin": "charuco_square_length",
+    "local": ""
+  },
+  {
+    "origin": ": size of square on chAruco board (in pixels)",
+    "local": ""
+  },
+  {
+    "origin": "charuco_marker_size",
+    "local": ""
+  },
+  {
+    "origin": ": size of Aruco markers on chAruco board (in pixels)",
+    "local": ""
+  },
+  {
+    "origin": "calibration_step",
+    "local": ""
+  },
+  {
+    "origin": ": interval in frames between launches of",
+    "local": ""
+  },
+  {
+    "origin": "max_frames_num",
+    "local": ""
+  },
+  {
+    "origin": ": if number of frames for calibration is greater then this value frames filter starts working. After filtration size of calibration dataset is equals to",
+    "local": ""
+  },
+  {
+    "origin": "max_frames_num",
+    "local": ""
+  },
+  {
+    "origin": "min_frames_num",
+    "local": ""
+  },
+  {
+    "origin": ": if number of frames is greater then this value turns on auto flags tuning, undistorted view and quality evaluation",
+    "local": ""
+  },
+  {
+    "origin": "solver_eps",
+    "local": ""
+  },
+  {
+    "origin": ": precision of Levenberg-Marquardt solver in",
+    "local": ""
+  },
+  {
+    "origin": "solver_max_iters",
+    "local": ""
+  },
+  {
+    "origin": ": iterations limit of solver",
+    "local": ""
+  },
+  {
+    "origin": "fast_solver",
+    "local": ""
+  },
+  {
+    "origin": ": if this value is nonzero and Lapack is found QR decomposition is used instead of SVD in solver. QR faster than SVD, but potentially less precise",
+    "local": ""
+  },
+  {
+    "origin": "frame_filter_conv_param",
+    "local": ""
+  },
+  {
+    "origin": ": parameter which used in linear convolution of bicriterial frames filter",
+    "local": ""
+  },
+  {
+    "origin": "camera_resolution",
+    "local": ""
+  },
+  {
+    "origin": ": resolution of camera which is used for calibration",
+    "local": ""
+  },
+  {
+    "origin": "Note:",
+    "local": ""
+  },
+  {
+    "origin": "charuco_dict",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "charuco_square_length",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "charuco_marker_size",
+    "local": ""
+  },
+  {
+    "origin": "are used for chAruco pattern generation (see Aruco module description for details:",
+    "local": ""
+  },
+  {
+    "origin": "Aruco tutorials",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Default chAruco pattern:",
+    "local": ""
+  },
+  {
+    "origin": "Dual circles pattern",
+    "local": ""
+  },
+  {
+    "origin": "To make this pattern you need standard OpenCV circles pattern and binary inverted one. Place two patterns on one plane in order when all horizontal lines of circles in one pattern are continuations of similar lines in another. Measure distance between patterns as shown at picture below pass it as",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "command line parameter. Also measure distance between centers of nearest circles and pass this value as",
+    "local": ""
+  },
+  {
+    "origin": "sz",
+    "local": ""
+  },
+  {
+    "origin": "command line parameter.",
+    "local": ""
+  },
+  {
+    "origin": "This pattern is very sensitive to quality of production and measurements.",
+    "local": ""
+  },
+  {
+    "origin": "Data filtration",
+    "local": ""
+  },
+  {
+    "origin": "When size of calibration dataset is greater then",
+    "local": ""
+  },
+  {
+    "origin": "max_frames_num",
+    "local": ""
+  },
+  {
+    "origin": "starts working data filter. It tries to remove \"bad\" frames from dataset. Filter removes the frame on which \\(loss\\_function\\) takes maximum.",
+    "local": ""
+  },
+  {
+    "origin": "\\[loss\\_function(i)=\\alpha RMS(i)+(1-\\alpha)reducedGridQuality(i)\\]",
+    "local": ""
+  },
+  {
+    "origin": "RMS",
+    "local": ""
+  },
+  {
+    "origin": "is an average re-projection error calculated for frame",
+    "local": ""
+  },
+  {
+    "origin": "i",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "reducedGridQuality",
+    "local": ""
+  },
+  {
+    "origin": "is scene coverage quality evaluation without frame",
+    "local": ""
+  },
+  {
+    "origin": "i",
+    "local": ""
+  },
+  {
+    "origin": ". \\(\\alpha\\) is equals to",
+    "local": ""
+  },
+  {
+    "origin": "frame_filter_conv_param",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Calibration process",
+    "local": ""
+  },
+  {
+    "origin": "To start calibration just run application. Place pattern ahead the camera and fixate pattern in some pose. After that wait for capturing (will be shown message like \"Frame #i captured\"). Current focal distance and re-projection error will be shown at the main screen. Move pattern to the next position and repeat procedure. Try to cover image plane uniformly and don't show pattern on sharp angles to the image plane.",
+    "local": ""
+  },
+  {
+    "origin": "If calibration seems to be successful (confidence intervals and average re-projection error are small, frame coverage quality and number of pattern views are big enough) application will show a message like on screen below.",
+    "local": ""
+  },
+  {
+    "origin": "Hot keys:",
+    "local": ""
+  },
+  {
+    "origin": "Esc &ndash; exit application",
+    "local": ""
+  },
+  {
+    "origin": "s &ndash; save current data to XML file",
+    "local": ""
+  },
+  {
+    "origin": "r &ndash; delete last frame",
+    "local": ""
+  },
+  {
+    "origin": "d &ndash; delete all frames",
+    "local": ""
+  },
+  {
+    "origin": "u &ndash; enable/disable applying of undistortion",
+    "local": ""
+  },
+  {
+    "origin": "v &ndash; switch visualization mode",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "As result you will get camera parameters and confidence intervals for them.",
+    "local": ""
+  },
+  {
+    "origin": "Example of output XML file:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

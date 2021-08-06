@@ -1,0 +1,70 @@
+[
+  {
+    "origin": "OpenCV: Phase Unwrapping API",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Phase Unwrapping API",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Class implementing two-dimensional phase unwrapping based on",
+    "local": ""
+  },
+  {
+    "origin": "This algorithm belongs to the quality-guided phase unwrapping methods. First, it computes a reliability map from second differences between a pixel and its eight neighbours. Reliability values lie between 0 and 16*pi*pi. Then, this reliability map is used to compute the reliabilities of \"edges\". An edge is an entity defined by two pixels that are connected horizontally or vertically. Its reliability is found by adding the the reliabilities of the two pixels connected through it. Edges are sorted in a histogram based on their reliability values. This histogram is then used to unwrap pixels, starting from the highest quality pixel.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Abstract base class for phase unwrapping.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Two-dimensional phase unwrapping is found in different applications like terrain elevation estimation in synthetic aperture radar (SAR), field mapping in magnetic resonance imaging or as a way of finding corresponding pixels in structured light reconstruction with sinusoidal patterns.",
+    "local": ""
+  },
+  {
+    "origin": "Given a phase map, wrapped between [-pi; pi], phase unwrapping aims at finding the \"true\" phase map by adding the right number of 2*pi to each pixel.",
+    "local": ""
+  },
+  {
+    "origin": "The problem is straightforward for perfect wrapped phase map, but real data are usually not noise-free. Among the different algorithms that were developed, quality-guided phase unwrapping methods are fast and efficient. They follow a path that unwraps high quality pixels first, avoiding error propagation from the start.",
+    "local": ""
+  },
+  {
+    "origin": "In this module, a quality-guided phase unwrapping is implemented following the approach described in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by &#160;",
+    "local": ""
+  }
+]

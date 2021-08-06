@@ -1,0 +1,954 @@
+[
+  {
+    "origin": "OpenCV: Images stitching",
+    "local": "OpenCV:图像缝合"
+  },
+  {
+    "origin": "OpenCV",
+    "local": "打开CV"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Modules",
+    "local": "模块"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "Images stitching",
+    "local": "图像拼接"
+  },
+  {
+    "origin": "Modules",
+    "local": "模块"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "struct",
+    "local": "结构"
+  },
+  {
+    "origin": "Describes camera parameters.",
+    "local": "描述相机参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "class",
+    "local": "班"
+  },
+  {
+    "origin": "class",
+    "local": "班"
+  },
+  {
+    "origin": "struct",
+    "local": "结构"
+  },
+  {
+    "origin": "class",
+    "local": "班"
+  },
+  {
+    "origin": "High level image stitcher.",
+    "local": "高级图像缝合器。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "class",
+    "local": "班"
+  },
+  {
+    "origin": "class",
+    "local": "班"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "(int",
+    "local": "（内景）"
+  },
+  {
+    "origin": ", int",
+    "local": "，内景"
+  },
+  {
+    "origin": ", float",
+    "local": "，浮动"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "(bool try_use_gpu=false)",
+    "local": "（bool try\\u use\\u gpu=false）"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt;",
+    "local": "&燃气轮机；"
+  },
+  {
+    "origin": "(bool try_use_gpu=false)",
+    "local": "（bool try\\u use\\u gpu=false）"
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tl1,",
+    "local": "tl1型，"
+  },
+  {
+    "origin": "tl2,",
+    "local": "tl2型，"
+  },
+  {
+    "origin": "sz1,",
+    "local": "sz1号，"
+  },
+  {
+    "origin": "sz2,",
+    "local": "sz2号，"
+  },
+  {
+    "origin": "&amp;roi)",
+    "local": "&amp；投资回报率）"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;corners, const std::vector&lt;",
+    "local": "&gt；&quot；&amp；角点，const std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;images)",
+    "local": "&燃气轮机&amp；图像）"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;corners, const std::vector&lt;",
+    "local": "&gt；&quot；&amp；角点，const std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;sizes)",
+    "local": "&燃气轮机&amp；尺寸）"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;corners, const std::vector&lt;",
+    "local": "&gt；&quot；&amp；角点，const std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;sizes)",
+    "local": "&燃气轮机&amp；尺寸）"
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": "（const std：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;corners)",
+    "local": "&燃气轮机&amp；（拐角处）"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(int count, int size, std::vector&lt; int &gt; &amp;subset)",
+    "local": "（int count，int size，std:：vector&lt；内部&gt&amp；子集）"
+  },
+  {
+    "origin": "int &amp;",
+    "local": "内部（&A）；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "This figure illustrates the stitching module pipeline implemented in the",
+    "local": "此图说明了在中实现的缝合模块管道"
+  },
+  {
+    "origin": "class. Using that class it's possible to configure/remove some steps, i.e. adjust the stitching pipeline according to the particular needs. All building blocks from the pipeline are available in the detail namespace, one can combine and use them separately.",
+    "local": "班级。使用该类可以配置/删除某些步骤，即根据特定需要调整缝合管道。管道中的所有构建块都在detail名称空间中可用，可以单独组合和使用它们。"
+  },
+  {
+    "origin": "The implemented stitching pipeline is very similar to the one proposed in",
+    "local": "实现的缝合管道与中提出的缝合管道非常相似"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "stitching pipeline",
+    "local": "缝合管道"
+  },
+  {
+    "origin": "Camera models",
+    "local": "摄像机型号"
+  },
+  {
+    "origin": "There are currently 2 camera models implemented in stitching pipeline.",
+    "local": "目前有两个相机模型实现缝合管道。"
+  },
+  {
+    "origin": "Homography model",
+    "local": "单应模型"
+  },
+  {
+    "origin": "expecting perspective transformations between images implemented in",
+    "local": "期望在中实现的图像之间进行透视变换"
+  },
+  {
+    "origin": "Affine model",
+    "local": "仿射模型"
+  },
+  {
+    "origin": "expecting affine transformation with 6 DOF or 4 DOF implemented in",
+    "local": "期望实现6自由度或4自由度的仿射变换"
+  },
+  {
+    "origin": "Homography model is useful for creating photo panoramas captured by camera, while affine-based model can be used to stitch scans and object captured by specialized devices. Use",
+    "local": "单应模型可用于创建由相机捕获的照片全景图，而仿射模型可用于缝合扫描和由专用设备捕获的对象。使用"
+  },
+  {
+    "origin": "to get preconfigured pipeline for one of those models.",
+    "local": "获取其中一个模型的预配置管道。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Certain detailed settings of",
+    "local": "特定的详细设置"
+  },
+  {
+    "origin": "might not make sense. Especially you should not mix classes implementing affine model and classes implementing Homography model, as they work with different transformations.",
+    "local": "可能说不通。尤其不应该将实现仿射模型的类和实现单应模型的类混合在一起，因为它们使用不同的转换。"
+  },
+  {
+    "origin": "Function Documentation",
+    "local": "功能文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "GraphEdge()",
+    "local": "图形边缘（）"
+  },
+  {
+    "origin": "cv::detail::GraphEdge::GraphEdge",
+    "local": "简历：：细节：：图示边缘：：图示边缘"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "from",
+    "local": "从"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "to",
+    "local": "到"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "weight",
+    "local": "重量"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "createStitcher()",
+    "local": "createStitcher（）"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; cv::createStitcher",
+    "local": "&燃气轮机；cv：：创建缝合器"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "try_use_gpu",
+    "local": "尝试使用gpu"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "use",
+    "local": "使用"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "createStitcherScans()",
+    "local": "createStitcherScans（）"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "&gt; cv::createStitcherScans",
+    "local": "&燃气轮机；cv：：CreateSitcherScans"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "try_use_gpu",
+    "local": "尝试使用gpu"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "use",
+    "local": "使用"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "overlapRoi()",
+    "local": "过量（）"
+  },
+  {
+    "origin": "bool cv::detail::overlapRoi",
+    "local": "bool cv：：细节：：重叠"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "tl1",
+    "local": "tl1型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "tl2",
+    "local": "tl2型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "sz1",
+    "local": "深圳1"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "sz2",
+    "local": "深圳2"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "roi",
+    "local": "投资回报率"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.detail.overlapRoi(",
+    "local": "简历详细信息("
+  },
+  {
+    "origin": "tl1, tl2, sz1, sz2, roi",
+    "local": "tl1、tl2、sz1、sz2、roi"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "resultRoi()",
+    "local": "结果（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "cv::detail::resultRoi",
+    "local": "简历：：细节：：结果"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "corners",
+    "local": "角"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "images",
+    "local": "图像"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.detail.resultRoi(",
+    "local": "cv.detail.resultRoi简历("
+  },
+  {
+    "origin": "corners, images",
+    "local": "角点、图像"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.detail.resultRoi(",
+    "local": "cv.detail.resultRoi简历("
+  },
+  {
+    "origin": "corners, sizes",
+    "local": "拐角、尺寸"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "resultRoi()",
+    "local": "结果（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "cv::detail::resultRoi",
+    "local": "简历：：细节：：结果"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "corners",
+    "local": "角"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "sizes",
+    "local": "尺寸"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.detail.resultRoi(",
+    "local": "cv.detail.resultRoi简历("
+  },
+  {
+    "origin": "corners, images",
+    "local": "角点、图像"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.detail.resultRoi(",
+    "local": "cv.detail.resultRoi简历("
+  },
+  {
+    "origin": "corners, sizes",
+    "local": "拐角、尺寸"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "resultRoiIntersection()",
+    "local": "ResultRoiIntersection（）"
+  },
+  {
+    "origin": "cv::detail::resultRoiIntersection",
+    "local": "cv:：detail:：resultRoiIntersection结果"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "corners",
+    "local": "角"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "sizes",
+    "local": "尺寸"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.detail.resultRoiIntersection(",
+    "local": "cv.detail.RESULTROII界面("
+  },
+  {
+    "origin": "corners, sizes",
+    "local": "拐角、尺寸"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "resultTl()",
+    "local": "结果TL（）"
+  },
+  {
+    "origin": "cv::detail::resultTl",
+    "local": "简历：：细节：：结果"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "corners",
+    "local": "角"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.detail.resultTl(",
+    "local": "简历详情结果("
+  },
+  {
+    "origin": "corners",
+    "local": "角"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "selectRandomSubset()",
+    "local": "选择随机子集（）"
+  },
+  {
+    "origin": "void cv::detail::selectRandomSubset",
+    "local": "void cv:：detail:：selectRandomSubset"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "count",
+    "local": "计数"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "size",
+    "local": "大小"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; int &gt; &amp;",
+    "local": "标准：：向量&lt；内部&gt&amp；"
+  },
+  {
+    "origin": "subset",
+    "local": "子集"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "None",
+    "local": "没有"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.detail.selectRandomSubset(",
+    "local": "cv.detail.SELECTRANDOM子集("
+  },
+  {
+    "origin": "count, size, subset",
+    "local": "计数、大小、子集"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "stitchingLogLevel()",
+    "local": "缝合级别（）"
+  },
+  {
+    "origin": "int&amp; cv::detail::stitchingLogLevel",
+    "local": "内部（&A）；cv：：细节：：缝合级别"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.detail.stitchingLogLevel(",
+    "local": "cv.detail.stitchingLogLevel公司("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": "于2021年4月2日星期五11:36:41为OpenCV生成"
+  }
+]

@@ -1,0 +1,550 @@
+[
+  {
+    "origin": "OpenCV: Sobel Derivatives",
+    "local": "OpenCV:Sobel导数"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Sobel Derivatives",
+    "local": "索贝尔衍生物"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "安娜·华曼"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": "使用OpenCV函数"
+  },
+  {
+    "origin": "to calculate the derivatives from an image.",
+    "local": "计算图像的导数。"
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": "使用OpenCV函数"
+  },
+  {
+    "origin": "to calculate a more accurate derivative for a kernel of size \\(3 \\cdot 3\\)",
+    "local": "为大小为\\（3\\cdot 3\\）的核计算更精确的导数"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "The explanation below belongs to the book",
+    "local": "下面的解释属于这本书"
+  },
+  {
+    "origin": "Learning OpenCV",
+    "local": "学习OpenCV"
+  },
+  {
+    "origin": "by Bradski and Kaehler.",
+    "local": "布拉德斯基和凯勒。"
+  },
+  {
+    "origin": "In the last two tutorials we have seen applicative examples of convolutions. One of the most important convolutions is the computation of derivatives in an image (or an approximation to them).",
+    "local": "在上两个教程中，我们看到了卷积的应用示例。最重要的卷积之一是计算图像中的导数（或其近似值）。"
+  },
+  {
+    "origin": "Why may be important the calculus of the derivatives in an image? Let's imagine we want to detect the",
+    "local": "为什么图像中导数的演算可能很重要？假设我们想探测"
+  },
+  {
+    "origin": "edges",
+    "local": "边缘"
+  },
+  {
+    "origin": "present in the image. For instance:",
+    "local": "出现在图像中。例如："
+  },
+  {
+    "origin": "You can easily notice that in an",
+    "local": "你很容易注意到这一点"
+  },
+  {
+    "origin": "edge",
+    "local": "边缘"
+  },
+  {
+    "origin": ", the pixel intensity",
+    "local": "，像素强度"
+  },
+  {
+    "origin": "changes",
+    "local": "变化"
+  },
+  {
+    "origin": "in a notorious way. A good way to express",
+    "local": "以臭名昭著的方式。好的表达方式"
+  },
+  {
+    "origin": "changes",
+    "local": "变化"
+  },
+  {
+    "origin": "is by using",
+    "local": "是通过使用"
+  },
+  {
+    "origin": "derivatives",
+    "local": "衍生品"
+  },
+  {
+    "origin": ". A high change in gradient indicates a major change in the image.",
+    "local": ". 梯度的高变化表明图像发生了重大变化。"
+  },
+  {
+    "origin": "To be more graphical, let's assume we have a 1D-image. An edge is shown by the \"jump\" in intensity in the plot below:",
+    "local": "为了更形象化，我们假设我们有一个一维图像。下图中的“跳跃”强度表示边缘："
+  },
+  {
+    "origin": "The edge \"jump\" can be seen more easily if we take the first derivative (actually, here appears as a maximum)",
+    "local": "如果我们取一阶导数（实际上，这里显示为最大值），可以更容易地看到边缘“跳跃”"
+  },
+  {
+    "origin": "So, from the explanation above, we can deduce that a method to detect edges in an image can be performed by locating pixel locations where the gradient is higher than its neighbors (or to generalize, higher than a threshold).",
+    "local": "因此，根据上述解释，我们可以推断，可以通过定位梯度高于其邻域（或者概括地说，高于阈值）的像素位置来执行图像中的边缘检测方法。"
+  },
+  {
+    "origin": "More detailed explanation, please refer to",
+    "local": "更详细的解释，请参阅"
+  },
+  {
+    "origin": "Learning OpenCV",
+    "local": "学习OpenCV"
+  },
+  {
+    "origin": "by Bradski and Kaehler",
+    "local": "布拉斯基和凯勒"
+  },
+  {
+    "origin": "Sobel Operator",
+    "local": "索贝尔算子"
+  },
+  {
+    "origin": "The Sobel Operator is a discrete differentiation operator. It computes an approximation of the gradient of an image intensity function.",
+    "local": "Sobel算子是一种离散微分算子。它计算图像强度函数梯度的近似值。"
+  },
+  {
+    "origin": "The Sobel Operator combines Gaussian smoothing and differentiation.",
+    "local": "Sobel算子结合了高斯平滑和微分。"
+  },
+  {
+    "origin": "Formulation",
+    "local": "配方"
+  },
+  {
+    "origin": "Assuming that the image to be operated is \\(I\\):",
+    "local": "假设要操作的图像是\\（I\\）："
+  },
+  {
+    "origin": "We calculate two derivatives:",
+    "local": "我们计算了两个导数："
+  },
+  {
+    "origin": "Horizontal changes",
+    "local": "横向变化"
+  },
+  {
+    "origin": ": This is computed by convolving \\(I\\) with a kernel \\(G_{x}\\) with odd size. For example for a kernel size of 3, \\(G_{x}\\) would be computed as:",
+    "local": "：这是通过将\\（I\\）与大小为奇数的内核\\（G{x}\\）进行卷积来计算的。例如，对于3的内核大小，\\（G{x}\\）将被计算为："
+  },
+  {
+    "origin": "\\[G_{x} = \\begin{bmatrix} -1 &amp; 0 &amp; +1 \\\\ -2 &amp; 0 &amp; +2 \\\\ -1 &amp; 0 &amp; +1 \\end{bmatrix} * I\\]",
+    "local": "\\[G{x}=\\begin{bmatrix}-1&amp；0&amp+1\\\\-2和；0&amp+2\\\\-1和；0&amp+1\\end{bmatrix}*I\\]"
+  },
+  {
+    "origin": "Vertical changes",
+    "local": "垂直变化"
+  },
+  {
+    "origin": ": This is computed by convolving \\(I\\) with a kernel \\(G_{y}\\) with odd size. For example for a kernel size of 3, \\(G_{y}\\) would be computed as:",
+    "local": "：这是通过将\\（I\\）与大小为奇数的内核\\（G{y}\\）进行卷积来计算的。例如，对于3的内核大小，\\（G{y}\\）将被计算为："
+  },
+  {
+    "origin": "\\[G_{y} = \\begin{bmatrix} -1 &amp; -2 &amp; -1 \\\\ 0 &amp; 0 &amp; 0 \\\\ +1 &amp; +2 &amp; +1 \\end{bmatrix} * I\\]",
+    "local": "\\[G{y}=\\begin{bmatrix}-1&amp-2和-1\\\\0和；0&amp；0\\\\+1和+2和+1\\end{bmatrix}*I\\]"
+  },
+  {
+    "origin": "At each point of the image we calculate an approximation of the",
+    "local": "在图像的每个点上，我们计算"
+  },
+  {
+    "origin": "gradient",
+    "local": "梯度"
+  },
+  {
+    "origin": "in that point by combining both results above:",
+    "local": "在这一点上，结合上述两个结果："
+  },
+  {
+    "origin": "\\[G = \\sqrt{ G_{x}^{2} + G_{y}^{2} }\\]",
+    "local": "\\\\[G=\\sqrt{G{x}^{2}+G{y}^{2}}\\]"
+  },
+  {
+    "origin": "Although sometimes the following simpler equation is used:",
+    "local": "尽管有时使用以下更简单的公式："
+  },
+  {
+    "origin": "\\[G = |G_{x}| + |G_{y}|\\]",
+    "local": "\\[G=| G{x}|+| G{y}| \\]"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "When the size of the kernel is",
+    "local": "当内核的大小"
+  },
+  {
+    "origin": ", the Sobel kernel shown above may produce noticeable inaccuracies (after all, Sobel is only an approximation of the derivative). OpenCV addresses this inaccuracy for kernels of size 3 by using the",
+    "local": "，上面显示的Sobel核可能会产生明显的误差（毕竟，Sobel只是导数的近似值）。OpenCV通过使用"
+  },
+  {
+    "origin": "function. This is as fast but more accurate than the standard Sobel function. It implements the following kernels:",
+    "local": "功能。这与标准的Sobel函数一样快，但更精确。它实现以下内核："
+  },
+  {
+    "origin": "\\[G_{x} = \\begin{bmatrix} -3 &amp; 0 &amp; +3 \\\\ -10 &amp; 0 &amp; +10 \\\\ -3 &amp; 0 &amp; +3 \\end{bmatrix}\\]",
+    "local": "\\Gu{x}=\\begin{bmatrix}-3&amp；0&amp+3\\\\-10和；0&amp+10\\\\-3和；0&amp+3\\end{bmatrix}]"
+  },
+  {
+    "origin": "\\[G_{y} = \\begin{bmatrix} -3 &amp; -10 &amp; -3 \\\\ 0 &amp; 0 &amp; 0 \\\\ +3 &amp; +10 &amp; +3 \\end{bmatrix}\\]",
+    "local": "\\[G{y}=\\begin{bmatrix}-3&amp-10&amp-3\\\\0和；0&amp；0\\\\+3和+10&amp+3\\结束{bmatrix}\\]"
+  },
+  {
+    "origin": "You can check out more information of this function in the OpenCV reference -",
+    "local": "您可以在OpenCV参考中查看此函数的更多信息-"
+  },
+  {
+    "origin": ". Also, in the sample code below, you will notice that above the code for",
+    "local": ". 另外，在下面的示例代码中，您将注意到"
+  },
+  {
+    "origin": "function there is also code for the",
+    "local": "函数还有代码"
+  },
+  {
+    "origin": "function commented. Uncommenting it (and obviously commenting the Sobel stuff) should give you an idea of how this function works.",
+    "local": "函数已注释。取消对它的注释（显然是注释Sobel的东西）应该可以让您了解这个函数是如何工作的。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "What does this program do?",
+    "local": "这个程序做什么？"
+  },
+  {
+    "origin": "Applies the",
+    "local": "应用"
+  },
+  {
+    "origin": "Sobel Operator",
+    "local": "索贝尔算子"
+  },
+  {
+    "origin": "and generates as output an image with the detected",
+    "local": "并且生成具有检测到的图像的图像作为输出"
+  },
+  {
+    "origin": "edges",
+    "local": "边缘"
+  },
+  {
+    "origin": "bright on a darker background.",
+    "local": "在较暗的背景上明亮。"
+  },
+  {
+    "origin": "The tutorial code's is shown lines below.",
+    "local": "教程代码如下所示。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "You can also download it from",
+    "local": "你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "You can also download it from",
+    "local": "你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "You can also download it from",
+    "local": "你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Declare variables",
+    "local": "声明变量"
+  },
+  {
+    "origin": "Load source image",
+    "local": "加载源图像"
+  },
+  {
+    "origin": "Reduce noise",
+    "local": "降低噪音"
+  },
+  {
+    "origin": "Grayscale",
+    "local": "灰度"
+  },
+  {
+    "origin": "Sobel Operator",
+    "local": "索贝尔算子"
+  },
+  {
+    "origin": "We calculate the \"derivatives\" in",
+    "local": "我们计算“导数”"
+  },
+  {
+    "origin": "x",
+    "local": "十"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "y",
+    "local": "y"
+  },
+  {
+    "origin": "directions. For this, we use the function",
+    "local": "方向。为此，我们使用函数"
+  },
+  {
+    "origin": "as shown below: The function takes the following arguments:",
+    "local": "如下所示：函数采用以下参数："
+  },
+  {
+    "origin": "src_gray",
+    "local": "src\\ U灰色"
+  },
+  {
+    "origin": ": In our example, the input image. Here it is",
+    "local": "：在我们的示例中，输入图像。给你"
+  },
+  {
+    "origin": "CV_8U",
+    "local": "CV\\ 8件"
+  },
+  {
+    "origin": "grad_x",
+    "local": "梯度"
+  },
+  {
+    "origin": "/",
+    "local": "/"
+  },
+  {
+    "origin": "grad_y",
+    "local": "等级"
+  },
+  {
+    "origin": ": The output image.",
+    "local": "：输出图像。"
+  },
+  {
+    "origin": "ddepth",
+    "local": "深度"
+  },
+  {
+    "origin": ": The depth of the output image. We set it to",
+    "local": "：输出图像的深度。我们把它设置为"
+  },
+  {
+    "origin": "CV_16S",
+    "local": "CVØ16S"
+  },
+  {
+    "origin": "to avoid overflow.",
+    "local": "以避免溢出。"
+  },
+  {
+    "origin": "x_order",
+    "local": "x\\U订单"
+  },
+  {
+    "origin": ": The order of the derivative in",
+    "local": "：中导数的顺序"
+  },
+  {
+    "origin": "x",
+    "local": "十"
+  },
+  {
+    "origin": "direction.",
+    "local": "方向。"
+  },
+  {
+    "origin": "y_order",
+    "local": "您的订单"
+  },
+  {
+    "origin": ": The order of the derivative in",
+    "local": "：中导数的顺序"
+  },
+  {
+    "origin": "y",
+    "local": "y"
+  },
+  {
+    "origin": "direction.",
+    "local": "方向。"
+  },
+  {
+    "origin": "scale",
+    "local": "规模"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "delta",
+    "local": "三角洲"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "BORDER_DEFAULT",
+    "local": "边框默认值"
+  },
+  {
+    "origin": ": We use default values.",
+    "local": "：我们使用默认值。"
+  },
+  {
+    "origin": "Notice that to calculate the gradient in",
+    "local": "请注意，要计算"
+  },
+  {
+    "origin": "x",
+    "local": "十"
+  },
+  {
+    "origin": "direction we use: \\(x_{order}= 1\\) and \\(y_{order} = 0\\). We do analogously for the",
+    "local": "我们使用的方向：\\（x{order}=1\\）和\\（y{order}=0\\）。我们也同样为"
+  },
+  {
+    "origin": "y",
+    "local": "y"
+  },
+  {
+    "origin": "direction.",
+    "local": "方向。"
+  },
+  {
+    "origin": "Convert output to a CV_8U image",
+    "local": "将输出转换为cv8u图像"
+  },
+  {
+    "origin": "Gradient",
+    "local": "梯度"
+  },
+  {
+    "origin": "We try to approximate the",
+    "local": "我们试图接近"
+  },
+  {
+    "origin": "gradient",
+    "local": "梯度"
+  },
+  {
+    "origin": "by adding both directional gradients (note that this is not an exact calculation at all! but it is good for our purposes).",
+    "local": "通过添加两个方向渐变（请注意，这根本不是一个精确的计算！但这对我们的目的是好的）。"
+  },
+  {
+    "origin": "Show results",
+    "local": "显示结果"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "Here is the output of applying our basic detector to",
+    "local": "下面是将我们的基本检测器应用于"
+  },
+  {
+    "origin": "lena.jpg",
+    "local": "Lena.jpg"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:35为OpenCV生成，&#160；"
+  }
+]

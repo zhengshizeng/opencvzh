@@ -1,0 +1,5378 @@
+[
+  {
+    "origin": "OpenCV: cv::DualQuat&lt; _Tp &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Friends",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::DualQuat&lt; _Tp &gt; Class Template Reference",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp",
+    "local": ""
+  },
+  {
+    "origin": ", const _Tp",
+    "local": ""
+  },
+  {
+    "origin": ", const _Tp",
+    "local": ""
+  },
+  {
+    "origin": ", const _Tp",
+    "local": ""
+  },
+  {
+    "origin": ", const _Tp",
+    "local": ""
+  },
+  {
+    "origin": ", const _Tp",
+    "local": ""
+  },
+  {
+    "origin": ", const _Tp",
+    "local": ""
+  },
+  {
+    "origin": ", const _Tp",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "create from eight same type numbers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 8 &gt; &amp;q)",
+    "local": ""
+  },
+  {
+    "origin": "create from a double or float vector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return the conjugate of a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} \\sigma^* &amp;= (p + \\epsilon q)^* &amp;= (p^* + \\epsilon q^*) \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; p) const",
+    "local": ""
+  },
+  {
+    "origin": "return the dot product of two dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of exponential function value",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return a quaternion which represent the dual part of dual quaternion. The definition of dual part is in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return a quaternion which represent the real part of dual quaternion. The definition of real part is in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return the rotation in quaternion form.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return the translation vector. The rotation \\(r\\) in this dual quaternion \\(\\sigma\\) is applied before translation \\(t\\). The dual quaternion \\(\\sigma\\) is defined as",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{equation} \\begin{split} \\sigma &amp;= p + \\epsilon q \\\\ &amp;= r + \\frac{\\epsilon}{2}{t}r. \\end{split} \\end{equation}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Thus, the translation can be obtained as follows",
+    "local": ""
+  },
+  {
+    "origin": "\\[t = 2qp^*.\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "if \\(\\sigma = p + \\epsilon q\\) is a dual quaternion, p is not zero, the inverse dual quaternion is",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma^{-1} = \\frac{\\sigma^*}{||\\sigma||^2}, \\]",
+    "local": ""
+  },
+  {
+    "origin": "or equivalentlly,",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma^{-1} = p^{-1} - \\epsilon p^{-1}qp^{-1}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of logarithm function value",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return the norm \\(||\\sigma||\\) of dual quaternion \\(\\sigma = p + \\epsilon q\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} ||\\sigma|| &amp;= \\sqrt{\\sigma * \\sigma^*} \\\\ &amp;= ||p|| + \\epsilon \\frac{p \\cdot q}{||p||}. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "Generally speaking, the norm of a not unit dual quaternion is a dual number. For convenience, we return it in the form of a dual quaternion , i.e.",
+    "local": ""
+  },
+  {
+    "origin": "\\[ ||\\sigma|| = [||p||, 0, 0, 0, \\frac{p \\cdot q}{||p||}, 0, 0, 0].\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "return a normalized dual quaternion. A dual quaternion can be expressed as",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} \\sigma &amp;= p + \\epsilon q\\\\ &amp;=||\\sigma||\\left(r+\\frac{1}{2}tr\\right) \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(r, t\\) represents the rotation (ordinary quaternion) and translation (pure ordinary quaternion) respectively, and \\(||\\sigma||\\) is the norm of dual quaternion(a dual number). A dual quaternion is unit if and only if",
+    "local": ""
+  },
+  {
+    "origin": "\\[ ||p||=1, p \\cdot q=0 \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\cdot\\) means dot product. The process of normalization is",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\sigma_{u}=\\frac{\\sigma}{||\\sigma||} \\]",
+    "local": ""
+  },
+  {
+    "origin": "Next, we simply proof \\(\\sigma_u\\) is a unit dual quaternion:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\renewcommand{\\Im}{\\operatorname{Im}} \\begin{equation} \\begin{split} \\sigma_{u}=\\frac{\\sigma}{||\\sigma||}&amp;=\\frac{p + \\epsilon q}{||p||+\\epsilon\\frac{p\\cdot q}{||p||}}\\\\ &amp;=\\frac{p}{||p||}+\\epsilon\\left(\\frac{q}{||p||}-p\\frac{p\\cdot q}{||p||^3}\\right)\\\\ &amp;=\\frac{p}{||p||}+\\epsilon\\frac{1}{||p||^2}\\left(qp^{*}-p\\cdot q\\right)\\frac{p}{||p||}\\\\ &amp;=\\frac{p}{||p||}+\\epsilon\\frac{1}{||p||^2}\\Im(qp^*)\\frac{p}{||p||}.\\\\ \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "As expected, the real part is a rotation and dual part is a pure quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;) const",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of two dual quaternions q and p. Multiplies values on either side of the operator.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication assignment operator of two quaternions. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp s)",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication assignment operator of a quaternions and a scalar. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;) const",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of two dual quaternions p and q. It returns a new dual quaternion that each value is the sum of \\(p_i\\) and \\(q_i\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Addition assignment operator of two dual quaternions p and q. It adds right operand to the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Return opposite dual quaternion \\(-p\\) which satisfies \\(p + (-p) = 0.\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;) const",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of two dual quaternions p and q. It returns a new dual quaternion that each value is the sum of \\(p_i\\) and \\(-q_i\\).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction assignment operator of two dual quaternions p and q. It subtracts right operand from the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp s) const",
+    "local": ""
+  },
+  {
+    "origin": "Division operator of a dual quaternions and a scalar. It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;) const",
+    "local": ""
+  },
+  {
+    "origin": "Division operator of two dual quaternions p and q. Divides left hand operand by right hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Division assignment operator of two dual quaternions p and q; It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp s)",
+    "local": ""
+  },
+  {
+    "origin": "Division assignment operator of a dual quaternions and a scalar. It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;) const",
+    "local": ""
+  },
+  {
+    "origin": "return true if two dual quaternions p and q are nearly equal, i.e. when the absolute value of each \\(p_i\\) and \\(q_i\\) is less than CV_DUAL_QUAT_EPS.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp t,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of \\(p^t\\) where p is a dual quaternion. This could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ p^t = \\exp(t\\ln p) \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of \\(p^q\\) where p and q are dual quaternions. This could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ p^q = \\exp(q\\ln p) \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "Transform this dual quaternion to a instance of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 4, 4 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ") const",
+    "local": ""
+  },
+  {
+    "origin": "Transform this dual quaternion to a affine transformation matrix the form of matrix, see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 8 &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "() const",
+    "local": ""
+  },
+  {
+    "origin": "Transform this dual quaternion to a vector.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;R)",
+    "local": ""
+  },
+  {
+    "origin": "create dual quaternion from an affine matrix. The definition of affine matrix can refer to",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp angle, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;axis, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;translation)",
+    "local": ""
+  },
+  {
+    "origin": "create a dual quaternion from a rotation angle \\(\\theta\\), a rotation axis \\(\\boldsymbol{u}\\) and a translation \\(\\boldsymbol{t}\\). It generates a dual quaternion \\(\\sigma\\) in the form of",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{equation} \\begin{split} \\sigma &amp;= r + \\frac{\\epsilon}{2}\\boldsymbol{t}r \\\\ &amp;= [\\cos(\\frac{\\theta}{2}), \\boldsymbol{u}\\sin(\\frac{\\theta}{2})] + \\frac{\\epsilon}{2}[0, \\boldsymbol{t}][[\\cos(\\frac{\\theta}{2}), \\boldsymbol{u}\\sin(\\frac{\\theta}{2})]]\\\\ &amp;= \\cos(\\frac{\\theta}{2}) + \\boldsymbol{u}\\sin(\\frac{\\theta}{2}) + \\frac{\\epsilon}{2}(-(\\boldsymbol{t} \\cdot \\boldsymbol{u})\\sin(\\frac{\\theta}{2}) + \\boldsymbol{t}\\cos(\\frac{\\theta}{2}) + \\boldsymbol{u} \\times \\boldsymbol{t} \\sin(\\frac{\\theta}{2})). \\end{split} \\end{equation}\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_R)",
+    "local": ""
+  },
+  {
+    "origin": "Transform this dual quaternion to an affine transformation matrix \\(M\\). Dual quaternion consists of a rotation \\(r=[a,b,c,d]\\) and a translation \\(t=[\\Delta x,\\Delta y,\\Delta z]\\). The affine transformation matrix \\(M\\) has the form",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{bmatrix} 1-2(e_2^2 +e_3^2) &amp;2(e_1e_2-e_0e_3) &amp;2(e_0e_2+e_1e_3) &amp;\\Delta x\\\\ 2(e_0e_3+e_1e_2) &amp;1-2(e_1^2+e_3^2) &amp;2(e_2e_3-e_0e_1) &amp;\\Delta y\\\\ 2(e_1e_3-e_0e_2) &amp;2(e_0e_1+e_2e_3) &amp;1-2(e_1^2-e_2^2) &amp;\\Delta z\\\\ 0&amp;0&amp;0&amp;1 \\end{bmatrix} \\]",
+    "local": ""
+  },
+  {
+    "origin": "if A is a matrix consisting of n points to be transformed, this could be achieved by",
+    "local": ""
+  },
+  {
+    "origin": "\\[ new\\_A = M * A \\]",
+    "local": ""
+  },
+  {
+    "origin": "where A has the form",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{bmatrix} x_0&amp; x_1&amp; x_2&amp;...&amp;x_n\\\\ y_0&amp; y_1&amp; y_2&amp;...&amp;y_n\\\\ z_0&amp; z_1&amp; z_2&amp;...&amp;z_n\\\\ 1&amp;1&amp;1&amp;...&amp;1 \\end{bmatrix} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where the same subscript represent the same point. The size of A should be \\([4,n]\\). and the same size for matrix new_A.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const _Tp angle, const _Tp d, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;axis, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;moment)",
+    "local": ""
+  },
+  {
+    "origin": "A dual quaternion is a vector in form of",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} \\sigma &amp;=\\boldsymbol{p} + \\epsilon \\boldsymbol{q}\\\\ &amp;= \\cos\\hat{\\frac{\\theta}{2}}+\\overline{\\hat{l}}\\sin\\frac{\\hat{\\theta}}{2} \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\hat{\\theta}\\) is dual angle and \\(\\overline{\\hat{l}}\\) is dual axis:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\hat{\\theta}=\\theta + \\epsilon d,\\\\ \\overline{\\hat{l}}= \\hat{l} +\\epsilon m. \\]",
+    "local": ""
+  },
+  {
+    "origin": "In this representation, \\(\\theta\\) is rotation angle and \\((\\hat{l},m)\\) is the screw axis, d is the translation distance along the axis.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;realPart, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;dualPart)",
+    "local": ""
+  },
+  {
+    "origin": "create Dual Quaternion from two same type quaternions p and q. A Dual Quaternion \\(\\sigma\\) has the form:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma = p + \\epsilon q\\]",
+    "local": ""
+  },
+  {
+    "origin": "where p and q are defined as follows:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{equation} \\begin{split} p &amp;= w + x\\boldsymbol{i} + y\\boldsymbol{j} + z\\boldsymbol{k}\\\\ q &amp;= w\\_ + x\\_\\boldsymbol{i} + y\\_\\boldsymbol{j} + z\\_\\boldsymbol{k}. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "The p and q are the real part and dual part respectively.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q1, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q2, const _Tp t,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "The method of Dual Quaternion linear Blending(DQB) is to compute a transformation between dual quaternion \\(q_1\\) and \\(q_2\\) and can be defined as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ DQB(t;{\\boldsymbol{q}}_1,{\\boldsymbol{q}}_2)= \\frac{(1-t){\\boldsymbol{q}}_1+t{\\boldsymbol{q}}_2}{||(1-t){\\boldsymbol{q}}_1+t{\\boldsymbol{q}}_2||}. \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(q_1\\) and \\(q_2\\) are unit dual quaternions representing the input transformations. If you want to use DQB that works for more than two rigid transformations, see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int cn&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;, cn &gt; &amp;dualquat,",
+    "local": ""
+  },
+  {
+    "origin": "weights,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "The generalized Dual Quaternion linear Blending works for more than two rigid transformations. If these transformations are expressed as unit dual quaternions \\(q_1,...,q_n\\) with convex weights \\(w = (w_1,...,w_n)\\), the generalized DQB is simply",
+    "local": ""
+  },
+  {
+    "origin": "\\[ gDQB(\\boldsymbol{w};{\\boldsymbol{q}}_1,...,{\\boldsymbol{q}}_n)=\\frac{w_1{\\boldsymbol{q}}_1+...+w_n{\\boldsymbol{q}}_n} {||w_1{\\boldsymbol{q}}_1+...+w_n{\\boldsymbol{q}}_n||}. \\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dualquat,",
+    "local": ""
+  },
+  {
+    "origin": "weights,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "The generalized Dual Quaternion linear Blending works for more than two rigid transformations. If these transformations are expressed as unit dual quaternions \\(q_1,...,q_n\\) with convex weights \\(w = (w_1,...,w_n)\\), the generalized DQB is simply",
+    "local": ""
+  },
+  {
+    "origin": "\\[ gDQB(\\boldsymbol{w};{\\boldsymbol{q}}_1,...,{\\boldsymbol{q}}_n)=\\frac{w_1{\\boldsymbol{q}}_1+...+w_n{\\boldsymbol{q}}_n} {||w_1{\\boldsymbol{q}}_1+...+w_n{\\boldsymbol{q}}_n||}. \\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q1, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt; &amp;q2, const _Tp t, bool directChange=true,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "The screw linear interpolation(ScLERP) is an extension of spherical linear interpolation of dual quaternion. If \\(\\sigma_1\\) and \\(\\sigma_2\\) are two dual quaternions representing the initial and final pose. The interpolation of ScLERP function can be defined as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ ScLERP(t;\\sigma_1,\\sigma_2) = \\sigma_1 * (\\sigma_1^{-1} * \\sigma_2)^t, t\\in[0,1] \\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "= (_Tp)1.e-6",
+    "local": ""
+  },
+  {
+    "origin": "Friends",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;dq)",
+    "local": ""
+  },
+  {
+    "origin": "return the conjugate of a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} \\sigma^* &amp;= (p + \\epsilon q)^* &amp;= (p^* + \\epsilon q^*) \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const T s, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of a scalar and a dual quaternions. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;, const T s)",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of a dual quaternions and a scalar. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const T s, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of a scalar and a dual quaternions. Adds right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;, const T s)",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of a dual quaternions and a scalar. Adds right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;, const T s)",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of a dual quaternion and a scalar. Subtracts right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const T s, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of a scalar and a dual quaternions. Subtracts right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename S &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(std::ostream &amp;, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; S &gt; &amp;)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;dq)",
+    "local": ""
+  },
+  {
+    "origin": "return the value of exponential function value",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;dq,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit)",
+    "local": ""
+  },
+  {
+    "origin": "if \\(\\sigma = p + \\epsilon q\\) is a dual quaternion, p is not zero, the inverse dual quaternion is",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma^{-1} = \\frac{\\sigma^*}{||\\sigma||^2}, \\]",
+    "local": ""
+  },
+  {
+    "origin": "or equivalentlly,",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma^{-1} = p^{-1} - \\epsilon p^{-1}qp^{-1}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;dq,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit)",
+    "local": ""
+  },
+  {
+    "origin": "return the value of logarithm function value",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;dq, const T t,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit)",
+    "local": ""
+  },
+  {
+    "origin": "return the value of \\(p^t\\) where p is a dual quaternion. This could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ p^t = \\exp(t\\ln p) \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;p, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; T &gt; &amp;q,",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit)",
+    "local": ""
+  },
+  {
+    "origin": "return the value of \\(p^q\\) where p and q are dual quaternions. This could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ p^q = \\exp(q\\ln p) \\]",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "class cv::DualQuat&lt; _Tp &gt;",
+    "local": ""
+  },
+  {
+    "origin": "Dual quaternions were introduced to describe rotation together with translation while ordinary quaternions can only describe rotation. It can be used for shortest path pose interpolation, local pose optimization or volumetric deformation. More details can be found",
+    "local": ""
+  },
+  {
+    "origin": "https://en.wikipedia.org/wiki/Dual_quaternion",
+    "local": ""
+  },
+  {
+    "origin": "\"A beginners guide to dual-quaternions: what they are, how they work, and how to use them for 3D character hierarchies\", Ben Kenwright, 2012",
+    "local": ""
+  },
+  {
+    "origin": "http://rodolphe-vaillant.fr/?e=29",
+    "local": ""
+  },
+  {
+    "origin": "A unit dual quaternion can be classically represented as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} \\sigma &amp;= \\left(r+\\frac{\\epsilon}{2}tr\\right)\\\\ &amp;= [w, x, y, z, w\\_, x\\_, y\\_, z\\_] \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(r, t\\) represents the rotation (ordinary unit quaternion) and translation (pure ordinary quaternion) respectively.",
+    "local": ""
+  },
+  {
+    "origin": "A general dual quaternions which consist of two quaternions is usually represented in form of:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\sigma = p + \\epsilon q \\]",
+    "local": ""
+  },
+  {
+    "origin": "where the introduced dual unit \\(\\epsilon\\) satisfies \\(\\epsilon^2 = \\epsilon^3 =...=0\\), and \\(p, q\\) are quaternions.",
+    "local": ""
+  },
+  {
+    "origin": "Alternatively, dual quaternions can also be interpreted as four components which are all",
+    "local": ""
+  },
+  {
+    "origin": "dual numbers",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\sigma = \\hat{q}_w + \\hat{q}_xi + \\hat{q}_yj + \\hat{q}_zk \\]",
+    "local": ""
+  },
+  {
+    "origin": "If we set \\(\\hat{q}_x, \\hat{q}_y\\) and \\(\\hat{q}_z\\) equal to 0, a dual quaternion is transformed to a dual number. see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "If you want to create a dual quaternion, you can use:",
+    "local": ""
+  },
+  {
+    "origin": "A point \\(v=(x, y, z)\\) in form of dual quaternion is \\([1+\\epsilon v]=[1,0,0,0,0,x,y,z]\\). The transformation of a point \\(v_1\\) to another point \\(v_2\\) under the dual quaternion \\(\\sigma\\) is",
+    "local": ""
+  },
+  {
+    "origin": "\\[ 1 + \\epsilon v_2 = \\sigma * (1 + \\epsilon v_1) * \\sigma^{\\star} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\sigma^{\\star}=p^*-\\epsilon q^*.\\)",
+    "local": ""
+  },
+  {
+    "origin": "A line in the \\(Pl\\ddot{u}cker\\) coordinates \\((\\hat{l}, m)\\) defined by the dual quaternion \\(l=\\hat{l}+\\epsilon m\\). To transform a line,",
+    "local": ""
+  },
+  {
+    "origin": "\\[l_2 = \\sigma * l_1 * \\sigma^*,\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\sigma=r+\\frac{\\epsilon}{2}rt\\) and \\(\\sigma^*=p^*+\\epsilon q^*\\).",
+    "local": ""
+  },
+  {
+    "origin": "To extract the Vec&lt;double, 8&gt; or Vec&lt;float, 8&gt;, see",
+    "local": ""
+  },
+  {
+    "origin": ";",
+    "local": ""
+  },
+  {
+    "origin": "To extract the affine transformation matrix, see",
+    "local": ""
+  },
+  {
+    "origin": ";",
+    "local": ""
+  },
+  {
+    "origin": "To extract the instance of",
+    "local": ""
+  },
+  {
+    "origin": ", see",
+    "local": ""
+  },
+  {
+    "origin": ";",
+    "local": ""
+  },
+  {
+    "origin": "If two quaternions \\(q_0, q_1\\) are needed to be interpolated, you can use",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "With more than two dual quaternions to be blended, you can use generalize linear dual quaternion blending with the corresponding weights, i.e.",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "DualQuat()",
+    "local": ""
+  },
+  {
+    "origin": "[1/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "DualQuat()",
+    "local": ""
+  },
+  {
+    "origin": "[2/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "w",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "y",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "z",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "w_",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "x_",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "y_",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "z_",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "create from eight same type numbers.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "DualQuat()",
+    "local": ""
+  },
+  {
+    "origin": "[3/3]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 8 &gt; &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "create from a double or float vector.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "conjugate()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::conjugate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the conjugate of a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} \\sigma^* &amp;= (p + \\epsilon q)^* &amp;= (p^* + \\epsilon q^*) \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromAffine3()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromAffine3",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "R",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "create dual quaternion from an affine matrix. The definition of affine matrix can refer to",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromAngleAxisTrans()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromAngleAxisTrans",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "angle",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "axis",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "translation",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "create a dual quaternion from a rotation angle \\(\\theta\\), a rotation axis \\(\\boldsymbol{u}\\) and a translation \\(\\boldsymbol{t}\\). It generates a dual quaternion \\(\\sigma\\) in the form of",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{equation} \\begin{split} \\sigma &amp;= r + \\frac{\\epsilon}{2}\\boldsymbol{t}r \\\\ &amp;= [\\cos(\\frac{\\theta}{2}), \\boldsymbol{u}\\sin(\\frac{\\theta}{2})] + \\frac{\\epsilon}{2}[0, \\boldsymbol{t}][[\\cos(\\frac{\\theta}{2}), \\boldsymbol{u}\\sin(\\frac{\\theta}{2})]]\\\\ &amp;= \\cos(\\frac{\\theta}{2}) + \\boldsymbol{u}\\sin(\\frac{\\theta}{2}) + \\frac{\\epsilon}{2}(-(\\boldsymbol{t} \\cdot \\boldsymbol{u})\\sin(\\frac{\\theta}{2}) + \\boldsymbol{t}\\cos(\\frac{\\theta}{2}) + \\boldsymbol{u} \\times \\boldsymbol{t} \\sin(\\frac{\\theta}{2})). \\end{split} \\end{equation}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "angle",
+    "local": ""
+  },
+  {
+    "origin": "rotation angle.",
+    "local": ""
+  },
+  {
+    "origin": "axis",
+    "local": ""
+  },
+  {
+    "origin": "rotation axis.",
+    "local": ""
+  },
+  {
+    "origin": "translation",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Axis will be normalized in this function. And translation is applied after the rotation. Use",
+    "local": ""
+  },
+  {
+    "origin": "(r, r * t / 2) to create a dual quaternion which translation is applied before rotation.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromMat()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromMat",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_R",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Transform this dual quaternion to an affine transformation matrix \\(M\\). Dual quaternion consists of a rotation \\(r=[a,b,c,d]\\) and a translation \\(t=[\\Delta x,\\Delta y,\\Delta z]\\). The affine transformation matrix \\(M\\) has the form",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{bmatrix} 1-2(e_2^2 +e_3^2) &amp;2(e_1e_2-e_0e_3) &amp;2(e_0e_2+e_1e_3) &amp;\\Delta x\\\\ 2(e_0e_3+e_1e_2) &amp;1-2(e_1^2+e_3^2) &amp;2(e_2e_3-e_0e_1) &amp;\\Delta y\\\\ 2(e_1e_3-e_0e_2) &amp;2(e_0e_1+e_2e_3) &amp;1-2(e_1^2-e_2^2) &amp;\\Delta z\\\\ 0&amp;0&amp;0&amp;1 \\end{bmatrix} \\]",
+    "local": ""
+  },
+  {
+    "origin": "if A is a matrix consisting of n points to be transformed, this could be achieved by",
+    "local": ""
+  },
+  {
+    "origin": "\\[ new\\_A = M * A \\]",
+    "local": ""
+  },
+  {
+    "origin": "where A has the form",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{bmatrix} x_0&amp; x_1&amp; x_2&amp;...&amp;x_n\\\\ y_0&amp; y_1&amp; y_2&amp;...&amp;y_n\\\\ z_0&amp; z_1&amp; z_2&amp;...&amp;z_n\\\\ 1&amp;1&amp;1&amp;...&amp;1 \\end{bmatrix} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where the same subscript represent the same point. The size of A should be \\([4,n]\\). and the same size for matrix new_A.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "_R",
+    "local": ""
+  },
+  {
+    "origin": "4x4 matrix that represents rotations and translation.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Translation is applied after the rotation. Use createFromQuat(r, r * t / 2) to create a dual quaternion which translation is applied before rotation.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromPitch()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromPitch",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "angle",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "axis",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp, 3 &gt; &amp;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "moment",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "A dual quaternion is a vector in form of",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} \\sigma &amp;=\\boldsymbol{p} + \\epsilon \\boldsymbol{q}\\\\ &amp;= \\cos\\hat{\\frac{\\theta}{2}}+\\overline{\\hat{l}}\\sin\\frac{\\hat{\\theta}}{2} \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\hat{\\theta}\\) is dual angle and \\(\\overline{\\hat{l}}\\) is dual axis:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\hat{\\theta}=\\theta + \\epsilon d,\\\\ \\overline{\\hat{l}}= \\hat{l} +\\epsilon m. \\]",
+    "local": ""
+  },
+  {
+    "origin": "In this representation, \\(\\theta\\) is rotation angle and \\((\\hat{l},m)\\) is the screw axis, d is the translation distance along the axis.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "angle",
+    "local": ""
+  },
+  {
+    "origin": "rotation angle.",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": "translation along the rotation axis.",
+    "local": ""
+  },
+  {
+    "origin": "axis",
+    "local": ""
+  },
+  {
+    "origin": "moment",
+    "local": ""
+  },
+  {
+    "origin": "the moment of line, and it should be orthogonal to axis.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Translation is applied after the rotation. Use createFromQuat(r, r * t / 2) to create a dual quaternion which translation is applied before rotation.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "createFromQuat()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::createFromQuat",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "realPart",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "dualPart",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "create Dual Quaternion from two same type quaternions p and q. A Dual Quaternion \\(\\sigma\\) has the form:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma = p + \\epsilon q\\]",
+    "local": ""
+  },
+  {
+    "origin": "where p and q are defined as follows:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{equation} \\begin{split} p &amp;= w + x\\boldsymbol{i} + y\\boldsymbol{j} + z\\boldsymbol{k}\\\\ q &amp;= w\\_ + x\\_\\boldsymbol{i} + y\\_\\boldsymbol{j} + z\\_\\boldsymbol{k}. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "The p and q are the real part and dual part respectively.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "realPart",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion, real part of dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "dualPart",
+    "local": ""
+  },
+  {
+    "origin": "a quaternion, dual part of dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "dot()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::dot",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "p",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the dot product of two dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "p",
+    "local": ""
+  },
+  {
+    "origin": "other dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "dqblend()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::dqblend",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "The method of Dual Quaternion linear Blending(DQB) is to compute a transformation between dual quaternion \\(q_1\\) and \\(q_2\\) and can be defined as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ DQB(t;{\\boldsymbol{q}}_1,{\\boldsymbol{q}}_2)= \\frac{(1-t){\\boldsymbol{q}}_1+t{\\boldsymbol{q}}_2}{||(1-t){\\boldsymbol{q}}_1+t{\\boldsymbol{q}}_2||}. \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(q_1\\) and \\(q_2\\) are unit dual quaternions representing the input transformations. If you want to use DQB that works for more than two rigid transformations, see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": "a unit dual quaternion representing the input transformations.",
+    "local": ""
+  },
+  {
+    "origin": "q2",
+    "local": ""
+  },
+  {
+    "origin": "a unit dual quaternion representing the input transformations.",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "parameter \\(t\\in[0,1]\\).",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", this dual quaternion assume to be a unit dual quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "exp()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::exp",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of exponential function value",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "gdqblend()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;int cn&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::gdqblend",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "dualquat",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "The generalized Dual Quaternion linear Blending works for more than two rigid transformations. If these transformations are expressed as unit dual quaternions \\(q_1,...,q_n\\) with convex weights \\(w = (w_1,...,w_n)\\), the generalized DQB is simply",
+    "local": ""
+  },
+  {
+    "origin": "\\[ gDQB(\\boldsymbol{w};{\\boldsymbol{q}}_1,...,{\\boldsymbol{q}}_n)=\\frac{w_1{\\boldsymbol{q}}_1+...+w_n{\\boldsymbol{q}}_n} {||w_1{\\boldsymbol{q}}_1+...+w_n{\\boldsymbol{q}}_n||}. \\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dualquat",
+    "local": ""
+  },
+  {
+    "origin": "vector of dual quaternions",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": "vector of weights, the size of weights should be the same as dualquat, and the weights should satisfy \\(\\sum_0^n w_{i} = 1\\) and \\(w_i&gt;0\\).",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", these dual quaternions assume to be unit quaternions and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of weights' element should be the same as the date type of dual quaternion inside the dualquat.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "gdqblend()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::gdqblend",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "dualquat",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "The generalized Dual Quaternion linear Blending works for more than two rigid transformations. If these transformations are expressed as unit dual quaternions \\(q_1,...,q_n\\) with convex weights \\(w = (w_1,...,w_n)\\), the generalized DQB is simply",
+    "local": ""
+  },
+  {
+    "origin": "\\[ gDQB(\\boldsymbol{w};{\\boldsymbol{q}}_1,...,{\\boldsymbol{q}}_n)=\\frac{w_1{\\boldsymbol{q}}_1+...+w_n{\\boldsymbol{q}}_n} {||w_1{\\boldsymbol{q}}_1+...+w_n{\\boldsymbol{q}}_n||}. \\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dualquat",
+    "local": ""
+  },
+  {
+    "origin": "The dual quaternions which have 8 channels and 1 row or 1 col.",
+    "local": ""
+  },
+  {
+    "origin": "weights",
+    "local": ""
+  },
+  {
+    "origin": "vector of weights, the size of weights should be the same as dualquat, and the weights should satisfy \\(\\sum_0^n w_{i} = 1\\) and \\(w_i&gt;0\\).",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", these dual quaternions assume to be unit quaternions and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of weights' element should be the same as the date type of dual quaternion inside the dualquat.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getDualPart()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::getDualPart",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return a quaternion which represent the dual part of dual quaternion. The definition of dual part is in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getRealPart()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::getRealPart",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return a quaternion which represent the real part of dual quaternion. The definition of real part is in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getRotation()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::getRotation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the rotation in quaternion form.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getTranslation()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp, 3&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::getTranslation",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the translation vector. The rotation \\(r\\) in this dual quaternion \\(\\sigma\\) is applied before translation \\(t\\). The dual quaternion \\(\\sigma\\) is defined as",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{equation} \\begin{split} \\sigma &amp;= p + \\epsilon q \\\\ &amp;= r + \\frac{\\epsilon}{2}{t}r. \\end{split} \\end{equation}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Thus, the translation can be obtained as follows",
+    "local": ""
+  },
+  {
+    "origin": "\\[t = 2qp^*.\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", this dual quaternion assume to be a unit dual quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This dual quaternion's translation is applied after the rotation.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "inv()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::inv",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "if \\(\\sigma = p + \\epsilon q\\) is a dual quaternion, p is not zero, the inverse dual quaternion is",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma^{-1} = \\frac{\\sigma^*}{||\\sigma||^2}, \\]",
+    "local": ""
+  },
+  {
+    "origin": "or equivalentlly,",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma^{-1} = p^{-1} - \\epsilon p^{-1}qp^{-1}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", this dual quaternion assume to be a unit dual quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "log()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::log",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of logarithm function value",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", this dual quaternion assume to be a unit dual quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "norm()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::norm",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the norm \\(||\\sigma||\\) of dual quaternion \\(\\sigma = p + \\epsilon q\\).",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} ||\\sigma|| &amp;= \\sqrt{\\sigma * \\sigma^*} \\\\ &amp;= ||p|| + \\epsilon \\frac{p \\cdot q}{||p||}. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "Generally speaking, the norm of a not unit dual quaternion is a dual number. For convenience, we return it in the form of a dual quaternion , i.e.",
+    "local": ""
+  },
+  {
+    "origin": "\\[ ||\\sigma|| = [||p||, 0, 0, 0, \\frac{p \\cdot q}{||p||}, 0, 0, 0].\\]",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The data type of dual number is dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "normalize()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::normalize",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return a normalized dual quaternion. A dual quaternion can be expressed as",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} \\sigma &amp;= p + \\epsilon q\\\\ &amp;=||\\sigma||\\left(r+\\frac{1}{2}tr\\right) \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(r, t\\) represents the rotation (ordinary quaternion) and translation (pure ordinary quaternion) respectively, and \\(||\\sigma||\\) is the norm of dual quaternion(a dual number). A dual quaternion is unit if and only if",
+    "local": ""
+  },
+  {
+    "origin": "\\[ ||p||=1, p \\cdot q=0 \\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\cdot\\) means dot product. The process of normalization is",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\sigma_{u}=\\frac{\\sigma}{||\\sigma||} \\]",
+    "local": ""
+  },
+  {
+    "origin": "Next, we simply proof \\(\\sigma_u\\) is a unit dual quaternion:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\renewcommand{\\Im}{\\operatorname{Im}} \\begin{equation} \\begin{split} \\sigma_{u}=\\frac{\\sigma}{||\\sigma||}&amp;=\\frac{p + \\epsilon q}{||p||+\\epsilon\\frac{p\\cdot q}{||p||}}\\\\ &amp;=\\frac{p}{||p||}+\\epsilon\\left(\\frac{q}{||p||}-p\\frac{p\\cdot q}{||p||^3}\\right)\\\\ &amp;=\\frac{p}{||p||}+\\epsilon\\frac{1}{||p||^2}\\left(qp^{*}-p\\cdot q\\right)\\frac{p}{||p||}\\\\ &amp;=\\frac{p}{||p||}+\\epsilon\\frac{1}{||p||^2}\\Im(qp^*)\\frac{p}{||p||}.\\\\ \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "As expected, the real part is a rotation and dual part is a pure quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator*()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator*",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of two dual quaternions q and p. Multiplies values on either side of the operator.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of dual quaternion multiplication: The dual quaternion can be written as an ordered pair of quaternions [A, B]. Thus",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p * q &amp;= [A, B][C, D]\\\\ &amp;=[AC, AD + BC] \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator*=()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator*=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication assignment operator of two quaternions. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of dual quaternion multiplication: The dual quaternion can be written as an ordered pair of quaternions [A, B]. Thus",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p * q &amp;= [A, B][C, D]\\\\ &amp;=[AC, AD + BC] \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator*=()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator*=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication assignment operator of a quaternions and a scalar. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of dual quaternion multiplication with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p * s &amp;= [w, x, y, z, w\\_, x\\_, y\\_, z\\_] * s\\\\ &amp;=[w s, x s, y s, z s, w\\_ \\space s, x\\_ \\space s, y\\_ \\space s, z\\_ \\space s]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator+()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator+",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of two dual quaternions p and q. It returns a new dual quaternion that each value is the sum of \\(p_i\\) and \\(q_i\\).",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator+=()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator+=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Addition assignment operator of two dual quaternions p and q. It adds right operand to the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator-()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator-",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Return opposite dual quaternion \\(-p\\) which satisfies \\(p + (-p) = 0.\\).",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator-()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator-",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of two dual quaternions p and q. It returns a new dual quaternion that each value is the sum of \\(p_i\\) and \\(-q_i\\).",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator-=()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator-=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction assignment operator of two dual quaternions p and q. It subtracts right operand from the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator/()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator/",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Division operator of a dual quaternions and a scalar. It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of dual quaternion division with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p / s &amp;= [w, x, y, z, w\\_, x\\_, y\\_, z\\_] / s\\\\ &amp;=[w/s, x/s, y/s, z/s, w\\_/s, x\\_/s, y\\_/s, z\\_/s]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to this dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator/()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator/",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Division operator of two dual quaternions p and q. Divides left hand operand by right hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of dual quaternion division with a dual quaternion:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p / q &amp;= p * q.inv()\\\\ \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator/=()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator/=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Division assignment operator of two dual quaternions p and q; It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of dual quaternion division with a quaternion:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p / q&amp;= p * q.inv()\\\\ \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator/=()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;&amp;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator/=",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Division assignment operator of a dual quaternions and a scalar. It divides left operand with the right operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of dual quaternion division with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p / s &amp;= [w, x, y, z, w\\_, x\\_, y\\_ ,z\\_] / s\\\\ &amp;=[w / s, x / s, y / s, z / s, w\\_ / \\space s, x\\_ / \\space s, y\\_ / \\space s, z\\_ / \\space s]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "operator==()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::operator==",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return true if two dual quaternions p and q are nearly equal, i.e. when the absolute value of each \\(p_i\\) and \\(q_i\\) is less than CV_DUAL_QUAT_EPS.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "power()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::power",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of \\(p^t\\) where p is a dual quaternion. This could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ p^t = \\exp(t\\ln p) \\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "index of power function.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", this dual quaternion assume to be a unit dual quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "power()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::power",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "return the value of \\(p^q\\) where p and q are dual quaternions. This could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ p^q = \\exp(q\\ln p) \\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a dual quaternion",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", this dual quaternion assume to be a dual unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "sclerp()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::sclerp",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "directChange",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "The screw linear interpolation(ScLERP) is an extension of spherical linear interpolation of dual quaternion. If \\(\\sigma_1\\) and \\(\\sigma_2\\) are two dual quaternions representing the initial and final pose. The interpolation of ScLERP function can be defined as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ ScLERP(t;\\sigma_1,\\sigma_2) = \\sigma_1 * (\\sigma_1^{-1} * \\sigma_2)^t, t\\in[0,1] \\]",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "q1",
+    "local": ""
+  },
+  {
+    "origin": "a dual quaternion represents a initial pose.",
+    "local": ""
+  },
+  {
+    "origin": "q2",
+    "local": ""
+  },
+  {
+    "origin": "a dual quaternion represents a final pose.",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "interpolation parameter",
+    "local": ""
+  },
+  {
+    "origin": "directChange",
+    "local": ""
+  },
+  {
+    "origin": "if true, it always return the shortest path.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", this dual quaternion assume to be a unit dual quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "toAffine3()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::toAffine3",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Transform this dual quaternion to a instance of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "toMat()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp, 4, 4&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::toMat",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Transform this dual quaternion to a affine transformation matrix the form of matrix, see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "toVec()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;_Tp, 8&gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::toVec",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Transform this dual quaternion to a vector.",
+    "local": ""
+  },
+  {
+    "origin": "Friends And Related Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "conjugate",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; conjugate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "dq",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return the conjugate of a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} \\sigma^* &amp;= (p + \\epsilon q)^* &amp;= (p^* + \\epsilon q^*) \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dq",
+    "local": ""
+  },
+  {
+    "origin": "a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator*",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator*",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of a scalar and a dual quaternions. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of dual quaternion multiplication with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p * s &amp;= [w, x, y, z, w\\_, x\\_, y\\_, z\\_] * s\\\\ &amp;=[w s, x s, y s, z s, w\\_ \\space s, x\\_ \\space s, y\\_ \\space s, z\\_ \\space s]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator*",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator*",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Multiplication operator of a dual quaternions and a scalar. It multiplies right operand with the left operand and assign the result to left operand.",
+    "local": ""
+  },
+  {
+    "origin": "Rule of dual quaternion multiplication with a scalar:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ \\begin{equation} \\begin{split} p * s &amp;= [w, x, y, z, w\\_, x\\_, y\\_, z\\_] * s\\\\ &amp;=[w s, x s, y s, z s, w\\_ \\space s, x\\_ \\space s, y\\_ \\space s, z\\_ \\space s]. \\end{split} \\end{equation} \\]",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator+",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator+",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of a scalar and a dual quaternions. Adds right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator+",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator+",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Addition operator of a dual quaternions and a scalar. Adds right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator-",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator-",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of a dual quaternion and a scalar. Subtracts right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator-",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; cv::operator-",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "s",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "Subtraction operator of a scalar and a dual quaternions. Subtracts right hand operand from left hand operand.",
+    "local": ""
+  },
+  {
+    "origin": "For example",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "the type of scalar should be equal to the dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "cv::operator",
+    "local": ""
+  },
+  {
+    "origin": "<",
+    "local": ""
+  },
+  {
+    "origin": "<",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename S &gt;",
+    "local": ""
+  },
+  {
+    "origin": "std::ostream&amp; cv::operator&lt;&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "exp",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; exp",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "dq",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return the value of exponential function value",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dq",
+    "local": ""
+  },
+  {
+    "origin": "a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "inv",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; inv",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "dq",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "if \\(\\sigma = p + \\epsilon q\\) is a dual quaternion, p is not zero, the inverse dual quaternion is",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma^{-1} = \\frac{\\sigma^*}{||\\sigma||^2}, \\]",
+    "local": ""
+  },
+  {
+    "origin": "or equivalentlly,",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\sigma^{-1} = p^{-1} - \\epsilon p^{-1}qp^{-1}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dq",
+    "local": ""
+  },
+  {
+    "origin": "a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", dual quaternion dq assume to be a unit dual quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "log",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; log",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "dq",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return the value of logarithm function value",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dq",
+    "local": ""
+  },
+  {
+    "origin": "a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", dual quaternion dq assume to be a unit dual quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "power",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; power",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "dq",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return the value of \\(p^t\\) where p is a dual quaternion. This could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ p^t = \\exp(t\\ln p) \\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "dq",
+    "local": ""
+  },
+  {
+    "origin": "a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "t",
+    "local": ""
+  },
+  {
+    "origin": "index of power function.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", dual quaternion dq assume to be a unit dual quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "power",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;T&gt; power",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "p",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "friend",
+    "local": ""
+  },
+  {
+    "origin": "return the value of \\(p^q\\) where p and q are dual quaternions. This could be calculated as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[ p^q = \\exp(q\\ln p) \\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "p",
+    "local": ""
+  },
+  {
+    "origin": "a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "q",
+    "local": ""
+  },
+  {
+    "origin": "a dual quaternion.",
+    "local": ""
+  },
+  {
+    "origin": "assumeUnit",
+    "local": ""
+  },
+  {
+    "origin": "if",
+    "local": ""
+  },
+  {
+    "origin": ", dual quaternion p assume to be a dual unit quaternion and this function will save some computations.",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DUAL_QUAT_EPS",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "constexpr _Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::CV_DUAL_QUAT_EPS = (_Tp)1.e-6",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "w",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::w",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "w_",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::w_",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::x",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "x_",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::x_",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "y",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::y",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "y_",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::y_",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "z",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::z",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "z_",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": ""
+  },
+  {
+    "origin": "_Tp",
+    "local": ""
+  },
+  {
+    "origin": "&lt; _Tp &gt;::z_",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by &#160;",
+    "local": ""
+  }
+]

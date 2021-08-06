@@ -1,0 +1,962 @@
+[
+  {
+    "origin": "OpenCV: DirectX interoperability",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "DirectX interoperability",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(ID3D10Texture2D *pD3D10Texture2D,",
+    "local": ""
+  },
+  {
+    "origin": "dst)",
+    "local": ""
+  },
+  {
+    "origin": "Converts ID3D10Texture2D to OutputArray.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(ID3D11Texture2D *pD3D11Texture2D,",
+    "local": ""
+  },
+  {
+    "origin": "dst)",
+    "local": ""
+  },
+  {
+    "origin": "Converts ID3D11Texture2D to OutputArray. If input texture format is DXGI_FORMAT_NV12 then data will be upsampled and color-converted to BGR format.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(IDirect3DSurface9 *pDirect3DSurface9,",
+    "local": ""
+  },
+  {
+    "origin": "dst, void *surfaceSharedHandle=NULL)",
+    "local": ""
+  },
+  {
+    "origin": "Converts IDirect3DSurface9 to OutputArray.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src, ID3D10Texture2D *pD3D10Texture2D)",
+    "local": ""
+  },
+  {
+    "origin": "Converts InputArray to ID3D10Texture2D.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src, ID3D11Texture2D *pD3D11Texture2D)",
+    "local": ""
+  },
+  {
+    "origin": "Converts InputArray to ID3D11Texture2D. If destination texture format is DXGI_FORMAT_NV12 then input",
+    "local": ""
+  },
+  {
+    "origin": "expected to be in BGR format and data will be downsampled and color-converted to NV12.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src, IDirect3DSurface9 *pDirect3DSurface9, void *surfaceSharedHandle=NULL)",
+    "local": ""
+  },
+  {
+    "origin": "Converts InputArray to IDirect3DSurface9.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const int iD3DFORMAT)",
+    "local": ""
+  },
+  {
+    "origin": "Get OpenCV type from DirectX type.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const int iDXGI_FORMAT)",
+    "local": ""
+  },
+  {
+    "origin": "Get OpenCV type from DirectX type.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(ID3D10Device *pD3D10Device)",
+    "local": ""
+  },
+  {
+    "origin": "Creates OpenCL context from D3D10 device.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(ID3D11Device *pD3D11Device)",
+    "local": ""
+  },
+  {
+    "origin": "Creates OpenCL context from D3D11 device.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(IDirect3DDevice9 *pDirect3DDevice9)",
+    "local": ""
+  },
+  {
+    "origin": "Creates OpenCL context from Direct3DDevice9 device.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(IDirect3DDevice9Ex *pDirect3DDevice9Ex)",
+    "local": ""
+  },
+  {
+    "origin": "Creates OpenCL context from Direct3DDevice9Ex device.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "convertFromD3D10Texture2D()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::directx::convertFromD3D10Texture2D",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "ID3D10Texture2D *&#160;",
+    "local": ""
+  },
+  {
+    "origin": "pD3D10Texture2D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Converts ID3D10Texture2D to OutputArray.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Note: function does memory copy from pD3D10Texture2D to dst",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pD3D10Texture2D",
+    "local": ""
+  },
+  {
+    "origin": "- source D3D10 texture",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "- destination OutputArray",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "convertFromD3D11Texture2D()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::directx::convertFromD3D11Texture2D",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "ID3D11Texture2D *&#160;",
+    "local": ""
+  },
+  {
+    "origin": "pD3D11Texture2D",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Converts ID3D11Texture2D to OutputArray. If input texture format is DXGI_FORMAT_NV12 then data will be upsampled and color-converted to BGR format.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Note: Destination matrix will be re-allocated if it has not enough memory to match texture size. function does memory copy from pD3D11Texture2D to dst",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pD3D11Texture2D",
+    "local": ""
+  },
+  {
+    "origin": "- source D3D11 texture",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "- destination OutputArray",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "convertFromDirect3DSurface9()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::directx::convertFromDirect3DSurface9",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "IDirect3DSurface9 *&#160;",
+    "local": ""
+  },
+  {
+    "origin": "pDirect3DSurface9",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "surfaceSharedHandle",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Converts IDirect3DSurface9 to OutputArray.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Note: function does memory copy from pDirect3DSurface9 to dst",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pDirect3DSurface9",
+    "local": ""
+  },
+  {
+    "origin": "- source D3D10 texture",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "- destination OutputArray",
+    "local": ""
+  },
+  {
+    "origin": "surfaceSharedHandle",
+    "local": ""
+  },
+  {
+    "origin": "- shared handle",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "convertToD3D10Texture2D()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::directx::convertToD3D10Texture2D",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "ID3D10Texture2D *&#160;",
+    "local": ""
+  },
+  {
+    "origin": "pD3D10Texture2D",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Converts InputArray to ID3D10Texture2D.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Note: function does memory copy from src to pD3D10Texture2D",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "- source InputArray",
+    "local": ""
+  },
+  {
+    "origin": "pD3D10Texture2D",
+    "local": ""
+  },
+  {
+    "origin": "- destination D3D10 texture",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "convertToD3D11Texture2D()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::directx::convertToD3D11Texture2D",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "ID3D11Texture2D *&#160;",
+    "local": ""
+  },
+  {
+    "origin": "pD3D11Texture2D",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Converts InputArray to ID3D11Texture2D. If destination texture format is DXGI_FORMAT_NV12 then input",
+    "local": ""
+  },
+  {
+    "origin": "expected to be in BGR format and data will be downsampled and color-converted to NV12.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Note: Destination texture must be allocated by application. Function does memory copy from src to pD3D11Texture2D",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "- source InputArray",
+    "local": ""
+  },
+  {
+    "origin": "pD3D11Texture2D",
+    "local": ""
+  },
+  {
+    "origin": "- destination D3D11 texture",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "convertToDirect3DSurface9()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::directx::convertToDirect3DSurface9",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "IDirect3DSurface9 *&#160;",
+    "local": ""
+  },
+  {
+    "origin": "pDirect3DSurface9",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "surfaceSharedHandle",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Converts InputArray to IDirect3DSurface9.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Note: function does memory copy from src to pDirect3DSurface9",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "- source InputArray",
+    "local": ""
+  },
+  {
+    "origin": "pDirect3DSurface9",
+    "local": ""
+  },
+  {
+    "origin": "- destination D3D10 texture",
+    "local": ""
+  },
+  {
+    "origin": "surfaceSharedHandle",
+    "local": ""
+  },
+  {
+    "origin": "- shared handle",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getTypeFromD3DFORMAT()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::directx::getTypeFromD3DFORMAT",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "iD3DFORMAT",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Get OpenCV type from DirectX type.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "iD3DFORMAT",
+    "local": ""
+  },
+  {
+    "origin": "- enum D3DTYPE for D3D9",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV type or -1 if there is no equivalent",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "getTypeFromDXGI_FORMAT()",
+    "local": ""
+  },
+  {
+    "origin": "int cv::directx::getTypeFromDXGI_FORMAT",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "iDXGI_FORMAT",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Get OpenCV type from DirectX type.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "iDXGI_FORMAT",
+    "local": ""
+  },
+  {
+    "origin": "- enum DXGI_FORMAT for D3D10/D3D11",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV type or -1 if there is no equivalent",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "initializeContextFromD3D10Device()",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::directx::ocl::initializeContextFromD3D10Device",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "ID3D10Device *&#160;",
+    "local": ""
+  },
+  {
+    "origin": "pD3D10Device",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates OpenCL context from D3D10 device.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pD3D10Device",
+    "local": ""
+  },
+  {
+    "origin": "- pointer to D3D10 device",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Returns reference to OpenCL Context",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "initializeContextFromD3D11Device()",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::directx::ocl::initializeContextFromD3D11Device",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "ID3D11Device *&#160;",
+    "local": ""
+  },
+  {
+    "origin": "pD3D11Device",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates OpenCL context from D3D11 device.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pD3D11Device",
+    "local": ""
+  },
+  {
+    "origin": "- pointer to D3D11 device",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Returns reference to OpenCL Context",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "initializeContextFromDirect3DDevice9()",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::directx::ocl::initializeContextFromDirect3DDevice9",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "IDirect3DDevice9 *&#160;",
+    "local": ""
+  },
+  {
+    "origin": "pDirect3DDevice9",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates OpenCL context from Direct3DDevice9 device.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pDirect3DDevice9",
+    "local": ""
+  },
+  {
+    "origin": "- pointer to Direct3Device9 device",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Returns reference to OpenCL Context",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "initializeContextFromDirect3DDevice9Ex()",
+    "local": ""
+  },
+  {
+    "origin": "&amp; cv::directx::ocl::initializeContextFromDirect3DDevice9Ex",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "IDirect3DDevice9Ex *&#160;",
+    "local": ""
+  },
+  {
+    "origin": "pDirect3DDevice9Ex",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates OpenCL context from Direct3DDevice9Ex device.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "pDirect3DDevice9Ex",
+    "local": ""
+  },
+  {
+    "origin": "- pointer to Direct3DDevice9Ex device",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Returns reference to OpenCL Context",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by &#160;",
+    "local": ""
+  }
+]

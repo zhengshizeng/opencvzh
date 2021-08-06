@@ -3,13 +3,9 @@
 ###### 机器翻译加人工修正， 一边翻译一边更新。 
 ###### 内容仅供参考。
 
-### 本来是要开通Gitee Pages服务的,貌似开不了了现在
 
-可以下载回来 双击打开 index.html 一样可以正常使用该中文文档。
-因为他是静态的不需要服务
 
-试下这个把原来的博客干掉了
-http://zhengshizeng.gitee.io/
+
 ---
 
 #####翻译工具
@@ -90,14 +86,16 @@ F:\html-i18n-cli-master\lib\utils\html2texts.js
     }
 ```
 
-翻译完成时替换文中的中文符号为英文(个人习惯)
-F:\html-i18n-cli-master\lib\translate.js  35行
+##### 批量翻译
 ```
-        var tempstr=await fanyi(origin, options.to)
-        tempstr=tempstr.replace(/\：/g,":");
-        tempstr=tempstr.replace(/\。/g,":");
-        tempstr=tempstr.replace(/\（/g,"(");
-        tempstr=tempstr.replace(/\）/g,")"); 
-        tempstr=tempstr.replace(/\，/g,",");
-        current.local=tempstr;
+写个批处理
+node F:\html-i18n-cli-master\bin\html.js translate work\opencvzh\opencvzh\annotated.json 
+node F:\html-i18n-cli-master\bin\html.js translate work\opencvzh\opencvzh\classes.json 
+node F:\html-i18n-cli-master\bin\html.js translate work\opencvzh\opencvzh\d0\d03\classcv_1_1detail_1_1GraphCutSeamFinderBase.json 
+node F:\html-i18n-cli-master\bin\html.js translate work\opencvzh\opencvzh\d0\d03\classcv_1_1gapi_1_1onnx_1_1Params.json 
+node F:\html-i18n-cli-master\bin\html.js translate work\opencvzh\opencvzh\d0\d03\structcv_1_1cudev_1_1numeric__limits_3_01short_01_4-members.json 
+node F:\html-i18n-cli-master\bin\html.js translate work\opencvzh\opencvzh\d0\d04\structcv_1_1cudev_1_1less.json 
+node F:\html-i18n-cli-master\bin\html.js translate work\opencvzh\opencvzh\d0\d05\group__cudaimgproc.json 
+...
+
 ```

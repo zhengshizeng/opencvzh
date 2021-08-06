@@ -1,0 +1,1682 @@
+[
+  {
+    "origin": "OpenCV: Writing documentation for OpenCV",
+    "local": "OpenCV：为OpenCV编写文档"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Writing documentation for OpenCV",
+    "local": "为OpenCV编写文档"
+  },
+  {
+    "origin": "Table of Contents",
+    "local": "目录"
+  },
+  {
+    "origin": "Doxygen overview",
+    "local": "Doxygen概述"
+  },
+  {
+    "origin": "Intro",
+    "local": "简介"
+  },
+  {
+    "origin": "Installation",
+    "local": "安装"
+  },
+  {
+    "origin": "Generate documentation",
+    "local": "生成文档"
+  },
+  {
+    "origin": "Quick start",
+    "local": "快速启动"
+  },
+  {
+    "origin": "Documentation locations",
+    "local": "文件位置"
+  },
+  {
+    "origin": "Example",
+    "local": "例子"
+  },
+  {
+    "origin": "Another example",
+    "local": "另一个例子"
+  },
+  {
+    "origin": "More details",
+    "local": "更多细节"
+  },
+  {
+    "origin": "Supported Markdown",
+    "local": "支持的降价"
+  },
+  {
+    "origin": "lists",
+    "local": "列表"
+  },
+  {
+    "origin": "emphasis",
+    "local": "强调"
+  },
+  {
+    "origin": "links",
+    "local": "链接"
+  },
+  {
+    "origin": "images",
+    "local": "图像"
+  },
+  {
+    "origin": "headers",
+    "local": "标题"
+  },
+  {
+    "origin": "header id",
+    "local": "标题id"
+  },
+  {
+    "origin": "page id",
+    "local": "页面id"
+  },
+  {
+    "origin": "tables",
+    "local": "桌子"
+  },
+  {
+    "origin": "Commonly used commands",
+    "local": "常用命令"
+  },
+  {
+    "origin": "Basic commands",
+    "local": "基本命令"
+  },
+  {
+    "origin": "Code inclusion commands",
+    "local": "代码包含命令"
+  },
+  {
+    "origin": "Toggle buttons inclusion commands",
+    "local": "切换按钮包含命令"
+  },
+  {
+    "origin": "Grouping commands",
+    "local": "分组命令"
+  },
+  {
+    "origin": "Publication reference",
+    "local": "出版物参考"
+  },
+  {
+    "origin": "Step-by-step",
+    "local": "一步一步地"
+  },
+  {
+    "origin": "Document the function",
+    "local": "记录函数"
+  },
+  {
+    "origin": "Write the tutorial",
+    "local": "编写教程"
+  },
+  {
+    "origin": "References",
+    "local": "工具书类"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Maksim Shabunin",
+    "local": "马克斯·沙布宁。"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Doxygen overview",
+    "local": "Doxygen概述"
+  },
+  {
+    "origin": "Intro",
+    "local": "简介"
+  },
+  {
+    "origin": "Doxygen",
+    "local": "编程辅助工具"
+  },
+  {
+    "origin": "is documentation generation system with a lot of great features, such as:",
+    "local": "是一个文档生成系统，具有许多重要功能，例如："
+  },
+  {
+    "origin": "parse program sources to produce actual and accurate documentation",
+    "local": "分析程序源代码以生成实际和准确的文档"
+  },
+  {
+    "origin": "check documentation for errors",
+    "local": "检查文档中是否有错误"
+  },
+  {
+    "origin": "insert images and formulas",
+    "local": "插入图像和公式"
+  },
+  {
+    "origin": "use markdown syntax and plain HTML for precise text formatting",
+    "local": "使用标记语法和纯HTML进行精确的文本格式设置"
+  },
+  {
+    "origin": "generate documentation in many different formats",
+    "local": "生成多种不同格式的文档"
+  },
+  {
+    "origin": "OpenCV library existing documentation has been converted to doxygen format.",
+    "local": "OpenCV库现有文档已转换为doxygen格式。"
+  },
+  {
+    "origin": "Installation",
+    "local": "安装"
+  },
+  {
+    "origin": "Please, check official",
+    "local": "请检查一下"
+  },
+  {
+    "origin": "download",
+    "local": "下载"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "installation",
+    "local": "安装"
+  },
+  {
+    "origin": "pages. Some linux distributions can also provide doxygen packages.",
+    "local": "页。一些linux发行版还可以提供doxygen包。"
+  },
+  {
+    "origin": "Generate documentation",
+    "local": "生成文档"
+  },
+  {
+    "origin": "Get the OpenCV sources (version 3.0 and later)",
+    "local": "获取OpenCV源代码（3.0及更高版本）"
+  },
+  {
+    "origin": "Optional:",
+    "local": "可选："
+  },
+  {
+    "origin": "get the OpenCV_contrib sources",
+    "local": "获取OpenCV\\u contrib源代码"
+  },
+  {
+    "origin": "Create build directory near the sources folder(s) and go into it",
+    "local": "在源文件夹附近创建生成目录并进入其中"
+  },
+  {
+    "origin": "Run cmake (assuming you put sources to",
+    "local": "运行cmake（假设您将源代码放到"
+  },
+  {
+    "origin": "opencv",
+    "local": "打开CV"
+  },
+  {
+    "origin": "folder):",
+    "local": "文件夹）："
+  },
+  {
+    "origin": "Or if you get contrib sources too:",
+    "local": "或者如果你也得到了contrib的消息来源："
+  },
+  {
+    "origin": "Run make:",
+    "local": "运行制造商："
+  },
+  {
+    "origin": "Open",
+    "local": "正常开放"
+  },
+  {
+    "origin": "doc/doxygen/html/index.html",
+    "local": "文档/doxygen/html/index.html"
+  },
+  {
+    "origin": "file in your favorite browser",
+    "local": "在您最喜爱的浏览器中创建文件"
+  },
+  {
+    "origin": "Test your Python code:",
+    "local": "测试Python代码："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Pylint",
+    "local": "皮林"
+  },
+  {
+    "origin": "must be installed before running cmake to be able to test Python code. You can install using your system's package manager, or with pip:",
+    "local": "必须在运行cmake之前安装才能测试Python代码。您可以使用系统的软件包管理器或pip安装："
+  },
+  {
+    "origin": "Quick start",
+    "local": "快速启动"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "These instructions are specific to OpenCV library documentation, other projects can use different layout scheme and documenting agreements.",
+    "local": "这些说明是针对OpenCV库文档的，其他项目可以使用不同的布局方案和文档协议。"
+  },
+  {
+    "origin": "Documentation locations",
+    "local": "文件位置"
+  },
+  {
+    "origin": "Whole documentation is gathered from many different places:",
+    "local": "整个文档从许多不同的地方收集："
+  },
+  {
+    "origin": "source code",
+    "local": "源代码"
+  },
+  {
+    "origin": "entities, like classes, functions or enumerations, should be documented in corresponding header files, right prior entity definition. See examples in next sections.",
+    "local": "实体，如类、函数或枚举，应该记录在相应的头文件中，就在实体定义之前。参见下一节中的示例。"
+  },
+  {
+    "origin": "pages",
+    "local": "页"
+  },
+  {
+    "origin": "are good place to put big pieces of text with images and code examples not directly connected with any source code entity. Pages should be located in separate files and contained in several predefined places. This tutorial is example of such page.",
+    "local": "是放置带有图像和代码示例的大文本块的好地方，这些文本块与任何源代码实体都没有直接连接。页面应该位于单独的文件中，并包含在几个预定义的位置。本教程就是此类页面的示例。"
+  },
+  {
+    "origin": "images",
+    "local": "图像"
+  },
+  {
+    "origin": "can be used to illustrate described things. Usually located at the same places as pages, images can be inserted to any place of the documentation.",
+    "local": "可以用来说明所描述的事物。通常位于与页面相同的位置，图像可以插入到文档的任何位置。"
+  },
+  {
+    "origin": "code examples",
+    "local": "代码示例"
+  },
+  {
+    "origin": "show how to use the library in real applications. Each sample is self-contained file which represents one simple application. Parts of these files can be included into documentation and tutorials to demonstrate function calls and objects collaboration.",
+    "local": "演示如何在实际应用程序中使用库。每个示例都是表示一个简单应用程序的自包含文件。这些文件的一部分可以包含在文档和教程中，以演示函数调用和对象协作。"
+  },
+  {
+    "origin": "BibTeX references",
+    "local": "BibTeX参考"
+  },
+  {
+    "origin": "are used to create one common bibliography. All science books, articles and proceedings served as basis for library functionality should be put in this reference list.",
+    "local": "用于创建一个公共书目。所有作为图书馆功能基础的科学书籍、文章和会议记录都应放在参考书目中。"
+  },
+  {
+    "origin": "Following scheme represents common documentation places for",
+    "local": "下面的方案表示"
+  },
+  {
+    "origin": "opencv",
+    "local": "打开CV"
+  },
+  {
+    "origin": "repository:",
+    "local": "存储库："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Automatic code parser looks for all header files (",
+    "local": "自动代码分析器查找所有头文件("
+  },
+  {
+    "origin": "\".h, .hpp\"",
+    "local": "“.h，.hpp”"
+  },
+  {
+    "origin": "except for",
+    "local": "除了"
+  },
+  {
+    "origin": "\".inl.hpp; .impl.hpp; _detail.hpp\"",
+    "local": "“.inl.hpp；”。impl.hpp公司_详图“hpp”"
+  },
+  {
+    "origin": ") in",
+    "local": ")在"
+  },
+  {
+    "origin": "include",
+    "local": "包括"
+  },
+  {
+    "origin": "folder and its subfolders. Some module-specific instructions (group definitions) and documentation should be put into",
+    "local": "文件夹及其子文件夹。一些特定于模块的说明（组定义）和文档应放入"
+  },
+  {
+    "origin": "\"include/opencv2/&lt;module-name&gt;.hpp\"",
+    "local": "“包括/opencv2/&lt；模块名称&gt；。“水电站”"
+  },
+  {
+    "origin": "file.",
+    "local": "文件。"
+  },
+  {
+    "origin": "You can put C++ template implementation and specialization to separate files (",
+    "local": "可以将C++模板实现和专门化放在单独的文件中（"
+  },
+  {
+    "origin": "\".impl.hpp\"",
+    "local": "“.impl.hpp”"
+  },
+  {
+    "origin": ") ignored by doxygen.",
+    "local": ")被强生忽略。"
+  },
+  {
+    "origin": "Files in",
+    "local": "中的文件"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "subfolder are not parsed, because documentation is intended mostly for the library users, not developers. But it still is possible to generate full documentation by customizing processed files list in cmake script (",
+    "local": "子文件夹不会被解析，因为文档主要面向库用户，而不是开发人员。但通过在cmake脚本中自定义已处理文件列表，仍然可以生成完整的文档("
+  },
+  {
+    "origin": "doc/CMakeLists.txt",
+    "local": "文档/CMakeLists.txt"
+  },
+  {
+    "origin": ") and doxygen options in its configuration file (",
+    "local": ")和doxygen选项("
+  },
+  {
+    "origin": "doc/Doxyfile.in",
+    "local": "doc/Doxyfile.in文件"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Since version 3.0 all new modules are placed into",
+    "local": "从3.0版开始，所有新模块都被放入"
+  },
+  {
+    "origin": "opencv_contrib",
+    "local": "opencv\\u contrib公司"
+  },
+  {
+    "origin": "repository, it has slightly different layout:",
+    "local": "它的布局略有不同："
+  },
+  {
+    "origin": "Example",
+    "local": "例子"
+  },
+  {
+    "origin": "To add documentation for functions, classes and other entities, just insert special comment prior its definition. Like this:",
+    "local": "要为函数、类和其他实体添加文档，只需在其定义之前插入特殊注释。这样地："
+  },
+  {
+    "origin": "/** @brief Calculates the exponent of every array element. The function exp calculates the exponent of every element of the input array: \\f[ \\texttt{dst} [I] = e^{ src(I) } \\f] The maximum relative error is about 7e-6 for single-precision input and less than 1e-10 for double-precision input. Currently, the function converts denormalized values to zeros on output. Special values (NaN, Inf) are not handled. @param src input array. @param dst output array of the same size and type as src. @sa log , cartToPolar , polarToCart , phase , pow , sqrt , magnitude */ CV_EXPORTS_W void exp(InputArray src, OutputArray dst);",
+    "local": "/**@brief计算每个数组元素的指数。exp函数计算输入数组中每个元素的指数：\\f[\\texttt{dst}[I]=e^{src（I）}\\f]单精度输入的最大相对误差约为7e-6，双精度输入的最大相对误差小于1e-10。当前，该函数在输出时将非规范化值转换为零。不处理特殊值（NaN、Inf）@param src输入数组@与src大小和类型相同的param dst输出数组@sa log，cartToPolar，polarToCart，phase，pow，sqrt，magnitude*/CV\\u EXPORTS\\u W void exp（输入阵列src，输出阵列dst）；"
+  },
+  {
+    "origin": "Here you can see:",
+    "local": "在这里您可以看到："
+  },
+  {
+    "origin": "special C-comment syntax denotes it is doxygen comment",
+    "local": "特殊的C-comment语法表示它是doxygen注释"
+  },
+  {
+    "origin": "/** ... */",
+    "local": "/** ... */"
+  },
+  {
+    "origin": "command",
+    "local": "命令"
+  },
+  {
+    "origin": "denotes following paragraph is a brief description",
+    "local": "表示以下段落是简要说明"
+  },
+  {
+    "origin": "@brief",
+    "local": "@简介"
+  },
+  {
+    "origin": "empty line denotes paragraph end",
+    "local": "空行表示段落结束"
+  },
+  {
+    "origin": "TeX formula between",
+    "local": "TeX公式介于"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "commands",
+    "local": "命令"
+  },
+  {
+    "origin": "\\f[ ... \\f]",
+    "local": "\\f[\\[传真]"
+  },
+  {
+    "origin": "command",
+    "local": "命令"
+  },
+  {
+    "origin": "denotes following word is name of the parameter and following text is description of the parameter; all parameters are placed in a list",
+    "local": "表示下面的单词是参数的名称，下面的文本是参数的描述；所有参数都放置在一个列表中"
+  },
+  {
+    "origin": "@param",
+    "local": "@参数。"
+  },
+  {
+    "origin": "command",
+    "local": "命令"
+  },
+  {
+    "origin": "starts \"See also\" paragraph containing references to some classes, methods, pages or URLs.",
+    "local": "开始“See also”段落，其中包含对某些类、方法、页面或url的引用。"
+  },
+  {
+    "origin": "@sa",
+    "local": "@南非"
+  },
+  {
+    "origin": "Produced reference item looks like this:",
+    "local": "生成的参考项如下所示："
+  },
+  {
+    "origin": "Reference link",
+    "local": "参考链接"
+  },
+  {
+    "origin": "The \"More...\" link brings you to the function documentation:",
+    "local": "“更多…”链接将您带到函数文档："
+  },
+  {
+    "origin": "Function documentation",
+    "local": "功能文档"
+  },
+  {
+    "origin": "Another example",
+    "local": "另一个例子"
+  },
+  {
+    "origin": "Different comment syntax can be used for one-line short comments:",
+    "local": "一行短注释可以使用不同的注释语法："
+  },
+  {
+    "origin": "//! type of line enum LineTypes { FILLED = -1, LINE_4 = 4, //!&lt; 4-connected line LINE_8 = 8, //!&lt; 8-connected line LINE_AA = 16 //!&lt; antialiased line };",
+    "local": "//! 线条类型枚举线条类型{填充=-1，线条4=4，//&书信电报；4-连接线\\u 8=8，//&书信电报；8-连接线\\u AA=16//&书信电报；抗锯齿线}；"
+  },
+  {
+    "origin": "Here:",
+    "local": "在这里："
+  },
+  {
+    "origin": "special C++-comment syntax denotes it is doxygen comment",
+    "local": "特殊C++ -注释语法表示它是doxGy注释"
+  },
+  {
+    "origin": "//!",
+    "local": "//!"
+  },
+  {
+    "origin": "additional symbol",
+    "local": "附加符号"
+  },
+  {
+    "origin": "denotes this comment is located",
+    "local": "表示此注释位于"
+  },
+  {
+    "origin": "after",
+    "local": "之后"
+  },
+  {
+    "origin": "documented entity",
+    "local": "文件化实体"
+  },
+  {
+    "origin": "//!&lt;",
+    "local": "/etc/bin&书信电报；"
+  },
+  {
+    "origin": "Produced documentation block looks like this:",
+    "local": "生成的文档块如下所示："
+  },
+  {
+    "origin": "Enumeration documentation",
+    "local": "枚举文档"
+  },
+  {
+    "origin": "More details",
+    "local": "更多细节"
+  },
+  {
+    "origin": "Command prefix",
+    "local": "命令前缀"
+  },
+  {
+    "origin": "Doxygen commands starts with",
+    "local": "Doxygen命令以"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "sign:",
+    "local": "签字："
+  },
+  {
+    "origin": "@brief ... or \\brief ...",
+    "local": "@简介。。。或\\brief。。。"
+  },
+  {
+    "origin": "Comment syntax",
+    "local": "注释语法"
+  },
+  {
+    "origin": "Doxygen comment can have different forms:",
+    "local": "Doxygen注释可以有不同的形式："
+  },
+  {
+    "origin": "C-style: /** ... */ or /*! ... */ C++-style //! ... or /// ... Lines can start with '*': /** * ... * ... */ Can be placed after documented entity: //!&lt; ... /**&lt; ... */",
+    "local": "C型：/***…*/或/*！…*/C++风格/ /！或//。。。行可以以“*”开头：/***…*…*/可以放在文档实体之后：//&lt/**&lt*/"
+  },
+  {
+    "origin": "Paragraph end",
+    "local": "段落结尾"
+  },
+  {
+    "origin": "To end paragraph, insert empty line or any command starting new paragraph:",
+    "local": "要结束段落，请插入空行或任何开始新段落的命令："
+  },
+  {
+    "origin": "@brief brief description paragraph brief continues new paragraph @note new note paragraph note paragraph continues another paragraph paragraph continues",
+    "local": "@简要说明段落简要继续新段落@注释新注释段落注释段落继续另一段落段落继续"
+  },
+  {
+    "origin": "Naming",
+    "local": "命名"
+  },
+  {
+    "origin": "Pages, anchors, groups and other named entities should have unique name inside the whole project. It is a good idea to prefix such identifiers with module name:",
+    "local": "页面、锚定、组和其他命名实体在整个项目中应该具有唯一的名称。最好在这些标识符前面加上模块名："
+  },
+  {
+    "origin": "@page core_explanation_1 Usage explanation @defgroup imgproc_transform Image transformations @anchor mymodule_interesting_note",
+    "local": "@页面核心\\u说明\\u 1用法说明@defgroup imgproc \\u transform Image transformations@anchor mymodule \\u有趣的\\u说明"
+  },
+  {
+    "origin": "Supported Markdown",
+    "local": "支持的降价"
+  },
+  {
+    "origin": "Doxygen supports Markdown formatting with some extensions. Short syntax reference is described below, for details visit",
+    "local": "Doxygen支持带有一些扩展名的标记格式。下面介绍简短的语法参考，有关详细信息，请访问"
+  },
+  {
+    "origin": "Markdown support",
+    "local": "降价支持"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "lists",
+    "local": "列表"
+  },
+  {
+    "origin": "Bulleted: - item1 - item2 Numbered: 1. item1 2. item2 or -# item1 -# item2",
+    "local": "项目符号：-项目1-项目2编号：1.项目1 2.项目2或-#项目1-#项目2"
+  },
+  {
+    "origin": "emphasis",
+    "local": "强调"
+  },
+  {
+    "origin": "_italic_ __bold__ use html in complex cases: &lt;em&gt;\"path/to/file\"&lt;/em&gt;",
+    "local": "_斜体\\粗体\\在复杂情况下使用html:&lt；em&gt路径/到/文件“&lt/em&gt；"
+  },
+  {
+    "origin": "links",
+    "local": "链接"
+  },
+  {
+    "origin": "explicit link: [OpenCV main site](http://opencv.org) automatic links: &lt;http://opencv.org&gt; or even: http://opencv.org",
+    "local": "显式链接：[OpenCV主站点](http://opencv.org)自动链接：&lt；http://opencv.org&gt; 甚至：http://opencv.org"
+  },
+  {
+    "origin": "images",
+    "local": "图像"
+  },
+  {
+    "origin": "![image caption](image path)",
+    "local": "![image caption]（图像路径）"
+  },
+  {
+    "origin": "headers",
+    "local": "标题"
+  },
+  {
+    "origin": "Level1 ====== Level2 ------ ### Level3 #### Level4",
+    "local": "1级=====2级---####3级####4级"
+  },
+  {
+    "origin": "header id",
+    "local": "标题id"
+  },
+  {
+    "origin": "You can assign a unique identifier to any header to reference it from other places.",
+    "local": "您可以将唯一标识符分配给任何标头，以便从其他位置引用它。"
+  },
+  {
+    "origin": "Header {#some_unique_identifier} ------ ... See @ref some_unique_identifier for details",
+    "local": "标题{#某些#唯一的#标识符}-----。。。有关详细信息，请参阅@ref some \\u unique \\u identifier"
+  },
+  {
+    "origin": "page id",
+    "local": "页面id"
+  },
+  {
+    "origin": "Each page should have additional Level1 header at the beginning with page title and identifier:",
+    "local": "每一页的开头都应有额外的Level1标题，标题和标识符为："
+  },
+  {
+    "origin": "Writing documentation for OpenCV {#tutorial_documentation} ================================",
+    "local": "为OpenCV编写文档{教程文档}================================"
+  },
+  {
+    "origin": "tables",
+    "local": "桌子"
+  },
+  {
+    "origin": "Example from doxygen documentation:",
+    "local": "doxygen文档示例："
+  },
+  {
+    "origin": "First Header | Second Header ------------- | ------------- Content Cell | Content Cell Content Cell | Content Cell",
+    "local": "第一个标题|第二个标题---------------------内容单元格|内容单元格内容单元格|内容单元格"
+  },
+  {
+    "origin": "Commonly used commands",
+    "local": "常用命令"
+  },
+  {
+    "origin": "Most often used doxygen commands are described here with short examples. For the full list of available commands and detailed description, please visit",
+    "local": "这里用简短的例子来描述最常用的doxygen命令。有关可用命令的完整列表和详细说明，请访问"
+  },
+  {
+    "origin": "Command reference",
+    "local": "命令参考"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Basic commands",
+    "local": "基本命令"
+  },
+  {
+    "origin": "brief",
+    "local": "简明的"
+  },
+  {
+    "origin": "- paragraph with brief entity description",
+    "local": "-带有简要实体描述的段落"
+  },
+  {
+    "origin": "param",
+    "local": "住手"
+  },
+  {
+    "origin": "- description of function argument.",
+    "local": "-函数参数的描述。"
+  },
+  {
+    "origin": "Multiple adjacent statements are merged into one list. If argument with this name is not found in actual function signature - doxygen warning will be produced. Function can have either",
+    "local": "多个相邻语句合并到一个列表中。如果在实际函数签名中找不到具有此名称的参数，将生成doxygen警告。函数可以有"
+  },
+  {
+    "origin": "no",
+    "local": "不"
+  },
+  {
+    "origin": "documented parameters, either",
+    "local": "记录的参数"
+  },
+  {
+    "origin": "all",
+    "local": "全部的"
+  },
+  {
+    "origin": "should be documented.",
+    "local": "应记录在案。"
+  },
+  {
+    "origin": "sa",
+    "local": "南非"
+  },
+  {
+    "origin": "- \"See also\" paragraph, contains references to classes, functions, pages or URLs",
+    "local": "-“See also”段落，包含对类、函数、页或url的引用"
+  },
+  {
+    "origin": "note",
+    "local": "笔记"
+  },
+  {
+    "origin": "- visually highlighted \"Note\" paragraph. Multiple adjacent statements are merged into one block.",
+    "local": ""
+  },
+  {
+    "origin": "return, returns",
+    "local": ""
+  },
+  {
+    "origin": "- describes returned value of a function",
+    "local": ""
+  },
+  {
+    "origin": "overload",
+    "local": ""
+  },
+  {
+    "origin": "- adds fixed text to the function description:",
+    "local": ""
+  },
+  {
+    "origin": "\"This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.\"",
+    "local": ""
+  },
+  {
+    "origin": "anchor",
+    "local": ""
+  },
+  {
+    "origin": "- places invisible named anchor, which can be referenced by",
+    "local": ""
+  },
+  {
+    "origin": "command. It can be used in pages only.",
+    "local": ""
+  },
+  {
+    "origin": "ref",
+    "local": ""
+  },
+  {
+    "origin": "- explicit reference to a named section, page or anchor.",
+    "local": ""
+  },
+  {
+    "origin": "If such entity can not be found - doxygen warning will be generated. This command has an optional argument - link text.",
+    "local": ""
+  },
+  {
+    "origin": "Doxygen also generates some links automatically: if text contains word which can be found in documented entities - reference will be generated. This functionality can be disabled by prefixing the word with",
+    "local": ""
+  },
+  {
+    "origin": "symbol.",
+    "local": ""
+  },
+  {
+    "origin": "Explicit reference: @ref MyClass Explicit named reference: @ref example_page \"Example page\" Implicit reference: cv::abc::MyClass1 or just MyClass1 Disable implicit reference: %MyClass1",
+    "local": ""
+  },
+  {
+    "origin": "f",
+    "local": ""
+  },
+  {
+    "origin": "- formula",
+    "local": ""
+  },
+  {
+    "origin": "Inline formulas are bounded with",
+    "local": ""
+  },
+  {
+    "origin": "command:",
+    "local": ""
+  },
+  {
+    "origin": "\\f$ ... \\f$",
+    "local": ""
+  },
+  {
+    "origin": "Block formulas - with",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "commands:",
+    "local": ""
+  },
+  {
+    "origin": "\\f[ ... \\f]",
+    "local": ""
+  },
+  {
+    "origin": "Code inclusion commands",
+    "local": ""
+  },
+  {
+    "origin": "To mark some text as a code in documentation,",
+    "local": ""
+  },
+  {
+    "origin": "code",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "endcode",
+    "local": ""
+  },
+  {
+    "origin": "commands are used.",
+    "local": ""
+  },
+  {
+    "origin": "@code float val = img.at&lt;float&gt;(borderInterpolate(100, img.rows, cv::BORDER_REFLECT_101), borderInterpolate(-5, img.cols, cv::BORDER_WRAP)); @endcode",
+    "local": ""
+  },
+  {
+    "origin": "Syntax will be highlighted according to the currently parsed file type (C++ for",
+    "local": ""
+  },
+  {
+    "origin": ".hpp",
+    "local": ""
+  },
+  {
+    "origin": ", C for",
+    "local": ""
+  },
+  {
+    "origin": ".h",
+    "local": ""
+  },
+  {
+    "origin": ") or you can manually specify it in curly braces:",
+    "local": ""
+  },
+  {
+    "origin": "@code{.xml}",
+    "local": ""
+  },
+  {
+    "origin": "To include whole example file into documentation,",
+    "local": ""
+  },
+  {
+    "origin": "include",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "includelineno",
+    "local": ""
+  },
+  {
+    "origin": "commands are used. The file is searched in common samples locations, so you can specify just its name or short part of the path. The",
+    "local": ""
+  },
+  {
+    "origin": "includelineno",
+    "local": ""
+  },
+  {
+    "origin": "version also shows line numbers but prevents copy-pasting since the line numbers are included.",
+    "local": ""
+  },
+  {
+    "origin": "@include samples/cpp/test.cpp",
+    "local": ""
+  },
+  {
+    "origin": "If you want to include some parts of existing example file - use",
+    "local": ""
+  },
+  {
+    "origin": "snippet",
+    "local": ""
+  },
+  {
+    "origin": "command.",
+    "local": ""
+  },
+  {
+    "origin": "First, mark the needed parts of the file with special doxygen comments:",
+    "local": ""
+  },
+  {
+    "origin": "//! [var_init] int a = 0; //! [var_init]",
+    "local": ""
+  },
+  {
+    "origin": "Then include this snippet into documentation:",
+    "local": ""
+  },
+  {
+    "origin": "@snippet samples/cpp/test.cpp var_init",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Currently most of such partial inclusions are made with",
+    "local": ""
+  },
+  {
+    "origin": "dontinclude",
+    "local": ""
+  },
+  {
+    "origin": "command for compatibility with the old rST documentation. But newly created samples should be included with the",
+    "local": ""
+  },
+  {
+    "origin": "snippet",
+    "local": ""
+  },
+  {
+    "origin": "command, since this method is less affected by the changes in processed file.",
+    "local": ""
+  },
+  {
+    "origin": "Toggle buttons inclusion commands",
+    "local": ""
+  },
+  {
+    "origin": "Toggle buttons are used to display the selected configuration (e.g. programming language, OS, IDE).",
+    "local": ""
+  },
+  {
+    "origin": "To use the buttons in documentation,",
+    "local": ""
+  },
+  {
+    "origin": "add_toggle",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "end_toggle",
+    "local": ""
+  },
+  {
+    "origin": "commands are used.",
+    "local": ""
+  },
+  {
+    "origin": "The command",
+    "local": ""
+  },
+  {
+    "origin": "add_toggle",
+    "local": ""
+  },
+  {
+    "origin": "can be",
+    "local": ""
+  },
+  {
+    "origin": "general:",
+    "local": ""
+  },
+  {
+    "origin": "add_toggle{Button Name}",
+    "local": ""
+  },
+  {
+    "origin": "for C++:",
+    "local": ""
+  },
+  {
+    "origin": "add_toggle_cpp",
+    "local": ""
+  },
+  {
+    "origin": "for Java:",
+    "local": ""
+  },
+  {
+    "origin": "add_toggle_java",
+    "local": ""
+  },
+  {
+    "origin": "for Python:",
+    "local": ""
+  },
+  {
+    "origin": "add_toggle_python",
+    "local": ""
+  },
+  {
+    "origin": "Example:",
+    "local": ""
+  },
+  {
+    "origin": "@add_toggle{Button Name} text / code / doxygen commands @end_toggle",
+    "local": ""
+  },
+  {
+    "origin": "For example using toggle buttons with text and",
+    "local": ""
+  },
+  {
+    "origin": "snippets:",
+    "local": ""
+  },
+  {
+    "origin": "### Buttons Example @add_toggle_cpp Text for C++ button @snippet samples/cpp/tutorial_code/introduction/documentation/documentation.cpp hello_world @end_toggle @add_toggle_java Text for Java button @snippet samples/java/tutorial_code/introduction/documentation/Documentation.java hello_world @end_toggle @add_toggle_python Text for Python button @snippet samples/python/tutorial_code/introduction/documentation/documentation.py hello_world @end_toggle",
+    "local": ""
+  },
+  {
+    "origin": "Result looks like this:",
+    "local": ""
+  },
+  {
+    "origin": "Buttons Example",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Text for C++ button",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Text for Java button",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Text for Python button",
+    "local": ""
+  },
+  {
+    "origin": "As you can see, the buttons are added automatically under the previous heading.",
+    "local": ""
+  },
+  {
+    "origin": "Grouping commands",
+    "local": ""
+  },
+  {
+    "origin": "All code entities should be put into named groups representing OpenCV modules and their internal structure, thus each module should be associated with a group with the same name. Good place to define groups and subgroups is the main header file for this module:",
+    "local": ""
+  },
+  {
+    "origin": "\"&lt;module&gt;/include/opencv2/&lt;module&gt;.hpp\"",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Doxygen groups are called \"modules\" and are shown on \"Modules\" page.",
+    "local": ""
+  },
+  {
+    "origin": "/** @defgroup mymodule My great module optional description @{ @defgroup mymodule_basic Basic operations optional description @defgroup mymodule_experimental Experimental operations optional description @} */",
+    "local": ""
+  },
+  {
+    "origin": "To put classes and functions into specific group, just add",
+    "local": ""
+  },
+  {
+    "origin": "command to its documentation, or wrap the whole code block with",
+    "local": ""
+  },
+  {
+    "origin": "command:",
+    "local": ""
+  },
+  {
+    "origin": "/** @brief Example function @ingroup mymodule */ or /** @addtogroup mymodule_experimental @{ */ ... several functions, classes or enumerations here /** @} */",
+    "local": ""
+  },
+  {
+    "origin": "Publication reference",
+    "local": ""
+  },
+  {
+    "origin": "Use",
+    "local": ""
+  },
+  {
+    "origin": "cite",
+    "local": ""
+  },
+  {
+    "origin": "command to insert reference to related publications listed in",
+    "local": ""
+  },
+  {
+    "origin": "page.",
+    "local": ""
+  },
+  {
+    "origin": "First, add publication BibTeX record into",
+    "local": ""
+  },
+  {
+    "origin": "\"&lt;opencv&gt;/doc/opencv.bib\"",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "\"&lt;opencv_contrib&gt;/modules/&lt;module&gt;/doc/&lt;module&gt;.bib\"",
+    "local": ""
+  },
+  {
+    "origin": "file:",
+    "local": ""
+  },
+  {
+    "origin": "@ARTICLE{Bradski98, author = {Bradski, Gary R}, title = {Computer vision face tracking for use in a perceptual user interface}, year = {1998}, publisher = {Citeseer} }",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Try not to add publication duplicates because it can confuse documentation readers and writers later.",
+    "local": ""
+  },
+  {
+    "origin": "Then make reference with",
+    "local": ""
+  },
+  {
+    "origin": "cite",
+    "local": ""
+  },
+  {
+    "origin": "command:",
+    "local": ""
+  },
+  {
+    "origin": "@cite Bradski98",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "To get BibTeX record for the publications one can use",
+    "local": ""
+  },
+  {
+    "origin": "Google Scholar",
+    "local": ""
+  },
+  {
+    "origin": ". Once the publication have been found - follow its \"Cite\" link and then choose \"BibTeX\" option:",
+    "local": ""
+  },
+  {
+    "origin": "Step-by-step",
+    "local": ""
+  },
+  {
+    "origin": "Steps described in this section can be used as checklist during documentation writing. It is not necessary to do things in the same order, but some steps really depend on previous. And of course these steps are just basic guidelines, there is always a place for creativity.",
+    "local": ""
+  },
+  {
+    "origin": "Document the function",
+    "local": ""
+  },
+  {
+    "origin": "Add empty doxygen comment preceding function definition.",
+    "local": ""
+  },
+  {
+    "origin": "Add",
+    "local": ""
+  },
+  {
+    "origin": "brief",
+    "local": ""
+  },
+  {
+    "origin": "command with short description of function meaning at the beginning.",
+    "local": ""
+  },
+  {
+    "origin": "Add detailed description of the function.",
+    "local": ""
+  },
+  {
+    "origin": "Optional",
+    "local": ""
+  },
+  {
+    "origin": ": insert formulas, images and blocks of example code to illustrate complex cases",
+    "local": ""
+  },
+  {
+    "origin": "Optional",
+    "local": ""
+  },
+  {
+    "origin": ": describe each parameter using the",
+    "local": ""
+  },
+  {
+    "origin": "param",
+    "local": ""
+  },
+  {
+    "origin": "command.",
+    "local": ""
+  },
+  {
+    "origin": "Optional",
+    "local": ""
+  },
+  {
+    "origin": ": describe return value of the function using the",
+    "local": ""
+  },
+  {
+    "origin": "returns",
+    "local": ""
+  },
+  {
+    "origin": "command.",
+    "local": ""
+  },
+  {
+    "origin": "Optional",
+    "local": ""
+  },
+  {
+    "origin": ": add \"See also\" section with links to similar functions or classes",
+    "local": ""
+  },
+  {
+    "origin": "Optional",
+    "local": ""
+  },
+  {
+    "origin": ": add bibliographic reference if any.",
+    "local": ""
+  },
+  {
+    "origin": "Test your code. (Python: \"make check_pylint\")",
+    "local": ""
+  },
+  {
+    "origin": "Generate doxygen documentation and verify results.",
+    "local": ""
+  },
+  {
+    "origin": "Write the tutorial",
+    "local": ""
+  },
+  {
+    "origin": "Formulate the idea to be illustrated in the tutorial.",
+    "local": ""
+  },
+  {
+    "origin": "Make the example application, simple enough to be understood by a beginning developer. Be laconic and write descriptive comments, don't try to avoid every possible runtime error or to make universal utility. Your goal is to illustrate the idea. And it should fit one source file!",
+    "local": ""
+  },
+  {
+    "origin": "If you want to insert code blocks from this file into your tutorial, mark them with special doxygen comments (see",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "If you want to write the tutorial in more than one programming language, use the toggle buttons for alternative comments and code (see",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "Collect results of the application work. It can be \"before/after\" images or some numbers representing performance or even a video.",
+    "local": ""
+  },
+  {
+    "origin": "Save it in appropriate format for later use in the tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "To save simple graph-like images use lossless \".png\" format.",
+    "local": ""
+  },
+  {
+    "origin": "For photo-like images - lossy \".jpg\" format.",
+    "local": ""
+  },
+  {
+    "origin": "Numbers will be inserted as plain text, possibly formatted as table.",
+    "local": ""
+  },
+  {
+    "origin": "Video should be uploaded on YouTube.",
+    "local": ""
+  },
+  {
+    "origin": "Create new tutorial page (",
+    "local": ""
+  },
+  {
+    "origin": "\".markdown\"",
+    "local": ""
+  },
+  {
+    "origin": "-file) in corresponding location (see",
+    "local": ""
+  },
+  {
+    "origin": "), and place all image files near it (or in \"images\" subdirectory). Also put your example application file and make sure it is compiled together with the OpenCV library when",
+    "local": ""
+  },
+  {
+    "origin": "option is enabled on cmake step.",
+    "local": ""
+  },
+  {
+    "origin": "Modify your new page:",
+    "local": ""
+  },
+  {
+    "origin": "Add page title and identifier, usually prefixed with",
+    "local": ""
+  },
+  {
+    "origin": "\"tutorial_\"",
+    "local": ""
+  },
+  {
+    "origin": "(see",
+    "local": ""
+  },
+  {
+    "origin": "). You can add a link to the previous and next tutorial using the identifier",
+    "local": ""
+  },
+  {
+    "origin": "@prev_tutorial{identifier} @next_tutorial{identifier}",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "Do",
+    "local": ""
+  },
+  {
+    "origin": "not",
+    "local": ""
+  },
+  {
+    "origin": "write the",
+    "local": ""
+  },
+  {
+    "origin": "hashtag (#)",
+    "local": ""
+  },
+  {
+    "origin": ", example:",
+    "local": ""
+  },
+  {
+    "origin": "Incorrect:",
+    "local": ""
+  },
+  {
+    "origin": "@prev_tutorial{#tutorial_documentation}",
+    "local": ""
+  },
+  {
+    "origin": "Correct:",
+    "local": ""
+  },
+  {
+    "origin": "@prev_tutorial{tutorial_documentation}",
+    "local": ""
+  },
+  {
+    "origin": "Add brief description of your idea and tutorial goals.",
+    "local": ""
+  },
+  {
+    "origin": "Describe your program and/or its interesting pieces.",
+    "local": ""
+  },
+  {
+    "origin": "Describe your results, insert previously added images or other results.",
+    "local": ""
+  },
+  {
+    "origin": "To add a youtube video, e.g. www.youtube.com/watch?v=",
+    "local": ""
+  },
+  {
+    "origin": "ViPN810E0SU",
+    "local": ""
+  },
+  {
+    "origin": ", use",
+    "local": ""
+  },
+  {
+    "origin": "youtube",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "Video ID",
+    "local": ""
+  },
+  {
+    "origin": "}:",
+    "local": ""
+  },
+  {
+    "origin": "@youtube{ViPN810E0SU}",
+    "local": ""
+  },
+  {
+    "origin": "Add bibliographic references if any (see",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "Add newly created tutorial to the corresponding table of contents. Just find",
+    "local": ""
+  },
+  {
+    "origin": "\"table_of_content_*.markdown\"",
+    "local": ""
+  },
+  {
+    "origin": "file with the needed table and place new record in it similar to existing ones.",
+    "local": ""
+  },
+  {
+    "origin": "It is simply a list item with special",
+    "local": ""
+  },
+  {
+    "origin": "subpage",
+    "local": ""
+  },
+  {
+    "origin": "command which marks your page as a child and places it into the existing pages hierarchy. Also note the list item indent, empty lines between paragraphs and special",
+    "local": ""
+  },
+  {
+    "origin": "italic",
+    "local": ""
+  },
+  {
+    "origin": "markers.",
+    "local": ""
+  },
+  {
+    "origin": "Generate doxygen documentation and verify results.",
+    "local": ""
+  },
+  {
+    "origin": "References",
+    "local": ""
+  },
+  {
+    "origin": "Doxygen",
+    "local": ""
+  },
+  {
+    "origin": "- main Doxygen page",
+    "local": ""
+  },
+  {
+    "origin": "Documenting basics",
+    "local": ""
+  },
+  {
+    "origin": "- how to include documentation in code",
+    "local": ""
+  },
+  {
+    "origin": "Markdown support",
+    "local": ""
+  },
+  {
+    "origin": "- supported syntax and extensions",
+    "local": ""
+  },
+  {
+    "origin": "Formulas support",
+    "local": ""
+  },
+  {
+    "origin": "- how to include formulas",
+    "local": ""
+  },
+  {
+    "origin": "Supported formula commands",
+    "local": ""
+  },
+  {
+    "origin": "- HTML formulas use MathJax script for rendering",
+    "local": ""
+  },
+  {
+    "origin": "Command reference",
+    "local": ""
+  },
+  {
+    "origin": "- supported commands and their parameters",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

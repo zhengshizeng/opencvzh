@@ -1,0 +1,438 @@
+[
+  {
+    "origin": "OpenCV: Image Watch: viewing in-memory images in the Visual Studio debugger",
+    "local": "OpenCV:图像监视:在Visual Studio debugger中查看内存中的图像"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "Image Watch: viewing in-memory images in the Visual Studio debugger",
+    "local": "图像监视:在 Visual Studio 调试器中查看内存中的图像"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一篇教程:"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Wolf Kienzle",
+    "local": "Wolf Kienzle"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "OpenCV &gt;= 3.0"
+  },
+  {
+    "origin": "Warning",
+    "local": "Warning"
+  },
+  {
+    "origin": "This tutorial can contain obsolete information.",
+    "local": "本教程可能包含过时的信息."
+  },
+  {
+    "origin": "Image Watch is a plug-in for Microsoft Visual Studio that lets you to visualize in-memory images (",
+    "local": "Image Watch是Microsoft Visual Studio的一个插件，它允许您可视化内存中的图像("
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "IplImage_",
+    "local": "IplImage_"
+  },
+  {
+    "origin": "objects, for example) while debugging an application. This can be helpful for tracking down bugs, or for simply understanding what a given piece of code is doing.",
+    "local": "对象)，而调试应用程序。这有助于跟踪bug，或者简单地理解给定的代码段在做什么。"
+  },
+  {
+    "origin": "Prerequisites",
+    "local": "先决条件"
+  },
+  {
+    "origin": "This tutorial assumes that you have the following available:",
+    "local": "本教程假设您具有以下可用功能:"
+  },
+  {
+    "origin": "Visual Studio 2012 Professional (or better) with Update 1 installed. Update 1 can be downloaded",
+    "local": "安装了更新1的Visual Studio 2012 Professional(或更高版本)。可以下载更新1"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "An OpenCV installation on your Windows machine (Tutorial:",
+    "local": "在Windows计算机上安装OpenCV(教程:"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Ability to create and build OpenCV projects in Visual Studio (Tutorial:",
+    "local": "能够在Visual Studio中创建和构建OpenCV项目(教程:"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Installation",
+    "local": "安装"
+  },
+  {
+    "origin": "Download the Image Watch installer. (",
+    "local": "下载图像监视安装程序("
+  },
+  {
+    "origin": "Visual Studio 2012, 2013, 2015",
+    "local": "Visual Studio 2012、2013、2015"
+  },
+  {
+    "origin": ") The installer comes in a single file with extension .vsix (",
+    "local": ")安装程序包含一个扩展名为.vsix的文件("
+  },
+  {
+    "origin": "Visual Studio Extension",
+    "local": "Visual Studio 扩展"
+  },
+  {
+    "origin": "). To launch it, simply double-click on the .vsix file in Windows Explorer. When the installer has finished, make sure to restart Visual Studio to complete the installation.",
+    "local": "). 要启动它，只需在Windows资源管理器中双击.vsix文件。安装程序完成后，请确保重新启动Visual Studio以完成安装。"
+  },
+  {
+    "origin": "Example",
+    "local": "Example(例子)"
+  },
+  {
+    "origin": "Image Watch works with any existing project that uses OpenCV image objects (for example,",
+    "local": "Image Watch适用于任何使用OpenCV图像对象的现有项目(例如，"
+  },
+  {
+    "origin": "). In this example, we use a minimal test program that loads an image from a file and runs an edge detector. To build the program, create a console application project in Visual Studio, name it \"image-watch-demo\", and insert the source code below.",
+    "local": "). 在这个例子中，我们使用一个最小的测试程序，从一个文件中加载一个图像并运行一个边缘检测器。要构建该程序，请在visualstudio中创建一个控制台应用程序项目，将其命名为“imagewatchdemo”，并在下面插入源代码。"
+  },
+  {
+    "origin": "Make sure your active solution configuration (Build &ndash;&gt; Configuration Manager) is set to a debug build (usually called \"Debug\"). This should disable compiler optimizations so that viewing variables in the debugger can work reliably.",
+    "local": "确保您的活动解决方案配置(Build&ndash;&gt;配置管理器)设置为调试版本(通常称为“调试”)。这将禁用编译器优化，以便在调试器中查看变量可以可靠地工作。"
+  },
+  {
+    "origin": "Build your solution (Build &ndash;&gt; Build Solution, or press",
+    "local": "构建您的解决方案(Build&ndash;&gt;生成解决方案，或按"
+  },
+  {
+    "origin": "F7",
+    "local": "F7"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Before continuing, do not forget to add the command line argument of your input image to your project (Right click on project &ndash;&gt; Properties &ndash;&gt; Configuration Properties &ndash;&gt; Debugging and then set the field Command Arguments with the location of the image).",
+    "local": "在继续之前，不要忘记将输入图像的命令行参数添加到项目中(右键单击project&ndash;&gt;属性&ndash;&gt;配置属性&ndash;&gt;调试，然后使用映像的位置设置字段命令参数)。"
+  },
+  {
+    "origin": "Now set a breakpoint on the source line that says",
+    "local": "现在在源代码行上设置一个断点"
+  },
+  {
+    "origin": "To set the breakpoint, right-click on the source line and select Breakpoints &ndash;&gt; Insert Breakpoint from the context menu.",
+    "local": "要设置断点，请右键单击源代码行并选择断点&ndash;&gt;从上下文菜单中插入断点。"
+  },
+  {
+    "origin": "Launch the program in the debugger (Debug &ndash;&gt; Start Debugging, or hit",
+    "local": "在调试器中启动程序(Debug&ndash;&gt;开始调试，或点击"
+  },
+  {
+    "origin": "F5",
+    "local": "F5"
+  },
+  {
+    "origin": "). When the breakpoint is hit, the program is paused and Visual Studio displays a yellow instruction pointer at the breakpoint:",
+    "local": "). 当到达断点时，程序将暂停，Visual Studio将在断点处显示黄色指令指针:"
+  },
+  {
+    "origin": "Now you can inspect the state of you program. For example, you can bring up the",
+    "local": "现在可以检查程序的状态。例如，你可以把"
+  },
+  {
+    "origin": "Locals",
+    "local": "局部变量"
+  },
+  {
+    "origin": "window (Debug &ndash;&gt; Windows &ndash;&gt; Locals), which will show the names and values of the variables in the current scope:",
+    "local": "窗口(调试&ndash;&gt;窗口&ndash;&gt;局部变量)，它将显示当前作用域中变量的名称和值:"
+  },
+  {
+    "origin": "Note that the built-in",
+    "local": "请注意，内置"
+  },
+  {
+    "origin": "Locals",
+    "local": "局部变量"
+  },
+  {
+    "origin": "window will display text only. This is where the Image Watch plug-in comes in. Image Watch is like another",
+    "local": "窗口将只显示文本。这就是图像手表插件的用武之地。图像手表就像另一个"
+  },
+  {
+    "origin": "Locals",
+    "local": "局部变量"
+  },
+  {
+    "origin": "window, but with an image viewer built into it. To bring up Image Watch, select View &ndash;&gt; Other Windows &ndash;&gt; Image Watch. Like Visual Studio's",
+    "local": "窗口，但内置了图像查看器。要打开图像监视，请选择查看&ndash;&gt;其他窗口&ndash;&gt;图像监视。像visualstudio的"
+  },
+  {
+    "origin": "Locals",
+    "local": "局部变量"
+  },
+  {
+    "origin": "window, Image Watch can dock to the Visual Studio IDE. Also, Visual Studio will remember whether you had Image Watch open, and where it was located between debugging sessions. This means you only have to do this once&ndash;the next time you start debugging, Image Watch will be back where you left it. Here's what the docked Image Watch window looks like at our breakpoint:",
+    "local": "窗口，图像观看可以停靠到Visual Studio IDE。另外，VisualStudio还将记住是否打开了图像监视，以及它在调试会话之间的位置。这意味着您只需执行一次;下次开始调试时，“图像监视”将回到原来的位置。以下是停靠图像监视窗口在断点处的外观:"
+  },
+  {
+    "origin": "The radio button at the top left (",
+    "local": "左上角的单选按钮("
+  },
+  {
+    "origin": "Locals/Watch",
+    "local": "本地人/观察"
+  },
+  {
+    "origin": ") selects what is shown in the",
+    "local": ")选择显示在"
+  },
+  {
+    "origin": "Image List",
+    "local": "图像列表"
+  },
+  {
+    "origin": "below:",
+    "local": "下图:"
+  },
+  {
+    "origin": "Locals",
+    "local": "局部变量"
+  },
+  {
+    "origin": "lists all OpenCV image objects in the current scope (this list is automatically populated).",
+    "local": "列出当前范围内的所有OpenCV图像对象(此列表将自动填充)。"
+  },
+  {
+    "origin": "Watch",
+    "local": "观察"
+  },
+  {
+    "origin": "shows image expressions that have been pinned for continuous inspection (not described here, see",
+    "local": "显示已固定以进行连续检查的图像表达式(此处未描述，请参阅)"
+  },
+  {
+    "origin": "Image Watch documentation",
+    "local": "图像监视文档"
+  },
+  {
+    "origin": "for details). The image list shows basic information such as width, height, number of channels, and, if available, a thumbnail. In our example, the image list contains our two local image variables,",
+    "local": "详细信息)。图像列表显示基本信息，如宽度、高度、通道数，以及缩略图(如果可用)。在我们的示例中，图像列表包含两个局部图像变量，"
+  },
+  {
+    "origin": "input",
+    "local": "输入"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "edges",
+    "local": "边缘"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "If an image has a thumbnail, left-clicking on that image will select it for detailed viewing in the",
+    "local": "如果图像有缩略图，左键单击该图像将在"
+  },
+  {
+    "origin": "Image Viewer",
+    "local": "图像查看器"
+  },
+  {
+    "origin": "on the right. The viewer lets you pan (drag mouse) and zoom (mouse wheel). It also displays the pixel coordinate and value at the current mouse position.",
+    "local": "在右边。查看器允许您平移(拖动鼠标)和缩放(鼠标滚轮)。它还显示当前鼠标位置的像素坐标和值。"
+  },
+  {
+    "origin": "Note that the second image in the list,",
+    "local": "注意列表中的第二个图像，"
+  },
+  {
+    "origin": "edges",
+    "local": "边缘"
+  },
+  {
+    "origin": ", is shown as \"invalid\". This indicates that some data members of this image object have corrupt or invalid values (for example, a negative image width). This is expected at this point in the program, since the C++ constructor for",
+    "local": "，显示为“无效”。这表示此图像对象的某些数据成员的值已损坏或无效(例如，负图像宽度)。这是程序中的这一点，因为C++构造函数"
+  },
+  {
+    "origin": "edges",
+    "local": "边缘"
+  },
+  {
+    "origin": "has not run yet, and so its members have undefined values (in debug mode they are usually filled with \"0xCD\" bytes).",
+    "local": "尚未运行，因此其成员具有未定义的值(在调试模式下，它们通常用“0xCD”字节填充)。"
+  },
+  {
+    "origin": "From here you can single-step through your code (Debug-&gt;Step Over, or press",
+    "local": "从这里您可以单步完成代码(调试-&gt；跨过，或按"
+  },
+  {
+    "origin": "F10",
+    "local": "F10"
+  },
+  {
+    "origin": ") and watch the pixels change: if you step once, over the",
+    "local": ")观察像素的变化:如果你一步一个脚印"
+  },
+  {
+    "origin": "Mat edges;",
+    "local": "Mat edges;"
+  },
+  {
+    "origin": "statement, the",
+    "local": "声明"
+  },
+  {
+    "origin": "edges",
+    "local": "边缘"
+  },
+  {
+    "origin": "image will change from \"invalid\" to \"empty\", which means that it is now in a valid state (default constructed), even though it has not been initialized yet (using",
+    "local": "图像将从“invalid”变为“empty”，这意味着它现在处于有效状态(默认构造)，即使它尚未初始化(使用"
+  },
+  {
+    "origin": ", for example). If you make one more step over the",
+    "local": "，例如)。如果你再跨一步"
+  },
+  {
+    "origin": "call, you will see a thumbnail of the edge image appear in the image list.",
+    "local": "调用时，您将看到边缘图像的缩略图出现在图像列表中。"
+  },
+  {
+    "origin": "Now assume you want to do a visual sanity check of the",
+    "local": "现在假设您想对"
+  },
+  {
+    "origin": "implementation. Bring the",
+    "local": "实施。带上"
+  },
+  {
+    "origin": "edges",
+    "local": "边缘"
+  },
+  {
+    "origin": "image into the viewer by selecting it in the",
+    "local": "通过在"
+  },
+  {
+    "origin": "Image List",
+    "local": "图像列表"
+  },
+  {
+    "origin": "and zoom into a region with a clearly defined edge:",
+    "local": "并放大具有清晰边界的区域:"
+  },
+  {
+    "origin": "Right-click on the",
+    "local": "右键单击"
+  },
+  {
+    "origin": "Image Viewer",
+    "local": "图像查看器"
+  },
+  {
+    "origin": "to bring up the view context menu and enable Link Views (a check box next to the menu item indicates whether the option is enabled).",
+    "local": "打开视图上下文菜单并启用链接视图(菜单项旁边的复选框指示是否启用该选项)。"
+  },
+  {
+    "origin": "The Link Views feature keeps the view region fixed when flipping between images of the same size. To see how this works, select the input image from the image list&ndash;you should now see the corresponding zoomed-in region in the input image:",
+    "local": "在相同大小的图像之间翻转时，“链接视图”功能使视图区域保持固定。要了解其工作原理，请从图像列表中选择输入图像;现在，您应该可以在输入图像中看到相应的放大区域:"
+  },
+  {
+    "origin": "You may also switch back and forth between viewing input and edges with your up/down cursor keys. That way you can easily verify that the detected edges line up nicely with the data in the input image.",
+    "local": "也可以使用上/下光标键在查看输入和边之间来回切换。这样您就可以很容易地验证检测到的边缘是否与输入图像中的数据很好地对齐。"
+  },
+  {
+    "origin": "More ...",
+    "local": "More(更多)..."
+  },
+  {
+    "origin": "Image watch has a number of more advanced features, such as",
+    "local": "图像手表有许多更先进的功能，如"
+  },
+  {
+    "origin": "pinning images to a",
+    "local": "将图像固定到"
+  },
+  {
+    "origin": "Watch",
+    "local": "Watch"
+  },
+  {
+    "origin": "list for inspection across scopes or between debugging sessions",
+    "local": "用于跨作用域或调试会话之间检查的列表"
+  },
+  {
+    "origin": "clamping, thresholding, or diff'ing images directly inside the Watch window",
+    "local": "直接在监视窗口内钳制、阈值化或区分图像"
+  },
+  {
+    "origin": "comparing an in-memory image against a reference image from a file",
+    "local": "将内存中的图像与文件中的参考图像进行比较"
+  },
+  {
+    "origin": "Please refer to the online",
+    "local": "请参考在线"
+  },
+  {
+    "origin": "Image Watch Documentation",
+    "local": "图像监视文档"
+  },
+  {
+    "origin": "for details&ndash;you also can get to the documentation page by clicking on the",
+    "local": "详情;您也可以通过单击"
+  },
+  {
+    "origin": "Help",
+    "local": "Help(帮助)"
+  },
+  {
+    "origin": "link in the Image Watch window:",
+    "local": "图像监视窗口中的链接:"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;"
+  }
+]

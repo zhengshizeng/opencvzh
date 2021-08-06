@@ -1,0 +1,846 @@
+[
+  {
+    "origin": "OpenCV: opencv2/cudalegacy/NCV.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Variables",
+    "local": ""
+  },
+  {
+    "origin": "NCV.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "(x, a, b)&#160;&#160;&#160;( (x) &gt; (b) ? (b) : ( (x) &lt; (a) ? (a) : (x) ) )",
+    "local": ""
+  },
+  {
+    "origin": "(x)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(x,0,255)",
+    "local": ""
+  },
+  {
+    "origin": "(x, a)&#160;&#160;&#160;(((x) &lt; (a)) ? (a) : (x))",
+    "local": ""
+  },
+  {
+    "origin": "(x, a)&#160;&#160;&#160;(((x) &gt; (a)) ? (a) : (x))",
+    "local": ""
+  },
+  {
+    "origin": "(X)",
+    "local": ""
+  },
+  {
+    "origin": "(a, b)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(a, b)",
+    "local": ""
+  },
+  {
+    "origin": "Concatenation macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(a, b)&#160;&#160;&#160;a##b",
+    "local": ""
+  },
+  {
+    "origin": "Concatenation indirection macro.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(x)&#160;&#160;&#160;__ncv_skip_cond = x",
+    "local": ""
+  },
+  {
+    "origin": "(x)&#160;&#160;&#160;bool __ncv_skip_cond = x",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;if (!__ncv_skip_cond) {",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;}",
+    "local": ""
+  },
+  {
+    "origin": "(errCode)",
+    "local": ""
+  },
+  {
+    "origin": "(cudacall, errCode)",
+    "local": ""
+  },
+  {
+    "origin": "(pred, msg)",
+    "local": ""
+  },
+  {
+    "origin": "(pred, msg, err)",
+    "local": ""
+  },
+  {
+    "origin": "(pred, err)",
+    "local": ""
+  },
+  {
+    "origin": "(ncvOp)",
+    "local": ""
+  },
+  {
+    "origin": "(name, type, alloc, width, height, err)",
+    "local": ""
+  },
+  {
+    "origin": "(x)&#160;&#160;&#160;((x)*(x))",
+    "local": ""
+  },
+  {
+    "origin": "(type, name)&#160;&#160;&#160;struct { __inline type name",
+    "local": ""
+  },
+  {
+    "origin": "(name)&#160;&#160;&#160;name.name",
+    "local": ""
+  },
+  {
+    "origin": "(name)&#160;&#160;&#160;} name;",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;msg)",
+    "local": ""
+  },
+  {
+    "origin": "typedef",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "= NCV_SUCCESS,",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "what,",
+    "local": ""
+  },
+  {
+    "origin": "alignment)",
+    "local": ""
+  },
+  {
+    "origin": "(void *dst,",
+    "local": ""
+  },
+  {
+    "origin": "dstType, const void *src,",
+    "local": ""
+  },
+  {
+    "origin": "srcType, size_t sz, cudaStream_t cuStream)",
+    "local": ""
+  },
+  {
+    "origin": "(void *dst,",
+    "local": ""
+  },
+  {
+    "origin": "dstPitch,",
+    "local": ""
+  },
+  {
+    "origin": "dstType, const void *src,",
+    "local": ""
+  },
+  {
+    "origin": "srcPitch,",
+    "local": ""
+  },
+  {
+    "origin": "srcType,",
+    "local": ""
+  },
+  {
+    "origin": "widthbytes,",
+    "local": ""
+  },
+  {
+    "origin": "height, cudaStream_t cuStream)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;msg)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*d_dst,",
+    "local": ""
+  },
+  {
+    "origin": "dstStride,",
+    "local": ""
+  },
+  {
+    "origin": "dstWidth,",
+    "local": ""
+  },
+  {
+    "origin": "dstHeight,",
+    "local": ""
+  },
+  {
+    "origin": "*d_rects,",
+    "local": ""
+  },
+  {
+    "origin": "numRects,",
+    "local": ""
+  },
+  {
+    "origin": "color, cudaStream_t cuStream)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*h_dst,",
+    "local": ""
+  },
+  {
+    "origin": "dstStride,",
+    "local": ""
+  },
+  {
+    "origin": "dstWidth,",
+    "local": ""
+  },
+  {
+    "origin": "dstHeight,",
+    "local": ""
+  },
+  {
+    "origin": "*h_rects,",
+    "local": ""
+  },
+  {
+    "origin": "numRects,",
+    "local": ""
+  },
+  {
+    "origin": "color)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*d_dst,",
+    "local": ""
+  },
+  {
+    "origin": "dstStride,",
+    "local": ""
+  },
+  {
+    "origin": "dstWidth,",
+    "local": ""
+  },
+  {
+    "origin": "dstHeight,",
+    "local": ""
+  },
+  {
+    "origin": "*d_rects,",
+    "local": ""
+  },
+  {
+    "origin": "numRects,",
+    "local": ""
+  },
+  {
+    "origin": "color, cudaStream_t cuStream)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*h_dst,",
+    "local": ""
+  },
+  {
+    "origin": "dstStride,",
+    "local": ""
+  },
+  {
+    "origin": "dstWidth,",
+    "local": ""
+  },
+  {
+    "origin": "dstHeight,",
+    "local": ""
+  },
+  {
+    "origin": "*h_rects,",
+    "local": ""
+  },
+  {
+    "origin": "numRects,",
+    "local": ""
+  },
+  {
+    "origin": "color)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "t)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "t)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;hypotheses,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;numHypotheses,",
+    "local": ""
+  },
+  {
+    "origin": "minNeighbors,",
+    "local": ""
+  },
+  {
+    "origin": "intersectEps,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; *hypothesesWeights)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "*func)",
+    "local": ""
+  },
+  {
+    "origin": "(void)",
+    "local": ""
+  },
+  {
+    "origin": "Variables",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

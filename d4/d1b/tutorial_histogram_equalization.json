@@ -1,0 +1,382 @@
+[
+  {
+    "origin": "OpenCV: Histogram Equalization",
+    "local": "OpenCV：直方图均衡化"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Histogram Equalization",
+    "local": "直方图均衡化"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "安娜·华曼"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": "在本教程中，您将学习："
+  },
+  {
+    "origin": "What an image histogram is and why it is useful",
+    "local": "什么是图像直方图？为什么它有用"
+  },
+  {
+    "origin": "To equalize histograms of images by using the OpenCV function",
+    "local": "利用OpenCV函数实现图像直方图的均衡"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "What is an Image Histogram?",
+    "local": "什么是图像直方图？"
+  },
+  {
+    "origin": "It is a graphical representation of the intensity distribution of an image.",
+    "local": "它是图像强度分布的图形表示。"
+  },
+  {
+    "origin": "It quantifies the number of pixels for each intensity value considered.",
+    "local": "它量化了每个强度值的像素数。"
+  },
+  {
+    "origin": "What is Histogram Equalization?",
+    "local": "什么是直方图均衡化？"
+  },
+  {
+    "origin": "It is a method that improves the contrast in an image, in order to stretch out the intensity range (see also the corresponding",
+    "local": "它是一种提高图像对比度的方法，目的是扩展亮度范围（另请参见相应的"
+  },
+  {
+    "origin": "Wikipedia entry",
+    "local": "维基百科条目"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "To make it clearer, from the image above, you can see that the pixels seem clustered around the middle of the available range of intensities. What Histogram Equalization does is to",
+    "local": "为了更清楚，从上图中，您可以看到像素似乎聚集在可用强度范围的中间。直方图均衡化的作用是"
+  },
+  {
+    "origin": "stretch out",
+    "local": "伸展"
+  },
+  {
+    "origin": "this range. Take a look at the figure below: The green circles indicate the",
+    "local": "这个范围。请看下图：绿色圆圈表示"
+  },
+  {
+    "origin": "underpopulated",
+    "local": "人口不足"
+  },
+  {
+    "origin": "intensities. After applying the equalization, we get an histogram like the figure in the center. The resulting image is shown in the picture at right.",
+    "local": "强度。在应用均衡化之后，我们得到了一个类似于中心图的直方图。结果图像如右图所示。"
+  },
+  {
+    "origin": "How does it work?",
+    "local": "它是如何工作的？"
+  },
+  {
+    "origin": "Equalization implies",
+    "local": "均衡意味着"
+  },
+  {
+    "origin": "mapping",
+    "local": "映射"
+  },
+  {
+    "origin": "one distribution (the given histogram) to another distribution (a wider and more uniform distribution of intensity values) so the intensity values are spread over the whole range.",
+    "local": "一个分布（给定的直方图）到另一个分布（强度值的更宽和更均匀的分布），因此强度值分布在整个范围内。"
+  },
+  {
+    "origin": "To accomplish the equalization effect, the remapping should be the",
+    "local": "为了达到均衡效果，重映射应该是"
+  },
+  {
+    "origin": "cumulative distribution function (cdf)",
+    "local": "累积分布函数"
+  },
+  {
+    "origin": "(more details, refer to",
+    "local": "（更多详细信息，请参阅"
+  },
+  {
+    "origin": "Learning OpenCV",
+    "local": "学习OpenCV"
+  },
+  {
+    "origin": "). For the histogram \\(H(i)\\), its",
+    "local": "). 对于直方图\\（H（i）\\），其"
+  },
+  {
+    "origin": "cumulative distribution",
+    "local": "累积分布"
+  },
+  {
+    "origin": "\\(H^{&#39;}(i)\\) is:",
+    "local": "\\（H ^{&#39；}(i） \\）是："
+  },
+  {
+    "origin": "\\[H^{&#39;}(i) = \\sum_{0 \\le j &lt; i} H(j)\\]",
+    "local": "\\\\[H^{&#39；}(i） =\\sum{0\\le j&lt；i} H（j）\\]"
+  },
+  {
+    "origin": "To use this as a remapping function, we have to normalize \\(H^{&#39;}(i)\\) such that the maximum value is 255 ( or the maximum value for the intensity of the image ). From the example above, the cumulative function is:",
+    "local": "要将其用作重映射函数，必须规范化\\（H^{&#39；}(i） \\）使最大值为255（或图像强度的最大值）。从上面的例子来看，累积函数是："
+  },
+  {
+    "origin": "Finally, we use a simple remapping procedure to obtain the intensity values of the equalized image:",
+    "local": "最后，我们使用一个简单的重映射过程来获得均衡图像的强度值："
+  },
+  {
+    "origin": "\\[equalized( x, y ) = H^{&#39;}( src(x,y) )\\]",
+    "local": "\\[均衡（x，y）=H ^{&#39；}（src（x，y））\\]"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "What does this program do?",
+    "local": "这个程序做什么？"
+  },
+  {
+    "origin": "Loads an image",
+    "local": "加载图像"
+  },
+  {
+    "origin": "Convert the original image to grayscale",
+    "local": "将原始图像转换为灰度"
+  },
+  {
+    "origin": "Equalize the Histogram by using the OpenCV function",
+    "local": "使用OpenCV函数均衡直方图"
+  },
+  {
+    "origin": "Display the source and equalized images in a window.",
+    "local": "在窗口中显示源图像和均衡图像。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Load the source image:",
+    "local": "加载源图像："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Convert it to grayscale:",
+    "local": "将其转换为灰度："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Apply histogram equalization with the function",
+    "local": "应用直方图均衡化的功能"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "As it can be easily seen, the only arguments are the original image and the output (equalized) image.",
+    "local": "很容易看出，唯一的参数是原始图像和输出（均衡）图像。"
+  },
+  {
+    "origin": "Display both images (original and equalized):",
+    "local": "显示两个图像（原始图像和均衡图像）："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Wait until user exists the program",
+    "local": "等待用户存在程序"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "To appreciate better the results of equalization, let's introduce an image with not much contrast, such as:",
+    "local": "为了更好地欣赏均衡的效果，让我们介绍一个对比度不高的图像，例如："
+  },
+  {
+    "origin": "which, by the way, has this histogram:",
+    "local": "顺便说一下，它有一个柱状图："
+  },
+  {
+    "origin": "notice that the pixels are clustered around the center of the histogram.",
+    "local": "注意，像素聚集在直方图的中心。"
+  },
+  {
+    "origin": "After applying the equalization with our program, we get this result:",
+    "local": "在我们的程序中应用均衡后，我们得到以下结果："
+  },
+  {
+    "origin": "this image has certainly more contrast. Check out its new histogram like this:",
+    "local": "这张照片的对比度肯定更大。查看新的直方图，如下所示："
+  },
+  {
+    "origin": "Notice how the number of pixels is more distributed through the intensity range.",
+    "local": "注意像素的数量是如何在整个强度范围内分布的。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Are you wondering how did we draw the Histogram figures shown above? Check out the following tutorial!",
+    "local": "你想知道我们是怎么画上面的柱状图的吗？查看以下教程！"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:35为OpenCV生成，&#160；"
+  }
+]

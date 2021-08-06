@@ -1,0 +1,258 @@
+[
+  {
+    "origin": "OpenCV: Detection of Diamond Markers",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Detection of Diamond Markers",
+    "local": ""
+  },
+  {
+    "origin": "A ChArUco diamond marker (or simply diamond marker) is a chessboard composed by 3x3 squares and 4 ArUco markers inside the white squares. It is similar to a ChArUco board in appearance, however they are conceptually different.",
+    "local": ""
+  },
+  {
+    "origin": "Diamond marker examples",
+    "local": ""
+  },
+  {
+    "origin": "In both, ChArUco board and Diamond markers, their detection is based on the previous detected ArUco markers. In the ChArUco case, the used markers are selected by directly looking their identifiers. This means that if a marker (included in the board) is found on a image, it will be automatically assumed to belong to the board. Furthermore, if a marker board is found more than once in the image, it will produce an ambiguity since the system wont be able to know which one should be used for the Board.",
+    "local": ""
+  },
+  {
+    "origin": "On the other hand, the detection of Diamond marker is not based on the identifiers. Instead, their detection is based on the relative position of the markers. As a consequence, marker identifiers can be repeated in the same diamond or among different diamonds, and they can be detected simultaneously without ambiguity. However, due to the complexity of finding marker based on their relative position, the diamond markers are limited to a size of 3x3 squares and 4 markers.",
+    "local": ""
+  },
+  {
+    "origin": "As in a single ArUco marker, each Diamond marker is composed by 4 corners and a identifier. The four corners correspond to the 4 chessboard corners in the marker and the identifier is actually an array of 4 numbers, which are the identifiers of the four ArUco markers inside the diamond.",
+    "local": ""
+  },
+  {
+    "origin": "Diamond markers are useful in those scenarios where repeated markers should be allowed. For instance:",
+    "local": ""
+  },
+  {
+    "origin": "To increase the number of identifiers of single markers by using diamond marker for labeling. They would allow up to N^4 different ids, being N the number of markers in the used dictionary.",
+    "local": ""
+  },
+  {
+    "origin": "Give to each of the four markers a conceptual meaning. For instance, one of the four marker ids could be used to indicate the scale of the marker (i.e. the size of the square), so that the same diamond can be found in the environment with different sizes just by changing one of the four markers and the user does not need to manually indicate the scale of each of them. This case is included in the",
+    "local": ""
+  },
+  {
+    "origin": "file inside the samples folder of the module.",
+    "local": ""
+  },
+  {
+    "origin": "Furthermore, as its corners are chessboard corners, they can be used for accurate pose estimation.",
+    "local": ""
+  },
+  {
+    "origin": "The diamond functionalities are included in",
+    "local": ""
+  },
+  {
+    "origin": "ChArUco Diamond Creation",
+    "local": ""
+  },
+  {
+    "origin": "The image of a diamond marker can be easily created using the",
+    "local": ""
+  },
+  {
+    "origin": "function. For instance:",
+    "local": ""
+  },
+  {
+    "origin": "This will create a diamond marker image with a square size of 200 pixels and a marker size of 120 pixels. The marker ids are given in the second parameter as a",
+    "local": ""
+  },
+  {
+    "origin": "object. The order of the marker ids in the diamond layout are the same as in a standard ChArUco board, i.e. top, left, right and bottom.",
+    "local": ""
+  },
+  {
+    "origin": "The image produced will be:",
+    "local": ""
+  },
+  {
+    "origin": "Diamond marker",
+    "local": ""
+  },
+  {
+    "origin": "A full working example is included in the",
+    "local": ""
+  },
+  {
+    "origin": "inside the module samples folder.",
+    "local": ""
+  },
+  {
+    "origin": "Note: The samples now take input via commandline via the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Commandline Parser",
+    "local": ""
+  },
+  {
+    "origin": ". For this file the example parameters will look like",
+    "local": ""
+  },
+  {
+    "origin": "ChArUco Diamond Detection",
+    "local": ""
+  },
+  {
+    "origin": "As in most cases, the detection of diamond markers requires a previous detection of ArUco markers. After detecting markers, diamond are detected using the",
+    "local": ""
+  },
+  {
+    "origin": "function:",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "function receives the original image and the previous detected marker corners and ids. The input image is necessary to perform subpixel refinement in the ChArUco corners. It also receives the rate between the square size and the marker sizes which is required for both, detecting the diamond from the relative positions of the markers and interpolating the ChArUco corners.",
+    "local": ""
+  },
+  {
+    "origin": "The function returns the detected diamonds in two parameters. The first parameter,",
+    "local": ""
+  },
+  {
+    "origin": ", is an array containing all the four corners of each detected diamond. Its format is similar to the detected corners by the",
+    "local": ""
+  },
+  {
+    "origin": "function and, for each diamond, the corners are represented in the same order than in the ArUco markers, i.e. clockwise order starting with the top-left corner. The second returned parameter,",
+    "local": ""
+  },
+  {
+    "origin": ", contains all the ids of the returned diamond corners in",
+    "local": ""
+  },
+  {
+    "origin": ". Each id is actually an array of 4 integers that can be represented with",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The detected diamond can be visualized using the function",
+    "local": ""
+  },
+  {
+    "origin": "which simply receives the image and the diamond corners and ids:",
+    "local": ""
+  },
+  {
+    "origin": "The result is the same that the one produced by",
+    "local": ""
+  },
+  {
+    "origin": ", but printing the four ids of the diamond:",
+    "local": ""
+  },
+  {
+    "origin": "Detected diamond markers",
+    "local": ""
+  },
+  {
+    "origin": "A full working example is included in the",
+    "local": ""
+  },
+  {
+    "origin": "inside the module samples folder.",
+    "local": ""
+  },
+  {
+    "origin": "Note: The samples now take input via commandline via the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Commandline Parser",
+    "local": ""
+  },
+  {
+    "origin": ". For this file the example parameters will look like",
+    "local": ""
+  },
+  {
+    "origin": "ChArUco Diamond Pose Estimation",
+    "local": ""
+  },
+  {
+    "origin": "Since a ChArUco diamond is represented by its four corners, its pose can be estimated in the same way than in a single ArUco marker, i.e. using the",
+    "local": ""
+  },
+  {
+    "origin": "function. For instance:",
+    "local": ""
+  },
+  {
+    "origin": "The function will obtain the rotation and translation vector for each of the diamond marker and store them in",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ". Note that the diamond corners are a chessboard square corners and thus, the square length has to be provided for pose estimation, and not the marker length. Camera calibration parameters are also required.",
+    "local": ""
+  },
+  {
+    "origin": "Finally, an axis can be drawn to check the estimated pose is correct using",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Detected diamond axis",
+    "local": ""
+  },
+  {
+    "origin": "The coordinate system of the diamond pose will be in the center of the marker with the Z axis pointing out, as in a simple ArUco marker pose estimation.",
+    "local": ""
+  },
+  {
+    "origin": "Sample video:",
+    "local": ""
+  },
+  {
+    "origin": "A full working example is included in the",
+    "local": ""
+  },
+  {
+    "origin": "inside the module samples folder.",
+    "local": ""
+  },
+  {
+    "origin": "Note: The samples now take input via commandline via the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Commandline Parser",
+    "local": ""
+  },
+  {
+    "origin": ". For this file the example parameters will look like",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

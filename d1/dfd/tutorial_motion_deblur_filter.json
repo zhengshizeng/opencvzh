@@ -1,0 +1,182 @@
+[
+  {
+    "origin": "OpenCV: Motion Deblur Filter",
+    "local": "OpenCV:运动去模糊过滤器"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Motion Deblur Filter",
+    "local": "运动去模糊滤波器"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Karpushin Vladislav",
+    "local": "卡尔普辛弗拉迪斯拉夫。"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt；=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": "在本教程中，您将学习："
+  },
+  {
+    "origin": "what the PSF of a motion blur image is",
+    "local": "运动模糊图像的PSF是什么"
+  },
+  {
+    "origin": "how to restore a motion blur image",
+    "local": "如何恢复运动模糊图像"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "For the degradation image model theory and the Wiener filter theory you can refer to the tutorial",
+    "local": "对于退化图像模型理论和维纳滤波理论，你可以参考教程"
+  },
+  {
+    "origin": ". On this page only a linear motion blur distortion is considered. The motion blur image on this page is a real world image. The blur was caused by a moving subject.",
+    "local": ". 在本页中，仅考虑线性运动模糊失真。此页上的运动模糊图像是真实世界的图像。模糊是由移动的物体造成的。"
+  },
+  {
+    "origin": "What is the PSF of a motion blur image?",
+    "local": "什么是运动模糊图像的PSF？"
+  },
+  {
+    "origin": "The point spread function (PSF) of a linear motion blur distortion is a line segment. Such a PSF is specified by two parameters: \\(LEN\\) is the length of the blur and \\(THETA\\) is the angle of motion.",
+    "local": "线性运动模糊失真的点扩展函数（PSF）是一个线段。这种PSF由两个参数指定：\\（LEN\\）是模糊的长度，\\（THETA\\）是运动的角度。"
+  },
+  {
+    "origin": "Point spread function of a linear motion blur distortion",
+    "local": "线性运动模糊失真的点扩散函数"
+  },
+  {
+    "origin": "How to restore a blurred image?",
+    "local": "如何恢复模糊图像？"
+  },
+  {
+    "origin": "On this page the Wiener filter is used as the restoration filter, for details you can refer to the tutorial",
+    "local": "在这个页面上，Wiener过滤器被用作恢复过滤器，有关详细信息，您可以参考教程"
+  },
+  {
+    "origin": ". In order to synthesize the Wiener filter for a motion blur case, it needs to specify the signal-to-noise ratio ( \\(SNR\\)), \\(LEN\\) and \\(THETA\\) of the PSF.",
+    "local": ". 为了合成运动模糊情况下的维纳滤波器，需要指定PSF的信噪比（\\（SNR\\）、\\（LEN\\）和\\（THETA\\）。"
+  },
+  {
+    "origin": "Source code",
+    "local": "源代码"
+  },
+  {
+    "origin": "You can find source code in the",
+    "local": "您可以在"
+  },
+  {
+    "origin": "of the OpenCV source code library.",
+    "local": "的源代码库。"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "A motion blur image recovering algorithm consists of PSF generation, Wiener filter generation and filtering a blurred image in a frequency domain:",
+    "local": "运动模糊图像恢复算法包括PSF生成、Wiener滤波器生成和在频域中对模糊图像进行滤波："
+  },
+  {
+    "origin": "A function calcPSF() forms a PSF according to input parameters \\(LEN\\) and \\(THETA\\) (in degrees):",
+    "local": "函数calcPSF（）根据输入参数\\（LEN\\）和\\（THETA\\）（以度为单位）形成PSF："
+  },
+  {
+    "origin": "A function edgetaper() tapers the input image’s edges in order to reduce the ringing effect in a restored image:",
+    "local": "函数edgetaper（）使输入图像的边缘变细，以减少还原图像中的振铃效果："
+  },
+  {
+    "origin": "The functions calcWnrFilter(), fftshift() and filter2DFreq() realize an image filtration by a specified PSF in the frequency domain. The functions are copied from the tutorial",
+    "local": "函数calcWnrFilter（）、fftshift（）和filter2DFreq（）在频域中通过指定的PSF实现图像过滤。这些函数是从教程中复制的"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Result",
+    "local": "结果"
+  },
+  {
+    "origin": "Below you can see the real world image with motion blur distortion. The license plate is not readable on both cars. The red markers show the car’s license plate location.",
+    "local": "下面你可以看到真实世界的图像与运动模糊失真。两辆车的车牌都看不清。红色标记显示了汽车的车牌位置。"
+  },
+  {
+    "origin": "Motion blur image. The license plates are not readable",
+    "local": "运动模糊图像。车牌不可读"
+  },
+  {
+    "origin": "Below you can see the restoration result for the black car license plate. The result has been computed with \\(LEN\\) = 125, \\(THETA\\) = 0, \\(SNR\\) = 700.",
+    "local": "下面你可以看到黑车牌照的复原结果。计算结果为\\（LEN\\）=125，\\（THETA\\）=0，\\（SNR\\）=700。"
+  },
+  {
+    "origin": "The restored image of the black car license plate",
+    "local": "黑车牌照的复原图像"
+  },
+  {
+    "origin": "Below you can see the restoration result for the white car license plate. The result has been computed with \\(LEN\\) = 78, \\(THETA\\) = 15, \\(SNR\\) = 300.",
+    "local": "下面您可以看到白色汽车牌照的恢复结果。计算结果为\\（LEN\\）=78，\\（THETA\\）=15，\\（SNR\\）=300。"
+  },
+  {
+    "origin": "The restored image of the white car license plate",
+    "local": "白色汽车牌照的复原图像"
+  },
+  {
+    "origin": "The values of \\(SNR\\), \\(LEN\\) and \\(THETA\\) were selected manually to give the best possible visual result. The \\(THETA\\) parameter coincides with the car’s moving direction, and the \\(LEN\\) parameter depends on the car’s moving speed. The result is not perfect, but at least it gives us a hint of the image’s content. With some effort, the car license plate is now readable.",
+    "local": "手动选择\\（SNR\\）、\\（LEN\\）和\\（THETA\\）的值，以获得最佳的视觉效果。\\（THETA\\）参数与汽车的行驶方向一致，而\\（LEN\\）参数取决于汽车的行驶速度。结果并不完美，但至少给了我们一个图像内容的暗示。经过一番努力，汽车牌照现在是可读的。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "The parameters \\(LEN\\) and \\(THETA\\) are the most important. You should adjust \\(LEN\\) and \\(THETA\\) first, then \\(SNR\\).",
+    "local": "参数\\（LEN\\）和\\（THETA\\）是最重要的。你应该先调整\\（LEN\\）和\\（THETA\\），然后再调整\\（SNR\\）。"
+  },
+  {
+    "origin": "You can also find a quick video demonstration of a license plate recovering method",
+    "local": "您还可以找到一个快速视频演示的车牌恢复方法"
+  },
+  {
+    "origin": "YouTube",
+    "local": "YouTube网站"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:35为OpenCV生成，&#160；"
+  }
+]

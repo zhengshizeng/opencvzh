@@ -1,0 +1,922 @@
+[
+  {
+    "origin": "OpenCV: Porting anisotropic image segmentation on G-API",
+    "local": "OpenCV:在G-API上移植各向异性图像分割"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Porting anisotropic image segmentation on G-API",
+    "local": "基于G-API的各向异性图像分割移植"
+  },
+  {
+    "origin": "Table of Contents",
+    "local": "目录"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "Quick start: using OpenCV backend",
+    "local": "快速入门：使用OpenCV后端"
+  },
+  {
+    "origin": "Examining calcGST()",
+    "local": "正在检查calcGST（）"
+  },
+  {
+    "origin": "Running G-API graph",
+    "local": "运行G-API图"
+  },
+  {
+    "origin": "G-API initial version: full listing",
+    "local": "G-API初始版本：完整列表"
+  },
+  {
+    "origin": "Inspecting the initial version",
+    "local": "检查初始版本"
+  },
+  {
+    "origin": "Understanding the graph structure",
+    "local": "理解图形结构"
+  },
+  {
+    "origin": "Measuring memory footprint",
+    "local": "测量内存占用"
+  },
+  {
+    "origin": "Backends and kernels",
+    "local": "后端和内核"
+  },
+  {
+    "origin": "Running a graph with a Fluid backend",
+    "local": "使用流体后端运行图形"
+  },
+  {
+    "origin": "Troubleshooting and customization",
+    "local": "故障排除和自定义"
+  },
+  {
+    "origin": "Conclusion",
+    "local": "结论"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": "在本教程中，您将学习："
+  },
+  {
+    "origin": "How an existing algorithm can be transformed into a G-API computation (graph);",
+    "local": "如何将现有算法转换为G-API计算（图）；"
+  },
+  {
+    "origin": "How to inspect and profile G-API graphs;",
+    "local": "如何检验和分析G-API图；"
+  },
+  {
+    "origin": "How to customize graph execution without changing its code.",
+    "local": "如何自定义图形执行而不更改其代码。"
+  },
+  {
+    "origin": "This tutorial is based on",
+    "local": "本教程基于"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Quick start: using OpenCV backend",
+    "local": "快速入门：使用OpenCV后端"
+  },
+  {
+    "origin": "Before we start, let's review the original algorithm implementation:",
+    "local": "在开始之前，让我们回顾一下最初的算法实现："
+  },
+  {
+    "origin": "Examining calcGST()",
+    "local": "正在检查calcGST（）"
+  },
+  {
+    "origin": "The function calcGST() is clearly an image processing pipeline:",
+    "local": "函数calcGST（）显然是一个图像处理管道："
+  },
+  {
+    "origin": "It is just a sequence of operations over a number of",
+    "local": "它只是一系列的操作"
+  },
+  {
+    "origin": ";",
+    "local": ";"
+  },
+  {
+    "origin": "No logic (conditionals) and loops involved in the code;",
+    "local": "代码中没有逻辑（条件）和循环；"
+  },
+  {
+    "origin": "All functions operate on 2D images (like",
+    "local": "所有功能都在2D图像上运行（如"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", etc).",
+    "local": "等）。"
+  },
+  {
+    "origin": "Considering the above, calcGST() is a great candidate to start with. In the original code, its prototype is defined like this:",
+    "local": "综上所述，calcGST（）是一个很好的开始。在原始代码中，其原型定义如下："
+  },
+  {
+    "origin": "With G-API, we can define it as follows:",
+    "local": "通过G-API，我们可以定义如下："
+  },
+  {
+    "origin": "It is important to understand that the new G-API based version of calcGST() will just produce a compute graph, in contrast to its original version, which actually calculates the values. This is a principal difference &ndash; G-API based functions like this are used to construct graphs, not to process the actual data.",
+    "local": "重要的是要理解，新的基于G-API的calcGST（）版本只会生成一个计算图，而它的原始版本实际上是计算值的。这是一个主要区别&ndash；像这样基于G-API的函数用于构造图，而不是处理实际数据。"
+  },
+  {
+    "origin": "Let's start implementing calcGST() with calculation of \\(J\\) matrix. This is how the original code looks like:",
+    "local": "让我们开始实现calcGST（），计算\\（J\\）矩阵。原始代码如下所示："
+  },
+  {
+    "origin": "Here we need to declare output objects for every new operation (see img as a result for",
+    "local": "在这里，我们需要为每个新操作声明输出对象（请参见img作为"
+  },
+  {
+    "origin": ", imgDiffX and others as results for",
+    "local": "，imgDiffX等作为"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "The G-API analogue is listed below:",
+    "local": "G-API类似物如下所示："
+  },
+  {
+    "origin": "This snippet demonstrates the following syntactic difference between G-API and traditional OpenCV:",
+    "local": "此代码片段演示了G-API和传统OpenCV之间的以下语法差异："
+  },
+  {
+    "origin": "All standard G-API functions are by default placed in \"cv::gapi\" namespace;",
+    "local": "默认情况下，所有标准的G-API函数都放在“cv:：gapi”命名空间中；"
+  },
+  {
+    "origin": "G-API operations",
+    "local": "G-API操作"
+  },
+  {
+    "origin": "return",
+    "local": "返回"
+  },
+  {
+    "origin": "its results &ndash; there's no need to pass extra \"output\" parameters to the functions.",
+    "local": "其结果&ndash；不需要向函数传递额外的“输出”参数。"
+  },
+  {
+    "origin": "Note &ndash; this code is also using",
+    "local": "注意&ndash；此代码还使用"
+  },
+  {
+    "origin": "&ndash; types of intermediate objects like",
+    "local": "&恩达什；中间对象的类型，如"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", and so on are inferred automatically by the C++ compiler. In this example, the types are determined by G-API operation return values which all are",
+    "local": "等等，由C++编译器自动推断出来。在本例中，类型由G-API操作返回值确定，这些值都是"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "G-API standard kernels are trying to follow OpenCV API conventions whenever possible &ndash; so cv::gapi::sobel takes the same arguments as",
+    "local": "G-API标准内核尽可能地遵循opencvapi惯例&ndash；所以cv：：gapi：：sobel的参数与"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "follows",
+    "local": "跟随"
+  },
+  {
+    "origin": ", and so on (except having a return value).",
+    "local": "，依此类推（返回值除外）。"
+  },
+  {
+    "origin": "The rest of calcGST() function can be implemented the same way trivially. Below is its full source code:",
+    "local": "calcGST（）函数的其余部分可以用同样的方法实现。下面是它的完整源代码："
+  },
+  {
+    "origin": "Running G-API graph",
+    "local": "运行G-API图"
+  },
+  {
+    "origin": "After calcGST() is defined in G-API language, we can construct a graph based on it and finally run it &ndash; pass input image and obtain result. Before we do it, let's have a look how original code looked like:",
+    "local": "在G-API语言中定义calcGST（）之后，我们可以在此基础上构造一个图并最终运行它&ndash；通过输入图像并获得结果。在开始之前，让我们先看看原始代码是什么样子的："
+  },
+  {
+    "origin": "G-API-based functions like calcGST() can't be applied to input data directly, since it is a",
+    "local": "基于G-API的函数（如calcGST（））不能直接应用于输入数据，因为它是一个"
+  },
+  {
+    "origin": "construction",
+    "local": "建设"
+  },
+  {
+    "origin": "code, not the",
+    "local": "代码，不是"
+  },
+  {
+    "origin": "processing",
+    "local": "处理"
+  },
+  {
+    "origin": "code. In order to",
+    "local": "代码。为了"
+  },
+  {
+    "origin": "run",
+    "local": "运行"
+  },
+  {
+    "origin": "computations, a special object of class",
+    "local": "计算，一个特殊的类对象"
+  },
+  {
+    "origin": "std::function&lt;&gt;",
+    "local": "std：：函数&lt&燃气轮机；"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "class has a number of constructors which can be used to define a graph. Generally, user needs to pass graph boundaries &ndash;",
+    "local": "类有许多可用于定义图的构造函数。通常，用户需要传递图形边界&ndash；"
+  },
+  {
+    "origin": "input",
+    "local": "输入"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "output",
+    "local": "输出"
+  },
+  {
+    "origin": "objects, on which a GComputation is defined. Then G-API analyzes the call flow from",
+    "local": "对象，在其上定义gcompution。然后G-API分析来自"
+  },
+  {
+    "origin": "outputs",
+    "local": "输出"
+  },
+  {
+    "origin": "to",
+    "local": "到"
+  },
+  {
+    "origin": "inputs",
+    "local": "输入"
+  },
+  {
+    "origin": "and reconstructs the graph with operations in-between the specified boundaries. This may sound complex, however in fact the code looks like this:",
+    "local": "并在指定的边界之间用运算重建图。这听起来可能很复杂，但实际上代码是这样的："
+  },
+  {
+    "origin": "Note that this code slightly changes from the original one: forming up the resulting image is also a part of the pipeline (done with",
+    "local": "请注意，此代码与原始代码略有不同：生成结果图像也是管道的一部分（使用"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Result of this G-API pipeline bit-exact matches the original one (given the same input image):",
+    "local": "此G-API管道位精确匹配的结果与原始匹配（给定相同的输入图像）："
+  },
+  {
+    "origin": "Segmentation result with G-API",
+    "local": "G-API分割结果"
+  },
+  {
+    "origin": "G-API initial version: full listing",
+    "local": "G-API初始版本：完整列表"
+  },
+  {
+    "origin": "Below is the full listing of the initial anisotropic image segmentation port on G-API:",
+    "local": "下面是G-API上初始各向异性图像分割端口的完整列表："
+  },
+  {
+    "origin": "Inspecting the initial version",
+    "local": "检查初始版本"
+  },
+  {
+    "origin": "After we have got the initial working version of our algorithm working with G-API, we can use it to inspect and learn how G-API works. This chapter covers two aspects: understanding the graph structure, and memory profiling.",
+    "local": "在我们得到了使用G-API的算法的初始工作版本之后，我们可以使用它来检查和学习G-API是如何工作的。本章包括两个方面：理解图形结构和内存分析。"
+  },
+  {
+    "origin": "Understanding the graph structure",
+    "local": "理解图形结构"
+  },
+  {
+    "origin": "G-API stands for \"Graph API\", but did you mention any graphs in the above example? It was one of the initial design goals &ndash; G-API was designed with expressions in mind to make adoption and porting process more straightforward. People",
+    "local": "G-API代表“graphapi”，但是您在上面的示例中提到过任何图形吗？这是最初的设计目标之一&ndash；G-API的设计考虑了表达式，以使采用和移植过程更加简单。人"
+  },
+  {
+    "origin": "usually",
+    "local": "通常"
+  },
+  {
+    "origin": "don't think in terms of",
+    "local": "不要用…来思考"
+  },
+  {
+    "origin": "Nodes",
+    "local": "节点"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "Edges",
+    "local": "边缘"
+  },
+  {
+    "origin": "when writing ordinary code, and so G-API, while being a Graph API, doesn't force its users to do that.",
+    "local": "在编写普通代码时，G-API虽然是一个图形API，但并不强迫用户这么做。"
+  },
+  {
+    "origin": "However, a graph is still built implicitly when a",
+    "local": "但是，当"
+  },
+  {
+    "origin": "object is defined. It may be useful to inspect how the resulting graph looks like to check if it is generated correctly and if it really represents our alrogithm. It is also useful to learn the structure of the graph to see if it has any redundancies.",
+    "local": "对象已定义。检查结果图的外观，检查它是否正确生成，以及它是否真的代表了我们的算法，可能是有用的。了解图的结构以查看它是否有任何冗余也是有用的。"
+  },
+  {
+    "origin": "G-API allows to dump generated graphs to",
+    "local": "G-API允许将生成的图形转储到"
+  },
+  {
+    "origin": "files which then could be visualized with",
+    "local": "然后可以用"
+  },
+  {
+    "origin": "Graphviz",
+    "local": "格拉夫维兹"
+  },
+  {
+    "origin": ", a popular open graph visualization software.",
+    "local": "一个流行的开放图形可视化软件。"
+  },
+  {
+    "origin": "In order to dump our graph to a",
+    "local": "为了把我们的图表转储到"
+  },
+  {
+    "origin": "file, set",
+    "local": "文件，设置"
+  },
+  {
+    "origin": "to a file name before running the application, e.g.:",
+    "local": "在运行应用程序之前输入文件名，例如："
+  },
+  {
+    "origin": "$ GRAPH_DUMP_PATH=segm.dot ./bin/example_tutorial_porting_anisotropic_image_segmentation_gapi",
+    "local": "$GRAPH\\u DUMP\\u PATH=segm.dot./bin/示例\\u教程\\u移植\\u各向异性\\u图像\\u分割\\u gapi"
+  },
+  {
+    "origin": "Now this file can be visualized with a",
+    "local": "现在这个文件可以用"
+  },
+  {
+    "origin": "command like this:",
+    "local": "命令如下："
+  },
+  {
+    "origin": "$ dot segm.dot -Tpng -o segm.png",
+    "local": "$dot segm.dot-Tpng-o seg.png段"
+  },
+  {
+    "origin": "or viewed interactively with",
+    "local": "或以交互方式查看"
+  },
+  {
+    "origin": "(please refer to your distribution/operating system documentation on how to install these packages).",
+    "local": "（有关如何安装这些软件包，请参阅发行版/操作系统文档）。"
+  },
+  {
+    "origin": "Anisotropic image segmentation graph",
+    "local": "各向异性图像分割图"
+  },
+  {
+    "origin": "The above diagram demonstrates a number of interesting aspects of G-API's internal algorithm representation:",
+    "local": "上图展示了G-API内部算法表示的一些有趣方面："
+  },
+  {
+    "origin": "G-API underlying graph is a bipartite graph: it consists of",
+    "local": "G-API基础图是一个二部图：它由"
+  },
+  {
+    "origin": "Operation",
+    "local": "操作"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "Data",
+    "local": "数据"
+  },
+  {
+    "origin": "nodes such that a",
+    "local": "这样的节点"
+  },
+  {
+    "origin": "Data",
+    "local": "数据"
+  },
+  {
+    "origin": "node can only be connected to an",
+    "local": "节点只能连接到"
+  },
+  {
+    "origin": "Operation",
+    "local": "操作"
+  },
+  {
+    "origin": "node,",
+    "local": "节点，"
+  },
+  {
+    "origin": "Operation",
+    "local": "操作"
+  },
+  {
+    "origin": "node can only be connected to a",
+    "local": "节点只能连接到"
+  },
+  {
+    "origin": "Data",
+    "local": "数据"
+  },
+  {
+    "origin": "node, and nodes of a single kind are never connected directly.",
+    "local": "节点和单一类型的节点从不直接连接。"
+  },
+  {
+    "origin": "Graph is directed - every edge in the graph has a direction.",
+    "local": "图是有向的-图中的每一条边都有一个方向。"
+  },
+  {
+    "origin": "Graph \"begins\" and \"ends\" with a",
+    "local": "图形“开始”和“结束”以"
+  },
+  {
+    "origin": "Data",
+    "local": "数据"
+  },
+  {
+    "origin": "kind of nodes.",
+    "local": "节点类型。"
+  },
+  {
+    "origin": "A",
+    "local": "A"
+  },
+  {
+    "origin": "Data",
+    "local": "数据"
+  },
+  {
+    "origin": "node can have only a single writer and multiple readers.",
+    "local": "节点只能有一个writer和多个reader。"
+  },
+  {
+    "origin": "An",
+    "local": "安"
+  },
+  {
+    "origin": "Operation",
+    "local": "操作"
+  },
+  {
+    "origin": "node may have multiple inputs, though every input must have an unique",
+    "local": "节点可以有多个输入，但每个输入必须有唯一的"
+  },
+  {
+    "origin": "port number",
+    "local": "端口号"
+  },
+  {
+    "origin": "(among inputs).",
+    "local": "（在输入中）。"
+  },
+  {
+    "origin": "An",
+    "local": "安"
+  },
+  {
+    "origin": "Operation",
+    "local": "操作"
+  },
+  {
+    "origin": "node may have multiple outputs, and every output must have an unique",
+    "local": "节点可以有多个输出，每个输出必须有一个唯一的"
+  },
+  {
+    "origin": "port number",
+    "local": "端口号"
+  },
+  {
+    "origin": "(among outputs).",
+    "local": "（在产出中）。"
+  },
+  {
+    "origin": "Measuring memory footprint",
+    "local": "测量内存占用"
+  },
+  {
+    "origin": "Let's measure and compare memory footprint of the algorithm in its two versions: G-API-based and OpenCV-based. At the moment, G-API version is also OpenCV-based since it fallbacks to OpenCV functions inside.",
+    "local": "让我们测量并比较两个版本的算法的内存占用：基于G-API的和基于OpenCV的。目前，G-API版本也是基于OpenCV的，因为它回退到OpenCV函数中。"
+  },
+  {
+    "origin": "On GNU/Linux, application memory footprint can be profiled with",
+    "local": "在GNU/Linux上，应用程序内存占用可以用"
+  },
+  {
+    "origin": "Valgrind",
+    "local": "瓦尔格林"
+  },
+  {
+    "origin": ". On Debian/Ubuntu systems it can be installed like this (assuming you have administrator privileges):",
+    "local": ". 在Debian/Ubuntu系统上，可以这样安装（假设您具有管理员权限）："
+  },
+  {
+    "origin": "$ sudo apt-get install valgrind massif-visualizer",
+    "local": "$sudo apt get安装valgrind massif可视化工具"
+  },
+  {
+    "origin": "Once installed, we can collect memory profiles easily for our two algorithm versions:",
+    "local": "安装后，我们可以轻松收集两个算法版本的内存配置文件："
+  },
+  {
+    "origin": "$ valgrind --tool=massif --massif-out-file=ocv.out ./bin/example_tutorial_anisotropic_image_segmentation ==6101== Massif, a heap profiler ==6101== Copyright (C) 2003-2015, and GNU GPL'd, by Nicholas Nethercote ==6101== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info ==6101== Command: ./bin/example_tutorial_anisotropic_image_segmentation ==6101== ==6101== $ valgrind --tool=massif --massif-out-file=gapi.out ./bin/example_tutorial_porting_anisotropic_image_segmentation_gapi ==6117== Massif, a heap profiler ==6117== Copyright (C) 2003-2015, and GNU GPL'd, by Nicholas Nethercote ==6117== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info ==6117== Command: ./bin/example_tutorial_porting_anisotropic_image_segmentation_gapi ==6117== ==6117==",
+    "local": "$valgrind--tool=massif--massif out file=ocv.out./bin/example\\u tutorial\\u isotropic\\u image\\u segmentation==6101==massif，a heap profiler==6101==Copyright（C）2003-2015，和GNU GPL'd，作者：Nicholas Nethercote==6101==Using valgrind-3.11.0和LibVEX；使用-h重新运行以获取版权信息==6101==命令：./bin/example\\u tutorial\\u isotropic\\u image\\u segmentation==6101===6101==$valgrind--tool=massif--massif out file=gapi.out./bin/example\\u tutorial\\u porting\\u isotropic\\u image\\u segmentation\\u gapi==6117==massif、堆探查器==6117==copyright（C）2003-2015和GNU GPL'd，尼古拉斯·尼瑟科特==6117==使用Valgrind-3.11.0和LibVEX；使用-h重新运行以获取版权信息==6117==命令：./bin/示例\\u教程\\u移植\\u各向异性\\u图像分割\\u gapi==6117===6117=="
+  },
+  {
+    "origin": "Once done, we can inspect the collected profiles with",
+    "local": "一旦完成，我们就可以用"
+  },
+  {
+    "origin": "Massif Visualizer",
+    "local": "地块可视化仪"
+  },
+  {
+    "origin": "(installed in the above step).",
+    "local": "（按上述步骤安装）。"
+  },
+  {
+    "origin": "Below is the visualized memory profile of the original OpenCV version of the algorithm:",
+    "local": "以下是算法原始OpenCV版本的可视化内存配置文件："
+  },
+  {
+    "origin": "Memory profile: original Anisotropic Image Segmentation sample",
+    "local": "记忆轮廓：原始各向异性图像分割样本"
+  },
+  {
+    "origin": "We see that memory is allocated as the application executes, reaching its peak in the calcGST() function; then the footprint drops as calcGST() completes its execution and all temporary buffers are freed. Massif reports us peak memory consumption of 7.6 MiB.",
+    "local": "我们看到，内存是在应用程序执行时分配的，在calcGST（）函数中达到峰值；然后，当calcGST（）完成执行并释放所有临时缓冲区时，封装外形将下降。Massif报告我们的峰值内存消耗为7.6MIB。"
+  },
+  {
+    "origin": "Now let's have a look on the profile of G-API version:",
+    "local": "现在让我们来看看G-API版本的概要："
+  },
+  {
+    "origin": "Memory profile: G-API port of Anisotropic Image Segmentation sample",
+    "local": "内存配置文件：各向异性图像分割样本的G-API端口"
+  },
+  {
+    "origin": "Once G-API computation is created and its execution starts, G-API allocates all required memory at once and then the memory profile remains flat until the termination of the program. Massif reports us peak memory consumption of 11.4 MiB.",
+    "local": "一旦创建了G-API计算并开始执行，G-API就会立即分配所有需要的内存，然后内存配置文件保持平坦，直到程序终止。Massif报告我们的内存消耗峰值为11.4MIB。"
+  },
+  {
+    "origin": "A reader may ask a right question at this point &ndash; is G-API that bad? What is the reason in using it than?",
+    "local": "读者在这一点上可以提出正确的问题&ndash；G-API有那么糟糕吗？使用它的原因是什么？"
+  },
+  {
+    "origin": "Hopefully, it is not. The reason why we see here an increased memory consumption is because the default naive OpenCV-based backend is used to execute this graph. This backend serves mostly for quick prototyping and debugging algorithms before offload/further optimization.",
+    "local": "希望不是这样。我们在这里看到内存消耗增加的原因是，默认的基于OpenCV的后端用于执行此图。这个后端主要用于卸载/进一步优化之前的快速原型和调试算法。"
+  },
+  {
+    "origin": "This backend doesn't utilize any complex memory management strategies yet since it is not its point at the moment. In the following chapter, we'll learn about Fluid backend and see how the same G-API code can run in a completely different model (and the footprint shrunk to a number of kilobytes).",
+    "local": "这个后端还没有使用任何复杂的内存管理策略，因为它目前还不是它的重点。在下一章中，我们将学习Fluid backend，并了解相同的G-API代码如何在完全不同的模型中运行（并且占用空间缩小到千字节）。"
+  },
+  {
+    "origin": "Backends and kernels",
+    "local": "后端和内核"
+  },
+  {
+    "origin": "This chapter covers how a G-API computation can be executed in a special way &ndash; e.g. offloaded to another device, or scheduled with a special intelligence. G-API is designed to make its graphs portable &ndash; it means that once a graph is defined in G-API terms, no changes should be required in it if we want to run it on CPU or on GPU or on both devices at once.",
+    "local": "本章介绍如何以特殊方式执行G-API计算&ndash；e、 g.卸载到另一个设备上，或用特殊的智能安排。G-API旨在使其图形可移植&ndash；这意味着，一旦用G-API术语定义了一个图，如果我们想在CPU、GPU或两个设备上同时运行它，就不需要对它进行任何更改。"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "shed more light on technical details which make it possible. In this chapter, we will utilize G-API Fluid backend to make our graph cache-efficient on CPU.",
+    "local": "更多的技术细节使之成为可能。在这一章中，我们将利用G-API流体后端使我们的图形缓存在CPU上高效运行。"
+  },
+  {
+    "origin": "G-API defines",
+    "local": "G-API定义"
+  },
+  {
+    "origin": "backend",
+    "local": "后端"
+  },
+  {
+    "origin": "as the lower-level entity which knows how to run kernels. Backends may have (and, in fact, do have) different",
+    "local": "作为知道如何运行内核的底层实体。后端可能有（事实上，也确实有）不同"
+  },
+  {
+    "origin": "Kernel APIs",
+    "local": "内核API"
+  },
+  {
+    "origin": "which are used to program and integrate kernels for that backends. In this context,",
+    "local": "用于为后端编程和集成内核。在这种情况下，"
+  },
+  {
+    "origin": "kernel",
+    "local": "内核"
+  },
+  {
+    "origin": "is an implementation of an",
+    "local": "是一个"
+  },
+  {
+    "origin": "operation",
+    "local": "操作"
+  },
+  {
+    "origin": ", which is defined on the top API level (see",
+    "local": "，它是在顶级API级别上定义的（请参见"
+  },
+  {
+    "origin": "macro).",
+    "local": "宏）。"
+  },
+  {
+    "origin": "Backend is a thing which is aware of device &amp; platform specifics, and which executes its kernels with keeping that specifics in mind. For example, there may be",
+    "local": "后端是一种能够感知设备的东西；平台细节，并在执行内核时牢记这些细节。例如，可能有"
+  },
+  {
+    "origin": "Halide",
+    "local": "卤化物"
+  },
+  {
+    "origin": "backend which allows to write (implement) G-API operations in Halide language and then generate functional Halide code for portions of G-API graph which map well there.",
+    "local": "后端，它允许用卤化物语言编写（实现）G-API操作，然后为G-API图中映射良好的部分生成功能卤化物代码。"
+  },
+  {
+    "origin": "Running a graph with a Fluid backend",
+    "local": "使用流体后端运行图形"
+  },
+  {
+    "origin": "OpenCV 4.0 is bundled with two G-API backends &ndash; the default \"OpenCV\" which we just used, and a special \"Fluid\" backend.",
+    "local": "opencv4.0与两个G-API后端捆绑在一起&ndash；我们刚刚使用的默认“OpenCV”和一个特殊的“Fluid”后端。"
+  },
+  {
+    "origin": "Fluid backend reorganizes the execution to save memory and to achieve near-perfect cache locality, implementing so-called \"streaming\" model of execution.",
+    "local": "Fluid backend重新组织执行以节省内存并实现近乎完美的缓存局部性，实现所谓的“流”执行模型。"
+  },
+  {
+    "origin": "In order to start using Fluid kernels, we need first to include appropriate header files (which are not included by default):",
+    "local": "为了开始使用Fluid内核，我们首先需要包括适当的头文件（默认情况下不包括这些头文件）："
+  },
+  {
+    "origin": "Once these headers are included, we can form up a new",
+    "local": "一旦包含了这些头文件，我们就可以形成一个新的"
+  },
+  {
+    "origin": "kernel package",
+    "local": "内核包"
+  },
+  {
+    "origin": "and specify it to G-API:",
+    "local": "并指定给G-API："
+  },
+  {
+    "origin": "In G-API, kernels (or operation implementations) are objects. Kernels are organized into collections, or",
+    "local": "在G-API中，内核（或操作实现）是对象。果仁被组织成集合，或"
+  },
+  {
+    "origin": "kernel packages",
+    "local": "内核包"
+  },
+  {
+    "origin": ", represented by class",
+    "local": "，以类表示"
+  },
+  {
+    "origin": ". The main purpose of a kernel package is to capture which kernels we would like to use in our graph, and pass it as a",
+    "local": ". 内核包的主要目的是捕获我们希望在图形中使用的内核，并将其作为"
+  },
+  {
+    "origin": "graph compilation option",
+    "local": "图形编译选项"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Traditional OpenCV is logically divided into modules, with every module providing a set of functions. In G-API, there are also \"modules\" which are represented as kernel packages provided by a particular backend. In this example, we pass Fluid kernel packages to G-API to utilize appropriate Fluid functions in our graph.",
+    "local": "传统的OpenCV在逻辑上分为多个模块，每个模块提供一组功能。在G-API中，还有一些“模块”，它们被表示为特定后端提供的内核包。在本例中，我们将流体内核包传递给G-API，以便在图形中使用适当的流体函数。"
+  },
+  {
+    "origin": "Kernel packages are combinable &ndash; in the above example, we take \"Core\" and \"ImgProc\" Fluid kernel packages and combine it into a single one. See documentation reference on",
+    "local": "内核包是可组合的&ndash；在上面的例子中，我们采用“Core”和“ImgProc”流体内核包，并将其组合成一个单独的内核包。参见文档参考"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "If no kernel packages are specified in options, G-API is using",
+    "local": "如果options中没有指定内核包，那么G-API将使用"
+  },
+  {
+    "origin": "default",
+    "local": "违约"
+  },
+  {
+    "origin": "package which consists of default OpenCV implementations and thus G-API graphs are executed via OpenCV functions by default. OpenCV backend provides broader functional coverage than any other backend. If a kernel package is specified, like in this example, then it is being combined with the",
+    "local": "包含默认OpenCV实现的包，因此G-API图默认通过OpenCV函数执行。OpenCV后端提供了比任何其他后端更广泛的功能覆盖。如果指定了内核包（如本例中所示），那么它将与"
+  },
+  {
+    "origin": "default",
+    "local": "违约"
+  },
+  {
+    "origin": ". It means that user-specified implementations will replace default implementations in case of conflict.",
+    "local": ". 这意味着在发生冲突时，用户指定的实现将替换默认的实现。"
+  },
+  {
+    "origin": "Troubleshooting and customization",
+    "local": "故障排除和自定义"
+  },
+  {
+    "origin": "After the above modifications, (in OpenCV 4.0) the app should crash with a message like this:",
+    "local": "在上述修改之后，（在OpenCV 4.0中），应用程序应该崩溃，并显示如下消息："
+  },
+  {
+    "origin": "Fluid backend has a number of limitations in OpenCV 4.0 (see this",
+    "local": "Fluid后端在OpenCV 4.0中有许多限制（请参见下面的"
+  },
+  {
+    "origin": "wiki page",
+    "local": "wiki页面"
+  },
+  {
+    "origin": "for a more up-to-date status). In particular, the Box filter used in this sample supports only static 3x3 kernel size.",
+    "local": "以获得更为最新的状态）。特别是，本示例中使用的Box过滤器仅支持静态3x3内核大小。"
+  },
+  {
+    "origin": "We can overcome this problem easily by avoiding G-API using Fluid version of Box filter kernel in this sample. It can be done by removing the appropriate kernel from the kernel package we've just created:",
+    "local": "通过在本示例中使用Box filter内核的流体版本来避免G-API，我们可以很容易地克服这个问题。可以通过从我们刚刚创建的内核包中删除相应的内核来完成："
+  },
+  {
+    "origin": "Now this kernel package doesn't have",
+    "local": "现在这个内核包没有"
+  },
+  {
+    "origin": "any",
+    "local": "任何"
+  },
+  {
+    "origin": "implementation of Box filter kernel interface (specified as a template parameter). As described above, G-API will fall-back to OpenCV to run this kernel now. The resulting code with this change now looks like:",
+    "local": "Box filter内核接口的实现（指定为模板参数）。如上所述，G-API现在将返回OpenCV来运行这个内核。经过此更改的结果代码现在如下所示："
+  },
+  {
+    "origin": "Let's examine the memory profile for this sample after we switched to Fluid backend. Now it looks like this:",
+    "local": "在切换到Fluid backend之后，让我们检查一下这个示例的内存配置文件。现在看起来是这样的："
+  },
+  {
+    "origin": "Memory profile: G-API/Fluid port of Anisotropic Image Segmentation sample",
+    "local": "内存配置文件：各向异性图像分割样本的G-API/流体端口"
+  },
+  {
+    "origin": "Now the tool reports 4.7MiB &ndash; and we just changed a few lines in our code, without modifying the graph itself! It is a ~2.4X improvement of the previous G-API result, and ~1.6X improvement of the original OpenCV version.",
+    "local": "现在该工具报告为4.7MiB&ndash；我们只修改了代码中的几行，没有修改图形本身！它比以前的G-API结果提高了约2.4倍，比原来的OpenCV版本提高了约1.6倍。"
+  },
+  {
+    "origin": "Let's also examine how the internal representation of the graph now looks like. Dumping the graph into",
+    "local": "我们还来研究一下图的内部表示现在是什么样子的。将图形转储到"
+  },
+  {
+    "origin": "would result into a visualization like this:",
+    "local": "会产生这样的视觉效果："
+  },
+  {
+    "origin": "Anisotropic image segmentation graph with OpenCV &amp; Fluid kernels",
+    "local": "基于OpenCV的各向异性图像分割图&amp；流体核"
+  },
+  {
+    "origin": "This graph doesn't differ structurally from its previous version (in terms of operations and data objects), though a changed layout (on the left side of the dump) is easily noticeable.",
+    "local": "此图在结构上与以前的版本（在操作和数据对象方面）没有什么不同，但是更改的布局（在转储的左侧）很容易被注意到。"
+  },
+  {
+    "origin": "The visualization reflects how G-API deals with mixed graphs, also called",
+    "local": "可视化反映了G-API如何处理混合图，也称为"
+  },
+  {
+    "origin": "heterogeneous",
+    "local": "异质"
+  },
+  {
+    "origin": "graphs. The majority of operations in this graph are implemented with Fluid backend, but Box filters are executed by the OpenCV backend. One can easily see that the graph is partitioned (with rectangles). G-API groups connected operations based on their affinity, forming",
+    "local": "图。此图中的大多数操作是通过Fluid后端实现的，但是Box过滤器是由OpenCV后端执行的。可以很容易地看到图是分区的（用矩形）。G-API组根据它们的亲和力连接操作，形成"
+  },
+  {
+    "origin": "subgraphs",
+    "local": "子图"
+  },
+  {
+    "origin": "(or",
+    "local": "（或"
+  },
+  {
+    "origin": "islands",
+    "local": "岛屿"
+  },
+  {
+    "origin": "in G-API terminology), and our top-level graph becomes a composition of multiple smaller subgraphs. Every backend determines how its subgraph (island) is executed, so Fluid backend optimizes out memory where possible, and six intermediate buffers accessed by OpenCV Box filters are allocated fully and can't be optimized out.",
+    "local": "在G-API术语中），我们的顶级图变成了由多个子图组成的。每个后端都决定其子图（孤岛）的执行方式，因此Fluid backend尽可能优化内存，OpenCV Box过滤器访问的六个中间缓冲区被完全分配，无法优化。"
+  },
+  {
+    "origin": "Conclusion",
+    "local": "结论"
+  },
+  {
+    "origin": "This tutorial demonstrates what G-API is and what its key design concepts are, how an algorithm can be ported to G-API, and how to utilize graph model benefits after that.",
+    "local": "本教程将演示什么是G-API及其关键设计概念，如何将算法移植到G-API，以及如何利用图形模型带来的好处。"
+  },
+  {
+    "origin": "In OpenCV 4.0, G-API is still in its inception stage &ndash; it is more a foundation for all future work, though ready for use even now.",
+    "local": "在opencv4.0中，G-API仍处于初始阶段&ndash；它更是未来所有工作的基础，尽管现在已经准备好使用了。"
+  },
+  {
+    "origin": "Further, this tutorial will be extended with new chapters on custom kernels programming, parallelism, and more.",
+    "local": "此外，本教程还将通过有关自定义内核编程、并行性等的新章节进行扩展。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "origin": "OpenCV: CUDA Module Introduction",
+    "local": "OpenCV:CUDA模块介绍"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "CUDA Module Introduction",
+    "local": "CUDA模块介绍"
+  },
+  {
+    "origin": "General Information",
+    "local": "一般信息"
+  },
+  {
+    "origin": "The OpenCV CUDA module is a set of classes and functions to utilize CUDA computational capabilities. It is implemented using NVIDIA* CUDA* Runtime API and supports only NVIDIA GPUs. The OpenCV CUDA module includes utility functions, low-level vision primitives, and high-level algorithms. The utility functions and low-level primitives provide a powerful infrastructure for developing fast vision algorithms taking advantage of CUDA whereas the high-level functionality includes some state-of-the-art algorithms (such as stereo correspondence, face and people detectors, and others) ready to be used by the application developers.",
+    "local": "opencvcuda模块是一组利用CUDA计算能力的类和函数。它是使用NVIDIA*CUDA*运行时API实现的，只支持NVIDIA GPU。opencvcuda模块包括实用函数、低级视觉原语和高级算法。实用功能和低级原语为利用CUDA开发快速视觉算法提供了强大的基础设施，而高级功能包括一些最先进的算法（如立体通信、人脸和人物检测器等），可供应用程序开发人员使用。"
+  },
+  {
+    "origin": "The CUDA module is designed as a host-level API. This means that if you have pre-compiled OpenCV CUDA binaries, you are not required to have the CUDA Toolkit installed or write any extra code to make use of the CUDA.",
+    "local": "CUDA模块设计为主机级API。这意味着，如果您已经预编译了OpenCV CUDA二进制文件，则不需要安装CUDA工具箱或编写任何额外的代码来使用CUDA。"
+  },
+  {
+    "origin": "The OpenCV CUDA module is designed for ease of use and does not require any knowledge of CUDA. Though, such a knowledge will certainly be useful to handle non-trivial cases or achieve the highest performance. It is helpful to understand the cost of various operations, what the GPU does, what the preferred data formats are, and so on. The CUDA module is an effective instrument for quick implementation of CUDA-accelerated computer vision algorithms. However, if your algorithm involves many simple operations, then, for the best possible performance, you may still need to write your own kernels to avoid extra write and read operations on the intermediate results.",
+    "local": "OpenCV-CUDA模块是为易于使用而设计的，不需要任何CUDA知识。不过，这样的知识对于处理非琐碎的案例或实现最高性能肯定是有用的。了解各种操作的成本、GPU的功能、首选的数据格式等都很有帮助。CUDA模块是快速实现CUDA加速计算机视觉算法的有效工具。但是，如果您的算法涉及许多简单的操作，那么为了获得最佳性能，您可能仍然需要编写自己的内核，以避免对中间结果执行额外的写操作和读操作。"
+  },
+  {
+    "origin": "To enable CUDA support, configure OpenCV using CMake with WITH_CUDA=ON . When the flag is set and if CUDA is installed, the full-featured OpenCV CUDA module is built. Otherwise, the module is still built but at runtime all functions from the module throw Exception with CV_GpuNotSupported error code, except for",
+    "local": "要启用CUDA支持，请使用CMake配置OpenCV，并启用\\u CUDA=ON。当设置了标志并且安装了CUDA时，将构建功能齐全的OpenCV CUDA模块。否则，该模块仍然是构建的，但在运行时，该模块中的所有函数都会抛出异常，并返回CV\\GpuNotSupported错误代码，除了"
+  },
+  {
+    "origin": ". The latter function returns zero GPU count in this case. Building OpenCV without CUDA support does not perform device code compilation, so it does not require the CUDA Toolkit installed. Therefore, using the",
+    "local": ". 在这种情况下，后一个函数返回零GPU计数。构建不支持CUDA的OpenCV不会执行设备代码编译，因此不需要安装CUDA工具包。因此，使用"
+  },
+  {
+    "origin": "function, you can implement a high-level algorithm that will detect GPU presence at runtime and choose an appropriate implementation (CPU or GPU) accordingly.",
+    "local": "函数，您可以实现一个高级算法，该算法将在运行时检测GPU的存在，并相应地选择适当的实现（CPU或GPU）。"
+  },
+  {
+    "origin": "Compilation for Different NVIDIA* Platforms",
+    "local": "针对不同NVIDIA*平台的编译"
+  },
+  {
+    "origin": "NVIDIA* compiler enables generating binary code (cubin and fatbin) and intermediate code (PTX). Binary code often implies a specific GPU architecture and generation, so the compatibility with other GPUs is not guaranteed. PTX is targeted for a virtual platform that is defined entirely by the set of capabilities or features. Depending on the selected virtual platform, some of the instructions are emulated or disabled, even if the real hardware supports all the features.",
+    "local": "NVIDIA*编译器支持生成二进制代码（cubin和fatbin）和中间代码（PTX）。二进制代码通常意味着特定的GPU架构和生成，因此无法保证与其他GPU的兼容性。PTX的目标是完全由一组功能或特性定义的虚拟平台。根据所选的虚拟平台，即使真正的硬件支持所有功能，也会模拟或禁用某些指令。"
+  },
+  {
+    "origin": "At the first call, the PTX code is compiled to binary code for the particular GPU using a JIT compiler. When the target GPU has a compute capability (CC) lower than the PTX code, JIT fails. By default, the OpenCV CUDA module includes:",
+    "local": "在第一次调用时，使用JIT编译器将PTX代码编译为特定GPU的二进制代码。当目标GPU的计算能力（CC）低于PTX代码时，JIT失败。默认情况下，OpenCV CUDA模块包括："
+  },
+  {
+    "origin": "Binaries for compute capabilities 1.3 and 2.0 (controlled by CUDA_ARCH_BIN in CMake)",
+    "local": "用于计算功能1.3和2.0的二进制文件（由CMake中的CUDA\\u ARCH\\u BIN控制）"
+  },
+  {
+    "origin": "PTX code for compute capabilities 1.1 and 1.3 (controlled by CUDA_ARCH_PTX in CMake)",
+    "local": "用于计算功能1.1和1.3的PTX代码（由CMake中的CUDA\\u ARCH\\u PTX控制）"
+  },
+  {
+    "origin": "This means that for devices with CC 1.3 and 2.0 binary images are ready to run. For all newer platforms, the PTX code for 1.3 is JIT'ed to a binary image. For devices with CC 1.1 and 1.2, the PTX for 1.1 is JIT'ed. For devices with CC 1.0, no code is available and the functions throw Exception. For platforms where JIT compilation is performed first, the run is slow.",
+    "local": "这意味着对于具有cc1.3和2.0二进制映像的设备，可以运行了。对于所有较新的平台，1.3的PTX代码都是JIT'ed到二进制映像的。对于具有CC 1.1和1.2的设备，1.1的PTX是JIT'ed的。对于具有CC 1.0的设备，没有可用的代码并且函数抛出异常。对于首先执行JIT编译的平台，运行速度很慢。"
+  },
+  {
+    "origin": "On a GPU with CC 1.0, you can still compile the CUDA module and most of the functions will run flawlessly. To achieve this, add \"1.0\" to the list of binaries, for example, CUDA_ARCH_BIN=\"1.0 1.3 2.0\" . The functions that cannot be run on CC 1.0 GPUs throw an exception.",
+    "local": "在使用cc1.0的GPU上，您仍然可以编译CUDA模块，并且大多数函数都可以完美地运行。为此，在二进制文件列表中添加“1.0”，例如CUDA\\u ARCH\\u BIN=“1.0 1.3 2.0”。无法在CC1.0GPU上运行的函数引发异常。"
+  },
+  {
+    "origin": "You can always determine at runtime whether the OpenCV GPU-built binaries (or PTX code) are compatible with your GPU. The function cuda::DeviceInfo::isCompatible returns the compatibility status (true/false).",
+    "local": "您总是可以在运行时确定opencvgpu构建的二进制文件（或PTX代码）是否与您的GPU兼容。函数cuda:：DeviceInfo:：isCompatible返回兼容性状态（true/false）。"
+  },
+  {
+    "origin": "Utilizing Multiple GPUs",
+    "local": "利用多个GPU"
+  },
+  {
+    "origin": "In the current version, each of the OpenCV CUDA algorithms can use only a single GPU. So, to utilize multiple GPUs, you have to manually distribute the work between GPUs. Switching active device can be done using",
+    "local": "在当前版本中，每个OpenCV CUDA算法只能使用一个GPU。因此，要使用多个gpu，必须在gpu之间手动分配工作。开关有源器件可以使用"
+  },
+  {
+    "origin": "function. For more details please read Cuda C Programming Guide.",
+    "local": "功能。有关更多详细信息，请阅读Cuda C编程指南。"
+  },
+  {
+    "origin": "While developing algorithms for multiple GPUs, note a data passing overhead. For primitive functions and small images, it can be significant, which may eliminate all the advantages of having multiple GPUs. But for high-level algorithms, consider using multi-GPU acceleration. For example, the Stereo Block Matching algorithm has been successfully parallelized using the following algorithm:",
+    "local": "在为多个gpu开发算法时，请注意数据传递开销。对于原始函数和小图像，它可能很重要，这可能会消除具有多个gpu的所有优点。但是对于高级算法，可以考虑使用多GPU加速。例如，已使用以下算法成功地并行化立体块匹配算法："
+  },
+  {
+    "origin": "Split each image of the stereo pair into two horizontal overlapping stripes.",
+    "local": "将立体声对的每个图像分割为两个水平重叠的条纹。"
+  },
+  {
+    "origin": "Process each pair of stripes (from the left and right images) on a separate Fermi* GPU.",
+    "local": "在单独的Fermi*GPU上处理每一对条纹（来自左、右图像）。"
+  },
+  {
+    "origin": "Merge the results into a single disparity map.",
+    "local": "将结果合并到单个视差图中。"
+  },
+  {
+    "origin": "With this algorithm, a dual GPU gave a 180% performance increase comparing to the single Fermi GPU. For a source code example, see",
+    "local": "使用该算法，双GPU的性能比单Fermi GPU提高了180%。有关源代码示例，请参见"
+  },
+  {
+    "origin": "https://github.com/opencv/opencv/tree/master/samples/gpu/",
+    "local": "https://github.com/opencv/opencv/tree/master/samples/gpu/"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:33为OpenCV生成，&#160；"
+  }
+]

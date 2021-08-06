@@ -1,0 +1,382 @@
+[
+  {
+    "origin": "OpenCV: Adding a Trackbar to our applications!",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Adding a Trackbar to our applications!",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "In the previous tutorials (about",
+    "local": ""
+  },
+  {
+    "origin": "and the",
+    "local": ""
+  },
+  {
+    "origin": ") you might have noted that we needed to give some",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "to our programs, such as \\(\\alpha\\) and \\(beta\\). We accomplished that by entering this data using the Terminal.",
+    "local": ""
+  },
+  {
+    "origin": "Well, it is time to use some fancy GUI tools. OpenCV provides some GUI utilities (",
+    "local": ""
+  },
+  {
+    "origin": "highgui",
+    "local": ""
+  },
+  {
+    "origin": "module) for you. An example of this is a",
+    "local": ""
+  },
+  {
+    "origin": "Trackbar",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial we will just modify our two previous programs so that they get the input information from the trackbar.",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Add a Trackbar in an OpenCV window by using",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "Let's modify the program made in the tutorial",
+    "local": ""
+  },
+  {
+    "origin": ". We will let the user enter the \\(\\alpha\\) value by using the Trackbar.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "We only analyze the code that is related to Trackbar:",
+    "local": ""
+  },
+  {
+    "origin": "First, we load two images, which are going to be blended.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "To create a trackbar, first we have to create the window in which it is going to be located. So:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Now we can create the Trackbar:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Note the following (C++ code):",
+    "local": ""
+  },
+  {
+    "origin": "Our Trackbar has a label",
+    "local": ""
+  },
+  {
+    "origin": "TrackbarName",
+    "local": ""
+  },
+  {
+    "origin": "The Trackbar is located in the window named",
+    "local": ""
+  },
+  {
+    "origin": "Linear Blend",
+    "local": ""
+  },
+  {
+    "origin": "The Trackbar values will be in the range from \\(0\\) to",
+    "local": ""
+  },
+  {
+    "origin": "alpha_slider_max",
+    "local": ""
+  },
+  {
+    "origin": "(the minimum limit is always",
+    "local": ""
+  },
+  {
+    "origin": "zero",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "The numerical value of Trackbar is stored in",
+    "local": ""
+  },
+  {
+    "origin": "alpha_slider",
+    "local": ""
+  },
+  {
+    "origin": "Whenever the user moves the Trackbar, the callback function",
+    "local": ""
+  },
+  {
+    "origin": "on_trackbar",
+    "local": ""
+  },
+  {
+    "origin": "is called",
+    "local": ""
+  },
+  {
+    "origin": "Finally, we have to define the callback function",
+    "local": ""
+  },
+  {
+    "origin": "on_trackbar",
+    "local": ""
+  },
+  {
+    "origin": "for C++ and Python code, using an anonymous inner class listener in Java",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Note that (C++ code):",
+    "local": ""
+  },
+  {
+    "origin": "We use the value of",
+    "local": ""
+  },
+  {
+    "origin": "alpha_slider",
+    "local": ""
+  },
+  {
+    "origin": "(integer) to get a double value for",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "alpha_slider",
+    "local": ""
+  },
+  {
+    "origin": "is updated each time the trackbar is displaced by the user.",
+    "local": ""
+  },
+  {
+    "origin": "We define",
+    "local": ""
+  },
+  {
+    "origin": "src1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "src2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dist",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "alpha_slider",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "beta",
+    "local": ""
+  },
+  {
+    "origin": "as global variables, so they can be used everywhere.",
+    "local": ""
+  },
+  {
+    "origin": "Result",
+    "local": ""
+  },
+  {
+    "origin": "Our program produces the following output:",
+    "local": ""
+  },
+  {
+    "origin": "As a manner of practice, you can also add two trackbars for the program made in",
+    "local": ""
+  },
+  {
+    "origin": ". One trackbar to set \\(\\alpha\\) and another for set \\(\\beta\\). The output might look like:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

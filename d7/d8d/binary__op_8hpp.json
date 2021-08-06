@@ -1,0 +1,4170 @@
+[
+  {
+    "origin": "OpenCV: opencv2/cudev/expr/binary_op.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "binary_op.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "(op, functor)",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; not_equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; not_equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; not_equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; not_equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; not_equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; not_equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, not_equal_to&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; not_equal_to&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; not_equal_to&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; modulus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; modulus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; modulus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; modulus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; modulus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; modulus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, modulus&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; modulus&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; modulus&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, bit_and&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; bit_and&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; bit_and&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; logical_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; logical_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; logical_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; logical_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; logical_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; logical_and&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, logical_and&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; logical_and&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; logical_and&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; multiplies&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; multiplies&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, multiplies&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; multiplies&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; multiplies&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; multiplies&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; multiplies&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; multiplies&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; multiplies&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; plus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; plus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; plus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; plus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; plus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, plus&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; plus&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; plus&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; plus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; minus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; minus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; minus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; minus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; minus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; minus&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, minus&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; minus&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; minus&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; divides&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; divides&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; divides&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; divides&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; divides&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; divides&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, divides&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; divides&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; divides&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; less&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; less&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; less&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; less&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; less&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; less&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, less&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; less&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; less&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_lshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, bit_lshift&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; bit_lshift&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; bit_lshift&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_lshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_lshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_lshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_lshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_lshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; less_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; less_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; less_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, less_equal&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; less_equal&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; less_equal&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; less_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; less_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; less_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; equal_to&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, equal_to&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; equal_to&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; equal_to&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; greater&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; greater&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; greater&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; greater&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; greater&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; greater&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; greater&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; greater&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, greater&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, greater_equal&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; greater_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; greater_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; greater_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; greater_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; greater_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; greater_equal&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; greater_equal&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; greater_equal&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_rshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_rshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, bit_rshift&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; bit_rshift&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_rshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_rshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; bit_rshift&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_rshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_rshift&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_xor&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_xor&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_xor&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, bit_xor&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; bit_xor&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_xor&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_xor&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_xor&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; bit_xor&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; bit_or&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, bit_or&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; bit_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; bit_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; bit_or&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder1st&lt; logical_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const Texture&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Texture&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; logical_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder1st&lt; logical_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GpuMat_&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; logical_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GlobPtrSz&lt; T &gt; &gt;::ptr_type, Binder1st&lt; logical_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(T val, const GlobPtrSz&lt; T &gt; &amp;src)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; GpuMat_&lt; T &gt; &gt;::ptr_type, Binder2nd&lt; logical_or&lt; T &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src, T val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder2nd&lt; logical_or&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;a, typename Body::value_type val)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body1 , class Body2 &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; BinaryTransformPtrSz&lt; typename PtrTraits&lt; Body1 &gt;::ptr_type, typename PtrTraits&lt; Body2 &gt;::ptr_type, logical_or&lt; typename LargerType&lt; typename PtrTraits&lt; Body1 &gt;::value_type, typename PtrTraits&lt; Body2 &gt;::value_type &gt;::type &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body1 &gt; &amp;a, const Expr&lt; Body2 &gt; &amp;b)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Texture&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GlobPtrSz&lt; T &gt; &amp;src1, const Texture&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GpuMat_&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "__host__ Expr&lt; UnaryTransformPtrSz&lt; typename PtrTraits&lt; Body &gt;::ptr_type, Binder1st&lt; logical_or&lt; typename Body::value_type &gt; &gt; &gt; &gt;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(typename Body::value_type val, const Expr&lt; Body &gt; &amp;a)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat_&lt; T &gt; &amp;src1, const Expr&lt; Body &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T , class Body &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const Expr&lt; Body &gt; &amp;src1, const GlobPtrSz&lt; T &gt; &amp;src2)",
+    "local": ""
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "OPENCV_CUDEV_EXPR_BINARY_OP_HPP",
+    "local": ""
+  },
+  {
+    "origin": "#define OPENCV_CUDEV_EXPR_BINARY_OP_HPP",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

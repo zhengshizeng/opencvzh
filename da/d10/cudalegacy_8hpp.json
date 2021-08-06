@@ -1,0 +1,198 @@
+[
+  {
+    "origin": "OpenCV: opencv2/cudalegacy.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "cudalegacy.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "The class discriminates between foreground and background pixels by building and maintaining a model of the background.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Background/Foreground Segmentation",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat &amp;prev, const GpuMat &amp;curr, Size block_size, Size shift_size, Size max_range, bool use_previous, GpuMat &amp;velx, GpuMat &amp;vely, GpuMat &amp;buf, Stream &amp;stream=Stream::Null())",
+    "local": ""
+  },
+  {
+    "origin": "Calculates optical flow for 2 images using block matching algorithm */.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat &amp;image, GpuMat &amp;mask, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;lo, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;hi, Stream &amp;stream=Stream::Null())",
+    "local": ""
+  },
+  {
+    "origin": "compute mask for Generalized Flood fill componetns labeling.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const FGDParams &amp;params=FGDParams())",
+    "local": ""
+  },
+  {
+    "origin": "Creates FGD Background Subtractor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(int initializationFrames=120, double decisionThreshold=0.8)",
+    "local": ""
+  },
+  {
+    "origin": "Creates GMG Background Subtractor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray img, int nLayers=-1, Stream &amp;stream=Stream::Null())",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat &amp;u, const GpuMat &amp;v, GpuMat &amp;vertex, GpuMat &amp;colors)",
+    "local": ""
+  },
+  {
+    "origin": "(GpuMat &amp;terminals, GpuMat &amp;leftTransp, GpuMat &amp;rightTransp, GpuMat &amp;top, GpuMat &amp;bottom, GpuMat &amp;labels, GpuMat &amp;buf, Stream &amp;stream=Stream::Null())",
+    "local": ""
+  },
+  {
+    "origin": "performs labeling via graph cuts of a 2D regular 4-connected graph.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(GpuMat &amp;terminals, GpuMat &amp;leftTransp, GpuMat &amp;rightTransp, GpuMat &amp;top, GpuMat &amp;topLeft, GpuMat &amp;topRight, GpuMat &amp;bottom, GpuMat &amp;bottomLeft, GpuMat &amp;bottomRight, GpuMat &amp;labels, GpuMat &amp;buf, Stream &amp;stream=Stream::Null())",
+    "local": ""
+  },
+  {
+    "origin": "performs labeling via graph cuts of a 2D regular 8-connected graph.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat &amp;frame0, const GpuMat &amp;frame1, const GpuMat &amp;fu, const GpuMat &amp;fv, const GpuMat &amp;bu, const GpuMat &amp;bv, float pos, GpuMat &amp;newFrame, GpuMat &amp;buf, Stream &amp;stream=Stream::Null())",
+    "local": ""
+  },
+  {
+    "origin": "Interpolates frames (images) using provided optical flow (displacement field).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat &amp;mask, GpuMat &amp;components, int flags=0, Stream &amp;stream=Stream::Null())",
+    "local": ""
+  },
+  {
+    "origin": "performs connected componnents labeling.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat &amp;src, const Mat &amp;rvec, const Mat &amp;tvec, const Mat &amp;camera_mat, const Mat &amp;dist_coef, GpuMat &amp;dst, Stream &amp;stream=Stream::Null())",
+    "local": ""
+  },
+  {
+    "origin": "(const Mat &amp;object, const Mat &amp;image, const Mat &amp;camera_mat, const Mat &amp;dist_coef, Mat &amp;rvec, Mat &amp;tvec, bool use_extrinsic_guess=false, int num_iters=100, float max_dist=8.0, int min_inlier_count=100, std::vector&lt; int &gt; *inliers=NULL)",
+    "local": ""
+  },
+  {
+    "origin": "Finds the object pose from 3D-2D point correspondences.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const GpuMat &amp;src, const Mat &amp;rvec, const Mat &amp;tvec, GpuMat &amp;dst, Stream &amp;stream=Stream::Null())",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

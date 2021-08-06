@@ -1,0 +1,86 @@
+[
+  {
+    "origin": "OpenCV: Face landmark detection in a video",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Face landmark detection in a video",
+    "local": ""
+  },
+  {
+    "origin": "This application lets you detect landmarks of detected faces in a video.This application first detects faces in a current video frame and then finds their facial landmarks. You just have to pass the video as input.",
+    "local": ""
+  },
+  {
+    "origin": "Description of command parameters",
+    "local": ""
+  },
+  {
+    "origin": "model_filename",
+    "local": ""
+  },
+  {
+    "origin": "f : (REQUIRED) A path to binary file storing the trained model which is to be loaded [example - /data/file.dat]",
+    "local": ""
+  },
+  {
+    "origin": "video",
+    "local": ""
+  },
+  {
+    "origin": "v : (REQUIRED) A path to video in which face landmarks have to be detected.[example - /data/video.avi]",
+    "local": ""
+  },
+  {
+    "origin": "face_cascade",
+    "local": ""
+  },
+  {
+    "origin": "c : (REQUIRED) A path to the face cascade xml file which you want to use as a face detector.",
+    "local": ""
+  },
+  {
+    "origin": "Understanding code",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial will explain the sample code for face landmark detection. Jumping directly to the code :",
+    "local": ""
+  },
+  {
+    "origin": "The facemark API provides the functionality to the user to use their own face detector to be used in face landmark detection.The above code creartes a sample face detector. The above function would be passed to a function pointer in the facemark API.",
+    "local": ""
+  },
+  {
+    "origin": "The above code creates a video capture object and then loads the video. If the video is not loaded properly it prompts the user else the code proceeds.",
+    "local": ""
+  },
+  {
+    "origin": "The above code creates a pointer of the face landmark detection class. The face detector created above has to be passed as function pointer to the facemark pointer created for detecting faces.",
+    "local": ""
+  },
+  {
+    "origin": "The above code creates a vector to store the detected faces and a vector of vector to store shapes for each face detected in the current frame.",
+    "local": ""
+  },
+  {
+    "origin": "The above code then reads each frame and detects faces and the landmarks corresponding to each shape detected. It then displays the current frame.",
+    "local": ""
+  },
+  {
+    "origin": "After running the above code you will get results something like this",
+    "local": ""
+  },
+  {
+    "origin": "Sample video:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

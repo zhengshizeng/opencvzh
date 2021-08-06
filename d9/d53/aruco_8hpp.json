@@ -1,0 +1,270 @@
+[
+  {
+    "origin": "OpenCV: opencv2/aruco.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "aruco.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "of markers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Parameters for the detectMarker process:",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Planar board with grid arrangement of markers More common type of board. All markers are placed in the same plane in a grid arrangement. The board can be drawn using",
+    "local": ""
+  },
+  {
+    "origin": "function (.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(Board *board, Size outSize, OutputArray img, int marginSize=0, int borderBits=1)",
+    "local": ""
+  },
+  {
+    "origin": "Implementation of drawPlanarBoard that accepts a raw",
+    "local": ""
+  },
+  {
+    "origin": "pointer.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays corners, InputArray ids, InputArray counter, const Ptr&lt; Board &gt; &amp;board, Size imageSize, InputOutputArray cameraMatrix, InputOutputArray distCoeffs, OutputArrayOfArrays rvecs, OutputArrayOfArrays tvecs, OutputArray stdDeviationsIntrinsics, OutputArray stdDeviationsExtrinsics, OutputArray perViewErrors, int flags=0, TermCriteria criteria=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, DBL_EPSILON))",
+    "local": ""
+  },
+  {
+    "origin": "Calibrate a camera using aruco markers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays corners, InputArray ids, InputArray counter, const Ptr&lt; Board &gt; &amp;board, Size imageSize, InputOutputArray cameraMatrix, InputOutputArray distCoeffs, OutputArrayOfArrays rvecs=noArray(), OutputArrayOfArrays tvecs=noArray(), int flags=0, TermCriteria criteria=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, DBL_EPSILON))",
+    "local": ""
+  },
+  {
+    "origin": "It's the same function as",
+    "local": ""
+  },
+  {
+    "origin": "but without calibration error estimation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray image, const Ptr&lt; Dictionary &gt; &amp;dictionary, OutputArrayOfArrays corners, OutputArray ids, const Ptr&lt; DetectorParameters &gt; &amp;parameters=DetectorParameters::create(), OutputArrayOfArrays rejectedImgPoints=noArray(), InputArray cameraMatrix=noArray(), InputArray distCoeff=noArray())",
+    "local": ""
+  },
+  {
+    "origin": "Basic marker detection.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputOutputArray image, InputArray cameraMatrix, InputArray distCoeffs, InputArray rvec, InputArray tvec, float length)",
+    "local": ""
+  },
+  {
+    "origin": "Draw coordinate system axis from pose estimation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputOutputArray image, InputArrayOfArrays corners, InputArray ids=noArray(), Scalar borderColor=Scalar(0, 255, 0))",
+    "local": ""
+  },
+  {
+    "origin": "Draw detected markers in image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const Ptr&lt; Dictionary &gt; &amp;dictionary, int id, int sidePixels, OutputArray img, int borderBits=1)",
+    "local": ""
+  },
+  {
+    "origin": "Draw a canonical marker image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const Ptr&lt; Board &gt; &amp;board, Size outSize, OutputArray img, int marginSize=0, int borderBits=1)",
+    "local": ""
+  },
+  {
+    "origin": "Draw a planar board.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays corners, InputArray ids, const Ptr&lt; Board &gt; &amp;board, InputArray cameraMatrix, InputArray distCoeffs, InputOutputArray rvec, InputOutputArray tvec, bool useExtrinsicGuess=false)",
+    "local": ""
+  },
+  {
+    "origin": "Pose estimation for a board of markers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays corners, float markerLength, InputArray cameraMatrix, InputArray distCoeffs, OutputArray rvecs, OutputArray tvecs, OutputArray _objPoints=noArray())",
+    "local": ""
+  },
+  {
+    "origin": "Pose estimation for single markers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const Ptr&lt; Board &gt; &amp;board, InputArrayOfArrays detectedCorners, InputArray detectedIds, OutputArray objPoints, OutputArray imgPoints)",
+    "local": ""
+  },
+  {
+    "origin": "Given a board configuration and a set of detected markers, returns the corresponding image points and object points to call solvePnP.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray image, const Ptr&lt; Board &gt; &amp;board, InputOutputArrayOfArrays detectedCorners, InputOutputArray detectedIds, InputOutputArrayOfArrays rejectedCorners, InputArray cameraMatrix=noArray(), InputArray distCoeffs=noArray(), float minRepDistance=10.f, float errorCorrectionRate=3.f, bool checkAllOrders=true, OutputArray recoveredIdxs=noArray(), const Ptr&lt; DetectorParameters &gt; &amp;parameters=DetectorParameters::create())",
+    "local": ""
+  },
+  {
+    "origin": "Refind not detected markers based on the already detected and the board layout.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

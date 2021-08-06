@@ -1,0 +1,2706 @@
+[
+  {
+    "origin": "OpenCV: OpenCV configuration options reference",
+    "local": "OpenCV:OpenCV配置选项参考"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "OpenCV configuration options reference",
+    "local": "OpenCV配置选项参考"
+  },
+  {
+    "origin": "Table of Contents",
+    "local": "目录"
+  },
+  {
+    "origin": "Introduction",
+    "local": "Introduction(介绍)"
+  },
+  {
+    "origin": "General options",
+    "local": "General options(常规选项)"
+  },
+  {
+    "origin": "Build with extra modules",
+    "local": "使用额外模块生成"
+  },
+  {
+    "origin": "Debug build",
+    "local": "调试生成"
+  },
+  {
+    "origin": "Static build",
+    "local": "静态生成"
+  },
+  {
+    "origin": "Build tests, samples and applications",
+    "local": "构建测试、样本和应用程序"
+  },
+  {
+    "origin": "Build limited set of modules",
+    "local": "生成有限的模块集"
+  },
+  {
+    "origin": "Downloaded dependencies",
+    "local": "下载的依赖项"
+  },
+  {
+    "origin": "CPU optimization level",
+    "local": "CPU优化级别"
+  },
+  {
+    "origin": "Functional features and dependencies",
+    "local": "功能特性和依赖关系"
+  },
+  {
+    "origin": "Heterogeneous computation",
+    "local": "异构计算"
+  },
+  {
+    "origin": "Image reading and writing (imgcodecs module)",
+    "local": "图像读写（imgcodecs模块）"
+  },
+  {
+    "origin": "Video reading and writing (videoio module)",
+    "local": "视频读写（videoio模块）"
+  },
+  {
+    "origin": "Parallel processing",
+    "local": "并行处理"
+  },
+  {
+    "origin": "GUI backends (highgui module)",
+    "local": "Gabracends（hihgiomduel）"
+  },
+  {
+    "origin": "Deep learning neural networks inference backends and options (dnn module)",
+    "local": "深度学习神经网络推理后端和选项（dnn模块）"
+  },
+  {
+    "origin": "Installation layout",
+    "local": "安装布局"
+  },
+  {
+    "origin": "Installation root",
+    "local": "安装根目录"
+  },
+  {
+    "origin": "Components and locations",
+    "local": "部件和位置"
+  },
+  {
+    "origin": "Miscellaneous features",
+    "local": "其他特性"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一个教程:"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "Note",
+    "local": "注释"
+  },
+  {
+    "origin": "We assume you have read",
+    "local": "我们假设你读过"
+  },
+  {
+    "origin": "tutorial or have experience with CMake.",
+    "local": "指导或有 CMake 经验."
+  },
+  {
+    "origin": "Configuration options can be set in several different ways:",
+    "local": "可以通过几种不同的方式设置配置选项:"
+  },
+  {
+    "origin": "Command line:",
+    "local": "命令行:"
+  },
+  {
+    "origin": "Initial cache files:",
+    "local": "初始缓存文件:"
+  },
+  {
+    "origin": "Interactive via GUI",
+    "local": "通过GUI进行交互"
+  },
+  {
+    "origin": "In this reference we will use regular command line.",
+    "local": "在本参考中，我们将使用常规命令行."
+  },
+  {
+    "origin": "Most of the options can be found in the root cmake script of OpenCV:",
+    "local": "大多数选项都可以在OpenCV的根cmake脚本中找到:"
+  },
+  {
+    "origin": ". Some options can be defined in specific modules.",
+    "local": ". 某些选项可以在特定模块中定义."
+  },
+  {
+    "origin": "It is possible to use CMake tool to print all available options:",
+    "local": "可以使用CMake工具打印所有可用选项:"
+  },
+  {
+    "origin": "Most popular and useful are options starting with",
+    "local": "最流行和最有用的是从"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Default values vary depending on platform and other options values.",
+    "local": "默认值因平台和其他选项值而异."
+  },
+  {
+    "origin": "General options",
+    "local": "常规选项"
+  },
+  {
+    "origin": "Build with extra modules",
+    "local": "使用额外模块生成"
+  },
+  {
+    "origin": "option contains a semicolon-separated list of directories containing extra modules which will be added to the build. Module directory must have compatible layout and CMakeLists.txt, brief description can be found in the",
+    "local": "选项包含以分号分隔的目录列表，其中包含将添加到生成中的额外模块.模块目录必须具有兼容的布局和CMakeLists.txt，可以在"
+  },
+  {
+    "origin": "Coding Style Guide",
+    "local": "编码样式指南"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Examples:",
+    "local": "Examples(示例):"
+  },
+  {
+    "origin": "Note",
+    "local": "注释"
+  },
+  {
+    "origin": "Only 0- and 1-level deep module locations are supported, following command will raise an error:",
+    "local": "仅支持0级和1级深模块位置，以下命令将引发错误:"
+  },
+  {
+    "origin": "Debug build",
+    "local": "调试生成"
+  },
+  {
+    "origin": "option can be used to enable debug build; resulting binaries will contain debug symbols and most of compiler optimizations will be turned off. To enable debug symbols in Release build turn the",
+    "local": "选项可用于启用调试生成；生成的二进制文件将包含调试符号，大多数编译器优化将被关闭.要在发布版本中启用调试符号，请打开"
+  },
+  {
+    "origin": "option on.",
+    "local": "选项打开."
+  },
+  {
+    "origin": "On some platforms (e.g. Linux) build type must be set at configuration stage:",
+    "local": "在某些平台（如Linux）上，必须在配置阶段设置构建类型:"
+  },
+  {
+    "origin": "On other platforms different types of build can be produced in the same build directory (e.g. Visual Studio, XCode):",
+    "local": "在其他平台上，可以在同一生成目录中生成不同类型的生成（例如Visual Studio、XCode）:"
+  },
+  {
+    "origin": "If you use GNU libstdc++ (default for GCC) you can turn on the",
+    "local": "如果您使用GNU libstdc++（GCC的默认值），那么可以打开"
+  },
+  {
+    "origin": "option, then C++ library will be used in Debug mode, e.g. indexes will be bound-checked during vector element access.",
+    "local": "选项，那么C++库将在调试模式中使用，例如在向量元素访问期间将索引绑定检查."
+  },
+  {
+    "origin": "Many kinds of optimizations can be disabled with",
+    "local": "可以使用禁用多种优化"
+  },
+  {
+    "origin": "option:",
+    "local": "option(选项):"
+  },
+  {
+    "origin": "Some third-party libraries (e.g. IPP, Lapack, Eigen)",
+    "local": "一些第三方库（例如IPP、Lapack、Eigen）"
+  },
+  {
+    "origin": "Explicit vectorized implementation (universal intrinsics, raw intrinsics, etc.)",
+    "local": "显式矢量化实现（通用内部函数、原始内部函数等）"
+  },
+  {
+    "origin": "Dispatched optimizations",
+    "local": "已调度优化"
+  },
+  {
+    "origin": "Explicit loop unrolling",
+    "local": "显式循环展开"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html",
+    "local": "https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html"
+  },
+  {
+    "origin": "https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_macros.html",
+    "local": "https://gcc.gnu.org/onlinedocs/libstdc++/manual/using_macros.html"
+  },
+  {
+    "origin": "https://github.com/opencv/opencv/wiki/CPU-optimizations-build-options",
+    "local": "https://github.com/opencv/opencv/wiki/CPU-optimizations-build-options"
+  },
+  {
+    "origin": "Static build",
+    "local": "静态生成"
+  },
+  {
+    "origin": "option control whether to produce dynamic (.dll, .so, .dylib) or static (.a, .lib) libraries. Default value depends on target platform, in most cases it is",
+    "local": "选项控制是生成动态（.dll、.so、.dylib）还是静态（.a、.lib）库.默认值取决于目标平台，在大多数情况下是"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Example:",
+    "local": "例子:"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "https://en.wikipedia.org/wiki/Static_library",
+    "local": "https://en.wikipedia.org/wiki/Static_library"
+  },
+  {
+    "origin": "sets the",
+    "local": "设置"
+  },
+  {
+    "origin": "CMAKE_POSITION_INDEPENDENT_CODE",
+    "local": "CMAKE\\位置\\独立\\代码"
+  },
+  {
+    "origin": "option. It enables or disable generation of \"position-independent code\". This option must be enabled when building dynamic libraries or static libraries intended to be linked into dynamic libraries. Default value is",
+    "local": "选项.它启用或禁用“位置无关代码”的生成.在生成要链接到动态库的动态库或静态库时，必须启用此选项.默认值为"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "https://en.wikipedia.org/wiki/Position-independent_code",
+    "local": "https://en.wikipedia.org/wiki/Position-independent_code"
+  },
+  {
+    "origin": "Generate pkg-config info",
+    "local": "生成包配置信息"
+  },
+  {
+    "origin": "option enables",
+    "local": "选项启用"
+  },
+  {
+    "origin": "file generation along with standard CMake package. This file can be useful for projects which do not use CMake for build.",
+    "local": "与标准CMake包一起生成文件.此文件对于不使用CMake进行生成的项目非常有用."
+  },
+  {
+    "origin": "Example:",
+    "local": "例子:"
+  },
+  {
+    "origin": "Note",
+    "local": "注释"
+  },
+  {
+    "origin": "Due to complexity of configuration process resulting",
+    "local": "由于配置过程的复杂性导致"
+  },
+  {
+    "origin": "file can contain incomplete list of third-party dependencies and may not work in some configurations, especially for static builds. This feature is not officially supported since 4.x version and is disabled by default.",
+    "local": "文件可能包含第三方依赖项的不完整列表，并且在某些配置中可能无法工作，特别是对于静态构建.自4.x版本以来，官方不支持此功能，默认情况下已禁用."
+  },
+  {
+    "origin": "Build tests, samples and applications",
+    "local": "构建测试、样本和应用程序"
+  },
+  {
+    "origin": "There are two kinds of tests: accuracy (",
+    "local": "有两种测试:准确性("
+  },
+  {
+    "origin": ") and performance (",
+    "local": ")和性能("
+  },
+  {
+    "origin": "). Tests and applications are enabled by default. Examples are not being built by default and should be enabled explicitly.",
+    "local": "). 默认情况下启用测试和应用程序.默认情况下不生成示例，应显式启用."
+  },
+  {
+    "origin": "Corresponding",
+    "local": "对应"
+  },
+  {
+    "origin": "cmake",
+    "local": "cmake"
+  },
+  {
+    "origin": "options:",
+    "local": "选项:"
+  },
+  {
+    "origin": "Build limited set of modules",
+    "local": "生成有限的模块集"
+  },
+  {
+    "origin": "Each module is a subdirectory of the",
+    "local": "每个模块都是"
+  },
+  {
+    "origin": "directory. It is possible to disable one module:",
+    "local": "目录.可以禁用一个模块:"
+  },
+  {
+    "origin": "The opposite option is to build only specified modules and all modules they depend on:",
+    "local": "相反的选择是只构建指定的模块以及它们所依赖的所有模块:"
+  },
+  {
+    "origin": "In this example we requested 3 modules and configuration script has determined all dependencies automatically:",
+    "local": "在本例中，我们请求了3个模块，配置脚本已自动确定所有依赖项:"
+  },
+  {
+    "origin": "Downloaded dependencies",
+    "local": "下载的依赖项"
+  },
+  {
+    "origin": "Configuration script can try to download additional libraries and files from the internet, if it fails to do it corresponding features will be turned off. In some cases configuration error can occur. By default all files are first downloaded to the",
+    "local": "配置脚本可以尝试从internet下载其他库和文件，如果无法做到这一点，相应的功能将被关闭.在某些情况下，可能会发生配置错误.默认情况下，所有文件首先下载到"
+  },
+  {
+    "origin": "directory and then unpacked or copied to the build directory. It is possible to change download cache location by setting environment variable or configuration option:",
+    "local": "目录，然后解包或复制到生成目录.可以通过设置环境变量或配置选项来更改下载缓存位置:"
+  },
+  {
+    "origin": "In case of access via proxy, corresponding environment variables should be set before running cmake:",
+    "local": "如果是通过代理访问，则在运行cmake之前应设置相应的环境变量:"
+  },
+  {
+    "origin": "Full log of download process can be found in build directory -",
+    "local": "下载过程的完整日志可以在build目录中找到-"
+  },
+  {
+    "origin": ". In addition, for each failed download a command will be added to helper scripts in the build directory, e.g.",
+    "local": ". 此外，对于每个失败的下载，一个命令将被添加到build目录中的helper脚本中，例如."
+  },
+  {
+    "origin": ". Users can run these scripts as is or modify according to their needs.",
+    "local": ". 用户可以按原样运行这些脚本，也可以根据需要进行修改."
+  },
+  {
+    "origin": "CPU optimization level",
+    "local": "CPU优化级别"
+  },
+  {
+    "origin": "On x86_64 machines the library will be compiled for SSE3 instruction set level by default. This level can be changed by configuration option:",
+    "local": "在x86_64机器上，默认情况下，将为SSE3指令集级别编译库.可通过配置选项更改此级别:"
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "Other platforms have their own instruction set levels:",
+    "local": "其他平台有自己的指令集级别:"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "on ARM,",
+    "local": "手臂上，"
+  },
+  {
+    "origin": "on PowerPC.",
+    "local": "在PowerPC上."
+  },
+  {
+    "origin": "Some functions support dispatch mechanism allowing to compile them for several instruction sets and to choose one during runtime. List of enabled instruction sets can be changed during configuration:",
+    "local": "有些函数支持调度机制，允许为多个指令集编译它们，并在运行时选择一个指令集.在配置期间可以更改已启用指令集的列表:"
+  },
+  {
+    "origin": "To disable dispatch mechanism this option should be set to an empty value:",
+    "local": "要禁用调度机制，此选项应设置为空值:"
+  },
+  {
+    "origin": "It is possible to disable optimized parts of code for troubleshooting and debugging:",
+    "local": "可以禁用代码的优化部分以进行故障排除和调试:"
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "More details on CPU optimization options can be found in wiki:",
+    "local": "有关CPU优化选项的更多详细信息，请访问wiki:"
+  },
+  {
+    "origin": "https://github.com/opencv/opencv/wiki/CPU-optimizations-build-options",
+    "local": "https://github.com/opencv/opencv/wiki/CPU-optimizations-build-options"
+  },
+  {
+    "origin": "Profiling, coverage, sanitize, hardening, size optimization",
+    "local": "分析、覆盖、消毒、硬化、尺寸优化"
+  },
+  {
+    "origin": "Following options can be used to produce special builds with instrumentation or improved security. All options are disabled by default.",
+    "local": "以下选项可用于生成具有检测或改进的安全性的特殊生成.默认情况下禁用所有选项."
+  },
+  {
+    "origin": "| Option | Compiler | Description | |",
+    "local": "|选项|编译器|描述||"
+  },
+  {
+    "origin": "| GCC or Clang | Enable profiling compiler and linker options. | |",
+    "local": "|GCC或Clang |启用分析编译器和链接器选项.||"
+  },
+  {
+    "origin": "| GCC or Clang | Enable code coverage support. | |",
+    "local": "|GCC或Clang |启用代码覆盖支持.||"
+  },
+  {
+    "origin": "| N/A | Enable several quirks in code to assist memory sanitizer. | |",
+    "local": "|N/A |启用代码中的几个怪癖以帮助记忆消毒剂.||"
+  },
+  {
+    "origin": "| GCC, Clang, MSVC | Enable compiler options which reduce possibility of code exploitation. | |",
+    "local": "|GCC、Clang、MSVC |启用编译器选项，减少代码被利用的可能性.||"
+  },
+  {
+    "origin": "| GCC, Clang, MSVC | Enable Link Time Optimization (LTO). | |",
+    "local": "|GCC，Clang，MSVC |启用链路时间优化（LTO）.||"
+  },
+  {
+    "origin": "| Clang | Enable thin LTO which incorporates intermediate bitcode to binaries allowing consumers optimize their applications later. |",
+    "local": "|Clang |启用瘦LTO，它将中间位码合并到二进制文件中，允许用户稍后优化其应用程序|"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "GCC instrumentation",
+    "local": "GCC仪器"
+  },
+  {
+    "origin": "Build hardening",
+    "local": "建造硬化"
+  },
+  {
+    "origin": "Interprocedural optimization",
+    "local": "过程间优化"
+  },
+  {
+    "origin": "Link time optimization",
+    "local": "链路时间优化"
+  },
+  {
+    "origin": "ThinLTO",
+    "local": "Thinlto"
+  },
+  {
+    "origin": "Functional features and dependencies",
+    "local": "功能特性和依赖关系"
+  },
+  {
+    "origin": "There are many optional dependencies and features that can be turned on or off.",
+    "local": "有许多可选的依赖项和特性可以打开或关闭."
+  },
+  {
+    "origin": "cmake",
+    "local": "cmake"
+  },
+  {
+    "origin": "has special option allowing to print all available configuration parameters:",
+    "local": "具有允许打印所有可用配置参数的特殊选项:"
+  },
+  {
+    "origin": "Options naming conventions",
+    "local": "选项命名约定"
+  },
+  {
+    "origin": "There are three kinds of options used to control dependencies of the library, they have different prefixes:",
+    "local": "有三种选项用于控制库的依赖项，它们有不同的前缀:"
+  },
+  {
+    "origin": "Options starting with",
+    "local": "以开头的选项"
+  },
+  {
+    "origin": "enable or disable a dependency",
+    "local": "启用或禁用依赖项"
+  },
+  {
+    "origin": "Options starting with",
+    "local": "以开头的选项"
+  },
+  {
+    "origin": "enable or disable building and using 3rdparty library bundled with OpenCV",
+    "local": "启用或禁用与OpenCV绑定的第三方库的构建和使用"
+  },
+  {
+    "origin": "Options starting with",
+    "local": "以开头的选项"
+  },
+  {
+    "origin": "indicate that dependency have been enabled, can be used to manually enable a dependency if automatic detection can not be used.",
+    "local": "指示已启用依赖项，如果无法使用自动检测，则可用于手动启用依赖项."
+  },
+  {
+    "origin": "When",
+    "local": "什么时候？"
+  },
+  {
+    "origin": "option is enabled:",
+    "local": "选项已启用:"
+  },
+  {
+    "origin": "If",
+    "local": "如果"
+  },
+  {
+    "origin": "option is enabled, 3rdparty library will be built and enabled =&gt;",
+    "local": "选项启用时，将生成第三方库并启用=&gt；"
+  },
+  {
+    "origin": "set to",
+    "local": "设置为"
+  },
+  {
+    "origin": "If",
+    "local": "如果"
+  },
+  {
+    "origin": "option is disabled, 3rdparty library will be detected and enabled if found =&gt;",
+    "local": "选项被禁用时，将检测并启用第三方库（如果找到=&gt；"
+  },
+  {
+    "origin": "set to",
+    "local": "设置为"
+  },
+  {
+    "origin": "if dependency is found",
+    "local": "如果找到依赖项"
+  },
+  {
+    "origin": "Heterogeneous computation",
+    "local": "异构计算"
+  },
+  {
+    "origin": "CUDA support",
+    "local": "CUDA支持"
+  },
+  {
+    "origin": "(default:",
+    "local": "（默认值:"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Many algorithms have been implemented using CUDA acceleration, these functions are located in separate modules. CUDA toolkit must be installed from the official NVIDIA site as a prerequisite. For cmake versions older than 3.9 OpenCV uses own",
+    "local": "许多算法都是用CUDA加速实现的，这些函数都位于不同的模块中.CUDA工具包必须作为一个先决条件从NVIDIA官方网站安装.对于3.9以上的cmake版本，OpenCV使用自己的"
+  },
+  {
+    "origin": "script, for newer versions - the one packaged with CMake. Additional options can be used to control build process, e.g.",
+    "local": "脚本，用于更新的版本-与CMake打包的版本.其他选项可用于控制构建过程，例如."
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": ". These parameters are not documented yet, please consult with the",
+    "local": ". 这些参数尚未记录，请咨询"
+  },
+  {
+    "origin": "script for details.",
+    "local": "有关详细信息，请参阅脚本."
+  },
+  {
+    "origin": "Note",
+    "local": "注释"
+  },
+  {
+    "origin": "Since OpenCV version 4.0 all CUDA-accelerated algorithm implementations have been moved to the",
+    "local": "自从OpenCV版本4.0以来，所有CUDA加速算法的实现都转移到了"
+  },
+  {
+    "origin": "opencv_contrib",
+    "local": "opencv\\u contrib公司"
+  },
+  {
+    "origin": "repository. To build",
+    "local": "存储库.建造"
+  },
+  {
+    "origin": "opencv",
+    "local": "opencv"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "opencv_contrib",
+    "local": "opencv_contrib"
+  },
+  {
+    "origin": "together check",
+    "local": "一起检查"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Some tutorials can be found in the corresponding section:",
+    "local": "一些教程可以在相应的部分找到:"
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "https://en.wikipedia.org/wiki/CUDA",
+    "local": "https://en.wikipedia.org/wiki/CUDA"
+  },
+  {
+    "origin": "TODO: other options:",
+    "local": "TODO:其他选项:"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "?",
+    "local": "?"
+  },
+  {
+    "origin": "OpenCL support",
+    "local": "OpenCL支持"
+  },
+  {
+    "origin": "(default:",
+    "local": "（默认值:"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Multiple OpenCL-accelerated algorithms are available via so-called \"Transparent API (T-API)\". This integration uses same functions at the user level as regular CPU implementations. Switch to the OpenCL execution branch happens if input and output image arguments are passed as opaque",
+    "local": "通过所谓的“透明API（Transparent-API）”，可以使用多种OpenCL加速算法.这种集成在用户级使用与常规CPU实现相同的功能.如果输入和输出图像参数作为不透明参数传递，则会切换到OpenCL执行分支"
+  },
+  {
+    "origin": "objects. More information can be found in",
+    "local": "物体.更多信息请参见"
+  },
+  {
+    "origin": "the brief introduction",
+    "local": "简介"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "At the build time this feature does not have any prerequisites. During runtime a working OpenCL runtime is required, to check it run",
+    "local": "在生成时，此功能没有任何先决条件.在运行时期间，需要一个工作的OpenCL运行时来检查它的运行"
+  },
+  {
+    "origin": "and/or",
+    "local": "和/或"
+  },
+  {
+    "origin": "command. Some parameters of OpenCL integration can be modified using environment variables, e.g.",
+    "local": "命令.OpenCL集成的一些参数可以使用环境变量进行修改，例如."
+  },
+  {
+    "origin": ". However there is no thorough documentation for this feature yet, so please check the source code in",
+    "local": ". 但是，目前还没有关于这个特性的完整文档，所以请检查源代码"
+  },
+  {
+    "origin": "file for details.",
+    "local": "文件以获取详细信息."
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": "https://en.wikipedia.org/wiki/OpenCL",
+    "local": "https://en.wikipedia.org/wiki/OpenCL"
+  },
+  {
+    "origin": "TODO: other options:",
+    "local": "TODO:其他选项:"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "Image reading and writing (imgcodecs module)",
+    "local": "图像读写（imgcodecs模块）"
+  },
+  {
+    "origin": "Built-in formats",
+    "local": "内置格式"
+  },
+  {
+    "origin": "Following formats can be read by OpenCV without help of any third-party library:",
+    "local": "OpenCV可以读取以下格式，无需任何第三方库的帮助:"
+  },
+  {
+    "origin": "BMP",
+    "local": "BMP"
+  },
+  {
+    "origin": "HDR",
+    "local": "HDR"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Sun Raster",
+    "local": "太阳光栅"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "PPM, PGM, PBM, PFM",
+    "local": "PPM, PGM, PBM, PFM"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "PNG, JPEG, TIFF, WEBP support",
+    "local": "PNG, JPEG, TIFF, WEBP support"
+  },
+  {
+    "origin": "Formats",
+    "local": "格式"
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Default",
+    "local": "默认"
+  },
+  {
+    "origin": "Force build own",
+    "local": "强制构建自己的"
+  },
+  {
+    "origin": "PNG",
+    "local": "PNG"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "JPEG",
+    "local": "JPEG"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "TIFF",
+    "local": "TIFF"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "WEBP",
+    "local": "WEBP"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "JPEG2000 with OpenJPEG",
+    "local": "带OpenJPEG的JPEG2000"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "JPEG2000 with JasPer",
+    "local": "带JasPer的JPEG2000"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "(see note)",
+    "local": "（见注）"
+  },
+  {
+    "origin": "EXR",
+    "local": "EXR"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "All libraries required to read images in these formats are included into OpenCV and will be built automatically if not found at the configuration stage. Corresponding",
+    "local": "读取这些格式的图像所需的所有库都包含在OpenCV中，如果在配置阶段找不到这些库，将自动构建这些库.对应"
+  },
+  {
+    "origin": "options will force building and using own libraries, they are enabled by default on some platforms, e.g. Windows.",
+    "local": "选项将强制构建和使用自己的库，在某些平台（如Windows）上默认启用这些选项."
+  },
+  {
+    "origin": "Note",
+    "local": "注释"
+  },
+  {
+    "origin": "OpenJPEG have higher priority than JasPer which is deprecated. In order to use JasPer, OpenJPEG must be disabled.",
+    "local": "OpenJPEG比JasPer具有更高的优先级，JasPer已被弃用.为了使用JasPer，必须禁用OpenJPEG."
+  },
+  {
+    "origin": "GDAL integration",
+    "local": "GDAL集成"
+  },
+  {
+    "origin": "(default:",
+    "local": "（默认值:"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "GDAL",
+    "local": "格达尔"
+  },
+  {
+    "origin": "is a higher level library which supports reading multiple file formats including PNG, JPEG and TIFF. It will have higher priority when opening files and can override other backends. This library will be searched using cmake package mechanism, make sure it is installed correctly or manually set",
+    "local": "是一个更高级别的库，支持读取多种文件格式，包括PNG、JPEG和TIFF.它在打开文件时具有更高的优先级，并且可以覆盖其他后端.将使用cmake包机制搜索此库，请确保已正确安装或手动设置"
+  },
+  {
+    "origin": "environment or cmake variable.",
+    "local": "环境或cmake变量."
+  },
+  {
+    "origin": "GDCM integration",
+    "local": "GDCM集成"
+  },
+  {
+    "origin": "(default:",
+    "local": "（默认值:"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Enables",
+    "local": "使能够"
+  },
+  {
+    "origin": "DICOM",
+    "local": "DICOM"
+  },
+  {
+    "origin": "medical image format support through",
+    "local": "医学图像格式支持"
+  },
+  {
+    "origin": "GDCM library",
+    "local": "GDCM库"
+  },
+  {
+    "origin": ". This library will be searched using cmake package mechanism, make sure it is installed correctly or manually set",
+    "local": ". 将使用cmake包机制搜索此库，请确保已正确安装或手动设置"
+  },
+  {
+    "origin": "environment or cmake variable.",
+    "local": "环境或cmake变量."
+  },
+  {
+    "origin": "Video reading and writing (videoio module)",
+    "local": "视频读写（videoio模块）"
+  },
+  {
+    "origin": "TODO: how videoio works, registry, priorities",
+    "local": "TODO:videoio的工作原理、注册表、优先级"
+  },
+  {
+    "origin": "Video4Linux",
+    "local": "视频4Linux"
+  },
+  {
+    "origin": "(Linux; default:",
+    "local": "（Linux系统；默认:"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Capture images from camera using",
+    "local": "使用从相机捕获图像"
+  },
+  {
+    "origin": "Video4Linux",
+    "local": "视频4Linux"
+  },
+  {
+    "origin": "API. Linux kernel headers must be installed.",
+    "local": "应用程序编程接口.必须安装Linux内核头."
+  },
+  {
+    "origin": "FFmpeg",
+    "local": "FFmpeg"
+  },
+  {
+    "origin": "(default:",
+    "local": "（默认值:"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Integration with",
+    "local": "与集成"
+  },
+  {
+    "origin": "FFmpeg",
+    "local": "FFmpeg"
+  },
+  {
+    "origin": "library for decoding and encoding video files and network streams. This library can read and write many popular video formats. It consists of several components which must be installed as prerequisites for the build:",
+    "local": "用于解码和编码视频文件和网络流的库.这个库可以读写许多流行的视频格式.它由几个组件组成，这些组件必须作为构建的先决条件安装:"
+  },
+  {
+    "origin": "avcodec",
+    "local": "avcodec"
+  },
+  {
+    "origin": "avformat",
+    "local": "avformat"
+  },
+  {
+    "origin": "avutil",
+    "local": "avutil"
+  },
+  {
+    "origin": "swscale",
+    "local": "swscale"
+  },
+  {
+    "origin": "avresample",
+    "local": "avresample"
+  },
+  {
+    "origin": "(optional)",
+    "local": "（可选）"
+  },
+  {
+    "origin": "Exception is Windows platform where a prebuilt",
+    "local": "Windows平台是一个例外，其中预构建了"
+  },
+  {
+    "origin": "plugin library containing FFmpeg",
+    "local": "包含FFmpeg的插件库"
+  },
+  {
+    "origin": "will be downloaded during a configuration stage and copied to the",
+    "local": "将在配置阶段下载并复制到"
+  },
+  {
+    "origin": "folder with all produced libraries.",
+    "local": "包含所有生成库的文件夹."
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "Libav",
+    "local": "Libav"
+  },
+  {
+    "origin": "library can be used instead of FFmpeg, but this combination is not actively supported.",
+    "local": "可以使用库代替FFmpeg，但不支持这种组合."
+  },
+  {
+    "origin": "GStreamer",
+    "local": "媒体框架"
+  },
+  {
+    "origin": "(default:",
+    "local": "（默认值:"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Enable integration with",
+    "local": "启用与的集成"
+  },
+  {
+    "origin": "GStreamer",
+    "local": "媒体框架"
+  },
+  {
+    "origin": "library for decoding and encoding video files, capturing frames from cameras and network streams. Numerous plugins can be installed to extend supported formats list. OpenCV allows running arbitrary GStreamer pipelines passed as strings to",
+    "local": "用于解码和编码视频文件、从摄像机和网络流捕获帧的库.可以安装许多插件来扩展支持的格式列表.OpenCV允许运行作为字符串传递给的任意GStreamer管道"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "objects.",
+    "local": "物体."
+  },
+  {
+    "origin": "Various GStreamer plugins offer HW-accelerated video processing on different platforms.",
+    "local": "各种GStreamer插件在不同的平台上提供硬件加速的视频处理."
+  },
+  {
+    "origin": "Microsoft Media Foundation",
+    "local": "微软媒体基金会"
+  },
+  {
+    "origin": "(Windows; default:",
+    "local": "（b）Windows；默认:"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Enables MSMF backend which uses Windows' built-in",
+    "local": "启用使用Windows内置"
+  },
+  {
+    "origin": "Media Foundation framework",
+    "local": "媒体基础框架"
+  },
+  {
+    "origin": ". Can be used to capture frames from camera, decode and encode video files. This backend have HW-accelerated processing support (",
+    "local": ". 可用于从摄像机捕获帧，解码和编码视频文件.此后端具有硬件加速处理支持("
+  },
+  {
+    "origin": "option, default is",
+    "local": "选项，默认为"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "Older versions of Windows (prior to 10) can have incompatible versions of Media Foundation and are known to have problems when used from OpenCV.",
+    "local": "旧版本的Windows（10之前）可能有不兼容的Media Foundation版本，从OpenCV使用时会出现问题."
+  },
+  {
+    "origin": "DirectShow",
+    "local": "DirectShow公司"
+  },
+  {
+    "origin": "(Windows; default:",
+    "local": "（b）Windows；默认:"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This backend uses older",
+    "local": "此后端使用较旧的"
+  },
+  {
+    "origin": "DirectShow",
+    "local": "DirectShow公司"
+  },
+  {
+    "origin": "framework. It can be used only to capture frames from camera. It is now deprecated in favor of MSMF backend, although both can be enabled in the same build.",
+    "local": "框架.它只能用于从相机捕获帧.现在不赞成使用MSMF后端，尽管两者可以在同一个版本中启用."
+  },
+  {
+    "origin": "AVFoundation",
+    "local": "AV基金会"
+  },
+  {
+    "origin": "(Apple; default:",
+    "local": "（苹果公司；默认:"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "AVFoundation",
+    "local": "AV基金会"
+  },
+  {
+    "origin": "framework is part of Apple platforms and can be used to capture frames from camera, encode and decode video files.",
+    "local": "该框架是苹果平台的一部分，可用于从相机捕获帧、编码和解码视频文件."
+  },
+  {
+    "origin": "Other backends",
+    "local": "其他后端"
+  },
+  {
+    "origin": "There are multiple less popular frameworks which can be used to read and write videos. Each requires corresponding library or SDK installed.",
+    "local": "有多种不太流行的框架可以用来读写视频.每个都需要安装相应的库或SDK."
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Default",
+    "local": "默认"
+  },
+  {
+    "origin": "Description",
+    "local": "说明"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "IIDC IEEE1394",
+    "local": "IIDC IEEE1394标准"
+  },
+  {
+    "origin": "support using DC1394 library",
+    "local": "支持使用DC1394库"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "OpenNI",
+    "local": "OpenNI"
+  },
+  {
+    "origin": "can be used to capture data from depth-sensing cameras. Deprecated.",
+    "local": "可用于从深度传感摄像头捕获数据.已弃用."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "OpenNI2",
+    "local": "OpenNI2"
+  },
+  {
+    "origin": "can be used to capture data from depth-sensing cameras.",
+    "local": "可用于从深度传感摄像头捕获数据."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "PVAPI",
+    "local": "PVAPI"
+  },
+  {
+    "origin": "is legacy SDK for Prosilica GigE cameras. Deprecated.",
+    "local": "是Prosilica GigE相机的传统SDK.已弃用."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Aravis",
+    "local": "Aravis"
+  },
+  {
+    "origin": "library is used for video acquisition using Genicam cameras.",
+    "local": "库用于使用Genicam相机进行视频采集."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "XIMEA",
+    "local": "XIMEA"
+  },
+  {
+    "origin": "cameras support.",
+    "local": "摄像头支持."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "XINE",
+    "local": "XINE"
+  },
+  {
+    "origin": "library support.",
+    "local": "图书馆支持."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "RealSense",
+    "local": "真实感"
+  },
+  {
+    "origin": "cameras support.",
+    "local": "摄像头支持."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "MediaSDK",
+    "local": "MediaSDK"
+  },
+  {
+    "origin": "library can be used for HW-accelerated decoding and encoding of raw video streams.",
+    "local": "该库可用于硬件加速解码和编码原始视频流."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "GPhoto",
+    "local": "GPhoto"
+  },
+  {
+    "origin": "library can be used to capure frames from cameras.",
+    "local": "该库可用于从相机捕获帧."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "MediaNDK",
+    "local": "MediaNDK"
+  },
+  {
+    "origin": "library is available on Android since API level 21.",
+    "local": "从API级别21开始，Android上就可以使用这个库."
+  },
+  {
+    "origin": "videoio plugins",
+    "local": "视频插件"
+  },
+  {
+    "origin": "Some",
+    "local": "一些"
+  },
+  {
+    "origin": "videoio",
+    "local": "videoio"
+  },
+  {
+    "origin": "backends can be built as plugins thus breaking strict dependency on third-party libraries and making them optional at runtime. Following options can be used to control this mechanism:",
+    "local": "后端可以构建为插件，从而打破对第三方库的严格依赖，并使它们在运行时成为可选的.以下选项可用于控制此机制:"
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Default",
+    "local": "默认"
+  },
+  {
+    "origin": "Description",
+    "local": "说明"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Enable or disable plugins completely.",
+    "local": "完全启用或禁用插件."
+  },
+  {
+    "origin": "empty",
+    "local": "空的"
+  },
+  {
+    "origin": "Comma- or semicolon-separated list of backend names to be compiled as plugins. Supported names are",
+    "local": "以逗号或分号分隔的要编译为插件的后端名称列表.支持的名称是"
+  },
+  {
+    "origin": "ffmpeg",
+    "local": "ffmpeg"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "gstreamer",
+    "local": "gstreamer公司"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "msmf",
+    "local": "msmf"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "mfx",
+    "local": "mfx"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "all",
+    "local": "全部的"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Enable strict runtime version check to only allow plugins built with the same version of OpenCV.",
+    "local": "启用严格的运行时版本检查以仅允许使用相同版本的OpenCV构建插件."
+  },
+  {
+    "origin": "Parallel processing",
+    "local": "并行处理"
+  },
+  {
+    "origin": "Some of OpenCV algorithms can use multithreading to accelerate processing. OpenCV can be built with one of threading backends.",
+    "local": "一些OpenCV算法可以使用多线程来加速处理.OpenCV可以用一个线程后端构建."
+  },
+  {
+    "origin": "Backend",
+    "local": "后端"
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Default",
+    "local": "默认"
+  },
+  {
+    "origin": "Platform",
+    "local": "站台"
+  },
+  {
+    "origin": "Description",
+    "local": "说明"
+  },
+  {
+    "origin": "pthreads",
+    "local": "线程"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Unix-like",
+    "local": "类Unix"
+  },
+  {
+    "origin": "Default backend based on",
+    "local": "默认后端基于"
+  },
+  {
+    "origin": "pthreads",
+    "local": "线程"
+  },
+  {
+    "origin": "library is available on Linux, Android and other Unix-like platforms. Thread pool is implemented in OpenCV and can be controlled with environment variables",
+    "local": "库在Linux、Android和其他类似Unix的平台上可用.线程池是在OpenCV中实现的，可以通过环境变量进行控制"
+  },
+  {
+    "origin": ". Please check sources in",
+    "local": ". 请登记来源"
+  },
+  {
+    "origin": "modules/core/src/parallel_impl.cpp",
+    "local": "模块/core/src/parallel\\u impl.cpp"
+  },
+  {
+    "origin": "file for details.",
+    "local": "文件以获取详细信息."
+  },
+  {
+    "origin": "Concurrency",
+    "local": "并发"
+  },
+  {
+    "origin": "N/A",
+    "local": "不适用"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Windows",
+    "local": "Windows"
+  },
+  {
+    "origin": "Concurrency runtime",
+    "local": "并发运行时"
+  },
+  {
+    "origin": "is available on Windows and will be turned",
+    "local": "在Windows上可用并将被打开"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "on supported platforms unless other backend is enabled.",
+    "local": "在支持的平台上，除非启用了其他后端."
+  },
+  {
+    "origin": "GCD",
+    "local": "GCD公司"
+  },
+  {
+    "origin": "N/A",
+    "local": "不适用"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Apple",
+    "local": "Apple"
+  },
+  {
+    "origin": "Grand Central Dispatch",
+    "local": "中央大调度"
+  },
+  {
+    "origin": "is available on Apple platforms and will be turned",
+    "local": "可在Apple平台上使用，并将"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "automatically unless other backend is enabled. Uses global system thread pool.",
+    "local": "除非启用了其他后端，否则将自动执行.使用全局系统线程池."
+  },
+  {
+    "origin": "TBB",
+    "local": "待定"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Multiple",
+    "local": "多个"
+  },
+  {
+    "origin": "Threading Building Blocks",
+    "local": "线程构建模块"
+  },
+  {
+    "origin": "is a cross-platform library for parallel programming.",
+    "local": "是一个用于并行编程的跨平台库."
+  },
+  {
+    "origin": "OpenMP",
+    "local": "OpenMP接口"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Multiple",
+    "local": "多个"
+  },
+  {
+    "origin": "OpenMP",
+    "local": "OpenMP接口"
+  },
+  {
+    "origin": "API relies on compiler support.",
+    "local": "API依赖于编译器支持."
+  },
+  {
+    "origin": "HPX",
+    "local": "HPX公司"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Multiple",
+    "local": "多个"
+  },
+  {
+    "origin": "High Performance ParallelX",
+    "local": "高性能ParallelX"
+  },
+  {
+    "origin": "is an experimental backend which is more suitable for multiprocessor environments.",
+    "local": "是一个实验性的后端，更适合多处理器环境."
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "OpenCV can download and build TBB library from GitHub, this functionality can be enabled with the",
+    "local": "OpenCV可以从GitHub下载并构建TBB库，这个功能可以通过"
+  },
+  {
+    "origin": "option.",
+    "local": "选项."
+  },
+  {
+    "origin": "GUI backends (highgui module)",
+    "local": "Gabracends（hihgiomduel）"
+  },
+  {
+    "origin": "OpenCV relies on various GUI libraries for window drawing.",
+    "local": "OpenCV依赖于各种GUI库来绘制窗口."
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Default",
+    "local": "默认"
+  },
+  {
+    "origin": "Platform",
+    "local": "站台"
+  },
+  {
+    "origin": "Description",
+    "local": "说明"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Linux",
+    "local": "Linux"
+  },
+  {
+    "origin": "GTK",
+    "local": "GTK"
+  },
+  {
+    "origin": "is a common toolkit in Linux and Unix-like OS-es. By default version 3 will be used if found, version 2 can be forced with the",
+    "local": "是Linux和Unix中常见的工具箱，类似于OS-es.默认情况下，如果找到，将使用版本3，可以使用"
+  },
+  {
+    "origin": "option.",
+    "local": "选项."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Windows",
+    "local": "Windows"
+  },
+  {
+    "origin": "WinAPI",
+    "local": "葡萄酒"
+  },
+  {
+    "origin": "is a standard GUI API in Windows.",
+    "local": "是Windows中的标准GUI API."
+  },
+  {
+    "origin": "N/A",
+    "local": "不适用"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "macOS",
+    "local": "macOS"
+  },
+  {
+    "origin": "Cocoa",
+    "local": "可可"
+  },
+  {
+    "origin": "is a framework used in macOS.",
+    "local": "是macOS中使用的框架."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Cross-platform",
+    "local": "跨平台"
+  },
+  {
+    "origin": "Qt",
+    "local": "Qt"
+  },
+  {
+    "origin": "is a cross-platform GUI framework.",
+    "local": "是一个跨平台的GUI框架."
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "OpenCV compiled with Qt support enables advanced",
+    "local": "使用Qt支持编译的OpenCV支持高级"
+  },
+  {
+    "origin": "highgui",
+    "local": "highgui"
+  },
+  {
+    "origin": "interface, see",
+    "local": "接口，参见"
+  },
+  {
+    "origin": "for details.",
+    "local": "详情."
+  },
+  {
+    "origin": "OpenGL",
+    "local": "OpenGL"
+  },
+  {
+    "origin": "(default:",
+    "local": "（默认值:"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "OpenGL integration can be used to draw HW-accelerated windows with following backends: GTK, WIN32 and Qt. And enables basic interoperability with OpenGL, see",
+    "local": "OpenGL集成可以用来绘制硬件加速的窗口，它有以下后端:GTK、WIN32和Qt.并支持与OpenGL的基本互操作性，请参见"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "for details.",
+    "local": "详情."
+  },
+  {
+    "origin": "Deep learning neural networks inference backends and options (dnn module)",
+    "local": "深度学习神经网络推理后端和选项（dnn模块）"
+  },
+  {
+    "origin": "OpenCV have own DNN inference module which have own build-in engine, but can also use other libraries for optimized processing. Multiple backends can be enabled in single build. Selection happens at runtime automatically or manually.",
+    "local": "OpenCV有自己的DNN推理模块，该模块有自己的内置引擎，但也可以使用其他库进行优化处理.可以在单个构建中启用多个后端.选择在运行时自动或手动进行."
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Default",
+    "local": "默认"
+  },
+  {
+    "origin": "Description",
+    "local": "说明"
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Enables",
+    "local": "使能够"
+  },
+  {
+    "origin": "protobuf",
+    "local": "原虫"
+  },
+  {
+    "origin": "library search. OpenCV can either build own copy of the library or use external one. This dependency is required by the",
+    "local": "图书馆搜索.OpenCV可以构建自己的库副本，也可以使用外部的库副本.此依赖关系是"
+  },
+  {
+    "origin": "dnn",
+    "local": "dnn"
+  },
+  {
+    "origin": "module, if it can't be found module will be disabled.",
+    "local": "模块，如果找不到，模块将被禁用."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Build own copy of",
+    "local": "生成自己的副本"
+  },
+  {
+    "origin": "protobuf",
+    "local": "protobuf"
+  },
+  {
+    "origin": ". Must be disabled if you want to use external library.",
+    "local": ". 如果要使用外部库，则必须禁用."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Re-generate all .proto files.",
+    "local": "重新生成所有.proto文件."
+  },
+  {
+    "origin": "protoc",
+    "local": "protoc"
+  },
+  {
+    "origin": "compiler compatible with used version of",
+    "local": "与所用版本兼容的编译器"
+  },
+  {
+    "origin": "protobuf",
+    "local": "protobuf"
+  },
+  {
+    "origin": "must be installed.",
+    "local": "必须安装."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Enable built-in OpenCL inference backend.",
+    "local": "启用内置的OpenCL推理后端."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Enables",
+    "local": "使能够"
+  },
+  {
+    "origin": "Intel Inference Engine (IE)",
+    "local": "英特尔推理机（IE）"
+  },
+  {
+    "origin": "backend. Allows to execute networks in IE format (.xml + .bin). Inference Engine must be installed either as part of",
+    "local": "后端.允许以IE格式（.xml+.bin）执行网络.推理机必须作为"
+  },
+  {
+    "origin": "OpenVINO toolkit",
+    "local": "OpenVINO工具"
+  },
+  {
+    "origin": ", either as a standalone library built from sources.",
+    "local": "，或者作为从源代码构建的独立库."
+  },
+  {
+    "origin": "Defines version of Inference Engine library which is tied to OpenVINO toolkit version. Must be a 10-digit string, e.g.",
+    "local": "定义绑定到OpenVINO工具箱版本的推理机库的版本.必须是10位字符串，例如."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Enables Intel NGraph library support. This library is part of Inference Engine backend which allows executing arbitrary networks read from files in multiple formats supported by OpenCV: Caffe, TensorFlow, PyTorch, Darknet, etc.. NGraph library must be installed, it is included into Inference Engine.",
+    "local": "启用Intel NGraph库支持.这个库是推理引擎后端的一部分，它允许执行从OpenCV支持的多种格式的文件中读取的任意网络:Caffe、TensorFlow、PyTorch、Darknet等..必须安装NGraph库，它包含在推理机中."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Enable CUDA backend.",
+    "local": "启用CUDA后端."
+  },
+  {
+    "origin": "CUDA",
+    "local": "CUDA"
+  },
+  {
+    "origin": ", CUBLAS and",
+    "local": "、库布拉斯和"
+  },
+  {
+    "origin": "CUDNN",
+    "local": "CUDNN"
+  },
+  {
+    "origin": "must be installed.",
+    "local": "必须安装."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Use experimental",
+    "local": "使用实验性的"
+  },
+  {
+    "origin": "Halide",
+    "local": "Halide"
+  },
+  {
+    "origin": "backend which can generate optimized code for dnn-layers at runtime. Halide must be installed.",
+    "local": "后端，它可以在运行时为dnn层生成优化的代码.必须安装卤化物."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Enable experimental",
+    "local": "启用实验性"
+  },
+  {
+    "origin": "Vulkan",
+    "local": "Vulkan"
+  },
+  {
+    "origin": "backend. Does not require additional dependencies, but can use external Vulkan headers (",
+    "local": "后端.不需要其他依赖项，但可以使用外部Vulkan头("
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Enable experimental",
+    "local": "启用实验性"
+  },
+  {
+    "origin": "Tengine",
+    "local": "天鹅绒"
+  },
+  {
+    "origin": "backend for ARM CPUs. Tengine library must be installed.",
+    "local": "ARM CPU的后端.必须安装Tengine库."
+  },
+  {
+    "origin": "Installation layout",
+    "local": "安装布局"
+  },
+  {
+    "origin": "Installation root",
+    "local": "安装根目录"
+  },
+  {
+    "origin": "To install produced binaries root location should be configured. Default value depends on distribution, in Ubuntu it is usually set to",
+    "local": "要安装生成的二进制文件，应配置根位置.默认值取决于发行版，在Ubuntu中通常设置为"
+  },
+  {
+    "origin": ". It can be changed during configuration:",
+    "local": ". 在配置过程中可以更改:"
+  },
+  {
+    "origin": "This path can be relative to current working directory, in the following example it will be set to",
+    "local": "此路径可以相对于当前工作目录，在下面的示例中，它将被设置为"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "After building the library, all files can be copied to the configured install location using the following command:",
+    "local": "生成库后，可以使用以下命令将所有文件复制到配置的安装位置:"
+  },
+  {
+    "origin": "To install binaries to the system location (e.g.",
+    "local": "将二进制文件安装到系统位置（例如."
+  },
+  {
+    "origin": ") as a regular user it is necessary to run the previous command with elevated privileges:",
+    "local": ")作为普通用户，必须以提升的权限运行上一个命令:"
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "On some platforms (Linux) it is possible to remove symbol information during install. Binaries will become 10-15% smaller but debugging will be limited:",
+    "local": "在某些平台（Linux）上，可以在安装过程中删除符号信息.二进制文件将变小10-15%，但调试将受到限制:"
+  },
+  {
+    "origin": "Components and locations",
+    "local": "部件和位置"
+  },
+  {
+    "origin": "Options cane be used to control whether or not a part of the library will be installed:",
+    "local": "选项可用于控制是否安装库的一部分:"
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Default",
+    "local": "默认"
+  },
+  {
+    "origin": "Description",
+    "local": "说明"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Install C++ sample sources from the",
+    "local": "从中安装C++示例源"
+  },
+  {
+    "origin": "samples/cpp",
+    "local": "样品/cpp"
+  },
+  {
+    "origin": "directory.",
+    "local": "目录."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Install Python sample sources from the",
+    "local": "从"
+  },
+  {
+    "origin": "samples/python",
+    "local": "示例/python"
+  },
+  {
+    "origin": "directory.",
+    "local": "目录."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Install Android sample sources from the",
+    "local": "安装来自"
+  },
+  {
+    "origin": "samples/android",
+    "local": "示例/android"
+  },
+  {
+    "origin": "directory.",
+    "local": "目录."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Install prebuilt sample applications (",
+    "local": "安装预构建的示例应用程序("
+  },
+  {
+    "origin": "must be enabled).",
+    "local": "必须启用）."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Install tests (",
+    "local": "安装测试("
+  },
+  {
+    "origin": "must be enabled).",
+    "local": "必须启用）."
+  },
+  {
+    "origin": "all",
+    "local": "全部的"
+  },
+  {
+    "origin": "Comma- or semicolon-separated list of prebuilt applications to install (from",
+    "local": "以逗号或分号分隔的要安装的预构建应用程序列表（从"
+  },
+  {
+    "origin": "apps",
+    "local": "应用程序"
+  },
+  {
+    "origin": "directory)",
+    "local": "目录）"
+  },
+  {
+    "origin": "Following options allow to modify components' installation locations relatively to install prefix. Default values of these options depend on platform and other options, please check the",
+    "local": "以下选项允许相对于安装前缀修改组件的安装位置.这些选项的默认值取决于平台和其他选项，请检查"
+  },
+  {
+    "origin": "cmake/OpenCVInstallLayout.cmake",
+    "local": "cmake/OpenCVInstallLayout.cmake"
+  },
+  {
+    "origin": "file for details.",
+    "local": "文件以获取详细信息."
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Components",
+    "local": "组件"
+  },
+  {
+    "origin": "applications, dynamic libraries (",
+    "local": "应用程序、动态库("
+  },
+  {
+    "origin": "win",
+    "local": "赢"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "test applications",
+    "local": "测试应用程序"
+  },
+  {
+    "origin": "sample applications",
+    "local": "示例应用程序"
+  },
+  {
+    "origin": "dynamic libraries, import libraries (",
+    "local": "动态库，导入库("
+  },
+  {
+    "origin": "win",
+    "local": "赢"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "static libraries",
+    "local": "静态库"
+  },
+  {
+    "origin": "3rdparty libraries",
+    "local": "第三方图书馆"
+  },
+  {
+    "origin": "cmake config package",
+    "local": "cmake配置包"
+  },
+  {
+    "origin": "header files",
+    "local": "标头档"
+  },
+  {
+    "origin": "extra data files",
+    "local": "额外数据文件"
+  },
+  {
+    "origin": "sample sources",
+    "local": "样品来源"
+  },
+  {
+    "origin": "licenses for included 3rdparty components",
+    "local": "包含的第三方组件的许可证"
+  },
+  {
+    "origin": "test data",
+    "local": "试验数据"
+  },
+  {
+    "origin": "documentation",
+    "local": "文档"
+  },
+  {
+    "origin": "JAR file with Java bindings",
+    "local": "带有Java绑定的JAR文件"
+  },
+  {
+    "origin": "JNI part of Java bindings",
+    "local": "Java绑定的JNI部分"
+  },
+  {
+    "origin": "Dynamic libraries from the JNI part of Java bindings",
+    "local": "Java绑定的JNI部分的动态库"
+  },
+  {
+    "origin": "Following options can be used to change installation layout for common scenarios:",
+    "local": "以下选项可用于更改常见场景的安装布局:"
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Default",
+    "local": "默认"
+  },
+  {
+    "origin": "Description",
+    "local": "说明"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Tune multiple things to produce Windows and Android distributions.",
+    "local": "调整多种内容以生成Windows和Android发行版."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Adds one level to several installation locations to allow side-by-side installations. For example, headers will be installed to _/usr/include/opencv-4.4.0_ instead of _/usr/include/opencv4_ with this option enabled.",
+    "local": "将一个级别添加到多个安装位置以允许并行安装.例如，启用此选项后，标头将被安装到308;/usr/include/opencv-4.4.0_308;而不是308;/usr/include/opencv4_308;."
+  },
+  {
+    "origin": "Miscellaneous features",
+    "local": "其他特性"
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Default",
+    "local": "默认"
+  },
+  {
+    "origin": "Description",
+    "local": "说明"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Some algorithms included in the library are known to be protected by patents and are disabled by default.",
+    "local": "已知库中包含的某些算法受专利保护，并且在默认情况下被禁用."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Enable all",
+    "local": "全部启用"
+  },
+  {
+    "origin": "options at once.",
+    "local": "立即选择."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "(on Unix-like platforms)",
+    "local": "（在类Unix平台上）"
+  },
+  {
+    "origin": "Enable",
+    "local": "启用"
+  },
+  {
+    "origin": "ccache",
+    "local": "检查"
+  },
+  {
+    "origin": "auto-detection. This tool wraps compiler calls and caches results, can significantly improve re-compilation time.",
+    "local": "自动检测.此工具包装编译器调用并缓存结果，可以显著提高重新编译时间."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "(for MSVC)",
+    "local": "（对于MSVC）"
+  },
+  {
+    "origin": "Enable precompiled headers support. Improves build time.",
+    "local": "启用预编译头支持.提高构建时间."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Enable documentation build (",
+    "local": "启用文档生成("
+  },
+  {
+    "origin": "doxygen",
+    "local": "强氧剂"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "doxygen_cpp",
+    "local": "doxygen_cpp"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "doxygen_python",
+    "local": "doxygen_python"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "doxygen_javadoc",
+    "local": "doxygen_javadoc"
+  },
+  {
+    "origin": "targets).",
+    "local": "目标）."
+  },
+  {
+    "origin": "Doxygen",
+    "local": "Doxygen"
+  },
+  {
+    "origin": "must be installed for C++ documentation build. Python and",
+    "local": "必须为C++文档构建安装.Python和"
+  },
+  {
+    "origin": "BeautifulSoup4",
+    "local": "美丽的灵魂4"
+  },
+  {
+    "origin": "must be installed for Python documentation build. Javadoc and Ant must be installed for Java documentation build (part of Java SDK).",
+    "local": "必须为Python文档生成安装.Java文档构建（JavaSDK的一部分）必须安装Javadoc和Ant."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "(when docs or examples are enabled)",
+    "local": "（启用文档或示例时）"
+  },
+  {
+    "origin": "Enable python scripts check with",
+    "local": "启用python脚本检查"
+  },
+  {
+    "origin": "Pylint",
+    "local": "皮林"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "check_pylint",
+    "local": "检查管道"
+  },
+  {
+    "origin": "target). Pylint must be installed.",
+    "local": "目标）.必须安装Pylint."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "(when docs or examples are enabled)",
+    "local": "（启用文档或示例时）"
+  },
+  {
+    "origin": "Enable python scripts check with",
+    "local": "启用python脚本检查"
+  },
+  {
+    "origin": "Flake8",
+    "local": "薄片8"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "check_flake8",
+    "local": "检查第8页"
+  },
+  {
+    "origin": "target). Flake8 must be installed.",
+    "local": "目标）.必须安装薄片8."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Enable Java wrappers build. Java SDK and Ant must be installed.",
+    "local": "启用Java包装器生成.必须安装Java SDK和Ant."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "(for static Android builds)",
+    "local": "（对于静态Android版本）"
+  },
+  {
+    "origin": "Build single",
+    "local": "生成单个"
+  },
+  {
+    "origin": "opencv_java",
+    "local": "opencv_java"
+  },
+  {
+    "origin": "dynamic library containing all library functionality bundled with Java bindings.",
+    "local": "包含与Java绑定绑定的所有库功能的动态库."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Build python2 bindings (deprecated). Python with development files and numpy must be installed.",
+    "local": "生成python2绑定（已弃用）.必须安装带有开发文件和numpy的Python."
+  },
+  {
+    "origin": "ON",
+    "local": "开"
+  },
+  {
+    "origin": "Build python3 bindings. Python with development files and numpy must be installed.",
+    "local": "构建python3绑定.必须安装带有开发文件和numpy的Python."
+  },
+  {
+    "origin": "TODO: need separate tutorials covering bindings builds",
+    "local": "TODO:需要包含绑定构建的单独教程吗"
+  },
+  {
+    "origin": "Automated builds",
+    "local": "自动生成"
+  },
+  {
+    "origin": "Some features have been added specifically for automated build environments, like continuous integration and packaging systems.",
+    "local": "一些特性是专门为自动化构建环境添加的，比如连续集成和打包系统."
+  },
+  {
+    "origin": "Option",
+    "local": "期权"
+  },
+  {
+    "origin": "Default",
+    "local": "默认"
+  },
+  {
+    "origin": "Description",
+    "local": "说明"
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Enables several compiler warnings considered",
+    "local": "启用多个编译器警告"
+  },
+  {
+    "origin": "noisy",
+    "local": "嘈杂的"
+  },
+  {
+    "origin": ", i.e. having less importance than others. These warnings are usually ignored but in some cases can be worth being checked for.",
+    "local": "也就是说，比其他人的重要性低.这些警告通常被忽略，但在某些情况下值得检查."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Treat compiler warnings as errors. Build will be halted.",
+    "local": "将编译器警告视为错误.生成将停止."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "For each enabled dependency (",
+    "local": "对于每个启用的依赖项("
+  },
+  {
+    "origin": "option) verify that it has been found and enabled (",
+    "local": "选项）验证是否已找到并启用("
+  },
+  {
+    "origin": "variable). By default feature will be silently turned off if dependency was not found, but with this option enabled cmake configuration will fail. Convenient for packaging systems which require stable library configuration not depending on environment fluctuations.",
+    "local": "变量）.默认情况下，如果找不到依赖项，功能将自动关闭，但启用此选项后，cmake配置将失败.方便的包装系统，需要稳定的图书馆配置不依赖于环境的波动."
+  },
+  {
+    "origin": "empty",
+    "local": "空的"
+  },
+  {
+    "origin": "OpenCV allows to customize configuration process by adding custom hook scripts at each stage and substage. cmake scripts with predefined names located in the directory set by this variable will be included before and after various configuration stages. Examples of file names:",
+    "local": "OpenCV允许通过在每个阶段和子阶段添加定制的钩子脚本来定制配置过程.在不同的配置阶段之前和之后，将包含位于该变量设置的目录中的具有预定义名称的cmake脚本.文件名示例:"
+  },
+  {
+    "origin": "CMAKE_INIT.cmake",
+    "local": "CMAKE\\初始化.CMAKE"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "PRE_CMAKE_BOOTSTRAP.cmake",
+    "local": "预\\u CMAKE \\u BOOTSTRAP.CMAKE"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "POST_CMAKE_BOOTSTRAP.cmake",
+    "local": "发布\\u CMAKE \\u BOOTSTRAP.CMAKE"
+  },
+  {
+    "origin": ", etc.. Other names are not documented and can be found in the project cmake files by searching for the",
+    "local": "等等..其他名称没有文档记录，可以通过搜索"
+  },
+  {
+    "origin": "ocv_cmake_hook",
+    "local": "ocv\\ cmake\\ U挂钩"
+  },
+  {
+    "origin": "macro calls.",
+    "local": "宏调用."
+  },
+  {
+    "origin": "OFF",
+    "local": "关"
+  },
+  {
+    "origin": "Enables a debug message print on each cmake hook script call.",
+    "local": "在每个cmake钩子脚本调用上启用调试消息打印."
+  },
+  {
+    "origin": "Other non-documented options",
+    "local": "其他未记录的选项"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by"
+  }
+]

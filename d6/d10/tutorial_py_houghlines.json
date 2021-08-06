@@ -1,0 +1,194 @@
+[
+  {
+    "origin": "OpenCV: Hough Line Transform",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Hough Line Transform",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this chapter,",
+    "local": ""
+  },
+  {
+    "origin": "We will understand the concept of the Hough Transform.",
+    "local": ""
+  },
+  {
+    "origin": "We will see how to use it to detect lines in an image.",
+    "local": ""
+  },
+  {
+    "origin": "We will see the following functions:",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "The Hough Transform is a popular technique to detect any shape, if you can represent that shape in a mathematical form. It can detect the shape even if it is broken or distorted a little bit. We will see how it works for a line.",
+    "local": ""
+  },
+  {
+    "origin": "A line can be represented as \\(y = mx+c\\) or in a parametric form, as \\(\\rho = x \\cos \\theta + y \\sin \\theta\\) where \\(\\rho\\) is the perpendicular distance from the origin to the line, and \\(\\theta\\) is the angle formed by this perpendicular line and the horizontal axis measured in counter-clockwise (That direction varies on how you represent the coordinate system. This representation is used in OpenCV). Check the image below:",
+    "local": ""
+  },
+  {
+    "origin": "houghlines1.svg",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "So if the line is passing below the origin, it will have a positive rho and an angle less than 180. If it is going above the origin, instead of taking an angle greater than 180, the angle is taken less than 180, and rho is taken negative. Any vertical line will have 0 degree and horizontal lines will have 90 degree.",
+    "local": ""
+  },
+  {
+    "origin": "Now let's see how the Hough Transform works for lines. Any line can be represented in these two terms, \\((\\rho, \\theta)\\). So first it creates a 2D array or accumulator (to hold the values of the two parameters) and it is set to 0 initially. Let rows denote the \\(\\rho\\) and columns denote the \\(\\theta\\). Size of array depends on the accuracy you need. Suppose you want the accuracy of angles to be 1 degree, you will need 180 columns. For \\(\\rho\\), the maximum distance possible is the diagonal length of the image. So taking one pixel accuracy, the number of rows can be the diagonal length of the image.",
+    "local": ""
+  },
+  {
+    "origin": "Consider a 100x100 image with a horizontal line at the middle. Take the first point of the line. You know its (x,y) values. Now in the line equation, put the values \\(\\theta = 0,1,2,....,180\\) and check the \\(\\rho\\) you get. For every \\((\\rho, \\theta)\\) pair, you increment value by one in our accumulator in its corresponding \\((\\rho, \\theta)\\) cells. So now in accumulator, the cell (50,90) = 1 along with some other cells.",
+    "local": ""
+  },
+  {
+    "origin": "Now take the second point on the line. Do the same as above. Increment the values in the cells corresponding to",
+    "local": ""
+  },
+  {
+    "origin": "you got. This time, the cell (50,90) = 2. What you actually do is voting the \\((\\rho, \\theta)\\) values. You continue this process for every point on the line. At each point, the cell (50,90) will be incremented or voted up, while other cells may or may not be voted up. This way, at the end, the cell (50,90) will have maximum votes. So if you search the accumulator for maximum votes, you get the value (50,90) which says, there is a line in this image at a distance 50 from the origin and at angle 90 degrees. It is well shown in the below animation (Image Courtesy:",
+    "local": ""
+  },
+  {
+    "origin": "Amos Storkey",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is how hough transform works for lines. It is simple, and may be you can implement it using Numpy on your own. Below is an image which shows the accumulator. Bright spots at some locations denote they are the parameters of possible lines in the image. (Image courtesy:",
+    "local": ""
+  },
+  {
+    "origin": "Wikipedia",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Hough Transform in OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Everything explained above is encapsulated in the OpenCV function,",
+    "local": ""
+  },
+  {
+    "origin": ". It simply returns an array of :math:(rho, theta)` values. \\(\\rho\\) is measured in pixels and \\(\\theta\\) is measured in radians. First parameter, Input image should be a binary image, so apply threshold or use canny edge detection before applying hough transform. Second and third parameters are \\(\\rho\\) and \\(\\theta\\) accuracies respectively. Fourth argument is the threshold, which means the minimum vote it should get to be considered as a line. Remember, number of votes depends upon the number of points on the line. So it represents the minimum length of line that should be detected.",
+    "local": ""
+  },
+  {
+    "origin": "Check the results below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Probabilistic Hough Transform",
+    "local": ""
+  },
+  {
+    "origin": "In the hough transform, you can see that even for a line with two arguments, it takes a lot of computation. Probabilistic Hough Transform is an optimization of the Hough Transform we saw. It doesn't take all the points into consideration. Instead, it takes only a random subset of points which is sufficient for line detection. We just have to decrease the threshold. See image below which compares Hough Transform and Probabilistic Hough Transform in Hough space. (Image Courtesy :",
+    "local": ""
+  },
+  {
+    "origin": "Franck Bettinger's home page",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV implementation is based on Robust Detection of Lines Using the Progressive Probabilistic Hough Transform by Matas, J. and Galambos, C. and Kittler, J.V.",
+    "local": ""
+  },
+  {
+    "origin": ". The function used is",
+    "local": ""
+  },
+  {
+    "origin": ". It has two new arguments.",
+    "local": ""
+  },
+  {
+    "origin": "minLineLength",
+    "local": ""
+  },
+  {
+    "origin": "- Minimum length of line. Line segments shorter than this are rejected.",
+    "local": ""
+  },
+  {
+    "origin": "maxLineGap",
+    "local": ""
+  },
+  {
+    "origin": "- Maximum allowed gap between line segments to treat them as a single line.",
+    "local": ""
+  },
+  {
+    "origin": "Best thing is that, it directly returns the two endpoints of lines. In previous case, you got only the parameters of lines, and you had to find all the points. Here, everything is direct and simple.",
+    "local": ""
+  },
+  {
+    "origin": "See the results below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Hough Transform on Wikipedia",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

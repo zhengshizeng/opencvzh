@@ -1,0 +1,522 @@
+[
+  {
+    "origin": "OpenCV: Introduction",
+    "local": "OpenCV:简介"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "Introduction",
+    "local": "Introduction(介绍)"
+  },
+  {
+    "origin": "OpenCV (Open Source Computer Vision Library:",
+    "local": "OpenCV (开源计算机视觉库:"
+  },
+  {
+    "origin": "http://opencv.org",
+    "local": "http://opencv.org"
+  },
+  {
+    "origin": ") is an open-source library that includes several hundreds of computer vision algorithms. The document describes the so-called OpenCV 2.x API, which is essentially a C++ API, as opposed to the C-based OpenCV 1.x API (C API is deprecated and not tested with \"C\" compiler since OpenCV 2.4 releases)",
+    "local": ")是一个开源库，包含数百种计算机视觉算法。该文档描述了所有的OpenCV 2 .x API，它本质上是一个C++ API，而不是基于C的OpenCV 1 .x API（C API被禁止，并且自从OpenCV 2.4发布以来没有用C语言测试)"
+  },
+  {
+    "origin": "OpenCV has a modular structure, which means that the package includes several shared or static libraries. The following modules are available:",
+    "local": "OpenCV有一个模块化的结构，这意味着这个包包含几个共享的或静态的库。提供以下模块："
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "core",
+    "local": "core核心"
+  },
+  {
+    "origin": ") - a compact module defining basic data structures, including the dense multi-dimensional array Mat and basic functions used by all other modules.",
+    "local": ")-定义基本数据结构的紧凑模块，包括密集多维数组和所有其他模块使用的基本函数。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "imgproc",
+    "local": "imgproc"
+  },
+  {
+    "origin": ") - an image processing module that includes linear and non-linear image filtering, geometrical image transformations (resize, affine and perspective warping, generic table-based remapping), color space conversion, histograms, and so on.",
+    "local": ")-图像处理模块，包括线性和非线性图像滤波、几何图像变换（调整大小、仿射和透视扭曲、基于通用表的重新映射）、颜色空间转换、直方图等。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "video",
+    "local": "video视频"
+  },
+  {
+    "origin": ") - a video analysis module that includes motion estimation, background subtraction, and object tracking algorithms.",
+    "local": ")-视频分析模块，包括运动估计、背景减法和目标跟踪算法。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "calib3d",
+    "local": "calib3d"
+  },
+  {
+    "origin": ") - basic multiple-view geometry algorithms, single and stereo camera calibration, object pose estimation, stereo correspondence algorithms, and elements of 3D reconstruction.",
+    "local": ")-基本的多视图几何算法、单摄像机和立体摄像机标定、物体姿态估计、立体对应算法和三维重建元素。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "features2d",
+    "local": "features2d"
+  },
+  {
+    "origin": ") - salient feature detectors, descriptors, and descriptor matchers.",
+    "local": ")显著特征检测器、描述符和描述符匹配器。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "objdetect",
+    "local": "objdetect目标检测"
+  },
+  {
+    "origin": ") - detection of objects and instances of the predefined classes (for example, faces, eyes, mugs, people, cars, and so on).",
+    "local": ")-检测预定义类的对象和实例（例如，人脸、眼睛、马克杯、人、汽车等）。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "highgui",
+    "local": "highgui"
+  },
+  {
+    "origin": ") - an easy-to-use interface to simple UI capabilities.",
+    "local": ")-简单用户界面功能的易用界面。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "videoio",
+    "local": "视频IO"
+  },
+  {
+    "origin": ") - an easy-to-use interface to video capturing and video codecs.",
+    "local": ")-易于使用的视频捕获和视频编解码器接口。"
+  },
+  {
+    "origin": "... some other helper modules, such as FLANN and Google test wrappers, Python bindings, and others.",
+    "local": "... 其他一些帮助程序模块，如FLANN和Google测试包装器、Python绑定等。"
+  },
+  {
+    "origin": "The further chapters of the document describe functionality of each module. But first, make sure to get familiar with the common API concepts used thoroughly in the library.",
+    "local": "本文档的后续章节描述了每个模块的功能。但首先，要确保完全熟悉库中使用的常见API概念。"
+  },
+  {
+    "origin": "API Concepts",
+    "local": "API概念"
+  },
+  {
+    "origin": "cv Namespace",
+    "local": "cv Namespace"
+  },
+  {
+    "origin": "All the OpenCV classes and functions are placed into the",
+    "local": "所有OpenCV类和函数都放在"
+  },
+  {
+    "origin": "namespace. Therefore, to access this functionality from your code, use the",
+    "local": "命名空间。因此，要从代码中访问此功能，请使用"
+  },
+  {
+    "origin": "specifier or",
+    "local": "说明符或"
+  },
+  {
+    "origin": "directive:",
+    "local": "指令："
+  },
+  {
+    "origin": "or :",
+    "local": "或："
+  },
+  {
+    "origin": "Some of the current or future OpenCV external names may conflict with STL or other libraries. In this case, use explicit namespace specifiers to resolve the name conflicts:",
+    "local": "某些当前或将来的OpenCV外部名称可能与STL或其他库冲突。在这种情况下，请使用显式命名空间说明符来解决名称冲突："
+  },
+  {
+    "origin": "Automatic Memory Management",
+    "local": "自动内存管理"
+  },
+  {
+    "origin": "OpenCV handles all the memory automatically.",
+    "local": "OpenCV自动处理所有内存。"
+  },
+  {
+    "origin": "First of all, std::vector,",
+    "local": "首先,std::vector,"
+  },
+  {
+    "origin": ", and other data structures used by the functions and methods have destructors that deallocate the underlying memory buffers when needed. This means that the destructors do not always deallocate the buffers as in case of Mat. They take into account possible data sharing. A destructor decrements the reference counter associated with the matrix data buffer. The buffer is deallocated if and only if the reference counter reaches zero, that is, when no other structures refer to the same buffer. Similarly, when a Mat instance is copied, no actual data is really copied. Instead, the reference counter is incremented to memorize that there is another owner of the same data. There is also the Mat::clone method that creates a full copy of the matrix data. See the example below:",
+    "local": "，以及函数和方法使用的其他数据结构具有析构函数，这些析构函数可以在需要时释放底层内存缓冲区。这意味着析构函数并不总是像Mat那样释放缓冲区。它们考虑了可能的数据共享。析构函数递减与矩阵数据缓冲区相关联的引用计数器。当且仅当引用计数器达到零时（也就是说，没有其他结构引用同一个缓冲区时），才释放缓冲区。类似地，复制Mat实例时，不会真正复制任何实际数据。相反，引用计数器会递增，以记住相同数据的另一所有者。还有Mat::clone方法可以创建矩阵数据的完整副本。请参见下面的示例："
+  },
+  {
+    "origin": "You see that the use of Mat and other basic structures is simple. But what about high-level classes or even user data types created without taking automatic memory management into account? For them, OpenCV offers the",
+    "local": "你看，垫子和其他基本结构的使用很简单。但是在没有考虑自动内存管理的情况下创建的高级类甚至用户数据类型呢？对于他们来说，OpenCV提供了"
+  },
+  {
+    "origin": "template class that is similar to std::shared_ptr from C++11. So, instead of using plain pointers:",
+    "local": "模板类类似于STD::CysDypPTR，来自C++ 11。因此，代替使用普通指针："
+  },
+  {
+    "origin": "you can use:",
+    "local": "您可以使用:"
+  },
+  {
+    "origin": "or:",
+    "local": "或:"
+  },
+  {
+    "origin": "encapsulates a pointer to a T instance and a reference counter associated with the pointer. See the",
+    "local": "封装指向T实例的指针和与该指针关联的引用计数器。看到了吗"
+  },
+  {
+    "origin": "description for details.",
+    "local": "详细说明。"
+  },
+  {
+    "origin": "Automatic Allocation of the Output Data",
+    "local": "输出数据的自动分配"
+  },
+  {
+    "origin": "OpenCV deallocates the memory automatically, as well as automatically allocates the memory for output function parameters most of the time. So, if a function has one or more input arrays (",
+    "local": "OpenCV自动释放内存，并且在大多数情况下自动为输出函数参数分配内存。如果一个函数有一个或多个输入数组("
+  },
+  {
+    "origin": "instances) and some output arrays, the output arrays are automatically allocated or reallocated. The size and type of the output arrays are determined from the size and type of input arrays. If needed, the functions take extra parameters that help to figure out the output array properties.",
+    "local": "实例）和一些输出数组，输出数组将自动分配或重新分配。输出数组的大小和类型由输入数组的大小和类型决定。如果需要，这些函数将获取额外的参数，以帮助确定输出数组属性。"
+  },
+  {
+    "origin": "Example:",
+    "local": "例子："
+  },
+  {
+    "origin": "The array frame is automatically allocated by the",
+    "local": "数组帧由"
+  },
+  {
+    "origin": "operator since the video frame resolution and the bit-depth is known to the video capturing module. The array edges is automatically allocated by the cvtColor function. It has the same size and the bit-depth as the input array. The number of channels is 1 because the color conversion code",
+    "local": "因为视频捕获模块知道视频帧分辨率和位深度。数组边由cvtColor函数自动分配。它的大小和位深度与输入数组相同。通道数为1，因为颜色转换代码"
+  },
+  {
+    "origin": "is passed, which means a color to grayscale conversion. Note that frame and edges are allocated only once during the first execution of the loop body since all the next video frames have the same resolution. If you somehow change the video resolution, the arrays are automatically reallocated.",
+    "local": "表示颜色到灰度的转换。注意，帧和边在循环体的第一次执行期间仅分配一次，因为所有下一个视频帧具有相同的分辨率。如果您以某种方式更改视频分辨率，阵列将自动重新分配。"
+  },
+  {
+    "origin": "The key component of this technology is the Mat::create method. It takes the desired array size and type. If the array already has the specified size and type, the method does nothing. Otherwise, it releases the previously allocated data, if any (this part involves decrementing the reference counter and comparing it with zero), and then allocates a new buffer of the required size. Most functions call the Mat::create method for each output array, and so the automatic output data allocation is implemented.",
+    "local": "该技术的关键组件是Mat::create方法。它采用所需的数组大小和类型。如果数组已经具有指定的大小和类型，则该方法不执行任何操作。否则，它将释放先前分配的数据（如果有的话）（这部分涉及减少引用计数器并将其与零进行比较），然后分配所需大小的新缓冲区。大多数函数为每个输出数组调用Mat::create方法，因此实现了输出数据的自动分配。"
+  },
+  {
+    "origin": "Some notable exceptions from this scheme are",
+    "local": "这一方案的一些显著例外是"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", and a few other functions and methods. They are not able to allocate the output array, so you have to do this in advance.",
+    "local": "，以及其他一些函数和方法。它们无法分配输出数组，因此必须提前进行分配。"
+  },
+  {
+    "origin": "Saturation Arithmetics",
+    "local": "饱和算法"
+  },
+  {
+    "origin": "As a computer vision library, OpenCV deals a lot with image pixels that are often encoded in a compact, 8- or 16-bit per channel, form and thus have a limited value range. Furthermore, certain operations on images, like color space conversions, brightness/contrast adjustments, sharpening, complex interpolation (bi-cubic, Lanczos) can produce values out of the available range. If you just store the lowest 8 (16) bits of the result, this results in visual artifacts and may affect a further image analysis. To solve this problem, the so-called",
+    "local": "作为一个计算机视觉库，OpenCV处理了很多图像像素，这些像素通常以紧凑的、每通道8位或16位的形式进行编码，因此具有有限的值范围。此外，对图像的某些操作（如颜色空间转换、亮度/对比度调整、锐化、复杂插值（双立方、Lanczos））可能会产生超出可用范围的值。如果只存储结果的最低8（16）位，则会产生视觉伪影，并可能影响进一步的图像分析。为了解决这个问题，所谓"
+  },
+  {
+    "origin": "saturation",
+    "local": "饱和"
+  },
+  {
+    "origin": "arithmetics is used. For example, to store r, the result of an operation, to an 8-bit image, you find the nearest value within the 0..255 range:",
+    "local": "使用算术。例如，要将操作结果r存储到8位图像中，可以在0..255范围内找到最接近的值："
+  },
+  {
+    "origin": "\\[I(x,y)= \\min ( \\max (\\textrm{round}(r), 0), 255)\\]",
+    "local": "\\[I（x，y）=\\min（\\max（\\textrm{round}（r），0），255）\\]"
+  },
+  {
+    "origin": "Similar rules are applied to 8-bit signed, 16-bit signed and unsigned types. This semantics is used everywhere in the library. In C++ code, it is done using the",
+    "local": "类似的规则适用于8位有符号、16位有符号和无符号类型。这种语义在图书馆里随处可见。在C++代码中，使用"
+  },
+  {
+    "origin": "functions that resemble standard C++ cast operations. See below the implementation of the formula provided above:",
+    "local": "类似于标准C++的CAST操作的函数。下面是上述公式的实现："
+  },
+  {
+    "origin": "where cv::uchar is an OpenCV 8-bit unsigned integer type. In the optimized SIMD code, such SSE2 instructions as paddusb, packuswb, and so on are used. They help achieve exactly the same behavior as in C++ code.",
+    "local": "其中cv::uchar是OpenCV 8位无符号整数类型。在优化后的SIMD代码中，使用了paddusb、packuswb等SSE2指令。它们有助于实现与C++代码完全相同的行为。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Saturation is not applied when the result is 32-bit integer.",
+    "local": "结果为32位整数时不应用饱和。"
+  },
+  {
+    "origin": "Fixed Pixel Types. Limited Use of Templates",
+    "local": "固定像素类型。模板的有限使用"
+  },
+  {
+    "origin": "Templates is a great feature of C++ that enables implementation of very powerful, efficient and yet safe data structures and algorithms. However, the extensive use of templates may dramatically increase compilation time and code size. Besides, it is difficult to separate an interface and implementation when templates are used exclusively. This could be fine for basic algorithms but not good for computer vision libraries where a single algorithm may span thousands lines of code. Because of this and also to simplify development of bindings for other languages, like Python, Java, Matlab that do not have templates at all or have limited template capabilities, the current OpenCV implementation is based on polymorphism and runtime dispatching over templates. In those places where runtime dispatching would be too slow (like pixel access operators), impossible (generic",
+    "local": "模板是C++的一大特色，它能够实现非常强大、高效且安全的数据结构和算法。但是，模板的广泛使用可能会极大地增加编译时间和代码大小。此外，当模板被单独使用时，很难将接口和实现分开。这对于基本的算法来说是很好的，但是对于计算机视觉库来说是不好的，因为一个算法可能会跨越数千行代码。正因为如此，而且为了简化其他语言（如Python、Java、Matlab）的绑定开发，这些语言根本没有模板或模板功能有限，当前的OpenCV实现基于多态性和对模板的运行时调度。在那些运行时调度太慢的地方（比如像素访问操作符），不可能（通用的）"
+  },
+  {
+    "origin": "implementation), or just very inconvenient (",
+    "local": "或者只是很不方便("
+  },
+  {
+    "origin": ") the current implementation introduces small template classes, methods, and functions. Anywhere else in the current OpenCV version the use of templates is limited.",
+    "local": ")当前的实现引入了小模板类、方法和函数。在当前OpenCV版本的其他地方，模板的使用是有限的。"
+  },
+  {
+    "origin": "Consequently, there is a limited fixed set of primitive data types the library can operate on. That is, array elements should have one of the following types:",
+    "local": "因此，库可以操作的基本数据类型的集合是有限的。也就是说，数组元素应具有以下类型之一："
+  },
+  {
+    "origin": "8-bit unsigned integer (uchar)",
+    "local": "8位无符号整数（uchar）"
+  },
+  {
+    "origin": "8-bit signed integer (schar)",
+    "local": "8位有符号整数（schar）"
+  },
+  {
+    "origin": "16-bit unsigned integer (ushort)",
+    "local": "16位无符号整数（ushort）"
+  },
+  {
+    "origin": "16-bit signed integer (short)",
+    "local": "16位有符号整数（short）"
+  },
+  {
+    "origin": "32-bit signed integer (int)",
+    "local": "32位有符号整数（int）"
+  },
+  {
+    "origin": "32-bit floating-point number (float)",
+    "local": "32位浮点数（float）"
+  },
+  {
+    "origin": "64-bit floating-point number (double)",
+    "local": "64位浮点数（double）"
+  },
+  {
+    "origin": "a tuple of several elements where all elements have the same type (one of the above). An array whose elements are such tuples, are called multi-channel arrays, as opposite to the single-channel arrays, whose elements are scalar values. The maximum possible number of channels is defined by the",
+    "local": "多个元素的元组，其中所有元素都具有相同的类型（上面的一种）。元素为元组的数组称为多通道数组，与元素为标量值的单通道数组相反。信道的最大可能数量由"
+  },
+  {
+    "origin": "For these basic types, the following enumeration is applied:",
+    "local": "对于这些基本类型，将应用以下枚举："
+  },
+  {
+    "origin": "Multi-channel (n-channel) types can be specified using the following options:",
+    "local": "可以使用以下选项指定多通道（n通道）类型："
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": "constants (for a number of channels from 1 to 4)",
+    "local": "常数（对于从1到4的多个通道）"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": "macros when the number of channels is more than 4 or unknown at the compilation time.",
+    "local": "编译时通道数大于4或未知时的宏。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": ", and",
+    "local": "，和"
+  },
+  {
+    "origin": ". This means that the constant type is formed from the depth, taking the lowest 3 bits, and the number of channels minus 1, taking the next",
+    "local": ". 这意味着常量类型由深度（取最低的3位）和通道数减去1（取下一位）构成"
+  },
+  {
+    "origin": "bits.",
+    "local": "位。"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": "Arrays with more complex elements cannot be constructed or processed using OpenCV. Furthermore, each function or method can handle only a subset of all possible array types. Usually, the more complex the algorithm is, the smaller the supported subset of formats is. See below typical examples of such limitations:",
+    "local": "具有更复杂元素的数组不能使用OpenCV构造或处理。此外，每个函数或方法只能处理所有可能数组类型的子集。通常，算法越复杂，支持的格式子集就越小。见以下此类限制的典型示例："
+  },
+  {
+    "origin": "The face detection algorithm only works with 8-bit grayscale or color images.",
+    "local": "人脸检测算法只适用于8位灰度或彩色图像。"
+  },
+  {
+    "origin": "Linear algebra functions and most of the machine learning algorithms work with floating-point arrays only.",
+    "local": "线性代数函数和大多数机器学习算法只适用于浮点数组。"
+  },
+  {
+    "origin": "Basic functions, such as",
+    "local": "基本功能，如"
+  },
+  {
+    "origin": ", support all types.",
+    "local": "，支持所有类型。"
+  },
+  {
+    "origin": "Color space conversion functions support 8-bit unsigned, 16-bit unsigned, and 32-bit floating-point types.",
+    "local": "颜色空间转换函数支持8位无符号、16位无符号和32位浮点类型。"
+  },
+  {
+    "origin": "The subset of supported types for each function has been defined from practical needs and could be extended in future based on user requests.",
+    "local": "每个函数支持的类型子集是根据实际需要定义的，将来可以根据用户请求进行扩展。"
+  },
+  {
+    "origin": "InputArray and OutputArray",
+    "local": "输入阵列和输出阵列"
+  },
+  {
+    "origin": "Many OpenCV functions process dense 2-dimensional or multi-dimensional numerical arrays. Usually, such functions take cppMat as parameters, but in some cases it's more convenient to use",
+    "local": "许多OpenCV函数处理密集的二维或多维数值数组。通常，这类函数以cppMat作为参数，但在某些情况下使用起来更方便"
+  },
+  {
+    "origin": "(for a point set, for example) or",
+    "local": "（例如，对于点集）或"
+  },
+  {
+    "origin": "(for 3x3 homography matrix and such). To avoid many duplicates in the API, special \"proxy\" classes have been introduced. The base \"proxy\" class is",
+    "local": "（对于3x3单应矩阵等）。为了避免API中的许多重复，引入了特殊的“代理”类。基本“proxy”类是"
+  },
+  {
+    "origin": ". It is used for passing read-only arrays on a function input. The derived from InputArray class",
+    "local": ". 它用于在函数输入上传递只读数组。从InputArray类派生的"
+  },
+  {
+    "origin": "is used to specify an output array for a function. Normally, you should not care of those intermediate types (and you should not declare variables of those types explicitly) - it will all just work automatically. You can assume that instead of InputArray/OutputArray you can always use",
+    "local": "用于指定函数的输出数组。通常，您不应该关心这些中间类型（也不应该显式地声明这些类型的变量）——它们都将自动工作。您可以假设您可以使用"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": ". When a function has an optional input or output array, and you do not have or do not want one, pass",
+    "local": ". 当一个函数有一个可选的输入或输出数组，而您没有或不想要一个时，通过"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Error Handling",
+    "local": "错误处理"
+  },
+  {
+    "origin": "OpenCV uses exceptions to signal critical errors. When the input data has a correct format and belongs to the specified value range, but the algorithm cannot succeed for some reason (for example, the optimization algorithm did not converge), it returns a special error code (typically, just a boolean variable).",
+    "local": "OpenCV使用异常来表示严重错误。当输入数据具有正确的格式并且属于指定的值范围，但算法由于某种原因无法成功（例如，优化算法没有收敛）时，它将返回一个特殊的错误代码（通常，只是一个布尔变量）。"
+  },
+  {
+    "origin": "The exceptions can be instances of the",
+    "local": "例外情况可以是"
+  },
+  {
+    "origin": "class or its derivatives. In its turn,",
+    "local": "类或其衍生物。反过来，"
+  },
+  {
+    "origin": "is a derivative of std::exception. So it can be gracefully handled in the code using other standard C++ library components.",
+    "local": "是std::exception的派生。因此，它可以在代码中优雅地使用其他标准的C++库组件来处理。"
+  },
+  {
+    "origin": "The exception is typically thrown either using the",
+    "local": "通常使用"
+  },
+  {
+    "origin": "macro, or its printf-like",
+    "local": "宏或其类似printf的"
+  },
+  {
+    "origin": "variant, or using the",
+    "local": "变体，或使用"
+  },
+  {
+    "origin": "macro that checks the condition and throws an exception when it is not satisfied. For performance-critical code, there is",
+    "local": "检查条件并在不满足条件时抛出异常的宏。对于性能关键型代码，有"
+  },
+  {
+    "origin": "that is only retained in the Debug configuration. Due to the automatic memory management, all the intermediate buffers are automatically deallocated in case of a sudden error. You only need to add a try statement to catch exceptions, if needed: :",
+    "local": "只保留在调试配置中。由于自动内存管理，所有中间缓冲区都会在发生突发错误时自动释放。如果需要，只需添加try语句即可捕获异常："
+  },
+  {
+    "origin": "Multi-threading and Re-enterability",
+    "local": "多线程和可重入性"
+  },
+  {
+    "origin": "The current OpenCV implementation is fully re-enterable. That is, the same function or the same methods of different class instances can be called from different threads. Also, the same Mat can be used in different threads because the reference-counting operations use the architecture-specific atomic instructions.",
+    "local": "当前的OpenCV实现是完全可重新输入的。也就是说，可以从不同的线程调用不同类实例的相同函数或相同方法。同样，相同的Mat可以在不同的线程中使用，因为引用计数操作使用特定于体系结构的原子指令。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": "2021年05月20日 翻译"
+  }
+]

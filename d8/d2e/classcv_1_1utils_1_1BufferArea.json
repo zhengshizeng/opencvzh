@@ -1,0 +1,542 @@
+[
+  {
+    "origin": "OpenCV: cv::utils::BufferArea Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::utils::BufferArea Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "&raquo;",
+    "local": ""
+  },
+  {
+    "origin": "Manages memory block shared by muliple buffers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "(bool safe=false)",
+    "local": ""
+  },
+  {
+    "origin": "Class constructor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Class destructor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(T *&amp;ptr, size_t count,",
+    "local": ""
+  },
+  {
+    "origin": "alignment=sizeof(T))",
+    "local": ""
+  },
+  {
+    "origin": "Bind a pointer to local area.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Allocate memory and initialize all bound pointers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Release all memory and unbind all pointers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(T *&amp;ptr)",
+    "local": ""
+  },
+  {
+    "origin": "Fill one of buffers with zeroes.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Fill all buffers with zeroes.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Manages memory block shared by muliple buffers.",
+    "local": ""
+  },
+  {
+    "origin": "This class allows to allocate one large memory block and split it into several smaller non-overlapping buffers. In safe mode each buffer allocation will be performed independently, this mode allows dynamic memory access instrumentation using valgrind or memory sanitizer.",
+    "local": ""
+  },
+  {
+    "origin": "Safe mode can be explicitly switched ON in constructor. It will also be enabled when compiling with memory sanitizer support or in runtime with the environment variable",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Example of usage:",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This class is considered private and should be used only in OpenCV itself. API can be changed.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "BufferArea()",
+    "local": ""
+  },
+  {
+    "origin": "cv::utils::BufferArea::BufferArea",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "safe",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Class constructor.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "safe",
+    "local": ""
+  },
+  {
+    "origin": "Enable",
+    "local": ""
+  },
+  {
+    "origin": "safe",
+    "local": ""
+  },
+  {
+    "origin": "operation mode, each allocation will be performed independently.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "~BufferArea()",
+    "local": ""
+  },
+  {
+    "origin": "cv::utils::BufferArea::~BufferArea",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Class destructor.",
+    "local": ""
+  },
+  {
+    "origin": "All allocated memory well be freed. Each bound pointer will be reset to NULL.",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "allocate()",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "void cv::utils::BufferArea::allocate",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "ptr",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "count",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "alignment",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Bind a pointer to local area.",
+    "local": ""
+  },
+  {
+    "origin": "will store reference to the pointer and allocation parameters effectively owning the pointer and allocated memory. This operation has the same parameters and does the same job as the operator",
+    "local": ""
+  },
+  {
+    "origin": ", except allocation can be performed later during the",
+    "local": ""
+  },
+  {
+    "origin": "call.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "ptr",
+    "local": ""
+  },
+  {
+    "origin": "Reference to a pointer of type T. Must be NULL",
+    "local": ""
+  },
+  {
+    "origin": "count",
+    "local": ""
+  },
+  {
+    "origin": "Count of objects to be allocated, it has the same meaning as in the operator",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "alignment",
+    "local": ""
+  },
+  {
+    "origin": "Alignment of allocated memory. same meaning as in the operator",
+    "local": ""
+  },
+  {
+    "origin": "(C++17). Must be divisible by sizeof(T). Must be power of two.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "In safe mode allocation will be performed immediatly.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "commit()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::utils::BufferArea::commit",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Allocate memory and initialize all bound pointers.",
+    "local": ""
+  },
+  {
+    "origin": "Each pointer bound to the area with the",
+    "local": ""
+  },
+  {
+    "origin": "will be initialized and will be set to point to a memory block with requested size and alignment.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Does nothing in safe mode as all allocations will be performed by",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "release()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::utils::BufferArea::release",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Release all memory and unbind all pointers.",
+    "local": ""
+  },
+  {
+    "origin": "All memory will be freed and all pointers will be reset to NULL and untied from the area allowing to call",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "again.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "zeroFill()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "void cv::utils::BufferArea::zeroFill",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "ptr",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Fill one of buffers with zeroes.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "ptr",
+    "local": ""
+  },
+  {
+    "origin": "pointer to memory block previously added using",
+    "local": ""
+  },
+  {
+    "origin": "must be called before using this method",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "zeroFill()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::utils::BufferArea::zeroFill",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Fill all buffers with zeroes.",
+    "local": ""
+  },
+  {
+    "origin": "must be called before using this method",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/core/utils/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by &#160;",
+    "local": ""
+  }
+]

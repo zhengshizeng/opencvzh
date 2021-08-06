@@ -1,0 +1,4658 @@
+[
+  {
+    "origin": "OpenCV: opencv2/core/hal/intrin_cpp.hpp File Reference",
+    "local": "OpenCV:opencv2/core/hal/intrin\\u cpp.hpp文件参考"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "Macros",
+    "local": "宏"
+  },
+  {
+    "origin": "Typedefs",
+    "local": "类型定义"
+  },
+  {
+    "origin": "Enumerations",
+    "local": "枚举"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "Variables",
+    "local": "变量"
+  },
+  {
+    "origin": "intrin_cpp.hpp File Reference",
+    "local": "intrin\\\\u cpp.hpp文件参考"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": "“黑盒”表示与磁盘上的文件相关联的文件存储。"
+  },
+  {
+    "origin": "Macros",
+    "local": "宏"
+  },
+  {
+    "origin": "(func, bin_op, cast_op, _Tp2)",
+    "local": "（func、bin、cast、Tp2）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(_Tpvec, _Tp, prefix, suffix)&#160;&#160;&#160;inline _Tpvec prefix##_setall_##suffix(_Tp val) { return _Tpvec::all(val); }",
+    "local": "（tpvec，tp，前缀，后缀）&#160；&#160&#160；内联tpvec前缀#setall#suffix（tp val）{返回tpvec:：all（val）；}"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(_Tpvec, prefix, suffix)&#160;&#160;&#160;inline _Tpvec prefix##_setzero_##suffix() { return _Tpvec::zero(); }",
+    "local": "（用于Tpvec，前缀，后缀）&\\35；160；&3535；160;35;160?inline u Tpvec prefix35；35；u setzero u35；35；suffix（）{return u Tpvec:：zero（）}"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(_Tp, _Tpn, pack_suffix, cast)",
+    "local": "（\\u Tp，\\u Tpn，pack\\u后缀，cast）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(_Tp, _Tpn, pack_suffix, cast)",
+    "local": "（\\u Tp，\\u Tpn，pack\\u后缀，cast）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(_Tp, suffix)",
+    "local": "（\\u Tp，后缀）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(_Tp)",
+    "local": "（\\u-Tp）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(_Tp, _Tpn, pack_suffix, cast)",
+    "local": "（\\u Tp，\\u Tpn，pack\\u后缀，cast）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(_Tp, _Tpn, pack_suffix, cast)",
+    "local": "（\\u Tp，\\u Tpn，pack\\u后缀，cast）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(_Tp)",
+    "local": "（\\u-Tp）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(_Tp)",
+    "local": "（\\u-Tp）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(cmp_op)",
+    "local": "（cmp\\U操作）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(func, cfunc, _Tp2)",
+    "local": "（函数，cfunc，\\u Tp2）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(func, cfunc)",
+    "local": "（功能，cfunc）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(func, cfunc)",
+    "local": "（功能，cfunc）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(suffix, opA, opB)",
+    "local": "（后缀，opA，opB）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(shift_op)",
+    "local": "（轮班表）"
+  },
+  {
+    "origin": "Helper macro.",
+    "local": "辅助宏。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Typedefs",
+    "local": "类型定义"
+  },
+  {
+    "origin": "typedef v_reg&lt; float, 16 &gt;&#160;",
+    "local": "typedef v\\u reg&lt；浮动，16&gt&#160;"
+  },
+  {
+    "origin": "Sixteen 32-bit floating point values (single precision)",
+    "local": "十六个32位浮点值（单精度）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; float, 4 &gt;&#160;",
+    "local": "typedef v\\u reg&lt；浮动，4&gt&#160;"
+  },
+  {
+    "origin": "Four 32-bit floating point values (single precision)",
+    "local": "四个32位浮点值（单精度）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; float, 8 &gt;&#160;",
+    "local": "typedef v\\u reg&lt；浮动，8&gt&#160;"
+  },
+  {
+    "origin": "Eight 32-bit floating point values (single precision)",
+    "local": "八个32位浮点值（单精度）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; double, 2 &gt;&#160;",
+    "local": "typedef v\\u reg&lt；双倍，2&gt&#160;"
+  },
+  {
+    "origin": "Two 64-bit floating point values (double precision)",
+    "local": "两个64位浮点值（双精度）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; double, 4 &gt;&#160;",
+    "local": "typedef v\\u reg&lt；双倍，4&gt&#160;"
+  },
+  {
+    "origin": "Four 64-bit floating point values (double precision)",
+    "local": "四个64位浮点值（双精度）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; double, 8 &gt;&#160;",
+    "local": "typedef v\\u reg&lt；双倍，8&gt&#160;"
+  },
+  {
+    "origin": "Eight 64-bit floating point values (double precision)",
+    "local": "八个64位浮点值（双精度）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; short, 16 &gt;&#160;",
+    "local": "TypeDef v reg&lt；短，16&gt；&#160；"
+  },
+  {
+    "origin": "Sixteen 16-bit signed integer values.",
+    "local": "十六个16位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; short, 32 &gt;&#160;",
+    "local": "TypeDef v reg&lt；短，32&gt；&#160；"
+  },
+  {
+    "origin": "Thirty two 16-bit signed integer values.",
+    "local": "三十二个16位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; short, 8 &gt;&#160;",
+    "local": "TypeDef v reg&lt；短，8&gt；&#160；"
+  },
+  {
+    "origin": "Eight 16-bit signed integer values.",
+    "local": "八个16位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; int, 16 &gt;&#160;",
+    "local": "typedef v.a注册&lt；内景，16&gt；35；160;"
+  },
+  {
+    "origin": "Sixteen 32-bit signed integer values.",
+    "local": "十六个32位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; int, 4 &gt;&#160;",
+    "local": "typedef v.a注册&lt；内景，4&gt；35；160;"
+  },
+  {
+    "origin": "Four 32-bit signed integer values.",
+    "local": "四个32位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; int, 8 &gt;&#160;",
+    "local": "typedef v.a注册&lt；内景，8&gt；35；160;"
+  },
+  {
+    "origin": "Eight 32-bit signed integer values.",
+    "local": "八个32位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 2 &gt;&#160;",
+    "local": "，2&gt&#160;"
+  },
+  {
+    "origin": "Two 64-bit signed integer values.",
+    "local": "两个64位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 4 &gt;&#160;",
+    "local": "，4&gt&#160;"
+  },
+  {
+    "origin": "Four 64-bit signed integer values.",
+    "local": "四个64位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 8 &gt;&#160;",
+    "local": "，8&gt&#160;"
+  },
+  {
+    "origin": "Eight 64-bit signed integer values.",
+    "local": "八个64位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 16 &gt;&#160;",
+    "local": "，16&gt&#160;"
+  },
+  {
+    "origin": "Sixteen 8-bit signed integer values.",
+    "local": "十六个8位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 32 &gt;&#160;",
+    "local": "，32&gt&#160;"
+  },
+  {
+    "origin": "Thirty two 8-bit signed integer values.",
+    "local": "32个8位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 64 &gt;&#160;",
+    "local": "，64&gt&#160;"
+  },
+  {
+    "origin": "Sixty four 8-bit signed integer values.",
+    "local": "64个8位有符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 16 &gt;&#160;",
+    "local": "，16&gt&#160;"
+  },
+  {
+    "origin": "Sixteen 16-bit unsigned integer values.",
+    "local": "十六个16位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 32 &gt;&#160;",
+    "local": "，32&gt&#160;"
+  },
+  {
+    "origin": "Thirty two 16-bit unsigned integer values.",
+    "local": "三十二个16位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 8 &gt;&#160;",
+    "local": "，8&gt&#160;"
+  },
+  {
+    "origin": "Eight 16-bit unsigned integer values.",
+    "local": "八个16位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; unsigned, 16 &gt;&#160;",
+    "local": "类型定义\\u reg&lt；未签名，16&gt&#160;"
+  },
+  {
+    "origin": "Sixteen 32-bit unsigned integer values.",
+    "local": "十六个32位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; unsigned, 4 &gt;&#160;",
+    "local": "类型定义\\u reg&lt；未签名，4&gt&#160;"
+  },
+  {
+    "origin": "Four 32-bit unsigned integer values.",
+    "local": "四个32位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt; unsigned, 8 &gt;&#160;",
+    "local": "类型定义\\u reg&lt；未签名，8&gt&#160;"
+  },
+  {
+    "origin": "Eight 32-bit unsigned integer values.",
+    "local": "八个32位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 2 &gt;&#160;",
+    "local": "，2&gt&#160;"
+  },
+  {
+    "origin": "Two 64-bit unsigned integer values.",
+    "local": "两个64位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 4 &gt;&#160;",
+    "local": "，4&gt&#160;"
+  },
+  {
+    "origin": "Four 64-bit unsigned integer values.",
+    "local": "四个64位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 8 &gt;&#160;",
+    "local": "，8&gt&#160;"
+  },
+  {
+    "origin": "Eight 64-bit unsigned integer values.",
+    "local": "八个64位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 16 &gt;&#160;",
+    "local": "，16&gt&#160;"
+  },
+  {
+    "origin": "Sixteen 8-bit unsigned integer values.",
+    "local": "十六个8位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 32 &gt;&#160;",
+    "local": "，32&gt&#160;"
+  },
+  {
+    "origin": "Thirty two 8-bit unsigned integer values.",
+    "local": "32个8位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "typedef v_reg&lt;",
+    "local": "typedef v\\u reg&lt；"
+  },
+  {
+    "origin": ", 64 &gt;&#160;",
+    "local": "，64&gt&#160;"
+  },
+  {
+    "origin": "Sixty four 8-bit unsigned integer values.",
+    "local": "64个8位无符号整数值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Enumerations",
+    "local": "枚举"
+  },
+  {
+    "origin": "{",
+    "local": "{"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= 16,",
+    "local": "= 16,"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "= simd512_width",
+    "local": "=simd512\\宽度"
+  },
+  {
+    "origin": "}",
+    "local": "}"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Bitwise AND.",
+    "local": "按位AND。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（德语）总磷，n&gt；amp；a、 注册常量&lt；总磷，n&gt；amp；（二）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Not equal comparison.",
+    "local": "不等于比较。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Multiply values.",
+    "local": "乘以值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（德语）总磷，n&gt；amp；a、 注册常量&lt；总磷，n&gt；amp；（二）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Add values.",
+    "local": "添加值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（德语）总磷，n&gt；amp；a、 注册常量&lt；总磷，n&gt；amp；（二）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Subtract values.",
+    "local": "减去值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（德语）总磷，n&gt；amp；a、 注册常量&lt；总磷，n&gt；amp；（二）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Divide values.",
+    "local": "除以值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（德语）总磷，n&gt；amp；a、 注册常量&lt；总磷，n&gt；amp；（二）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Less-than comparison.",
+    "local": "比比较少。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, int imm)",
+    "local": "（const v\\u reg&lt_总磷，n&gt&amp；a、 国际货币基金组织）"
+  },
+  {
+    "origin": "Bitwise shift left.",
+    "local": "按位左移。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Less-than or equal comparison.",
+    "local": "小于或等于比较。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Equal comparison.",
+    "local": "平等比较。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Greater-than comparison.",
+    "local": "大于比较。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Greater-than or equal comparison.",
+    "local": "大于或等于比较。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, int imm)",
+    "local": "（const v\\u reg&lt_总磷，n&gt&amp；a、 国际货币基金组织）"
+  },
+  {
+    "origin": "Bitwise shift right.",
+    "local": "按位右移。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Bitwise XOR.",
+    "local": "按位异或。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（德语）总磷，n&gt；amp；a、 注册常量&lt；总磷，n&gt；amp；（二）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Bitwise OR.",
+    "local": "按位或。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（德语）总磷，n&gt；amp；a、 注册常量&lt；总磷，n&gt；amp；（二）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Bitwise NOT.",
+    "local": "按位不。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd256_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd256\\u宽度/尺寸（\\u Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load 256-bit length register contents from memory.",
+    "local": "从内存加载256位长度的寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd256_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd256\\u宽度/尺寸（\\u Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load register contents from memory (aligned)",
+    "local": "从内存加载寄存器内容（对齐）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, simd256_width/sizeof(typename V_TypeTraits&lt; _Tp &gt;::w_type)&gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：W类型，SIMD256宽度/大小（TypeName v TypeTraits&lt；TP&gt；：：W类型）&gt；&#160；"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load register contents from memory with double expand.",
+    "local": "使用双扩展从内存加载寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "v_reg&lt; float, simd256_width/sizeof(float)&gt;&#160;",
+    "local": "注册（&L）；float，simd256Āwidth/sizeof（float）&gt&#160;"
+  },
+  {
+    "origin": "(const float16_t *ptr)",
+    "local": "（常量浮动16\\u t*ptr）"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, simd256_width/sizeof(typename V_TypeTraits&lt; _Tp &gt;::q_type)&gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：Q类型，SIMD256宽度/大小（TypeName v TypeTraits&lt；TP&gt；：：Q类型）&gt；&#160；"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load register contents from memory with quad expand.",
+    "local": "使用四元展开从内存加载寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd256_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd256\\u宽度/尺寸（\\u Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *loptr, const _Tp *hiptr)",
+    "local": "（常数Tp*loptr，常数Tp*hiptr）"
+  },
+  {
+    "origin": "Load register contents from two memory blocks.",
+    "local": "从两个内存块加载寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd256_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd256\\u宽度/尺寸（\\u Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load 128-bits of data to lower part (high part is undefined).",
+    "local": "将128位数据加载到低位（高位未定义）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd512_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd512\\宽度/尺寸（\\ Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load 512-bit length register contents from memory.",
+    "local": "从内存加载512位长度的寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd512_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd512\\宽度/尺寸（\\ Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load register contents from memory (aligned)",
+    "local": "从内存加载寄存器内容（对齐）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, simd512_width/sizeof(typename V_TypeTraits&lt; _Tp &gt;::w_type)&gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：W类型，SIMD512宽度/大小（TypeName v TypeTraits&lt；TP&gt；：：W类型）&gt；&#160；"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load register contents from memory with double expand.",
+    "local": "使用双扩展从内存加载寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "v_reg&lt; float, simd512_width/sizeof(float)&gt;&#160;",
+    "local": "注册（&L）；float，simd512撸width/sizeof（float）&gt&#160;"
+  },
+  {
+    "origin": "(const float16_t *ptr)",
+    "local": "（常量浮动16\\u t*ptr）"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, simd512_width/sizeof(typename V_TypeTraits&lt; _Tp &gt;::q_type)&gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：Q类型，SIMD512宽度/大小（TypeName v TypeTraits&lt；TP&gt；：：Q类型）&gt；&#160；"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load register contents from memory with quad expand.",
+    "local": "使用四元展开从内存加载寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd512_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd512\\宽度/尺寸（\\ Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *loptr, const _Tp *hiptr)",
+    "local": "（常数Tp*loptr，常数Tp*hiptr）"
+  },
+  {
+    "origin": "Load register contents from two memory blocks.",
+    "local": "从两个内存块加载寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd512_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd512\\宽度/尺寸（\\ Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load 256-bits of data to lower part (high part is undefined).",
+    "local": "将256位数据加载到低部分（高部分未定义）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Absolute value of elements.",
+    "local": "元素的绝对值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Absolute difference.",
+    "local": "绝对差异。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;a, const v_reg&lt; float, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；a、 常量v\\u reg&lt；浮动，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; double, n &gt; &amp;a, const v_reg&lt; double, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt；双倍，n&gt&amp；a、 常量v\\u reg&lt；双倍，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Saturating absolute difference.",
+    "local": "饱和绝对差。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Add values without saturation.",
+    "local": "添加不饱和的值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int i, typename _Tp , int n&gt;",
+    "local": "模板&lt；int i，typename\\u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Broadcast i-th element of vector.",
+    "local": "广播向量的第i个元素。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Ceil elements.",
+    "local": "细胞元素。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; int, n *2 &gt;&#160;",
+    "local": "注册&lt；内景，n*2&gt；&35；160?"
+  },
+  {
+    "origin": "(const v_reg&lt; double, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；双倍，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Check if all packed values are less than zero.",
+    "local": "检查所有压缩值是否小于零。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Check if any of packed values is less than zero.",
+    "local": "检查压缩值是否小于零。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Combine vector from last elements of two vectors.",
+    "local": "组合两个向量的最后一个元素的向量。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Combine vector from first elements of two vectors.",
+    "local": "组合两个向量的第一个元素的向量。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；（一）"
+  },
+  {
+    "origin": "Convert to float.",
+    "local": "转换为浮动。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; float, n *2 &gt;&#160;",
+    "local": "注册（&L）；浮动，n*2&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; double, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；双倍，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Convert lower half to float.",
+    "local": "将下半部分转换为浮动。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; float, n *2 &gt;&#160;",
+    "local": "注册（&L）；浮动，n*2&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; double, n &gt; &amp;a, const v_reg&lt; double, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt；双倍，n&gt&amp；a、 常量v\\u reg&lt；双倍，n&gt&amp；（二）"
+  },
+  {
+    "origin": "Convert to float.",
+    "local": "转换为浮动。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; double, n/2 &gt;&#160;",
+    "local": "注册（&L）；双倍，n/2&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；（一）"
+  },
+  {
+    "origin": "Convert lower half to double.",
+    "local": "将下半部分转换为双半部分。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Convert lower half to double.",
+    "local": "将下半部分转换为双半部分。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Convert to double.",
+    "local": "转换为双精度。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；（一）"
+  },
+  {
+    "origin": "Convert to double high part of vector.",
+    "local": "转换为向量的双高部分。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Convert to double high part of vector.",
+    "local": "转换为向量的双高部分。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&#160；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Dot product of elements.",
+    "local": "元素的点积。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&#160；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;c)",
+    "local": "（常量V reg&lt；TP、N&gt；和安培；A、常量V reg&lt；TP、N&gt；和安培；B、常量V reg&lt；类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&gt；安培；（三）"
+  },
+  {
+    "origin": "Dot product of elements.",
+    "local": "元素的点积。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：Q类型，n/4&gt；&#160；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Dot product of elements and expand.",
+    "local": "点积的元素和扩展。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：Q类型，n/4&gt；&#160；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt; &amp;c)",
+    "local": "（常量V reg&lt；TP、N&gt；和安培；A、常量V reg&lt；TP、N&gt；和安培；B、常量V reg&lt；类型名V typetraits&lt；TP&gt；：：Q type，n/4&gt；&型安培；（三）"
+  },
+  {
+    "origin": "Dot product of elements.",
+    "local": "元素的点积。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; double, n/2 &gt;&#160;",
+    "local": "注册（&L）；双倍，n/2&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a, const v_reg&lt; int, n &gt; &amp;b)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；A、常量V reg&lt；整数，n&gt；&安培；（b）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; double, n/2 &gt;&#160;",
+    "local": "注册（&L）；双倍，n/2&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a, const v_reg&lt; int, n &gt; &amp;b, const v_reg&lt; double, n/2 &gt; &amp;c)",
+    "local": "（const v\\u reg&lt；内景，n&gt&amp；a、 常量v\\u reg&lt；内景，n&gt&amp；b、 常量v\\u reg&lt；双倍，n/2&gt&amp；（三）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：Q类型，n/4&gt；&#160；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Fast Dot product of elements and expand.",
+    "local": "快速点积元素和扩展。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：Q类型，n/4&gt；&#160；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, n/4 &gt; &amp;c)",
+    "local": "（常量V reg&lt；TP、N&gt；和安培；A、常量V reg&lt；TP、N&gt；和安培；B、常量V reg&lt；类型名V typetraits&lt；TP&gt；：：Q type，n/4&gt；&型安培；（三）"
+  },
+  {
+    "origin": "Fast Dot product of elements.",
+    "local": "元素的快速点积。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; double, n/2 &gt;&#160;",
+    "local": "注册（&L）；双倍，n/2&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a, const v_reg&lt; int, n &gt; &amp;b)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；A、常量V reg&lt；整数，n&gt；&安培；（b）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; double, n/2 &gt;&#160;",
+    "local": "注册（&L）；双倍，n/2&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a, const v_reg&lt; int, n &gt; &amp;b, const v_reg&lt; double, n/2 &gt; &amp;c)",
+    "local": "（const v\\u reg&lt；内景，n&gt&amp；a、 常量v\\u reg&lt；内景，n&gt&amp；b、 常量v\\u reg&lt；双倍，n/2&gt&amp；（三）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&#160；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Fast Dot product of elements.",
+    "local": "元素的快速点积。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&#160；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;c)",
+    "local": "（常量V reg&lt；TP、N&gt；和安培；A、常量V reg&lt；TP、N&gt；和安培；B、常量V reg&lt；类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&gt；安培；（三）"
+  },
+  {
+    "origin": "Fast Dot product of elements.",
+    "local": "元素的快速点积。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;b0, v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;b1)",
+    "local": "（常量V reg&lt；TP、N&gt；和安培；A、注册&lt；类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&gt；安培；B0，V注册&lt；类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&gt；安培；（B1）"
+  },
+  {
+    "origin": "Expand values to the wider pack type.",
+    "local": "将值扩展到更宽的包类型。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&#160；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Expand higher values to the wider pack type.",
+    "local": "将较大的值扩展到较宽的包类型。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&#160；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Expand lower values to the wider pack type.",
+    "local": "将较低的值扩展到较宽的包类型。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int s, typename _Tp , int n&gt;",
+    "local": "模板&lt；int s，类型\\u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Vector extract.",
+    "local": "向量提取。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int s, typename _Tp , int n&gt;",
+    "local": "模板&lt；int s，类型\\u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;v)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；（五）"
+  },
+  {
+    "origin": "Vector extract.",
+    "local": "向量提取。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Floor elements.",
+    "local": "地板元素。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; int, n *2 &gt;&#160;",
+    "local": "注册&lt；内景，n*2&gt；&35；160?"
+  },
+  {
+    "origin": "(const v_reg&lt; double, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；双倍，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; _Tp, n &gt; &amp;c)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；b、常量v reg&lt；TP，N&gt；&安培；（三）"
+  },
+  {
+    "origin": "Multiply and add.",
+    "local": "乘法和加法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;vec)",
+    "local": "（const v\\u reg&lt_Tp，n&gt；&gt；amp；（向量）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;vec)",
+    "local": "（const v\\u reg&lt_Tp，n&gt；&gt；amp；（向量）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Inversed square root.",
+    "local": "倒平方根。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd128_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd128峎宽度/尺寸（峎Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load register contents from memory.",
+    "local": "从内存加载寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd128_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd128峎宽度/尺寸（峎Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load register contents from memory (aligned)",
+    "local": "从内存加载寄存器内容（对齐）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const _Tp *ptr, v_reg&lt; _Tp, n &gt; &amp;a, v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（const*u Tp*ptr，v reg&lt；u）总磷，n&gt；amp；并且，在reg&lt；总磷，n&gt；amp；（二）"
+  },
+  {
+    "origin": "Load and deinterleave (2 channels)",
+    "local": "加载和逐行扫描（2个通道）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const _Tp *ptr, v_reg&lt; _Tp, n &gt; &amp;a, v_reg&lt; _Tp, n &gt; &amp;b, v_reg&lt; _Tp, n &gt; &amp;c)",
+    "local": "（const*u Tp*ptr，v reg&lt；u）总磷，n&gt；amp；并且，在reg&lt；总磷，n&gt；amp；b、 在reg&lt；u中总磷，n&gt；amp；（三）"
+  },
+  {
+    "origin": "Load and deinterleave (3 channels)",
+    "local": "加载和逐行扫描（3个通道）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const _Tp *ptr, v_reg&lt; _Tp, n &gt; &amp;a, v_reg&lt; _Tp, n &gt; &amp;b, v_reg&lt; _Tp, n &gt; &amp;c, v_reg&lt; _Tp, n &gt; &amp;d)",
+    "local": "（const*u Tp*ptr，v reg&lt；u）总磷，n&gt；amp；并且，在reg&lt；总磷，n&gt；amp；b、 在reg&lt；u中总磷，n&gt；amp；c、 在reg&lt；u中总磷，n&gt；amp；（四）"
+  },
+  {
+    "origin": "Load and deinterleave (4 channels)",
+    "local": "加载和逐行扫描（4个通道）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, simd128_width/sizeof(typename V_TypeTraits&lt; _Tp &gt;::w_type)&gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：W类型，SIMD128宽度/大小（TypeName v TypeTraits&lt；TP&gt；：：W类型）&gt；&#160；"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load register contents from memory with double expand.",
+    "local": "使用双扩展从内存加载寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "v_reg&lt; float, simd128_width/sizeof(float)&gt;&#160;",
+    "local": "注册（&L）；float，simd128璝width/sizeof（float）&gt&#160;"
+  },
+  {
+    "origin": "(const float16_t *ptr)",
+    "local": "（常量浮动16\\u t*ptr）"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::q_type, simd128_width/sizeof(typename V_TypeTraits&lt; _Tp &gt;::q_type)&gt;&#160;",
+    "local": "注册（&L）类型名V typetraits&lt；TP&gt；：：Q类型，SIMD128宽度/大小（TypeName v TypeTraits&lt；TP&gt；：：Q类型）&gt；&#160；"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load register contents from memory with quad expand.",
+    "local": "使用四元展开从内存加载寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd128_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd128峎宽度/尺寸（峎Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *loptr, const _Tp *hiptr)",
+    "local": "（常数Tp*loptr，常数Tp*hiptr）"
+  },
+  {
+    "origin": "Load register contents from two memory blocks.",
+    "local": "从两个内存块加载寄存器内容。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd128_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd128峎宽度/尺寸（峎Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *ptr)",
+    "local": "（施工图*ptr）"
+  },
+  {
+    "origin": "Load 64-bits of data to lower part (high part is undefined).",
+    "local": "将64位数据加载到低位（高位未定义）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd128_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd128峎宽度/尺寸（峎Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *tab, const int *idx)",
+    "local": "（const tp*tab，const int*idx）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const int *tab, const v_reg&lt; int, n &gt; &amp;idx)",
+    "local": "（const int*制表符，const v\\u reg&lt；内景，n&gt&amp；idx公司）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const unsigned *tab, const v_reg&lt; int, n &gt; &amp;idx)",
+    "local": "（const unsigned*制表符，const v\\u reg&lt；内景，n&gt&amp；idx公司）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const float *tab, const v_reg&lt; int, n &gt; &amp;idx)",
+    "local": "（const float*选项卡，const v\\u reg&lt；内景，n&gt&amp；idx公司）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; double, n/2 &gt;&#160;",
+    "local": "注册（&L）；双倍，n/2&gt&#160;"
+  },
+  {
+    "origin": "(const double *tab, const v_reg&lt; int, n &gt; &amp;idx)",
+    "local": "（const double*制表符，const v\\u reg&lt；内景，n&gt&amp；idx公司）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const float *tab, const v_reg&lt; int, n &gt; &amp;idx, v_reg&lt; float, n &gt; &amp;x, v_reg&lt; float, n &gt; &amp;y)",
+    "local": "（const float*选项卡，const v\\u reg&lt；内景，n&gt&amp；国际直拨电话，v\\u reg&lt；浮动，n&gt&amp；x、 注册（&L）；浮动，n&gt&amp；年）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const double *tab, const v_reg&lt; int, n *2 &gt; &amp;idx, v_reg&lt; double, n &gt; &amp;x, v_reg&lt; double, n &gt; &amp;y)",
+    "local": "（const double*制表符，const v\\u reg&lt；内景，n*2&quot；amp；国际直拨电话，v\\u reg&lt；双倍，n&gt；&gt；amp；x、 注册（&L）；双倍，n&gt；&gt；amp；（年）"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd128_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd128峎宽度/尺寸（峎Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *tab, const int *idx)",
+    "local": "（const tp*tab，const int*idx）"
+  },
+  {
+    "origin": "template&lt;typename _Tp &gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "v_reg&lt; _Tp, simd128_width/sizeof(_Tp)&gt;&#160;",
+    "local": "注册（&L）_Tp，simd128峎宽度/尺寸（峎Tp）&gt&#160;"
+  },
+  {
+    "origin": "(const _Tp *tab, const int *idx)",
+    "local": "（const tp*tab，const int*idx）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Magnitude.",
+    "local": "震级。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;v, const v_reg&lt; float, n &gt; &amp;a, const v_reg&lt; float, n &gt; &amp;b, const v_reg&lt; float, n &gt; &amp;c, const v_reg&lt; float, n &gt; &amp;d)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；v、 常量v\\u reg&lt；浮动，n&gt&amp；a、 常量v\\u reg&lt；浮动，n&gt&amp；b、 常量v\\u reg&lt；浮动，n&gt&amp；c、 常量v\\u reg&lt；浮动，n&gt&amp；（d）"
+  },
+  {
+    "origin": "Matrix multiplication.",
+    "local": "矩阵乘法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;v, const v_reg&lt; float, n &gt; &amp;a, const v_reg&lt; float, n &gt; &amp;b, const v_reg&lt; float, n &gt; &amp;c, const v_reg&lt; float, n &gt; &amp;d)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；v、 常量v\\u reg&lt；浮动，n&gt&amp；a、 常量v\\u reg&lt；浮动，n&gt&amp；b、 常量v\\u reg&lt；浮动，n&gt&amp；c、 常量v\\u reg&lt；浮动，n&gt&amp；（d）"
+  },
+  {
+    "origin": "Matrix multiplication and add.",
+    "local": "矩阵乘法和加法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Choose max values for each pair.",
+    "local": "为每对选择最大值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Choose min values for each pair.",
+    "local": "为每对选择最小值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;c, v_reg&lt; typename V_TypeTraits&lt; _Tp &gt;::w_type, n/2 &gt; &amp;d)",
+    "local": "（常量V reg&lt；TP、N&gt；和安培；A、常量V reg&lt；TP、N&gt；和安培；B、注册&lt；类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&gt；安培；C、注册&lt；类型名V typetraits&lt；TP&gt；：：W类型，n/2&gt；&gt；安培；（四）"
+  },
+  {
+    "origin": "Multiply and expand.",
+    "local": "乘法和展开。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Multiply and extract high part.",
+    "local": "乘法并提取高位部分。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Multiply values without saturation.",
+    "local": "乘以不饱和的值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; _Tp, n &gt; &amp;c)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；b、常量v reg&lt；TP，N&gt；&安培；（三）"
+  },
+  {
+    "origin": "A synonym for v_fma.",
+    "local": "vfufma的同义词。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; double, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；双倍，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(float16_t *ptr, const v_reg&lt; float, n &gt; &amp;v)",
+    "local": "（浮动16\\u t*ptr，const v\\u reg&lt；浮动，n&gt&amp；五）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;vec)",
+    "local": "（const v\\u reg&lt_Tp，n&gt；&gt；amp；（向量）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Count the 1 bits in the vector lanes and return result as corresponding unsigned type.",
+    "local": "计算向量通道中的1位，并将结果作为相应的无符号类型返回。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, v_reg&lt; _Tp, n &gt; &amp;low, v_reg&lt; _Tp, n &gt; &amp;high)",
+    "local": "（const v\\u reg&lt_总磷，n&gt&amp；a、 常量v\\u reg&lt_总磷，n&gt&amp；b、 注册（&L）_总磷，n&gt&amp；低，v\\u reg&lt_总磷，n&gt&amp；（高）"
+  },
+  {
+    "origin": "Combine two vectors from lower and higher parts of two other vectors.",
+    "local": "将另外两个向量的较低部分和较高部分的两个向量合并。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Find one max value.",
+    "local": "找到一个最大值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Find one min value.",
+    "local": "找到一个最小值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Sum absolute differences of values.",
+    "local": "求绝对值差之和。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Sum packed values.",
+    "local": "压缩值之和。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;a, const v_reg&lt; float, n &gt; &amp;b, const v_reg&lt; float, n &gt; &amp;c, const v_reg&lt; float, n &gt; &amp;d)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；a、 常量v\\u reg&lt；浮动，n&gt&amp；b、 常量v\\u reg&lt；浮动，n&gt&amp；c、 常量v\\u reg&lt；浮动，n&gt&amp；（d）"
+  },
+  {
+    "origin": "Sums all elements of each input vector, returns the vector of sums.",
+    "local": "对每个输入向量的所有元素求和，返回求和向量。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Vector reverse order.",
+    "local": "向量倒序。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int imm, typename _Tp , int n&gt;",
+    "local": "模板&lt；int imm，type name&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "template&lt;int imm, typename _Tp , int n&gt;",
+    "local": "模板&lt；int imm，type name&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Element shift left among vector.",
+    "local": "元素在向量之间左移。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int imm, typename _Tp , int n&gt;",
+    "local": "模板&lt；int imm，type name&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Element shift right among vector.",
+    "local": "元素在向量间右移。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int imm, typename _Tp , int n&gt;",
+    "local": "模板&lt；int imm，type name&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Round elements.",
+    "local": "圆形元素。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; int, n *2 &gt;&#160;",
+    "local": "注册&lt；内景，n*2&gt；&35；160?"
+  },
+  {
+    "origin": "(const v_reg&lt; double, n &gt; &amp;a, const v_reg&lt; double, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt；双倍，n&gt&amp；a、 常量v\\u reg&lt；双倍，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; int, n *2 &gt;&#160;",
+    "local": "注册&lt；内景，n*2&gt；&35；160?"
+  },
+  {
+    "origin": "(const v_reg&lt; double, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；双倍，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Get first negative lane index.",
+    "local": "获取第一个负车道索引。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;mask, const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt_总磷，n&gt&amp；掩码，常量v\\u reg&lt_总磷，n&gt&amp；a、 常量v\\u reg&lt_总磷，n&gt&amp；（二）"
+  },
+  {
+    "origin": "Per-element select (blend operation)",
+    "local": "每元素选择（混合操作）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Get negative values mask.",
+    "local": "获取负值掩码。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Square of the magnitude.",
+    "local": "大小的平方。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（const v.reg&lt；总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Square root of elements.",
+    "local": "元素的平方根。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（\\u Tp*ptr，const v\\u reg&lt_总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Store data to memory.",
+    "local": "将数据存储到内存中。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a, hal::StoreMode)",
+    "local": "（\\u Tp*ptr，const v\\u reg&lt_总磷，n&gt&amp；a、 hal:：存储模式）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（\\u Tp*ptr，const v\\u reg&lt_总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Store data to memory (aligned)",
+    "local": "将数据存储到内存（对齐）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a, hal::StoreMode)",
+    "local": "（\\u Tp*ptr，const v\\u reg&lt_总磷，n&gt&amp；a、 hal:：存储模式）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（\\u Tp*ptr，const v\\u reg&lt_总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（\\u Tp*ptr，const v\\u reg&lt_总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Store data to memory (higher half)",
+    "local": "将数据存储到内存（上半部分）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": "（\\u Tp*ptr，const v\\u reg&lt_总磷，n&gt&amp；a、 常量v\\u reg&lt_总磷，n&gt&amp；b、 hal:：StoreMode=hal:：STORE（未对齐）"
+  },
+  {
+    "origin": "Interleave and store (2 channels)",
+    "local": "交织和存储（2个通道）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; _Tp, n &gt; &amp;c, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": "（\\u Tp*ptr，const v\\u reg&lt_总磷，n&gt&amp；a、 常量v\\u reg&lt_总磷，n&gt&amp；b、 常量v\\u reg&lt_总磷，n&gt&amp；c、 hal:：StoreMode=hal:：STORE（未对齐）"
+  },
+  {
+    "origin": "Interleave and store (3 channels)",
+    "local": "交织和存储（3个通道）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b, const v_reg&lt; _Tp, n &gt; &amp;c, const v_reg&lt; _Tp, n &gt; &amp;d, hal::StoreMode=hal::STORE_UNALIGNED)",
+    "local": "（\\u Tp*ptr，const v\\u reg&lt_总磷，n&gt&amp；a、 常量v\\u reg&lt_总磷，n&gt&amp；b、 常量v\\u reg&lt_总磷，n&gt&amp；c、 常量v\\u reg&lt_总磷，n&gt&amp；d、 hal:：StoreMode=hal:：STORE（未对齐）"
+  },
+  {
+    "origin": "Interleave and store (4 channels)",
+    "local": "交织和存储（4个通道）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(_Tp *ptr, const v_reg&lt; _Tp, n &gt; &amp;a)",
+    "local": "（\\u Tp*ptr，const v\\u reg&lt_总磷，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Store data to memory (lower half)",
+    "local": "将数据存储到内存（下半部分）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a, const v_reg&lt; _Tp, n &gt; &amp;b)",
+    "local": "（常量v reg&lt；TP，N&gt；&安培；A、常量V reg&lt；TP，N&gt；&安培；（b）"
+  },
+  {
+    "origin": "Subtract values without saturation.",
+    "local": "减去没有饱和的值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(v_reg&lt; _Tp, n &gt; &amp;a0, const v_reg&lt; _Tp, n &gt; &amp;a1, const v_reg&lt; _Tp, n &gt; &amp;a2, const v_reg&lt; _Tp, n &gt; &amp;a3, v_reg&lt; _Tp, n &gt; &amp;b0, v_reg&lt; _Tp, n &gt; &amp;b1, v_reg&lt; _Tp, n &gt; &amp;b2, v_reg&lt; _Tp, n &gt; &amp;b3)",
+    "local": "（德语）总磷，n&gt；amp；a0，常数u寄存器&lt；总磷，n&gt；amp；a1，常数u寄存器&lt；总磷，n&gt；amp；a2，常数u寄存器&lt；总磷，n&gt；amp；a3，在reg&lt；u中总磷，n&gt；amp；b0，在reg&lt；u中总磷，n&gt；amp；b1，在reg&lt；u中总磷，n&gt；amp；b2，在reg&lt；u中总磷，n&gt；amp；b3）"
+  },
+  {
+    "origin": "Transpose 4x4 matrix.",
+    "local": "转置4x4矩阵。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; float, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；浮动，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Truncate elements.",
+    "local": "截断元素。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; int, n *2 &gt;&#160;",
+    "local": "注册&lt；内景，n*2&gt；&35；160?"
+  },
+  {
+    "origin": "(const v_reg&lt; double, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；双倍，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp , int n&gt;",
+    "local": "模板&lt；类型名称&u Tp，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp, n &gt; &amp;a0, const v_reg&lt; _Tp, n &gt; &amp;a1, v_reg&lt; _Tp, n &gt; &amp;b0, v_reg&lt; _Tp, n &gt; &amp;b1)",
+    "local": "（const v reg&lt；总磷，n&gt；amp；a0，常数u寄存器&lt；总磷，n&gt；amp；a1，在reg&lt；u中总磷，n&gt；amp；b0，在reg&lt；u中总磷，n&gt；amp；地下一层"
+  },
+  {
+    "origin": "Interleave two vectors.",
+    "local": "交织两个向量。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Init with zero",
+    "local": "初始化为零"
+  },
+  {
+    "origin": "Create new vector with zero elements",
+    "local": "使用零元素创建新向量"
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": "在uint8x16&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": "vŦu int8x16&#160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": "在uint16x8&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": "vŠu int16x8和Š160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": "在uint32x4&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": "vŠu int32x4&Š160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": "浮点数32x4&#160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": "浮点数64x2&#160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": "在uint64x2&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": "vŠu int64x2和Š160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint8x32&#160;",
+    "local": "在uint8x32&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int8x32&#160;",
+    "local": "vŠu int8x32和Š160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint16x16&#160;",
+    "local": "在uint16x16&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int16x16&#160;",
+    "local": "v#u int16x16和#160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint32x8&#160;",
+    "local": "在uint32x8&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int32x8&#160;",
+    "local": "vŠu int32x8和Š160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_float32x8&#160;",
+    "local": "浮点数32x8&#160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_float64x4&#160;",
+    "local": "浮点数64x4&#160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint64x4&#160;",
+    "local": "在uint64x4&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int64x4&#160;",
+    "local": "vŠu int64x4和Š160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint8x64&#160;",
+    "local": "在uint8x64&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int8x64&#160;",
+    "local": "vŦu int8x64和#160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint16x32&#160;",
+    "local": "在uint16x32&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int16x32&#160;",
+    "local": "vŠu int16x32和Š160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint32x16&#160;",
+    "local": "在uint32x16&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int32x16&#160;",
+    "local": "vŠu int32x16和Š160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_float32x16&#160;",
+    "local": "浮点数32x16&#160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_float64x8&#160;",
+    "local": "浮点数64x8&#160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_uint64x8&#160;",
+    "local": "在uint64x8&35；160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "v_int64x8&#160;",
+    "local": "vŠu int64x8和Š160；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Init with value",
+    "local": "带值初始化"
+  },
+  {
+    "origin": "Create new vector with elements set to a specific value",
+    "local": "创建元素设置为特定值的新向量"
+  },
+  {
+    "origin": "v_uint8x16&#160;",
+    "local": "在uint8x16&35；160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_int8x16&#160;",
+    "local": "vŦu int8x16&#160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_uint16x8&#160;",
+    "local": "在uint16x8&35；160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_int16x8&#160;",
+    "local": "vŠu int16x8和Š160；"
+  },
+  {
+    "origin": "(short val)",
+    "local": "（短val）"
+  },
+  {
+    "origin": "v_uint32x4&#160;",
+    "local": "在uint32x4&35；160；"
+  },
+  {
+    "origin": "(unsigned val)",
+    "local": "（未签名val）"
+  },
+  {
+    "origin": "v_int32x4&#160;",
+    "local": "vŠu int32x4&Š160；"
+  },
+  {
+    "origin": "(int val)",
+    "local": "（内部值）"
+  },
+  {
+    "origin": "v_float32x4&#160;",
+    "local": "浮点数32x4&#160；"
+  },
+  {
+    "origin": "(float val)",
+    "local": "（浮动值）"
+  },
+  {
+    "origin": "v_float64x2&#160;",
+    "local": "浮点数64x2&#160；"
+  },
+  {
+    "origin": "(double val)",
+    "local": "（双val）"
+  },
+  {
+    "origin": "v_uint64x2&#160;",
+    "local": "在uint64x2&35；160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_int64x2&#160;",
+    "local": "vŠu int64x2和Š160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_uint8x32&#160;",
+    "local": "在uint8x32&35；160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_int8x32&#160;",
+    "local": "vŠu int8x32和Š160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_uint16x16&#160;",
+    "local": "在uint16x16&35；160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_int16x16&#160;",
+    "local": "v#u int16x16和#160；"
+  },
+  {
+    "origin": "(short val)",
+    "local": "（短val）"
+  },
+  {
+    "origin": "v_uint32x8&#160;",
+    "local": "在uint32x8&35；160；"
+  },
+  {
+    "origin": "(unsigned val)",
+    "local": "（未签名val）"
+  },
+  {
+    "origin": "v_int32x8&#160;",
+    "local": "vŠu int32x8和Š160；"
+  },
+  {
+    "origin": "(int val)",
+    "local": "（内部值）"
+  },
+  {
+    "origin": "v_float32x8&#160;",
+    "local": "浮点数32x8&#160；"
+  },
+  {
+    "origin": "(float val)",
+    "local": "（浮动值）"
+  },
+  {
+    "origin": "v_float64x4&#160;",
+    "local": "浮点数64x4&#160；"
+  },
+  {
+    "origin": "(double val)",
+    "local": "（双val）"
+  },
+  {
+    "origin": "v_uint64x4&#160;",
+    "local": "在uint64x4&35；160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_int64x4&#160;",
+    "local": "vŠu int64x4和Š160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_uint8x64&#160;",
+    "local": "在uint8x64&35；160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_int8x64&#160;",
+    "local": "vŦu int8x64和#160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_uint16x32&#160;",
+    "local": "在uint16x32&35；160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_int16x32&#160;",
+    "local": "vŠu int16x32和Š160；"
+  },
+  {
+    "origin": "(short val)",
+    "local": "（短val）"
+  },
+  {
+    "origin": "v_uint32x16&#160;",
+    "local": "在uint32x16&35；160；"
+  },
+  {
+    "origin": "(unsigned val)",
+    "local": "（未签名val）"
+  },
+  {
+    "origin": "v_int32x16&#160;",
+    "local": "vŠu int32x16和Š160；"
+  },
+  {
+    "origin": "(int val)",
+    "local": "（内部值）"
+  },
+  {
+    "origin": "v_float32x16&#160;",
+    "local": "浮点数32x16&#160；"
+  },
+  {
+    "origin": "(float val)",
+    "local": "（浮动值）"
+  },
+  {
+    "origin": "v_float64x8&#160;",
+    "local": "浮点数64x8&#160；"
+  },
+  {
+    "origin": "(double val)",
+    "local": "（双val）"
+  },
+  {
+    "origin": "v_uint64x8&#160;",
+    "local": "在uint64x8&35；160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "v_int64x8&#160;",
+    "local": "vŠu int64x8和Š160；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "val)",
+    "local": "瓦尔）"
+  },
+  {
+    "origin": "Reinterpret",
+    "local": "重新解释"
+  },
+  {
+    "origin": "Convert vector to different type without modifying underlying data.",
+    "local": "将向量转换为不同的类型而不修改基础数据。"
+  },
+  {
+    "origin": "template&lt;typename _Tp0 , int n0&gt;",
+    "local": "模板&lt；类型名称“u Tp0”，int n0&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", n0 *sizeof(_Tp0)/sizeof(",
+    "local": "，n0*sizeof（\\u Tp0）/sizeof("
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp0, n0 &gt; &amp;a)",
+    "local": "（const v.reg&lt；Tp0，n0&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp0 , int n0&gt;",
+    "local": "模板&lt；类型名称“u Tp0”，int n0&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", n0 *sizeof(_Tp0)/sizeof(",
+    "local": "，n0*sizeof（\\u Tp0）/sizeof("
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp0, n0 &gt; &amp;a)",
+    "local": "（const v.reg&lt；Tp0，n0&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp0 , int n0&gt;",
+    "local": "模板&lt；类型名称“u Tp0”，int n0&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", n0 *sizeof(_Tp0)/sizeof(",
+    "local": "，n0*sizeof（\\u Tp0）/sizeof("
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp0, n0 &gt; &amp;a)",
+    "local": "（const v.reg&lt；Tp0，n0&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp0 , int n0&gt;",
+    "local": "模板&lt；类型名称“u Tp0”，int n0&gt；"
+  },
+  {
+    "origin": "v_reg&lt; short, n0 *sizeof(_Tp0)/sizeof(short)&gt;&#160;",
+    "local": "注册（&L）；短，n0*sizeof（\\u Tp0）/sizeof（短）&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp0, n0 &gt; &amp;a)",
+    "local": "（const v.reg&lt；Tp0，n0&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp0 , int n0&gt;",
+    "local": "模板&lt；类型名称“u Tp0”，int n0&gt；"
+  },
+  {
+    "origin": "v_reg&lt; unsigned, n0 *sizeof(_Tp0)/sizeof(unsigned)&gt;&#160;",
+    "local": "注册（&L）；无符号，n0*sizeof\\u Tp0）/sizeof（无符号）&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp0, n0 &gt; &amp;a)",
+    "local": "（const v.reg&lt；Tp0，n0&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp0 , int n0&gt;",
+    "local": "模板&lt；类型名称“u Tp0”，int n0&gt；"
+  },
+  {
+    "origin": "v_reg&lt; int, n0 *sizeof(_Tp0)/sizeof(int)&gt;&#160;",
+    "local": "注册（&L）；int，n0*sizeof（\\u Tp0）/sizeof（int）&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp0, n0 &gt; &amp;a)",
+    "local": "（const v.reg&lt；Tp0，n0&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp0 , int n0&gt;",
+    "local": "模板&lt；类型名称“u Tp0”，int n0&gt；"
+  },
+  {
+    "origin": "v_reg&lt; float, n0 *sizeof(_Tp0)/sizeof(float)&gt;&#160;",
+    "local": "注册（&L）；浮点数，n0*sizeof（\\u Tp0）/sizeof（float）&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp0, n0 &gt; &amp;a)",
+    "local": "（const v.reg&lt；Tp0，n0&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp0 , int n0&gt;",
+    "local": "模板&lt；类型名称“u Tp0”，int n0&gt；"
+  },
+  {
+    "origin": "v_reg&lt; double, n0 *sizeof(_Tp0)/sizeof(double)&gt;&#160;",
+    "local": "注册（&L）；双精度，n0*sizeof（\\u Tp0）/sizeof（double）&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp0, n0 &gt; &amp;a)",
+    "local": "（const v.reg&lt；Tp0，n0&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp0 , int n0&gt;",
+    "local": "模板&lt；类型名称“u Tp0”，int n0&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", n0 *sizeof(_Tp0)/sizeof(",
+    "local": "，n0*sizeof（\\u Tp0）/sizeof("
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp0, n0 &gt; &amp;a)",
+    "local": "（const v.reg&lt；Tp0，n0&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;typename _Tp0 , int n0&gt;",
+    "local": "模板&lt；类型名称“u Tp0”，int n0&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", n0 *sizeof(_Tp0)/sizeof(",
+    "local": "，n0*sizeof（\\u Tp0）/sizeof("
+  },
+  {
+    "origin": "(const v_reg&lt; _Tp0, n0 &gt; &amp;a)",
+    "local": "（const v.reg&lt；Tp0，n0&gt&amp；（一）"
+  },
+  {
+    "origin": "Left shift",
+    "local": "左移"
+  },
+  {
+    "origin": "Shift left",
+    "local": "向左移动"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; short, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；短，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; unsigned, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；未签名，n&gt；>；amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Right shift",
+    "local": "右移"
+  },
+  {
+    "origin": "Shift right",
+    "local": "右移"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; short, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；短，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; unsigned, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；未签名，n&gt；>；amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Rounding shift",
+    "local": "成圆移位"
+  },
+  {
+    "origin": "Rounding shift right",
+    "local": "舍入右移"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; short, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；短，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; unsigned, n &gt; &amp;a)",
+    "local": "（const v\\u reg&lt；未签名，n&gt；>；amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Pack",
+    "local": "包裹"
+  },
+  {
+    "origin": "Pack values from two vectors to one",
+    "local": "将两个向量的值打包为一个向量"
+  },
+  {
+    "origin": "Return vector type have twice more elements than input vector types. Variant with",
+    "local": "返回向量类型的元素数是输入向量类型的两倍。变体"
+  },
+  {
+    "origin": "u",
+    "local": "u"
+  },
+  {
+    "origin": "suffix also converts to corresponding unsigned type.",
+    "local": "后缀还转换为相应的无符号类型。"
+  },
+  {
+    "origin": "pack: for 16-, 32- and 64-bit integer input types",
+    "local": "包：用于16位、32位和64位整数输入类型"
+  },
+  {
+    "origin": "pack_u: for 16- and 32-bit signed integer input types",
+    "local": "pack_：用于16位和32位有符号整数输入类型"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "All variants except 64-bit use saturation.",
+    "local": "除64位以外的所有变体都使用饱和。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a, const v_reg&lt;",
+    "local": "，n&gt；&安培；A、常量V reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;b)",
+    "local": "，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; short, n &gt; &amp;a, const v_reg&lt; short, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt；短，n&gt&amp；a、 常量v\\u reg&lt；短，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; unsigned, n &gt; &amp;a, const v_reg&lt; unsigned, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt；未签名，n&gt；>；amp；a、 常量v\\u reg&lt；未签名，n&gt；>；amp；（二）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; short, 2 *n &gt;&#160;",
+    "local": "注册（&L）；短，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a, const v_reg&lt; int, n &gt; &amp;b)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；A、常量V reg&lt；整数，n&gt；&安培；（b）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; unsigned, 2 *n &gt;&#160;",
+    "local": "注册（&L）；无符号，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a, const v_reg&lt;",
+    "local": "，n&gt；&安培；A、常量V reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;b)",
+    "local": "，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; int, 2 *n &gt;&#160;",
+    "local": "注册&lt；内景，2*n&gt；&35；160?"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a, const v_reg&lt;",
+    "local": "，n&gt；&安培；A、常量V reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;b)",
+    "local": "，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; short, n &gt; &amp;a, const v_reg&lt; short, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt；短，n&gt&amp；a、 常量v\\u reg&lt；短，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a, const v_reg&lt; int, n &gt; &amp;b)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；A、常量V reg&lt；整数，n&gt；&安培；（b）"
+  },
+  {
+    "origin": "Pack with rounding shift",
+    "local": "成圆移位包装"
+  },
+  {
+    "origin": "Pack values from two vectors to one with rounding shift",
+    "local": "使用舍入移位将两个向量的值打包为一个向量"
+  },
+  {
+    "origin": "Values from the input vectors will be shifted right by",
+    "local": "输入向量的值将右移"
+  },
+  {
+    "origin": "n",
+    "local": "n"
+  },
+  {
+    "origin": "bits with rounding, converted to narrower type and returned in the result vector. Variant with",
+    "local": "带舍入的位，转换成更窄的类型并返回结果向量。变体"
+  },
+  {
+    "origin": "u",
+    "local": "u"
+  },
+  {
+    "origin": "suffix converts to unsigned type.",
+    "local": "后缀转换为无符号类型。"
+  },
+  {
+    "origin": "pack: for 16-, 32- and 64-bit integer input types",
+    "local": "包：用于16位、32位和64位整数输入类型"
+  },
+  {
+    "origin": "pack_u: for 16- and 32-bit signed integer input types",
+    "local": "pack_：用于16位和32位有符号整数输入类型"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "All variants except 64-bit use saturation.",
+    "local": "除64位以外的所有变体都使用饱和。"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a, const v_reg&lt;",
+    "local": "，n&gt；&安培；A、常量V reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;b)",
+    "local": "，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; short, n &gt; &amp;a, const v_reg&lt; short, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt；短，n&gt&amp；a、 常量v\\u reg&lt；短，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; unsigned, n &gt; &amp;a, const v_reg&lt; unsigned, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt；未签名，n&gt；>；amp；a、 常量v\\u reg&lt；未签名，n&gt；>；amp；（二）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; short, 2 *n &gt;&#160;",
+    "local": "注册（&L）；短，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a, const v_reg&lt; int, n &gt; &amp;b)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；A、常量V reg&lt；整数，n&gt；&安培；（b）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; unsigned, 2 *n &gt;&#160;",
+    "local": "注册（&L）；无符号，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a, const v_reg&lt;",
+    "local": "，n&gt；&安培；A、常量V reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;b)",
+    "local": "，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt; int, 2 *n &gt;&#160;",
+    "local": "注册&lt；内景，2*n&gt；&35；160?"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a, const v_reg&lt;",
+    "local": "，n&gt；&安培；A、常量V reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;b)",
+    "local": "，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; short, n &gt; &amp;a, const v_reg&lt; short, n &gt; &amp;b)",
+    "local": "（const v\\u reg&lt；短，n&gt&amp；a、 常量v\\u reg&lt；短，n&gt&amp；（二）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; int, n &gt; &amp;a, const v_reg&lt; int, n &gt; &amp;b)",
+    "local": "（常量V REG&lt；整数，n&gt；&安培；A、常量V reg&lt；整数，n&gt；&安培；（b）"
+  },
+  {
+    "origin": "Pack and store",
+    "local": "包装和储存"
+  },
+  {
+    "origin": "Store values from the input vector into memory with pack",
+    "local": "使用pack将输入向量中的值存储到内存中"
+  },
+  {
+    "origin": "Values will be stored into memory with conversion to narrower type. Variant with",
+    "local": "值将存储到内存中，并转换为更窄的类型。变体"
+  },
+  {
+    "origin": "u",
+    "local": "u"
+  },
+  {
+    "origin": "suffix converts to corresponding unsigned type.",
+    "local": "后缀转换为相应的无符号类型。"
+  },
+  {
+    "origin": "pack: for 16-, 32- and 64-bit integer input types",
+    "local": "包：用于16位、32位和64位整数输入类型"
+  },
+  {
+    "origin": "pack_u: for 16- and 32-bit signed integer input types",
+    "local": "pack_：用于16位和32位有符号整数输入类型"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "All variants except 64-bit use saturation.",
+    "local": "除64位以外的所有变体都使用饱和。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*ptr, const v_reg&lt;",
+    "local": "*ptr，常数v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*ptr, const v_reg&lt; short, n &gt; &amp;a)",
+    "local": "*ptr，常数v\\u reg&lt；短，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*ptr, const v_reg&lt; unsigned, n &gt; &amp;a)",
+    "local": "*ptr，常数v\\u reg&lt；未签名，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(short *ptr, const v_reg&lt; int, n &gt; &amp;a)",
+    "local": "（短*ptr，const v\\u reg&lt；内景，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(unsigned *ptr, const v_reg&lt;",
+    "local": "（unsigned*ptr，const v reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(int *ptr, const v_reg&lt;",
+    "local": "（内景*ptr，const v u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*ptr, const v_reg&lt; short, n &gt; &amp;a)",
+    "local": "*ptr，常数v\\u reg&lt；短，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*ptr, const v_reg&lt; int, n &gt; &amp;a)",
+    "local": "*ptr，常数v\\u reg&lt；内景，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Pack and store with rounding shift",
+    "local": "打包存放，轮班"
+  },
+  {
+    "origin": "Store values from the input vector into memory with pack",
+    "local": "使用pack将输入向量中的值存储到内存中"
+  },
+  {
+    "origin": "Values will be shifted",
+    "local": "值将被移动"
+  },
+  {
+    "origin": "n",
+    "local": "n"
+  },
+  {
+    "origin": "bits right with rounding, converted to narrower type and stored into memory. Variant with",
+    "local": "带舍入的右位，转换成更窄的类型并存储到内存中。变体"
+  },
+  {
+    "origin": "u",
+    "local": "u"
+  },
+  {
+    "origin": "suffix converts to unsigned type.",
+    "local": "后缀转换为无符号类型。"
+  },
+  {
+    "origin": "pack: for 16-, 32- and 64-bit integer input types",
+    "local": "包：用于16位、32位和64位整数输入类型"
+  },
+  {
+    "origin": "pack_u: for 16- and 32-bit signed integer input types",
+    "local": "pack_：用于16位和32位有符号整数输入类型"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "All variants except 64-bit use saturation.",
+    "local": "除64位以外的所有变体都使用饱和。"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*ptr, const v_reg&lt;",
+    "local": "*ptr，常数v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*ptr, const v_reg&lt; short, n &gt; &amp;a)",
+    "local": "*ptr，常数v\\u reg&lt；短，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*ptr, const v_reg&lt; unsigned, n &gt; &amp;a)",
+    "local": "*ptr，常数v\\u reg&lt；未签名，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(short *ptr, const v_reg&lt; int, n &gt; &amp;a)",
+    "local": "（短*ptr，const v\\u reg&lt；内景，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(unsigned *ptr, const v_reg&lt;",
+    "local": "（unsigned*ptr，const v reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(int *ptr, const v_reg&lt;",
+    "local": "（内景*ptr，const v u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a)",
+    "local": "，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*ptr, const v_reg&lt; short, n &gt; &amp;a)",
+    "local": "*ptr，常数v\\u reg&lt；短，n&gt&amp；（一）"
+  },
+  {
+    "origin": "template&lt;int shift, int n&gt;",
+    "local": "模板&lt；int shift，int n&gt；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "*ptr, const v_reg&lt; int, n &gt; &amp;a)",
+    "local": "*ptr，常数v\\u reg&lt；内景，n&gt&amp；（一）"
+  },
+  {
+    "origin": "Pack boolean values",
+    "local": "压缩布尔值"
+  },
+  {
+    "origin": "Pack boolean values from multiple vectors to one unsigned 8-bit integer vector",
+    "local": "将多个向量中的布尔值打包为一个无符号8位整数向量"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Must provide valid boolean values to guarantee same result for all architectures.",
+    "local": "必须提供有效的布尔值以保证所有体系结构的结果相同。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 2 *n &gt;&#160;",
+    "local": "，2*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a, const v_reg&lt;",
+    "local": "，n&gt；&安培；A、常量V reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;b)",
+    "local": "，n&gt&amp；（二）"
+  },
+  {
+    "origin": "! For 16-bit boolean values",
+    "local": "! 对于16位布尔值"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 4 *n &gt;&#160;",
+    "local": "，4*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt; unsigned, n &gt; &amp;a, const v_reg&lt; unsigned, n &gt; &amp;b, const v_reg&lt; unsigned, n &gt; &amp;c, const v_reg&lt; unsigned, n &gt; &amp;d)",
+    "local": "（const v\\u reg&lt；未签名，n&gt；>；amp；a、 常量v\\u reg&lt；未签名，n&gt；>；amp；b、 常量v\\u reg&lt；未签名，n&gt；>；amp；c、 常量v\\u reg&lt；未签名，n&gt；>；amp；（四）"
+  },
+  {
+    "origin": "template&lt;int n&gt;",
+    "local": "模板&lt；国际n&gt；"
+  },
+  {
+    "origin": "v_reg&lt;",
+    "local": "注册（&L）；"
+  },
+  {
+    "origin": ", 8 *n &gt;&#160;",
+    "local": "，8*n&gt&#160;"
+  },
+  {
+    "origin": "(const v_reg&lt;",
+    "local": "（const v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;a, const v_reg&lt;",
+    "local": "，n&gt；&安培；A、常量V reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;b, const v_reg&lt;",
+    "local": "，n&gt&amp；b、 常量v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;c, const v_reg&lt;",
+    "local": "，n&gt；&安培；C、常量v reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;d, const v_reg&lt;",
+    "local": "，n&gt；和安培；D、常数V reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;e, const v_reg&lt;",
+    "local": "n&gt；>；amp；e、 常数u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;f, const v_reg&lt;",
+    "local": "，n&gt&amp；f、 常量v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;g, const v_reg&lt;",
+    "local": "，n&gt&amp；g、 常量v\\u reg&lt；"
+  },
+  {
+    "origin": ", n &gt; &amp;h)",
+    "local": "，n&gt&amp；小时）"
+  },
+  {
+    "origin": "Variables",
+    "local": "变量"
+  },
+  {
+    "origin": "[]",
+    "local": "[]"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:33为OpenCV生成，&#160；"
+  }
+]

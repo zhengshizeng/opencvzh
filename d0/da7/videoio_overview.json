@@ -1,0 +1,254 @@
+[
+  {
+    "origin": "OpenCV: Video I/O with OpenCV Overview",
+    "local": "OpenCV：带有OpenCV概述的视频I/O"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Video I/O with OpenCV Overview",
+    "local": "带OpenCV的视频I/O概述"
+  },
+  {
+    "origin": "See also:",
+    "local": "另请参见："
+  },
+  {
+    "origin": "Tutorials:",
+    "local": "教程："
+  },
+  {
+    "origin": "General Information",
+    "local": "一般信息"
+  },
+  {
+    "origin": "The OpenCV",
+    "local": "OpenCV"
+  },
+  {
+    "origin": "module is a set of classes and functions to read and write video or images sequence.",
+    "local": "模块是一组用于读取和写入视频或图像序列的类和函数。"
+  },
+  {
+    "origin": "Basically, the module provides the",
+    "local": "基本上，模块提供"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "classes as 2-layer interface to many video I/O APIs used as backend.",
+    "local": "类作为2层接口连接到许多用作后端的视频I/O API。"
+  },
+  {
+    "origin": "videoio_overview.svg",
+    "local": "视频概述.svg"
+  },
+  {
+    "origin": "Video I/O with OpenCV",
+    "local": "带OpenCV的视频I/O"
+  },
+  {
+    "origin": "Some backends such as Direct Show (DSHOW), Microsoft Media Foundation (MSMF), Video 4 Linux (V4L), etc... are interfaces to the video I/O library provided by the operating system.",
+    "local": "一些后端，如DirectShow（DSHOW）、Microsoft Media Foundation（MSMF）、Video 4 Linux（V4L）等。。。是操作系统提供的视频I/O库的接口。"
+  },
+  {
+    "origin": "Some others backends like OpenNI2 for Kinect, Intel Perceptual Computing SDK, GStreamer, XIMEA Camera API, etc... are interfaces to proprietary drivers or to external library.",
+    "local": "其他一些后端，如OpenNI2 for Kinect、Intel Perceptive Computing SDK、GStreamer、XIMEA Camera API等。。。是专用驱动程序或外部库的接口。"
+  },
+  {
+    "origin": "See the list of supported backends here:",
+    "local": "请参见此处支持的后端列表："
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "Some backends are experimental use them at your own risk",
+    "local": "有些后端是实验性的，使用它们的风险自负"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Each backend supports devices properties (",
+    "local": "每个后端都支持设备属性("
+  },
+  {
+    "origin": ") in a different way or might not support any property at all.",
+    "local": ")或者根本不支持任何属性。"
+  },
+  {
+    "origin": "Select the backend at runtime",
+    "local": "在运行时选择后端"
+  },
+  {
+    "origin": "OpenCV automatically selects and uses first available backend (",
+    "local": "OpenCV自动选择并使用第一个可用的后端("
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "As advanced usage you can select the backend to use at runtime. Currently this option is available only with VideoCapture.",
+    "local": "作为高级用法，您可以选择在运行时使用的后端。目前，此选项仅适用于VideoCapture。"
+  },
+  {
+    "origin": "For example to grab from default camera using Direct Show as backend",
+    "local": "例如，从默认相机抓取使用直接显示作为后端"
+  },
+  {
+    "origin": "If you want to grab from a file using the Direct Show as backend:",
+    "local": "如果要使用Direct Show作为后端从文件中获取："
+  },
+  {
+    "origin": "See also",
+    "local": "另请参见"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "How to enable backends",
+    "local": "如何启用后端"
+  },
+  {
+    "origin": "There are two kinds of videoio backends: built-in backends and plugins which will be loaded at runtime (since OpenCV 4.1.0). Use functions",
+    "local": "有两种videoio后端：内置后端和将在运行时加载的插件（自OpenCV 4.1.0以来）。使用函数"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "to check actual presence of backend during runtime.",
+    "local": "在运行时检查后端的实际存在。"
+  },
+  {
+    "origin": "To enable built-in videoio backends:",
+    "local": "要启用内置videoio后端："
+  },
+  {
+    "origin": "Enable corresponding CMake option, e.g.",
+    "local": "启用相应的CMake选项，例如。"
+  },
+  {
+    "origin": "Rebuild OpenCV",
+    "local": "重建OpenCV"
+  },
+  {
+    "origin": "To enable dynamically-loaded videoio backend (currently supported: GStreamer and FFmpeg on Linux, MediaSDK on Linux and Windows):",
+    "local": "要启用动态加载的videoio后端（当前支持：Linux上的GStreamer和FFmpeg，Linux和Windows上的MediaSDK）："
+  },
+  {
+    "origin": "Enable backend and add it to the list of plugins:",
+    "local": "启用后端并将其添加到插件列表："
+  },
+  {
+    "origin": "CMake options",
+    "local": "CMake选项"
+  },
+  {
+    "origin": "Rebuild OpenCV",
+    "local": "重建OpenCV"
+  },
+  {
+    "origin": "Check that",
+    "local": "检查一下"
+  },
+  {
+    "origin": "library exists in the",
+    "local": "库存在于"
+  },
+  {
+    "origin": "directory",
+    "local": "目录"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Don't forget to clean CMake cache when switching between these two modes",
+    "local": "在这两种模式之间切换时，不要忘记清理CMake缓存"
+  },
+  {
+    "origin": "Use 3rd party drivers or cameras",
+    "local": "使用第三方驱动程序或摄像头"
+  },
+  {
+    "origin": "Many industrial cameras or some video I/O devices don't provide standard driver interfaces for the operating system. Thus you can't use VideoCapture or VideoWriter with these devices.",
+    "local": "许多工业摄像机或一些视频I/O设备不为操作系统提供标准的驱动程序接口。因此，您不能在这些设备上使用VideoCapture或VideoWriter。"
+  },
+  {
+    "origin": "To get access to their devices, manufactures provide their own C++ API and library that you have to include and link with your OpenCV application.",
+    "local": "为了获得他们的设备，制造商提供他们自己的C++ API和库，你必须包含和链接OpenCV应用程序。"
+  },
+  {
+    "origin": "It is a common case that these libraries read/write images from/to a memory buffer. If it so, it is possible to make a",
+    "local": "这些库从内存缓冲区读/写图像是一种常见的情况。如果是这样的话，就有可能"
+  },
+  {
+    "origin": "header for memory buffer (user-allocated data) and process it in-place using OpenCV functions. See",
+    "local": "内存缓冲区（用户分配的数据）的标头，并使用OpenCV函数就地处理它。看到了吗"
+  },
+  {
+    "origin": "for more details.",
+    "local": "更多细节。"
+  },
+  {
+    "origin": "The FFmpeg library",
+    "local": "FFmpeg库"
+  },
+  {
+    "origin": "OpenCV can use the FFmpeg library (",
+    "local": "OpenCV可以使用FFmpeg库("
+  },
+  {
+    "origin": "http://ffmpeg.org/",
+    "local": "http://ffmpeg.org/"
+  },
+  {
+    "origin": ") as backend to record, convert and stream audio and video. FFmpeg is a complete, cross-reference solution. If you enable FFmpeg while configuring OpenCV than CMake will download and install the binaries in",
+    "local": ")作为后端录制、转换和流式传输音频和视频。FFmpeg是一个完整的交叉引用解决方案。如果在配置OpenCV时启用FFmpeg，那么CMake将在中下载并安装二进制文件"
+  },
+  {
+    "origin": ". To use FFmpeg at runtime, you must deploy the FFmpeg binaries with your application.",
+    "local": ". 要在运行时使用FFmpeg，必须在应用程序中部署FFmpeg二进制文件。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "FFmpeg is licensed under the GNU Lesser General Public License (LGPL) version 2.1 or later. See",
+    "local": "FFmpeg根据GNU Lesser General Public License（LGPL）2.1版或更高版本获得许可。看到了吗"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "http://ffmpeg.org/legal.html",
+    "local": "http://ffmpeg.org/legal.html"
+  },
+  {
+    "origin": "for details and licensing information",
+    "local": "有关详细信息和许可证信息"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:33为OpenCV生成，&#160；"
+  }
+]

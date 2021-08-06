@@ -1,0 +1,258 @@
+[
+  {
+    "origin": "OpenCV: How OpenCV-Python Bindings Works?",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "How OpenCV-Python Bindings Works?",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "Learn:",
+    "local": ""
+  },
+  {
+    "origin": "How OpenCV-Python bindings are generated?",
+    "local": ""
+  },
+  {
+    "origin": "How to extend new OpenCV modules to Python?",
+    "local": ""
+  },
+  {
+    "origin": "How OpenCV-Python bindings are generated?",
+    "local": ""
+  },
+  {
+    "origin": "In OpenCV, all algorithms are implemented in C++. But these algorithms can be used from different languages like Python, Java etc. This is made possible by the bindings generators. These generators create a bridge between C++ and Python which enables users to call C++ functions from Python. To get a complete picture of what is happening in background, a good knowledge of Python/C API is required. A simple example on extending C++ functions to Python can be found in official Python documentation[1]. So extending all functions in OpenCV to Python by writing their wrapper functions manually is a time-consuming task. So OpenCV does it in a more intelligent way. OpenCV generates these wrapper functions automatically from the C++ headers using some Python scripts which are located in",
+    "local": ""
+  },
+  {
+    "origin": ". We will look into what they do.",
+    "local": ""
+  },
+  {
+    "origin": "First,",
+    "local": ""
+  },
+  {
+    "origin": "is a CMake script which checks the modules to be extended to Python. It will automatically check all the modules to be extended and grab their header files. These header files contain list of all classes, functions, constants etc. for that particular modules.",
+    "local": ""
+  },
+  {
+    "origin": "Second, these header files are passed to a Python script,",
+    "local": ""
+  },
+  {
+    "origin": ". This is the Python bindings generator script. It calls another Python script",
+    "local": ""
+  },
+  {
+    "origin": ". This is the header parser script. This header parser splits the complete header file into small Python lists. So these lists contain all details about a particular function, class etc. For example, a function will be parsed to get a list containing function name, return type, input arguments, argument types etc. Final list contains details of all the functions, enums, structs, classes etc. in that header file.",
+    "local": ""
+  },
+  {
+    "origin": "But header parser doesn't parse all the functions/classes in the header file. The developer has to specify which functions should be exported to Python. For that, there are certain macros added to the beginning of these declarations which enables the header parser to identify functions to be parsed. These macros are added by the developer who programs the particular function. In short, the developer decides which functions should be extended to Python and which are not. Details of those macros will be given in next session.",
+    "local": ""
+  },
+  {
+    "origin": "So header parser returns a final big list of parsed functions. Our generator script (gen2.py) will create wrapper functions for all the functions/classes/enums/structs parsed by header parser (You can find these header files during compilation in the",
+    "local": ""
+  },
+  {
+    "origin": "folder as pyopencv_generated_*.h files). But there may be some basic OpenCV datatypes like Mat, Vec4i, Size. They need to be extended manually. For example, a Mat type should be extended to Numpy array, Size should be extended to a tuple of two integers etc. Similarly, there may be some complex structs/classes/functions etc. which need to be extended manually. All such manual wrapper functions are placed in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "So now only thing left is the compilation of these wrapper files which gives us",
+    "local": ""
+  },
+  {
+    "origin": "cv2",
+    "local": ""
+  },
+  {
+    "origin": "module. So when you call a function, say",
+    "local": ""
+  },
+  {
+    "origin": "in Python, you pass two numpy arrays and you expect another numpy array as the output. So these numpy arrays are converted to",
+    "local": ""
+  },
+  {
+    "origin": "and then calls the",
+    "local": ""
+  },
+  {
+    "origin": "function in C++. Final result, res will be converted back into a Numpy array. So in short, almost all operations are done in C++ which gives us almost same speed as that of C++.",
+    "local": ""
+  },
+  {
+    "origin": "So this is the basic version of how OpenCV-Python bindings are generated.",
+    "local": ""
+  },
+  {
+    "origin": "How to extend new modules to Python?",
+    "local": ""
+  },
+  {
+    "origin": "Header parser parse the header files based on some wrapper macros added to function declaration. Enumeration constants don't need any wrapper macros. They are automatically wrapped. But remaining functions, classes etc. need wrapper macros.",
+    "local": ""
+  },
+  {
+    "origin": "Functions are extended using",
+    "local": ""
+  },
+  {
+    "origin": "macro. An example is shown below.",
+    "local": ""
+  },
+  {
+    "origin": "Header parser can understand the input and output arguments from keywords like InputArray, OutputArray etc. But sometimes, we may need to hardcode inputs and outputs. For that, macros like",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "etc. are used.",
+    "local": ""
+  },
+  {
+    "origin": "For large classes also,",
+    "local": ""
+  },
+  {
+    "origin": "is used. To extend class methods,",
+    "local": ""
+  },
+  {
+    "origin": "is used. Similarly,",
+    "local": ""
+  },
+  {
+    "origin": "is used for class fields.",
+    "local": ""
+  },
+  {
+    "origin": "Overloaded functions can be extended using",
+    "local": ""
+  },
+  {
+    "origin": ". But we need to pass a new name so that each function will be called by that name in Python. Take the case of integral function below. Three functions are available, so each one is named with a suffix in Python. Similarly",
+    "local": ""
+  },
+  {
+    "origin": "can be used to wrap overloaded methods.",
+    "local": ""
+  },
+  {
+    "origin": "Small classes/structs are extended using",
+    "local": ""
+  },
+  {
+    "origin": ". These structs are passed by value to C++ functions. Examples are",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "etc. Their methods are extended by",
+    "local": ""
+  },
+  {
+    "origin": "and fields are extended by",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Some other small classes/structs can be exported using",
+    "local": ""
+  },
+  {
+    "origin": "where it is exported to a Python native dictionary.",
+    "local": ""
+  },
+  {
+    "origin": "is an example of it.",
+    "local": ""
+  },
+  {
+    "origin": "So these are the major extension macros available in OpenCV. Typically, a developer has to put proper macros in their appropriate positions. Rest is done by generator scripts. Sometimes, there may be an exceptional cases where generator scripts cannot create the wrappers. Such functions need to be handled manually, to do this write your own",
+    "local": ""
+  },
+  {
+    "origin": "extending headers and put them into misc/python subdirectory of your module. But most of the time, a code written according to OpenCV coding guidelines will be automatically wrapped by generator scripts.",
+    "local": ""
+  },
+  {
+    "origin": "More advanced cases involves providing Python with additional features that does not exist in the C++ interface such as extra methods, type mappings, or to provide default arguments. We will take",
+    "local": ""
+  },
+  {
+    "origin": "datatype as an example of such cases later on. First, to provide Python-specific methods,",
+    "local": ""
+  },
+  {
+    "origin": "is utilized in a similar manner to",
+    "local": ""
+  },
+  {
+    "origin": ", except that it takes the method header as its argument, and you would need to provide the method body in your own",
+    "local": ""
+  },
+  {
+    "origin": "extension.",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "are an example of such phantom methods that does not exist in C++ interface, but are needed to handle OpenCL functionalities at the Python side. Second, if an already-existing datatype(s) is mappable to your class, it is highly preferable to indicate such capacity using",
+    "local": ""
+  },
+  {
+    "origin": "with the source type as its argument, rather than crafting your own binding function(s). This is the case of",
+    "local": ""
+  },
+  {
+    "origin": "which maps from",
+    "local": ""
+  },
+  {
+    "origin": ". Finally, if a default argument is needed, but it is not provided in the native C++ interface, you can provide it for Python side as the argument of",
+    "local": ""
+  },
+  {
+    "origin": ". As per the",
+    "local": ""
+  },
+  {
+    "origin": "example below:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

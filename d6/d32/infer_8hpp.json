@@ -1,0 +1,482 @@
+[
+  {
+    "origin": "OpenCV: opencv2/gapi/infer.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "infer.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Special network type.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "A container class for network configurations. Similar to GKernelPackage.Use",
+    "local": ""
+  },
+  {
+    "origin": "to construct this object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "(Class, API, Tag)",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "G-API object used to collect network inputs.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;,",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt;",
+    "local": ""
+  },
+  {
+    "origin": "G-API object used to collect the list of network inputs.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt;",
+    "local": ""
+  },
+  {
+    "origin": "G-API object used to collect the list of network outputs.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "G-API object used to collect network outputs.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ts&gt;",
+    "local": ""
+  },
+  {
+    "origin": "= all_satisfy&lt; accepted_infer_types, Ts... &gt;",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Net , typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; roi, T in)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates response for the specified network (template parameter) for the specified region in the source image. Currently expects a single-input network only.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Net , typename... Args&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; roi, Args &amp;&amp;... args)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates responses for the specified network (template parameter) for every region in the source image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Net , typename... Args&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(Args &amp;&amp;... args)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates response for the specified network (template parameter) given the input data.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T = Generic&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const std::string &amp;tag, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;inputs)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates response for generic network.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T = Generic&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const std::string &amp;tag, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;roi, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;inputs)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates response for the generic network for the specified region in the source image. Currently expects a single-input network only.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T = Generic&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const std::string &amp;tag, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;rois, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;inputs)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates responses for the specified network for every region in the source image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename Net , typename T , typename... Args&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(T image,",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Args &gt;... args)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates responses for the specified network (template parameter) for every region in the source image, extended version.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T = Generic, typename Input &gt;",
+    "local": ""
+  },
+  {
+    "origin": "std::enable_if&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&lt; Input &gt;::value,",
+    "local": ""
+  },
+  {
+    "origin": "(const std::string &amp;tag, const Input &amp;in, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;inputs)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates responses for the specified network for every region in the source image, extended version.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename InferType &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const std::string &amp;tag, const typename InferROITraits&lt; InferType &gt;::inType &amp;in, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;inputs)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename InferT &gt;",
+    "local": ""
+  },
+  {
+    "origin": "std::shared_ptr&lt;",
+    "local": ""
+  },
+  {
+    "origin": "(const std::string &amp;tag, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;&amp;args, std::vector&lt; std::string &gt; &amp;&amp;names,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;&amp;kinds)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Args&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(Args &amp;&amp;... args)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(T &amp;&amp;t)",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;blobs, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;args, std::vector&lt; std::string &gt; &amp;names,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;kinds)",
+    "local": ""
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_API_NET",
+    "local": ""
+  },
+  {
+    "origin": "#define G_API_NET",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "API,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

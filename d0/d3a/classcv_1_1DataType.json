@@ -1,0 +1,122 @@
+[
+  {
+    "origin": "OpenCV: cv::DataType&lt; _Tp &gt; Class Template Reference",
+    "local": "OpenCV:cv:：数据类型&lt_Tp&gt；类模板引用"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "cv::DataType&lt; _Tp &gt; Class Template Reference",
+    "local": "cv:：数据类型&lt_Tp&gt；类模板引用"
+  },
+  {
+    "origin": "&raquo;",
+    "local": "&引用；"
+  },
+  {
+    "origin": "Template \"trait\" class for OpenCV primitive data types.",
+    "local": "OpenCV基元数据类型的模板“trait”类。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "template&lt;typename _Tp&gt;",
+    "local": "模板&lt；类型名称\\u Tp&gt；"
+  },
+  {
+    "origin": "class cv::DataType&lt; _Tp &gt;",
+    "local": "类别cv：：数据类型&lt_Tp&gt；"
+  },
+  {
+    "origin": "Template \"trait\" class for OpenCV primitive data types.",
+    "local": "OpenCV基元数据类型的模板“trait”类。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Deprecated. This is replaced by \"single purpose\" traits: traits::Type and traits::Depth",
+    "local": "已弃用。这被“单一目的”特征所取代：traits:：Type和traits:：Depth"
+  },
+  {
+    "origin": "A primitive OpenCV data type is one of unsigned char, bool, signed char, unsigned short, signed short, int, float, double, or a tuple of values of one of these types, where all the values in the tuple have the same type. Any primitive type from the list can be defined by an identifier in the form CV_&lt;bit-depth&gt;{U|S|F}C(&lt;number_of_channels&gt;), for example: uchar CV_8UC1, 3-element floating-point tuple CV_32FC3, and so on. A universal OpenCV structure that is able to store a single instance of such a primitive data type is",
+    "local": "一个基本的OpenCV数据类型是unsigned char、bool、signed char、unsigned short、signed short、int、float、double或这些类型之一的值的元组，其中元组中的所有值都具有相同的类型。列表中的任何基元类型都可以由CV&lt；形式的标识符定义；钻头深度&gt{U | S | F}C（&lt；\\u个频道的数量（&gt；），例如：uchar CV\\u 8UC1、3元素浮点元组CV\\u 32FC3等等。一个通用的OpenCV结构能够存储这样一个原始数据类型的单个实例"
+  },
+  {
+    "origin": ". Multiple instances of such a type can be stored in a std::vector,",
+    "local": ". 这种类型的多个实例可以存储在一个std：：vector中，"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", or any other container that is able to store",
+    "local": "，或任何其他能够存储"
+  },
+  {
+    "origin": "instances.",
+    "local": "实例。"
+  },
+  {
+    "origin": "The",
+    "local": "这个"
+  },
+  {
+    "origin": "class is basically used to provide a description of such primitive data types without adding any fields or methods to the corresponding classes (and it is actually impossible to add anything to primitive C/C++ data types). This technique is known in C++ as class traits. It is not",
+    "local": "类基本上用于提供这样的原始数据类型的描述，而不向相应的类添加任何字段或方法（实际上，不可能向原始C/C++数据类型添加任何内容）。这种技术在C++中被称为类特征。不是的"
+  },
+  {
+    "origin": "itself that is used but its specialized versions, such as:",
+    "local": "它本身被使用，但是它的特殊版本，例如："
+  },
+  {
+    "origin": "The main purpose of this class is to convert compilation-time type information to an OpenCV-compatible data type identifier, for example:",
+    "local": "此类的主要目的是将编译时类型信息转换为与OpenCV兼容的数据类型标识符，例如："
+  },
+  {
+    "origin": "So, such traits are used to tell OpenCV which data type you are working with, even if such a type is not native to OpenCV. For example, the matrix B initialization above is compiled because OpenCV defines the proper specialized template class",
+    "local": "因此，这些特性用于告诉OpenCV您使用的是哪种数据类型，即使这种类型不是OpenCV的本机类型。例如，上面的matrix B初始化是编译的，因为OpenCV定义了适当的专用模板类"
+  },
+  {
+    "origin": "&lt;complex&lt;_Tp&gt; &gt; . This mechanism is also useful (and used in OpenCV this way) for generic algorithms implementations.",
+    "local": "&lt；复杂&lt_Tp&gt&gt。这种机制对于通用算法的实现也很有用（在OpenCV中也是如此）。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Default values were dropped to stop confusing developers about using of unsupported types (see #7599)",
+    "local": "删除了默认值，以避免让开发人员对使用不支持的类型感到困惑（请参见#7599）"
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/core/",
+    "local": "opencv2/核心/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:42为OpenCV生成，&#160；"
+  }
+]

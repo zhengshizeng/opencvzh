@@ -1,0 +1,210 @@
+[
+  {
+    "origin": "OpenCV: Load Caffe framework models",
+    "local": "OpenCV:加载Caffe框架模型"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "Load Caffe framework models",
+    "local": "加载Caffe框架模型"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Vitaliy Lyudvichenko",
+    "local": "Vitaliy Lyudvichenko"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "In this tutorial you will learn how to use opencv_dnn module for image classification by using GoogLeNet trained network from",
+    "local": "在本教程中,您将学习如何使用  opencv_dnn 模块进行图像分类,方法是使用来自"
+  },
+  {
+    "origin": "Caffe model zoo",
+    "local": "Caffe model zoo"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "We will demonstrate results of this example on the following picture.",
+    "local": "我们将在下图中演示此示例的结果."
+  },
+  {
+    "origin": "Buran space shuttle",
+    "local": "伯兰航天飞机"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "We will be using snippets from the example application, that can be downloaded",
+    "local": "我们将使用示例应用程序中的片段,这些片段可以下载"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Firstly, download GoogLeNet model files:",
+    "local": "首先,下载GoogLeNet模型文件:"
+  },
+  {
+    "origin": "bvlc_googlenet.prototxt",
+    "local": "bvlc_googlenet.prototxt"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "bvlc_googlenet.caffemodel",
+    "local": "bvlc_googlenet.caffemodel"
+  },
+  {
+    "origin": "Also you need file with names of",
+    "local": "你还需要文件名"
+  },
+  {
+    "origin": "ILSVRC2012",
+    "local": "ILSVRC2012"
+  },
+  {
+    "origin": "classes:",
+    "local": "课程:"
+  },
+  {
+    "origin": "classification_classes_ILSVRC2012.txt",
+    "local": "classification_classes_ILSVRC2012.txt"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Put these files into working dir of this program example.",
+    "local": "将这些文件放入本程序示例的工作目录中."
+  },
+  {
+    "origin": "Read and initialize network using path to .prototxt and .caffemodel files",
+    "local": "使用.prototxt和.caffemodel文件的路径读取和初始化网络"
+  },
+  {
+    "origin": "You can skip an argument",
+    "local": "你可以跳过争论"
+  },
+  {
+    "origin": "if one of the files",
+    "local": "如果其中一个文件"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "has an extension",
+    "local": "有一个扩展名"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": ". This way function",
+    "local": ". 这种方式起作用"
+  },
+  {
+    "origin": "can automatically detects a model's format.",
+    "local": "可以自动检测模型的格式."
+  },
+  {
+    "origin": "Read input image and convert to the blob, acceptable by GoogleNet",
+    "local": "读取输入图像并转换为GoogleNet可接受的blob"
+  },
+  {
+    "origin": "can load both images and videos.",
+    "local": "可以加载图像和视频."
+  },
+  {
+    "origin": "We convert the image to a 4-dimensional blob (so-called batch) with",
+    "local": "我们将图像转换成一个4维的blob(所谓的批处理),并且"
+  },
+  {
+    "origin": "shape after applying necessary pre-processing like resizing and mean subtraction",
+    "local": "在应用必要的预处理(如调整大小和平均减法)后形成"
+  },
+  {
+    "origin": "for each blue, green and red channels correspondingly using",
+    "local": "对于每个蓝色、绿色和红色通道,相应地使用"
+  },
+  {
+    "origin": "function.",
+    "local": "功能."
+  },
+  {
+    "origin": "Pass the blob to the network",
+    "local": "将blob传递到网络"
+  },
+  {
+    "origin": "Make forward pass",
+    "local": "向前传递"
+  },
+  {
+    "origin": "During the forward pass output of each network layer is computed, but in this example we need output from the last layer only.",
+    "local": "在前向传递期间,计算每个网络层的输出,但在本例中,我们只需要最后一层的输出."
+  },
+  {
+    "origin": "Determine the best class",
+    "local": "确定最佳层级"
+  },
+  {
+    "origin": "We put the output of network, which contain probabilities for each of 1000 ILSVRC2012 image classes, to the",
+    "local": "我们将包含1000个ILSVRC2012图像类中每个类的概率的网络输出放到"
+  },
+  {
+    "origin": "blob. And find the index of element with maximal value in this one. This index corresponds to the class of the image.",
+    "local": "blob.并求出该元素中具有最大值的元素的索引.此索引对应于图像的类."
+  },
+  {
+    "origin": "Run an example from command line",
+    "local": "从命令行运行示例"
+  },
+  {
+    "origin": "For our image we get prediction of class",
+    "local": "对于我们的形象,我们得到了阶级的预测"
+  },
+  {
+    "origin": "with more than 99% sureness.",
+    "local": "有99%以上的把握."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;zsz"
+  }
+]

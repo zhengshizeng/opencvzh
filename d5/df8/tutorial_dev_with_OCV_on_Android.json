@@ -1,0 +1,498 @@
+[
+  {
+    "origin": "OpenCV: Android Development with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Android Development with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Vsevolod Glumov",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial is deprecated.",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial has been created to help you use OpenCV library within your Android project.",
+    "local": ""
+  },
+  {
+    "origin": "This guide was written with Windows 7 in mind, though it should work with any other OS supported by OpenCV4Android SDK.",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial assumes you have the following installed and configured:",
+    "local": ""
+  },
+  {
+    "origin": "JDK",
+    "local": ""
+  },
+  {
+    "origin": "Android SDK and NDK",
+    "local": ""
+  },
+  {
+    "origin": "Eclipse IDE",
+    "local": ""
+  },
+  {
+    "origin": "ADT and CDT plugins for Eclipse",
+    "local": ""
+  },
+  {
+    "origin": "If you need help with anything of the above, you may refer to our",
+    "local": ""
+  },
+  {
+    "origin": "guide.",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial also assumes you have OpenCV4Android SDK already installed on your development machine and OpenCV Manager on your testing device correspondingly. If you need help with any of these, you may consult our",
+    "local": ""
+  },
+  {
+    "origin": "tutorial.",
+    "local": ""
+  },
+  {
+    "origin": "If you encounter any error after thoroughly following these steps, feel free to contact us via",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV4Android",
+    "local": ""
+  },
+  {
+    "origin": "discussion group or OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Q&amp;A forum",
+    "local": ""
+  },
+  {
+    "origin": ". We'll do our best to help you out.",
+    "local": ""
+  },
+  {
+    "origin": "Using OpenCV Library Within Your Android Project",
+    "local": ""
+  },
+  {
+    "origin": "In this section we will explain how to make some existing project to use OpenCV. Starting with 2.4.2 release for Android,",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Manager",
+    "local": ""
+  },
+  {
+    "origin": "is used to provide apps with the best available version of OpenCV. You can get more information here:",
+    "local": ""
+  },
+  {
+    "origin": "and in these",
+    "local": ""
+  },
+  {
+    "origin": "slides",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Application Development with Async Initialization",
+    "local": ""
+  },
+  {
+    "origin": "Using async initialization is a",
+    "local": ""
+  },
+  {
+    "origin": "recommended",
+    "local": ""
+  },
+  {
+    "origin": "way for application development. It uses the OpenCV Manager to access OpenCV libraries externally installed in the target system.",
+    "local": ""
+  },
+  {
+    "origin": "Add OpenCV library project to your workspace. Use menu File -&gt; Import -&gt; Existing project in your workspace.",
+    "local": ""
+  },
+  {
+    "origin": "Press Browse button and locate OpenCV4Android SDK (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "In most cases OpenCV Manager may be installed automatically from Google Play. For the case, when Google Play is not available, i.e. emulator, developer board, etc, you can install it manually using adb tool. See",
+    "local": ""
+  },
+  {
+    "origin": "for details.",
+    "local": ""
+  },
+  {
+    "origin": "There is a very base code snippet implementing the async initialization. It shows basic principles. See the \"15-puzzle\" OpenCV sample for details.",
+    "local": ""
+  },
+  {
+    "origin": "It this case application works with OpenCV Manager in asynchronous fashion. OnManagerConnected callback will be called in UI thread, when initialization finishes. Please note, that it is not allowed to use OpenCV calls or load OpenCV-dependent native libs before invoking this callback. Load your own native libraries that depend on OpenCV after the successful OpenCV initialization. Default BaseLoaderCallback implementation treat application context as Activity and calls",
+    "local": ""
+  },
+  {
+    "origin": "method to exit in case of initialization failure. To override this behavior you need to override",
+    "local": ""
+  },
+  {
+    "origin": "method of BaseLoaderCallback class and implement your own finalization method.",
+    "local": ""
+  },
+  {
+    "origin": "Application Development with Static Initialization",
+    "local": ""
+  },
+  {
+    "origin": "According to this approach all OpenCV binaries are included into your application package. It is designed mostly for development purposes. This approach is deprecated for the production code, release package is recommended to communicate with OpenCV Manager via the async initialization described above.",
+    "local": ""
+  },
+  {
+    "origin": "Add the OpenCV library project to your workspace the same way as for the async initialization above. Use menu File -&gt; Import -&gt; Existing project in your workspace, press Browse button and select OpenCV SDK path (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "In the application project add a reference to the OpenCV4Android SDK in Project -&gt; Properties -&gt; Android -&gt; Library -&gt; Add select OpenCV Library - 2.4.9;",
+    "local": ""
+  },
+  {
+    "origin": "If your application project",
+    "local": ""
+  },
+  {
+    "origin": "doesn't have a JNI part",
+    "local": ""
+  },
+  {
+    "origin": ", just copy the corresponding OpenCV native libs from",
+    "local": ""
+  },
+  {
+    "origin": "to your project directory to folder",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "In case of the application project",
+    "local": ""
+  },
+  {
+    "origin": "with a JNI part",
+    "local": ""
+  },
+  {
+    "origin": ", instead of manual libraries copying you need to modify your Android.mk file: add the following two code lines after the \"include $(CLEAR_VARS)\" and before \"include path_to_OpenCV-2.4.9-android-sdk/sdk/native/jni/OpenCV.mk\"",
+    "local": ""
+  },
+  {
+    "origin": "The result should look like the following:",
+    "local": ""
+  },
+  {
+    "origin": "After that the OpenCV libraries will be copied to your application",
+    "local": ""
+  },
+  {
+    "origin": "folder during the JNI build.v",
+    "local": ""
+  },
+  {
+    "origin": "Eclipse will automatically include all the libraries from the",
+    "local": ""
+  },
+  {
+    "origin": "folder to the application package (APK).",
+    "local": ""
+  },
+  {
+    "origin": "The last step of enabling OpenCV in your application is Java initialization code before calling OpenCV API. It can be done, for example, in the static section of the Activity class:",
+    "local": ""
+  },
+  {
+    "origin": "If you application includes other OpenCV-dependent native libraries you should load them",
+    "local": ""
+  },
+  {
+    "origin": "after",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV initialization:",
+    "local": ""
+  },
+  {
+    "origin": "Native/C++",
+    "local": ""
+  },
+  {
+    "origin": "To build your own Android application, using OpenCV as native part, the following steps should be taken:",
+    "local": ""
+  },
+  {
+    "origin": "You can use an environment variable to specify the location of OpenCV package or just hardcode absolute or relative path in the",
+    "local": ""
+  },
+  {
+    "origin": "of your projects.",
+    "local": ""
+  },
+  {
+    "origin": "The file",
+    "local": ""
+  },
+  {
+    "origin": "should be written for the current application using the common rules for this file.",
+    "local": ""
+  },
+  {
+    "origin": "For detailed information see the Android NDK documentation from the Android NDK archive, in the file",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The following line:",
+    "local": ""
+  },
+  {
+    "origin": "Should be inserted into the",
+    "local": ""
+  },
+  {
+    "origin": "file",
+    "local": ""
+  },
+  {
+    "origin": "after",
+    "local": ""
+  },
+  {
+    "origin": "this line:",
+    "local": ""
+  },
+  {
+    "origin": "Several variables can be used to customize OpenCV stuff, but you",
+    "local": ""
+  },
+  {
+    "origin": "don't need",
+    "local": ""
+  },
+  {
+    "origin": "to use them when your application uses the async initialization via the OpenCV Manager API.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "These variables should be set",
+    "local": ""
+  },
+  {
+    "origin": "before",
+    "local": ""
+  },
+  {
+    "origin": "the \"include .../OpenCV.mk\" line:",
+    "local": ""
+  },
+  {
+    "origin": "Copies necessary OpenCV dynamic libs to the project libs folder in order to include them into the APK.",
+    "local": ""
+  },
+  {
+    "origin": "Skip native OpenCV camera related libs copying to the project libs folder.",
+    "local": ""
+  },
+  {
+    "origin": "Perform static linking with OpenCV. By default dynamic link is used and the project JNI lib depends on libopencv_java.so.",
+    "local": ""
+  },
+  {
+    "origin": "The file",
+    "local": ""
+  },
+  {
+    "origin": "should exist and should contain lines:",
+    "local": ""
+  },
+  {
+    "origin": "Also, the line like this one:",
+    "local": ""
+  },
+  {
+    "origin": "Should specify the application target platforms.",
+    "local": ""
+  },
+  {
+    "origin": "In some cases a linkage error (like `\"In function 'cv::toUtf16(std::basic_string&lt;...&gt;... undefined reference to 'mbstowcs'\"`) happens when building an application JNI library, depending on OpenCV. The following line in the",
+    "local": ""
+  },
+  {
+    "origin": "usually fixes it:",
+    "local": ""
+  },
+  {
+    "origin": "Either use",
+    "local": ""
+  },
+  {
+    "origin": "ndk-build invocation or",
+    "local": ""
+  },
+  {
+    "origin": "to build native JNI lib before (re)building the Java part and creating an APK.",
+    "local": ""
+  },
+  {
+    "origin": "Hello OpenCV Sample",
+    "local": ""
+  },
+  {
+    "origin": "Here are basic steps to guide you trough the process of creating a simple OpenCV-centric application. It will be capable of accessing camera output, processing it and displaying the result.",
+    "local": ""
+  },
+  {
+    "origin": "Open Eclipse IDE, create a new clean workspace, create a new Android project File &ndash;&gt; New &ndash;&gt; Android Project",
+    "local": ""
+  },
+  {
+    "origin": "Set name, target, package and minSDKVersion accordingly. The minimal SDK version for build with OpenCV4Android SDK is 11. Minimal device API Level (for application manifest) is 8.",
+    "local": ""
+  },
+  {
+    "origin": "Allow Eclipse to create default activity. Lets name the activity HelloOpenCvActivity.",
+    "local": ""
+  },
+  {
+    "origin": "Choose Blank Activity with full screen layout. Lets name the layout HelloOpenCvLayout.",
+    "local": ""
+  },
+  {
+    "origin": "Import OpenCV library project to your workspace.",
+    "local": ""
+  },
+  {
+    "origin": "Reference OpenCV library within your project properties.",
+    "local": ""
+  },
+  {
+    "origin": "Edit your layout file as xml file and pass the following layout there:",
+    "local": ""
+  },
+  {
+    "origin": "Add the following permissions to the",
+    "local": ""
+  },
+  {
+    "origin": "file:",
+    "local": ""
+  },
+  {
+    "origin": "Set application theme in AndroidManifest.xml to hide title and system buttons.",
+    "local": ""
+  },
+  {
+    "origin": "Add OpenCV library initialization to your activity. Fix errors by adding required imports.",
+    "local": ""
+  },
+  {
+    "origin": "Defines that your activity implements CvCameraViewListener2 interface and fix activity related errors by defining missed methods. For this activity define onCreate, onDestroy and onPause and implement them according to the code snippet below. Fix errors by adding required imports.",
+    "local": ""
+  },
+  {
+    "origin": "Run your application on device or emulator.",
+    "local": ""
+  },
+  {
+    "origin": "Lets discuss some most important steps. Every Android application with UI must implement Activity and View. By the first steps we create blank activity and default view layout. The simplest OpenCV-centric application must implement OpenCV initialization, create its own view to show preview from camera and implements CvCameraViewListener2 interface to get frames from camera and process it.",
+    "local": ""
+  },
+  {
+    "origin": "First of all we create our application view using xml layout. Our layout consists of the only one full screen component of class org.opencv.android.JavaCameraView. This class is implemented inside OpenCV library. It is inherited from CameraBridgeViewBase, that extends SurfaceView and uses standard Android camera API.",
+    "local": ""
+  },
+  {
+    "origin": "After creating layout we need to implement Activity class. OpenCV initialization process has been already discussed above. In this sample we use asynchronous initialization. Implementation of CvCameraViewListener interface allows you to add processing steps after frame grabbing from camera and before its rendering on screen. The most important function is onCameraFrame. It is callback function and it is called on retrieving frame from camera. The callback input is object of CvCameraViewFrame class that represents frame from camera.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Do not save or use CvCameraViewFrame object out of onCameraFrame callback. This object does not have its own state and its behavior out of callback is unpredictable!",
+    "local": ""
+  },
+  {
+    "origin": "It has rgba() and gray() methods that allows to get frame as RGBA and one channel gray scale Mat respectively. It expects that onCameraFrame function returns RGBA frame that will be drawn on the screen.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

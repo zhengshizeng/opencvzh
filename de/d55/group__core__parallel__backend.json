@@ -1,0 +1,358 @@
+[
+  {
+    "origin": "OpenCV: Parallel backends API",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Parallel backends API",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const std::shared_ptr&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;api, bool propagateNumThreads=true)",
+    "local": ""
+  },
+  {
+    "origin": "Replace OpenCV parallel_for backend.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "(const std::string &amp;backendName, bool propagateNumThreads=true)",
+    "local": ""
+  },
+  {
+    "origin": "Change OpenCV parallel_for backend.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "API below is provided to resolve problem of CPU resource over-subscription by multiple thread pools from different multi-threading frameworks. This is common problem for cases when OpenCV compiled threading framework is different from the Users Applications framework.",
+    "local": ""
+  },
+  {
+    "origin": "Applications can replace OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "backend with own implementation (to reuse Application's thread pool).",
+    "local": ""
+  },
+  {
+    "origin": "Backend API usage examples",
+    "local": ""
+  },
+  {
+    "origin": "Intel TBB",
+    "local": ""
+  },
+  {
+    "origin": "include header with simple implementation of TBB backend:",
+    "local": ""
+  },
+  {
+    "origin": "execute backend replacement code:",
+    "local": ""
+  },
+  {
+    "origin": "configuration of compiler/linker options is responsibility of Application's scripts",
+    "local": ""
+  },
+  {
+    "origin": "OpenMP",
+    "local": ""
+  },
+  {
+    "origin": "include header with simple implementation of OpenMP backend:",
+    "local": ""
+  },
+  {
+    "origin": "execute backend replacement code:",
+    "local": ""
+  },
+  {
+    "origin": "Configuration of compiler/linker options is responsibility of Application's scripts",
+    "local": ""
+  },
+  {
+    "origin": "Plugins support",
+    "local": ""
+  },
+  {
+    "origin": "Runtime configuration options:",
+    "local": ""
+  },
+  {
+    "origin": "change backend priority:",
+    "local": ""
+  },
+  {
+    "origin": "disable backend:",
+    "local": ""
+  },
+  {
+    "origin": "specify list of backends with high priority (&gt;100000):",
+    "local": ""
+  },
+  {
+    "origin": ". Unknown backends are registered as new plugins.",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setParallelForBackend()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::parallel::setParallelForBackend",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::shared_ptr&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "api",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "propagateNumThreads",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.parallel.setParallelForBackend(",
+    "local": ""
+  },
+  {
+    "origin": "backendName[, propagateNumThreads]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Replace OpenCV parallel_for backend.",
+    "local": ""
+  },
+  {
+    "origin": "Application can replace OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "backend with own implementation.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This call is not thread-safe. Consider calling this function from the",
+    "local": ""
+  },
+  {
+    "origin": "before any other OpenCV processing functions (and without any other created threads).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setParallelForBackend()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "bool cv::parallel::setParallelForBackend",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "backendName",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "propagateNumThreads",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.parallel.setParallelForBackend(",
+    "local": ""
+  },
+  {
+    "origin": "backendName[, propagateNumThreads]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Change OpenCV parallel_for backend.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This call is not thread-safe. Consider calling this function from the",
+    "local": ""
+  },
+  {
+    "origin": "before any other OpenCV processing functions (and without any other created threads).",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:40 for OpenCV by",
+    "local": ""
+  }
+]

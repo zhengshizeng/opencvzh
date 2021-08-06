@@ -1,0 +1,530 @@
+[
+  {
+    "origin": "OpenCV: Conditioning",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Conditioning",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points,",
+    "local": ""
+  },
+  {
+    "origin": "T,",
+    "local": ""
+  },
+  {
+    "origin": "transformed_points)",
+    "local": ""
+  },
+  {
+    "origin": "Apply Transformation to points.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points,",
+    "local": ""
+  },
+  {
+    "origin": "T)",
+    "local": ""
+  },
+  {
+    "origin": "Point conditioning (isotropic).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points,",
+    "local": ""
+  },
+  {
+    "origin": "normalized_points,",
+    "local": ""
+  },
+  {
+    "origin": "T)",
+    "local": ""
+  },
+  {
+    "origin": "This function normalizes points. (isotropic).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points,",
+    "local": ""
+  },
+  {
+    "origin": "normalized_points,",
+    "local": ""
+  },
+  {
+    "origin": "T)",
+    "local": ""
+  },
+  {
+    "origin": "This function normalizes points (non isotropic).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points,",
+    "local": ""
+  },
+  {
+    "origin": "T)",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "applyTransformationToPoints()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::sfm::applyTransformationToPoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "transformed_points",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Apply Transformation to points.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of N-dimensional points.",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": "Input 3x3 transformation matrix such that \\(x = T*X\\), where \\(X\\) are the points to transform and \\(x\\) the transformed points.",
+    "local": ""
+  },
+  {
+    "origin": "transformed_points",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of N-dimensional transformed points.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "isotropicPreconditionerFromPoints()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::sfm::isotropicPreconditionerFromPoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Point conditioning (isotropic).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of N-dimensional points.",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x3 transformation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "Computes the transformation matrix such that each coordinate direction will be scaled equally, bringing the centroid to the origin with an average centroid \\((1,1,1)^T\\).",
+    "local": ""
+  },
+  {
+    "origin": "Reference:",
+    "local": ""
+  },
+  {
+    "origin": "4.4.4 pag.107.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "normalizeIsotropicPoints()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::sfm::normalizeIsotropicPoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "normalized_points",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This function normalizes points. (isotropic).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of N-dimensional points.",
+    "local": ""
+  },
+  {
+    "origin": "normalized_points",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of the same N-dimensional points but with mean 0 and average norm \\(\\sqrt{2}\\).",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x3 transform matrix such that \\(x = T*X\\), where \\(X\\) are the points to normalize and \\(x\\) the normalized points.",
+    "local": ""
+  },
+  {
+    "origin": "Internally calls",
+    "local": ""
+  },
+  {
+    "origin": "in order to get the scaling matrix before applying",
+    "local": ""
+  },
+  {
+    "origin": ". This operation is an essential step before applying the DLT algorithm in order to consider the result as optimal.",
+    "local": ""
+  },
+  {
+    "origin": "Reference:",
+    "local": ""
+  },
+  {
+    "origin": "4.4.4 pag.107.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "normalizePoints()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::sfm::normalizePoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "normalized_points",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This function normalizes points (non isotropic).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of N-dimensional points.",
+    "local": ""
+  },
+  {
+    "origin": "normalized_points",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of the same N-dimensional points but with mean 0 and average norm \\(\\sqrt{2}\\).",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x3 transform matrix such that \\(x = T*X\\), where \\(X\\) are the points to normalize and \\(x\\) the normalized points.",
+    "local": ""
+  },
+  {
+    "origin": "Internally calls",
+    "local": ""
+  },
+  {
+    "origin": "in order to get the scaling matrix before applying",
+    "local": ""
+  },
+  {
+    "origin": ". This operation is an essential step before applying the DLT algorithm in order to consider the result as optimal.",
+    "local": ""
+  },
+  {
+    "origin": "Reference:",
+    "local": ""
+  },
+  {
+    "origin": "4.4.4 pag.109",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "preconditionerFromPoints()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::sfm::preconditionerFromPoints",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Point conditioning (non isotropic).",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of N-dimensional points.",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": "Output 3x3 transformation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "Computes the transformation matrix such that the two principal moments of the set of points are equal to unity, forming an approximately symmetric circular cloud of points of radius 1 about the origin.",
+    "local": ""
+  },
+  {
+    "origin": "Reference:",
+    "local": ""
+  },
+  {
+    "origin": "4.4.4 pag.109",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by &#160;",
+    "local": ""
+  }
+]

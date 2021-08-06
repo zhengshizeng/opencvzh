@@ -1,0 +1,378 @@
+[
+  {
+    "origin": "OpenCV: Hough Circle Transform",
+    "local": "OpenCV:霍夫圆变换"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Hough Circle Transform",
+    "local": "霍夫圆变换"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "安娜·华曼"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": "使用OpenCV函数"
+  },
+  {
+    "origin": "to detect circles in an image.",
+    "local": "检测图像中的圆。"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "Hough Circle Transform",
+    "local": "霍夫圆变换"
+  },
+  {
+    "origin": "The Hough Circle Transform works in a",
+    "local": "Hough圆变换的工作原理是"
+  },
+  {
+    "origin": "roughly",
+    "local": "粗略地"
+  },
+  {
+    "origin": "analogous way to the Hough Line Transform explained in the previous tutorial.",
+    "local": "类似于上一个教程中解释的Hough线变换。"
+  },
+  {
+    "origin": "In the line detection case, a line was defined by two parameters \\((r, \\theta)\\). In the circle case, we need three parameters to define a circle:",
+    "local": "在测线检测的情况下，一条测线由两个参数\\（（r，\\theta）\\）定义。在圆的情况下，我们需要三个参数来定义圆："
+  },
+  {
+    "origin": "\\[C : ( x_{center}, y_{center}, r )\\]",
+    "local": "\\[C:（x{center}，y{center}，r）\\]"
+  },
+  {
+    "origin": "where \\((x_{center}, y_{center})\\) define the center position (green point) and \\(r\\) is the radius, which allows us to completely define a circle, as it can be seen below:",
+    "local": "式中，\\（（x{center}，y{center}）定义中心位置（绿点），\\（r\\）是半径，它允许我们完全定义一个圆，如下所示："
+  },
+  {
+    "origin": "For sake of efficiency, OpenCV implements a detection method slightly trickier than the standard Hough Transform:",
+    "local": "为了提高效率，OpenCV实现了一种比标准Hough变换稍微复杂的检测方法："
+  },
+  {
+    "origin": "The Hough gradient method",
+    "local": "Hough梯度法"
+  },
+  {
+    "origin": ", which is made up of two main stages. The first stage involves edge detection and finding the possible circle centers and the second stage finds the best radius for each candidate center. For more details, please check the book",
+    "local": "由两个主要阶段组成。第一阶段是边缘检测和寻找可能的圆心，第二阶段是寻找每个候选圆心的最佳半径。更多细节，请查查这本书"
+  },
+  {
+    "origin": "Learning OpenCV",
+    "local": "学习OpenCV"
+  },
+  {
+    "origin": "or your favorite Computer Vision bibliography",
+    "local": "或者你最喜欢的计算机视觉书目"
+  },
+  {
+    "origin": "What does this program do?",
+    "local": "这个程序做什么？"
+  },
+  {
+    "origin": "Loads an image and blur it to reduce the noise",
+    "local": "加载图像并使其模糊以减少噪声"
+  },
+  {
+    "origin": "Applies the",
+    "local": "应用"
+  },
+  {
+    "origin": "Hough Circle Transform",
+    "local": "霍夫圆变换"
+  },
+  {
+    "origin": "to the blurred image .",
+    "local": "模糊的图像。"
+  },
+  {
+    "origin": "Display the detected circle in a window.",
+    "local": "在窗口中显示检测到的圆。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "The sample code that we will explain can be downloaded from",
+    "local": "我们将解释的示例代码可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ". A slightly fancier version (which shows trackbars for changing the threshold values) can be found",
+    "local": ". 可以找到一个稍微花哨的版本（显示用于更改阈值的轨迹栏）"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "The sample code that we will explain can be downloaded from",
+    "local": "我们将解释的示例代码可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "The sample code that we will explain can be downloaded from",
+    "local": "我们将解释的示例代码可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "The image we used can be found",
+    "local": "我们使用的图像可以找到"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Load an image:",
+    "local": "加载图像："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Convert it to grayscale:",
+    "local": "将其转换为灰度："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Apply a Median blur to reduce noise and avoid false circle detection:",
+    "local": "应用中值模糊以减少噪声并避免假圆检测："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Proceed to apply Hough Circle Transform:",
+    "local": "继续应用Hough圆变换："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "with the arguments:",
+    "local": "使用以下参数："
+  },
+  {
+    "origin": "gray",
+    "local": "灰色"
+  },
+  {
+    "origin": ": Input image (grayscale).",
+    "local": "：输入图像（灰度）。"
+  },
+  {
+    "origin": "circles",
+    "local": "圈子"
+  },
+  {
+    "origin": ": A vector that stores sets of 3 values: \\(x_{c}, y_{c}, r\\) for each detected circle.",
+    "local": "：为每个检测到的圆存储一组3个值的向量：\\（x{c}，y{c}，r\\）。"
+  },
+  {
+    "origin": "HOUGH_GRADIENT",
+    "local": "霍夫梯度"
+  },
+  {
+    "origin": ": Define the detection method. Currently this is the only one available in OpenCV.",
+    "local": "：定义检测方法。目前这是OpenCV中唯一可用的。"
+  },
+  {
+    "origin": ": The inverse ratio of resolution.",
+    "local": "：分辨率的反比。"
+  },
+  {
+    "origin": "min_dist = gray.rows/16",
+    "local": "最小距离=gray.rows/16"
+  },
+  {
+    "origin": ": Minimum distance between detected centers.",
+    "local": "：检测到的中心之间的最小距离。"
+  },
+  {
+    "origin": "param_1 = 200",
+    "local": "停在1=200"
+  },
+  {
+    "origin": ": Upper threshold for the internal Canny edge detector.",
+    "local": "：内部Canny边缘检测器的上阈值。"
+  },
+  {
+    "origin": "param_2",
+    "local": "停在2号"
+  },
+  {
+    "origin": "= 100*: Threshold for center detection.",
+    "local": "=100*：中心检测阈值。"
+  },
+  {
+    "origin": ": Minimum radius to be detected. If unknown, put zero as default.",
+    "local": "：要检测的最小半径。如果未知，则将0作为默认值。"
+  },
+  {
+    "origin": ": Maximum radius to be detected. If unknown, put zero as default.",
+    "local": "：要检测的最大半径。如果未知，则将0作为默认值。"
+  },
+  {
+    "origin": "Draw the detected circles:",
+    "local": "绘制检测到的圆："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "You can see that we will draw the circle(s) on red and the center(s) with a small green dot",
+    "local": "你可以看到，我们将画红色的圆和一个小绿点的中心"
+  },
+  {
+    "origin": "Display the detected circle(s) and wait for the user to exit the program:",
+    "local": "显示检测到的圆并等待用户退出程序："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Result",
+    "local": "结果"
+  },
+  {
+    "origin": "The result of running the code above with a test image is shown below:",
+    "local": "使用测试映像运行上述代码的结果如下所示："
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:35为OpenCV生成，&#160；"
+  }
+]

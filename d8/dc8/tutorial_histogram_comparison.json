@@ -1,0 +1,494 @@
+[
+  {
+    "origin": "OpenCV: Histogram Comparison",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Histogram Comparison",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Use the function",
+    "local": ""
+  },
+  {
+    "origin": "to get a numerical parameter that express how well two histograms match with each other.",
+    "local": ""
+  },
+  {
+    "origin": "Use different metrics to compare histograms",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "To compare two histograms ( \\(H_{1}\\) and \\(H_{2}\\) ), first we have to choose a",
+    "local": ""
+  },
+  {
+    "origin": "metric",
+    "local": ""
+  },
+  {
+    "origin": "( \\(d(H_{1}, H_{2})\\)) to express how well both histograms match.",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV implements the function",
+    "local": ""
+  },
+  {
+    "origin": "to perform a comparison. It also offers 4 different metrics to compute the matching:",
+    "local": ""
+  },
+  {
+    "origin": "Correlation ( CV_COMP_CORREL )",
+    "local": ""
+  },
+  {
+    "origin": "\\[d(H_1,H_2) = \\frac{\\sum_I (H_1(I) - \\bar{H_1}) (H_2(I) - \\bar{H_2})}{\\sqrt{\\sum_I(H_1(I) - \\bar{H_1})^2 \\sum_I(H_2(I) - \\bar{H_2})^2}}\\]",
+    "local": ""
+  },
+  {
+    "origin": "where",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\bar{H_k} = \\frac{1}{N} \\sum _J H_k(J)\\]",
+    "local": ""
+  },
+  {
+    "origin": "and \\(N\\) is the total number of histogram bins.",
+    "local": ""
+  },
+  {
+    "origin": "Chi-Square ( CV_COMP_CHISQR )",
+    "local": ""
+  },
+  {
+    "origin": "\\[d(H_1,H_2) = \\sum _I \\frac{\\left(H_1(I)-H_2(I)\\right)^2}{H_1(I)}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Intersection ( method=CV_COMP_INTERSECT )",
+    "local": ""
+  },
+  {
+    "origin": "\\[d(H_1,H_2) = \\sum _I \\min (H_1(I), H_2(I))\\]",
+    "local": ""
+  },
+  {
+    "origin": "Bhattacharyya distance ( CV_COMP_BHATTACHARYYA )",
+    "local": ""
+  },
+  {
+    "origin": "\\[d(H_1,H_2) = \\sqrt{1 - \\frac{1}{\\sqrt{\\bar{H_1} \\bar{H_2} N^2}} \\sum_I \\sqrt{H_1(I) \\cdot H_2(I)}}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "What does this program do?",
+    "local": ""
+  },
+  {
+    "origin": "Loads a",
+    "local": ""
+  },
+  {
+    "origin": "base image",
+    "local": ""
+  },
+  {
+    "origin": "test images",
+    "local": ""
+  },
+  {
+    "origin": "to be compared with it.",
+    "local": ""
+  },
+  {
+    "origin": "Generate 1 image that is the lower half of the",
+    "local": ""
+  },
+  {
+    "origin": "base image",
+    "local": ""
+  },
+  {
+    "origin": "Convert the images to HSV format",
+    "local": ""
+  },
+  {
+    "origin": "Calculate the H-S histogram for all the images and normalize them in order to compare them.",
+    "local": ""
+  },
+  {
+    "origin": "Compare the histogram of the",
+    "local": ""
+  },
+  {
+    "origin": "base image",
+    "local": ""
+  },
+  {
+    "origin": "with respect to the 2 test histograms, the histogram of the lower half base image and with the same base image histogram.",
+    "local": ""
+  },
+  {
+    "origin": "Display the numerical matching parameters obtained.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Load the base image (src_base) and the other two test images:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Convert them to HSV format:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Also, create an image of half the base image (in HSV format):",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Initialize the arguments to calculate the histograms (bins, ranges and channels H and S ).",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Calculate the Histograms for the base image, the 2 test images and the half-down base image:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Apply sequentially the 4 comparison methods between the histogram of the base image (hist_base) and the other histograms:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "We use as input the following images:",
+    "local": ""
+  },
+  {
+    "origin": "Base_0",
+    "local": ""
+  },
+  {
+    "origin": "Test_1",
+    "local": ""
+  },
+  {
+    "origin": "Test_2",
+    "local": ""
+  },
+  {
+    "origin": "where the first one is the base (to be compared to the others), the other 2 are the test images. We will also compare the first image with respect to itself and with respect of half the base image.",
+    "local": ""
+  },
+  {
+    "origin": "We should expect a perfect match when we compare the base image histogram with itself. Also, compared with the histogram of half the base image, it should present a high match since both are from the same source. For the other two test images, we can observe that they have very different lighting conditions, so the matching should not be very good:",
+    "local": ""
+  },
+  {
+    "origin": "*Method*",
+    "local": ""
+  },
+  {
+    "origin": "Base - Base",
+    "local": ""
+  },
+  {
+    "origin": "Base - Half",
+    "local": ""
+  },
+  {
+    "origin": "*Correlation*",
+    "local": ""
+  },
+  {
+    "origin": "1.000000",
+    "local": ""
+  },
+  {
+    "origin": "0.880438",
+    "local": ""
+  },
+  {
+    "origin": "0.20457",
+    "local": ""
+  },
+  {
+    "origin": "0.0664547",
+    "local": ""
+  },
+  {
+    "origin": "*Chi-square*",
+    "local": ""
+  },
+  {
+    "origin": "0.000000",
+    "local": ""
+  },
+  {
+    "origin": "4.6834",
+    "local": ""
+  },
+  {
+    "origin": "*Intersection*",
+    "local": ""
+  },
+  {
+    "origin": "18.8947",
+    "local": ""
+  },
+  {
+    "origin": "13.022",
+    "local": ""
+  },
+  {
+    "origin": "5.44085",
+    "local": ""
+  },
+  {
+    "origin": "2.58173",
+    "local": ""
+  },
+  {
+    "origin": "*Bhattacharyya*",
+    "local": ""
+  },
+  {
+    "origin": "0.000000",
+    "local": ""
+  },
+  {
+    "origin": "0.237887",
+    "local": ""
+  },
+  {
+    "origin": "0.679826",
+    "local": ""
+  },
+  {
+    "origin": "0.874173",
+    "local": ""
+  },
+  {
+    "origin": "For the",
+    "local": ""
+  },
+  {
+    "origin": "Correlation",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "Intersection",
+    "local": ""
+  },
+  {
+    "origin": "methods, the higher the metric, the more accurate the match. As we can see, the match",
+    "local": ""
+  },
+  {
+    "origin": "base-base",
+    "local": ""
+  },
+  {
+    "origin": "is the highest of all as expected. Also we can observe that the match",
+    "local": ""
+  },
+  {
+    "origin": "base-half",
+    "local": ""
+  },
+  {
+    "origin": "is the second best match (as we predicted). For the other two metrics, the less the result, the better the match. We can observe that the matches between the test 1 and test 2 with respect to the base are worse, which again, was expected.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": ""
+  }
+]

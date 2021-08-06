@@ -1,0 +1,342 @@
+[
+  {
+    "origin": "OpenCV: AKAZE local features matching",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "AKAZE local features matching",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Fedor Morozov",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial we will learn how to use AKAZE",
+    "local": ""
+  },
+  {
+    "origin": "local features to detect and match keypoints on two images. We will find keypoints on a pair of images with given homography matrix, match them and count the number of inliers (i.e. matches that fit in the given homography).",
+    "local": ""
+  },
+  {
+    "origin": "You can find expanded version of this example here:",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/pablofdezalc/test_kaze_akaze_opencv",
+    "local": ""
+  },
+  {
+    "origin": "Data",
+    "local": ""
+  },
+  {
+    "origin": "We are going to use images 1 and 3 from",
+    "local": ""
+  },
+  {
+    "origin": "Graffiti",
+    "local": ""
+  },
+  {
+    "origin": "sequence of",
+    "local": ""
+  },
+  {
+    "origin": "Oxford dataset",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Homography is given by a 3 by 3 matrix:",
+    "local": ""
+  },
+  {
+    "origin": "You can find the images (",
+    "local": ""
+  },
+  {
+    "origin": "graf1.png",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "graf3.png",
+    "local": ""
+  },
+  {
+    "origin": ") and homography (",
+    "local": ""
+  },
+  {
+    "origin": "H1to3p.xml",
+    "local": ""
+  },
+  {
+    "origin": ") in",
+    "local": ""
+  },
+  {
+    "origin": "opencv/samples/data/",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Source Code",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Load images and homography",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "We are loading grayscale images here. Homography is stored in the xml created with FileStorage.",
+    "local": ""
+  },
+  {
+    "origin": "Detect keypoints and compute descriptors using AKAZE",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "We create AKAZE and detect and compute AKAZE keypoints and descriptors. Since we don't need the",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": "parameter,",
+    "local": ""
+  },
+  {
+    "origin": "is used.",
+    "local": ""
+  },
+  {
+    "origin": "Use brute-force matcher to find 2-nn matches",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "We use Hamming distance, because AKAZE uses binary descriptor by default.",
+    "local": ""
+  },
+  {
+    "origin": "Use 2-nn matches and ratio criterion to find correct keypoint matches",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "If the closest match distance is significantly lower than the second closest one, then the match is correct (match is not ambiguous).",
+    "local": ""
+  },
+  {
+    "origin": "Check if our matches fit in the homography model",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "If the distance from first keypoint's projection to the second keypoint is less than threshold, then it fits the homography model.",
+    "local": ""
+  },
+  {
+    "origin": "We create a new set of matches for the inliers, because it is required by the drawing function.",
+    "local": ""
+  },
+  {
+    "origin": "Output results",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Here we save the resulting image and print some statistics.",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "Found matches",
+    "local": ""
+  },
+  {
+    "origin": "Depending on your OpenCV version, you should get results coherent with:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

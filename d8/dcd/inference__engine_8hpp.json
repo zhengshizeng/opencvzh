@@ -1,0 +1,294 @@
+[
+  {
+    "origin": "OpenCV: opencv2/dnn/utils/inference_engine.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "inference_engine.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;&quot;NGRAPH&quot;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;&quot;NN_BUILDER&quot;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;&quot;ARM_COMPUTE&quot;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;&quot;X86&quot;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;&quot;Myriad2&quot;",
+    "local": ""
+  },
+  {
+    "origin": "Intel(R) Movidius(TM) Neural Compute Stick, NCS (USB 03e7:2150), Myriad2 (",
+    "local": ""
+  },
+  {
+    "origin": "https://software.intel.com/en-us/movidius-ncs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;&quot;MyriadX&quot;",
+    "local": ""
+  },
+  {
+    "origin": "Intel(R) Neural Compute Stick 2, NCS2 (USB 03e7:2485), MyriadX (",
+    "local": ""
+  },
+  {
+    "origin": "https://software.intel.com/ru-ru/neural-compute-stick",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;&quot;&quot;",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Returns Inference Engine internal backend API.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Returns Inference Engine CPU type.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Returns Inference Engine VPU type.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Release a HDDL plugin.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Release a Myriad device (binded by OpenCV).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;newBackendType)",
+    "local": ""
+  },
+  {
+    "origin": "Specify Inference Engine internal backend API.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_BACKEND_INFERENCE_ENGINE_NGRAPH",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_BACKEND_INFERENCE_ENGINE_NGRAPH&#160;&#160;&#160;&quot;NGRAPH&quot;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_BACKEND_INFERENCE_ENGINE_NN_BUILDER_API",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_BACKEND_INFERENCE_ENGINE_NN_BUILDER_API&#160;&#160;&#160;&quot;NN_BUILDER&quot;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_INFERENCE_ENGINE_CPU_TYPE_ARM_COMPUTE",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_INFERENCE_ENGINE_CPU_TYPE_ARM_COMPUTE&#160;&#160;&#160;&quot;ARM_COMPUTE&quot;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_INFERENCE_ENGINE_CPU_TYPE_X86",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_INFERENCE_ENGINE_CPU_TYPE_X86&#160;&#160;&#160;&quot;X86&quot;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_INFERENCE_ENGINE_VPU_TYPE_MYRIAD_2",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_INFERENCE_ENGINE_VPU_TYPE_MYRIAD_2&#160;&#160;&#160;&quot;Myriad2&quot;",
+    "local": ""
+  },
+  {
+    "origin": "Intel(R) Movidius(TM) Neural Compute Stick, NCS (USB 03e7:2150), Myriad2 (",
+    "local": ""
+  },
+  {
+    "origin": "https://software.intel.com/en-us/movidius-ncs",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_INFERENCE_ENGINE_VPU_TYPE_MYRIAD_X",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_INFERENCE_ENGINE_VPU_TYPE_MYRIAD_X&#160;&#160;&#160;&quot;MyriadX&quot;",
+    "local": ""
+  },
+  {
+    "origin": "Intel(R) Neural Compute Stick 2, NCS2 (USB 03e7:2485), MyriadX (",
+    "local": ""
+  },
+  {
+    "origin": "https://software.intel.com/ru-ru/neural-compute-stick",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "CV_DNN_INFERENCE_ENGINE_VPU_TYPE_UNSPECIFIED",
+    "local": ""
+  },
+  {
+    "origin": "#define CV_DNN_INFERENCE_ENGINE_VPU_TYPE_UNSPECIFIED&#160;&#160;&#160;&quot;&quot;",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

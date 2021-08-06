@@ -1,0 +1,610 @@
+[
+  {
+    "origin": "OpenCV: Smoothing Images",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Smoothing Images",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to apply diverse linear filters to smooth images using OpenCV functions such as:",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The explanation below belongs to the book",
+    "local": ""
+  },
+  {
+    "origin": "Computer Vision: Algorithms and Applications",
+    "local": ""
+  },
+  {
+    "origin": "by Richard Szeliski and to",
+    "local": ""
+  },
+  {
+    "origin": "LearningOpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Smoothing",
+    "local": ""
+  },
+  {
+    "origin": ", also called",
+    "local": ""
+  },
+  {
+    "origin": "blurring",
+    "local": ""
+  },
+  {
+    "origin": ", is a simple and frequently used image processing operation.",
+    "local": ""
+  },
+  {
+    "origin": "There are many reasons for smoothing. In this tutorial we will focus on smoothing in order to reduce noise (other uses will be seen in the following tutorials).",
+    "local": ""
+  },
+  {
+    "origin": "To perform a smoothing operation we will apply a",
+    "local": ""
+  },
+  {
+    "origin": "filter",
+    "local": ""
+  },
+  {
+    "origin": "to our image. The most common type of filters are",
+    "local": ""
+  },
+  {
+    "origin": "linear",
+    "local": ""
+  },
+  {
+    "origin": ", in which an output pixel's value (i.e. \\(g(i,j)\\)) is determined as a weighted sum of input pixel values (i.e. \\(f(i+k,j+l)\\)) :",
+    "local": ""
+  },
+  {
+    "origin": "\\[g(i,j) = \\sum_{k,l} f(i+k, j+l) h(k,l)\\]",
+    "local": ""
+  },
+  {
+    "origin": "\\(h(k,l)\\) is called the",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": ", which is nothing more than the coefficients of the filter.",
+    "local": ""
+  },
+  {
+    "origin": "It helps to visualize a",
+    "local": ""
+  },
+  {
+    "origin": "filter",
+    "local": ""
+  },
+  {
+    "origin": "as a window of coefficients sliding across the image.",
+    "local": ""
+  },
+  {
+    "origin": "There are many kind of filters, here we will mention the most used:",
+    "local": ""
+  },
+  {
+    "origin": "Normalized Box Filter",
+    "local": ""
+  },
+  {
+    "origin": "This filter is the simplest of all! Each output pixel is the",
+    "local": ""
+  },
+  {
+    "origin": "mean",
+    "local": ""
+  },
+  {
+    "origin": "of its kernel neighbors ( all of them contribute with equal weights)",
+    "local": ""
+  },
+  {
+    "origin": "The kernel is below:",
+    "local": ""
+  },
+  {
+    "origin": "\\[K = \\dfrac{1}{K_{width} \\cdot K_{height}} \\begin{bmatrix} 1 &amp; 1 &amp; 1 &amp; ... &amp; 1 \\\\ 1 &amp; 1 &amp; 1 &amp; ... &amp; 1 \\\\ . &amp; . &amp; . &amp; ... &amp; 1 \\\\ . &amp; . &amp; . &amp; ... &amp; 1 \\\\ 1 &amp; 1 &amp; 1 &amp; ... &amp; 1 \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Gaussian Filter",
+    "local": ""
+  },
+  {
+    "origin": "Probably the most useful filter (although not the fastest). Gaussian filtering is done by convolving each point in the input array with a",
+    "local": ""
+  },
+  {
+    "origin": "Gaussian kernel",
+    "local": ""
+  },
+  {
+    "origin": "and then summing them all to produce the output array.",
+    "local": ""
+  },
+  {
+    "origin": "Just to make the picture clearer, remember how a 1D Gaussian kernel look like?",
+    "local": ""
+  },
+  {
+    "origin": "Assuming that an image is 1D, you can notice that the pixel located in the middle would have the biggest weight. The weight of its neighbors decreases as the spatial distance between them and the center pixel increases.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Remember that a 2D Gaussian can be represented as :",
+    "local": ""
+  },
+  {
+    "origin": "\\[G_{0}(x, y) = A e^{ \\dfrac{ -(x - \\mu_{x})^{2} }{ 2\\sigma^{2}_{x} } + \\dfrac{ -(y - \\mu_{y})^{2} }{ 2\\sigma^{2}_{y} } }\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(\\mu\\) is the mean (the peak) and \\(\\sigma^{2}\\) represents the variance (per each of the variables \\(x\\) and \\(y\\))",
+    "local": ""
+  },
+  {
+    "origin": "Median Filter",
+    "local": ""
+  },
+  {
+    "origin": "The median filter run through each element of the signal (in this case the image) and replace each pixel with the",
+    "local": ""
+  },
+  {
+    "origin": "median",
+    "local": ""
+  },
+  {
+    "origin": "of its neighboring pixels (located in a square neighborhood around the evaluated pixel).",
+    "local": ""
+  },
+  {
+    "origin": "Bilateral Filter",
+    "local": ""
+  },
+  {
+    "origin": "So far, we have explained some filters which main goal is to",
+    "local": ""
+  },
+  {
+    "origin": "smooth",
+    "local": ""
+  },
+  {
+    "origin": "an input image. However, sometimes the filters do not only dissolve the noise, but also smooth away the",
+    "local": ""
+  },
+  {
+    "origin": "edges",
+    "local": ""
+  },
+  {
+    "origin": ". To avoid this (at certain extent at least), we can use a bilateral filter.",
+    "local": ""
+  },
+  {
+    "origin": "In an analogous way as the Gaussian filter, the bilateral filter also considers the neighboring pixels with weights assigned to each of them. These weights have two components, the first of which is the same weighting used by the Gaussian filter. The second component takes into account the difference in intensity between the neighboring pixels and the evaluated one.",
+    "local": ""
+  },
+  {
+    "origin": "For a more detailed explanation you can check",
+    "local": ""
+  },
+  {
+    "origin": "this link",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "What does this program do?",
+    "local": ""
+  },
+  {
+    "origin": "Loads an image",
+    "local": ""
+  },
+  {
+    "origin": "Applies 4 different kinds of filters (explained in Theory) and show the filtered images sequentially",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Downloadable code",
+    "local": ""
+  },
+  {
+    "origin": ": Click",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Code at glance:",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Let's check the OpenCV functions that involve only the smoothing procedure, since the rest is already known by now.",
+    "local": ""
+  },
+  {
+    "origin": "Normalized Block Filter:",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV offers the function",
+    "local": ""
+  },
+  {
+    "origin": "to perform smoothing with this filter. We specify 4 arguments (more details, check the Reference):",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ": Source image",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ": Destination image",
+    "local": ""
+  },
+  {
+    "origin": "Size( w, h )",
+    "local": ""
+  },
+  {
+    "origin": ": Defines the size of the kernel to be used ( of width",
+    "local": ""
+  },
+  {
+    "origin": "w",
+    "local": ""
+  },
+  {
+    "origin": "pixels and height",
+    "local": ""
+  },
+  {
+    "origin": "h",
+    "local": ""
+  },
+  {
+    "origin": "pixels)",
+    "local": ""
+  },
+  {
+    "origin": "Point(-1, -1)",
+    "local": ""
+  },
+  {
+    "origin": ": Indicates where the anchor point (the pixel evaluated) is located with respect to the neighborhood. If there is a negative value, then the center of the kernel is considered the anchor point.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Gaussian Filter:",
+    "local": ""
+  },
+  {
+    "origin": "It is performed by the function",
+    "local": ""
+  },
+  {
+    "origin": ": Here we use 4 arguments (more details, check the OpenCV reference):",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ": Source image",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ": Destination image",
+    "local": ""
+  },
+  {
+    "origin": "Size(w, h)",
+    "local": ""
+  },
+  {
+    "origin": ": The size of the kernel to be used (the neighbors to be considered). \\(w\\) and \\(h\\) have to be odd and positive numbers otherwise the size will be calculated using the \\(\\sigma_{x}\\) and \\(\\sigma_{y}\\) arguments.",
+    "local": ""
+  },
+  {
+    "origin": "\\(\\sigma_{x}\\): The standard deviation in x. Writing \\(0\\) implies that \\(\\sigma_{x}\\) is calculated using kernel size.",
+    "local": ""
+  },
+  {
+    "origin": "\\(\\sigma_{y}\\): The standard deviation in y. Writing \\(0\\) implies that \\(\\sigma_{y}\\) is calculated using kernel size.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Median Filter:",
+    "local": ""
+  },
+  {
+    "origin": "This filter is provided by the",
+    "local": ""
+  },
+  {
+    "origin": "function: We use three arguments:",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ": Source image",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ": Destination image, must be the same type as",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "i",
+    "local": ""
+  },
+  {
+    "origin": ": Size of the kernel (only one because we use a square window). Must be odd.",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Bilateral Filter",
+    "local": ""
+  },
+  {
+    "origin": "Provided by OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "We use 5 arguments:",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ": Source image",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ": Destination image",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": ": The diameter of each pixel neighborhood.",
+    "local": ""
+  },
+  {
+    "origin": "\\(\\sigma_{Color}\\): Standard deviation in the color space.",
+    "local": ""
+  },
+  {
+    "origin": "\\(\\sigma_{Space}\\): Standard deviation in the coordinate space (in pixel terms)",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "The code opens an image (in this case",
+    "local": ""
+  },
+  {
+    "origin": "lena.jpg",
+    "local": ""
+  },
+  {
+    "origin": ") and display it under the effects of the 4 filters explained.",
+    "local": ""
+  },
+  {
+    "origin": "Here is a snapshot of the image smoothed using",
+    "local": ""
+  },
+  {
+    "origin": "medianBlur",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": ""
+  }
+]

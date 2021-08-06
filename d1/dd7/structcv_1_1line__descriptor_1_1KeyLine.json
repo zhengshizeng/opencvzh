@@ -1,0 +1,578 @@
+[
+  {
+    "origin": "OpenCV: cv::line_descriptor::KeyLine Struct Reference",
+    "local": "OpenCV:cv:：line\\u descriptor:：KeyLine结构引用"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "Public Attributes",
+    "local": "公共属性"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::line_descriptor::KeyLine Struct Reference",
+    "local": "cv:：line\\u descriptor:：KeyLine结构引用"
+  },
+  {
+    "origin": "A class to represent a line.",
+    "local": "表示线的类。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "Public Attributes",
+    "local": "公共属性"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "A class to represent a line.",
+    "local": "表示线的类。"
+  },
+  {
+    "origin": "As aformentioned, it is been necessary to design a class that fully stores the information needed to characterize completely a line and plot it on image it was extracted from, when required.",
+    "local": "如前所述，有必要设计一个类，该类充分存储完整描述一条线所需的信息，并在需要时将其绘制在从中提取的图像上。"
+  },
+  {
+    "origin": "KeyLine* class has been created for such goal; it is mainly inspired to Feature2d's",
+    "local": "已经为这个目标创建了KeyLine*类；它的灵感主要来自Feature2d"
+  },
+  {
+    "origin": "class, since",
+    "local": "班级，自从"
+  },
+  {
+    "origin": "shares some of",
+    "local": "分享一些"
+  },
+  {
+    "origin": "'s fields, even if a part of them assumes a different meaning, when speaking about lines. In particular:",
+    "local": "的字段，即使其中的一部分在谈到行时具有不同的含义。特别地："
+  },
+  {
+    "origin": "the",
+    "local": "这个"
+  },
+  {
+    "origin": "class_id",
+    "local": "类别id"
+  },
+  {
+    "origin": "field is used to gather lines extracted from different octaves which refer to same line inside original image (such lines and the one they represent in original image share the same",
+    "local": "场用于收集从不同的八度音阶中提取的线，这些八度音阶表示原始图像中的同一条线（这些线和它们在原始图像中所表示的线共享同一条线）"
+  },
+  {
+    "origin": "class_id",
+    "local": "类别id"
+  },
+  {
+    "origin": "value)",
+    "local": "值）"
+  },
+  {
+    "origin": "the",
+    "local": "这个"
+  },
+  {
+    "origin": "angle",
+    "local": "角"
+  },
+  {
+    "origin": "field represents line's slope with respect to (positive) X axis",
+    "local": "字段表示线相对于（正）X轴的斜率"
+  },
+  {
+    "origin": "the",
+    "local": "这个"
+  },
+  {
+    "origin": "pt",
+    "local": "pt公司"
+  },
+  {
+    "origin": "field represents line's midpoint",
+    "local": "字段表示直线的中点"
+  },
+  {
+    "origin": "the",
+    "local": "这个"
+  },
+  {
+    "origin": "response",
+    "local": "响应"
+  },
+  {
+    "origin": "field is computed as the ratio between the line's length and maximum between image's width and height",
+    "local": "字段的计算方式是线条长度与图像宽度和高度之间的最大值之比"
+  },
+  {
+    "origin": "the",
+    "local": "这个"
+  },
+  {
+    "origin": "size",
+    "local": "大小"
+  },
+  {
+    "origin": "field is the area of the smallest rectangle containing line",
+    "local": "字段是包含行的最小矩形的面积"
+  },
+  {
+    "origin": "Apart from fields inspired to",
+    "local": "除了灵感来源于"
+  },
+  {
+    "origin": "class, KeyLines stores information about extremes of line in original image and in octave it was extracted from, about line's length and number of pixels it covers.",
+    "local": "类中，KeyLines存储有关原始图像中线条的极值以及从中提取的八度音阶中线条的长度和覆盖的像素数的信息。"
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": "建造商和；析构函数文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "KeyLine()",
+    "local": "按键线"
+  },
+  {
+    "origin": "cv::line_descriptor::KeyLine::KeyLine",
+    "local": "cv：：行\\描述符：：键行：：键行"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "constructor",
+    "local": "建造师"
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getEndPoint()",
+    "local": "getEndPoint（）"
+  },
+  {
+    "origin": "cv::line_descriptor::KeyLine::getEndPoint",
+    "local": "cv:：line\\u描述符：：KeyLine：：getEndPoint"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "Returns the end point of the line in the original image",
+    "local": "返回原始图像中直线的端点"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getEndPointInOctave()",
+    "local": "getendpointinoctave（）"
+  },
+  {
+    "origin": "cv::line_descriptor::KeyLine::getEndPointInOctave",
+    "local": "cv:：line\\u描述符：：KeyLine：：getEndPointInOctave"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "Returns the end point of the line in the octave it was extracted from",
+    "local": "返回从中提取的八度音阶中的行的端点"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getStartPoint()",
+    "local": "getStartPoint（）"
+  },
+  {
+    "origin": "cv::line_descriptor::KeyLine::getStartPoint",
+    "local": "cv:：line\\u描述符：：KeyLine：：getStartPoint"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "Returns the start point of the line in the original image",
+    "local": "返回原始图像中直线的起点"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "getStartPointInOctave()",
+    "local": "getStartPointInOctave（）"
+  },
+  {
+    "origin": "cv::line_descriptor::KeyLine::getStartPointInOctave",
+    "local": "cv:：line\\u描述符：：KeyLine:：getStartPointInOctave"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "Returns the start point of the line in the octave it was extracted from",
+    "local": "返回从中提取的八度音阶中行的起点"
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": "成员数据文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "angle",
+    "local": "角"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::angle",
+    "local": "浮点cv：：线\\描述符：：键线：：角度"
+  },
+  {
+    "origin": "orientation of the line",
+    "local": "线路走向"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "class_id",
+    "local": "类别id"
+  },
+  {
+    "origin": "int cv::line_descriptor::KeyLine::class_id",
+    "local": "int cv：：行\\描述符：：键线：：类\\ id"
+  },
+  {
+    "origin": "object ID, that can be used to cluster keylines by the line they represent",
+    "local": "对象ID，可用于按关键字所代表的行对关键字行进行聚类"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "endPointX",
+    "local": "端点X"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::endPointX",
+    "local": "float cv:：line\\u描述符：：KeyLine：：endPointX"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "endPointY",
+    "local": "端点"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::endPointY",
+    "local": "float cv:：line\\u descriptor:：KeyLine:：endPointY"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "ePointInOctaveX",
+    "local": "ePointInOctaveX公司"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::ePointInOctaveX",
+    "local": "float cv:：line\\u描述符：：KeyLine：：ePointInOctaveX"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "ePointInOctaveY",
+    "local": "Epontinoctavey公司"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::ePointInOctaveY",
+    "local": "float cv:：line\\u描述符：：KeyLine：：epointinoctavy"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "lineLength",
+    "local": "测线长度。"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::lineLength",
+    "local": "float cv:：line\\u描述符：：KeyLine：：lineLength"
+  },
+  {
+    "origin": "the length of line",
+    "local": "线条的长度"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "numOfPixels",
+    "local": "像素数"
+  },
+  {
+    "origin": "int cv::line_descriptor::KeyLine::numOfPixels",
+    "local": "int cv:：line\\u描述符：：KeyLine：：numOfPixels"
+  },
+  {
+    "origin": "number of pixels covered by the line",
+    "local": "线条覆盖的像素数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "octave",
+    "local": "倍频程"
+  },
+  {
+    "origin": "int cv::line_descriptor::KeyLine::octave",
+    "local": "int cv:：line\\u描述符：：键线：：倍频程"
+  },
+  {
+    "origin": "octave (pyramid layer), from which the keyline has been extracted",
+    "local": "倍频程（金字塔层），从中提取关键线"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "pt",
+    "local": "pt公司"
+  },
+  {
+    "origin": "cv::line_descriptor::KeyLine::pt",
+    "local": "cv：：行\\描述符：：键行：：pt"
+  },
+  {
+    "origin": "coordinates of the middlepoint",
+    "local": "中点坐标"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "response",
+    "local": "响应"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::response",
+    "local": "float cv:：line\\u描述符：：KeyLine：：响应"
+  },
+  {
+    "origin": "the response, by which the strongest keylines have been selected. It's represented by the ratio between line's length and maximum between image's width and height",
+    "local": "响应，通过它可以选择最强的关键行。它由线条的长度和图像的宽度和高度之间的最大值的比值来表示"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "size",
+    "local": "大小"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::size",
+    "local": "float cv:：line\\u descriptor:：KeyLine:：size浮点数"
+  },
+  {
+    "origin": "minimum area containing line",
+    "local": "最小含线面积"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "sPointInOctaveX",
+    "local": "sPointInOctaveX公司"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::sPointInOctaveX",
+    "local": "float cv:：line\\u descriptor:：KeyLine:：sPointInOctaveX浮点数"
+  },
+  {
+    "origin": "line's extremes in image it was extracted from",
+    "local": "从图像中提取的直线的极值"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "sPointInOctaveY",
+    "local": "斯宾诺克塔维"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::sPointInOctaveY",
+    "local": "float cv:：line\\u描述符：：KeyLine：：spointinoctavy"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "startPointX",
+    "local": "起点X"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::startPointX",
+    "local": "float cv:：line\\u描述符：：KeyLine：：startPointX"
+  },
+  {
+    "origin": "lines's extremes in original image",
+    "local": "原始图像中的线条极值"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "startPointY",
+    "local": "起点"
+  },
+  {
+    "origin": "float cv::line_descriptor::KeyLine::startPointY",
+    "local": "float cv:：line\\u descriptor:：KeyLine:：startPointY"
+  },
+  {
+    "origin": "The documentation for this struct was generated from the following file:",
+    "local": "此结构的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/line_descriptor/",
+    "local": "opencv2/line\\u描述符/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:48为OpenCV生成，&#160；"
+  }
+]

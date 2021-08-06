@@ -1,0 +1,1094 @@
+[
+  {
+    "origin": "OpenCV: The module brings implementations of intensity transformation algorithms to adjust image contrast.",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "The module brings implementations of intensity transformation algorithms to adjust image contrast.",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "input,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;output)",
+    "local": ""
+  },
+  {
+    "origin": "Given an input bgr or grayscale image, apply autoscaling on domain [0, 255] to increase the contrast of the input image and return the resulting image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "input,",
+    "local": ""
+  },
+  {
+    "origin": "output, float mu=0.5f, float a=-0.3293f, float b=1.1258f)",
+    "local": ""
+  },
+  {
+    "origin": "Given an input color image, enhance low-light images using the BIMEF method (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "input,",
+    "local": ""
+  },
+  {
+    "origin": "output, float k, float mu, float a, float b)",
+    "local": ""
+  },
+  {
+    "origin": "Given an input color image, enhance low-light images using the BIMEF method (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "input,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;output, const int r1, const int s1, const int r2, const int s2)",
+    "local": ""
+  },
+  {
+    "origin": "Given an input bgr or grayscale image, apply linear contrast stretching on domain [0, 255] and return the resulting image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "input,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;output, const float gamma)",
+    "local": ""
+  },
+  {
+    "origin": "Given an input bgr or grayscale image and constant gamma, apply power-law transformation, a.k.a. gamma correction to the image on domain [0, 255] and return the resulting image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "input,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;output)",
+    "local": ""
+  },
+  {
+    "origin": "Given an input bgr or grayscale image and constant c, apply log transformation to the image on domain [0, 255] and return the resulting image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Namespace for all functions is",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Supported Algorithms",
+    "local": ""
+  },
+  {
+    "origin": "Autoscaling",
+    "local": ""
+  },
+  {
+    "origin": "Log Transformations",
+    "local": ""
+  },
+  {
+    "origin": "Power-Law (Gamma) Transformations",
+    "local": ""
+  },
+  {
+    "origin": "Contrast Stretching",
+    "local": ""
+  },
+  {
+    "origin": "BIMEF, A Bio-Inspired Multi-Exposure Fusion Framework for Low-light Image Enhancement",
+    "local": ""
+  },
+  {
+    "origin": "References from following book and websites:",
+    "local": ""
+  },
+  {
+    "origin": "Digital Image Processing 4th Edition Chapter 3 [Rafael C. Gonzalez, Richard E. Woods]",
+    "local": ""
+  },
+  {
+    "origin": "http://www.cs.uregina.ca/Links/class-info/425/Lab3/",
+    "local": ""
+  },
+  {
+    "origin": "https://theailearner.com/2019/01/30/contrast-stretching/",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "autoscaling()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::intensity_transform::autoscaling",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.intensity_transform.autoscaling(",
+    "local": ""
+  },
+  {
+    "origin": "input, output",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Given an input bgr or grayscale image, apply autoscaling on domain [0, 255] to increase the contrast of the input image and return the resulting image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "input bgr or grayscale image.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "resulting image of autoscaling.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "BIMEF()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::intensity_transform::BIMEF",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "mu",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "a",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "b",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.intensity_transform.BIMEF(",
+    "local": ""
+  },
+  {
+    "origin": "input[, output[, mu[, a[, b]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.intensity_transform.BIMEF2(",
+    "local": ""
+  },
+  {
+    "origin": "input, k, mu, a, b[, output]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Given an input color image, enhance low-light images using the BIMEF method (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "input color image.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "resulting image.",
+    "local": ""
+  },
+  {
+    "origin": "mu",
+    "local": ""
+  },
+  {
+    "origin": "enhancement ratio.",
+    "local": ""
+  },
+  {
+    "origin": "a",
+    "local": ""
+  },
+  {
+    "origin": "a-parameter in the Camera Response Function (CRF).",
+    "local": ""
+  },
+  {
+    "origin": "b",
+    "local": ""
+  },
+  {
+    "origin": "b-parameter in the Camera Response Function (CRF).",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "This is a C++ implementation of the",
+    "local": ""
+  },
+  {
+    "origin": "original MATLAB algorithm",
+    "local": ""
+  },
+  {
+    "origin": ". Compared to the original code, this implementation is a little bit slower and does not provide the same results. In particular, quality of the image enhancement is degraded for the bright areas in certain conditions.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "BIMEF()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::intensity_transform::BIMEF",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "mu",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "a",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "b",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.intensity_transform.BIMEF(",
+    "local": ""
+  },
+  {
+    "origin": "input[, output[, mu[, a[, b]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.intensity_transform.BIMEF2(",
+    "local": ""
+  },
+  {
+    "origin": "input, k, mu, a, b[, output]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Given an input color image, enhance low-light images using the BIMEF method (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded function with the exposure ratio given as parameter.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "input color image.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "resulting image.",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "exposure ratio.",
+    "local": ""
+  },
+  {
+    "origin": "mu",
+    "local": ""
+  },
+  {
+    "origin": "enhancement ratio.",
+    "local": ""
+  },
+  {
+    "origin": "a",
+    "local": ""
+  },
+  {
+    "origin": "a-parameter in the Camera Response Function (CRF).",
+    "local": ""
+  },
+  {
+    "origin": "b",
+    "local": ""
+  },
+  {
+    "origin": "b-parameter in the Camera Response Function (CRF).",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "This is a C++ implementation of the",
+    "local": ""
+  },
+  {
+    "origin": "original MATLAB algorithm",
+    "local": ""
+  },
+  {
+    "origin": ". Compared to the original code, this implementation is a little bit slower and does not provide the same results. In particular, quality of the image enhancement is degraded for the bright areas in certain conditions.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "contrastStretching()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::intensity_transform::contrastStretching",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "r1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "s1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "r2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "s2",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.intensity_transform.contrastStretching(",
+    "local": ""
+  },
+  {
+    "origin": "input, output, r1, s1, r2, s2",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Given an input bgr or grayscale image, apply linear contrast stretching on domain [0, 255] and return the resulting image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "input bgr or grayscale image.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "resulting image of contrast stretching.",
+    "local": ""
+  },
+  {
+    "origin": "r1",
+    "local": ""
+  },
+  {
+    "origin": "x coordinate of first point (r1, s1) in the transformation function.",
+    "local": ""
+  },
+  {
+    "origin": "s1",
+    "local": ""
+  },
+  {
+    "origin": "y coordinate of first point (r1, s1) in the transformation function.",
+    "local": ""
+  },
+  {
+    "origin": "r2",
+    "local": ""
+  },
+  {
+    "origin": "x coordinate of second point (r2, s2) in the transformation function.",
+    "local": ""
+  },
+  {
+    "origin": "s2",
+    "local": ""
+  },
+  {
+    "origin": "y coordinate of second point (r2, s2) in the transformation function.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "gammaCorrection()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::intensity_transform::gammaCorrection",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const float",
+    "local": ""
+  },
+  {
+    "origin": "gamma",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.intensity_transform.gammaCorrection(",
+    "local": ""
+  },
+  {
+    "origin": "input, output, gamma",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Given an input bgr or grayscale image and constant gamma, apply power-law transformation, a.k.a. gamma correction to the image on domain [0, 255] and return the resulting image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "input bgr or grayscale image.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "resulting image of gamma corrections.",
+    "local": ""
+  },
+  {
+    "origin": "gamma",
+    "local": ""
+  },
+  {
+    "origin": "constant in c*r^gamma where r is pixel value.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "logTransform()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::intensity_transform::logTransform",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.intensity_transform.logTransform(",
+    "local": ""
+  },
+  {
+    "origin": "input, output",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Given an input bgr or grayscale image and constant c, apply log transformation to the image on domain [0, 255] and return the resulting image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "input",
+    "local": ""
+  },
+  {
+    "origin": "input bgr or grayscale image.",
+    "local": ""
+  },
+  {
+    "origin": "output",
+    "local": ""
+  },
+  {
+    "origin": "resulting image of log transformations.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

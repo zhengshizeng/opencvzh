@@ -1,0 +1,210 @@
+[
+  {
+    "origin": "OpenCV: cv::line_descriptor::LSDParam Struct Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::line_descriptor::LSDParam Struct Reference",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Public Attributes",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Lines extraction methodology",
+    "local": ""
+  },
+  {
+    "origin": "The lines extraction methodology described in the following is mainly based on",
+    "local": ""
+  },
+  {
+    "origin": ". The extraction starts with a Gaussian pyramid generated from an original image, downsampled N-1 times, blurred N times, to obtain N layers (one for each octave), with layer 0 corresponding to input image. Then, from each layer (octave) in the pyramid, lines are extracted using LSD algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "Differently from EDLine lines extractor used in original article, LSD furnishes information only about lines extremes; thus, additional information regarding slope and equation of line are computed via analytic methods. The number of pixels is obtained using",
+    "local": ""
+  },
+  {
+    "origin": ". Extracted lines are returned in the form of",
+    "local": ""
+  },
+  {
+    "origin": "objects, but since extraction is based on a method different from the one used in",
+    "local": ""
+  },
+  {
+    "origin": "class, data associated to a line's extremes in original image and in octave it was extracted from, coincide.",
+    "local": ""
+  },
+  {
+    "origin": "'s field",
+    "local": ""
+  },
+  {
+    "origin": "class_id",
+    "local": ""
+  },
+  {
+    "origin": "is used as an index to indicate the order of extraction of a line inside a single octave.",
+    "local": ""
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "LSDParam()",
+    "local": ""
+  },
+  {
+    "origin": "cv::line_descriptor::LSDParam::LSDParam",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "inline",
+    "local": ""
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "ang_th",
+    "local": ""
+  },
+  {
+    "origin": "double cv::line_descriptor::LSDParam::ang_th",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "density_th",
+    "local": ""
+  },
+  {
+    "origin": "double cv::line_descriptor::LSDParam::density_th",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "log_eps",
+    "local": ""
+  },
+  {
+    "origin": "double cv::line_descriptor::LSDParam::log_eps",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "n_bins",
+    "local": ""
+  },
+  {
+    "origin": "int cv::line_descriptor::LSDParam::n_bins",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "quant",
+    "local": ""
+  },
+  {
+    "origin": "double cv::line_descriptor::LSDParam::quant",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "double cv::line_descriptor::LSDParam::scale",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "sigma_scale",
+    "local": ""
+  },
+  {
+    "origin": "double cv::line_descriptor::LSDParam::sigma_scale",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this struct was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/line_descriptor/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by &#160;",
+    "local": ""
+  }
+]

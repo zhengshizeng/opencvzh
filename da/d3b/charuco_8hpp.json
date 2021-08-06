@@ -1,0 +1,166 @@
+[
+  {
+    "origin": "OpenCV: opencv2/aruco/charuco.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "charuco.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "ChArUco board Specific class for ChArUco boards. A ChArUco board is a planar board where the markers are placed inside the white squares of a chessboard. The benefits of ChArUco boards is that they provide both, ArUco markers versatility and chessboard corner precision, which is important for calibration and pose estimation. This class also allows the easy creation and drawing of ChArUco boards.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays charucoCorners, InputArrayOfArrays charucoIds, const Ptr&lt; CharucoBoard &gt; &amp;board, Size imageSize, InputOutputArray cameraMatrix, InputOutputArray distCoeffs, OutputArrayOfArrays rvecs, OutputArrayOfArrays tvecs, OutputArray stdDeviationsIntrinsics, OutputArray stdDeviationsExtrinsics, OutputArray perViewErrors, int flags=0, TermCriteria criteria=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, DBL_EPSILON))",
+    "local": ""
+  },
+  {
+    "origin": "Calibrate a camera using Charuco corners.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays charucoCorners, InputArrayOfArrays charucoIds, const Ptr&lt; CharucoBoard &gt; &amp;board, Size imageSize, InputOutputArray cameraMatrix, InputOutputArray distCoeffs, OutputArrayOfArrays rvecs=noArray(), OutputArrayOfArrays tvecs=noArray(), int flags=0, TermCriteria criteria=TermCriteria(TermCriteria::COUNT+TermCriteria::EPS, 30, DBL_EPSILON))",
+    "local": ""
+  },
+  {
+    "origin": "It's the same function as",
+    "local": ""
+  },
+  {
+    "origin": "but without calibration error estimation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray image, InputArrayOfArrays markerCorners, InputArray markerIds, float squareMarkerLengthRate, OutputArrayOfArrays diamondCorners, OutputArray diamondIds, InputArray cameraMatrix=noArray(), InputArray distCoeffs=noArray())",
+    "local": ""
+  },
+  {
+    "origin": "Detect ChArUco Diamond markers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const Ptr&lt; Dictionary &gt; &amp;dictionary, Vec4i ids, int squareLength, int markerLength, OutputArray img, int marginSize=0, int borderBits=1)",
+    "local": ""
+  },
+  {
+    "origin": "Draw a ChArUco Diamond marker.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputOutputArray image, InputArray charucoCorners, InputArray charucoIds=noArray(), Scalar cornerColor=Scalar(255, 0, 0))",
+    "local": ""
+  },
+  {
+    "origin": "Draws a set of Charuco corners.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputOutputArray image, InputArrayOfArrays diamondCorners, InputArray diamondIds=noArray(), Scalar borderColor=Scalar(0, 0, 255))",
+    "local": ""
+  },
+  {
+    "origin": "Draw a set of detected ChArUco Diamond markers.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArray charucoCorners, InputArray charucoIds, const Ptr&lt; CharucoBoard &gt; &amp;board, InputArray cameraMatrix, InputArray distCoeffs, InputOutputArray rvec, InputOutputArray tvec, bool useExtrinsicGuess=false)",
+    "local": ""
+  },
+  {
+    "origin": "Pose estimation for a ChArUco board given some of their corners.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(InputArrayOfArrays markerCorners, InputArray markerIds, InputArray image, const Ptr&lt; CharucoBoard &gt; &amp;board, OutputArray charucoCorners, OutputArray charucoIds, InputArray cameraMatrix=noArray(), InputArray distCoeffs=noArray(), int minMarkers=2)",
+    "local": ""
+  },
+  {
+    "origin": "Interpolate position of ChArUco board corners.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const Ptr&lt; CharucoBoard &gt; &amp;_board, InputArray _charucoIds)",
+    "local": ""
+  },
+  {
+    "origin": "test whether the ChArUco markers are collinear",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

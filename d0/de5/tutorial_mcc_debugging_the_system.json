@@ -1,0 +1,90 @@
+[
+  {
+    "origin": "OpenCV: Customising and Debugging the detection system",
+    "local": "OpenCV：检测系统的定制与调试"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Customising and Debugging the detection system",
+    "local": "检测系统的定制与调试"
+  },
+  {
+    "origin": "There are many hyperparameters that are involved in the detection of a chart.The default values are chosen to maximize the detections in the average case. But these might not be best for your use case.These values can be configured to improve the accuracy for a particular use case. To do this, you would need to create an instance of",
+    "local": "图表的检测涉及到许多超参数。在平均情况下，选择默认值以最大化检测。但这些可能不是最适合您的用例的，可以配置这些值来提高特定用例的准确性。为此，需要创建"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "is important.",
+    "local": "这很重要。"
+  },
+  {
+    "origin": "It contains a lot of values, the complete list can be found in the documentation for",
+    "local": "它包含很多值，完整的列表可以在文档中找到"
+  },
+  {
+    "origin": ". For this tutorial we will be playing with the value of",
+    "local": ". 在本教程中，我们将讨论"
+  },
+  {
+    "origin": ". The other values can be configured similarly.",
+    "local": ". 其他值可以类似地配置。"
+  },
+  {
+    "origin": "controls how much error is allowed in detection. Like if some chart cell is occluded. It will increase the error. The default value allows some level of tolerance to occlusions, increasing(or decreasing)",
+    "local": "控制检测中允许的错误量。就像某个图表单元格被阻塞了。这会增加误差。默认值允许对遮挡有一定程度的公差，增加（或减少）"
+  },
+  {
+    "origin": ", will increase(or decrease) this tolerance.",
+    "local": "，将增加（或减少）该公差。"
+  },
+  {
+    "origin": "You can change its value simply like this.",
+    "local": "你可以像这样改变它的值。"
+  },
+  {
+    "origin": "To use this in the detection system, you would need to pass it to the process function.",
+    "local": "要在检测系统中使用它，需要将其传递给process函数。"
+  },
+  {
+    "origin": "Thats how easy is it to play with the values. But there is a catch, there are a lot of parts in the detection pipeline. If you simply run it like this you would not be able to see the effect of this change in isolation. It is possible that the preceding parts detected no possible colorchecker candidates, and so changing the value of",
+    "local": "这就是玩弄价值观的容易程度。但是有一个问题，检测管道里有很多零件。如果您只是这样运行它，您将无法单独看到此更改的效果。前面的部分可能检测不到可能的颜色检查器候选，因此更改"
+  },
+  {
+    "origin": "will have no effect. Luckily OpenCV provides a solution for this. You can make the code output a multiple images, each one showing the effect of one part of the pipeling. This is disabled by default.",
+    "local": "不会有任何影响。幸运的是OpenCV提供了一个解决方案。您可以使代码输出多个图像，每个图像显示管道的一部分的效果。这在默认情况下是禁用的。"
+  },
+  {
+    "origin": "This can only be used if you are compiling from sources. If you can't build from souces, and still need this feature,try raising as issue in the OpenCV repo.",
+    "local": "只有从源代码处编译时，才能使用此选项。如果您无法从源代码构建，并且仍然需要此功能，请尝试在OpenCV repo中提出as问题。"
+  },
+  {
+    "origin": "To do this : Open the file",
+    "local": "为此：打开文件"
+  },
+  {
+    "origin": ", near the top there is this line",
+    "local": "，靠近顶部有一条线"
+  },
+  {
+    "origin": "Uncomment this line and rebuild opencv. After this whenever you run the detector, It will show you multiple images, each corresponding to a part of the pipeline. Also you might see some repetetions like first you will see",
+    "local": "取消对此行的注释并重新生成opencv。之后，无论何时运行探测器，它都会显示多个图像，每个图像对应于管道的一部分。另外，你可能会看到一些重复，像你将看到的第一个"
+  },
+  {
+    "origin": ", then some more images, and again",
+    "local": "，然后是更多的图像，然后是"
+  },
+  {
+    "origin": "corresponding to same image, but slightly different from previous one, it is because internally the image is thesholded multiple times, with different parameters to adjust for different possible sizes of the colorchecker.",
+    "local": "对应于同一幅图像，但与前一幅略有不同，这是因为图像在内部被多次保存，使用不同的参数来调整颜色检测器的可能大小。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:39为OpenCV生成，&#160；"
+  }
+]

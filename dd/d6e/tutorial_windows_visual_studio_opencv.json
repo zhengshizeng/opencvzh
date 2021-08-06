@@ -1,0 +1,538 @@
+[
+  {
+    "origin": "OpenCV: How to build applications with OpenCV inside the &quot;Microsoft Visual Studio&quot;",
+    "local": "OpenCV:如何使用OpenCV在；Microsoft Visual Studio“；"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "How to build applications with OpenCV inside the \"Microsoft Visual Studio\"",
+    "local": "如何在“Microsoft Visual Studio”中使用OpenCV构建应用程序"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一篇教程:"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Bernát Gábor",
+    "local": "Bernát Gábor"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "OpenCV &gt;= 3.0"
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "This tutorial can contain obsolete information.",
+    "local": "本教程可能包含过时的信息."
+  },
+  {
+    "origin": "Everything I describe here will apply to the",
+    "local": "我在这里描述的一切都适用于"
+  },
+  {
+    "origin": "interface of OpenCV. I start out from the assumption that you have read and completed with success the",
+    "local": "OpenCV的接口.我从假设开始,你已经阅读并成功地完成了"
+  },
+  {
+    "origin": "tutorial. Therefore, before you go any further make sure you have an OpenCV directory that contains the OpenCV header files plus binaries and you have set the environment variables as described here",
+    "local": "辅导的因此,在进一步操作之前,请确保您有一个包含OpenCV头文件和二进制文件的OpenCV目录,并且您已经按照此处所述设置了环境变量"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "The OpenCV libraries, distributed by us, on the Microsoft Windows operating system are in a Dynamic Linked Libraries (",
+    "local": "我们在Microsoft Windows操作系统上分发的OpenCV库位于动态链接库中("
+  },
+  {
+    "origin": "DLL",
+    "local": "DLL"
+  },
+  {
+    "origin": "). These have the advantage that all the content of the library is loaded only at runtime, on demand, and that countless programs may use the same library file. This means that if you have ten applications using the OpenCV library, no need to have around a version for each one of them. Of course you need to have the",
+    "local": "). 它们的优点是,库的所有内容仅在运行时按需加载,而且无数程序可能使用相同的库文件.这意味着,如果您有十个使用OpenCV库的应用程序,那么不需要为每个应用程序都提供一个版本.当然,你需要有"
+  },
+  {
+    "origin": "dll",
+    "local": "dll"
+  },
+  {
+    "origin": "of the OpenCV on all systems where you want to run your application.",
+    "local": "在要运行应用程序的所有系统上的OpenCV."
+  },
+  {
+    "origin": "Another approach is to use static libraries that have",
+    "local": "另一种方法是使用具有"
+  },
+  {
+    "origin": "lib",
+    "local": "lib"
+  },
+  {
+    "origin": "extensions. You may build these by using our source files as described in the",
+    "local": "扩展.您可以使用中所述的源文件来构建这些文件"
+  },
+  {
+    "origin": "tutorial. When you use this the library will be built-in inside your",
+    "local": "辅导的当您使用此功能时,库将内置在您的"
+  },
+  {
+    "origin": "exe",
+    "local": "exe"
+  },
+  {
+    "origin": "file. So there is no chance that the user deletes them, for some reason. As a drawback your application will be larger one and as, it will take more time to load it during its startup.",
+    "local": "文件因此,由于某种原因,用户不可能删除它们.作为一个缺点,您的应用程序将更大,并且在启动期间加载它将花费更多的时间."
+  },
+  {
+    "origin": "To build an application with OpenCV you need to do two things:",
+    "local": "要使用OpenCV构建应用程序,您需要做两件事:"
+  },
+  {
+    "origin": "Tell",
+    "local": "说"
+  },
+  {
+    "origin": "to the compiler how the OpenCV library",
+    "local": "向编译器介绍如何使用OpenCV库"
+  },
+  {
+    "origin": "looks",
+    "local": "看"
+  },
+  {
+    "origin": ". You do this by",
+    "local": ". 你是靠我来做这件事的"
+  },
+  {
+    "origin": "showing",
+    "local": "显示"
+  },
+  {
+    "origin": "it the header files.",
+    "local": "它包含头文件."
+  },
+  {
+    "origin": "Tell",
+    "local": "说"
+  },
+  {
+    "origin": "to the linker from where to get the functions or data structures of OpenCV, when they are needed.",
+    "local": "在需要时从何处获取OpenCV函数或数据结构的链接器."
+  },
+  {
+    "origin": "If you use the",
+    "local": "如果你使用"
+  },
+  {
+    "origin": "lib",
+    "local": "lib"
+  },
+  {
+    "origin": "system you must set the path where the library files are and specify in which one of them to look. During the build the linker will look into these libraries and add the definitions and implementation of all",
+    "local": "系统必须设置库文件所在的路径,并指定其中一个文件的查找位置.在构建过程中,链接器将查看这些库,并添加所有库的定义和实现"
+  },
+  {
+    "origin": "used",
+    "local": "习惯于"
+  },
+  {
+    "origin": "functions and data structures to the executable file.",
+    "local": "可执行文件的函数和数据结构."
+  },
+  {
+    "origin": "If you use the",
+    "local": "如果你使用"
+  },
+  {
+    "origin": "DLL",
+    "local": "DLL"
+  },
+  {
+    "origin": "system you must again specify all this, however now for a different reason. This is a Microsoft OS specific stuff. It seems that the linker needs to know that where in the DLL to search for the data structure or function at the runtime. This information is stored inside",
+    "local": "系统中,您必须再次指定所有这些,但现在出于不同的原因.这是微软操作系统特有的东西.链接器似乎需要知道DLL中的位置,以便在运行时搜索数据结构或函数.此信息存储在"
+  },
+  {
+    "origin": "lib",
+    "local": "lib"
+  },
+  {
+    "origin": "files. Nevertheless, they aren't static libraries. They are so called import libraries. This is why when you make some",
+    "local": "文件夹.然而,它们不是静态库.它们被称为导入库.这就是为什么当你做一些"
+  },
+  {
+    "origin": "DLLs",
+    "local": "DLLs"
+  },
+  {
+    "origin": "in Windows you will also end up with some",
+    "local": "在Windows中,您还将得到一些"
+  },
+  {
+    "origin": "lib",
+    "local": "lib"
+  },
+  {
+    "origin": "extension libraries. The good part is that at runtime only the",
+    "local": "扩展库.好的方面是在运行时只有"
+  },
+  {
+    "origin": "DLL",
+    "local": "DLL"
+  },
+  {
+    "origin": "is required.",
+    "local": "是必需的."
+  },
+  {
+    "origin": "To pass on all this information to the Visual Studio IDE you can either do it globally (so all your future projects will get this information) or locally (so only for you current project). The advantage of the global one is that you only need to do it once; however, it may be undesirable to clump all your projects all the time with all this information. In case of the global one how you do it depends on the Microsoft Visual Studio you use. There is a",
+    "local": "要将所有这些信息传递给VisualStudioIDE,您可以在全局范围内传递(这样您将来的所有项目都将获得这些信息),也可以在本地传递(这样仅适用于您当前的项目).全球化的好处是你只需要做一次；但是,始终使用所有这些信息聚集所有项目可能是不可取的.如果是全局的,如何执行取决于您使用的Microsoft Visual Studio.有一个"
+  },
+  {
+    "origin": "and a",
+    "local": "和"
+  },
+  {
+    "origin": "of doing it. Inside the global section of this tutorial I'll show what the main differences are.",
+    "local": "做这件事的必要性.在本教程的“全局”部分中,我将展示主要区别."
+  },
+  {
+    "origin": "The base item of a project in Visual Studio is a solution. A solution may contain multiple projects. Projects are the building blocks of an application. Every project will realize something and you will have a main project in which you can put together this project puzzle. In case of the many simple applications (like many of the tutorials will be) you do not need to break down the application into modules. In these cases, your main project will be the only existing one. Now go create a new solution inside Visual studio by going through the File &ndash;&gt; New &ndash;&gt; Project menu selection. Choose",
+    "local": "Visual Studio中项目的基本项是解决方案.一个解决方案可能包含多个项目.项目是应用程序的构建块.每个项目都会实现一些东西,你会有一个主要的项目,你可以把这个项目拼图.对于许多简单的应用程序(就像许多教程一样),您不需要将应用程序分解为模块.在这些情况下,您的主项目将是唯一存在的项目.现在,通过浏览文件&ndash；在Visual studio中创建一个新的解决方案 &ndash;&gt; 纽约&恩达斯 &ndash;&gt; 项目菜单选择.选择"
+  },
+  {
+    "origin": "Win32 Console Application",
+    "local": "Win32控制台应用程序"
+  },
+  {
+    "origin": "as type. Enter its name and select the path where to create it. Then in the upcoming dialog make sure you create an empty project.",
+    "local": "作为类型.输入其名称并选择创建它的路径.然后在接下来的对话框中,确保创建了一个空项目."
+  },
+  {
+    "origin": "The",
+    "local": "这个"
+  },
+  {
+    "origin": "local",
+    "local": "地方的"
+  },
+  {
+    "origin": "method",
+    "local": "方法"
+  },
+  {
+    "origin": "Every project is built separately from the others. Due to this every project has its own rule package. Inside this rule packages are stored all the information the",
+    "local": "每个项目都是独立于其他项目建设的.因此,每个项目都有自己的规则包.在此规则包中存储了"
+  },
+  {
+    "origin": "IDE",
+    "local": "IDE"
+  },
+  {
+    "origin": "needs to know to build your project. For any application there are at least two build modes: a",
+    "local": "需要知道如何构建项目.对于任何应用程序,至少有两种构建模式:"
+  },
+  {
+    "origin": "Release",
+    "local": "Release"
+  },
+  {
+    "origin": "and a",
+    "local": "和"
+  },
+  {
+    "origin": "Debug",
+    "local": "Debug"
+  },
+  {
+    "origin": "one. The",
+    "local": "一个.这个"
+  },
+  {
+    "origin": "Debug",
+    "local": "Debug"
+  },
+  {
+    "origin": "has many features that exist so you can find and resolve easier bugs inside your application. In contrast the",
+    "local": "具有许多现有功能,因此您可以在应用程序中查找和解决更容易的错误.相比之下"
+  },
+  {
+    "origin": "Release",
+    "local": "Release"
+  },
+  {
+    "origin": "is an optimized version, where the goal is to make the application run as fast as possible or to be as small as possible. You may figure that these modes also require different rules to use during build. Therefore, there exist different rule packages for each of your build modes. These rule packages are called inside the IDE as",
+    "local": "是一个优化版本,其目标是使应用程序运行得尽可能快或尽可能小.您可能会发现,这些模式在构建期间还需要使用不同的规则.因此,每个构建模式都有不同的规则包.这些规则包在IDE中被称为"
+  },
+  {
+    "origin": "project properties",
+    "local": "项目属性"
+  },
+  {
+    "origin": "and you can view and modify them by using the",
+    "local": "您可以使用"
+  },
+  {
+    "origin": "Property Manager",
+    "local": "物业经理"
+  },
+  {
+    "origin": ". You can bring this up with View &ndash;&gt; Property Pages (For Visual Studio 2013 onwards, go to View &ndash;&gt; Other Windows &ndash;&gt; Property Manager). Expand it and you can see the existing rule packages (called",
+    "local": ". 您可以在查看时打开此选项 &ndash;&gt; 属性页(对于Visual Studio 2013及以后的版本,请转到查看 &ndash;&gt; 其他窗口 &ndash;&gt; 物业经理).展开它,您可以看到现有的规则包(称为"
+  },
+  {
+    "origin": "Property Sheets",
+    "local": "属性表"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "The really useful stuff of these is that you may create a rule package",
+    "local": "其中真正有用的是,您可以创建一个规则包"
+  },
+  {
+    "origin": "once",
+    "local": "一旦"
+  },
+  {
+    "origin": "and you can later just add it to your new projects. Create it once and reuse it later. We want to create a new",
+    "local": "您可以稍后将其添加到新项目中.创建一次,以后再使用.我们想创建一个新的"
+  },
+  {
+    "origin": "Property Sheet",
+    "local": "属性表"
+  },
+  {
+    "origin": "that will contain all the rules that the compiler and linker needs to know. Of course we will need a separate one for the Debug and the Release Builds. Start up with the Debug one as shown in the image below:",
+    "local": "这将包含编译器和链接器需要知道的所有规则.当然,对于调试和发布版本,我们需要一个单独的版本.启动调试程序,如下图所示:"
+  },
+  {
+    "origin": "Use for example the",
+    "local": "例如,使用"
+  },
+  {
+    "origin": "OpenCV_Debug",
+    "local": "OpenCV_Debug"
+  },
+  {
+    "origin": "name. Then by selecting the sheet Right Click &ndash;&gt; Properties. In the following I will show to set the OpenCV rules locally, as I find unnecessary to pollute projects with custom rules that I do not use it. Go the C++ groups General entry and under the *\"Additional Include Directories\"* add the path to your OpenCV include. If you don't have *\"C/C++\"* group, you should add any .c/.cpp file to the project.",
+    "local": "名称然后,通过选择图纸,右键单击 &ndash;&gt; 财产.在下文中,我将演示如何在本地设置OpenCV规则,因为我发现没有必要使用我不使用的自定义规则来污染项目.转到C++组一般条目,并在*“附加包含目录”*添加到OpenCV的路径包括.如果没有*“C/C++”组,则应向项目中添加任何.C/.cpp文件."
+  },
+  {
+    "origin": "When adding third party libraries settings it is generally a good idea to use the power behind the environment variables. The full location of the OpenCV library may change on each system. Moreover, you may even end up yourself with moving the install directory for some reason. If you would give explicit paths inside your property sheet your project will end up not working when you pass it further to someone else who has a different OpenCV install path. Moreover, fixing this would require to manually modifying every explicit path. A more elegant solution is to use the environment variables. Anything that you put inside a parenthesis started with a dollar sign will be replaced at runtime with the current environment variables value. Here comes in play the environment variable setting we already made in our previous tutorial",
+    "local": "在添加第三方库设置时,通常最好使用环境变量背后的强大功能.OpenCV库的完整位置可能会在每个系统上更改.此外,由于某些原因,您甚至可能会移动安装目录.如果在属性表中给出显式路径,那么当您将项目进一步传递给具有不同OpenCV安装路径的其他人时,项目将无法运行.此外,修复此问题需要手动修改每个显式路径.更优雅的解决方案是使用环境变量.在运行时,以美元符号开头的括号内的任何内容都将替换为当前环境变量值.下面是我们在上一个教程中已经做过的环境变量设置"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Next go to the Linker &ndash;&gt; General and under the *\"Additional Library Directories\"* add the libs directory:",
+    "local": "下一步转到链接器 &ndash;&gt; 常规,并在*“附加库目录”*下添加libs目录:"
+  },
+  {
+    "origin": "Then you need to specify the libraries in which the linker should look into. To do this go to the Linker &ndash;&gt; Input and under the *\"Additional Dependencies\"* entry add the name of all modules which you want to use:",
+    "local": "然后您需要指定链接器应该查看的库.要执行此操作,请转到链接器 &ndash;&gt; 输入并在*“其他依赖项”*项下添加要使用的所有模块的名称:"
+  },
+  {
+    "origin": "The names of the libraries are as follow:",
+    "local": "图书馆名称如下:"
+  },
+  {
+    "origin": "A full list, for the latest version would contain:",
+    "local": "最新版本的完整列表将包含:"
+  },
+  {
+    "origin": "Alternatively, your OpenCV download may have been built into one large .lib file. Check by looking in OpenCV\\build\\architecture\\vc14\\lib. In this case all you would add is, for the version 3.3.0:",
+    "local": "或者,您的OpenCV下载可能已内置到一个大的.lib文件中.通过查看OpenCV\\build\\architecture\\vc14\\lib进行检查.在这种情况下,对于3.3.0版,您只需添加以下内容:"
+  },
+  {
+    "origin": "The letter",
+    "local": "信"
+  },
+  {
+    "origin": "d",
+    "local": "d"
+  },
+  {
+    "origin": "at the end just indicates that these are the libraries required for the debug. Now click ok to save and do the same with a new property inside the Release rule section. Make sure to omit the",
+    "local": "最后,只指出这些是调试所需的库.现在单击“确定”保存,并在“发布规则”部分中对新属性执行相同操作.请务必省略该选项"
+  },
+  {
+    "origin": "d",
+    "local": "d"
+  },
+  {
+    "origin": "letters from the library names and to save the property sheets with the save icon above them.",
+    "local": "库名称中的字母,并使用上方的“保存”图标保存属性页."
+  },
+  {
+    "origin": "You can find your property sheets inside your projects directory. At this point, it is a wise decision to back them up into some special directory, to always have them at hand in the future, whenever you create an OpenCV project. Note that for Visual Studio 2010 the file extension is",
+    "local": "您可以在项目目录中找到属性页.在这一点上,明智的决定是将它们备份到某个特殊的目录中,以便在将来创建OpenCV项目时始终将它们放在手边.请注意,对于VisualStudio2010,文件扩展名为"
+  },
+  {
+    "origin": "props",
+    "local": "道具"
+  },
+  {
+    "origin": ", while for 2008 this is",
+    "local": ",而2008年则是"
+  },
+  {
+    "origin": "vsprops",
+    "local": "垂直支柱"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Next time when you make a new OpenCV project just use the \"Add Existing Property Sheet...\" menu entry inside the Property Manager to easily add the OpenCV build rules.",
+    "local": "下次创建新的OpenCV项目时,只需使用属性管理器中的“添加现有属性表…”菜单项即可轻松添加OpenCV构建规则."
+  },
+  {
+    "origin": "The",
+    "local": "这个"
+  },
+  {
+    "origin": "global",
+    "local": "全球的"
+  },
+  {
+    "origin": "method",
+    "local": "方法"
+  },
+  {
+    "origin": "In case you find it too troublesome to add the property pages to each and every one of your projects you can also add this rules to a *\"global property page\"*. However, this applies only to the additional include and library directories. The name of the libraries to use you still need to specify manually by using for instance: a Property page.",
+    "local": "如果您发现将属性页添加到每个项目中太麻烦,您也可以将此规则添加到*“全局属性页”*.但是,这仅适用于附加的include和library目录.要使用的库的名称仍然需要使用例如:属性页手动指定."
+  },
+  {
+    "origin": "In Visual Studio 2008 you can find this under the: Tools &ndash;&gt; Options &ndash;&gt; Projects and Solutions &ndash;&gt; VC++ Directories.",
+    "local": "在VisualStudio2008中,您可以在下面找到: Tools &ndash;&gt; Options &ndash;&gt; 项目和解决方案 &ndash;&gt; VC++目录."
+  },
+  {
+    "origin": "In Visual Studio 2010 this has been moved to a global property sheet which is automatically added to every project you create:",
+    "local": "在Visual Studio 2010中,这已移动到全局属性页,该属性页将自动添加到您创建的每个项目中:"
+  },
+  {
+    "origin": "The process is the same as described in case of the local approach. Just add the include directories by using the environment variable",
+    "local": "该过程与本地方法中描述的过程相同.只需使用环境变量添加include目录"
+  },
+  {
+    "origin": "OPENCV_DIR",
+    "local": "OPENCV_DIR"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Test it!",
+    "local": "试试看！"
+  },
+  {
+    "origin": "Now to try this out download our little test",
+    "local": "现在,请下载我们的小测试"
+  },
+  {
+    "origin": "source code",
+    "local": "源代码"
+  },
+  {
+    "origin": "or get it from the sample code folder of the OpenCV sources. Add this to your project and build it. Here's its content:",
+    "local": "或者从OpenCV源代码的示例代码文件夹中获取.将其添加到您的项目并构建它.内容如下:"
+  },
+  {
+    "origin": "You can start a Visual Studio build from two places. Either inside from the",
+    "local": "您可以从两个位置启动Visual Studio生成.无论是从内部还是从外部"
+  },
+  {
+    "origin": "IDE",
+    "local": "IDE"
+  },
+  {
+    "origin": "(keyboard combination: Control-F5) or by navigating to your build directory and start the application with a double click. The catch is that these two",
+    "local": "(键盘组合:Control-F5)或导航到构建目录并双击启动应用程序.问题是这两个"
+  },
+  {
+    "origin": "aren't",
+    "local": "不是"
+  },
+  {
+    "origin": "the same. When you start it from the",
+    "local": "相同的.当你从一开始"
+  },
+  {
+    "origin": "IDE",
+    "local": "IDE"
+  },
+  {
+    "origin": "its current working directory is the projects directory, while otherwise it is the folder where the application file currently is (so usually your build directory). Moreover, in case of starting from the",
+    "local": "它当前的工作目录是projects目录,否则它就是应用程序文件当前所在的文件夹(通常是构建目录).此外,如果从"
+  },
+  {
+    "origin": "IDE",
+    "local": "IDE"
+  },
+  {
+    "origin": "the console window will not close once finished. It will wait for a keystroke of yours.",
+    "local": "一旦完成,控制台窗口将不会关闭.它将等待您的击键."
+  },
+  {
+    "origin": "This is important to remember when you code inside the code open and save commands. Your resources will be saved ( and queried for at opening!!!) relatively to your working directory. This is unless you give a full, explicit path as a parameter for the I/O functions. In the code above we open",
+    "local": "在“代码打开”和“保存”命令中编写代码时,请务必记住这一点.您的资源将被保存(并在打开时查询！！！)相对于您的工作目录.除非您为I/O函数提供一个完整的、显式的路径作为参数.在上面的代码中,我们打开"
+  },
+  {
+    "origin": "this OpenCV logo",
+    "local": "这个OpenCV标志"
+  },
+  {
+    "origin": ". Before starting up the application, make sure you place the image file in your current working directory. Modify the image file name inside the code to try it out on other images too. Run it and voil á:",
+    "local": ". 启动应用程序之前,请确保将映像文件放置在当前工作目录中.在代码中修改图像文件名,以便在其他图像上也进行尝试.运行它,瞧:"
+  },
+  {
+    "origin": "Command line arguments with Visual Studio",
+    "local": "visualstudio的命令行参数"
+  },
+  {
+    "origin": "Throughout some of our future tutorials, you'll see that the programs main input method will be by giving a runtime argument. To do this you can just start up a command windows (cmd + Enter in the start menu), navigate to your executable file and start it with an argument. So for example in case of my upper project this would look like:",
+    "local": "在我们未来的一些教程中,您将看到程序的主要输入方法是通过提供一个运行时参数来实现的.要做到这一点,您只需启动一个命令窗口(在“开始”菜单中使用cmd+Enter),导航到您的可执行文件并用一个参数启动它.例如,在我的上部项目中,这看起来像:"
+  },
+  {
+    "origin": "Here I first changed my drive (if your project isn't on the OS local drive), navigated to my project and start it with an example image argument. While under Linux system it is common to fiddle around with the console window on the Microsoft Windows many people come to use it almost never. Besides, adding the same argument again and again while you are testing your application is, somewhat, a cumbersome task. Luckily, in the Visual Studio there is a menu to automate all this:",
+    "local": "在这里,我首先更改了我的驱动器(如果您的项目不在操作系统本地驱动器上),导航到我的项目,并使用示例图像参数启动它.在Linux系统下,在微软Windows上摆弄控制台窗口是很常见的,但许多人几乎从未使用过它.此外,在测试应用程序时反复添加相同的参数在某种程度上是一项繁琐的任务.幸运的是,在Visual Studio中有一个菜单可以自动执行所有这些操作:"
+  },
+  {
+    "origin": "Specify here the name of the inputs and while you start your application from the Visual Studio environment you have automatic argument passing. In the next introductory tutorial you'll see an in-depth explanation of the upper source code:",
+    "local": "在这里指定输入的名称,当您从VisualStudio环境启动应用程序时,会自动传递参数.在下一个介绍性教程中,您将看到对上层源代码的深入解释:"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;"
+  }
+]

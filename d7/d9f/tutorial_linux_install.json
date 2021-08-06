@@ -1,0 +1,438 @@
+[
+  {
+    "origin": "OpenCV: Installation in Linux",
+    "local": "OpenCV:在Linux中的安装"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "Installation in Linux",
+    "local": "Installation in Linux(在Linux中安装)"
+  },
+  {
+    "origin": "Table of Contents",
+    "local": "目录"
+  },
+  {
+    "origin": "Quick start",
+    "local": "快速启动"
+  },
+  {
+    "origin": "Build core modules",
+    "local": "Build core modules(构建核心模块)"
+  },
+  {
+    "origin": "Build with opencv_contrib",
+    "local": "构建opencv_contrib"
+  },
+  {
+    "origin": "Detailed process",
+    "local": "详细流程"
+  },
+  {
+    "origin": "Install compiler and build tools",
+    "local": "安装编译器和生成工具"
+  },
+  {
+    "origin": "Download sources",
+    "local": "下载源码"
+  },
+  {
+    "origin": "Configure and build",
+    "local": "配置和生成"
+  },
+  {
+    "origin": "Check build results",
+    "local": "检查生成结果"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "Ana Huamán"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "OpenCV &gt;= 3.0"
+  },
+  {
+    "origin": "Quick start",
+    "local": "快速启动"
+  },
+  {
+    "origin": "Build core modules",
+    "local": "构建核心模块"
+  },
+  {
+    "origin": "Build with opencv_contrib",
+    "local": "构建opencv_contrib"
+  },
+  {
+    "origin": "Detailed process",
+    "local": "详细流程"
+  },
+  {
+    "origin": "This section provides more details of the build process and describes alternative methods and tools. Please refer to the",
+    "local": "本节提供了构建过程的更多细节,并描述了替代方法和工具.请参阅"
+  },
+  {
+    "origin": "tutorial for general installation details and to the",
+    "local": "教程的一般安装细节和"
+  },
+  {
+    "origin": "for configuration options documentation.",
+    "local": "配置选项文档."
+  },
+  {
+    "origin": "Install compiler and build tools",
+    "local": "安装编译器和生成工具"
+  },
+  {
+    "origin": "To compile OpenCV you will need a C++ compiler. Usually it is G++/GCC or Clang/LLVM:",
+    "local": "要编译OpenCV,你需要一个C++编译器.通常是G++/GCC或Clang/LLVM:"
+  },
+  {
+    "origin": "Install GCC...",
+    "local": "Install GCC..."
+  },
+  {
+    "origin": "... or Clang:",
+    "local": "... or Clang:"
+  },
+  {
+    "origin": "OpenCV uses CMake build configuration tool:",
+    "local": "OpenCV使用CMake构建配置工具:"
+  },
+  {
+    "origin": "CMake can generate scripts for different build systems, e.g.",
+    "local": "CMake可以为不同的构建系统生成脚本,例如."
+  },
+  {
+    "origin": "make",
+    "local": "make"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "ninja",
+    "local": "ninja"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Install Make...",
+    "local": "安装Make..."
+  },
+  {
+    "origin": "... or Ninja:",
+    "local": "... 或 Ninja:"
+  },
+  {
+    "origin": "Install tool for getting and unpacking sources:",
+    "local": "安装获取和解包源的工具:"
+  },
+  {
+    "origin": "wget",
+    "local": "wget"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "unzip",
+    "local": "unzip"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": "... or",
+    "local": "... 或"
+  },
+  {
+    "origin": "git",
+    "local": "git"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Download sources",
+    "local": "下载源"
+  },
+  {
+    "origin": "There are two methods of getting OpenCV sources:",
+    "local": "获取OpenCV源代码有两种方法:"
+  },
+  {
+    "origin": "Download snapshot of repository using web browser or any download tool (~80-90Mb) and unpack it...",
+    "local": "使用web浏览器或任何下载工具（约80-90Mb）下载存储库的快照并将其解压缩..."
+  },
+  {
+    "origin": "... or clone repository to local machine using",
+    "local": "... 或使用将存储库克隆到本地计算机"
+  },
+  {
+    "origin": "git",
+    "local": "git"
+  },
+  {
+    "origin": "to get full change history (&gt;470Mb):",
+    "local": "获取完整的更改历史记录 (&gt;470Mb):"
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "Snapshots of other branches, releases or commits can be found on the",
+    "local": "其他分支、版本或提交的快照可以在"
+  },
+  {
+    "origin": "GitHub",
+    "local": "GitHub"
+  },
+  {
+    "origin": "and the",
+    "local": "以及"
+  },
+  {
+    "origin": "official download page",
+    "local": "官方下载页"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Configure and build",
+    "local": "配置和生成"
+  },
+  {
+    "origin": "Create build directory:",
+    "local": "创建生成目录:"
+  },
+  {
+    "origin": "Configure - generate build scripts for the preferred build system:",
+    "local": "配置-为首选生成系统生成生成脚本:"
+  },
+  {
+    "origin": "For",
+    "local": "为了"
+  },
+  {
+    "origin": "make",
+    "local": "make"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": "... or for",
+    "local": "... 或为"
+  },
+  {
+    "origin": "ninja",
+    "local": "ninja"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Build - run actual compilation process:",
+    "local": "生成-运行实际编译过程:"
+  },
+  {
+    "origin": "Using",
+    "local": "Using"
+  },
+  {
+    "origin": "make",
+    "local": "make"
+  },
+  {
+    "origin": "...",
+    "local": "..."
+  },
+  {
+    "origin": "... or",
+    "local": "... 或"
+  },
+  {
+    "origin": "ninja",
+    "local": "ninja"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "Configure",
+    "local": "Configure(配置)"
+  },
+  {
+    "origin": "process can download some files from the internet to satisfy library dependencies, connection failures can cause some of modules or functionalities to be turned off or behave differently. Refer to the",
+    "local": "进程可以从internet下载一些文件以满足库依赖关系,连接失败可能导致某些模块或功能关闭或行为不同.参考"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "tutorials for details and full configuration options reference.",
+    "local": "有关详细信息和完整配置选项参考的教程."
+  },
+  {
+    "origin": "If you experience problems with the build process, try to clean or recreate the build directory. Changes in the configuration like disabling a dependency, modifying build scripts or switching sources to another branch are not handled very well and can result in broken workspace.",
+    "local": "如果在生成过程中遇到问题,请尝试清理或重新创建生成目录.配置中的更改（如禁用依赖项、修改构建脚本或将源切换到另一个分支）处理得不是很好,可能会导致工作区中断."
+  },
+  {
+    "origin": "Make",
+    "local": "Make"
+  },
+  {
+    "origin": "can run multiple compilation processes in parallel,",
+    "local": "可以并行运行多个编译进程,"
+  },
+  {
+    "origin": "option means \"run &lt;NUM&gt; jobs simultaneously\".",
+    "local": "选项表示 \"运行 &lt;数量&gt; 工作同时进行\"."
+  },
+  {
+    "origin": "Ninja",
+    "local": "Ninja"
+  },
+  {
+    "origin": "will automatically detect number of available processor cores and does not need",
+    "local": "将自动检测可用处理器内核的数量,而不需要"
+  },
+  {
+    "origin": "option.",
+    "local": "选项."
+  },
+  {
+    "origin": "Check build results",
+    "local": "检查生成结果"
+  },
+  {
+    "origin": "After successful build you will find libraries in the",
+    "local": "成功构建后,您将在"
+  },
+  {
+    "origin": "directory and executables (test, samples, apps) in the",
+    "local": "目录和可执行文件（测试、示例、应用程序）"
+  },
+  {
+    "origin": "directory:",
+    "local": "目录:"
+  },
+  {
+    "origin": "CMake package files will be located in the build root:",
+    "local": "CMake包文件将位于生成根目录中:"
+  },
+  {
+    "origin": "Install",
+    "local": "安装"
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "Installation process only copies files to predefined locations and do minor patching. Library installed using this method is not integrated into the system package registry and can not be uninstalled automatically. We do not recommend system-wide installation to regular users due to possible conflicts with system packages.",
+    "local": "安装过程只会将文件复制到预定义的位置并进行小修补.使用此方法安装的库未集成到系统包注册表中,无法自动卸载.由于可能与系统包冲突,我们不建议常规用户在系统范围内安装."
+  },
+  {
+    "origin": "By default OpenCV will be installed to the",
+    "local": "默认情况下,OpenCV将安装到"
+  },
+  {
+    "origin": "directory, all files will be copied to following locations:",
+    "local": "目录中,所有文件将复制到以下位置:"
+  },
+  {
+    "origin": "- executable files",
+    "local": "- executable files"
+  },
+  {
+    "origin": "- libraries (.so)",
+    "local": "- libraries (.so)"
+  },
+  {
+    "origin": "- cmake package",
+    "local": "- cmake package"
+  },
+  {
+    "origin": "- headers",
+    "local": "- headers"
+  },
+  {
+    "origin": "- other files (e.g. trained cascades in XML format)",
+    "local": "-其他文件（如XML格式的训练级联）"
+  },
+  {
+    "origin": "Since",
+    "local": "Since"
+  },
+  {
+    "origin": "is owned by the root user, the installation should be performed with elevated privileges (",
+    "local": "属于根用户,安装应以提升的权限执行("
+  },
+  {
+    "origin": "):",
+    "local": "):"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "Installation root directory can be changed with",
+    "local": "安装根目录可以用"
+  },
+  {
+    "origin": "configuration parameter, e.g.",
+    "local": "配置参数,例如."
+  },
+  {
+    "origin": "to install to current user's local directory. Installation layout can be changed with",
+    "local": "安装到当前用户的本地目录.安装布局可以通过"
+  },
+  {
+    "origin": "parameters. See",
+    "local": "参数.看到了吗"
+  },
+  {
+    "origin": "for details.",
+    "local": "详情."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by"
+  }
+]

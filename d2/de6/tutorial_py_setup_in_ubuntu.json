@@ -1,0 +1,270 @@
+[
+  {
+    "origin": "OpenCV: Install OpenCV-Python in Ubuntu",
+    "local": "OpenCV：在Ubuntu中安装opencvpython"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Install OpenCV-Python in Ubuntu",
+    "local": "在Ubuntu中安装OpenCV Python"
+  },
+  {
+    "origin": "Goals",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial We will learn to setup OpenCV-Python in Ubuntu System. Below steps are tested for Ubuntu 16.04 and 18.04 (both 64-bit).",
+    "local": "在本教程中，我们将学习在Ubuntu系统中设置opencvpython。下面的步骤是针对ubuntu16.04和18.04（都是64位）测试的。"
+  },
+  {
+    "origin": "OpenCV-Python can be installed in Ubuntu in two ways:",
+    "local": "OpenCV Python可以通过两种方式安装在Ubuntu中："
+  },
+  {
+    "origin": "Install from pre-built binaries available in Ubuntu repositories",
+    "local": "从Ubuntu存储库中提供的预构建二进制文件安装"
+  },
+  {
+    "origin": "Compile from the source. In this section, we will see both.",
+    "local": "从源代码编译。在本节中，我们将看到两者。"
+  },
+  {
+    "origin": "Another important thing is the additional libraries required. OpenCV-Python requires only",
+    "local": "另一个重要的是需要额外的库。OpenCV Python只需要"
+  },
+  {
+    "origin": "Numpy",
+    "local": "努比"
+  },
+  {
+    "origin": "(in addition to other dependencies, which we will see later). But in this tutorials, we also use",
+    "local": "（除了其他依赖项之外，我们将在后面看到）。但在本教程中，我们还使用"
+  },
+  {
+    "origin": "Matplotlib",
+    "local": "Matplotlib。"
+  },
+  {
+    "origin": "for some easy and nice plotting purposes (which I feel much better compared to OpenCV). Matplotlib is optional, but highly recommended. Similarly we will also see",
+    "local": "为了一些简单而漂亮的绘图目的（与OpenCV相比我感觉好多了）。Matplotlib是可选的，但强烈建议使用。同样，我们也将看到"
+  },
+  {
+    "origin": "IPython",
+    "local": "伊皮顿"
+  },
+  {
+    "origin": ", an Interactive Python Terminal, which is also highly recommended.",
+    "local": "，一个交互式Python终端，这也是强烈推荐的。"
+  },
+  {
+    "origin": "Installing OpenCV-Python from Pre-built Binaries",
+    "local": "从预构建的二进制文件安装opencvpython"
+  },
+  {
+    "origin": "This method serves best when using just for programming and developing OpenCV applications.",
+    "local": "当仅用于编程和开发OpenCV应用程序时，此方法最适用。"
+  },
+  {
+    "origin": "Install package",
+    "local": "安装软件包"
+  },
+  {
+    "origin": "python3-opencv",
+    "local": "蟒蛇3"
+  },
+  {
+    "origin": "with following command in terminal (as root user).",
+    "local": "在终端中使用以下命令（作为根用户）。"
+  },
+  {
+    "origin": "Open Python IDLE (or IPython) and type following codes in Python terminal.",
+    "local": "打开Python IDLE（或IPython）并在Python终端中键入以下代码。"
+  },
+  {
+    "origin": "If the results are printed out without any errors, congratulations !!! You have installed OpenCV-Python successfully.",
+    "local": "如果结果打印出来没有任何错误，恭喜！！！您已成功安装OpenCV Python。"
+  },
+  {
+    "origin": "It is quite easy. But there is a problem with this. Apt repositories may not contain the latest version of OpenCV always. For example, at the time of writing this tutorial, apt repository contains 2.4.8 while latest OpenCV version is 3.x. With respect to Python API, latest version will always contain much better support and latest bug fixes.",
+    "local": "这很容易。但这有个问题。Apt存储库可能不总是包含最新版本的OpenCV。例如，在编写本教程时，apt repository包含2.4.8，而最新的OpenCV版本是3.x。关于pythonapi，最新版本总是包含更好的支持和最新的bug修复。"
+  },
+  {
+    "origin": "So for getting latest source codes preference is next method, i.e. compiling from source. Also at some point in time, if you want to contribute to OpenCV, you will need this.",
+    "local": "所以，为了获得最新的源代码，首选的是下一种方法，即从源代码编译。另外，在某个时候，如果你想为OpenCV做贡献，你需要这个。"
+  },
+  {
+    "origin": "Building OpenCV from source",
+    "local": "从源代码构建OpenCV"
+  },
+  {
+    "origin": "Compiling from source may seem a little complicated at first, but once you succeeded in it, there is nothing complicated.",
+    "local": "从源代码编译一开始可能看起来有点复杂，但一旦你成功了，就没有什么复杂的了。"
+  },
+  {
+    "origin": "First we will install some dependencies. Some are required, some are optional. You can skip optional dependencies if you don't want.",
+    "local": "首先，我们将安装一些依赖项。有些是必需的，有些是可选的。如果不需要，可以跳过可选的依赖项。"
+  },
+  {
+    "origin": "Required build dependencies",
+    "local": "所需的生成依赖项"
+  },
+  {
+    "origin": "We need",
+    "local": "我们需要"
+  },
+  {
+    "origin": "CMake",
+    "local": "克马克"
+  },
+  {
+    "origin": "to configure the installation,",
+    "local": "要配置安装，"
+  },
+  {
+    "origin": "GCC",
+    "local": "合同通用条款"
+  },
+  {
+    "origin": "for compilation,",
+    "local": "用于汇编，"
+  },
+  {
+    "origin": "Python-devel",
+    "local": "Python开发"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "Numpy",
+    "local": "努比"
+  },
+  {
+    "origin": "for building Python bindings etc.",
+    "local": "用于构建Python绑定等。"
+  },
+  {
+    "origin": "to support python2:",
+    "local": "要支持python2："
+  },
+  {
+    "origin": "to support python3:",
+    "local": "要支持python3："
+  },
+  {
+    "origin": "Next we need",
+    "local": "下一步我们需要"
+  },
+  {
+    "origin": "GTK",
+    "local": "GTK公司"
+  },
+  {
+    "origin": "support for GUI features, Camera support (v4l), Media Support (ffmpeg, gstreamer) etc.",
+    "local": "支持GUI功能、摄像头支持（v4l）、媒体支持（ffmpeg、gstreamer）等。"
+  },
+  {
+    "origin": "to support gtk2:",
+    "local": "要支持gtk2："
+  },
+  {
+    "origin": "to support gtk3:",
+    "local": "要支持gtk3："
+  },
+  {
+    "origin": "Optional Dependencies",
+    "local": "可选依赖项"
+  },
+  {
+    "origin": "Above dependencies are sufficient to install OpenCV in your Ubuntu machine. But depending upon your requirements, you may need some extra dependencies. A list of such optional dependencies are given below. You can either leave it or install it, your call :)",
+    "local": "以上依赖项足以在您的Ubuntu机器上安装OpenCV。但是根据您的需求，您可能需要一些额外的依赖项。下面给出了这些可选依赖项的列表。您可以留下它或安装它，您的电话：）"
+  },
+  {
+    "origin": "OpenCV comes with supporting files for image formats like PNG, JPEG, JPEG2000, TIFF, WebP etc. But it may be a little old. If you want to get latest libraries, you can install development files for system libraries of these formats.",
+    "local": "OpenCV附带了支持PNG、JPEG、JPEG2000、TIFF、WebP等图像格式的文件，但可能有点旧。如果要获取最新的库，可以为这些格式的系统库安装开发文件。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "If you are using Ubuntu 16.04 you can also install",
+    "local": "如果你使用的是ubuntu16.04，你也可以安装"
+  },
+  {
+    "origin": "to add a system level support for the JPEG2000 format.",
+    "local": "为JPEG2000格式添加系统级支持。"
+  },
+  {
+    "origin": "Downloading OpenCV",
+    "local": "下载OpenCV"
+  },
+  {
+    "origin": "To download the latest source from OpenCV's",
+    "local": "从OpenCV的"
+  },
+  {
+    "origin": "GitHub Repository",
+    "local": "GitHub存储库"
+  },
+  {
+    "origin": ". (If you want to contribute to OpenCV choose this. For that, you need to install",
+    "local": ". (如果你想为OpenCV做贡献，选择这个。为此，您需要安装"
+  },
+  {
+    "origin": "Git",
+    "local": "吉特"
+  },
+  {
+    "origin": "first)",
+    "local": "第一个）"
+  },
+  {
+    "origin": "It will create a folder \"opencv\" in current directory. The cloning may take some time depending upon your internet connection.",
+    "local": "它将在当前目录中创建一个文件夹“opencv”。克隆可能需要一些时间，具体取决于您的internet连接。"
+  },
+  {
+    "origin": "Now open a terminal window and navigate to the downloaded \"opencv\" folder. Create a new \"build\" folder and navigate to it.",
+    "local": "现在打开一个终端窗口，导航到下载的“opencv”文件夹。创建一个新的“构建”文件夹并导航到它。"
+  },
+  {
+    "origin": "Configuring and Installing",
+    "local": "配置和安装"
+  },
+  {
+    "origin": "Now we have all the required dependencies, let's install OpenCV. Installation has to be configured with CMake. It specifies which modules are to be installed, installation path, which additional libraries to be used, whether documentation and examples to be compiled etc. Most of this work are done automatically with well configured default parameters.",
+    "local": "现在我们有了所有必需的依赖项，让我们安装OpenCV。必须使用CMake配置安装。它指定要安装的模块、安装路径、要使用的附加库、是否要编译的文档和示例等。大多数工作都是使用配置良好的默认参数自动完成的。"
+  },
+  {
+    "origin": "Below command is normally used for configuration of OpenCV library build (executed from build folder):",
+    "local": "以下命令通常用于配置OpenCV库构建（从构建文件夹执行）："
+  },
+  {
+    "origin": "OpenCV defaults assume \"Release\" build type and installation path is \"/usr/local\". For additional information about CMake options refer to OpenCV",
+    "local": "OpenCV默认假定“Release”构建类型和安装路径为“/usr/local”。有关CMake选项的更多信息，请参阅OpenCV"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "You should see these lines in your CMake output (they mean that Python is properly found):",
+    "local": "您应该在CMake输出中看到这些行（它们意味着Python已被正确找到）："
+  },
+  {
+    "origin": "Now you build the files using \"make\" command and install it using \"make install\" command.",
+    "local": "现在您可以使用“make”命令构建文件，并使用“makeinstall”命令进行安装。"
+  },
+  {
+    "origin": "Installation is over. All files are installed in \"/usr/local/\" folder. Open a terminal and try import \"cv2\".",
+    "local": "安装完毕。所有文件都安装在“/usr/local/”文件夹中。打开终端并尝试导入“cv2”。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

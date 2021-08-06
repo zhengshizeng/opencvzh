@@ -1,0 +1,246 @@
+[
+  {
+    "origin": "OpenCV: face_landmark_trainer",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "face_landmark_trainer",
+    "local": ""
+  },
+  {
+    "origin": "Training face landmark detector",
+    "local": ""
+  },
+  {
+    "origin": "This application helps to train your own face landmark detector. You can train your own face landmark detection by just providing the paths for directory containing the images and files containing their corresponding face landmarks. As this landmark detector was originally trained on",
+    "local": ""
+  },
+  {
+    "origin": "HELEN dataset",
+    "local": ""
+  },
+  {
+    "origin": ", the training follows the format of data provided in HELEN dataset.",
+    "local": ""
+  },
+  {
+    "origin": "The dataset consists of .txt files whose first line contains the image name which then follows the annotations. The format of the file containing annotations should be of following format :",
+    "local": ""
+  },
+  {
+    "origin": "/directory/images/abc.jpg 123.45,345.65 321.67,543.89 .... , .... .... , ....",
+    "local": ""
+  },
+  {
+    "origin": "The above format is similar to HELEN dataset which is used for training the model.",
+    "local": ""
+  },
+  {
+    "origin": "Description of command parameters",
+    "local": ""
+  },
+  {
+    "origin": "annotations",
+    "local": ""
+  },
+  {
+    "origin": "a : (REQUIRED) Path to annotations txt file [example - /data/annotations.txt]",
+    "local": ""
+  },
+  {
+    "origin": "config",
+    "local": ""
+  },
+  {
+    "origin": "c : (REQUIRED) Path to configuration xml file containing parameters for training.[ example - /data/config.xml]",
+    "local": ""
+  },
+  {
+    "origin": "model",
+    "local": ""
+  },
+  {
+    "origin": "m : (REQUIRED) Path to configuration xml file containing parameters for training.[ example - /data/model.dat]",
+    "local": ""
+  },
+  {
+    "origin": "width",
+    "local": ""
+  },
+  {
+    "origin": "w : (OPTIONAL) The width which you want all images to get to scale the annotations. Large images are slow to process [default = 460]",
+    "local": ""
+  },
+  {
+    "origin": "height",
+    "local": ""
+  },
+  {
+    "origin": "h : (OPTIONAL) The height which you want all images to get to scale the annotations. Large images are slow to process [default = 460]",
+    "local": ""
+  },
+  {
+    "origin": "face_cascade",
+    "local": ""
+  },
+  {
+    "origin": "f (REQUIRED) Path to the face cascade xml file which you want to use as a detector.",
+    "local": ""
+  },
+  {
+    "origin": "Description of training parameters",
+    "local": ""
+  },
+  {
+    "origin": "The configuration file described above which is used while training contains the training parameters which are required for training.",
+    "local": ""
+  },
+  {
+    "origin": "The description of parameters is as follows :",
+    "local": ""
+  },
+  {
+    "origin": "Cascade depth :",
+    "local": ""
+  },
+  {
+    "origin": "This stores the depth of cascade of regressors used for training.",
+    "local": ""
+  },
+  {
+    "origin": "Tree depth :",
+    "local": ""
+  },
+  {
+    "origin": "This stores the depth of trees created as weak learners during gradient boosting.",
+    "local": ""
+  },
+  {
+    "origin": "Number of trees per cascade level :",
+    "local": ""
+  },
+  {
+    "origin": "This stores number of trees required per cascade level.",
+    "local": ""
+  },
+  {
+    "origin": "Learning rate :",
+    "local": ""
+  },
+  {
+    "origin": "This stores the learning rate for gradient boosting.This is required to prevent overfitting using shrinkage.",
+    "local": ""
+  },
+  {
+    "origin": "Oversampling amount :",
+    "local": ""
+  },
+  {
+    "origin": "This stores the oversampling amount for the samples.",
+    "local": ""
+  },
+  {
+    "origin": "Number of test coordinates :",
+    "local": ""
+  },
+  {
+    "origin": "This stores number of test coordinates to be generated as samples to decide for making the split.",
+    "local": ""
+  },
+  {
+    "origin": "Lambda :",
+    "local": ""
+  },
+  {
+    "origin": "This stores the value used for calculating the probabilty which helps to select closer pixels for making the split.",
+    "local": ""
+  },
+  {
+    "origin": "Number of test splits :",
+    "local": ""
+  },
+  {
+    "origin": "This stores the number of test splits to be generated before making the best split.",
+    "local": ""
+  },
+  {
+    "origin": "To get more detailed description about the training parameters you can refer to the",
+    "local": ""
+  },
+  {
+    "origin": "Research paper",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Understanding code",
+    "local": ""
+  },
+  {
+    "origin": "Jumping directly to the code :",
+    "local": ""
+  },
+  {
+    "origin": "The facemark API provides the functionality to the user to use their own face detector to be used in training.The above code creartes a sample face detector. The above function would be passed to a function pointer in the facemark API.",
+    "local": ""
+  },
+  {
+    "origin": "The above code creates a vector filenames for storing the names of the .txt files. It gets the filenames of the files in the directory.",
+    "local": ""
+  },
+  {
+    "origin": "The above code creates a pointer of the face landmark detection class. The face detector created above has to be passed as function pointer to the facemark pointer created for detecting faces while training the model.",
+    "local": ""
+  },
+  {
+    "origin": "The above code creates std::vectors to store the images and their corresponding landmarks. The above code calls a function loadTrainingData to load the landmarks and the images into their respective vectors.",
+    "local": ""
+  },
+  {
+    "origin": "If the dataset you downloaded is of the following format :",
+    "local": ""
+  },
+  {
+    "origin": "Then skip the above code for loading training data and use the following code. This sample is provided as sampleTrainLandmarkDetector2.cpp in the face module in opencv contrib.",
+    "local": ""
+  },
+  {
+    "origin": "In the above code imagelist and annotations are the file of following format :",
+    "local": ""
+  },
+  {
+    "origin": "These symbolize the names of images and their corresponding annotations.",
+    "local": ""
+  },
+  {
+    "origin": "The above code scales images and landmarks as training on images of smaller size takes less time. This is because processing larger images requires more time. After scaling data it calculates mean shape of the data which is used as initial shape while training.",
+    "local": ""
+  },
+  {
+    "origin": "Finally call the following function to perform training :",
+    "local": ""
+  },
+  {
+    "origin": "In the above function scale is passed to scale all images and the corresponding landmarks so that the size of all images can be reduced as it takes greater time to process large images. This call to the train function trains the model and stores the trained model file with the given filename specified.As the training starts successfully you will see something like this :",
+    "local": ""
+  },
+  {
+    "origin": "The error rate on trained images depends on the number of images used for training used as follows :",
+    "local": ""
+  },
+  {
+    "origin": "The error rate on test images depends on the number of images used for training used as follows :",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

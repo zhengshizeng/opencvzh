@@ -1,0 +1,266 @@
+[
+  {
+    "origin": "OpenCV: Image Segmentation with Distance Transform and Watershed Algorithm",
+    "local": "OpenCV：基于距离变换和分水岭算法的图像分割"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Image Segmentation with Distance Transform and Watershed Algorithm",
+    "local": "基于距离变换和分水岭算法的图像分割"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Theodore Tsesmelis",
+    "local": "西奥多·塞斯梅利斯。"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": "使用OpenCV函数"
+  },
+  {
+    "origin": "in order to perform some laplacian filtering for image sharpening",
+    "local": "为了对图像进行一些拉普拉斯滤波锐化"
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": "使用OpenCV函数"
+  },
+  {
+    "origin": "in order to obtain the derived representation of a binary image, where the value of each pixel is replaced by its distance to the nearest background pixel",
+    "local": "为了获得二值图像的导出表示，其中每个像素的值被其到最近背景像素的距离所代替"
+  },
+  {
+    "origin": "Use the OpenCV function",
+    "local": "使用OpenCV函数"
+  },
+  {
+    "origin": "in order to isolate objects in the image from the background",
+    "local": "为了将图像中的对象与背景隔离开来"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": "本教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": "本教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": "本教程代码如下所示。你也可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Explanation / Result",
+    "local": "解释/结果"
+  },
+  {
+    "origin": "Load the source image and check if it is loaded without any problem, then show it:",
+    "local": "加载源图像并检查其是否加载正常，然后显示："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Then if we have an image with a white background, it is good to transform it to black. This will help us to discriminate the foreground objects easier when we will apply the Distance Transform:",
+    "local": "如果我们有一个白色背景的图像，最好把它转换成黑色。这将有助于我们在应用距离变换时更容易区分前景对象："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Afterwards we will sharpen our image in order to acute the edges of the foreground objects. We will apply a laplacian filter with a quite strong filter (an approximation of second derivative):",
+    "local": "之后我们将锐化我们的图像，以便锐化前景物体的边缘。我们将应用拉普拉斯滤波器和非常强的滤波器（二阶导数的近似值）："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Now we transform our new sharpened source image to a grayscale and a binary one, respectively:",
+    "local": "现在我们将新的锐化源图像分别转换为灰度和二值图像："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "We are ready now to apply the Distance Transform on the binary image. Moreover, we normalize the output image in order to be able visualize and threshold the result:",
+    "local": "我们现在准备对二值图像应用距离变换。此外，我们对输出图像进行标准化，以便能够可视化和阈值化结果："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "We threshold the",
+    "local": "我们进入门槛"
+  },
+  {
+    "origin": "dist",
+    "local": "分布"
+  },
+  {
+    "origin": "image and then perform some morphology operation (i.e. dilation) in order to extract the peaks from the above image:",
+    "local": "然后执行一些形态学操作（即膨胀），以便从上述图像中提取峰值："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "From each blob then we create a seed/marker for the watershed algorithm with the help of the",
+    "local": "从每个blob中，我们在"
+  },
+  {
+    "origin": "function:",
+    "local": "功能："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Finally, we can apply the watershed algorithm, and visualize the result:",
+    "local": "最后，我们可以应用分水岭算法，并将结果可视化："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:35为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,1094 @@
+[
+  {
+    "origin": "OpenCV: cv::text::OCRTesseract Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "List of all members",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::OCRTesseract Class Reference",
+    "local": ""
+  },
+  {
+    "origin": "abstract",
+    "local": ""
+  },
+  {
+    "origin": "»",
+    "local": ""
+  },
+  {
+    "origin": "class provides an interface with the tesseract-ocr API (v3.02.02) in C++.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Inheritance diagram for cv::text::OCRTesseract:",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image, std::string &amp;output_text, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; *component_rects=NULL, std::vector&lt; std::string &gt; *component_texts=NULL, std::vector&lt; float &gt; *component_confidences=NULL, int component_level=0)",
+    "local": ""
+  },
+  {
+    "origin": "Recognize text using the tesseract-ocr API.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;mask, std::string &amp;output_text, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; *component_rects=NULL, std::vector&lt; std::string &gt; *component_texts=NULL, std::vector&lt; float &gt; *component_confidences=NULL, int component_level=0)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image, int min_confidence, int component_level=0)",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image,",
+    "local": ""
+  },
+  {
+    "origin": "mask, int min_confidence, int component_level=0)",
+    "local": ""
+  },
+  {
+    "origin": "virtual void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Static Public Member Functions",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const char *datapath=NULL, const char *language=NULL, const char *char_whitelist=NULL, int oem=",
+    "local": ""
+  },
+  {
+    "origin": ", int psmode=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": "class. Initializes Tesseract.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "class provides an interface with the tesseract-ocr API (v3.02.02) in C++.",
+    "local": ""
+  },
+  {
+    "origin": "Notice that it is compiled only when tesseract-ocr is correctly installed.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "(C++) An example of",
+    "local": ""
+  },
+  {
+    "origin": "recognition combined with scene text detection can be found at the end_to_end_recognition demo:",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/end_to_end_recognition.cpp",
+    "local": ""
+  },
+  {
+    "origin": "(C++) Another example of",
+    "local": ""
+  },
+  {
+    "origin": "recognition combined with scene text detection can be found at the webcam_demo:",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/webcam_demo.cpp",
+    "local": ""
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "create()",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::text::OCRTesseract::create",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const char *",
+    "local": ""
+  },
+  {
+    "origin": "datapath",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const char *",
+    "local": ""
+  },
+  {
+    "origin": "language",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const char *",
+    "local": ""
+  },
+  {
+    "origin": "char_whitelist",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "oem",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "psmode",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.OCRTesseract_create(",
+    "local": ""
+  },
+  {
+    "origin": "[, datapath[, language[, char_whitelist[, oem[, psmode]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates an instance of the",
+    "local": ""
+  },
+  {
+    "origin": "class. Initializes Tesseract.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "datapath",
+    "local": ""
+  },
+  {
+    "origin": "the name of the parent directory of tessdata ended with \"/\", or NULL to use the system's default directory.",
+    "local": ""
+  },
+  {
+    "origin": "language",
+    "local": ""
+  },
+  {
+    "origin": "an ISO 639-3 code or NULL will default to \"eng\".",
+    "local": ""
+  },
+  {
+    "origin": "char_whitelist",
+    "local": ""
+  },
+  {
+    "origin": "specifies the list of characters used for recognition. NULL defaults to \"0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\".",
+    "local": ""
+  },
+  {
+    "origin": "oem",
+    "local": ""
+  },
+  {
+    "origin": "tesseract-ocr offers different OCR Engine Modes (OEM), by default tesseract::OEM_DEFAULT is used. See the tesseract-ocr API documentation for other possible values.",
+    "local": ""
+  },
+  {
+    "origin": "psmode",
+    "local": ""
+  },
+  {
+    "origin": "tesseract-ocr offers different Page Segmentation Modes (PSM) tesseract::PSM_AUTO (fully automatic layout analysis) is used. See the tesseract-ocr API documentation for other possible values.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[1/4]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::text::OCRTesseract::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "output_text",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_rects",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::string &gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_texts",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; float &gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_confidences",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "component_level",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRTesseract.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRTesseract.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Recognize text using the tesseract-ocr API.",
+    "local": ""
+  },
+  {
+    "origin": "Takes image on input and returns recognized text in the output_text parameter. Optionally provides also the Rects for individual text elements found (e.g. words), and the list of those text elements with their confidence values.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Input image CV_8UC1 or CV_8UC3",
+    "local": ""
+  },
+  {
+    "origin": "output_text",
+    "local": ""
+  },
+  {
+    "origin": "Output text of the tesseract-ocr.",
+    "local": ""
+  },
+  {
+    "origin": "component_rects",
+    "local": ""
+  },
+  {
+    "origin": "If provided the method will output a list of Rects for the individual text elements found (e.g. words or text lines).",
+    "local": ""
+  },
+  {
+    "origin": "component_texts",
+    "local": ""
+  },
+  {
+    "origin": "If provided the method will output a list of text strings for the recognition of individual text elements found (e.g. words or text lines).",
+    "local": ""
+  },
+  {
+    "origin": "component_confidences",
+    "local": ""
+  },
+  {
+    "origin": "If provided the method will output a list of confidence values for the recognition of individual text elements found (e.g. words or text lines).",
+    "local": ""
+  },
+  {
+    "origin": "component_level",
+    "local": ""
+  },
+  {
+    "origin": "OCR_LEVEL_WORD (by default), or OCR_LEVEL_TEXTLINE.",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[2/4]",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::text::OCRTesseract::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "output_text",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_rects",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::string &gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_texts",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; float &gt; *",
+    "local": ""
+  },
+  {
+    "origin": "component_confidences",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "component_level",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRTesseract.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRTesseract.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Implements",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[3/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::OCRTesseract::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "min_confidence",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "component_level",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRTesseract.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRTesseract.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "run()",
+    "local": ""
+  },
+  {
+    "origin": "[4/4]",
+    "local": ""
+  },
+  {
+    "origin": "cv::text::OCRTesseract::run",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "min_confidence",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "component_level",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRTesseract.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRTesseract.run(",
+    "local": ""
+  },
+  {
+    "origin": "image, mask, min_confidence[, component_level]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "setWhiteList()",
+    "local": ""
+  },
+  {
+    "origin": "virtual void cv::text::OCRTesseract::setWhiteList",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "char_whitelist",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "None",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text_OCRTesseract.setWhiteList(",
+    "local": ""
+  },
+  {
+    "origin": "char_whitelist",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/text/",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:48 for OpenCV by",
+    "local": ""
+  }
+]

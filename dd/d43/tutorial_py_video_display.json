@@ -1,0 +1,258 @@
+[
+  {
+    "origin": "OpenCV: Getting Started with Videos",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Getting Started with Videos",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "Learn to read video, display video, and save video.",
+    "local": ""
+  },
+  {
+    "origin": "Learn to capture video from a camera and display it.",
+    "local": ""
+  },
+  {
+    "origin": "You will learn these functions :",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Capture Video from Camera",
+    "local": ""
+  },
+  {
+    "origin": "Often, we have to capture live stream with a camera. OpenCV provides a very simple interface to do this. Let's capture a video from the camera (I am using the built-in webcam on my laptop), convert it into grayscale video and display it. Just a simple task to get started.",
+    "local": ""
+  },
+  {
+    "origin": "To capture a video, you need to create a",
+    "local": ""
+  },
+  {
+    "origin": "VideoCapture",
+    "local": ""
+  },
+  {
+    "origin": "object. Its argument can be either the device index or the name of a video file. A device index is just the number to specify which camera. Normally one camera will be connected (as in my case). So I simply pass 0 (or -1). You can select the second camera by passing 1 and so on. After that, you can capture frame-by-frame. But at the end, don't forget to release the capture.",
+    "local": ""
+  },
+  {
+    "origin": "returns a bool (",
+    "local": ""
+  },
+  {
+    "origin": "/",
+    "local": ""
+  },
+  {
+    "origin": "). If the frame is read correctly, it will be",
+    "local": ""
+  },
+  {
+    "origin": ". So you can check for the end of the video by checking this returned value.",
+    "local": ""
+  },
+  {
+    "origin": "Sometimes, cap may not have initialized the capture. In that case, this code shows an error. You can check whether it is initialized or not by the method",
+    "local": ""
+  },
+  {
+    "origin": "cap.isOpened()",
+    "local": ""
+  },
+  {
+    "origin": ". If it is",
+    "local": ""
+  },
+  {
+    "origin": ", OK. Otherwise open it using",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "You can also access some of the features of this video using",
+    "local": ""
+  },
+  {
+    "origin": "cap.get(propId)",
+    "local": ""
+  },
+  {
+    "origin": "method where propId is a number from 0 to 18. Each number denotes a property of the video (if it is applicable to that video). Full details can be seen here:",
+    "local": ""
+  },
+  {
+    "origin": ". Some of these values can be modified using",
+    "local": ""
+  },
+  {
+    "origin": "cap.set(propId, value)",
+    "local": ""
+  },
+  {
+    "origin": ". Value is the new value you want.",
+    "local": ""
+  },
+  {
+    "origin": "For example, I can check the frame width and height by",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ". It gives me 640x480 by default. But I want to modify it to 320x240. Just use",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If you are getting an error, make sure your camera is working fine using any other camera application (like Cheese in Linux).",
+    "local": ""
+  },
+  {
+    "origin": "Playing Video from file",
+    "local": ""
+  },
+  {
+    "origin": "Playing video from file is the same as capturing it from camera, just change the camera index to a video file name. Also while displaying the frame, use appropriate time for",
+    "local": ""
+  },
+  {
+    "origin": ". If it is too less, video will be very fast and if it is too high, video will be slow (Well, that is how you can display videos in slow motion). 25 milliseconds will be OK in normal cases.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Make sure a proper version of ffmpeg or gstreamer is installed. Sometimes it is a headache to work with video capture, mostly due to wrong installation of ffmpeg/gstreamer.",
+    "local": ""
+  },
+  {
+    "origin": "Saving a Video",
+    "local": ""
+  },
+  {
+    "origin": "So we capture a video and process it frame-by-frame, and we want to save that video. For images, it is very simple: just use",
+    "local": ""
+  },
+  {
+    "origin": ". Here, a little more work is required.",
+    "local": ""
+  },
+  {
+    "origin": "This time we create a",
+    "local": ""
+  },
+  {
+    "origin": "VideoWriter",
+    "local": ""
+  },
+  {
+    "origin": "object. We should specify the output file name (eg: output.avi). Then we should specify the",
+    "local": ""
+  },
+  {
+    "origin": "FourCC",
+    "local": ""
+  },
+  {
+    "origin": "code (details in next paragraph). Then number of frames per second (fps) and frame size should be passed. And the last one is the",
+    "local": ""
+  },
+  {
+    "origin": "isColor",
+    "local": ""
+  },
+  {
+    "origin": "flag. If it is",
+    "local": ""
+  },
+  {
+    "origin": ", the encoder expect color frame, otherwise it works with grayscale frame.",
+    "local": ""
+  },
+  {
+    "origin": "FourCC",
+    "local": ""
+  },
+  {
+    "origin": "is a 4-byte code used to specify the video codec. The list of available codes can be found in",
+    "local": ""
+  },
+  {
+    "origin": "fourcc.org",
+    "local": ""
+  },
+  {
+    "origin": ". It is platform dependent. The following codecs work fine for me.",
+    "local": ""
+  },
+  {
+    "origin": "In Fedora: DIVX, XVID, MJPG, X264, WMV1, WMV2. (XVID is more preferable. MJPG results in high size video. X264 gives very small size video)",
+    "local": ""
+  },
+  {
+    "origin": "In Windows: DIVX (More to be tested and added)",
+    "local": ""
+  },
+  {
+    "origin": "In OSX: MJPG (.mp4), DIVX (.avi), X264 (.mkv).",
+    "local": ""
+  },
+  {
+    "origin": "FourCC code is passed as `cv.VideoWriter_fourcc('M','J','P','G')",
+    "local": ""
+  },
+  {
+    "origin": "cv.VideoWriter_fourcc(*'MJPG')` for MJPG.",
+    "local": ""
+  },
+  {
+    "origin": "The below code captures from a camera, flips every frame in the vertical direction, and saves the video.",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

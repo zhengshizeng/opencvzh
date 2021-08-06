@@ -1,0 +1,994 @@
+[
+  {
+    "origin": "OpenCV: Math with F1-transform support",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": "打开CV"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "Math with F1-transform support",
+    "local": "支持F1变换的数学"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "matrix,",
+    "local": "矩阵，"
+  },
+  {
+    "origin": "kernel,",
+    "local": ""
+  },
+  {
+    "origin": "components)",
+    "local": ""
+  },
+  {
+    "origin": "Computes components of the array using direct \\(F^1\\)-transform.",
+    "local": "使用直接\\（F^1\\）-变换计算数组的组件。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(int radius,",
+    "local": ""
+  },
+  {
+    "origin": "matrix, const int chn)",
+    "local": ""
+  },
+  {
+    "origin": "Creates horizontal matrix for \\(F^1\\)-transform computation.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(int radius,",
+    "local": "（int半径，"
+  },
+  {
+    "origin": "matrix, const int chn)",
+    "local": ""
+  },
+  {
+    "origin": "Creates vertical matrix for \\(F^1\\)-transform computation.",
+    "local": "为\\（F^1\\）-变换计算创建垂直矩阵。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "components,",
+    "local": ""
+  },
+  {
+    "origin": "kernel,",
+    "local": "内核，"
+  },
+  {
+    "origin": "output, int width, int height)",
+    "local": ""
+  },
+  {
+    "origin": "Computes inverse \\(F^1\\)-transfrom.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "matrix,",
+    "local": "矩阵，"
+  },
+  {
+    "origin": "kernel,",
+    "local": "内核，"
+  },
+  {
+    "origin": "c00,",
+    "local": ""
+  },
+  {
+    "origin": "c10,",
+    "local": ""
+  },
+  {
+    "origin": "c01,",
+    "local": ""
+  },
+  {
+    "origin": "components,",
+    "local": "组件，"
+  },
+  {
+    "origin": "mask=",
+    "local": "遮罩="
+  },
+  {
+    "origin": "())",
+    "local": "())"
+  },
+  {
+    "origin": "Computes elements of \\(F^1\\)-transform components.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "matrix,",
+    "local": "矩阵，"
+  },
+  {
+    "origin": "kernel,",
+    "local": "内核，"
+  },
+  {
+    "origin": "output,",
+    "local": ""
+  },
+  {
+    "origin": "mask=",
+    "local": "遮罩="
+  },
+  {
+    "origin": "())",
+    "local": "())"
+  },
+  {
+    "origin": "Computes \\(F^1\\)-transfrom and inverse \\(F^1\\)-transfrom at once.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "Fuzzy transform ( \\(F^1\\)-transform) of the 1th degree transforms whole image to a matrix of its components. Each component is polynomial of the 1th degree carrying information about average color and average gradient of certain subarea.",
+    "local": "1次模糊变换（F^1）-变换将整个图像变换为其组成部分的矩阵。每个分量都是一次多项式，携带着关于某个分区的平均颜色和平均梯度的信息。"
+  },
+  {
+    "origin": "Function Documentation",
+    "local": "功能文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "FT12D_components()",
+    "local": "FT12D\\U组件（）"
+  },
+  {
+    "origin": "void cv::ft::FT12D_components",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "components",
+    "local": "组件"
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "components",
+    "local": "组件"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ft.FT12D_components(",
+    "local": "cv.ft.FT12D\\U组件("
+  },
+  {
+    "origin": "matrix, kernel[, components]",
+    "local": "矩阵，内核[，组件]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Computes components of the array using direct \\(F^1\\)-transform.",
+    "local": "使用直接\\（F^1\\）-变换计算数组的组件。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": "Input array.",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": "Kernel used for processing. Function",
+    "local": ""
+  },
+  {
+    "origin": "can be used.",
+    "local": "可以使用。"
+  },
+  {
+    "origin": "components",
+    "local": "组件"
+  },
+  {
+    "origin": "Output 32-bit float array for the components.",
+    "local": ""
+  },
+  {
+    "origin": "The function computes linear components using predefined kernel.",
+    "local": "该函数使用预定义的内核计算线性组件。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "FT12D_createPolynomMatrixHorizontal()",
+    "local": "FT12D\\u CreatePolynomMatrix水平（）"
+  },
+  {
+    "origin": "void cv::ft::FT12D_createPolynomMatrixHorizontal",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "radius",
+    "local": "半径"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "chn",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "matrix",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ft.FT12D_createPolynomMatrixHorizontal(",
+    "local": "cv.ft.FT12D\\U CreatePolynomatrix水平("
+  },
+  {
+    "origin": "radius, chn[, matrix]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Creates horizontal matrix for \\(F^1\\)-transform computation.",
+    "local": "为\\（F^1\\）-变换计算创建水平矩阵。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "radius",
+    "local": "半径"
+  },
+  {
+    "origin": "Radius of the basic function.",
+    "local": "基本函数的半径。"
+  },
+  {
+    "origin": "matrix",
+    "local": "矩阵"
+  },
+  {
+    "origin": "The horizontal matrix.",
+    "local": "水平矩阵。"
+  },
+  {
+    "origin": "chn",
+    "local": "CHN"
+  },
+  {
+    "origin": "Number of channels.",
+    "local": "通道数。"
+  },
+  {
+    "origin": "The function creates helper horizontal matrix for \\(F^1\\)-transfrom processing. It is used for gradient computation.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "FT12D_createPolynomMatrixVertical()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ft::FT12D_createPolynomMatrixVertical",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "radius",
+    "local": "半径"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "matrix",
+    "local": "矩阵"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const int",
+    "local": ""
+  },
+  {
+    "origin": "chn",
+    "local": "CHN"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "matrix",
+    "local": "矩阵"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ft.FT12D_createPolynomMatrixVertical(",
+    "local": "cv.ft.FT12D\\U CreatePolynomatrix垂直("
+  },
+  {
+    "origin": "radius, chn[, matrix]",
+    "local": "半径，chn[，矩阵]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Creates vertical matrix for \\(F^1\\)-transform computation.",
+    "local": "为\\（F^1\\）-变换计算创建垂直矩阵。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "radius",
+    "local": "半径"
+  },
+  {
+    "origin": "Radius of the basic function.",
+    "local": "基本函数的半径。"
+  },
+  {
+    "origin": "matrix",
+    "local": "矩阵"
+  },
+  {
+    "origin": "The vertical matrix.",
+    "local": "垂直矩阵。"
+  },
+  {
+    "origin": "chn",
+    "local": "CHN"
+  },
+  {
+    "origin": "Number of channels.",
+    "local": "通道数。"
+  },
+  {
+    "origin": "The function creates helper vertical matrix for \\(F^1\\)-transfrom processing. It is used for gradient computation.",
+    "local": "函数为\\（F^1\\）-transfrom处理创建助手垂直矩阵。用于梯度计算。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "FT12D_inverseFT()",
+    "local": "FT12D\\u inverseFT（）"
+  },
+  {
+    "origin": "void cv::ft::FT12D_inverseFT",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "components",
+    "local": "组件"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "output",
+    "local": "输出"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "width",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "int",
+    "local": "内景"
+  },
+  {
+    "origin": "height",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "output",
+    "local": "输出"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ft.FT12D_inverseFT(",
+    "local": ""
+  },
+  {
+    "origin": "components, kernel, width, height[, output]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Computes inverse \\(F^1\\)-transfrom.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "components",
+    "local": "组件"
+  },
+  {
+    "origin": "Input 32-bit float single channel array for the components.",
+    "local": "为组件输入32位浮点单通道阵列。"
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": "Kernel used for processing. The same kernel as for components computation must be used.",
+    "local": "用于处理的内核。必须使用与组件计算相同的内核。"
+  },
+  {
+    "origin": "output",
+    "local": "输出"
+  },
+  {
+    "origin": "Output 32-bit float array.",
+    "local": ""
+  },
+  {
+    "origin": "width",
+    "local": ""
+  },
+  {
+    "origin": "Width of the output array.",
+    "local": ""
+  },
+  {
+    "origin": "height",
+    "local": ""
+  },
+  {
+    "origin": "Height of the output array.",
+    "local": ""
+  },
+  {
+    "origin": "Computation of inverse \\(F^1\\)-transform.",
+    "local": "逆变换的计算。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "FT12D_polynomial()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ft::FT12D_polynomial",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "matrix",
+    "local": "矩阵"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "kernel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "c00",
+    "local": "二氧化碳"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "c10",
+    "local": "c10型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "c01",
+    "local": "二氧化碳"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "components",
+    "local": "组件"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "c00, c10, c01, components",
+    "local": "c00，c10，c01，部件"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ft.FT12D_polynomial(",
+    "local": "cv.ft.FT12D_多项式("
+  },
+  {
+    "origin": "matrix, kernel[, c00[, c10[, c01[, components[, mask]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Computes elements of \\(F^1\\)-transform components.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "matrix",
+    "local": "矩阵"
+  },
+  {
+    "origin": "Input array.",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": "内核"
+  },
+  {
+    "origin": "Kernel used for processing. Function",
+    "local": ""
+  },
+  {
+    "origin": "can be used.",
+    "local": "可以使用。"
+  },
+  {
+    "origin": "c00",
+    "local": "二氧化碳"
+  },
+  {
+    "origin": "Elements represent average color.",
+    "local": ""
+  },
+  {
+    "origin": "c10",
+    "local": "c10型"
+  },
+  {
+    "origin": "Elements represent average vertical gradient.",
+    "local": ""
+  },
+  {
+    "origin": "c01",
+    "local": "二氧化碳"
+  },
+  {
+    "origin": "Elements represent average horizontal gradient.",
+    "local": ""
+  },
+  {
+    "origin": "components",
+    "local": "组件"
+  },
+  {
+    "origin": "Output 32-bit float array for the components.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "Mask can be used for unwanted area marking.",
+    "local": ""
+  },
+  {
+    "origin": "The function computes components and its elements using predefined kernel and mask.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "FT12D_process()",
+    "local": "FT12D\\U过程（）"
+  },
+  {
+    "origin": "void cv::ft::FT12D_process",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "matrix",
+    "local": "矩阵"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "kernel",
+    "local": "内核"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "output",
+    "local": "输出"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "output",
+    "local": "输出"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.ft.FT12D_process(",
+    "local": ""
+  },
+  {
+    "origin": "matrix, kernel[, output[, mask]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Computes \\(F^1\\)-transfrom and inverse \\(F^1\\)-transfrom at once.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "matrix",
+    "local": "矩阵"
+  },
+  {
+    "origin": "Input matrix.",
+    "local": ""
+  },
+  {
+    "origin": "kernel",
+    "local": "内核"
+  },
+  {
+    "origin": "Kernel used for processing. Function",
+    "local": ""
+  },
+  {
+    "origin": "can be used.",
+    "local": "可以使用。"
+  },
+  {
+    "origin": "output",
+    "local": "输出"
+  },
+  {
+    "origin": "Output 32-bit float array.",
+    "local": ""
+  },
+  {
+    "origin": "mask",
+    "local": "面具"
+  },
+  {
+    "origin": "Mask used for unwanted area marking.",
+    "local": "用于不需要的区域标记的遮罩。"
+  },
+  {
+    "origin": "This function computes \\(F^1\\)-transfrom and inverse \\(F^1\\)-transfotm in one step. It is fully sufficient and optimized for",
+    "local": "此函数一步计算\\（F^1\\）-变换和逆\\（F^1\\）-变换。这是充分和优化的"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "F-transform technique of first degreee is described in paper",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

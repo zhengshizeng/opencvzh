@@ -1,0 +1,1074 @@
+[
+  {
+    "origin": "OpenCV: cv::RNG Class Reference",
+    "local": "OpenCV:cv:：RNG类引用"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Public Types",
+    "local": "公共类型"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "Public Attributes",
+    "local": "公共属性"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::RNG Class Reference",
+    "local": "cv:：RNG类参考"
+  },
+  {
+    "origin": "&raquo;",
+    "local": "&引用；"
+  },
+  {
+    "origin": "Random Number Generator.",
+    "local": "随机数发生器。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Types",
+    "local": "公共类型"
+  },
+  {
+    "origin": "{",
+    "local": "{"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "&#160;&#160;",
+    "local": "&#160;&#160;"
+  },
+  {
+    "origin": "}",
+    "local": "}"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "constructor",
+    "local": "建造师"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "mat, int distType,",
+    "local": "很好，内特型，"
+  },
+  {
+    "origin": "a,",
+    "local": "一个，"
+  },
+  {
+    "origin": "b, bool saturateRange=false)",
+    "local": "b、 bool saturateRange=假）"
+  },
+  {
+    "origin": "Fills arrays with random numbers.",
+    "local": "用随机数填充数组。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(double sigma)",
+    "local": "（双西格玛）"
+  },
+  {
+    "origin": "Returns the next random number sampled from the Gaussian distribution.",
+    "local": "返回从高斯分布中采样的下一个随机数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "returns a random integer sampled uniformly from [0, N).",
+    "local": "返回从[0，N]均匀采样的随机整数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(unsigned N)",
+    "local": "（无符号N）"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;other) const",
+    "local": "&amp；其他）施工"
+  },
+  {
+    "origin": "(int a, int b)",
+    "local": "（内景a，内景b）"
+  },
+  {
+    "origin": "returns uniformly distributed integer random number from [a,b) range",
+    "local": "返回[a，b）范围内均匀分布的整数随机数"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(float a, float b)",
+    "local": "（浮子a、浮子b）"
+  },
+  {
+    "origin": "(double a, double b)",
+    "local": "（双a，双b）"
+  },
+  {
+    "origin": "Public Attributes",
+    "local": "公共属性"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "Random Number Generator.",
+    "local": "随机数发生器。"
+  },
+  {
+    "origin": "Random number generator. It encapsulates the state (currently, a 64-bit integer) and has methods to return scalar random values and to fill arrays with random values. Currently it supports uniform and Gaussian (normal) distributions. The generator uses Multiply-With-Carry algorithm, introduced by G. Marsaglia (",
+    "local": "随机数发生器。它封装状态（当前为64位整数），并具有返回标量随机值和用随机值填充数组的方法。目前它支持均匀分布和高斯（正态）分布。该发生器采用G。马萨格利亚("
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Multiply-with-carry",
+    "local": "http://en.wikipedia.org/wiki/Multiply-with-carry"
+  },
+  {
+    "origin": "). Gaussian-distribution random numbers are generated using the Ziggurat algorithm (",
+    "local": "). 高斯分布随机数是使用Ziggurat算法生成的("
+  },
+  {
+    "origin": "http://en.wikipedia.org/wiki/Ziggurat_algorithm",
+    "local": "http://en.wikipedia.org/wiki/Ziggurat_algorithm"
+  },
+  {
+    "origin": "), introduced by G. Marsaglia and W. W. Tsang.",
+    "local": ")，由G。Marsaglia和W。W。曾荫权。"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", and",
+    "local": "，和"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Member Enumeration Documentation",
+    "local": "成员枚举文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "anonymous enum",
+    "local": "匿名枚举"
+  },
+  {
+    "origin": "anonymous enum",
+    "local": "匿名枚举"
+  },
+  {
+    "origin": "Enumerator",
+    "local": "枚举器"
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": "建造商和；析构函数文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "RNG()",
+    "local": "RNG（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "cv::RNG::RNG",
+    "local": "简历：：RNG：：RNG"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "constructor",
+    "local": "建造师"
+  },
+  {
+    "origin": "These are the",
+    "local": "这些是"
+  },
+  {
+    "origin": "constructors. The first form sets the state to some pre-defined value, equal to 2**32-1 in the current implementation. The second form sets the state to the specified value. If you passed state=0 , the constructor uses the above default value instead to avoid the singular random number sequence, consisting of all zeros.",
+    "local": "施工人员。第一种形式将状态设置为一些预定义的值，在当前实现中等于2**32-1。第二种形式将状态设置为指定值。如果传递state=0，则构造函数将使用上述默认值来避免由全零组成的奇异随机数序列。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "RNG()",
+    "local": "RNG（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "cv::RNG::RNG",
+    "local": "简历：：RNG：：RNG"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "state",
+    "local": "状态"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "state",
+    "local": "状态"
+  },
+  {
+    "origin": "64-bit value used to initialize the",
+    "local": "用于初始化"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "fill()",
+    "local": "填充（）"
+  },
+  {
+    "origin": "void cv::RNG::fill",
+    "local": "空cv：：RNG：：填充"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "mat",
+    "local": "垫子"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "distType",
+    "local": "离散型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "a",
+    "local": "一"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "b",
+    "local": "b"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "saturateRange",
+    "local": "饱和范围"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Fills arrays with random numbers.",
+    "local": "用随机数填充数组。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "mat",
+    "local": "垫子"
+  },
+  {
+    "origin": "2D or N-dimensional matrix; currently matrices with more than 4 channels are not supported by the methods, use",
+    "local": "二维或N维矩阵；目前，这些方法不支持具有4个以上通道的矩阵，请使用"
+  },
+  {
+    "origin": "as a possible workaround.",
+    "local": "作为可能的解决方法。"
+  },
+  {
+    "origin": "distType",
+    "local": "离散型"
+  },
+  {
+    "origin": "distribution type,",
+    "local": "分配类型，"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "a",
+    "local": "一"
+  },
+  {
+    "origin": "first distribution parameter; in case of the uniform distribution, this is an inclusive lower boundary, in case of the normal distribution, this is a mean value.",
+    "local": "第一分布参数；在均匀分布的情况下，这是一个包含的下边界，在正态分布的情况下，这是一个平均值。"
+  },
+  {
+    "origin": "b",
+    "local": "b"
+  },
+  {
+    "origin": "second distribution parameter; in case of the uniform distribution, this is a non-inclusive upper boundary, in case of the normal distribution, this is a standard deviation (diagonal of the standard deviation matrix or the full standard deviation matrix).",
+    "local": "第二分布参数；在均匀分布的情况下，这是一个不包含的上边界；在正态分布的情况下，这是一个标准偏差（标准偏差矩阵或全标准偏差矩阵的对角线）。"
+  },
+  {
+    "origin": "saturateRange",
+    "local": "饱和范围"
+  },
+  {
+    "origin": "pre-saturation flag; for uniform distribution only; if true, the method will first convert a and b to the acceptable value range (according to the mat datatype) and then will generate uniformly distributed random numbers within the range [saturate(a), saturate(b)), if saturateRange=false, the method will generate uniformly distributed random numbers in the original range [a, b) and then will saturate them, it means, for example, that",
+    "local": "预饱和标志；仅用于均匀分布；如果为true，则该方法将首先将a和b转换为可接受的值范围（根据mat数据类型），然后在范围内生成均匀分布的随机数[saturate（a），saturate（b）），如果saturateRange=false，则该方法将在原始范围内生成均匀分布的随机数[a，b）然后将它们饱和，这意味着，例如"
+  },
+  {
+    "origin": "will likely produce array mostly filled with 0's and 255's, since the range (0, 255) is significantly smaller than [-DBL_MAX, DBL_MAX).",
+    "local": "可能会产生一个数组，其中大部分填充0和255，因为范围（0，255）明显小于[-DBL\\u MAX，DBL\\u MAX）。"
+  },
+  {
+    "origin": "Each of the methods fills the matrix with the random values from the specified distribution. As the new numbers are generated, the",
+    "local": "每个方法都用指定分布的随机值填充矩阵。当生成新的数字时"
+  },
+  {
+    "origin": "state is updated accordingly. In case of multiple-channel images, every channel is filled independently, which means that",
+    "local": "相应地更新状态。对于多通道图像，每个通道都是独立填充的，这意味着"
+  },
+  {
+    "origin": "cannot generate samples from the multi-dimensional Gaussian distribution with non-diagonal covariance matrix directly. To do that, the method generates samples from multi-dimensional standard Gaussian distribution with zero mean and identity covariation matrix, and then transforms them using transform to get samples from the specified Gaussian distribution.",
+    "local": "对于具有非对角协方差矩阵的多维高斯分布，不能直接生成样本。为此，该方法从具有零均值和单位协变量矩阵的多维标准高斯分布中生成样本，然后利用变换对样本进行变换，得到指定高斯分布的样本。"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "gaussian()",
+    "local": "高斯（）"
+  },
+  {
+    "origin": "double cv::RNG::gaussian",
+    "local": "双cv：：RNG：：高斯"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "sigma",
+    "local": "西格玛"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Returns the next random number sampled from the Gaussian distribution.",
+    "local": "返回从高斯分布中采样的下一个随机数。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "sigma",
+    "local": "西格玛"
+  },
+  {
+    "origin": "standard deviation of the distribution.",
+    "local": "分布的标准差。"
+  },
+  {
+    "origin": "The method transforms the state using the MWC algorithm and returns the next random number from the Gaussian distribution N(0,sigma) . That is, the mean value of the returned random numbers is zero and the standard deviation is the specified sigma .",
+    "local": "该方法使用MWC算法变换状态，并从高斯分布N（0，sigma）返回下一个随机数。也就是说，返回的随机数的平均值是零，标准偏差是指定的sigma。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "next()",
+    "local": "下一个（）"
+  },
+  {
+    "origin": "unsigned cv::RNG::next",
+    "local": "无符号cv:：RNG:：next"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "The method updates the state using the MWC algorithm and returns the next 32-bit random number.",
+    "local": "该方法使用MWC算法更新状态并返回下一个32位随机数。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator double()",
+    "local": "运算符double（）"
+  },
+  {
+    "origin": "cv::RNG::operator double",
+    "local": "cv:：RNG:：运算符双精度"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator float()",
+    "local": "运算符浮点（）"
+  },
+  {
+    "origin": "cv::RNG::operator float",
+    "local": "cv:：RNG:：运算符浮点"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator schar()",
+    "local": "运算符schar（）"
+  },
+  {
+    "origin": "cv::RNG::operator",
+    "local": "cv:：RNG:：运算符"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator short()",
+    "local": "运算符short（）"
+  },
+  {
+    "origin": "cv::RNG::operator short",
+    "local": "cv:：RNG:：运算符短"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator uchar()",
+    "local": "运算符uchar（）"
+  },
+  {
+    "origin": "cv::RNG::operator",
+    "local": "cv:：RNG:：运算符"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Each of the methods updates the state using the MWC algorithm and returns the next random number of the specified type. In case of integer types, the returned number is from the available value range for the specified type. In case of floating-point types, the returned value is from [0,1) range.",
+    "local": "每个方法都使用MWC算法更新状态，并返回指定类型的下一个随机数。对于整数类型，返回的数字来自指定类型的可用值范围。对于浮点类型，返回值来自[0,1）范围。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator unsigned()",
+    "local": "运算符unsigned（）"
+  },
+  {
+    "origin": "cv::RNG::operator unsigned",
+    "local": "cv:：RNG:：运算符无符号"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator ushort()",
+    "local": "运算符ushort（）"
+  },
+  {
+    "origin": "cv::RNG::operator",
+    "local": "cv:：RNG:：运算符"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator()()",
+    "local": "运算符（）（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "unsigned cv::RNG::operator()",
+    "local": "无符号cv:：RNG:：operator（）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "returns a random integer sampled uniformly from [0, N).",
+    "local": "返回从[0，N]均匀采样的随机整数。"
+  },
+  {
+    "origin": "The methods transform the state using the MWC algorithm and return the next random number. The first form is equivalent to",
+    "local": "这些方法使用MWC算法变换状态并返回下一个随机数。第一种形式相当于"
+  },
+  {
+    "origin": ". The second form returns the random number modulo N , which means that the result is in the range [0, N) .",
+    "local": ". 第二种形式返回模N的随机数，这意味着结果在[0，N]范围内。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator()()",
+    "local": "运算符（）（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "unsigned cv::RNG::operator()",
+    "local": "无符号cv:：RNG:：operator（）"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "N",
+    "local": "N"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "N",
+    "local": "N"
+  },
+  {
+    "origin": "upper non-inclusive boundary of the returned random number.",
+    "local": "返回的随机数的上非包含边界。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "operator==()",
+    "local": "运算符==（）"
+  },
+  {
+    "origin": "bool cv::RNG::operator==",
+    "local": "布尔cv:：RNG:：运算符=="
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "other",
+    "local": "其他"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "uniform()",
+    "local": "统一（）"
+  },
+  {
+    "origin": "[1/3]",
+    "local": "[1/3]"
+  },
+  {
+    "origin": "int cv::RNG::uniform",
+    "local": "int cv：：RNG：：统一"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "a",
+    "local": "一"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "b",
+    "local": "b"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "returns uniformly distributed integer random number from [a,b) range",
+    "local": "返回[a，b）范围内均匀分布的整数随机数"
+  },
+  {
+    "origin": "The methods transform the state using the MWC algorithm and return the next uniformly-distributed random number of the specified type, deduced from the input parameter type, from the range [a, b) . There is a nuance illustrated by the following sample:",
+    "local": "这些方法使用MWC算法变换状态，并返回下一个指定类型的均匀分布随机数，该随机数是从输入参数类型，从范围[a，b]中推导出来的。以下示例说明了其中的细微差别："
+  },
+  {
+    "origin": "The compiler does not take into account the type of the variable to which you assign the result of",
+    "local": "编译器不考虑将结果赋给的变量的类型"
+  },
+  {
+    "origin": ". The only thing that matters to the compiler is the type of a and b parameters. So, if you want a floating-point random number, but the range boundaries are integer numbers, either put dots in the end, if they are constants, or use explicit type cast operators, as in the a1 initialization above.",
+    "local": ". 编译器唯一关心的是a和b参数的类型。所以，如果你想要一个浮点随机数，但是范围边界是整数，要么在末尾放点，如果它们是常量，要么使用显式类型转换操作符，就像上面的a1初始化一样。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "a",
+    "local": "一"
+  },
+  {
+    "origin": "lower inclusive boundary of the returned random number.",
+    "local": "返回的随机数的下包容边界。"
+  },
+  {
+    "origin": "b",
+    "local": "b"
+  },
+  {
+    "origin": "upper non-inclusive boundary of the returned random number.",
+    "local": "返回的随机数的上非包含边界。"
+  },
+  {
+    "origin": "Examples:",
+    "local": "示例："
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ", and",
+    "local": "，和"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "uniform()",
+    "local": "统一（）"
+  },
+  {
+    "origin": "[2/3]",
+    "local": "[2/3]"
+  },
+  {
+    "origin": "float cv::RNG::uniform",
+    "local": "浮动cv：：RNG：：均匀"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "a",
+    "local": "一"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "b",
+    "local": "b"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "uniform()",
+    "local": "统一（）"
+  },
+  {
+    "origin": "[3/3]",
+    "local": "[3/3]"
+  },
+  {
+    "origin": "double cv::RNG::uniform",
+    "local": "双cv：：RNG：：均匀"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "a",
+    "local": "一"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "b",
+    "local": "b"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "Member Data Documentation",
+    "local": "成员数据文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "state",
+    "local": "状态"
+  },
+  {
+    "origin": "cv::RNG::state",
+    "local": "cv:：RNG:：状态"
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/",
+    "local": "打开CV2/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:43 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:43为OpenCV生成，&#160；"
+  }
+]

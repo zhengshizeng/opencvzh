@@ -1,0 +1,718 @@
+[
+  {
+    "origin": "OpenCV: Contour Features",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Contour Features",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "To find the different features of contours, like area, perimeter, centroid, bounding box etc",
+    "local": ""
+  },
+  {
+    "origin": "You will learn plenty of functions related to contours.",
+    "local": ""
+  },
+  {
+    "origin": "1. Moments",
+    "local": ""
+  },
+  {
+    "origin": "Image moments help you to calculate some features like center of mass of the object, area of the object etc. Check out the wikipedia page on",
+    "local": ""
+  },
+  {
+    "origin": "Image Moments",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(array, binaryImage = false)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "array",
+    "local": ""
+  },
+  {
+    "origin": "raster image (single-channel, 8-bit or floating-point 2D array) or an array ( 1×N or N×1 ) of 2D points.",
+    "local": ""
+  },
+  {
+    "origin": "binaryImage",
+    "local": ""
+  },
+  {
+    "origin": "if it is true, all non-zero image pixels are treated as 1's. The parameter is used for images only.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "From this moments, you can extract useful data like area, centroid etc. Centroid is given by the relations, \\(C_x = \\frac{M_{10}}{M_{00}}\\) and \\(C_y = \\frac{M_{01}}{M_{00}}\\). This can be done as follows:",
+    "local": ""
+  },
+  {
+    "origin": "2. Contour Area",
+    "local": ""
+  },
+  {
+    "origin": "Contour area is given by the function",
+    "local": ""
+  },
+  {
+    "origin": "or from moments,",
+    "local": ""
+  },
+  {
+    "origin": "M['m00']",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(contour, oriented = false)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "contour",
+    "local": ""
+  },
+  {
+    "origin": "input vector of 2D points (contour vertices)",
+    "local": ""
+  },
+  {
+    "origin": "oriented",
+    "local": ""
+  },
+  {
+    "origin": "oriented area flag. If it is true, the function returns a signed area value, depending on the contour orientation (clockwise or counter-clockwise). Using this feature you can determine orientation of a contour by taking the sign of an area. By default, the parameter is false, which means that the absolute value is returned.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "3. Contour Perimeter",
+    "local": ""
+  },
+  {
+    "origin": "It is also called arc length. It can be found out using",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(curve, closed)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "curve",
+    "local": ""
+  },
+  {
+    "origin": "input vector of 2D points.",
+    "local": ""
+  },
+  {
+    "origin": "closed",
+    "local": ""
+  },
+  {
+    "origin": "flag indicating whether the curve is closed or not.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "4. Contour Approximation",
+    "local": ""
+  },
+  {
+    "origin": "It approximates a contour shape to another shape with less number of vertices depending upon the precision we specify. It is an implementation of",
+    "local": ""
+  },
+  {
+    "origin": "Douglas-Peucker algorithm",
+    "local": ""
+  },
+  {
+    "origin": ". Check the wikipedia page for algorithm and demonstration.",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(curve, approxCurve, epsilon, closed)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "curve",
+    "local": ""
+  },
+  {
+    "origin": "input vector of 2D points stored in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "approxCurve",
+    "local": ""
+  },
+  {
+    "origin": "result of the approximation. The type should match the type of the input curve.",
+    "local": ""
+  },
+  {
+    "origin": "epsilon",
+    "local": ""
+  },
+  {
+    "origin": "parameter specifying the approximation accuracy. This is the maximum distance between the original curve and its approximation.",
+    "local": ""
+  },
+  {
+    "origin": "closed",
+    "local": ""
+  },
+  {
+    "origin": "If true, the approximated curve is closed (its first and last vertices are connected). Otherwise, it is not closed.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "5. Convex Hull",
+    "local": ""
+  },
+  {
+    "origin": "Convex Hull will look similar to contour approximation, but it is not (Both may provide same results in some cases). Here,",
+    "local": ""
+  },
+  {
+    "origin": "function checks a curve for convexity defects and corrects it. Generally speaking, convex curves are the curves which are always bulged out, or at-least flat. And if it is bulged inside, it is called convexity defects. For example, check the below image of hand. Red line shows the convex hull of hand. The double-sided arrow marks shows the convexity defects, which are the local maximum deviations of hull from contours.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(points, hull, clockwise = false, returnPoints = true)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "input 2D point set.",
+    "local": ""
+  },
+  {
+    "origin": "hull",
+    "local": ""
+  },
+  {
+    "origin": "output convex hull.",
+    "local": ""
+  },
+  {
+    "origin": "clockwise",
+    "local": ""
+  },
+  {
+    "origin": "orientation flag. If it is true, the output convex hull is oriented clockwise. Otherwise, it is oriented counter-clockwise. The assumed coordinate system has its X axis pointing to the right, and its Y axis pointing upwards.",
+    "local": ""
+  },
+  {
+    "origin": "returnPoints",
+    "local": ""
+  },
+  {
+    "origin": "operation flag. In case of a matrix, when the flag is true, the function returns convex hull points. Otherwise, it returns indices of the convex hull points.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "6. Checking Convexity",
+    "local": ""
+  },
+  {
+    "origin": "There is a function to check if a curve is convex or not,",
+    "local": ""
+  },
+  {
+    "origin": ". It just return whether True or False. Not a big deal.",
+    "local": ""
+  },
+  {
+    "origin": "7. Bounding Rectangle",
+    "local": ""
+  },
+  {
+    "origin": "There are two types of bounding rectangles.",
+    "local": ""
+  },
+  {
+    "origin": "7.a. Straight Bounding Rectangle",
+    "local": ""
+  },
+  {
+    "origin": "It is a straight rectangle, it doesn't consider the rotation of the object. So area of the bounding rectangle won't be minimum.",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(points)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "input 2D point set.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "7.b. Rotated Rectangle",
+    "local": ""
+  },
+  {
+    "origin": "Here, bounding rectangle is drawn with minimum area, so it considers the rotation also.",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(points)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "input 2D point set.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "8. Minimum Enclosing Circle",
+    "local": ""
+  },
+  {
+    "origin": "Next we find the circumcircle of an object using the function",
+    "local": ""
+  },
+  {
+    "origin": ". It is a circle which completely covers the object with minimum area.",
+    "local": ""
+  },
+  {
+    "origin": "We use the functions:",
+    "local": ""
+  },
+  {
+    "origin": "(points)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "input 2D point set.",
+    "local": ""
+  },
+  {
+    "origin": "(img, center, radius, color, thickness = 1, lineType =",
+    "local": ""
+  },
+  {
+    "origin": ", shift = 0)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "image where the circle is drawn.",
+    "local": ""
+  },
+  {
+    "origin": "center",
+    "local": ""
+  },
+  {
+    "origin": "center of the circle.",
+    "local": ""
+  },
+  {
+    "origin": "radius",
+    "local": ""
+  },
+  {
+    "origin": "radius of the circle.",
+    "local": ""
+  },
+  {
+    "origin": "color",
+    "local": ""
+  },
+  {
+    "origin": "circle color.",
+    "local": ""
+  },
+  {
+    "origin": "thickness",
+    "local": ""
+  },
+  {
+    "origin": "thickness of the circle outline, if positive. Negative thickness means that a filled circle is to be drawn.",
+    "local": ""
+  },
+  {
+    "origin": "lineType",
+    "local": ""
+  },
+  {
+    "origin": "type of the circle boundary.",
+    "local": ""
+  },
+  {
+    "origin": "shift",
+    "local": ""
+  },
+  {
+    "origin": "number of fractional bits in the coordinates of the center and in the radius value.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "9. Fitting an Ellipse",
+    "local": ""
+  },
+  {
+    "origin": "Next one is to fit an ellipse to an object. It returns the rotated rectangle in which the ellipse is inscribed. We use the functions:",
+    "local": ""
+  },
+  {
+    "origin": "(points)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "input 2D point set.",
+    "local": ""
+  },
+  {
+    "origin": "cv.ellipse1 (img, box, color, thickness = 1, lineType =",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "image.",
+    "local": ""
+  },
+  {
+    "origin": "box",
+    "local": ""
+  },
+  {
+    "origin": "alternative ellipse representation via RotatedRect. This means that the function draws an ellipse inscribed in the rotated rectangle.",
+    "local": ""
+  },
+  {
+    "origin": "color",
+    "local": ""
+  },
+  {
+    "origin": "ellipse color.",
+    "local": ""
+  },
+  {
+    "origin": "thickness",
+    "local": ""
+  },
+  {
+    "origin": "thickness of the ellipse arc outline, if positive. Otherwise, this indicates that a filled ellipse sector is to be drawn.",
+    "local": ""
+  },
+  {
+    "origin": "lineType",
+    "local": ""
+  },
+  {
+    "origin": "type of the ellipse boundary.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "10. Fitting a Line",
+    "local": ""
+  },
+  {
+    "origin": "Similarly we can fit a line to a set of points. We can approximate a straight line to it.",
+    "local": ""
+  },
+  {
+    "origin": "We use the functions:",
+    "local": ""
+  },
+  {
+    "origin": "(points, line, distType, param, reps, aeps)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points",
+    "local": ""
+  },
+  {
+    "origin": "input 2D point set.",
+    "local": ""
+  },
+  {
+    "origin": "line",
+    "local": ""
+  },
+  {
+    "origin": "output line parameters. It should be a Mat of 4 elements[vx, vy, x0, y0], where [vx, vy] is a normalized vector collinear to the line and [x0, y0] is a point on the line.",
+    "local": ""
+  },
+  {
+    "origin": "distType",
+    "local": ""
+  },
+  {
+    "origin": "distance used by the M-estimator(see",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "param",
+    "local": ""
+  },
+  {
+    "origin": "numerical parameter ( C ) for some types of distances. If it is 0, an optimal value is chosen.",
+    "local": ""
+  },
+  {
+    "origin": "reps",
+    "local": ""
+  },
+  {
+    "origin": "sufficient accuracy for the radius (distance between the coordinate origin and the line).",
+    "local": ""
+  },
+  {
+    "origin": "aeps",
+    "local": ""
+  },
+  {
+    "origin": "sufficient accuracy for the angle. 0.01 would be a good default value for reps and aeps.",
+    "local": ""
+  },
+  {
+    "origin": "(img, pt1, pt2, color, thickness = 1, lineType =",
+    "local": ""
+  },
+  {
+    "origin": ", shift = 0)",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "image.",
+    "local": ""
+  },
+  {
+    "origin": "pt1",
+    "local": ""
+  },
+  {
+    "origin": "first point of the line segment.",
+    "local": ""
+  },
+  {
+    "origin": "pt2",
+    "local": ""
+  },
+  {
+    "origin": "second point of the line segment.",
+    "local": ""
+  },
+  {
+    "origin": "color",
+    "local": ""
+  },
+  {
+    "origin": "line color.",
+    "local": ""
+  },
+  {
+    "origin": "thickness",
+    "local": ""
+  },
+  {
+    "origin": "line thickness.",
+    "local": ""
+  },
+  {
+    "origin": "lineType",
+    "local": ""
+  },
+  {
+    "origin": "type of the line,.",
+    "local": ""
+  },
+  {
+    "origin": "shift",
+    "local": ""
+  },
+  {
+    "origin": "number of fractional bits in the point coordinates.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,342 @@
+[
+  {
+    "origin": "OpenCV: Image Gradients",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Image Gradients",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "Find Image gradients, edges etc",
+    "local": ""
+  },
+  {
+    "origin": "We will learn following functions :",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "etc",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV provides three types of gradient filters or High-pass filters, Sobel, Scharr and Laplacian. We will see each one of them.",
+    "local": ""
+  },
+  {
+    "origin": "1. Sobel and Scharr Derivatives",
+    "local": ""
+  },
+  {
+    "origin": "Sobel operators is a joint Gausssian smoothing plus differentiation operation, so it is more resistant to noise. You can specify the direction of derivatives to be taken, vertical or horizontal (by the arguments, yorder and xorder respectively). You can also specify the size of kernel by the argument ksize. If ksize = -1, a 3x3 Scharr filter is used which gives better results than 3x3 Sobel filter. Please see the docs for kernels used.",
+    "local": ""
+  },
+  {
+    "origin": "We use the functions:",
+    "local": ""
+  },
+  {
+    "origin": "(src, dst, ddepth, dx, dy, ksize = 3, scale = 1, delta = 0, borderType =",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output image of the same size and the same number of channels as src.",
+    "local": ""
+  },
+  {
+    "origin": "ddepth",
+    "local": ""
+  },
+  {
+    "origin": "output image depth(see cv.combinations); in the case of 8-bit input images it will result in truncated derivatives.",
+    "local": ""
+  },
+  {
+    "origin": "dx",
+    "local": ""
+  },
+  {
+    "origin": "order of the derivative x.",
+    "local": ""
+  },
+  {
+    "origin": "dy",
+    "local": ""
+  },
+  {
+    "origin": "order of the derivative y.",
+    "local": ""
+  },
+  {
+    "origin": "ksize",
+    "local": ""
+  },
+  {
+    "origin": "size of the extended Sobel kernel; it must be 1, 3, 5, or 7.",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "optional scale factor for the computed derivative values.",
+    "local": ""
+  },
+  {
+    "origin": "delta",
+    "local": ""
+  },
+  {
+    "origin": "optional delta value that is added to the results prior to storing them in dst.",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "pixel extrapolation method(see",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "(src, dst, ddepth, dx, dy, scale = 1, delta = 0, borderType =",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output image of the same size and the same number of channels as src.",
+    "local": ""
+  },
+  {
+    "origin": "ddepth",
+    "local": ""
+  },
+  {
+    "origin": "output image depth(see cv.combinations).",
+    "local": ""
+  },
+  {
+    "origin": "dx",
+    "local": ""
+  },
+  {
+    "origin": "order of the derivative x.",
+    "local": ""
+  },
+  {
+    "origin": "dy",
+    "local": ""
+  },
+  {
+    "origin": "order of the derivative y.",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "optional scale factor for the computed derivative values.",
+    "local": ""
+  },
+  {
+    "origin": "delta",
+    "local": ""
+  },
+  {
+    "origin": "optional delta value that is added to the results prior to storing them in dst.",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "pixel extrapolation method(see",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "2. Laplacian Derivatives",
+    "local": ""
+  },
+  {
+    "origin": "It calculates the Laplacian of the image given by the relation, \\(\\Delta src = \\frac{\\partial ^2{src}}{\\partial x^2} + \\frac{\\partial ^2{src}}{\\partial y^2}\\) where each derivative is found using Sobel derivatives. If ksize = 1, then following kernel is used for filtering:",
+    "local": ""
+  },
+  {
+    "origin": "\\[kernel = \\begin{bmatrix} 0 &amp; 1 &amp; 0 \\\\ 1 &amp; -4 &amp; 1 \\\\ 0 &amp; 1 &amp; 0 \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "We use the function:",
+    "local": ""
+  },
+  {
+    "origin": "(src, dst, ddepth, ksize = 1, scale = 1, delta = 0, borderType =",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "input image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "output image of the same size and the same number of channels as src.",
+    "local": ""
+  },
+  {
+    "origin": "ddepth",
+    "local": ""
+  },
+  {
+    "origin": "output image depth.",
+    "local": ""
+  },
+  {
+    "origin": "ksize",
+    "local": ""
+  },
+  {
+    "origin": "aperture size used to compute the second-derivative filters.",
+    "local": ""
+  },
+  {
+    "origin": "scale",
+    "local": ""
+  },
+  {
+    "origin": "optional scale factor for the computed Laplacian values.",
+    "local": ""
+  },
+  {
+    "origin": "delta",
+    "local": ""
+  },
+  {
+    "origin": "optional delta value that is added to the results prior to storing them in dst.",
+    "local": ""
+  },
+  {
+    "origin": "borderType",
+    "local": ""
+  },
+  {
+    "origin": "pixel extrapolation method(see",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "One Important Matter!",
+    "local": ""
+  },
+  {
+    "origin": "In our last example, output datatype is cv.CV_8U. But there is a slight problem with that. Black-to-White transition is taken as Positive slope (it has a positive value) while White-to-Black transition is taken as a Negative slope (It has negative value). So when you convert data to cv.CV_8U, all negative slopes are made zero. In simple words, you miss that edge.",
+    "local": ""
+  },
+  {
+    "origin": "If you want to detect both edges, better option is to keep the output datatype to some higher forms, like cv.CV_16S, cv.CV_64F etc, take its absolute value and then convert back to cv.CV_8U. Below code demonstrates this procedure for a horizontal Sobel filter and difference in results.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

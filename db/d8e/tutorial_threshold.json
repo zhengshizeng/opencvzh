@@ -1,0 +1,438 @@
+[
+  {
+    "origin": "OpenCV: Basic Thresholding Operations",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Basic Thresholding Operations",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Perform basic thresholding operations using OpenCV function",
+    "local": ""
+  },
+  {
+    "origin": "Cool Theory",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The explanation below belongs to the book",
+    "local": ""
+  },
+  {
+    "origin": "Learning OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "by Bradski and Kaehler. What is",
+    "local": ""
+  },
+  {
+    "origin": "Thresholding?",
+    "local": ""
+  },
+  {
+    "origin": "The simplest segmentation method",
+    "local": ""
+  },
+  {
+    "origin": "Application example: Separate out regions of an image corresponding to objects which we want to analyze. This separation is based on the variation of intensity between the object pixels and the background pixels.",
+    "local": ""
+  },
+  {
+    "origin": "To differentiate the pixels we are interested in from the rest (which will eventually be rejected), we perform a comparison of each pixel intensity value with respect to a",
+    "local": ""
+  },
+  {
+    "origin": "threshold",
+    "local": ""
+  },
+  {
+    "origin": "(determined according to the problem to solve).",
+    "local": ""
+  },
+  {
+    "origin": "Once we have separated properly the important pixels, we can set them with a determined value to identify them (i.e. we can assign them a value of \\(0\\) (black), \\(255\\) (white) or any value that suits your needs).",
+    "local": ""
+  },
+  {
+    "origin": "Types of Thresholding",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV offers the function",
+    "local": ""
+  },
+  {
+    "origin": "to perform thresholding operations.",
+    "local": ""
+  },
+  {
+    "origin": "We can effectuate \\(5\\) types of Thresholding operations with this function. We will explain them in the following subsections.",
+    "local": ""
+  },
+  {
+    "origin": "To illustrate how these thresholding processes work, let's consider that we have a source image with pixels with intensity values \\(src(x,y)\\). The plot below depicts this. The horizontal blue line represents the threshold \\(thresh\\) (fixed).",
+    "local": ""
+  },
+  {
+    "origin": "Threshold Binary",
+    "local": ""
+  },
+  {
+    "origin": "This thresholding operation can be expressed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{dst} (x,y) = \\fork{\\texttt{maxVal}}{if \\(\\texttt{src}(x,y) &gt; \\texttt{thresh}\\)}{0}{otherwise}\\]",
+    "local": ""
+  },
+  {
+    "origin": "So, if the intensity of the pixel \\(src(x,y)\\) is higher than \\(thresh\\), then the new pixel intensity is set to a \\(MaxVal\\). Otherwise, the pixels are set to \\(0\\).",
+    "local": ""
+  },
+  {
+    "origin": "Threshold Binary, Inverted",
+    "local": ""
+  },
+  {
+    "origin": "This thresholding operation can be expressed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{dst} (x,y) = \\fork{0}{if \\(\\texttt{src}(x,y) &gt; \\texttt{thresh}\\)}{\\texttt{maxVal}}{otherwise}\\]",
+    "local": ""
+  },
+  {
+    "origin": "If the intensity of the pixel \\(src(x,y)\\) is higher than \\(thresh\\), then the new pixel intensity is set to a \\(0\\). Otherwise, it is set to \\(MaxVal\\).",
+    "local": ""
+  },
+  {
+    "origin": "Truncate",
+    "local": ""
+  },
+  {
+    "origin": "This thresholding operation can be expressed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{dst} (x,y) = \\fork{\\texttt{threshold}}{if \\(\\texttt{src}(x,y) &gt; \\texttt{thresh}\\)}{\\texttt{src}(x,y)}{otherwise}\\]",
+    "local": ""
+  },
+  {
+    "origin": "The maximum intensity value for the pixels is \\(thresh\\), if \\(src(x,y)\\) is greater, then its value is",
+    "local": ""
+  },
+  {
+    "origin": "truncated",
+    "local": ""
+  },
+  {
+    "origin": ". See figure below:",
+    "local": ""
+  },
+  {
+    "origin": "Threshold to Zero",
+    "local": ""
+  },
+  {
+    "origin": "This operation can be expressed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{dst} (x,y) = \\fork{\\texttt{src}(x,y)}{if \\(\\texttt{src}(x,y) &gt; \\texttt{thresh}\\)}{0}{otherwise}\\]",
+    "local": ""
+  },
+  {
+    "origin": "If \\(src(x,y)\\) is lower than \\(thresh\\), the new pixel value will be set to \\(0\\).",
+    "local": ""
+  },
+  {
+    "origin": "Threshold to Zero, Inverted",
+    "local": ""
+  },
+  {
+    "origin": "This operation can be expressed as:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\texttt{dst} (x,y) = \\fork{0}{if \\(\\texttt{src}(x,y) &gt; \\texttt{thresh}\\)}{\\texttt{src}(x,y)}{otherwise}\\]",
+    "local": ""
+  },
+  {
+    "origin": "If \\(src(x,y)\\) is greater than \\(thresh\\), the new pixel value will be set to \\(0\\).",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "The tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Let's check the general structure of the program:",
+    "local": ""
+  },
+  {
+    "origin": "Load an image. If it is BGR we convert it to Grayscale. For this, remember that we can use the function",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Create a window to display the result",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Create \\(2\\) trackbars for the user to enter user input:",
+    "local": ""
+  },
+  {
+    "origin": "Type of thresholding",
+    "local": ""
+  },
+  {
+    "origin": ": Binary, To Zero, etc...",
+    "local": ""
+  },
+  {
+    "origin": "Threshold value",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "Wait until the user enters the threshold value, the type of thresholding (or until the program exits)",
+    "local": ""
+  },
+  {
+    "origin": "Whenever the user changes the value of any of the Trackbars, the function",
+    "local": ""
+  },
+  {
+    "origin": "Threshold_Demo",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "update",
+    "local": ""
+  },
+  {
+    "origin": "in Java) is called:",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "As you can see, the function",
+    "local": ""
+  },
+  {
+    "origin": "is invoked. We give \\(5\\) parameters in C++ code:",
+    "local": ""
+  },
+  {
+    "origin": "src_gray",
+    "local": ""
+  },
+  {
+    "origin": ": Our input image",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ": Destination (output) image",
+    "local": ""
+  },
+  {
+    "origin": "threshold_value",
+    "local": ""
+  },
+  {
+    "origin": ": The \\(thresh\\) value with respect to which the thresholding operation is made",
+    "local": ""
+  },
+  {
+    "origin": "max_BINARY_value",
+    "local": ""
+  },
+  {
+    "origin": ": The value used with the Binary thresholding operations (to set the chosen pixels)",
+    "local": ""
+  },
+  {
+    "origin": "threshold_type",
+    "local": ""
+  },
+  {
+    "origin": ": One of the \\(5\\) thresholding operations. They are listed in the comment section of the function above.",
+    "local": ""
+  },
+  {
+    "origin": "Results",
+    "local": ""
+  },
+  {
+    "origin": "After compiling this program, run it giving a path to an image as argument. For instance, for an input image as:",
+    "local": ""
+  },
+  {
+    "origin": "First, we try to threshold our image with a",
+    "local": ""
+  },
+  {
+    "origin": "binary threshold inverted",
+    "local": ""
+  },
+  {
+    "origin": ". We expect that the pixels brighter than the \\(thresh\\) will turn dark, which is what actually happens, as we can see in the snapshot below (notice from the original image, that the doggie's tongue and eyes are particularly bright in comparison with the image, this is reflected in the output image).",
+    "local": ""
+  },
+  {
+    "origin": "Now we try with the",
+    "local": ""
+  },
+  {
+    "origin": "threshold to zero",
+    "local": ""
+  },
+  {
+    "origin": ". With this, we expect that the darkest pixels (below the threshold) will become completely black, whereas the pixels with value greater than the threshold will keep its original value. This is verified by the following snapshot of the output image:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

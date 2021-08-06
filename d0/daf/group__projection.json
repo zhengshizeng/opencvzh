@@ -1,0 +1,526 @@
+[
+  {
+    "origin": "OpenCV: Projection",
+    "local": "OpenCV:投影"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "Projection",
+    "local": "投影"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "R,",
+    "local": "R，"
+  },
+  {
+    "origin": "t,",
+    "local": "t，"
+  },
+  {
+    "origin": "X)",
+    "local": "十）"
+  },
+  {
+    "origin": "Returns the depth of a point transformed by a rigid transform.",
+    "local": "返回通过刚性变换变换的点的深度。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src,",
+    "local": "src公司，"
+  },
+  {
+    "origin": "dst)",
+    "local": "（夏时制）"
+  },
+  {
+    "origin": "Converts points from Euclidean to homogeneous space. E.g., ((x,y)-&gt;(x,y,1))",
+    "local": "将点从欧氏空间转换为齐次空间。例如，（（x，y）-&gt(x、 是，1）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src,",
+    "local": "src公司，"
+  },
+  {
+    "origin": "dst)",
+    "local": "（夏时制）"
+  },
+  {
+    "origin": "Converts point coordinates from homogeneous to euclidean pixel coordinates. E.g., ((x,y,z)-&gt;(x/z, y/z))",
+    "local": "将点坐标从齐次坐标转换为欧几里德像素坐标。例如，（（x，y，z）—&gt(x/z，y/z）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "P,",
+    "local": "P，"
+  },
+  {
+    "origin": "K,",
+    "local": "克，"
+  },
+  {
+    "origin": "R,",
+    "local": "R，"
+  },
+  {
+    "origin": "t)",
+    "local": "（吨）"
+  },
+  {
+    "origin": "Get K, R and t from projection matrix P, decompose using the RQ decomposition.",
+    "local": "从投影矩阵P得到K，R和t，利用RQ分解进行分解。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "K,",
+    "local": "克，"
+  },
+  {
+    "origin": "R,",
+    "local": "R，"
+  },
+  {
+    "origin": "t,",
+    "local": "t，"
+  },
+  {
+    "origin": "P)",
+    "local": "（P）"
+  },
+  {
+    "origin": "Get projection matrix P from K, R and t.",
+    "local": "由K，R和t得到投影矩阵P。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "Function Documentation",
+    "local": "功能文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "depth()",
+    "local": "深度（）"
+  },
+  {
+    "origin": "double cv::sfm::depth",
+    "local": "双cv：：sfm：：深度"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "R",
+    "local": "R"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "t",
+    "local": "t型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "X",
+    "local": "十"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Returns the depth of a point transformed by a rigid transform.",
+    "local": "返回通过刚性变换变换的点的深度。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "R",
+    "local": "R"
+  },
+  {
+    "origin": "Input 3x3 rotation matrix.",
+    "local": "输入3x3旋转矩阵。"
+  },
+  {
+    "origin": "t",
+    "local": "t型"
+  },
+  {
+    "origin": "Input 3x1 translation vector.",
+    "local": "输入3x1平移向量。"
+  },
+  {
+    "origin": "X",
+    "local": "十"
+  },
+  {
+    "origin": "Input 3x1 or 4x1 vector with the 3d point.",
+    "local": "用三维点输入3x1或4x1矢量。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "euclideanToHomogeneous()",
+    "local": "欧几里德（）"
+  },
+  {
+    "origin": "void cv::sfm::euclideanToHomogeneous",
+    "local": "无效cv：：sfm：：欧几里德"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Converts points from Euclidean to homogeneous space. E.g., ((x,y)-&gt;(x,y,1))",
+    "local": "将点从欧氏空间转换为齐次空间。例如，（（x，y）-&gt(x、 是，1）"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "Input vector of N-dimensional points.",
+    "local": "N维点的输入向量。"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "Output vector of N+1-dimensional points.",
+    "local": "N+1维点的输出向量。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "homogeneousToEuclidean()",
+    "local": "均匀toeuclidean（）"
+  },
+  {
+    "origin": "void cv::sfm::homogeneousToEuclidean",
+    "local": "void cv：：sfm：：均匀Toeuclidean"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Converts point coordinates from homogeneous to euclidean pixel coordinates. E.g., ((x,y,z)-&gt;(x/z, y/z))",
+    "local": "将点坐标从齐次坐标转换为欧几里德像素坐标。例如，（（x，y，z）—&gt(x/z，y/z）"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "Input vector of N-dimensional points.",
+    "local": "N维点的输入向量。"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "Output vector of N-1-dimensional points.",
+    "local": "N-1维点的输出向量。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "KRtFromProjection()",
+    "local": "KrtFromProject（）"
+  },
+  {
+    "origin": "void cv::sfm::KRtFromProjection",
+    "local": "无效cv:：sfm:：KRtFromProjection"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "P",
+    "local": "P"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "K",
+    "local": "K"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "R",
+    "local": "R"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "t",
+    "local": "t型"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Get K, R and t from projection matrix P, decompose using the RQ decomposition.",
+    "local": "从投影矩阵P得到K，R和t，利用RQ分解进行分解。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "P",
+    "local": "P"
+  },
+  {
+    "origin": "Input 3x4 projection matrix.",
+    "local": "输入3x4投影矩阵。"
+  },
+  {
+    "origin": "K",
+    "local": "K"
+  },
+  {
+    "origin": "Output 3x3 camera matrix \\(K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\).",
+    "local": "输出3x3相机矩阵\\（K=\\vec3three{f\\u x}{0}{c\\u x}{0}{f\\u y}{c\\u y}{0}{0}{0}{1}\\）。"
+  },
+  {
+    "origin": "R",
+    "local": "R"
+  },
+  {
+    "origin": "Output 3x3 rotation matrix.",
+    "local": "输出3x3旋转矩阵。"
+  },
+  {
+    "origin": "t",
+    "local": "t型"
+  },
+  {
+    "origin": "Output 3x1 translation vector.",
+    "local": "输出3x1平移向量。"
+  },
+  {
+    "origin": "Reference:",
+    "local": "参考文献："
+  },
+  {
+    "origin": "A4.1.1 pag.579",
+    "local": "A4.1.1第579页"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "projectionFromKRt()",
+    "local": "projectionFromKRt（）"
+  },
+  {
+    "origin": "void cv::sfm::projectionFromKRt",
+    "local": "void cv:：sfm:：projectionFromKRt"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "K",
+    "local": "K"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "R",
+    "local": "R"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "t",
+    "local": "t型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "P",
+    "local": "P"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Get projection matrix P from K, R and t.",
+    "local": "由K，R和t得到投影矩阵P。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "K",
+    "local": "K"
+  },
+  {
+    "origin": "Input 3x3 camera matrix \\(K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\).",
+    "local": "输入3x3相机矩阵\\（K=\\vec3three{f\\u x}{0}{c\\u x}{0}{f\\u y}{c\\u y}{0}{0}{0}{1}\\）。"
+  },
+  {
+    "origin": "R",
+    "local": "R"
+  },
+  {
+    "origin": "Input 3x3 rotation matrix.",
+    "local": "输入3x3旋转矩阵。"
+  },
+  {
+    "origin": "t",
+    "local": "t型"
+  },
+  {
+    "origin": "Input 3x1 translation vector.",
+    "local": "输入3x1平移向量。"
+  },
+  {
+    "origin": "P",
+    "local": "P"
+  },
+  {
+    "origin": "Output 3x4 projection matrix.",
+    "local": "输出3x4投影矩阵。"
+  },
+  {
+    "origin": "This function estimate the projection matrix by solving the following equation: \\(P = K * [R|t]\\)",
+    "local": "此函数通过求解下列方程来估计投影矩阵：\\（P=K*[R | t]\\）"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by &#160;",
+    "local": "于2021年4月2日星期五11:36:41为OpenCV生成，&#160；"
+  }
+]

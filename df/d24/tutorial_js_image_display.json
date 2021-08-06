@@ -1,0 +1,198 @@
+[
+  {
+    "origin": "OpenCV: Getting Started with Images",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Getting Started with Images",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "Learn how to read an image and how to display it in a web.",
+    "local": ""
+  },
+  {
+    "origin": "Read an image",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV.js saves images as",
+    "local": ""
+  },
+  {
+    "origin": "type. We use HTML canvas element to transfer",
+    "local": ""
+  },
+  {
+    "origin": "to the web or in reverse. The ImageData interface can represent or set the underlying pixel data of an area of a canvas element.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Please refer to canvas docs for more details.",
+    "local": ""
+  },
+  {
+    "origin": "First, create an ImageData obj from canvas:",
+    "local": ""
+  },
+  {
+    "origin": "Then, use cv.matFromImageData to construct a",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Because canvas only support 8-bit RGBA image with continuous storage, the",
+    "local": ""
+  },
+  {
+    "origin": "type is cv.CV_8UC4. It is different from native OpenCV because images returned and shown by the native",
+    "local": ""
+  },
+  {
+    "origin": "imread",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "imshow",
+    "local": ""
+  },
+  {
+    "origin": "have the channels stored in BGR order.",
+    "local": ""
+  },
+  {
+    "origin": "Display an image",
+    "local": ""
+  },
+  {
+    "origin": "First, convert the type of src to cv.CV_8UC4:",
+    "local": ""
+  },
+  {
+    "origin": "Then, new an ImageData obj from dst:",
+    "local": ""
+  },
+  {
+    "origin": "Finally, display it:",
+    "local": ""
+  },
+  {
+    "origin": "In OpenCV.js",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV.js implements image reading and showing using the above method.",
+    "local": ""
+  },
+  {
+    "origin": "We use",
+    "local": ""
+  },
+  {
+    "origin": "(imageSource)",
+    "local": ""
+  },
+  {
+    "origin": "to read an image from html canvas or img element.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "imageSource",
+    "local": ""
+  },
+  {
+    "origin": "canvas element or id, or img element or id.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "mat with channels stored in RGBA order.",
+    "local": ""
+  },
+  {
+    "origin": "We use",
+    "local": ""
+  },
+  {
+    "origin": "(canvasSource, mat)",
+    "local": ""
+  },
+  {
+    "origin": "to display it. The function may scale the mat, depending on its depth:",
+    "local": ""
+  },
+  {
+    "origin": "If the mat is 8-bit unsigned, it is displayed as is.",
+    "local": ""
+  },
+  {
+    "origin": "If the mat is 16-bit unsigned or 32-bit integer, the pixels are divided by 256. That is, the value range [0,255*256] is mapped to [0,255].",
+    "local": ""
+  },
+  {
+    "origin": "If the mat is 32-bit floating-point, the pixel values are multiplied by 255. That is, the value range [0,1] is mapped to [0,255].",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "canvasSource",
+    "local": ""
+  },
+  {
+    "origin": "canvas element or id.",
+    "local": ""
+  },
+  {
+    "origin": "mat",
+    "local": ""
+  },
+  {
+    "origin": "mat to be shown.",
+    "local": ""
+  },
+  {
+    "origin": "The above code of image reading and showing could be simplified as below.",
+    "local": ""
+  },
+  {
+    "origin": "Try it",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,110 @@
+[
+  {
+    "origin": "OpenCV: Upscaling images: single-output",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Upscaling images: single-output",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to use the 'dnn_superres' interface to upscale an image via pre-trained neural networks. It works in C++ and Python.",
+    "local": ""
+  },
+  {
+    "origin": "Building",
+    "local": ""
+  },
+  {
+    "origin": "When building OpenCV, run the following command to build all the contrib module:",
+    "local": ""
+  },
+  {
+    "origin": "Or only build the dnn_superres module:",
+    "local": ""
+  },
+  {
+    "origin": "Or make sure you check the dnn_superres module in the GUI version of CMake: cmake-gui.",
+    "local": ""
+  },
+  {
+    "origin": "Source Code of the sample",
+    "local": ""
+  },
+  {
+    "origin": "You can run the sample code by doing",
+    "local": ""
+  },
+  {
+    "origin": "Example:",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Set header and namespaces",
+    "local": ""
+  },
+  {
+    "origin": "If you want you can set the namespace like the code above.",
+    "local": ""
+  },
+  {
+    "origin": "Create the Dnn Superres object",
+    "local": ""
+  },
+  {
+    "origin": "This is just to create the object, register the custom dnn layers and get access to the class functions.",
+    "local": ""
+  },
+  {
+    "origin": "Read the model",
+    "local": ""
+  },
+  {
+    "origin": "This reads the TensorFlow model from the .pb file. Here 'path' is one of the pre-trained Tensorflow models' path file. You can download the models from OpenCV's GitHub, in the 'dnn_superres' module.",
+    "local": ""
+  },
+  {
+    "origin": "Set the model",
+    "local": ""
+  },
+  {
+    "origin": "Depending on the model you want to run, you have to set the algorithm and upscale factor. This is to know the desired algorithm and scale, even if you change the .pb file's name. For example: if you chose FSRCNN_x2.pb, your algorithm and scale will be 'fsrcnn' and 2, respectively. (Other algorithm options include \"edsr\", \"espcn\" and \"lapsrn\".)",
+    "local": ""
+  },
+  {
+    "origin": "Upscale an image",
+    "local": ""
+  },
+  {
+    "origin": "Now we can upscale any image. Load an image via the standard 'imread' function and create a new Mat for the destination image. Then simple upscale. Your upscaled image is located in 'img_new'.",
+    "local": ""
+  },
+  {
+    "origin": "An example in python",
+    "local": ""
+  },
+  {
+    "origin": "Original:",
+    "local": ""
+  },
+  {
+    "origin": "Upscaled Image via FSRCNN:",
+    "local": ""
+  },
+  {
+    "origin": "Upscaled Image via Bicubic Interpolation:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

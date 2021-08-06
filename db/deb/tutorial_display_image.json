@@ -1,0 +1,298 @@
+[
+  {
+    "origin": "OpenCV: Getting Started with Images",
+    "local": "OpenCV:图像入门"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "Open Source Computer Vision"
+  },
+  {
+    "origin": "Getting Started with Images",
+    "local": "图像入门"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一个教程:"
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程:"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": "Ana Huamán"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "This tutorial can contain obsolete information.",
+    "local": "本教程可能包含过时的信息."
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中,您将学习如何:"
+  },
+  {
+    "origin": "Read an image from file (using",
+    "local": "从文件中读取图像(使用"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Display an image in an OpenCV window (using",
+    "local": "在OpenCV窗口中显示图像(使用"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Write an image to a file (using",
+    "local": "将图像写入文件(使用"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": ":单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览:"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": ":单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览:"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "In OpenCV 3 we have multiple modules. Each one takes care of a different area or approach towards image processing. You could already observe this in the structure of the user guide of these tutorials itself. Before you use any of them you first need to include the header files where the content of each individual module is declared.",
+    "local": "在opencv3中,我们有多个模块.每一个都负责不同的区域或图像处理方法.您可以在这些教程的用户指南本身的结构中看到这一点.在使用任何模块之前,首先需要包含声明每个模块内容的头文件."
+  },
+  {
+    "origin": "You'll almost always end up using the:",
+    "local": "您几乎总是会使用:"
+  },
+  {
+    "origin": "section, as here are defined the basic building blocks of the library",
+    "local": "核心部分,这里定义了库的基本构建块"
+  },
+  {
+    "origin": "module, which provides functions for reading and writing",
+    "local": "模块,提供读写功能"
+  },
+  {
+    "origin": "module, as this contains the functions to show an image in a window",
+    "local": "模块,因为它包含在窗口中显示图像的函数"
+  },
+  {
+    "origin": "We also include the",
+    "local": "我们还包括"
+  },
+  {
+    "origin": "iostream",
+    "local": "iostream"
+  },
+  {
+    "origin": "to facilitate console line output and input.",
+    "local": "便于控制台行输出和输入."
+  },
+  {
+    "origin": "By declaring",
+    "local": "宣布"
+  },
+  {
+    "origin": ", in the following, the library functions can be accessed without explicitly stating the namespace.",
+    "local": ",在下面的示例中,可以访问库函数,而无需显式说明名称空间."
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "As a first step, the OpenCV python library is imported. The proper way to do this is to additionally assign it the name",
+    "local": "第一步,导入 OpenCV python 库.正确的方法是为它另外指定一个名称"
+  },
+  {
+    "origin": "cv",
+    "local": "cv"
+  },
+  {
+    "origin": ", which is used in the following to reference the library.",
+    "local": ",用于以下引用库."
+  },
+  {
+    "origin": "Now, let's analyze the main code. As a first step, we read the image \"starry_night.jpg\" from the OpenCV samples. In order to do so, a call to the",
+    "local": "现在,让我们分析一下主代码.作为第一步,我们从OpenCV示例中读取图像 \"starry_night.jpg\" .为了做到这一点,调用"
+  },
+  {
+    "origin": "function loads the image using the file path specified by the first argument. The second argument is optional and specifies the format in which we want the image. This may be:",
+    "local": "函数,第一个参数指定文件的路径加载图像.第二个参数是可选的,用于指定图像的格式.这可能是:"
+  },
+  {
+    "origin": "IMREAD_COLOR loads the image in the BGR 8-bit format. This is the",
+    "local": "IMREAD_COLOR 以 BGR 8-bit 格式加载图像.这就是"
+  },
+  {
+    "origin": "default",
+    "local": "默认"
+  },
+  {
+    "origin": "that is used here.",
+    "local": "这里用的."
+  },
+  {
+    "origin": "IMREAD_UNCHANGED loads the image as is (including the alpha channel if present)",
+    "local": "IMREAD_UNCHANGED 按原样加载图像(包括alpha通道(如果存在))"
+  },
+  {
+    "origin": "IMREAD_GRAYSCALE loads the image as an intensity one",
+    "local": "IMREAD_GRAYSCALE 灰度将图像作为强度加载"
+  },
+  {
+    "origin": "After reading in the image data will be stored in a",
+    "local": "读入图像后,数据将存储在"
+  },
+  {
+    "origin": "object.",
+    "local": "对象."
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "Note",
+    "local": "Note"
+  },
+  {
+    "origin": "OpenCV offers support for the image formats Windows bitmap (bmp), portable image formats (pbm, pgm, ppm) and Sun raster (sr, ras). With help of plugins (you need to specify to use them if you build yourself the library, nevertheless in the packages we ship present by default) you may also load image formats like JPEG (jpeg, jpg, jpe), JPEG 2000 (jp2 - codenamed in the CMake as Jasper), TIFF files (tiff, tif) and portable network graphics (png). Furthermore, OpenEXR is also a possibility.",
+    "local": "OpenCV支持Windows位图(bmp)、可移植图像格式(pbm、pgm、ppm)和Sun光栅(sr、ras)等图像格式.在插件的帮助下(如果您自己构建库,您需要指定使用它们,但是在我们默认提供的软件包中),您还可以加载JPEG(JPEG,jpg,jpe)、JPEG 2000(jp2-在CMake中代号为Jasper)、TIFF文件(TIFF,tif)和便携式网络图形(png)等图像格式.此外,OpenEXR也是一种可能性."
+  },
+  {
+    "origin": "Afterwards, a check is executed, if the image was loaded correctly.",
+    "local": "之后,如果图像加载正确,则执行检查."
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "Then, the image is shown using a call to the",
+    "local": "然后,通过调用"
+  },
+  {
+    "origin": "function. The first argument is the title of the window and the second argument is the",
+    "local": "功能.第一个参数是窗口的标题,第二个参数是"
+  },
+  {
+    "origin": "object that will be shown.",
+    "local": "将显示的对象."
+  },
+  {
+    "origin": "Because we want our window to be displayed until the user presses a key (otherwise the program would end far too quickly), we use the",
+    "local": "因为我们希望在用户按下某个键之前显示窗口(否则程序结束得太快),所以我们使用"
+  },
+  {
+    "origin": "function whose only parameter is just how long should it wait for a user input (measured in milliseconds). Zero means to wait forever. The return value is the key that was pressed.",
+    "local": "函数的唯一参数是它应该等待用户输入多长时间(以毫秒为单位).零意味着永远等待.返回值是按下的键."
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "In the end, the image is written to a file if the pressed key was the \"s\"-key. For this the",
+    "local": "最后,如果按下的键是 \"s\"键,图像将被写入文件.为了这个"
+  },
+  {
+    "origin": "function is called that has the file path and the",
+    "local": "调用的函数具有文件路径和"
+  },
+  {
+    "origin": "object as an argument.",
+    "local": "对象作为参数."
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Python",
+    "local": "Python"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by"
+  }
+]

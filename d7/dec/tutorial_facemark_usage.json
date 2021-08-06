@@ -1,0 +1,146 @@
+[
+  {
+    "origin": "OpenCV: Using the Facemark API",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Using the Facemark API",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial will helps you to",
+    "local": ""
+  },
+  {
+    "origin": "Create a Facemark object.",
+    "local": ""
+  },
+  {
+    "origin": "Set a user defined face detector for the facemark algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Train the algorithm.",
+    "local": ""
+  },
+  {
+    "origin": "Use the trained model to detect the facial landmarks from a given image.",
+    "local": ""
+  },
+  {
+    "origin": "Preparation",
+    "local": ""
+  },
+  {
+    "origin": "Before you continue with this tutorial, you should download the dataset of facial landmarks detection. We suggest you to download the helen dataset which can be retrieved at",
+    "local": ""
+  },
+  {
+    "origin": "http://www.ifp.illinois.edu/~vuongle2/helen/",
+    "local": ""
+  },
+  {
+    "origin": "(Caution! The algorithm requires around 9GB of RAM to train on this dataset).",
+    "local": ""
+  },
+  {
+    "origin": "Make sure that the annotation format is supported by the API, the contents in annotation file should look like the following snippet:",
+    "local": ""
+  },
+  {
+    "origin": "The next thing to do is to make 2 text files containing the list of image files and annotation files respectively. Make sure that the order or image and annotation in both files are matched. Furthermore, it is advised to use absolute path instead of relative path. Example to make the file list in Linux machine",
+    "local": ""
+  },
+  {
+    "origin": "example of content in the images_train.txt",
+    "local": ""
+  },
+  {
+    "origin": "example of content in the annotation_train.txt",
+    "local": ""
+  },
+  {
+    "origin": "Creating the facemark object",
+    "local": ""
+  },
+  {
+    "origin": "Set a custom face detector function",
+    "local": ""
+  },
+  {
+    "origin": "Firstly, you need to create your own face detector function, you might also need to create a",
+    "local": ""
+  },
+  {
+    "origin": "to save the custom parameter. Alternatively, you can just make these parameter hard coded within the",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "The following snippet demonstrates how to set the custom detector to the facemark object and use it to detect the faces. Keep in mind that some facemark object might use the face detector during the training process.",
+    "local": ""
+  },
+  {
+    "origin": "Here is the snippet for detecting face using the user defined face detector function.",
+    "local": ""
+  },
+  {
+    "origin": "Training a facemark object",
+    "local": ""
+  },
+  {
+    "origin": "First of all, you need to set the training parameters",
+    "local": ""
+  },
+  {
+    "origin": "And then, you need to load the file list from the dataset that you have prepared.",
+    "local": ""
+  },
+  {
+    "origin": "The next step is to add training samples into the facemark object.",
+    "local": ""
+  },
+  {
+    "origin": "execute the training process",
+    "local": ""
+  },
+  {
+    "origin": "Use the trained model to detect the facial landmarks from a given image.",
+    "local": ""
+  },
+  {
+    "origin": "First of all, load the trained model. You can also download the pre-trained model in this link",
+    "local": ""
+  },
+  {
+    "origin": "https://raw.githubusercontent.com/kurnianggoro/GSOC2017/master/data/lbfmodel.yaml",
+    "local": ""
+  },
+  {
+    "origin": "Detect the faces",
+    "local": ""
+  },
+  {
+    "origin": "Perform the fitting process",
+    "local": ""
+  },
+  {
+    "origin": "Display the result",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

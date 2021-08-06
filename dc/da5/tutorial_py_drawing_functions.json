@@ -1,0 +1,230 @@
+[
+  {
+    "origin": "OpenCV: Drawing Functions in OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Drawing Functions in OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "Learn to draw different geometric shapes with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "You will learn these functions :",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "etc.",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "In all the above functions, you will see some common arguments as given below:",
+    "local": ""
+  },
+  {
+    "origin": "img : The image where you want to draw the shapes",
+    "local": ""
+  },
+  {
+    "origin": "color : Color of the shape. for BGR, pass it as a tuple, eg: (255,0,0) for blue. For grayscale, just pass the scalar value.",
+    "local": ""
+  },
+  {
+    "origin": "thickness : Thickness of the line or circle etc. If",
+    "local": ""
+  },
+  {
+    "origin": "is passed for closed figures like circles, it will fill the shape.",
+    "local": ""
+  },
+  {
+    "origin": "lineType : Type of line, whether 8-connected, anti-aliased line etc.",
+    "local": ""
+  },
+  {
+    "origin": "By default, it is 8-connected.",
+    "local": ""
+  },
+  {
+    "origin": "gives anti-aliased line which looks great for curves.",
+    "local": ""
+  },
+  {
+    "origin": "Drawing Line",
+    "local": ""
+  },
+  {
+    "origin": "To draw a line, you need to pass starting and ending coordinates of line. We will create a black image and draw a blue line on it from top-left to bottom-right corners.",
+    "local": ""
+  },
+  {
+    "origin": "Drawing Rectangle",
+    "local": ""
+  },
+  {
+    "origin": "To draw a rectangle, you need top-left corner and bottom-right corner of rectangle. This time we will draw a green rectangle at the top-right corner of image.",
+    "local": ""
+  },
+  {
+    "origin": "Drawing Circle",
+    "local": ""
+  },
+  {
+    "origin": "To draw a circle, you need its center coordinates and radius. We will draw a circle inside the rectangle drawn above.",
+    "local": ""
+  },
+  {
+    "origin": "Drawing Ellipse",
+    "local": ""
+  },
+  {
+    "origin": "To draw the ellipse, we need to pass several arguments. One argument is the center location (x,y). Next argument is axes lengths (major axis length, minor axis length). angle is the angle of rotation of ellipse in anti-clockwise direction. startAngle and endAngle denotes the starting and ending of ellipse arc measured in clockwise direction from major axis. i.e. giving values 0 and 360 gives the full ellipse. For more details, check the documentation of",
+    "local": ""
+  },
+  {
+    "origin": ". Below example draws a half ellipse at the center of the image.",
+    "local": ""
+  },
+  {
+    "origin": "Drawing Polygon",
+    "local": ""
+  },
+  {
+    "origin": "To draw a polygon, first you need coordinates of vertices. Make those points into an array of shape ROWSx1x2 where ROWS are number of vertices and it should be of type int32. Here we draw a small polygon of with four vertices in yellow color.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If third argument is False, you will get a polylines joining all the points, not a closed shape.",
+    "local": ""
+  },
+  {
+    "origin": "can be used to draw multiple lines. Just create a list of all the lines you want to draw and pass it to the function. All lines will be drawn individually. It is a much better and faster way to draw a group of lines than calling",
+    "local": ""
+  },
+  {
+    "origin": "for each line.",
+    "local": ""
+  },
+  {
+    "origin": "Adding Text to Images:",
+    "local": ""
+  },
+  {
+    "origin": "To put texts in images, you need specify following things.",
+    "local": ""
+  },
+  {
+    "origin": "Text data that you want to write",
+    "local": ""
+  },
+  {
+    "origin": "Position coordinates of where you want put it (i.e. bottom-left corner where data starts).",
+    "local": ""
+  },
+  {
+    "origin": "Font type (Check",
+    "local": ""
+  },
+  {
+    "origin": "docs for supported fonts)",
+    "local": ""
+  },
+  {
+    "origin": "Font Scale (specifies the size of font)",
+    "local": ""
+  },
+  {
+    "origin": "regular things like color, thickness, lineType etc. For better look, lineType =",
+    "local": ""
+  },
+  {
+    "origin": "is recommended.",
+    "local": ""
+  },
+  {
+    "origin": "We will write",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "on our image in white color.",
+    "local": ""
+  },
+  {
+    "origin": "Result",
+    "local": ""
+  },
+  {
+    "origin": "So it is time to see the final result of our drawing. As you studied in previous articles, display the image to see it.",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "The angles used in ellipse function is not our circular angles. For more details, visit",
+    "local": ""
+  },
+  {
+    "origin": "this discussion",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Try to create the logo of OpenCV using drawing functions available in OpenCV.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

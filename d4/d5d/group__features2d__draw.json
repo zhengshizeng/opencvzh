@@ -1,0 +1,962 @@
+[
+  {
+    "origin": "OpenCV: Drawing Function of Keypoints and Matches",
+    "local": "OpenCV：关键点和匹配的绘图功能"
+  },
+  {
+    "origin": "OpenCV",
+    "local": "打开CV"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Enumerations",
+    "local": "枚举"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "Drawing Function of Keypoints and Matches",
+    "local": "关键点和匹配的绘图功能"
+  },
+  {
+    "origin": "Enumerations",
+    "local": "枚举"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "{",
+    "local": "{"
+  },
+  {
+    "origin": "}",
+    "local": "}"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "image, const std::vector&lt;",
+    "local": "图像，const std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;keypoints,",
+    "local": "&燃气轮机&amp；关键点，"
+  },
+  {
+    "origin": "outImage, const",
+    "local": "输出图像，常量"
+  },
+  {
+    "origin": "&amp;color=",
+    "local": "&amp；颜色="
+  },
+  {
+    "origin": "(-1),",
+    "local": "(-1),"
+  },
+  {
+    "origin": "flags=",
+    "local": "标志="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Draws keypoints.",
+    "local": "绘制关键点。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "img1, const std::vector&lt;",
+    "local": "img1，const std：：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;keypoints1,",
+    "local": "&燃气轮机&amp；关键点1，"
+  },
+  {
+    "origin": "img2, const std::vector&lt;",
+    "local": "img2，const std：：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;keypoints2, const std::vector&lt;",
+    "local": "&燃气轮机&amp；keypoints2，const std:：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;matches1to2,",
+    "local": "&燃气轮机&amp；匹配1T2，"
+  },
+  {
+    "origin": "outImg, const",
+    "local": "Outimg，const"
+  },
+  {
+    "origin": "&amp;matchColor=",
+    "local": "&amp；匹配颜色="
+  },
+  {
+    "origin": "(-1), const",
+    "local": "（-1），常数"
+  },
+  {
+    "origin": "&amp;singlePointColor=",
+    "local": "&amp；单点颜色"
+  },
+  {
+    "origin": "(-1), const std::vector&lt; char &gt; &amp;matchesMask=std::vector&lt; char &gt;(),",
+    "local": "（-1），常量标准：：向量&lt；字符&gt&amp；matchesMask=std:：vector&lt；字符&gt；（），"
+  },
+  {
+    "origin": "flags=",
+    "local": "标志="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Draws the found matches of keypoints from two images.",
+    "local": "从两个图像中绘制找到的关键点匹配。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "img1, const std::vector&lt;",
+    "local": "img1，const std：：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;keypoints1,",
+    "local": "&燃气轮机&amp；关键点1，"
+  },
+  {
+    "origin": "img2, const std::vector&lt;",
+    "local": "img2，const std：：vector&lt；"
+  },
+  {
+    "origin": "&gt; &amp;keypoints2, const std::vector&lt; std::vector&lt;",
+    "local": "&燃气轮机&amp；keypoints2，const std:：vector&lt；标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &gt; &amp;matches1to2,",
+    "local": "&燃气轮机&燃气轮机&amp；匹配1T2，"
+  },
+  {
+    "origin": "outImg, const",
+    "local": "Outimg，const"
+  },
+  {
+    "origin": "&amp;matchColor=",
+    "local": "&amp；匹配颜色="
+  },
+  {
+    "origin": "(-1), const",
+    "local": "（-1），常数"
+  },
+  {
+    "origin": "&amp;singlePointColor=",
+    "local": "&amp；单点颜色"
+  },
+  {
+    "origin": "(-1), const std::vector&lt; std::vector&lt; char &gt; &gt; &amp;matchesMask=std::vector&lt; std::vector&lt; char &gt; &gt;(),",
+    "local": "（-1），常量标准：：向量&lt；标准：：向量&lt；字符&gt&燃气轮机&amp；matchesMask=std:：vector&lt；标准：：向量&lt；字符&gt&gt；（），"
+  },
+  {
+    "origin": "flags=",
+    "local": "标志="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "Enumeration Type Documentation",
+    "local": "枚举类型文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "DrawMatchesFlags",
+    "local": "绘图匹配标志"
+  },
+  {
+    "origin": "enum",
+    "local": "枚举"
+  },
+  {
+    "origin": "strong",
+    "local": "坚强的"
+  },
+  {
+    "origin": "Enumerator",
+    "local": "枚举器"
+  },
+  {
+    "origin": "DEFAULT",
+    "local": "违约"
+  },
+  {
+    "origin": "Output image matrix will be created (",
+    "local": "将创建输出图像矩阵("
+  },
+  {
+    "origin": "), i.e. existing memory of output image may be reused. Two source image, matches and single keypoints will be drawn. For each keypoint only the center point will be drawn (without the circle around keypoint with keypoint size and orientation).",
+    "local": ")即，可以重用输出图像的现有存储器。将绘制两个源图像、匹配和单个关键点。对于每个关键点，将仅绘制中心点（没有围绕关键点的圆，带有关键点大小和方向）。"
+  },
+  {
+    "origin": "DRAW_OVER_OUTIMG",
+    "local": "把…拉出来"
+  },
+  {
+    "origin": "Output image matrix will not be created (",
+    "local": "将不创建输出图像矩阵("
+  },
+  {
+    "origin": "). Matches will be drawn on existing content of output image.",
+    "local": "). 匹配将在输出图像的现有内容上绘制。"
+  },
+  {
+    "origin": "NOT_DRAW_SINGLE_POINTS",
+    "local": "不画单点"
+  },
+  {
+    "origin": "Single keypoints will not be drawn.",
+    "local": "不会绘制单个关键点。"
+  },
+  {
+    "origin": "DRAW_RICH_KEYPOINTS",
+    "local": "绘制丰富的关键点"
+  },
+  {
+    "origin": "For each keypoint the circle around keypoint with keypoint size and orientation will be drawn.",
+    "local": "对于每个关键点，将绘制围绕关键点的圆以及关键点大小和方向。"
+  },
+  {
+    "origin": "Function Documentation",
+    "local": "功能文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "drawKeypoints()",
+    "local": "绘制关键点（）"
+  },
+  {
+    "origin": "void cv::drawKeypoints",
+    "local": "void cv:：drawKeypoints无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "keypoints",
+    "local": "关键点"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "outImage",
+    "local": "工具图"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "color",
+    "local": "颜色"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "outImage",
+    "local": "工具图"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.drawKeypoints(",
+    "local": "cv.关键点("
+  },
+  {
+    "origin": "image, keypoints, outImage[, color[, flags]]",
+    "local": "图像，关键点，outImage[，color[，flags]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Draws keypoints.",
+    "local": "绘制关键点。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "Source image.",
+    "local": "源图像。"
+  },
+  {
+    "origin": "keypoints",
+    "local": "关键点"
+  },
+  {
+    "origin": "Keypoints from the source image.",
+    "local": "源图像的关键点。"
+  },
+  {
+    "origin": "outImage",
+    "local": "工具图"
+  },
+  {
+    "origin": "Output image. Its content depends on the flags value defining what is drawn in the output image. See possible flags bit values below.",
+    "local": "输出图像。它的内容取决于定义在输出图像中绘制的内容的flags值。请参阅下面可能的标志位值。"
+  },
+  {
+    "origin": "color",
+    "local": "颜色"
+  },
+  {
+    "origin": "Color of keypoints.",
+    "local": "关键点的颜色。"
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": "Flags setting drawing features. Possible flags bit values are defined by DrawMatchesFlags. See details above in drawMatches .",
+    "local": "设置图形特征的标志。可能的标志位值由DrawMatchesFlags定义。详见上文附图。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "For Python API, flags are modified as cv.DRAW_MATCHES_FLAGS_DEFAULT, cv.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS, cv.DRAW_MATCHES_FLAGS_DRAW_OVER_OUTIMG, cv.DRAW_MATCHES_FLAGS_NOT_DRAW_SINGLE_POINTS",
+    "local": "对于Python API，标志被修改为cv.DRAW\\u MATCHES\\u flags\\u DEFAULT、cv.DRAW\\u MATCHES\\u flags\\u DRAW\\u RICH\\u KEYPOINTS、cv.DRAW\\u MATCHES\\u flags\\u DRAW\\u OVER\\u OUTIMG、cv.DRAW\\u MATCHES\\u flags\\u NOT\\u DRAW\\u SINGLE\\u POINTS"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "drawMatches()",
+    "local": "drawMatches（）"
+  },
+  {
+    "origin": "[1/2]",
+    "local": "[1/2]"
+  },
+  {
+    "origin": "void cv::drawMatches",
+    "local": "void cv:：drawMatches无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "img1",
+    "local": "图像1"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "keypoints1",
+    "local": "关键点1"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "img2",
+    "local": "img2型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "keypoints2",
+    "local": "关键点2"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "matches1to2",
+    "local": "匹配1to2"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "outImg",
+    "local": "Outimg"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "matchColor",
+    "local": "匹配颜色"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "singlePointColor",
+    "local": "单点颜色"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt; char &gt; &amp;",
+    "local": "常量标准：：向量&lt；字符&gt&amp；"
+  },
+  {
+    "origin": "matchesMask",
+    "local": "匹配任务"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "outImg",
+    "local": "Outimg"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.drawMatches(",
+    "local": "履历表("
+  },
+  {
+    "origin": "img1, keypoints1, img2, keypoints2, matches1to2, outImg[, matchColor[, singlePointColor[, matchesMask[, flags]]]]",
+    "local": "img1、keypoints1、img2、keypoints2、matches1to2、outImg[、matchColor[、singlePointColor[、matchesMask[、flags]]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "outImg",
+    "local": "Outimg"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.drawMatchesKnn(",
+    "local": "cv.drawMatchesKnn型("
+  },
+  {
+    "origin": "img1, keypoints1, img2, keypoints2, matches1to2, outImg[, matchColor[, singlePointColor[, matchesMask[, flags]]]]",
+    "local": "img1、keypoints1、img2、keypoints2、matches1to2、outImg[、matchColor[、singlePointColor[、matchesMask[、flags]]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Draws the found matches of keypoints from two images.",
+    "local": "从两个图像中绘制找到的关键点匹配。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "img1",
+    "local": "图像1"
+  },
+  {
+    "origin": "First source image.",
+    "local": "第一个源图像。"
+  },
+  {
+    "origin": "keypoints1",
+    "local": "关键点1"
+  },
+  {
+    "origin": "Keypoints from the first source image.",
+    "local": "来自第一个源图像的关键点。"
+  },
+  {
+    "origin": "img2",
+    "local": "img2型"
+  },
+  {
+    "origin": "Second source image.",
+    "local": "第二个源图像。"
+  },
+  {
+    "origin": "keypoints2",
+    "local": "关键点2"
+  },
+  {
+    "origin": "Keypoints from the second source image.",
+    "local": "来自第二个源图像的关键点。"
+  },
+  {
+    "origin": "matches1to2",
+    "local": "匹配1to2"
+  },
+  {
+    "origin": "Matches from the first image to the second one, which means that keypoints1[i] has a corresponding point in keypoints2[matches[i]] .",
+    "local": "从第一个图像匹配到第二个图像，这意味着keypoints1[i]在keypoints2[Matches[i]]中有一个对应的点。"
+  },
+  {
+    "origin": "outImg",
+    "local": "Outimg"
+  },
+  {
+    "origin": "Output image. Its content depends on the flags value defining what is drawn in the output image. See possible flags bit values below.",
+    "local": "输出图像。它的内容取决于定义在输出图像中绘制的内容的flags值。请参阅下面可能的标志位值。"
+  },
+  {
+    "origin": "matchColor",
+    "local": "匹配颜色"
+  },
+  {
+    "origin": "Color of matches (lines and connected keypoints). If matchColor==",
+    "local": "匹配的颜色（线和连接的关键点）。如果匹配颜色=="
+  },
+  {
+    "origin": "(-1) , the color is generated randomly.",
+    "local": "（-1），随机生成颜色。"
+  },
+  {
+    "origin": "singlePointColor",
+    "local": "单点颜色"
+  },
+  {
+    "origin": "Color of single keypoints (circles), which means that keypoints do not have the matches. If singlePointColor==",
+    "local": "单个关键点（圆）的颜色，这意味着关键点没有匹配项。如果是单点颜色=="
+  },
+  {
+    "origin": "(-1) , the color is generated randomly.",
+    "local": "（-1），随机生成颜色。"
+  },
+  {
+    "origin": "matchesMask",
+    "local": "匹配任务"
+  },
+  {
+    "origin": "Mask determining which matches are drawn. If the mask is empty, all matches are drawn.",
+    "local": "确定绘制哪些匹配项的掩码。如果掩码为空，则绘制所有匹配项。"
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": "Flags setting drawing features. Possible flags bit values are defined by DrawMatchesFlags.",
+    "local": "设置图形特征的标志。可能的标志位值由DrawMatchesFlags定义。"
+  },
+  {
+    "origin": "This function draws matches of keypoints from two images in the output image. Match is a line connecting two keypoints (circles). See",
+    "local": "此函数用于从输出图像中的两个图像中绘制关键点的匹配。匹配是连接两个关键点（圆）的线。看到了吗"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "drawMatches()",
+    "local": "drawMatches（）"
+  },
+  {
+    "origin": "[2/2]",
+    "local": "[2/2]"
+  },
+  {
+    "origin": "void cv::drawMatches",
+    "local": "void cv:：drawMatches无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "img1",
+    "local": "图像1"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "keypoints1",
+    "local": "关键点1"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "img2",
+    "local": "img2型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": "常量标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "keypoints2",
+    "local": "关键点2"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt; std::vector&lt;",
+    "local": "常量标准：：向量&lt；标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": "&燃气轮机&燃气轮机&amp；"
+  },
+  {
+    "origin": "matches1to2",
+    "local": "匹配1to2"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "outImg",
+    "local": "Outimg"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "matchColor",
+    "local": "匹配颜色"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "singlePointColor",
+    "local": "单点颜色"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const std::vector&lt; std::vector&lt; char &gt; &gt; &amp;",
+    "local": "常量标准：：向量&lt；标准：：向量&lt；字符&gt&燃气轮机&amp；"
+  },
+  {
+    "origin": "matchesMask",
+    "local": "匹配任务"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "flags",
+    "local": "旗帜"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "outImg",
+    "local": "Outimg"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.drawMatches(",
+    "local": "履历表("
+  },
+  {
+    "origin": "img1, keypoints1, img2, keypoints2, matches1to2, outImg[, matchColor[, singlePointColor[, matchesMask[, flags]]]]",
+    "local": "img1、keypoints1、img2、keypoints2、matches1to2、outImg[、matchColor[、singlePointColor[、matchesMask[、flags]]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "outImg",
+    "local": "Outimg"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.drawMatchesKnn(",
+    "local": "cv.drawMatchesKnn型("
+  },
+  {
+    "origin": "img1, keypoints1, img2, keypoints2, matches1to2, outImg[, matchColor[, singlePointColor[, matchesMask[, flags]]]]",
+    "local": "img1、keypoints1、img2、keypoints2、matches1to2、outImg[、matchColor[、singlePointColor[、matchesMask[、flags]]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": "这是一个重载成员函数，为方便起见提供。它与上述函数的区别仅在于它接受的参数。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": "于2021年4月2日星期五11:36:41为OpenCV生成"
+  }
+]

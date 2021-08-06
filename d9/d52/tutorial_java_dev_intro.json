@@ -1,0 +1,502 @@
+[
+  {
+    "origin": "OpenCV: Introduction to Java Development",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Introduction to Java Development",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Eric Christiansen and Andrey Pavlenko",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial can contain obsolete information.",
+    "local": ""
+  },
+  {
+    "origin": "As of OpenCV 2.4.4, OpenCV supports desktop Java development using nearly the same interface as for Android development. This guide will help you to create your first Java (or Scala) application using OpenCV. We will use either",
+    "local": ""
+  },
+  {
+    "origin": "Apache Ant",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "Simple Build Tool (SBT)",
+    "local": ""
+  },
+  {
+    "origin": "to build the application.",
+    "local": ""
+  },
+  {
+    "origin": "If you want to use Eclipse head to",
+    "local": ""
+  },
+  {
+    "origin": ". For further reading after this guide, look at the",
+    "local": ""
+  },
+  {
+    "origin": "tutorials.",
+    "local": ""
+  },
+  {
+    "origin": "What we'll do in this guide",
+    "local": ""
+  },
+  {
+    "origin": "In this guide, we will:",
+    "local": ""
+  },
+  {
+    "origin": "Get OpenCV with desktop Java support",
+    "local": ""
+  },
+  {
+    "origin": "Create an Ant or SBT project",
+    "local": ""
+  },
+  {
+    "origin": "Write a simple OpenCV application in Java or Scala",
+    "local": ""
+  },
+  {
+    "origin": "The same process was used to create the samples in the",
+    "local": ""
+  },
+  {
+    "origin": "folder of the OpenCV repository, so consult those files if you get lost.",
+    "local": ""
+  },
+  {
+    "origin": "Get proper OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Starting from version 2.4.4 OpenCV includes desktop Java bindings.",
+    "local": ""
+  },
+  {
+    "origin": "Download",
+    "local": ""
+  },
+  {
+    "origin": "The most simple way to get it is downloading the appropriate package of",
+    "local": ""
+  },
+  {
+    "origin": "version 2.4.4 or higher",
+    "local": ""
+  },
+  {
+    "origin": "from the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV SourceForge repository",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Windows users can find the prebuilt files needed for Java development in the",
+    "local": ""
+  },
+  {
+    "origin": "folder inside the package. For other OSes it's required to build OpenCV from sources.",
+    "local": ""
+  },
+  {
+    "origin": "Another option to get OpenCV sources is to clone",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV git repository",
+    "local": ""
+  },
+  {
+    "origin": ". In order to build OpenCV with Java bindings you need JDK (Java Development Kit) (we recommend",
+    "local": ""
+  },
+  {
+    "origin": "Oracle/Sun JDK 6 or 7",
+    "local": ""
+  },
+  {
+    "origin": "),",
+    "local": ""
+  },
+  {
+    "origin": "Apache Ant",
+    "local": ""
+  },
+  {
+    "origin": "and Python v2.6 or higher to be installed.",
+    "local": ""
+  },
+  {
+    "origin": "Build",
+    "local": ""
+  },
+  {
+    "origin": "Let's build OpenCV:",
+    "local": ""
+  },
+  {
+    "origin": "Generate a Makefile or a MS Visual Studio* solution, or whatever you use for building executables in your system:",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "When OpenCV is built as a set of",
+    "local": ""
+  },
+  {
+    "origin": "static",
+    "local": ""
+  },
+  {
+    "origin": "libraries (-DBUILD_SHARED_LIBS=OFF option) the Java bindings dynamic library is all-sufficient, i.e. doesn't depend on other OpenCV libs, but includes all the OpenCV code inside.",
+    "local": ""
+  },
+  {
+    "origin": "Examine the output of CMake and ensure java is one of the modules \"To be built\". If not, it's likely you're missing a dependency. You should troubleshoot by looking through the CMake output for any Java-related tools that aren't found and installing them.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If CMake can't find Java in your system set the JAVA_HOME environment variable with the path to installed JDK before running it. E.g.:",
+    "local": ""
+  },
+  {
+    "origin": "Now start the build:",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "Besides all this will create a jar containing the Java interface (",
+    "local": ""
+  },
+  {
+    "origin": ") and a native dynamic library containing Java bindings and all the OpenCV stuff (",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "respectively). We'll use these files later.",
+    "local": ""
+  },
+  {
+    "origin": "Java sample with Ant",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The described sample is provided with OpenCV library in the",
+    "local": ""
+  },
+  {
+    "origin": "folder.",
+    "local": ""
+  },
+  {
+    "origin": "Create a folder where you'll develop this sample application.",
+    "local": ""
+  },
+  {
+    "origin": "In this folder create the",
+    "local": ""
+  },
+  {
+    "origin": "file with the following content using any text editor:",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This XML file can be reused for building other Java applications. It describes a common folder structure in the lines 3 - 12 and common targets for compiling and running the application. When reusing this XML don't forget to modify the project name in the line 1, that is also the name of the main class (line 14). The paths to OpenCV jar and jni lib are expected as parameters (\"${ocvJarDir}\" in line 5 and \"${ocvLibDir}\" in line 37), but you can hardcode these paths for your convenience. See",
+    "local": ""
+  },
+  {
+    "origin": "Ant documentation",
+    "local": ""
+  },
+  {
+    "origin": "for detailed description of its build file format.",
+    "local": ""
+  },
+  {
+    "origin": "Create an",
+    "local": ""
+  },
+  {
+    "origin": "folder next to the",
+    "local": ""
+  },
+  {
+    "origin": "file and a",
+    "local": ""
+  },
+  {
+    "origin": "file in it.",
+    "local": ""
+  },
+  {
+    "origin": "Put the following Java code into the",
+    "local": ""
+  },
+  {
+    "origin": "file:",
+    "local": ""
+  },
+  {
+    "origin": "Run the following command in console in the folder containing",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "For example:",
+    "local": ""
+  },
+  {
+    "origin": "The command should initiate [re]building and running the sample. You should see on the screen something like this:",
+    "local": ""
+  },
+  {
+    "origin": "SBT project for Java and Scala",
+    "local": ""
+  },
+  {
+    "origin": "Now we'll create a simple Java application using SBT. This serves as a brief introduction to those unfamiliar with this build tool. We're using SBT because it is particularly easy and powerful.",
+    "local": ""
+  },
+  {
+    "origin": "First, download and install",
+    "local": ""
+  },
+  {
+    "origin": "SBT",
+    "local": ""
+  },
+  {
+    "origin": "using the instructions on its",
+    "local": ""
+  },
+  {
+    "origin": "web site",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Next, navigate to a new directory where you'd like the application source to live (outside",
+    "local": ""
+  },
+  {
+    "origin": "dir). Let's call it \"JavaSample\" and create a directory for it:",
+    "local": ""
+  },
+  {
+    "origin": "Now we will create the necessary folders and an SBT project:",
+    "local": ""
+  },
+  {
+    "origin": "Now open",
+    "local": ""
+  },
+  {
+    "origin": "in your favorite editor and paste the following. It defines your project:",
+    "local": ""
+  },
+  {
+    "origin": "Now edit",
+    "local": ""
+  },
+  {
+    "origin": "and paste the following. This will enable auto-generation of an Eclipse project:",
+    "local": ""
+  },
+  {
+    "origin": "Now run sbt from the",
+    "local": ""
+  },
+  {
+    "origin": "root and from within SBT run eclipse to generate an eclipse project:",
+    "local": ""
+  },
+  {
+    "origin": "You should see something like this:",
+    "local": ""
+  },
+  {
+    "origin": "You can now import the SBT project to Eclipse using Import ... -&gt; Existing projects into workspace. Whether you actually do this is optional for the guide; we'll be using SBT to build the project, so if you choose to use Eclipse it will just serve as a text editor.",
+    "local": ""
+  },
+  {
+    "origin": "To test that everything is working, create a simple \"Hello OpenCV\" application. Do this by creating a file",
+    "local": ""
+  },
+  {
+    "origin": "with the following contents:",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "Now execute run from the sbt console, or more concisely, run sbt run from the command line:",
+    "local": ""
+  },
+  {
+    "origin": "You should see something like this:",
+    "local": ""
+  },
+  {
+    "origin": "Running SBT samples",
+    "local": ""
+  },
+  {
+    "origin": "Now we'll create a simple face detection application using OpenCV.",
+    "local": ""
+  },
+  {
+    "origin": "First, create a",
+    "local": ""
+  },
+  {
+    "origin": "folder and copy the OpenCV jar into it. By default, SBT adds jars in the lib folder to the Java library search path. You can optionally rerun sbt eclipse to update your Eclipse project.",
+    "local": ""
+  },
+  {
+    "origin": "Next, create the directory",
+    "local": ""
+  },
+  {
+    "origin": "and download this Lena image into it:",
+    "local": ""
+  },
+  {
+    "origin": "Make sure it's called",
+    "local": ""
+  },
+  {
+    "origin": ". Items in the resources directory are available to the Java application at runtime.",
+    "local": ""
+  },
+  {
+    "origin": "Next, copy",
+    "local": ""
+  },
+  {
+    "origin": "from",
+    "local": ""
+  },
+  {
+    "origin": "into the",
+    "local": ""
+  },
+  {
+    "origin": "directory:",
+    "local": ""
+  },
+  {
+    "origin": "Now modify src/main/java/HelloOpenCV.java so it contains the following Java code:",
+    "local": ""
+  },
+  {
+    "origin": "Note the call to System.loadLibrary(Core.NATIVE_LIBRARY_NAME). This command must be executed exactly once per Java process prior to using any native OpenCV methods. If you don't call it, you will get UnsatisfiedLink errors. You will also get errors if you try to load OpenCV when it has already been loaded.",
+    "local": ""
+  },
+  {
+    "origin": "Now run the face detection app using `sbt run`:",
+    "local": ""
+  },
+  {
+    "origin": "You should see something like this:",
+    "local": ""
+  },
+  {
+    "origin": "It should also write the following image to",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "You're done! Now you have a sample Java application working with OpenCV, so you can start the work on your own. We wish you good luck and many years of joyful life!",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

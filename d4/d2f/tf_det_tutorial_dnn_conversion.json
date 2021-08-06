@@ -1,0 +1,274 @@
+[
+  {
+    "origin": "OpenCV: Conversion of TensorFlow Detection Models and Launch with OpenCV Python",
+    "local": "OpenCV：转换TensorFlow检测模型并使用opencvpython启动"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Conversion of TensorFlow Detection Models and Launch with OpenCV Python",
+    "local": "转换TensorFlow检测模型并用OpenCV Python启动"
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Anastasia Murzova",
+    "local": "阿纳斯塔西娅·穆佐娃"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "Goals",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "obtain frozen graphs of TensorFlow (TF) detection models",
+    "local": "获得张量流（TF）检测模型的冻结图"
+  },
+  {
+    "origin": "run converted TensorFlow model with OpenCV Python API",
+    "local": "用opencvpythonapi运行转换后的TensorFlow模型"
+  },
+  {
+    "origin": "We will explore the above-listed points by the example of SSD MobileNetV1.",
+    "local": "我们将通过SSD MobileNetV1的例子来探讨上面列出的要点。"
+  },
+  {
+    "origin": "Introduction",
+    "local": "介绍"
+  },
+  {
+    "origin": "Let's briefly view the key concepts involved in the pipeline of TensorFlow models transition with OpenCV API. The initial step in the conversion of TensorFlow models into",
+    "local": "让我们简要地看一下使用opencvapi进行TensorFlow模型转换的管道中涉及的关键概念。将张量流模型转换为"
+  },
+  {
+    "origin": "is obtaining the frozen TF model graph. A frozen graph defines the combination of the model graph structure with kept values of the required variables, for example, weights. The frozen graph is saved in",
+    "local": "得到了冻结TF模型图。冻结图定义了模型图结构与所需变量（例如权重）的保留值的组合。冻结的图形保存在"
+  },
+  {
+    "origin": "protobuf",
+    "local": "原虫"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ") files. There are special functions for reading",
+    "local": ")文件。阅读有特殊的功能"
+  },
+  {
+    "origin": "graphs in OpenCV:",
+    "local": "OpenCV中的图形："
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Requirements",
+    "local": "要求"
+  },
+  {
+    "origin": "To be able to experiment with the below code you will need to install a set of libraries. We will use a virtual environment with python3.7+ for this:",
+    "local": "为了能够使用下面的代码进行实验，您需要安装一组库。为此，我们将使用python3.7+虚拟环境："
+  },
+  {
+    "origin": "For OpenCV-Python building from source, follow the corresponding instructions from the",
+    "local": "对于从源代码构建OpenCV Python，请按照"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Before you start the installation of the libraries, you can customize the",
+    "local": "在开始安装库之前，可以自定义"
+  },
+  {
+    "origin": "requirements.txt",
+    "local": "要求.txt"
+  },
+  {
+    "origin": ", excluding or including (for example,",
+    "local": "，排除或包括（例如，"
+  },
+  {
+    "origin": ") some dependencies. The below line initiates requirements installation into the previously activated virtual environment:",
+    "local": ")一些依赖项。下一行启动将需求安装到先前激活的虚拟环境中："
+  },
+  {
+    "origin": "Practice",
+    "local": "练习"
+  },
+  {
+    "origin": "In this part we are going to cover the following points:",
+    "local": "在本部分中，我们将介绍以下几点："
+  },
+  {
+    "origin": "create a TF classification model conversion pipeline and provide the inference",
+    "local": "创建TF分类模型转换管道并提供推理"
+  },
+  {
+    "origin": "provide the inference, process prediction results",
+    "local": "提供推理、过程预测结果"
+  },
+  {
+    "origin": "Model Preparation",
+    "local": "模型准备"
+  },
+  {
+    "origin": "The code in this subchapter is located in the",
+    "local": "本分章中的代码位于"
+  },
+  {
+    "origin": "module and can be executed with the below line:",
+    "local": "模块，可通过以下行执行："
+  },
+  {
+    "origin": "The following code contains the steps of the TF SSD MobileNetV1 model retrieval:",
+    "local": "以下代码包含TF SSD MobileNetV1模型检索的步骤："
+  },
+  {
+    "origin": "In",
+    "local": "在"
+  },
+  {
+    "origin": "function we extract the provided in model archive",
+    "local": "我们提取模型存档中提供的函数"
+  },
+  {
+    "origin": "for its further processing:",
+    "local": "进一步处理："
+  },
+  {
+    "origin": "After the successful execution of the above code we will get the following output:",
+    "local": "成功执行上述代码后，我们将得到以下输出："
+  },
+  {
+    "origin": "To provide model inference we will use the below",
+    "local": "为了提供模型推断，我们将使用下面的"
+  },
+  {
+    "origin": "double-decker bus photo",
+    "local": "双层巴士照片"
+  },
+  {
+    "origin": "(under",
+    "local": "（低于"
+  },
+  {
+    "origin": "Pexels",
+    "local": "像素"
+  },
+  {
+    "origin": "license):",
+    "local": "许可证）："
+  },
+  {
+    "origin": "Double-decker bus",
+    "local": "双层巴士"
+  },
+  {
+    "origin": "To initiate the test process we need to provide an appropriate model configuration. We will use",
+    "local": "为了启动测试过程，我们需要提供适当的模型配置。我们将使用"
+  },
+  {
+    "origin": "from",
+    "local": "从"
+  },
+  {
+    "origin": "TensorFlow Object Detection API",
+    "local": "TensorFlow目标检测API"
+  },
+  {
+    "origin": ". TensorFlow Object Detection API framework contains helpful mechanisms for object detection model manipulations.",
+    "local": ". TensorFlow对象检测API框架包含用于对象检测模型操作的有用机制。"
+  },
+  {
+    "origin": "We will use this configuration to provide a text graph representation. To generate",
+    "local": "我们将使用此配置来提供文本图形表示。产生"
+  },
+  {
+    "origin": "we will use the corresponding",
+    "local": "我们将使用相应的"
+  },
+  {
+    "origin": "script:",
+    "local": "脚本："
+  },
+  {
+    "origin": "After successful execution",
+    "local": "执行成功后"
+  },
+  {
+    "origin": "will be created.",
+    "local": "将创建。"
+  },
+  {
+    "origin": "Before we run",
+    "local": "在我们跑之前"
+  },
+  {
+    "origin": ", let's have a look at the default values for the SSD MobileNetV1 test process configuration. They are located in",
+    "local": "，让我们看看SSD MobileNetV1测试进程配置的默认值。它们位于"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "To fetch these values we need to provide frozen graph",
+    "local": "为了获取这些值，我们需要提供冻结图"
+  },
+  {
+    "origin": "model and text graph",
+    "local": "模型和文本图形"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "This line is equivalent to:",
+    "local": "这条线相当于："
+  },
+  {
+    "origin": "The result is:",
+    "local": "结果是："
+  },
+  {
+    "origin": "OpenCV SSD bus result",
+    "local": "OpenCV SSD总线结果"
+  },
+  {
+    "origin": "There are several helpful parameters, which can be also customized for result corrections: threshold (",
+    "local": "有几个有用的参数，也可以为结果更正自定义：阈值("
+  },
+  {
+    "origin": ") and non-maximum suppression (",
+    "local": ")和非最大抑制("
+  },
+  {
+    "origin": ") values.",
+    "local": ")价值观。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:34为OpenCV生成，&#160；"
+  }
+]

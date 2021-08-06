@@ -1,0 +1,1174 @@
+[
+  {
+    "origin": "OpenCV: opencv2/gapi/gkernel.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "gkernel.hpp File Reference",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "A container class for heterogeneous kernel implementation collections and graph transformations.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "cv::use_only() is a special combinator which hints G-API to use only kernels specified in",
+    "local": ""
+  },
+  {
+    "origin": "(and not to extend kernels available by default with that package).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Namespaces",
+    "local": ""
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": ""
+  },
+  {
+    "origin": "Macros",
+    "local": ""
+  },
+  {
+    "origin": "(x)&#160;&#160;&#160;x",
+    "local": ""
+  },
+  {
+    "origin": "(...)&#160;&#160;&#160;__VA_ARGS__",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class, ...)",
+    "local": ""
+  },
+  {
+    "origin": "(Class, API, Id)",
+    "local": ""
+  },
+  {
+    "origin": "(Class, _1, _2, _3, _4, _5, _6, _7, _8, _9, _10, Id)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6, _7, _8, _9, _10), Id)",
+    "local": ""
+  },
+  {
+    "origin": "(Class, _1, _2, Id)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2), Id)",
+    "local": ""
+  },
+  {
+    "origin": "(Class, _1, _2, _3, Id)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3), Id)",
+    "local": ""
+  },
+  {
+    "origin": "(Class, _1, _2, _3, _4, Id)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4), Id)",
+    "local": ""
+  },
+  {
+    "origin": "(Class, _1, _2, _3, _4, _5, Id)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5), Id)",
+    "local": ""
+  },
+  {
+    "origin": "(Class, _1, _2, _3, _4, _5, _6, Id)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6), Id)",
+    "local": ""
+  },
+  {
+    "origin": "(Class, _1, _2, _3, _4, _5, _6, _7, Id)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6, _7), Id)",
+    "local": ""
+  },
+  {
+    "origin": "(Class, _1, _2, _3, _4, _5, _6, _7, _8, Id)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6, _7, _8), Id)",
+    "local": ""
+  },
+  {
+    "origin": "(Class, _1, _2, _3, _4, _5, _6, _7, _8, _9, Id)&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6, _7, _8, _9), Id)",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6, _7, _8, _9, _10, _11, NAME, ...)&#160;&#160;&#160;NAME",
+    "local": ""
+  },
+  {
+    "origin": "Typedefs",
+    "local": ""
+  },
+  {
+    "origin": "= std::vector&lt; detail::HostCtor &gt;",
+    "local": ""
+  },
+  {
+    "origin": "= std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "= std::vector&lt; GShape &gt;",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "= std::is_same&lt; T, typename MetaType&lt; T &gt;::type &gt;",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(const GKernelPackage &amp;lhs, const GKernelPackage &amp;rhs)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... Ps&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GKernelPackage &amp;a, const GKernelPackage &amp;b, Ps &amp;&amp;... rest)",
+    "local": ""
+  },
+  {
+    "origin": "Combines multiple G-API kernel packages into one.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GMetaArgs &amp;in_meta, const GArgs &amp;, int idx)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename T &gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const GMetaArgs &amp;, const GArgs &amp;in_args, int idx)",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... KK&gt;",
+    "local": ""
+  },
+  {
+    "origin": "()",
+    "local": ""
+  },
+  {
+    "origin": "Create a kernel package object containing kernels and transformations specified in variadic template argument.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "template&lt;typename... FF&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(FF &amp;... functors)",
+    "local": ""
+  },
+  {
+    "origin": "(const GBackend &amp;lhs, const GBackend &amp;rhs)",
+    "local": ""
+  },
+  {
+    "origin": "Macro Definition Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "__WRAP_VAARGS",
+    "local": ""
+  },
+  {
+    "origin": "#define __WRAP_VAARGS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "x",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;x",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "COMBINE_SIGNATURE",
+    "local": ""
+  },
+  {
+    "origin": "#define COMBINE_SIGNATURE",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "...",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;__VA_ARGS__",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_API_OP",
+    "local": ""
+  },
+  {
+    "origin": "#define G_API_OP&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_API_OP_M",
+    "local": ""
+  },
+  {
+    "origin": "#define G_API_OP_M&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "...",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Declares a new G-API Operation. See",
+    "local": ""
+  },
+  {
+    "origin": "for more details.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "Class",
+    "local": ""
+  },
+  {
+    "origin": "type name for this operation.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_HELPER",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_HELPER",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "API,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Value:",
+    "local": ""
+  },
+  {
+    "origin": "Helper for G_TYPED_KERNEL declares a new G-API Operation. See",
+    "local": ""
+  },
+  {
+    "origin": "for more details.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "Class",
+    "local": ""
+  },
+  {
+    "origin": "type name for this operation.",
+    "local": ""
+  },
+  {
+    "origin": "API",
+    "local": ""
+  },
+  {
+    "origin": "an",
+    "local": ""
+  },
+  {
+    "origin": "-like signature for the operation; return type is a single value or a tuple of multiple values.",
+    "local": ""
+  },
+  {
+    "origin": "Id",
+    "local": ""
+  },
+  {
+    "origin": "string identifier for the operation. Must be unique.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_HELPER_10",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_HELPER_10",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "_1,",
+    "local": ""
+  },
+  {
+    "origin": "_2,",
+    "local": ""
+  },
+  {
+    "origin": "_3,",
+    "local": ""
+  },
+  {
+    "origin": "_4,",
+    "local": ""
+  },
+  {
+    "origin": "_5,",
+    "local": ""
+  },
+  {
+    "origin": "_6,",
+    "local": ""
+  },
+  {
+    "origin": "_7,",
+    "local": ""
+  },
+  {
+    "origin": "_8,",
+    "local": ""
+  },
+  {
+    "origin": "_9,",
+    "local": ""
+  },
+  {
+    "origin": "_10,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6, _7, _8, _9, _10), Id)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_HELPER_2",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_HELPER_2",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "_1,",
+    "local": ""
+  },
+  {
+    "origin": "_2,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2), Id)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_HELPER_3",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_HELPER_3",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "_1,",
+    "local": ""
+  },
+  {
+    "origin": "_2,",
+    "local": ""
+  },
+  {
+    "origin": "_3,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3), Id)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_HELPER_4",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_HELPER_4",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "_1,",
+    "local": ""
+  },
+  {
+    "origin": "_2,",
+    "local": ""
+  },
+  {
+    "origin": "_3,",
+    "local": ""
+  },
+  {
+    "origin": "_4,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4), Id)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_HELPER_5",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_HELPER_5",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "_1,",
+    "local": ""
+  },
+  {
+    "origin": "_2,",
+    "local": ""
+  },
+  {
+    "origin": "_3,",
+    "local": ""
+  },
+  {
+    "origin": "_4,",
+    "local": ""
+  },
+  {
+    "origin": "_5,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5), Id)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_HELPER_6",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_HELPER_6",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "_1,",
+    "local": ""
+  },
+  {
+    "origin": "_2,",
+    "local": ""
+  },
+  {
+    "origin": "_3,",
+    "local": ""
+  },
+  {
+    "origin": "_4,",
+    "local": ""
+  },
+  {
+    "origin": "_5,",
+    "local": ""
+  },
+  {
+    "origin": "_6,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6), Id)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_HELPER_7",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_HELPER_7",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "_1,",
+    "local": ""
+  },
+  {
+    "origin": "_2,",
+    "local": ""
+  },
+  {
+    "origin": "_3,",
+    "local": ""
+  },
+  {
+    "origin": "_4,",
+    "local": ""
+  },
+  {
+    "origin": "_5,",
+    "local": ""
+  },
+  {
+    "origin": "_6,",
+    "local": ""
+  },
+  {
+    "origin": "_7,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6, _7), Id)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_HELPER_8",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_HELPER_8",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "_1,",
+    "local": ""
+  },
+  {
+    "origin": "_2,",
+    "local": ""
+  },
+  {
+    "origin": "_3,",
+    "local": ""
+  },
+  {
+    "origin": "_4,",
+    "local": ""
+  },
+  {
+    "origin": "_5,",
+    "local": ""
+  },
+  {
+    "origin": "_6,",
+    "local": ""
+  },
+  {
+    "origin": "_7,",
+    "local": ""
+  },
+  {
+    "origin": "_8,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6, _7, _8), Id)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_HELPER_9",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_HELPER_9",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Class,",
+    "local": ""
+  },
+  {
+    "origin": "_1,",
+    "local": ""
+  },
+  {
+    "origin": "_2,",
+    "local": ""
+  },
+  {
+    "origin": "_3,",
+    "local": ""
+  },
+  {
+    "origin": "_4,",
+    "local": ""
+  },
+  {
+    "origin": "_5,",
+    "local": ""
+  },
+  {
+    "origin": "_6,",
+    "local": ""
+  },
+  {
+    "origin": "_7,",
+    "local": ""
+  },
+  {
+    "origin": "_8,",
+    "local": ""
+  },
+  {
+    "origin": "_9,",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "(Class,",
+    "local": ""
+  },
+  {
+    "origin": "(_1, _2, _3, _4, _5, _6, _7, _8, _9), Id)",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "G_TYPED_KERNEL_M",
+    "local": ""
+  },
+  {
+    "origin": "#define G_TYPED_KERNEL_M&#160;&#160;&#160;",
+    "local": ""
+  },
+  {
+    "origin": "Declares a new G-API Operation. See",
+    "local": ""
+  },
+  {
+    "origin": "for more details.",
+    "local": ""
+  },
+  {
+    "origin": "This macro is deprecated in favor of",
+    "local": ""
+  },
+  {
+    "origin": "that is used for declaring any G-API Operation.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "Class",
+    "local": ""
+  },
+  {
+    "origin": "type name for this operation.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "GET_G_TYPED_KERNEL",
+    "local": ""
+  },
+  {
+    "origin": "#define GET_G_TYPED_KERNEL",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_1,",
+    "local": ""
+  },
+  {
+    "origin": "_2,",
+    "local": ""
+  },
+  {
+    "origin": "_3,",
+    "local": ""
+  },
+  {
+    "origin": "_4,",
+    "local": ""
+  },
+  {
+    "origin": "_5,",
+    "local": ""
+  },
+  {
+    "origin": "_6,",
+    "local": ""
+  },
+  {
+    "origin": "_7,",
+    "local": ""
+  },
+  {
+    "origin": "_8,",
+    "local": ""
+  },
+  {
+    "origin": "_9,",
+    "local": ""
+  },
+  {
+    "origin": "_10,",
+    "local": ""
+  },
+  {
+    "origin": "_11,",
+    "local": ""
+  },
+  {
+    "origin": "NAME,",
+    "local": ""
+  },
+  {
+    "origin": "...",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "&#160;&#160;&#160;NAME",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": ""
+  }
+]

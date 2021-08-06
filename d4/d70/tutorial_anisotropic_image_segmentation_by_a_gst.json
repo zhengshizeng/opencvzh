@@ -1,0 +1,286 @@
+[
+  {
+    "origin": "OpenCV: Anisotropic image segmentation by a gradient structure tensor",
+    "local": "OpenCV：基于梯度结构张量的各向异性图像分割"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Anisotropic image segmentation by a gradient structure tensor",
+    "local": "基于梯度结构张量的各向异性图像分割"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Karpushin Vladislav",
+    "local": "卡尔普辛弗拉迪斯拉夫。"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn:",
+    "local": "在本教程中，您将学习："
+  },
+  {
+    "origin": "what the gradient structure tensor is",
+    "local": "什么是梯度结构张量"
+  },
+  {
+    "origin": "how to estimate orientation and coherency of an anisotropic image by a gradient structure tensor",
+    "local": "用梯度结构张量估计各向异性图像的方向性和相干性"
+  },
+  {
+    "origin": "how to segment an anisotropic image with a single local orientation by a gradient structure tensor",
+    "local": "如何用梯度结构张量分割具有单一局部方向的各向异性图像"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "The explanation is based on the books",
+    "local": "这个解释是以书本为基础的"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": ". Good physical explanation of a gradient structure tensor is given in",
+    "local": ". 本文对梯度结构张量给出了很好的物理解释"
+  },
+  {
+    "origin": ". Also, you can refer to a wikipedia page",
+    "local": ". 此外，你还可以参考维基百科页面"
+  },
+  {
+    "origin": "Structure tensor",
+    "local": "结构张量"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "A anisotropic image on this page is a real world image.",
+    "local": "此页上的各向异性图像是真实世界的图像。"
+  },
+  {
+    "origin": "What is the gradient structure tensor?",
+    "local": "什么是梯度结构张量？"
+  },
+  {
+    "origin": "In mathematics, the gradient structure tensor (also referred to as the second-moment matrix, the second order moment tensor, the inertia tensor, etc.) is a matrix derived from the gradient of a function. It summarizes the predominant directions of the gradient in a specified neighborhood of a point, and the degree to which those directions are coherent (coherency). The gradient structure tensor is widely used in image processing and computer vision for 2D/3D image segmentation, motion detection, adaptive filtration, local image features detection, etc.",
+    "local": "在数学中，梯度结构张量（也称为二阶矩矩阵、二阶矩张量、惯性张量等）是由函数的梯度导出的矩阵。它总结了在一个点的指定邻域中梯度的主要方向，以及这些方向的相干程度（相干性）。梯度结构张量广泛应用于图像处理和计算机视觉中，用于二维/三维图像分割、运动检测、自适应滤波、局部图像特征检测等。"
+  },
+  {
+    "origin": "Important features of anisotropic images include orientation and coherency of a local anisotropy. In this paper we will show how to estimate orientation and coherency, and how to segment an anisotropic image with a single local orientation by a gradient structure tensor.",
+    "local": "各向异性图像的重要特征包括局部各向异性的方向性和相干性。在本文中，我们将展示如何估计方向和相干性，以及如何用梯度结构张量分割具有单一局部方向的各向异性图像。"
+  },
+  {
+    "origin": "The gradient structure tensor of an image is a 2x2 symmetric matrix. Eigenvectors of the gradient structure tensor indicate local orientation, whereas eigenvalues give coherency (a measure of anisotropism).",
+    "local": "图像的梯度结构张量是一个2x2对称矩阵。梯度结构张量的特征向量表示局部方向，而特征值表示相干性（各向异性的度量）。"
+  },
+  {
+    "origin": "The gradient structure tensor \\(J\\) of an image \\(Z\\) can be written as:",
+    "local": "图像（Z）的梯度结构张量（J）可以写成："
+  },
+  {
+    "origin": "\\[J = \\begin{bmatrix} J_{11} &amp; J_{12} \\\\ J_{12} &amp; J_{22} \\end{bmatrix}\\]",
+    "local": "\\[J=\\begin{bmatrix}J{11}&amp；J{12}\\J{12}&amp；Ju{22}\\end{bmatrix}]"
+  },
+  {
+    "origin": "where \\(J_{11} = M[Z_{x}^{2}]\\), \\(J_{22} = M[Z_{y}^{2}]\\), \\(J_{12} = M[Z_{x}Z_{y}]\\) - components of the tensor, \\(M[]\\) is a symbol of mathematical expectation (we can consider this operation as averaging in a window w), \\(Z_{x}\\) and \\(Z_{y}\\) are partial derivatives of an image \\(Z\\) with respect to \\(x\\) and \\(y\\).",
+    "local": "（J{11{{11}}{11}}{11}{11}}{{{{{{{{{{{\\）。"
+  },
+  {
+    "origin": "The eigenvalues of the tensor can be found in the below formula:",
+    "local": "张量的特征值可以在下面的公式中找到："
+  },
+  {
+    "origin": "\\[\\lambda_{1,2} = \\frac{1}{2} \\left [ J_{11} + J_{22} \\pm \\sqrt{(J_{11} - J_{22})^{2} + 4J_{12}^{2}} \\right ] \\]",
+    "local": "\\[\\lambda{1,2}=\\frac{1}{2}\\左[J{11}+J{22}\\pm\\sqrt{（J{11}-J{22}）^{2}+4J{12}^{2}}\\右]\\]"
+  },
+  {
+    "origin": "where \\(\\lambda_1\\) - largest eigenvalue, \\(\\lambda_2\\) - smallest eigenvalue.",
+    "local": "其中\\（\\lambda\\u 1\\）-最大特征值，\\（\\lambda\\u 2\\）-最小特征值。"
+  },
+  {
+    "origin": "How to estimate orientation and coherency of an anisotropic image by gradient structure tensor?",
+    "local": "如何利用梯度结构张量估计各向异性图像的方向性和相干性？"
+  },
+  {
+    "origin": "The orientation of an anisotropic image:",
+    "local": "各向异性图像的方向："
+  },
+  {
+    "origin": "\\[\\alpha = 0.5arctg\\frac{2J_{12}}{J_{22} - J_{11}}\\]",
+    "local": "\\[\\alpha=0.5arctg\\frac{2J{12}}{J{22}-J{11}}\\]"
+  },
+  {
+    "origin": "Coherency:",
+    "local": "一致性："
+  },
+  {
+    "origin": "\\[C = \\frac{\\lambda_1 - \\lambda_2}{\\lambda_1 + \\lambda_2}\\]",
+    "local": "\\\\[C=\\frac{\\lambda\\u 1-\\lambda\\u 2}{\\lambda\\u 1+\\lambda\\u 2}\\]"
+  },
+  {
+    "origin": "The coherency ranges from 0 to 1. For ideal local orientation ( \\(\\lambda_2\\) = 0, \\(\\lambda_1\\) &gt; 0) it is one, for an isotropic gray value structure ( \\(\\lambda_1\\) = \\(\\lambda_2\\) &gt; 0) it is zero.",
+    "local": "相干范围从0到1。对于理想的局部取向（\\（\\lambda\\u 2\\）=0，\\（\\lambda\\u 1\\）&gt；0）对于各向同性的灰度值结构（\\（\\lambda\\u 1\\）=\\（\\lambda\\u 2\\）&gt；0）为零。"
+  },
+  {
+    "origin": "Source code",
+    "local": "源代码"
+  },
+  {
+    "origin": "You can find source code in the",
+    "local": "您可以在"
+  },
+  {
+    "origin": "of the OpenCV source code library.",
+    "local": "的源代码库。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "An anisotropic image segmentation algorithm consists of a gradient structure tensor calculation, an orientation calculation, a coherency calculation and an orientation and coherency thresholding:",
+    "local": "各向异性图像分割算法包括梯度结构张量计算、方向计算、相干性计算以及方向和相干性阈值："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "A function calcGST() calculates orientation and coherency by using a gradient structure tensor. An input parameter w defines a window size:",
+    "local": "函数calcGST（）使用梯度结构张量计算方向和相干性。输入参数w定义窗口大小："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "The below code applies a thresholds LowThr and HighThr to image orientation and a threshold C_Thr to image coherency calculated by the previous function. LowThr and HighThr define orientation range:",
+    "local": "下面的代码将阈值LowThr和HighThr应用于图像方向，将阈值cuthr应用于由上一个函数计算的图像相干性。LowThr和HighThr定义方向范围："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "And finally we combine thresholding results:",
+    "local": "最后我们结合阈值结果："
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Result",
+    "local": "结果"
+  },
+  {
+    "origin": "Below you can see the real anisotropic image with single direction:",
+    "local": "下面您可以看到单方向的真实各向异性图像："
+  },
+  {
+    "origin": "Anisotropic image with the single direction",
+    "local": "单向各向异性图像"
+  },
+  {
+    "origin": "Below you can see the orientation and coherency of the anisotropic image:",
+    "local": "下面您可以看到各向异性图像的方向和相干性："
+  },
+  {
+    "origin": "Orientation",
+    "local": "方向"
+  },
+  {
+    "origin": "Coherency",
+    "local": "相干性"
+  },
+  {
+    "origin": "Below you can see the segmentation result:",
+    "local": "下面您可以看到分割结果："
+  },
+  {
+    "origin": "Segmentation result",
+    "local": "分割结果"
+  },
+  {
+    "origin": "The result has been computed with w = 52, C_Thr = 0.43, LowThr = 35, HighThr = 57. We can see that the algorithm selected only the areas with one single direction.",
+    "local": "计算结果表明，该算法只选择了一个方向的区域。"
+  },
+  {
+    "origin": "References",
+    "local": "工具书类"
+  },
+  {
+    "origin": "Structure tensor",
+    "local": "结构张量"
+  },
+  {
+    "origin": "- structure tensor description on the wikipedia",
+    "local": "-维基百科中的结构张量描述"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:35 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:35为OpenCV生成，&#160；"
+  }
+]

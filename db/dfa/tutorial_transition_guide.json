@@ -1,0 +1,986 @@
+[
+  {
+    "origin": "OpenCV: Transition guide",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Transition guide",
+    "local": ""
+  },
+  {
+    "origin": "Table of Contents",
+    "local": ""
+  },
+  {
+    "origin": "Changes overview",
+    "local": ""
+  },
+  {
+    "origin": "Transition hints",
+    "local": ""
+  },
+  {
+    "origin": "New headers layout",
+    "local": ""
+  },
+  {
+    "origin": "Modern way to use algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Machine learning module",
+    "local": ""
+  },
+  {
+    "origin": "Features detect",
+    "local": ""
+  },
+  {
+    "origin": "OpenCL",
+    "local": ""
+  },
+  {
+    "origin": "CUDA",
+    "local": ""
+  },
+  {
+    "origin": "Documentation format",
+    "local": ""
+  },
+  {
+    "origin": "Support both versions",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Maksim Shabunin",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Changes overview",
+    "local": ""
+  },
+  {
+    "origin": "This document is intended to software developers who want to migrate their code to OpenCV 3.0.",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV 3.0 introduced many new algorithms and features comparing to version 2.4. Some modules have been rewritten, some have been reorganized. Although most of the algorithms from 2.4 are still present, the interfaces can differ.",
+    "local": ""
+  },
+  {
+    "origin": "This section describes most notable changes in general, all details and examples of transition actions are in the next part of the document.",
+    "local": ""
+  },
+  {
+    "origin": "Contrib repository",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_contrib",
+    "local": ""
+  },
+  {
+    "origin": "This is a place for all new, experimental and non-free algorithms. It does not receive so much attention from the support team comparing to main repository, but the community makes an effort to keep it in a good shape.",
+    "local": ""
+  },
+  {
+    "origin": "To build OpenCV with",
+    "local": ""
+  },
+  {
+    "origin": "contrib",
+    "local": ""
+  },
+  {
+    "origin": "repository, add the following option to your cmake command:",
+    "local": ""
+  },
+  {
+    "origin": "Headers layout",
+    "local": ""
+  },
+  {
+    "origin": "In 2.4 all headers are located in corresponding module subfolder (",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/&lt;module&gt;/&lt;module&gt;.hpp",
+    "local": ""
+  },
+  {
+    "origin": "), in 3.0 there are top-level module headers containing the most of the module functionality:",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/&lt;module&gt;.hpp",
+    "local": ""
+  },
+  {
+    "origin": "and all C-style API definitions have been moved to separate headers (for example opencv2/core/core_c.h).",
+    "local": ""
+  },
+  {
+    "origin": "Algorithm interfaces",
+    "local": ""
+  },
+  {
+    "origin": "General algorithm usage pattern has changed: now it must be created on heap wrapped in smart pointer",
+    "local": ""
+  },
+  {
+    "origin": ". Version 2.4 allowed both stack and heap allocations, directly or via smart pointer.",
+    "local": ""
+  },
+  {
+    "origin": "get",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "set",
+    "local": ""
+  },
+  {
+    "origin": "methods have been removed from the",
+    "local": ""
+  },
+  {
+    "origin": "class along with",
+    "local": ""
+  },
+  {
+    "origin": "CV_INIT_ALGORITHM",
+    "local": ""
+  },
+  {
+    "origin": "macro. In 3.0 all properties have been converted to the pairs of",
+    "local": ""
+  },
+  {
+    "origin": "getProperty/setProperty",
+    "local": ""
+  },
+  {
+    "origin": "pure virtual methods. As a result it is",
+    "local": ""
+  },
+  {
+    "origin": "not",
+    "local": ""
+  },
+  {
+    "origin": "possible to create and use",
+    "local": ""
+  },
+  {
+    "origin": "instance by name (using generic",
+    "local": ""
+  },
+  {
+    "origin": "Algorithm::create(String)",
+    "local": ""
+  },
+  {
+    "origin": "method), one should call corresponding factory method explicitly.",
+    "local": ""
+  },
+  {
+    "origin": "Changed modules",
+    "local": ""
+  },
+  {
+    "origin": "ml",
+    "local": ""
+  },
+  {
+    "origin": "module has been rewritten",
+    "local": ""
+  },
+  {
+    "origin": "highgui",
+    "local": ""
+  },
+  {
+    "origin": "module has been split into parts:",
+    "local": ""
+  },
+  {
+    "origin": "imgcodecs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "videoio",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "highgui",
+    "local": ""
+  },
+  {
+    "origin": "itself",
+    "local": ""
+  },
+  {
+    "origin": "features2d",
+    "local": ""
+  },
+  {
+    "origin": "module have been reorganized (some feature detectors has been moved to",
+    "local": ""
+  },
+  {
+    "origin": "opencv_contrib/xfeatures2d",
+    "local": ""
+  },
+  {
+    "origin": "module)",
+    "local": ""
+  },
+  {
+    "origin": "legacy",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "nonfree",
+    "local": ""
+  },
+  {
+    "origin": "modules have been removed. Some algorithms have been moved to different locations and some have been completely rewritten or removed",
+    "local": ""
+  },
+  {
+    "origin": "CUDA API has been updated (",
+    "local": ""
+  },
+  {
+    "origin": "gpu",
+    "local": ""
+  },
+  {
+    "origin": "module -&gt; several",
+    "local": ""
+  },
+  {
+    "origin": "cuda",
+    "local": ""
+  },
+  {
+    "origin": "modules, namespace",
+    "local": ""
+  },
+  {
+    "origin": "gpu",
+    "local": ""
+  },
+  {
+    "origin": "-&gt; namespace",
+    "local": ""
+  },
+  {
+    "origin": "cuda",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "OpenCL API has changed (",
+    "local": ""
+  },
+  {
+    "origin": "ocl",
+    "local": ""
+  },
+  {
+    "origin": "module has been removed, separate",
+    "local": ""
+  },
+  {
+    "origin": "ocl::",
+    "local": ""
+  },
+  {
+    "origin": "implementations -&gt; Transparent API)",
+    "local": ""
+  },
+  {
+    "origin": "Some other methods and classes have been relocated",
+    "local": ""
+  },
+  {
+    "origin": "Transition hints",
+    "local": ""
+  },
+  {
+    "origin": "This section describes concrete actions with examples.",
+    "local": ""
+  },
+  {
+    "origin": "Some changes made in the latest 2.4.11 OpenCV version allow you to prepare current codebase to migration:",
+    "local": ""
+  },
+  {
+    "origin": "function is now available",
+    "local": ""
+  },
+  {
+    "origin": "opencv2/&lt;module&gt;.hpp",
+    "local": ""
+  },
+  {
+    "origin": "headers have been created",
+    "local": ""
+  },
+  {
+    "origin": "New headers layout",
+    "local": ""
+  },
+  {
+    "origin": "Note:",
+    "local": ""
+  },
+  {
+    "origin": "Changes intended to ease the migration have been made in OpenCV 3.0, thus the following instructions are not necessary, but recommended.",
+    "local": ""
+  },
+  {
+    "origin": "Replace inclusions of old module headers:",
+    "local": ""
+  },
+  {
+    "origin": "Modern way to use algorithm",
+    "local": ""
+  },
+  {
+    "origin": "Algorithm instances must be created with",
+    "local": ""
+  },
+  {
+    "origin": "function or corresponding static factory method if available:",
+    "local": ""
+  },
+  {
+    "origin": "Other ways are deprecated:",
+    "local": ""
+  },
+  {
+    "origin": "Algorithm properties should be accessed via corresponding virtual methods,",
+    "local": ""
+  },
+  {
+    "origin": "getSomeProperty/setSomeProperty",
+    "local": ""
+  },
+  {
+    "origin": ", generic",
+    "local": ""
+  },
+  {
+    "origin": "get/set",
+    "local": ""
+  },
+  {
+    "origin": "methods have been removed:",
+    "local": ""
+  },
+  {
+    "origin": "Remove",
+    "local": ""
+  },
+  {
+    "origin": "calls",
+    "local": ""
+  },
+  {
+    "origin": "Machine learning module",
+    "local": ""
+  },
+  {
+    "origin": "Since this module has been rewritten, it will take some effort to adapt your software to it. All algorithms are located in separate",
+    "local": ""
+  },
+  {
+    "origin": "ml",
+    "local": ""
+  },
+  {
+    "origin": "namespace along with their base class",
+    "local": ""
+  },
+  {
+    "origin": "StatModel",
+    "local": ""
+  },
+  {
+    "origin": ". Separate",
+    "local": ""
+  },
+  {
+    "origin": "SomeAlgoParams",
+    "local": ""
+  },
+  {
+    "origin": "classes have been replaced with a sets of corresponding",
+    "local": ""
+  },
+  {
+    "origin": "getProperty/setProperty",
+    "local": ""
+  },
+  {
+    "origin": "methods.",
+    "local": ""
+  },
+  {
+    "origin": "The following table illustrates correspondence between 2.4 and 3.0 machine learning classes.",
+    "local": ""
+  },
+  {
+    "origin": "3.0",
+    "local": ""
+  },
+  {
+    "origin": "CvStatModel",
+    "local": ""
+  },
+  {
+    "origin": "CvNormalBayesClassifier",
+    "local": ""
+  },
+  {
+    "origin": "CvKNearest",
+    "local": ""
+  },
+  {
+    "origin": "CvSVM",
+    "local": ""
+  },
+  {
+    "origin": "CvDTree",
+    "local": ""
+  },
+  {
+    "origin": "CvBoost",
+    "local": ""
+  },
+  {
+    "origin": "CvGBTrees",
+    "local": ""
+  },
+  {
+    "origin": "Not implemented",
+    "local": ""
+  },
+  {
+    "origin": "CvRTrees",
+    "local": ""
+  },
+  {
+    "origin": "CvERTrees",
+    "local": ""
+  },
+  {
+    "origin": "Not implemented",
+    "local": ""
+  },
+  {
+    "origin": "EM",
+    "local": ""
+  },
+  {
+    "origin": "CvANN_MLP",
+    "local": ""
+  },
+  {
+    "origin": "Not implemented",
+    "local": ""
+  },
+  {
+    "origin": "CvMLData",
+    "local": ""
+  },
+  {
+    "origin": "Although rewritten",
+    "local": ""
+  },
+  {
+    "origin": "ml",
+    "local": ""
+  },
+  {
+    "origin": "algorithms in 3.0 allow you to load old trained models from",
+    "local": ""
+  },
+  {
+    "origin": "xml/yml",
+    "local": ""
+  },
+  {
+    "origin": "file, deviations in prediction process are possible.",
+    "local": ""
+  },
+  {
+    "origin": "The following code snippets from the",
+    "local": ""
+  },
+  {
+    "origin": "example illustrate differences in model training process:",
+    "local": ""
+  },
+  {
+    "origin": "Features detect",
+    "local": ""
+  },
+  {
+    "origin": "Some algorithms (FREAK, BRIEF, SIFT, SURF) has been moved to",
+    "local": ""
+  },
+  {
+    "origin": "opencv_contrib",
+    "local": ""
+  },
+  {
+    "origin": "repository, to",
+    "local": ""
+  },
+  {
+    "origin": "xfeatures2d",
+    "local": ""
+  },
+  {
+    "origin": "module,",
+    "local": ""
+  },
+  {
+    "origin": "xfeatures2d",
+    "local": ""
+  },
+  {
+    "origin": "namespace. Their interface has been also changed (inherit from",
+    "local": ""
+  },
+  {
+    "origin": "base class).",
+    "local": ""
+  },
+  {
+    "origin": "List of",
+    "local": ""
+  },
+  {
+    "origin": "xfeatures2d",
+    "local": ""
+  },
+  {
+    "origin": "module classes:",
+    "local": ""
+  },
+  {
+    "origin": "- Class for computing BRIEF descriptors (2.4 location:",
+    "local": ""
+  },
+  {
+    "origin": "features2d",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "- Class implementing the FREAK (Fast Retina Keypoint) keypoint descriptor (2.4 location:",
+    "local": ""
+  },
+  {
+    "origin": "features2d",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "- The class implements the CenSurE detector (2.4 location:",
+    "local": ""
+  },
+  {
+    "origin": "features2d",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "cv::xfeatures2d::SIFT - Class for extracting keypoints and computing descriptors using the Scale Invariant Feature Transform (SIFT) algorithm (2.4 location:",
+    "local": ""
+  },
+  {
+    "origin": "nonfree",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "- Class for extracting Speeded Up Robust Features from an image (2.4 location:",
+    "local": ""
+  },
+  {
+    "origin": "nonfree",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Following steps are needed:",
+    "local": ""
+  },
+  {
+    "origin": "Add",
+    "local": ""
+  },
+  {
+    "origin": "opencv_contrib",
+    "local": ""
+  },
+  {
+    "origin": "to compilation process",
+    "local": ""
+  },
+  {
+    "origin": "Include",
+    "local": ""
+  },
+  {
+    "origin": "header",
+    "local": ""
+  },
+  {
+    "origin": "Use namespace",
+    "local": ""
+  },
+  {
+    "origin": "Replace",
+    "local": ""
+  },
+  {
+    "origin": "calls with",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "if needed",
+    "local": ""
+  },
+  {
+    "origin": "Some classes now use general methods",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "provided by",
+    "local": ""
+  },
+  {
+    "origin": "base class instead of custom",
+    "local": ""
+  },
+  {
+    "origin": "Following code snippets illustrate the difference (from",
+    "local": ""
+  },
+  {
+    "origin": "example):",
+    "local": ""
+  },
+  {
+    "origin": "OpenCL",
+    "local": ""
+  },
+  {
+    "origin": "All specialized",
+    "local": ""
+  },
+  {
+    "origin": "implementations has been hidden behind general C++ algorithm interface. Now the function execution path can be selected dynamically at runtime: CPU or OpenCL; this mechanism is also called \"Transparent API\".",
+    "local": ""
+  },
+  {
+    "origin": "New class",
+    "local": ""
+  },
+  {
+    "origin": "is intended to hide data exchange with OpenCL device in a convenient way.",
+    "local": ""
+  },
+  {
+    "origin": "Following example illustrate API modifications (from",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV site",
+    "local": ""
+  },
+  {
+    "origin": "):",
+    "local": ""
+  },
+  {
+    "origin": "OpenCL-aware code OpenCV-2.x",
+    "local": ""
+  },
+  {
+    "origin": "OpenCL-aware code OpenCV-3.x",
+    "local": ""
+  },
+  {
+    "origin": "CUDA",
+    "local": ""
+  },
+  {
+    "origin": "CUDA modules has been moved into opencv_contrib repository.",
+    "local": ""
+  },
+  {
+    "origin": "cuda",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudaarithm",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudabgsegm",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudacodec",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudafeatures2d",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudafilters",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudaimgproc",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudalegacy",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudaoptflow",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudastereo",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudawarping",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "cudev",
+    "local": ""
+  },
+  {
+    "origin": "-",
+    "local": ""
+  },
+  {
+    "origin": "Documentation format",
+    "local": ""
+  },
+  {
+    "origin": "Documentation has been converted to Doxygen format. You can find updated documentation writing guide in",
+    "local": ""
+  },
+  {
+    "origin": "Tutorials",
+    "local": ""
+  },
+  {
+    "origin": "section of",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "reference documentation (",
+    "local": ""
+  },
+  {
+    "origin": ").",
+    "local": ""
+  },
+  {
+    "origin": "Support both versions",
+    "local": ""
+  },
+  {
+    "origin": "In some cases it is possible to support both versions of OpenCV.",
+    "local": ""
+  },
+  {
+    "origin": "Source code",
+    "local": ""
+  },
+  {
+    "origin": "To check library major version in your application source code, the following method should be used:",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Do not use",
+    "local": ""
+  },
+  {
+    "origin": "CV_VERSION_MAJOR",
+    "local": ""
+  },
+  {
+    "origin": ", it has different meaning for 2.4 and 3.x branches!",
+    "local": ""
+  },
+  {
+    "origin": "Build system",
+    "local": ""
+  },
+  {
+    "origin": "It is possible to link different modules or enable/disable some of the features in your application by checking library version in the build system. Standard cmake or pkg-config variables can be used for this:",
+    "local": ""
+  },
+  {
+    "origin": "for cmake will contain full version: \"2.4.11\" or \"3.0.0\" for example",
+    "local": ""
+  },
+  {
+    "origin": "for cmake will contain only major version number: 2 or 3",
+    "local": ""
+  },
+  {
+    "origin": "pkg-config file has standard field",
+    "local": ""
+  },
+  {
+    "origin": "Example:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

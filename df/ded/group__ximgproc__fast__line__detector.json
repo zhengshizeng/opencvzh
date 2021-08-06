@@ -1,0 +1,302 @@
+[
+  {
+    "origin": "OpenCV: Fast line detector",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Fast line detector",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Class implementing the FLD (Fast Line Detector) algorithm described in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(int _length_threshold=10, float _distance_threshold=1.414213562f, double _canny_th1=50.0, double _canny_th2=50.0, int _canny_aperture_size=3, bool _do_merge=false)",
+    "local": ""
+  },
+  {
+    "origin": "Creates a smart pointer to a",
+    "local": ""
+  },
+  {
+    "origin": "object and initializes it.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createFastLineDetector()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::ximgproc::createFastLineDetector",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "_length_threshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "_distance_threshold",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "_canny_th1",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "_canny_th2",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "_canny_aperture_size",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "_do_merge",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.createFastLineDetector(",
+    "local": ""
+  },
+  {
+    "origin": "[, _length_threshold[, _distance_threshold[, _canny_th1[, _canny_th2[, _canny_aperture_size[, _do_merge]]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Creates a smart pointer to a",
+    "local": ""
+  },
+  {
+    "origin": "object and initializes it.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "_length_threshold",
+    "local": ""
+  },
+  {
+    "origin": "10 - Segment shorter than this will be discarded",
+    "local": ""
+  },
+  {
+    "origin": "_distance_threshold",
+    "local": ""
+  },
+  {
+    "origin": "1.41421356 - A point placed from a hypothesis line segment farther than this will be regarded as an outlier",
+    "local": ""
+  },
+  {
+    "origin": "_canny_th1",
+    "local": ""
+  },
+  {
+    "origin": "50 - First threshold for hysteresis procedure in",
+    "local": ""
+  },
+  {
+    "origin": "_canny_th2",
+    "local": ""
+  },
+  {
+    "origin": "50 - Second threshold for hysteresis procedure in",
+    "local": ""
+  },
+  {
+    "origin": "_canny_aperture_size",
+    "local": ""
+  },
+  {
+    "origin": "3 - Aperturesize for the sobel operator in",
+    "local": ""
+  },
+  {
+    "origin": ". If zero,",
+    "local": ""
+  },
+  {
+    "origin": "is not applied and the input image is taken as an edge image.",
+    "local": ""
+  },
+  {
+    "origin": "_do_merge",
+    "local": ""
+  },
+  {
+    "origin": "false - If true, incremental merging of segments will be performed",
+    "local": ""
+  },
+  {
+    "origin": "Examples:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by",
+    "local": ""
+  }
+]

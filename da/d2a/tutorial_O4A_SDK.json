@@ -1,0 +1,534 @@
+[
+  {
+    "origin": "OpenCV: OpenCV4Android SDK",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV4Android SDK",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Vsevolod Glumov",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial is deprecated.",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial was designed to help you with installation and configuration of OpenCV4Android SDK.",
+    "local": ""
+  },
+  {
+    "origin": "This guide was written with MS Windows 7 in mind, though it should work with GNU Linux and Apple Mac OS as well.",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial assumes you have the following software installed and configured:",
+    "local": ""
+  },
+  {
+    "origin": "JDK",
+    "local": ""
+  },
+  {
+    "origin": "Android SDK and NDK",
+    "local": ""
+  },
+  {
+    "origin": "Eclipse IDE",
+    "local": ""
+  },
+  {
+    "origin": "ADT and CDT plugins for Eclipse",
+    "local": ""
+  },
+  {
+    "origin": "If you need help with anything of the above, you may refer to our",
+    "local": ""
+  },
+  {
+    "origin": "guide.",
+    "local": ""
+  },
+  {
+    "origin": "If you encounter any error after thoroughly following these steps, feel free to contact us via",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV4Android",
+    "local": ""
+  },
+  {
+    "origin": "discussion group or OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Q&amp;A forum",
+    "local": ""
+  },
+  {
+    "origin": ". We'll do our best to help you out.",
+    "local": ""
+  },
+  {
+    "origin": "General info",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV4Android SDK package enables development of Android applications with use of OpenCV library.",
+    "local": ""
+  },
+  {
+    "origin": "The structure of package contents looks as follows:",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV-2.4.9-android-sdk |_ apk | |_ OpenCV_2.4.9_binary_pack_armv7a.apk | |_ OpenCV_2.4.9_Manager_2.18_XXX.apk | |_ doc |_ samples |_ sdk | |_ etc | |_ java | |_ native | |_ 3rdparty | |_ jni | |_ libs | |_ armeabi | |_ armeabi-v7a | |_ x86 | |_ LICENSE |_ README.android",
+    "local": ""
+  },
+  {
+    "origin": "folder contains OpenCV API and libraries for Android:",
+    "local": ""
+  },
+  {
+    "origin": "folder contains an Android library Eclipse project providing OpenCV Java API that can be imported into developer's workspace;",
+    "local": ""
+  },
+  {
+    "origin": "folder contains OpenCV C++ headers (for JNI code) and native Android libraries (*.so and *.a) for ARM-v5, ARM-v7a and x86 architectures;",
+    "local": ""
+  },
+  {
+    "origin": "folder contains Haar and LBP cascades distributed with OpenCV.",
+    "local": ""
+  },
+  {
+    "origin": "folder contains Android packages that should be installed on the target Android device to enable OpenCV library access via OpenCV Manager API (see details below).",
+    "local": ""
+  },
+  {
+    "origin": "On production devices that have access to Google Play Market (and Internet) these packages will be installed from Market on the first start of an application using OpenCV Manager API. But devkits without Market or Internet connection require this packages to be installed manually. Install the Manager.apk and optional binary_pack.apk if it needed. See",
+    "local": ""
+  },
+  {
+    "origin": "for details.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Installation from Internet is the preferable way since OpenCV team may publish updated versions of this packages on the Market.",
+    "local": ""
+  },
+  {
+    "origin": "folder contains sample applications projects and their prebuilt packages (APK). Import them into Eclipse workspace (like described below) and browse the code to learn possible ways of OpenCV use on Android.",
+    "local": ""
+  },
+  {
+    "origin": "folder contains various OpenCV documentation in PDF format. It's also available online at",
+    "local": ""
+  },
+  {
+    "origin": "http://docs.opencv.org",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The most recent docs (nightly build) are at",
+    "local": ""
+  },
+  {
+    "origin": "http://docs.opencv.org/master",
+    "local": ""
+  },
+  {
+    "origin": ". Generally, it's more up-to-date, but can refer to not-yet-released functionality.",
+    "local": ""
+  },
+  {
+    "origin": "I'm not sure that this is the best place to talk about OpenCV Manager",
+    "local": ""
+  },
+  {
+    "origin": "Starting from version 2.4.3 OpenCV4Android SDK uses OpenCV Manager API for library initialization. OpenCV Manager is an Android service based solution providing the following benefits for OpenCV applications developers:",
+    "local": ""
+  },
+  {
+    "origin": "Compact apk-size, since all applications use the same binaries from Manager and do not store native libs within themselves;",
+    "local": ""
+  },
+  {
+    "origin": "Hardware specific optimizations are automatically enabled on all supported platforms;",
+    "local": ""
+  },
+  {
+    "origin": "Automatic updates and bug fixes;",
+    "local": ""
+  },
+  {
+    "origin": "Trusted OpenCV library source. All packages with OpenCV are published on Google Play;",
+    "local": ""
+  },
+  {
+    "origin": "Manual OpenCV4Android SDK setup",
+    "local": ""
+  },
+  {
+    "origin": "Get the OpenCV4Android SDK",
+    "local": ""
+  },
+  {
+    "origin": "Go to the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV download page on SourceForge",
+    "local": ""
+  },
+  {
+    "origin": "and download the latest available version. This tutorial is based on this package:",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV-2.4.9-android-sdk.zip",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Create a new folder for Android with OpenCV development. For this tutorial we have unpacked OpenCV SDK to the",
+    "local": ""
+  },
+  {
+    "origin": "directory.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Better to use a path without spaces in it. Otherwise you may have problems with ndk-build.",
+    "local": ""
+  },
+  {
+    "origin": "Unpack the SDK archive into the chosen directory.",
+    "local": ""
+  },
+  {
+    "origin": "You can unpack it using any popular archiver (e.g with 7-Zip):",
+    "local": ""
+  },
+  {
+    "origin": "On Unix you can use the following command:",
+    "local": ""
+  },
+  {
+    "origin": "Import OpenCV library and samples to the Eclipse",
+    "local": ""
+  },
+  {
+    "origin": "Start Eclipse and choose your workspace location.",
+    "local": ""
+  },
+  {
+    "origin": "We recommend to start working with OpenCV for Android from a new clean workspace. A new Eclipse workspace can for example be created in the folder where you have unpacked OpenCV4Android SDK package:",
+    "local": ""
+  },
+  {
+    "origin": "Import OpenCV library and samples into workspace.",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV library is packed as a ready-for-use",
+    "local": ""
+  },
+  {
+    "origin": "Android Library Project",
+    "local": ""
+  },
+  {
+    "origin": ". You can simply reference it in your projects.",
+    "local": ""
+  },
+  {
+    "origin": "Each sample included into the",
+    "local": ""
+  },
+  {
+    "origin": "is a regular Android project that already references OpenCV library. Follow the steps below to import OpenCV and samples into the workspace:",
+    "local": ""
+  },
+  {
+    "origin": "Right click on the Package Explorer window and choose Import... option from the context menu:",
+    "local": ""
+  },
+  {
+    "origin": "In the main panel select General &ndash;&gt; Existing Projects into Workspace and press Next button:",
+    "local": ""
+  },
+  {
+    "origin": "In the Select root directory field locate your OpenCV package folder. Eclipse should automatically locate OpenCV library and samples:",
+    "local": ""
+  },
+  {
+    "origin": "Click Finish button to complete the import operation.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV samples are indeed",
+    "local": ""
+  },
+  {
+    "origin": "dependent",
+    "local": ""
+  },
+  {
+    "origin": "on OpenCV library project so don't forget to import it to your workspace as well.",
+    "local": ""
+  },
+  {
+    "origin": "After clicking Finish button Eclipse will load all selected projects into workspace, and you have to wait some time while it is building OpenCV samples. Just give a minute to Eclipse to complete initialization.",
+    "local": ""
+  },
+  {
+    "origin": "Once Eclipse completes build you will have the clean workspace without any build errors:",
+    "local": ""
+  },
+  {
+    "origin": "Running OpenCV Samples",
+    "local": ""
+  },
+  {
+    "origin": "At this point you should be able to build and run the samples. Keep in mind, that face-detection and Tutorial 2 - Mixed Processing include some native code and require Android NDK and NDK/CDT plugin for Eclipse to build working applications. If you haven't installed these tools, see the corresponding section of",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "warning",
+    "local": ""
+  },
+  {
+    "origin": "Please consider that some samples use Android Java Camera API, which is accessible with an AVD.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Recent *Android SDK tools, revision 19+* can run ARM v7a OS images but they available not for all Android versions.",
+    "local": ""
+  },
+  {
+    "origin": "Well, running samples from Eclipse is very simple:",
+    "local": ""
+  },
+  {
+    "origin": "Connect your device with adb tool from Android SDK or create an emulator with camera support.",
+    "local": ""
+  },
+  {
+    "origin": "See",
+    "local": ""
+  },
+  {
+    "origin": "Managing Virtual Devices",
+    "local": ""
+  },
+  {
+    "origin": "document for help with Android Emulator.",
+    "local": ""
+  },
+  {
+    "origin": "See",
+    "local": ""
+  },
+  {
+    "origin": "Using Hardware Devices",
+    "local": ""
+  },
+  {
+    "origin": "for help with real devices (not emulators).",
+    "local": ""
+  },
+  {
+    "origin": "Select project you want to start in Package Explorer and just press Ctrl + F11 or select option Run &ndash;&gt; Run from the main menu, or click Run button on the toolbar.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Android Emulator can take several minutes to start. So, please, be patient. * On the first run Eclipse will ask you about the running mode for your application:",
+    "local": ""
+  },
+  {
+    "origin": "Select the Android Application option and click OK button. Eclipse will install and run the sample.",
+    "local": ""
+  },
+  {
+    "origin": "Chances are that on the first launch you will not have the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV Manager",
+    "local": ""
+  },
+  {
+    "origin": "package installed. In this case you will see the following message:",
+    "local": ""
+  },
+  {
+    "origin": "To get rid of the message you will need to install OpenCV Manager and the appropriate OpenCV binary pack. Simply tap Yes if you have",
+    "local": ""
+  },
+  {
+    "origin": "Google Play Market",
+    "local": ""
+  },
+  {
+    "origin": "installed on your device/emulator. It will redirect you to the corresponding page on",
+    "local": ""
+  },
+  {
+    "origin": "Google Play Market",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "If you have no access to the",
+    "local": ""
+  },
+  {
+    "origin": "Market",
+    "local": ""
+  },
+  {
+    "origin": ", which is often the case with emulators - you will need to install the packages from OpenCV4Android SDK folder manually. See",
+    "local": ""
+  },
+  {
+    "origin": "for details.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "armeabi, armv7a-neon, arm7a-neon-android8, mips and x86 stand for platform targets:",
+    "local": ""
+  },
+  {
+    "origin": "armeabi is for ARM v5 and ARM v6 architectures with Android API 8+,",
+    "local": ""
+  },
+  {
+    "origin": "armv7a-neon is for NEON-optimized ARM v7 with Android API 9+,",
+    "local": ""
+  },
+  {
+    "origin": "arm7a-neon-android8 is for NEON-optimized ARM v7 with Android API 8,",
+    "local": ""
+  },
+  {
+    "origin": "mips is for MIPS architecture with Android API 9+,",
+    "local": ""
+  },
+  {
+    "origin": "x86 is for Intel x86 CPUs with Android API 9+.",
+    "local": ""
+  },
+  {
+    "origin": "If using hardware device for testing/debugging, run the following command to learn its CPU architecture:",
+    "local": ""
+  },
+  {
+    "origin": "If you're using an AVD emulator, go Window &gt; AVD Manager to see the list of available devices. Click Edit in the context menu of the selected device. In the window, which then pop-ups, find the CPU field.",
+    "local": ""
+  },
+  {
+    "origin": "You may also see section",
+    "local": ""
+  },
+  {
+    "origin": "for details.",
+    "local": ""
+  },
+  {
+    "origin": "When done, you will be able to run OpenCV samples on your device/emulator seamlessly.",
+    "local": ""
+  },
+  {
+    "origin": "Here is Sample - image-manipulations sample, running on top of stock camera-preview of the emulator.",
+    "local": ""
+  },
+  {
+    "origin": "What's next",
+    "local": ""
+  },
+  {
+    "origin": "Now, when you have your instance of OpenCV4Adroid SDK set up and configured, you may want to proceed to using OpenCV in your own application. You can learn how to do that in a separate",
+    "local": ""
+  },
+  {
+    "origin": "tutorial.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": ""
+  }
+]

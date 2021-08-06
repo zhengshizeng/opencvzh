@@ -1,0 +1,1166 @@
+[
+  {
+    "origin": "OpenCV: cv::dnn::DetectionModel Class Reference",
+    "local": "OpenCV:cv:：dnn:：DetectionModel类引用"
+  },
+  {
+    "origin": "OpenCV",
+    "local": "打开CV"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::dnn::DetectionModel Class Reference",
+    "local": "cv:：dnn:：DetectionModel类引用"
+  },
+  {
+    "origin": "This class represents high-level API for object detection networks.",
+    "local": "此类表示对象检测网络的高级API。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Inheritance diagram for cv::dnn::DetectionModel:",
+    "local": "cv:：dnn:：DetectionModel的继承关系图："
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;model, const",
+    "local": "&amp；模型，常数"
+  },
+  {
+    "origin": "&amp;config=\"\")",
+    "local": "&amp；配置=“”）"
+  },
+  {
+    "origin": "Create detection model from network represented in one of the supported formats. An order of",
+    "local": "从以支持的格式之一表示的网络创建检测模型。秩序"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "arguments does not matter.",
+    "local": "争论并不重要。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;network)",
+    "local": "&amp；网络）"
+  },
+  {
+    "origin": "Create model from deep learning network.",
+    "local": "从深度学习网络创建模型。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "frame, std::vector&lt; int &gt; &amp;classIds, std::vector&lt; float &gt; &amp;confidences, std::vector&lt;",
+    "local": "帧，std：：向量&lt；内部&gt&amp；ClassID，标准：：向量&lt；浮动&gt&amp；信心，标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;boxes, float confThreshold=0.5f, float nmsThreshold=0.0f)",
+    "local": "&gt；&quot；&amp；框，浮动阈值=0.5f，浮动阈值=0.0f）"
+  },
+  {
+    "origin": "Given the",
+    "local": "鉴于"
+  },
+  {
+    "origin": "frame, create input blob, run net and return result detections.",
+    "local": "frame，创建输入blob，运行net并返回结果检测。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "Getter for nmsAcrossClasses. This variable defaults to false, such that when non max suppression is used during the",
+    "local": "类的Getter。此变量默认为false，以便在"
+  },
+  {
+    "origin": "function, it will do so only per-class.",
+    "local": "函数，它将仅对每个类执行此操作。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(bool value)",
+    "local": "（布尔值）"
+  },
+  {
+    "origin": "nmsAcrossClasses defaults to false, such that when non max suppression is used during the",
+    "local": "nmsAcrossClasses默认为false，以便在"
+  },
+  {
+    "origin": "function, it will do so per-class. This function allows you to toggle this behaviour.",
+    "local": "函数，它将按类执行。此函数允许您切换此行为。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Member Functions inherited from",
+    "local": "公共成员函数继承自"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;)=default",
+    "local": "&amp；）=违约"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;&amp;)=default",
+    "local": "&amp&amp；）=违约"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;model, const",
+    "local": "&amp；模型，常数"
+  },
+  {
+    "origin": "&amp;config=\"\")",
+    "local": "&amp；配置=“”）"
+  },
+  {
+    "origin": "Create model from deep learning network represented in one of the supported formats. An order of",
+    "local": "从支持的格式之一表示的深度学习网络创建模型。秩序"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "arguments does not matter.",
+    "local": "争论并不重要。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;network)",
+    "local": "&amp；网络）"
+  },
+  {
+    "origin": "Create model from deep learning network.",
+    "local": "从深度学习网络创建模型。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Impl *",
+    "local": "Impl公司*"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "Impl &amp;",
+    "local": "实施（&A）；"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "() const",
+    "local": "（）常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;)=default",
+    "local": "&amp；）=违约"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "&amp;&amp;)=default",
+    "local": "&amp&amp；）=违约"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "frame,",
+    "local": "框架，"
+  },
+  {
+    "origin": "outs) const",
+    "local": "（2）施工"
+  },
+  {
+    "origin": "Given the",
+    "local": "鉴于"
+  },
+  {
+    "origin": "frame, create input blob, run net and return the output",
+    "local": "frame，创建输入blob，运行net并返回输出"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(bool crop)",
+    "local": "（布尔作物）"
+  },
+  {
+    "origin": "Set flag crop for frame.",
+    "local": "设置帧的标记裁剪。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Set mean value for frame.",
+    "local": "设置帧的平均值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "void",
+    "local": "无效"
+  },
+  {
+    "origin": "(double scale=1.0, const",
+    "local": "（双刻度=1.0，常数）"
+  },
+  {
+    "origin": "&amp;size=",
+    "local": "&amp；大小="
+  },
+  {
+    "origin": "(), const",
+    "local": "（），常量"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "(), bool swapRB=false, bool crop=false)",
+    "local": "（），bool swapRB=false，bool crop=false）"
+  },
+  {
+    "origin": "Set preprocessing parameters for frame.",
+    "local": "设置帧的预处理参数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(double scale)",
+    "local": "（双刻度）"
+  },
+  {
+    "origin": "Set scalefactor value for frame.",
+    "local": "为帧设置scalefactor值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;size)",
+    "local": "&amp；尺寸）"
+  },
+  {
+    "origin": "Set input size for frame.",
+    "local": "设置帧的输入大小。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(int width, int height)",
+    "local": "（int宽度，int高度）"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(bool swapRB)",
+    "local": "（布尔Swaprb）"
+  },
+  {
+    "origin": "Set flag swapRB for frame.",
+    "local": "为帧设置标志swapRB。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "backendId)",
+    "local": "后端）"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "targetId)",
+    "local": "（目标）"
+  },
+  {
+    "origin": "Additional Inherited Members",
+    "local": "其他继承成员"
+  },
+  {
+    "origin": "Protected Attributes inherited from",
+    "local": "继承自的受保护属性"
+  },
+  {
+    "origin": "&lt; Impl &gt;",
+    "local": "&lt；使用&gt；"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "This class represents high-level API for object detection networks.",
+    "local": "此类表示对象检测网络的高级API。"
+  },
+  {
+    "origin": "allows to set params for preprocessing input image.",
+    "local": "允许为预处理输入图像设置参数。"
+  },
+  {
+    "origin": "creates net from file with trained weights and config, sets preprocessing input, runs forward pass and return result detections. For",
+    "local": "从具有训练权重和配置的文件创建网络，设置预处理输入，向前运行传递并返回结果检测。为了"
+  },
+  {
+    "origin": "SSD, Faster R-CNN, YOLO topologies are supported.",
+    "local": "支持SSD、更快的R-CNN和YOLO拓扑。"
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": "建造商和；析构函数文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "DetectionModel()",
+    "local": "检测模型（）"
+  },
+  {
+    "origin": "[1/3]",
+    "local": "[1/3]"
+  },
+  {
+    "origin": "cv::dnn::DetectionModel::DetectionModel",
+    "local": "CV：：DNN：：检测模型：：检测模型"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "model",
+    "local": "模型"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "config",
+    "local": "配置"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "&lt;dnn_DetectionModel object&gt;",
+    "local": "&lt；DNN DetectionModel对象&gt；"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.dnn_DetectionModel(",
+    "local": "cv.dnn\\U检测模型("
+  },
+  {
+    "origin": "model[, config]",
+    "local": "型号[，配置]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&lt;dnn_DetectionModel object&gt;",
+    "local": "&lt；DNN DetectionModel对象&gt；"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.dnn_DetectionModel(",
+    "local": "cv.dnn\\U检测模型("
+  },
+  {
+    "origin": "network",
+    "local": "网络"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Create detection model from network represented in one of the supported formats. An order of",
+    "local": "从以支持的格式之一表示的网络创建检测模型。秩序"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "arguments does not matter.",
+    "local": "争论并不重要。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "[in]",
+    "local": "[英寸]"
+  },
+  {
+    "origin": "model",
+    "local": "模型"
+  },
+  {
+    "origin": "Binary file contains trained weights.",
+    "local": "二进制文件包含训练的权重。"
+  },
+  {
+    "origin": "[in]",
+    "local": "[英寸]"
+  },
+  {
+    "origin": "config",
+    "local": "配置"
+  },
+  {
+    "origin": "Text file contains network configuration.",
+    "local": "文本文件包含网络配置。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "DetectionModel()",
+    "local": "检测模型（）"
+  },
+  {
+    "origin": "[2/3]",
+    "local": "[2/3]"
+  },
+  {
+    "origin": "cv::dnn::DetectionModel::DetectionModel",
+    "local": "CV：：DNN：：检测模型：：检测模型"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;",
+    "local": "&amp；"
+  },
+  {
+    "origin": "network",
+    "local": "网络"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "&lt;dnn_DetectionModel object&gt;",
+    "local": "&lt；DNN DetectionModel对象&gt；"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.dnn_DetectionModel(",
+    "local": "cv.dnn\\U检测模型("
+  },
+  {
+    "origin": "model[, config]",
+    "local": "型号[，配置]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&lt;dnn_DetectionModel object&gt;",
+    "local": "&lt；DNN DetectionModel对象&gt；"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.dnn_DetectionModel(",
+    "local": "cv.dnn\\U检测模型("
+  },
+  {
+    "origin": "network",
+    "local": "网络"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Create model from deep learning network.",
+    "local": "从深度学习网络创建模型。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "[in]",
+    "local": "[英寸]"
+  },
+  {
+    "origin": "network",
+    "local": "网络"
+  },
+  {
+    "origin": "object.",
+    "local": "对象。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "DetectionModel()",
+    "local": "检测模型（）"
+  },
+  {
+    "origin": "[3/3]",
+    "local": "[3/3]"
+  },
+  {
+    "origin": "cv::dnn::DetectionModel::DetectionModel",
+    "local": "CV：：DNN：：检测模型：：检测模型"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "&lt;dnn_DetectionModel object&gt;",
+    "local": "&lt；DNN DetectionModel对象&gt；"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.dnn_DetectionModel(",
+    "local": "cv.dnn\\U检测模型("
+  },
+  {
+    "origin": "model[, config]",
+    "local": "型号[，配置]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "&lt;dnn_DetectionModel object&gt;",
+    "local": "&lt；DNN DetectionModel对象&gt；"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.dnn_DetectionModel(",
+    "local": "cv.dnn\\U检测模型("
+  },
+  {
+    "origin": "network",
+    "local": "网络"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "detect()",
+    "local": "检测（）"
+  },
+  {
+    "origin": "void cv::dnn::DetectionModel::detect",
+    "local": "无效cv:：dnn:：DetectionModel:：detect"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "frame",
+    "local": "框架"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; int &gt; &amp;",
+    "local": "标准：：向量&lt；内部&gt；&gt；amp；"
+  },
+  {
+    "origin": "classIds",
+    "local": "ClassID类"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt; float &gt; &amp;",
+    "local": "标准：：向量&lt；浮动&gt&amp；"
+  },
+  {
+    "origin": "confidences",
+    "local": "信任"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": "标准：：向量&lt；"
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": "&燃气轮机&amp；"
+  },
+  {
+    "origin": "boxes",
+    "local": "盒"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "confThreshold",
+    "local": "confThreshold公司"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "float",
+    "local": "浮动"
+  },
+  {
+    "origin": "nmsThreshold",
+    "local": "NMS阈值"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "classIds, confidences, boxes",
+    "local": "ClassID、机密、盒子"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.dnn_DetectionModel.detect(",
+    "local": "cv.dnn\\检测模型.detect("
+  },
+  {
+    "origin": "frame[, confThreshold[, nmsThreshold]]",
+    "local": "帧[，confThreshold[，nmsThreshold]]"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Given the",
+    "local": "鉴于"
+  },
+  {
+    "origin": "frame, create input blob, run net and return result detections.",
+    "local": "frame，创建输入blob，运行net并返回结果检测。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "[in]",
+    "local": "[英寸]"
+  },
+  {
+    "origin": "frame",
+    "local": "框架"
+  },
+  {
+    "origin": "The input image.",
+    "local": "输入图像。"
+  },
+  {
+    "origin": "[out]",
+    "local": "[输出]"
+  },
+  {
+    "origin": "classIds",
+    "local": "ClassID类"
+  },
+  {
+    "origin": "Class indexes in result detection.",
+    "local": "结果检测中的类索引。"
+  },
+  {
+    "origin": "[out]",
+    "local": "[输出]"
+  },
+  {
+    "origin": "confidences",
+    "local": "信任"
+  },
+  {
+    "origin": "A set of corresponding confidences.",
+    "local": "一套相应的秘密。"
+  },
+  {
+    "origin": "[out]",
+    "local": "[输出]"
+  },
+  {
+    "origin": "boxes",
+    "local": "盒"
+  },
+  {
+    "origin": "A set of bounding boxes.",
+    "local": "一组边界框。"
+  },
+  {
+    "origin": "[in]",
+    "local": "[英寸]"
+  },
+  {
+    "origin": "confThreshold",
+    "local": "confThreshold公司"
+  },
+  {
+    "origin": "A threshold used to filter boxes by confidences.",
+    "local": "用于按信任度筛选框的阈值。"
+  },
+  {
+    "origin": "[in]",
+    "local": "[英寸]"
+  },
+  {
+    "origin": "nmsThreshold",
+    "local": "NMS阈值"
+  },
+  {
+    "origin": "A threshold used in non maximum suppression.",
+    "local": "用于非最大值抑制的阈值。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "getNmsAcrossClasses()",
+    "local": "GetNmsacross类（）"
+  },
+  {
+    "origin": "bool cv::dnn::DetectionModel::getNmsAcrossClasses",
+    "local": "bool cv:：dnn:：DetectionModel:：getNmsAcrossClasses"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.dnn_DetectionModel.getNmsAcrossClasses(",
+    "local": "cv.dnn\\u DetectionModel.getNmsAcrossClasses类("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Getter for nmsAcrossClasses. This variable defaults to false, such that when non max suppression is used during the",
+    "local": "类的Getter。此变量默认为false，以便在"
+  },
+  {
+    "origin": "function, it will do so only per-class.",
+    "local": "函数，它将仅对每个类执行此操作。"
+  },
+  {
+    "origin": "◆",
+    "local": "◆"
+  },
+  {
+    "origin": "setNmsAcrossClasses()",
+    "local": "setNmsAcrossClasses（）"
+  },
+  {
+    "origin": "&amp; cv::dnn::DetectionModel::setNmsAcrossClasses",
+    "local": "&amp；cv:：dnn:：DetectionModel:：SetNmsAcrossClass类"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "bool",
+    "local": "布尔"
+  },
+  {
+    "origin": "value",
+    "local": "价值"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Python:",
+    "local": "蟒蛇："
+  },
+  {
+    "origin": "retval",
+    "local": "复述"
+  },
+  {
+    "origin": "=",
+    "local": "="
+  },
+  {
+    "origin": "cv.dnn_DetectionModel.setNmsAcrossClasses(",
+    "local": "cv.dnn\\u DetectionModel.setNmsAcrossClasses类("
+  },
+  {
+    "origin": "value",
+    "local": "价值"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "nmsAcrossClasses defaults to false, such that when non max suppression is used during the",
+    "local": "nmsAcrossClasses默认为false，以便在"
+  },
+  {
+    "origin": "function, it will do so per-class. This function allows you to toggle this behaviour.",
+    "local": "函数，它将按类执行。此函数允许您切换此行为。"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "[in]",
+    "local": "[英寸]"
+  },
+  {
+    "origin": "value",
+    "local": "价值"
+  },
+  {
+    "origin": "The new value for nmsAcrossClasses",
+    "local": "nmsAcrossClasses的新值"
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/dnn/",
+    "local": "打开CV2/dnn/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:47 for OpenCV by",
+    "local": "于2021年4月2日星期五11:36:47为OpenCV生成"
+  }
+]

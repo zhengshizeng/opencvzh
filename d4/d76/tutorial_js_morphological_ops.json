@@ -1,0 +1,514 @@
+[
+  {
+    "origin": "OpenCV: Morphological Transformations",
+    "local": "OpenCV:形态变换"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Morphological Transformations",
+    "local": "形态变换"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "We will learn different morphological operations like Erosion, Dilation, Opening, Closing etc.",
+    "local": "我们将学习不同的形态操作，如侵蚀，扩张，打开，关闭等。"
+  },
+  {
+    "origin": "We will learn different functions like :",
+    "local": "我们将学习不同的功能，如："
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "etc.",
+    "local": "等。"
+  },
+  {
+    "origin": "Theory",
+    "local": "理论"
+  },
+  {
+    "origin": "Morphological transformations are some simple operations based on the image shape. It is normally performed on binary images. It needs two inputs, one is our original image, second one is called",
+    "local": "形态变换是基于图像形状的一些简单操作。它通常在二值图像上执行。它需要两个输入，一个是我们的原始图像，第二个叫做"
+  },
+  {
+    "origin": "structuring element",
+    "local": "结构元素"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "kernel",
+    "local": "内核"
+  },
+  {
+    "origin": "which decides the nature of operation. Two basic morphological operators are Erosion and Dilation. Then its variant forms like Opening, Closing, Gradient etc also comes into play. We will see them one-by-one with help of following image:",
+    "local": "这决定了行动的性质。两种基本的形态算子是侵蚀算子和扩张算子。然后，它的各种形式，如开放，关闭，梯度等也发挥作用。我们将通过以下图片逐一看到它们："
+  },
+  {
+    "origin": "image",
+    "local": "形象"
+  },
+  {
+    "origin": "1. Erosion",
+    "local": "1.侵蚀"
+  },
+  {
+    "origin": "The basic idea of erosion is just like soil erosion only, it erodes away the boundaries of foreground object (Always try to keep foreground in white). So what it does? The kernel slides through the image (as in 2D convolution). A pixel in the original image (either 1 or 0) will be considered 1 only if all the pixels under the kernel is 1, otherwise it is eroded (made to zero).",
+    "local": "侵蚀的基本概念就像土壤侵蚀一样，它侵蚀了前景物体的边界（总是尽量保持前景为白色）。那它是干什么的？内核在图像中滑动（如二维卷积）。只有当内核下的所有像素都为1时，原始图像中的一个像素（1或0）才会被视为1，否则会被侵蚀（设为0）。"
+  },
+  {
+    "origin": "So what happends is that, all the pixels near boundary will be discarded depending upon the size of kernel. So the thickness or size of the foreground object decreases or simply white region decreases in the image. It is useful for removing small white noises (as we have seen in colorspace chapter), detach two connected objects etc.",
+    "local": "因此，根据内核的大小，边界附近的所有像素都将被丢弃。因此，前景物体的厚度或大小减小，或者只是图像中的白色区域减小。它对于去除小的白噪声（如我们在“颜色空间”一章中看到的那样）、分离两个连接的对象等非常有用。"
+  },
+  {
+    "origin": "We use the function:",
+    "local": "我们使用函数："
+  },
+  {
+    "origin": "(src, dst, kernel, anchor = new",
+    "local": "（src，dst，kernel，anchor=new）"
+  },
+  {
+    "origin": "(-1, -1), iterations = 1, borderType =",
+    "local": "（-1，-1），迭代次数=1，borderType="
+  },
+  {
+    "origin": ", borderValue =",
+    "local": "边界值="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "input image; the number of channels can be arbitrary, but the depth should be one of cv.CV_8U, cv.CV_16U, cv.CV_16S, cv.CV_32F or cv.CV_64F.",
+    "local": "输入图像；地震道的数量可以是任意的，但深度应为cv.cv泳8U、cv.cv泳16U、cv.cv泳16S、cv.cv泳32F或cv.cv泳64F之一。"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "output image of the same size and type as src.",
+    "local": "输出与src大小和类型相同的图像。"
+  },
+  {
+    "origin": "kernel",
+    "local": "内核"
+  },
+  {
+    "origin": "structuring element used for erosion.",
+    "local": "用于侵蚀的结构元素。"
+  },
+  {
+    "origin": "anchor",
+    "local": "锚"
+  },
+  {
+    "origin": "position of the anchor within the element; default value new",
+    "local": "锚在构件内的位置；默认值新建"
+  },
+  {
+    "origin": "(-1, -1) means that the anchor is at the element center.",
+    "local": "（-1，-1）表示锚点位于元素中心。"
+  },
+  {
+    "origin": "iterations",
+    "local": "迭代"
+  },
+  {
+    "origin": "number of times erosion is applied.",
+    "local": "侵蚀次数。"
+  },
+  {
+    "origin": "borderType",
+    "local": "桌子"
+  },
+  {
+    "origin": "pixel extrapolation method(see",
+    "local": "像素外推方法（参见"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "borderValue",
+    "local": "边界值"
+  },
+  {
+    "origin": "border value in case of a constant border",
+    "local": "如果边界为常量，则为border值"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "2. Dilation",
+    "local": "2.扩张"
+  },
+  {
+    "origin": "It is just opposite of erosion. Here, a pixel element is '1' if atleast one pixel under the kernel is '1'. So it increases the white region in the image or size of foreground object increases. Normally, in cases like noise removal, erosion is followed by dilation. Because, erosion removes white noises, but it also shrinks our object. So we dilate it. Since noise is gone, they won't come back, but our object area increases. It is also useful in joining broken parts of an object.",
+    "local": "它与侵蚀正好相反。这里，如果内核下至少有一个像素是“1”，则像素元素是“1”。因此，它增加了图像中的白色区域或前景对象的大小增加。通常情况下，在去除噪音的情况下，腐蚀之后是膨胀。因为，侵蚀去除了白噪声，但它也缩小了我们的物体。所以我们把它放大。既然噪音消失了，它们就不会回来了，但是我们的物体面积增加了。它在连接对象的断开部分时也很有用。"
+  },
+  {
+    "origin": "We use the function:",
+    "local": "我们使用函数："
+  },
+  {
+    "origin": "(src, dst, kernel, anchor = new",
+    "local": "（src，dst，kernel，anchor=new）"
+  },
+  {
+    "origin": "(-1, -1), iterations = 1, borderType =",
+    "local": "（-1，-1），迭代次数=1，borderType="
+  },
+  {
+    "origin": ", borderValue =",
+    "local": "边界值="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "input image; the number of channels can be arbitrary, but the depth should be one of cv.CV_8U, cv.CV_16U, cv.CV_16S, cv.CV_32F or cv.CV_64F.",
+    "local": "输入图像；地震道的数量可以是任意的，但深度应为cv.cv泳8U、cv.cv泳16U、cv.cv泳16S、cv.cv泳32F或cv.cv泳64F之一。"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "output image of the same size and type as src.",
+    "local": "输出与src大小和类型相同的图像。"
+  },
+  {
+    "origin": "kernel",
+    "local": "内核"
+  },
+  {
+    "origin": "structuring element used for dilation.",
+    "local": "用于扩张的结构元素。"
+  },
+  {
+    "origin": "anchor",
+    "local": "锚"
+  },
+  {
+    "origin": "position of the anchor within the element; default value new",
+    "local": "锚在构件内的位置；默认值新建"
+  },
+  {
+    "origin": "(-1, -1) means that the anchor is at the element center.",
+    "local": "（-1，-1）表示锚点位于元素中心。"
+  },
+  {
+    "origin": "iterations",
+    "local": "迭代"
+  },
+  {
+    "origin": "number of times dilation is applied.",
+    "local": "应用扩张的次数。"
+  },
+  {
+    "origin": "borderType",
+    "local": "桌子"
+  },
+  {
+    "origin": "pixel extrapolation method(see",
+    "local": "像素外推方法（参见"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "borderValue",
+    "local": "边界值"
+  },
+  {
+    "origin": "border value in case of a constant border",
+    "local": "如果边界为常量，则为border值"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "3. Opening",
+    "local": "3.打开"
+  },
+  {
+    "origin": "Opening is just another name of",
+    "local": "开放只是另一个名字"
+  },
+  {
+    "origin": "erosion followed by dilation",
+    "local": "腐蚀后膨胀"
+  },
+  {
+    "origin": ". It is useful in removing noise.",
+    "local": ". 它有助于消除噪音。"
+  },
+  {
+    "origin": "We use the function:",
+    "local": "我们使用函数："
+  },
+  {
+    "origin": "(src, dst, op, kernel, anchor = new",
+    "local": "（src，dst，op，kernel，anchor=new）"
+  },
+  {
+    "origin": "(-1, -1), iterations = 1, borderType =",
+    "local": "（-1，-1），迭代次数=1，borderType="
+  },
+  {
+    "origin": ", borderValue =",
+    "local": "边界值="
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "src",
+    "local": "src公司"
+  },
+  {
+    "origin": "source image. The number of channels can be arbitrary. The depth should be one of cv.CV_8U, cv.CV_16U, cv.CV_16S, cv.CV_32F or cv.CV_64F",
+    "local": "源图像。通道的数量可以是任意的。深度应为cv.cv_8U、cv.cv_16U、cv.cv_16S、cv.cv_32F或cv.cv_64F之一"
+  },
+  {
+    "origin": "dst",
+    "local": "夏令时"
+  },
+  {
+    "origin": "destination image of the same size and type as source image.",
+    "local": "与源图像大小和类型相同的目标图像。"
+  },
+  {
+    "origin": "op",
+    "local": "op公司"
+  },
+  {
+    "origin": "type of a morphological operation, (see",
+    "local": "形态学运算的类型（参见"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "kernel",
+    "local": "内核"
+  },
+  {
+    "origin": "structuring element. It can be created using",
+    "local": "结构元素。可以使用"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "anchor",
+    "local": "锚"
+  },
+  {
+    "origin": "anchor position with the kernel. Negative values mean that the anchor is at the kernel center.",
+    "local": "用内核定位。负值表示锚点位于内核中心。"
+  },
+  {
+    "origin": "iterations",
+    "local": "迭代"
+  },
+  {
+    "origin": "number of times dilation is applied.",
+    "local": "应用扩张的次数。"
+  },
+  {
+    "origin": "borderType",
+    "local": "桌子"
+  },
+  {
+    "origin": "pixel extrapolation method(see",
+    "local": "像素外推方法（参见"
+  },
+  {
+    "origin": ").",
+    "local": ")."
+  },
+  {
+    "origin": "borderValue",
+    "local": "边界值"
+  },
+  {
+    "origin": "border value in case of a constant border. The default value has a special meaning.",
+    "local": "如果边界为常量，则为border值。默认值具有特殊含义。"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "4. Closing",
+    "local": "4.关闭"
+  },
+  {
+    "origin": "Closing is reverse of Opening,",
+    "local": "关闭与打开相反，"
+  },
+  {
+    "origin": "Dilation followed by Erosion",
+    "local": "膨胀后腐蚀"
+  },
+  {
+    "origin": ". It is useful in closing small holes inside the foreground objects, or small black points on the object.",
+    "local": ". 它在封闭前景对象内部的小孔或对象上的小黑点时非常有用。"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "5. Morphological Gradient",
+    "local": "5.形态梯度"
+  },
+  {
+    "origin": "It is the difference between dilation and erosion of an image.",
+    "local": "它是图像膨胀和腐蚀的区别。"
+  },
+  {
+    "origin": "The result will look like the outline of the object.",
+    "local": "结果将看起来像对象的轮廓。"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "6. Top Hat",
+    "local": "6.礼帽"
+  },
+  {
+    "origin": "It is the difference between input image and Opening of the image.",
+    "local": "它是输入图像和打开图像之间的区别。"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "7. Black Hat",
+    "local": "7.黑帽子"
+  },
+  {
+    "origin": "It is the difference between the closing of the input image and input image.",
+    "local": "它是输入图像和输入图像的关闭之间的区别。"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "Structuring Element",
+    "local": "结构元素"
+  },
+  {
+    "origin": "We manually created a structuring elements in the previous examples with help of",
+    "local": "在前面的示例中，我们借助"
+  },
+  {
+    "origin": ". It is rectangular shape. But in some cases, you may need elliptical/circular shaped kernels. So for this purpose, OpenCV has a function,",
+    "local": ". 它是长方形的。但在某些情况下，您可能需要椭圆形/圆形的内核。因此，OpenCV有一个函数，"
+  },
+  {
+    "origin": ". You just pass the shape and size of the kernel, you get the desired kernel.",
+    "local": ". 只需传递内核的形状和大小，就可以得到所需的内核。"
+  },
+  {
+    "origin": "We use the function:",
+    "local": "我们使用函数："
+  },
+  {
+    "origin": "(shape, ksize, anchor = new",
+    "local": "（shape，ksize，anchor=新"
+  },
+  {
+    "origin": "(-1, -1))",
+    "local": "(-1, -1))"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "shape",
+    "local": "形状"
+  },
+  {
+    "origin": "element shape that could be one of",
+    "local": "元素形状可能是"
+  },
+  {
+    "origin": "ksize",
+    "local": "K尺寸"
+  },
+  {
+    "origin": "size of the structuring element.",
+    "local": "结构元素的大小。"
+  },
+  {
+    "origin": "anchor",
+    "local": "锚"
+  },
+  {
+    "origin": "anchor position within the element. The default value [−1,−1] means that the anchor is at the center. Note that only the shape of a cross-shaped element depends on the anchor position. In other cases the anchor just regulates how much the result of the morphological operation is shifted.",
+    "local": "元素内的锚定位置。默认值[−1,−1] 意味着锚在中心。请注意，只有十字形元素的形状取决于锚定位置。在其他情况下，锚定只调节形态学运算结果的偏移量。"
+  },
+  {
+    "origin": "Try it",
+    "local": "试试看"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

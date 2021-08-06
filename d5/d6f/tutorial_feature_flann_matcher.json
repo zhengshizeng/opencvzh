@@ -1,0 +1,186 @@
+[
+  {
+    "origin": "OpenCV: Feature Matching with FLANN",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Feature Matching with FLANN",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Ana Huamán",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "Use the",
+    "local": ""
+  },
+  {
+    "origin": "interface in order to perform a quick and efficient matching by using the",
+    "local": ""
+  },
+  {
+    "origin": "module",
+    "local": ""
+  },
+  {
+    "origin": "Warning",
+    "local": ""
+  },
+  {
+    "origin": "You need the",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV contrib modules",
+    "local": ""
+  },
+  {
+    "origin": "to be able to use the SURF features (alternatives are ORB, KAZE, ... features).",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "Classical feature descriptors (SIFT, SURF, ...) are usually compared and matched using the Euclidean distance (or L2-norm). Since SIFT and SURF descriptors represent the histogram of oriented gradient (of the Haar wavelet response for SURF) in a neighborhood, alternatives of the Euclidean distance are histogram-based metrics ( \\( \\chi^{2} \\), Earth Mover’s Distance (EMD), ...).",
+    "local": ""
+  },
+  {
+    "origin": "Arandjelovic et al. proposed in",
+    "local": ""
+  },
+  {
+    "origin": "to extend to the RootSIFT descriptor:",
+    "local": ""
+  },
+  {
+    "origin": "a square root (Hellinger) kernel instead of the standard Euclidean distance to measure the similarity between SIFT descriptors leads to a dramatic performance boost in all stages of the pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "Binary descriptors (ORB, BRISK, ...) are matched using the",
+    "local": ""
+  },
+  {
+    "origin": "Hamming distance",
+    "local": ""
+  },
+  {
+    "origin": ". This distance is equivalent to count the number of different elements for binary strings (population count after applying a XOR operation):",
+    "local": ""
+  },
+  {
+    "origin": "\\[ d_{hamming} \\left ( a,b \\right ) = \\sum_{i=0}^{n-1} \\left ( a_i \\oplus b_i \\right ) \\]",
+    "local": ""
+  },
+  {
+    "origin": "To filter the matches, Lowe proposed in",
+    "local": ""
+  },
+  {
+    "origin": "to use a distance ratio test to try to eliminate false matches. The distance ratio between the two nearest matches of a considered keypoint is computed and it is a good match when this value is below a threshold. Indeed, this ratio allows helping to discriminate between ambiguous matches (distance ratio between the two nearest neighbors is close to one) and well discriminated matches. The figure below from the SIFT paper illustrates the probability that a match is correct based on the nearest-neighbor distance ratio test.",
+    "local": ""
+  },
+  {
+    "origin": "Alternative or additional filterering tests are:",
+    "local": ""
+  },
+  {
+    "origin": "cross check test (good match \\( \\left( f_a, f_b \\right) \\) if feature \\( f_b \\) is the best match for \\( f_a \\) in \\( I_b \\) and feature \\( f_a \\) is the best match for \\( f_b \\) in \\( I_a \\))",
+    "local": ""
+  },
+  {
+    "origin": "geometric test (eliminate matches that do not fit to a geometric model, e.g. RANSAC or robust homography for planar objects)",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Java",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Result",
+    "local": ""
+  },
+  {
+    "origin": "Here is the result of the SURF feature matching using the distance ratio test:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

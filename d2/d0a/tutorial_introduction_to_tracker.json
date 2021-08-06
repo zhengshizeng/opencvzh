@@ -1,0 +1,142 @@
+[
+  {
+    "origin": "OpenCV: Introduction to OpenCV Tracker",
+    "local": "OpenCV:opencvtracker简介"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Introduction to OpenCV Tracker",
+    "local": "OpenCV跟踪器简介"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to",
+    "local": "在本教程中，您将学习如何"
+  },
+  {
+    "origin": "Create a tracker object.",
+    "local": "创建跟踪器对象。"
+  },
+  {
+    "origin": "Use the roiSelector function to select a ROI from a given image.",
+    "local": "使用roiSelector函数从给定图像中选择ROI。"
+  },
+  {
+    "origin": "Track a specific region in a given image.",
+    "local": "跟踪给定图像中的特定区域。"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Set up the input video",
+    "local": "设置输入视频"
+  },
+  {
+    "origin": "In this tutorial, you can choose between video or list of images for the program input. As written in the help, you should specify the input video as parameter of the program. If you want to use image list as input, the image list should have formatted numbering as shown in help. In the help, it means that the image files are numbered with 4 digits (e.g. the file naming will be 0001.jpg, 0002.jpg, and so on).",
+    "local": "在本教程中，您可以选择视频或图像列表作为程序输入。如帮助中所述，您应该将输入视频指定为程序的参数。如果要使用图像列表作为输入，则图像列表应具有格式编号，如帮助中所示。在帮助中，这意味着图像文件用4位数字编号（例如，文件名将为0001.jpg、0002.jpg，依此类推）。"
+  },
+  {
+    "origin": "You can find video samples in opencv_extra/testdata/cv/tracking",
+    "local": "您可以在opencv\\u extra/testdata/cv/tracking中找到视频示例"
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_extra/tree/master/testdata/cv/tracking",
+    "local": "https://github.com/opencv/opencv_extra/tree/master/testdata/cv/tracking"
+  },
+  {
+    "origin": "Declares the required variables",
+    "local": "声明所需的变量"
+  },
+  {
+    "origin": "You need roi to record the bounding box of the tracked object. The value stored in this variable will be updated using the tracker object.",
+    "local": "您需要roi来记录被跟踪对象的边界框。此变量中存储的值将使用tracker对象进行更新。"
+  },
+  {
+    "origin": "The frame variable is used to hold the image data from each frame of the input video or images list.",
+    "local": "frame变量用于保存来自输入视频或图像列表的每一帧的图像数据。"
+  },
+  {
+    "origin": "Creating a tracker object",
+    "local": "创建跟踪器对象"
+  },
+  {
+    "origin": "There are at least 7 types of tracker algorithms that can be used:",
+    "local": "至少可以使用7种类型的跟踪器算法："
+  },
+  {
+    "origin": "MIL",
+    "local": "百万"
+  },
+  {
+    "origin": "BOOSTING",
+    "local": "助推"
+  },
+  {
+    "origin": "MEDIANFLOW",
+    "local": "中流"
+  },
+  {
+    "origin": "TLD",
+    "local": "TLD公司"
+  },
+  {
+    "origin": "KCF",
+    "local": "KCF公司"
+  },
+  {
+    "origin": "GOTURN",
+    "local": "哥顿"
+  },
+  {
+    "origin": "MOSSE",
+    "local": "苔藓"
+  },
+  {
+    "origin": "Each tracker algorithm has their own advantages and disadvantages, please refer the documentation of",
+    "local": "每种跟踪器算法都有各自的优缺点，请参考"
+  },
+  {
+    "origin": "for more detailed information.",
+    "local": "更多详细信息。"
+  },
+  {
+    "origin": "Select the tracked object",
+    "local": "选择跟踪的对象"
+  },
+  {
+    "origin": "Using this function, you can select the bounding box of the tracked object using a GUI. With default parameters, the selection is started from the center of the box and a middle cross will be shown.",
+    "local": "使用此功能，可以使用GUI选择被跟踪对象的边界框。使用默认参数时，选择从框的中心开始，并显示中间的十字。"
+  },
+  {
+    "origin": "Initializing the tracker object",
+    "local": "初始化跟踪器对象"
+  },
+  {
+    "origin": "Any tracker algorithm should be initialized with the provided image data, and an initial bounding box of the tracked object. Make sure that the bounding box is valid (size more than zero) to avoid failure of the initialization process.",
+    "local": "任何跟踪器算法都应该用提供的图像数据和被跟踪对象的初始边界框来初始化。确保边界框有效（大小大于零），以避免初始化过程失败。"
+  },
+  {
+    "origin": "Update",
+    "local": "更新"
+  },
+  {
+    "origin": "This update function will perform the tracking process and pass the result to the roi variable.",
+    "local": "此更新函数将执行跟踪过程并将结果传递给roi变量。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:39为OpenCV生成，&#160；"
+  }
+]

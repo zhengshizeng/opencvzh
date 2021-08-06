@@ -1,0 +1,2606 @@
+[
+  {
+    "origin": "OpenCV: Scene Text Detection",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Scene Text Detection",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Base class for 1st and 2nd stages of Neumann and Matas scene text detection algorithm",
+    "local": ""
+  },
+  {
+    "origin": ". :",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "The",
+    "local": ""
+  },
+  {
+    "origin": "structure represents a class-specific Extremal Region (ER).",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "An abstract class providing interface for text detection algorithms.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "class provides the functionallity of text bounding box detection. This class is representing to find bounding boxes of text words given an input image. This class uses OpenCV dnn module to load pre-trained model described in",
+    "local": ""
+  },
+  {
+    "origin": ". The original repository with the modified SSD Caffe version:",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/MhLiao/TextBoxes",
+    "local": ""
+  },
+  {
+    "origin": ". Model can be downloaded from",
+    "local": ""
+  },
+  {
+    "origin": "DropBox",
+    "local": ""
+  },
+  {
+    "origin": ". Modified .prototxt file with the model description can be found in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Enumerations",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "computeNMChannels operation modes",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "{",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "}",
+    "local": ""
+  },
+  {
+    "origin": "text::erGrouping operation modes",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_src,",
+    "local": ""
+  },
+  {
+    "origin": "_channels, int _mode=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Compute the different channels to be processed independently in the N&amp;M algorithm",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;cb, int thresholdDelta=1, float minArea=(float) 0.00025, float maxArea=(float) 0.13, float minProbability=(float) 0.4, bool nonMaxSuppression=true, float minProbabilityDiff=(float) 0.1)",
+    "local": ""
+  },
+  {
+    "origin": "Create an Extremal Region Filter for the 1st stage classifier of N&amp;M algorithm",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename, int thresholdDelta=1, float minArea=(float) 0.00025, float maxArea=(float) 0.13, float minProbability=(float) 0.4, bool nonMaxSuppression=true, float minProbabilityDiff=(float) 0.1)",
+    "local": ""
+  },
+  {
+    "origin": "Reads an Extremal Region Filter for the 1st stage classifier of N&amp;M algorithm from the provided path e.g. /path/to/cpp/trained_classifierNM1.xml.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;cb, float minProbability=(float) 0.3)",
+    "local": ""
+  },
+  {
+    "origin": "Create an Extremal Region Filter for the 2nd stage classifier of N&amp;M algorithm",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename, float minProbability=(float) 0.3)",
+    "local": ""
+  },
+  {
+    "origin": "Reads an Extremal Region Filter for the 2nd stage classifier of N&amp;M algorithm from the provided path e.g. /path/to/cpp/trained_classifierNM2.xml.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;er_filter1, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;er_filter2, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;regions)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;er_filter1, const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;er_filter2, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;groups_rects, int method=",
+    "local": ""
+  },
+  {
+    "origin": ", const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename=",
+    "local": ""
+  },
+  {
+    "origin": "(), float minProbability=(float) 0.5)",
+    "local": ""
+  },
+  {
+    "origin": "Extracts text regions from image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img,",
+    "local": ""
+  },
+  {
+    "origin": "channels, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;regions, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;groups, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;groups_rects, int method=",
+    "local": ""
+  },
+  {
+    "origin": ", const std::string &amp;filename=std::string(), float minProbablity=0.5)",
+    "local": ""
+  },
+  {
+    "origin": "Find groups of Extremal Regions that are organized as text blocks.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image,",
+    "local": ""
+  },
+  {
+    "origin": "channel, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; regions, std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;groups_rects, int method=",
+    "local": ""
+  },
+  {
+    "origin": ", const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename=",
+    "local": ""
+  },
+  {
+    "origin": "(), float minProbablity=(float) 0.5)",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename)",
+    "local": ""
+  },
+  {
+    "origin": "Allow to implicitly load the default classifier when creating an",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt;",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;filename)",
+    "local": ""
+  },
+  {
+    "origin": "Allow to implicitly load the default classifier when creating an",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;contours, std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;regions)",
+    "local": ""
+  },
+  {
+    "origin": "Converts",
+    "local": ""
+  },
+  {
+    "origin": "contours (vector&lt;Point&gt;) to",
+    "local": ""
+  },
+  {
+    "origin": "regions.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Class-specific Extremal Regions for Scene Text Detection",
+    "local": ""
+  },
+  {
+    "origin": "The scene text detection algorithm described below has been initially proposed by Lukás Neumann &amp; Jiri Matas",
+    "local": ""
+  },
+  {
+    "origin": ". The main idea behind Class-specific Extremal Regions is similar to the",
+    "local": ""
+  },
+  {
+    "origin": "in that suitable Extremal Regions (ERs) are selected from the whole component tree of the image. However, this technique differs from",
+    "local": ""
+  },
+  {
+    "origin": "in that selection of suitable ERs is done by a sequential classifier trained for character detection, i.e. dropping the stability requirement of MSERs and selecting class-specific (not necessarily stable) regions.",
+    "local": ""
+  },
+  {
+    "origin": "The component tree of an image is constructed by thresholding by an increasing value step-by-step from 0 to 255 and then linking the obtained connected components from successive levels in a hierarchy by their inclusion relation:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "The component tree may contain a huge number of regions even for a very simple image as shown in the previous image. This number can easily reach the order of 1 x 10\\^6 regions for an average 1 Megapixel image. In order to efficiently select suitable regions among all the ERs the algorithm make use of a sequential classifier with two differentiated stages.",
+    "local": ""
+  },
+  {
+    "origin": "In the first stage incrementally computable descriptors (area, perimeter, bounding box, and Euler's number) are computed (in O(1)) for each region r and used as features for a classifier which estimates the class-conditional probability p(r|character). Only the ERs which correspond to local maximum of the probability p(r|character) are selected (if their probability is above a global limit p_min and the difference between local maximum and local minimum is greater than a delta_min value).",
+    "local": ""
+  },
+  {
+    "origin": "In the second stage, the ERs that passed the first stage are classified into character and non-character classes using more informative but also more computationally expensive features. (Hole area ratio, convex hull ratio, and the number of outer boundary inflexion points).",
+    "local": ""
+  },
+  {
+    "origin": "This ER filtering process is done in different single-channel projections of the input image in order to increase the character localization recall.",
+    "local": ""
+  },
+  {
+    "origin": "After the ER filtering is done on each input channel, character candidates must be grouped in high-level text blocks (i.e. words, text lines, paragraphs, ...). The opencv_text module implements two different grouping algorithms: the Exhaustive Search algorithm proposed in",
+    "local": ""
+  },
+  {
+    "origin": "for grouping horizontally aligned text, and the method proposed by Lluis Gomez and Dimosthenis Karatzas in",
+    "local": ""
+  },
+  {
+    "origin": "for grouping arbitrary oriented text (see erGrouping).",
+    "local": ""
+  },
+  {
+    "origin": "To see the text detector at work, have a look at the textdetection demo:",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/textdetection.cpp",
+    "local": ""
+  },
+  {
+    "origin": "Enumeration Type Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "anonymous enum",
+    "local": ""
+  },
+  {
+    "origin": "computeNMChannels operation modes",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "ERFILTER_NM_RGBLGrad",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.text.ERFILTER_NM_RGBLGrad",
+    "local": ""
+  },
+  {
+    "origin": "ERFILTER_NM_IHSGrad",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.text.ERFILTER_NM_IHSGrad",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "erGrouping_Modes",
+    "local": ""
+  },
+  {
+    "origin": "enum",
+    "local": ""
+  },
+  {
+    "origin": "operation modes",
+    "local": ""
+  },
+  {
+    "origin": "Enumerator",
+    "local": ""
+  },
+  {
+    "origin": "ERGROUPING_ORIENTATION_HORIZ",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.text.ERGROUPING_ORIENTATION_HORIZ",
+    "local": ""
+  },
+  {
+    "origin": "Exhaustive Search algorithm proposed in",
+    "local": ""
+  },
+  {
+    "origin": "for grouping horizontally aligned text. The algorithm models a verification function for all the possible ER sequences. The verification fuction for ER pairs consists in a set of threshold-based pairwise rules which compare measurements of two regions (height ratio, centroid angle, and region distance). The verification function for ER triplets creates a word text line estimate using Least Median-Squares fitting for a given triplet and then verifies that the estimate is valid (based on thresholds created during training). Verification functions for sequences larger than 3 are approximated by verifying that the text line parameters of all (sub)sequences of length 3 are consistent.",
+    "local": ""
+  },
+  {
+    "origin": "ERGROUPING_ORIENTATION_ANY",
+    "local": ""
+  },
+  {
+    "origin": "Python: cv.text.ERGROUPING_ORIENTATION_ANY",
+    "local": ""
+  },
+  {
+    "origin": "Text grouping method proposed in",
+    "local": ""
+  },
+  {
+    "origin": "for grouping arbitrary oriented text. Regions are agglomerated by Single Linkage Clustering in a weighted feature space that combines proximity (x,y coordinates) and similarity measures (color, size, gradient magnitude, stroke width, etc.). SLC provides a dendrogram where each node represents a text group hypothesis. Then the algorithm finds the branches corresponding to text groups by traversing this dendrogram with a stopping rule that combines the output of a rotation invariant text group classifier and a probabilistic measure for hierarchical clustering validity assessment.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "This mode is not supported due NFA code removal (",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "computeNMChannels()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::text::computeNMChannels",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_channels",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "_mode",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "_channels",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.computeNMChannels(",
+    "local": ""
+  },
+  {
+    "origin": "_src[, _channels[, _mode]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Compute the different channels to be processed independently in the N&amp;M algorithm",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "_src",
+    "local": ""
+  },
+  {
+    "origin": "Source image. Must be RGB CV_8UC3.",
+    "local": ""
+  },
+  {
+    "origin": "_channels",
+    "local": ""
+  },
+  {
+    "origin": "Output vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; where computed channels are stored.",
+    "local": ""
+  },
+  {
+    "origin": "_mode",
+    "local": ""
+  },
+  {
+    "origin": "Mode of operation. Currently the only available options are: ERFILTER_NM_RGBLGrad** (used by default) and",
+    "local": ""
+  },
+  {
+    "origin": "ERFILTER_NM_IHSGrad",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "In N&amp;M algorithm, the combination of intensity (I), hue (H), saturation (S), and gradient magnitude channels (Grad) are used in order to obtain high localization recall. This implementation also provides an alternative combination of red (R), green (G), blue (B), lightness (L), and gradient magnitude (Grad).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createERFilterNM1()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::text::createERFilterNM1",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "cb",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "thresholdDelta",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minArea",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "maxArea",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minProbability",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "nonMaxSuppression",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minProbabilityDiff",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.createERFilterNM1(",
+    "local": ""
+  },
+  {
+    "origin": "cb[, thresholdDelta[, minArea[, maxArea[, minProbability[, nonMaxSuppression[, minProbabilityDiff]]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.createERFilterNM1(",
+    "local": ""
+  },
+  {
+    "origin": "filename[, thresholdDelta[, minArea[, maxArea[, minProbability[, nonMaxSuppression[, minProbabilityDiff]]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Create an Extremal Region Filter for the 1st stage classifier of N&amp;M algorithm",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "cb",
+    "local": ""
+  },
+  {
+    "origin": ": Callback with the classifier. Default classifier can be implicitly load with function loadClassifierNM1, e.g. from file in samples/cpp/trained_classifierNM1.xml",
+    "local": ""
+  },
+  {
+    "origin": "thresholdDelta",
+    "local": ""
+  },
+  {
+    "origin": ": Threshold step in subsequent thresholds when extracting the component tree",
+    "local": ""
+  },
+  {
+    "origin": "minArea",
+    "local": ""
+  },
+  {
+    "origin": ": The minimum area (% of image size) allowed for retreived ER's",
+    "local": ""
+  },
+  {
+    "origin": "maxArea",
+    "local": ""
+  },
+  {
+    "origin": ": The maximum area (% of image size) allowed for retreived ER's",
+    "local": ""
+  },
+  {
+    "origin": "minProbability",
+    "local": ""
+  },
+  {
+    "origin": ": The minimum probability P(er|character) allowed for retreived ER's",
+    "local": ""
+  },
+  {
+    "origin": "nonMaxSuppression",
+    "local": ""
+  },
+  {
+    "origin": ": Whenever non-maximum suppression is done over the branch probabilities",
+    "local": ""
+  },
+  {
+    "origin": "minProbabilityDiff",
+    "local": ""
+  },
+  {
+    "origin": ": The minimum probability difference between local maxima and local minima ERs",
+    "local": ""
+  },
+  {
+    "origin": "The component tree of the image is extracted by a threshold increased step by step from 0 to 255, incrementally computable descriptors (aspect_ratio, compactness, number of holes, and number of horizontal crossings) are computed for each ER and used as features for a classifier which estimates the class-conditional probability P(er|character). The value of P(er|character) is tracked using the inclusion relation of ER across all thresholds and only the ERs which correspond to local maximum of the probability P(er|character) are selected (if the local maximum of the probability is above a global limit pmin and the difference between local maximum and local minimum is greater than minProbabilityDiff).",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createERFilterNM1()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::text::createERFilterNM1",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "thresholdDelta",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minArea",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "maxArea",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minProbability",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "bool",
+    "local": ""
+  },
+  {
+    "origin": "nonMaxSuppression",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minProbabilityDiff",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.createERFilterNM1(",
+    "local": ""
+  },
+  {
+    "origin": "cb[, thresholdDelta[, minArea[, maxArea[, minProbability[, nonMaxSuppression[, minProbabilityDiff]]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.createERFilterNM1(",
+    "local": ""
+  },
+  {
+    "origin": "filename[, thresholdDelta[, minArea[, maxArea[, minProbability[, nonMaxSuppression[, minProbabilityDiff]]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Reads an Extremal Region Filter for the 1st stage classifier of N&amp;M algorithm from the provided path e.g. /path/to/cpp/trained_classifierNM1.xml.",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createERFilterNM2()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::text::createERFilterNM2",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "cb",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minProbability",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.createERFilterNM2(",
+    "local": ""
+  },
+  {
+    "origin": "cb[, minProbability]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.createERFilterNM2(",
+    "local": ""
+  },
+  {
+    "origin": "filename[, minProbability]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Create an Extremal Region Filter for the 2nd stage classifier of N&amp;M algorithm",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "cb",
+    "local": ""
+  },
+  {
+    "origin": ": Callback with the classifier. Default classifier can be implicitly load with function loadClassifierNM2, e.g. from file in samples/cpp/trained_classifierNM2.xml",
+    "local": ""
+  },
+  {
+    "origin": "minProbability",
+    "local": ""
+  },
+  {
+    "origin": ": The minimum probability P(er|character) allowed for retreived ER's",
+    "local": ""
+  },
+  {
+    "origin": "In the second stage, the ERs that passed the first stage are classified into character and non-character classes using more informative but also more computationally expensive features. The classifier uses all the features calculated in the first stage and the following additional features: hole area ratio, convex hull ratio, and number of outer inflexion points.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "createERFilterNM2()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::text::createERFilterNM2",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minProbability",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.createERFilterNM2(",
+    "local": ""
+  },
+  {
+    "origin": "cb[, minProbability]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.createERFilterNM2(",
+    "local": ""
+  },
+  {
+    "origin": "filename[, minProbability]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Reads an Extremal Region Filter for the 2nd stage classifier of N&amp;M algorithm from the provided path e.g. /path/to/cpp/trained_classifierNM2.xml.",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "detectRegions()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::text::detectRegions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "er_filter1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "er_filter2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "regions",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "regions",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.detectRegions(",
+    "local": ""
+  },
+  {
+    "origin": "image, er_filter1, er_filter2",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "groups_rects",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.detectRegions(",
+    "local": ""
+  },
+  {
+    "origin": "image, er_filter1, er_filter2[, method[, filename[, minProbability]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "detectRegions()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::text::detectRegions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "er_filter1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "er_filter2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "groups_rects",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "method",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minProbability",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "regions",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.detectRegions(",
+    "local": ""
+  },
+  {
+    "origin": "image, er_filter1, er_filter2",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "groups_rects",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.detectRegions(",
+    "local": ""
+  },
+  {
+    "origin": "image, er_filter1, er_filter2[, method[, filename[, minProbability]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Extracts text regions from image.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Source image where text blocks needs to be extracted from. Should be CV_8UC3 (color).",
+    "local": ""
+  },
+  {
+    "origin": "er_filter1",
+    "local": ""
+  },
+  {
+    "origin": "Extremal Region Filter for the 1st stage classifier of N&amp;M algorithm",
+    "local": ""
+  },
+  {
+    "origin": "er_filter2",
+    "local": ""
+  },
+  {
+    "origin": "Extremal Region Filter for the 2nd stage classifier of N&amp;M algorithm",
+    "local": ""
+  },
+  {
+    "origin": "groups_rects",
+    "local": ""
+  },
+  {
+    "origin": "Output list of rectangle blocks with text",
+    "local": ""
+  },
+  {
+    "origin": "method",
+    "local": ""
+  },
+  {
+    "origin": "Grouping method (see",
+    "local": ""
+  },
+  {
+    "origin": "). Can be one of ERGROUPING_ORIENTATION_HORIZ, ERGROUPING_ORIENTATION_ANY.",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": "The XML or YAML file with the classifier model (e.g. samples/trained_classifier_erGrouping.xml). Only to use when grouping method is ERGROUPING_ORIENTATION_ANY.",
+    "local": ""
+  },
+  {
+    "origin": "minProbability",
+    "local": ""
+  },
+  {
+    "origin": "The minimum probability for accepting a group. Only to use when grouping method is ERGROUPING_ORIENTATION_ANY.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "erGrouping()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::text::erGrouping",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "channels",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "regions",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "groups",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "groups_rects",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "method",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::string &amp;",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minProbablity",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "groups_rects",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.erGrouping(",
+    "local": ""
+  },
+  {
+    "origin": "image, channel, regions[, method[, filename[, minProbablity]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Find groups of Extremal Regions that are organized as text blocks.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img",
+    "local": ""
+  },
+  {
+    "origin": "Original RGB or Greyscale image from wich the regions were extracted.",
+    "local": ""
+  },
+  {
+    "origin": "channels",
+    "local": ""
+  },
+  {
+    "origin": "Vector of single channel images CV_8UC1 from wich the regions were extracted.",
+    "local": ""
+  },
+  {
+    "origin": "regions",
+    "local": ""
+  },
+  {
+    "origin": "Vector of ER's retrieved from the",
+    "local": ""
+  },
+  {
+    "origin": "algorithm from each channel.",
+    "local": ""
+  },
+  {
+    "origin": "groups",
+    "local": ""
+  },
+  {
+    "origin": "The output of the algorithm is stored in this parameter as set of lists of indexes to provided regions.",
+    "local": ""
+  },
+  {
+    "origin": "groups_rects",
+    "local": ""
+  },
+  {
+    "origin": "The output of the algorithm are stored in this parameter as list of rectangles.",
+    "local": ""
+  },
+  {
+    "origin": "method",
+    "local": ""
+  },
+  {
+    "origin": "Grouping method (see",
+    "local": ""
+  },
+  {
+    "origin": "). Can be one of ERGROUPING_ORIENTATION_HORIZ, ERGROUPING_ORIENTATION_ANY.",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": "The XML or YAML file with the classifier model (e.g. samples/trained_classifier_erGrouping.xml). Only to use when grouping method is ERGROUPING_ORIENTATION_ANY.",
+    "local": ""
+  },
+  {
+    "origin": "minProbablity",
+    "local": ""
+  },
+  {
+    "origin": "The minimum probability for accepting a group. Only to use when grouping method is ERGROUPING_ORIENTATION_ANY.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "erGrouping()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::text::erGrouping",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "channel",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt;",
+    "local": ""
+  },
+  {
+    "origin": "regions",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "groups_rects",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "method",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "minProbablity",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "groups_rects",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.erGrouping(",
+    "local": ""
+  },
+  {
+    "origin": "image, channel, regions[, method[, filename[, minProbablity]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "loadClassifierNM1()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::text::loadClassifierNM1",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.loadClassifierNM1(",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Allow to implicitly load the default classifier when creating an",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": "The XML or YAML file with the classifier model (e.g. trained_classifierNM1.xml)",
+    "local": ""
+  },
+  {
+    "origin": "returns a pointer to",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "loadClassifierNM2()",
+    "local": ""
+  },
+  {
+    "origin": "&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; cv::text::loadClassifierNM2",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "retval",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.text.loadClassifierNM2(",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Allow to implicitly load the default classifier when creating an",
+    "local": ""
+  },
+  {
+    "origin": "object.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "filename",
+    "local": ""
+  },
+  {
+    "origin": "The XML or YAML file with the classifier model (e.g. trained_classifierNM2.xml)",
+    "local": ""
+  },
+  {
+    "origin": "returns a pointer to",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "MSERsToERStats()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::text::MSERsToERStats",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "contours",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "std::vector&lt; std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "regions",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Converts",
+    "local": ""
+  },
+  {
+    "origin": "contours (vector&lt;Point&gt;) to",
+    "local": ""
+  },
+  {
+    "origin": "regions.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Source image CV_8UC1 from which the MSERs where extracted.",
+    "local": ""
+  },
+  {
+    "origin": "contours",
+    "local": ""
+  },
+  {
+    "origin": "Input vector with all the contours (vector&lt;Point&gt;).",
+    "local": ""
+  },
+  {
+    "origin": "regions",
+    "local": ""
+  },
+  {
+    "origin": "Output where the",
+    "local": ""
+  },
+  {
+    "origin": "regions are stored.",
+    "local": ""
+  },
+  {
+    "origin": "It takes as input the contours provided by the OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "feature detector and returns as output two vectors of ERStats. This is because MSER() output contains both MSER+ and MSER- regions in a single vector&lt;Point&gt;, the function separates them in two different vectors (this is as if the ERStats where extracted from two different channels).",
+    "local": ""
+  },
+  {
+    "origin": "An example of MSERsToERStats in use can be found in the text detection webcam_demo:",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_contrib/blob/master/modules/text/samples/webcam_demo.cpp",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

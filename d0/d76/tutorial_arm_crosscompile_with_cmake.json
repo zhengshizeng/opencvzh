@@ -1,0 +1,266 @@
+[
+  {
+    "origin": "OpenCV: Cross compilation for ARM based Linux systems",
+    "local": "OpenCV：基于ARM的Linux系统的交叉编译"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Cross compilation for ARM based Linux systems",
+    "local": "基于ARM的Linux系统的交叉编译"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": "下一个教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Alexander Smorkalov",
+    "local": "亚历山大·斯莫卡洛夫。"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt；=3"
+  },
+  {
+    "origin": "Warning",
+    "local": "警告"
+  },
+  {
+    "origin": "This tutorial can contain obsolete information.",
+    "local": "本教程可能包含过时的信息。"
+  },
+  {
+    "origin": "This steps are tested on Ubuntu Linux 12.04, but should work for other Linux distributions. I case of other distributions package names and names of cross compilation tools may differ. There are several popular EABI versions that are used on ARM platform. This tutorial is written for",
+    "local": "这些步骤在UbuntuLinux12.04上进行了测试，但应该适用于其他Linux发行版。其他发行版的包名和交叉编译工具的名称可能不同。在ARM平台上有几种流行的EABI版本。本教程是为"
+  },
+  {
+    "origin": "gnueabi",
+    "local": "格努埃比"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "gnueabihf",
+    "local": "格努埃比夫"
+  },
+  {
+    "origin": ", but other variants should work with minimal changes.",
+    "local": "，但其他变体应该只需很少的更改即可工作。"
+  },
+  {
+    "origin": "Prerequisites",
+    "local": "先决条件"
+  },
+  {
+    "origin": "Host computer with Linux;",
+    "local": "主机采用Linux；"
+  },
+  {
+    "origin": "Git;",
+    "local": "吉特；"
+  },
+  {
+    "origin": "CMake 2.6 or higher;",
+    "local": "CMake 2.6或更高；"
+  },
+  {
+    "origin": "Cross compilation tools for ARM: gcc, libstc++, etc. Depending on target platform you need to choose",
+    "local": "针对ARM的交叉编译工具：gcc、libstc++等，具体取决于您需要选择的目标平台"
+  },
+  {
+    "origin": "gnueabi",
+    "local": "格努埃比"
+  },
+  {
+    "origin": "or",
+    "local": "或"
+  },
+  {
+    "origin": "gnueabihf",
+    "local": "格努埃比夫"
+  },
+  {
+    "origin": "tools. Install command for",
+    "local": "工具。安装命令"
+  },
+  {
+    "origin": "gnueabi",
+    "local": "格努埃比"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "Install command for",
+    "local": "安装命令"
+  },
+  {
+    "origin": "gnueabihf",
+    "local": "格努埃比夫"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "pkgconfig;",
+    "local": "pkgconfig；"
+  },
+  {
+    "origin": "Python 2.6 for host system;",
+    "local": "主机系统为Python2.6；"
+  },
+  {
+    "origin": "[optional] ffmpeg or libav development packages for armeabi(hf): libavcodec-dev, libavformat-dev, libswscale-dev;",
+    "local": "[可选]用于armeabi（hf）的ffmpeg或libav开发包：libavcodec dev、libavformat dev、libswscale dev；"
+  },
+  {
+    "origin": "[optional] GTK+2.x or higher, including headers (libgtk2.0-dev) for armeabi(hf);",
+    "local": "[可选]GTK+2.x或更高版本，包括armeabi（hf）的标头（libgtk2.0-dev）；"
+  },
+  {
+    "origin": "[optional] libdc1394 2.x;",
+    "local": "[可选]libdc1394 2.x；"
+  },
+  {
+    "origin": "[optional] libjpeg-dev, libpng-dev, libtiff-dev, libjasper-dev for armeabi(hf).",
+    "local": "[可选]libjpeg dev、libpng dev、libtiff dev、libjasper dev for armeabi（hf）。"
+  },
+  {
+    "origin": "Getting OpenCV Source Code",
+    "local": "获取OpenCV源代码"
+  },
+  {
+    "origin": "You can use the latest stable OpenCV version available in",
+    "local": "您可以使用中提供的最新稳定OpenCV版本"
+  },
+  {
+    "origin": "sourceforge",
+    "local": "sourceforge公司"
+  },
+  {
+    "origin": "or you can grab the latest snapshot from our",
+    "local": "或者你可以从我们的网站上抓取最新的快照"
+  },
+  {
+    "origin": "Git repository",
+    "local": "Git存储库"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Getting the Latest Stable OpenCV Version",
+    "local": "获取最新稳定的OpenCV版本"
+  },
+  {
+    "origin": "Go to our",
+    "local": "转到我们的"
+  },
+  {
+    "origin": "page on Sourceforge",
+    "local": "源代码页"
+  },
+  {
+    "origin": ";",
+    "local": ";"
+  },
+  {
+    "origin": "Download the source tarball and unpack it.",
+    "local": "下载源tarball并将其解包。"
+  },
+  {
+    "origin": "Getting the Cutting-edge OpenCV from the Git Repository",
+    "local": "从Git存储库获取最前沿的OpenCV"
+  },
+  {
+    "origin": "Launch Git client and clone",
+    "local": "启动Git客户端并克隆"
+  },
+  {
+    "origin": "OpenCV repository",
+    "local": "OpenCV存储库"
+  },
+  {
+    "origin": "In Linux it can be achieved with the following command in Terminal:",
+    "local": "在Linux中，可以通过终端中的以下命令来实现："
+  },
+  {
+    "origin": "Building OpenCV",
+    "local": "构建OpenCV"
+  },
+  {
+    "origin": "Create a build directory, make it current and run the following command:",
+    "local": "创建生成目录，将其设为当前目录并运行以下命令："
+  },
+  {
+    "origin": "Toolchain uses",
+    "local": "工具链使用"
+  },
+  {
+    "origin": "gnueabihf",
+    "local": "格努埃比夫"
+  },
+  {
+    "origin": "EABI convention by default. Add -DSOFTFP=ON cmake argument to switch on softfp compiler.",
+    "local": "默认情况下为EABI约定。在cmake参数上添加-DSOFTFP=ON以打开softfp编译器。"
+  },
+  {
+    "origin": "For example:",
+    "local": "例如："
+  },
+  {
+    "origin": "Run make in build (&lt;cmake_binary_dir&gt;) directory:",
+    "local": "在内部版本中运行make（&lt；cmake（二进制目录）目录："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Optionally you can strip symbols info from the created library via install/strip make target. This option produces smaller binary ( twice smaller) but makes further debugging harder.",
+    "local": "也可以通过install/strip make target从创建的库中剥离符号信息。此选项生成较小的二进制文件（小两倍），但使进一步的调试更加困难。"
+  },
+  {
+    "origin": "Enable hardware optimizations",
+    "local": "启用硬件优化"
+  },
+  {
+    "origin": "Depending on target platform architecture different instruction sets can be used. By default compiler generates code for armv5l without VFPv3 and NEON extensions. Add -DENABLE_VFPV3=ON to cmake command line to enable code generation for VFPv3 and -DENABLE_NEON=ON for using NEON SIMD extensions.",
+    "local": "根据目标平台架构，可以使用不同的指令集。默认情况下，编译器会为没有VFPv3和NEON扩展的armv5l生成代码。在cmake命令行中添加-DENABLE\\u VFPV3=ON以启用VFPV3的代码生成，并在使用NEON SIMD扩展时添加-DENABLE\\u NEON=ON。"
+  },
+  {
+    "origin": "TBB is supported on multi core ARM SoCs also. Add -DWITH_TBB=ON and -DBUILD_TBB=ON to enable it. Cmake scripts download TBB sources from official project site",
+    "local": "多核ARM SOC也支持TBB。添加-DWITH\\u TBB=ON和-DBUILD\\u TBB=ON以启用它。Cmake脚本从官方项目站点下载TBB源代码"
+  },
+  {
+    "origin": "http://threadingbuildingblocks.org/",
+    "local": "http://threadingbuildingblocks.org/"
+  },
+  {
+    "origin": "and build it.",
+    "local": "建造它。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:36 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:36为OpenCV生成，&#160；"
+  }
+]

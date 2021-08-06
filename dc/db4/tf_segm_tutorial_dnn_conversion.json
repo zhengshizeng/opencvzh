@@ -1,0 +1,446 @@
+[
+  {
+    "origin": "OpenCV: Conversion of TensorFlow Segmentation Models and Launch with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Conversion of TensorFlow Segmentation Models and Launch with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "convert TensorFlow (TF) segmentation models",
+    "local": ""
+  },
+  {
+    "origin": "run converted TensorFlow model with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "obtain an evaluation of the TensorFlow and OpenCV DNN models",
+    "local": ""
+  },
+  {
+    "origin": "We will explore the above-listed points by the example of the DeepLab architecture.",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "The key concepts involved in the transition pipeline of the",
+    "local": ""
+  },
+  {
+    "origin": "TensorFlow classification",
+    "local": ""
+  },
+  {
+    "origin": "and segmentation models with OpenCV API are almost equal excepting the phase of graph optimization. The initial step in conversion of TensorFlow models into",
+    "local": ""
+  },
+  {
+    "origin": "is obtaining the frozen TF model graph. Frozen graph defines the combination of the model graph structure with kept values of the required variables, for example, weights. Usually the frozen graph is saved in",
+    "local": ""
+  },
+  {
+    "origin": "protobuf",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": ") files. To read the generated segmentation model",
+    "local": ""
+  },
+  {
+    "origin": "file with",
+    "local": ""
+  },
+  {
+    "origin": ", it is needed to modify the graph with TF",
+    "local": ""
+  },
+  {
+    "origin": "graph transform tool",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Practice",
+    "local": ""
+  },
+  {
+    "origin": "In this part we are going to cover the following points:",
+    "local": ""
+  },
+  {
+    "origin": "create a TF classification model conversion pipeline and provide the inference",
+    "local": ""
+  },
+  {
+    "origin": "evaluate and test TF classification models",
+    "local": ""
+  },
+  {
+    "origin": "If you'd like merely to run evaluation or test model pipelines, the \"Model Conversion Pipeline\" tutorial part can be skipped.",
+    "local": ""
+  },
+  {
+    "origin": "Model Conversion Pipeline",
+    "local": ""
+  },
+  {
+    "origin": "The code in this subchapter is located in the",
+    "local": ""
+  },
+  {
+    "origin": "module and can be executed with the line:",
+    "local": ""
+  },
+  {
+    "origin": "TensorFlow segmentation models can be found in",
+    "local": ""
+  },
+  {
+    "origin": "TensorFlow Research Models",
+    "local": ""
+  },
+  {
+    "origin": "section, which contains the implementations of models on the basis of published research papers. We will retrieve the archive with the pre-trained TF DeepLabV3 from the below link:",
+    "local": ""
+  },
+  {
+    "origin": "The full frozen graph obtaining pipeline is described in",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "After running this script:",
+    "local": ""
+  },
+  {
+    "origin": "we will get",
+    "local": ""
+  },
+  {
+    "origin": "in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Before going to the network loading with OpenCV it is needed to optimize the extracted",
+    "local": ""
+  },
+  {
+    "origin": ". To optimize the graph we use TF",
+    "local": ""
+  },
+  {
+    "origin": "with default parameters:",
+    "local": ""
+  },
+  {
+    "origin": "To run graph optimization process, execute the line:",
+    "local": ""
+  },
+  {
+    "origin": "As a result",
+    "local": ""
+  },
+  {
+    "origin": "directory will contain",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "After we have obtained the model graphs, let's examine the below-listed steps:",
+    "local": ""
+  },
+  {
+    "origin": "read TF",
+    "local": ""
+  },
+  {
+    "origin": "graph",
+    "local": ""
+  },
+  {
+    "origin": "read optimized TF frozen graph with OpenCV API",
+    "local": ""
+  },
+  {
+    "origin": "prepare input data",
+    "local": ""
+  },
+  {
+    "origin": "provide inference",
+    "local": ""
+  },
+  {
+    "origin": "get colored masks from predictions",
+    "local": ""
+  },
+  {
+    "origin": "visualize results",
+    "local": ""
+  },
+  {
+    "origin": "To provide the model inference we will use the below picture from the",
+    "local": ""
+  },
+  {
+    "origin": "PASCAL VOC",
+    "local": ""
+  },
+  {
+    "origin": "validation dataset:",
+    "local": ""
+  },
+  {
+    "origin": "The target segmented result is:",
+    "local": ""
+  },
+  {
+    "origin": "For the PASCAL VOC colors decoding and its mapping with the predicted masks, we also need",
+    "local": ""
+  },
+  {
+    "origin": "file, which contains the full list of the PASCAL VOC classes and corresponding colors.",
+    "local": ""
+  },
+  {
+    "origin": "Let's go deeper into each step by the example of pretrained TF DeepLabV3 MobileNetV2:",
+    "local": ""
+  },
+  {
+    "origin": "read TF",
+    "local": ""
+  },
+  {
+    "origin": "graph :",
+    "local": ""
+  },
+  {
+    "origin": "read optimized TF frozen graph with OpenCV API:",
+    "local": ""
+  },
+  {
+    "origin": "prepare input data with cv2.dnn.blobFromImage function:",
+    "local": ""
+  },
+  {
+    "origin": "Please, pay attention at the preprocessing order in the",
+    "local": ""
+  },
+  {
+    "origin": "function. Firstly, the mean value is subtracted and only then pixel values are multiplied by the defined scale. Therefore, to reproduce TF image preprocessing pipeline, we multiply",
+    "local": ""
+  },
+  {
+    "origin": "by",
+    "local": ""
+  },
+  {
+    "origin": ". Another important point is image preprocessing for TF DeepLab. To pass the image into TF model we need only to construct an appropriate shape, the rest image preprocessing is described in",
+    "local": ""
+  },
+  {
+    "origin": "feature_extractor.py",
+    "local": ""
+  },
+  {
+    "origin": "and will be invoked automatically.",
+    "local": ""
+  },
+  {
+    "origin": "provide OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "inference:",
+    "local": ""
+  },
+  {
+    "origin": "After the above code execution we will get the following output:",
+    "local": ""
+  },
+  {
+    "origin": "Each prediction channel out of 21, where 21 represents the number of PASCAL VOC classes, contains probabilities, which indicate how likely the pixel corresponds to the PASCAL VOC class.",
+    "local": ""
+  },
+  {
+    "origin": "provide TF model inference:",
+    "local": ""
+  },
+  {
+    "origin": "TF inference results are the following:",
+    "local": ""
+  },
+  {
+    "origin": "TensorFlow prediction contains the indexes of corresponding PASCAL VOC classes.",
+    "local": ""
+  },
+  {
+    "origin": "transform OpenCV prediction into colored mask:",
+    "local": ""
+  },
+  {
+    "origin": "In this step we map the probabilities from segmentation masks with appropriate colors of the predicted classes. Let's have a look at the results:",
+    "local": ""
+  },
+  {
+    "origin": "transform TF prediction into colored mask:",
+    "local": ""
+  },
+  {
+    "origin": "The result is:",
+    "local": ""
+  },
+  {
+    "origin": "As a result, we get two equal segmentation masks.",
+    "local": ""
+  },
+  {
+    "origin": "Evaluation of the Models",
+    "local": ""
+  },
+  {
+    "origin": "The proposed in",
+    "local": ""
+  },
+  {
+    "origin": "module allows to run the full evaluation pipeline on the PASCAL VOC dataset and test execution for the DeepLab MobileNet model.",
+    "local": ""
+  },
+  {
+    "origin": "Evaluation Mode",
+    "local": ""
+  },
+  {
+    "origin": "To below line represents running of the module in the evaluation mode:",
+    "local": ""
+  },
+  {
+    "origin": "The model will be read into OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "object. Evaluation results of TF and OpenCV models (pixel accuracy, mean IoU, inference time) will be written into the log file. Inference time values will be also depicted in a chart to generalize the obtained model information.",
+    "local": ""
+  },
+  {
+    "origin": "Necessary evaluation configurations are defined in the",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "These values can be modified in accordance with chosen model pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "Test Mode",
+    "local": ""
+  },
+  {
+    "origin": "The below line represents running of the module in the test mode, which provides the steps for the model inference:",
+    "local": ""
+  },
+  {
+    "origin": "Here",
+    "local": ""
+  },
+  {
+    "origin": "key defines whether you'd like to parametrize the model test process with some particular values or use the default values, for example,",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Test configuration is represented in",
+    "local": ""
+  },
+  {
+    "origin": "class:",
+    "local": ""
+  },
+  {
+    "origin": "The default image preprocessing options are defined in",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "The basis of the model testing is represented in",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "can be executed autonomously with provided converted model in",
+    "local": ""
+  },
+  {
+    "origin": "and populated parameters for",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "To reproduce from scratch the described in \"Model Conversion Pipeline\" OpenCV steps with",
+    "local": ""
+  },
+  {
+    "origin": "execute the below line:",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

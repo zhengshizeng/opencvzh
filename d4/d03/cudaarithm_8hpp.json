@@ -1,0 +1,810 @@
+[
+  {
+    "origin": "OpenCV: opencv2/cudaarithm.hpp File Reference",
+    "local": "OpenCV:opencv2/cudaarithm.hpp文件参考"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "cudaarithm.hpp File Reference",
+    "local": "cudaarithm.hpp文件参考"
+  },
+  {
+    "origin": "Classes",
+    "local": "班级"
+  },
+  {
+    "origin": "Base class for convolution (or cross-correlation) operator. :",
+    "local": "卷积（或互相关）运算符的基类："
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Base class for",
+    "local": "的基类"
+  },
+  {
+    "origin": "operator as a",
+    "local": "操作员作为"
+  },
+  {
+    "origin": ". :",
+    "local": ". :"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Base class for transform using lookup table.",
+    "local": "使用查找表进行转换的基类。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Namespaces",
+    "local": "名称空间"
+  },
+  {
+    "origin": "\"black box\" representation of the file storage associated with a file on disk.",
+    "local": "“黑盒”表示与磁盘上的文件相关联的文件存储。"
+  },
+  {
+    "origin": "Functions",
+    "local": "功能"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes an absolute value of each matrix element.",
+    "local": "计算每个矩阵元素的绝对值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes per-element absolute difference of two matrices (or of a matrix and scalar).",
+    "local": "计算两个矩阵（或矩阵和标量）的每元素绝对差。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, InputArray mask=noArray())",
+    "local": "InputArray src，InputArray mask=noArray（））"
+  },
+  {
+    "origin": "Returns the sum of absolute values for matrix elements.",
+    "local": "返回矩阵元素的绝对值之和。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, InputArray mask=noArray(), int dtype=-1, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、InputArray mask=noArray（）、int dtype=-1、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes a matrix-matrix or matrix-scalar sum.",
+    "local": "计算矩阵或矩阵标量和。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, double alpha, InputArray src2, double beta, double gamma, OutputArray dst, int dtype=-1, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、double alpha、InputArray src2、double beta、double gamma、OutputArray dst、int dtype=-1、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes the weighted sum of two arrays.",
+    "local": "计算两个数组的加权和。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1，InputArray src2，OutputArray dst，InputArray mask=noArray（），流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Performs a per-element bitwise conjunction of two matrices (or of matrix and scalar).",
+    "local": "执行两个矩阵（或矩阵和标量）的逐元素逐位合并。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src，OutputArray dst，InputArray mask=noArray（），流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Performs a per-element bitwise inversion.",
+    "local": "执行逐元素逐位反转。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1，InputArray src2，OutputArray dst，InputArray mask=noArray（），流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Performs a per-element bitwise disjunction of two matrices (or of matrix and scalar).",
+    "local": "对两个矩阵（或矩阵和标量）执行逐元素逐位析取。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1，InputArray src2，OutputArray dst，InputArray mask=noArray（），流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Performs a per-element bitwise exclusive or operation of two matrices (or of matrix and scalar).",
+    "local": "对两个矩阵（或矩阵和标量）执行逐元素逐位异或运算。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src，OutputArray dst，InputArray mask=noArray（），流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, int normType, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src，OutputArray dst，int normType，InputArray mask=noArray（），流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, int normType=NORM_L2, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、int normType=norm2、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src，OutputArray dst，InputArray mask=noArray（），流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src，OutputArray dst，InputArray mask=noArray（），流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray x, InputArray y, OutputArray magnitude, OutputArray angle, bool angleInDegrees=false, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray x、InputArray y、OutputArray magnitude、OutputArray angle、bool angleInDegrees=false、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Converts Cartesian coordinates into polar.",
+    "local": "将笛卡尔坐标转换为极坐标。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, int cmpop, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、int cmpop、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Compares elements of two matrices (or of a matrix and scalar).",
+    "local": "比较两个矩阵（或矩阵和标量）的元素。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, int top, int bottom, int left, int right, int borderType, Scalar value=Scalar(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray dst、int top、int bottom、int left、int right、int borderType、Scalar value=Scalar（）、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Forms a border around an image.",
+    "local": "在图像周围形成边框。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src)",
+    "local": "（输入阵列src）"
+  },
+  {
+    "origin": "Counts non-zero matrix elements.",
+    "local": "计算非零矩阵元素。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(Size user_block_size=Size())",
+    "local": "（Size user\\u block\\u Size=Size（））"
+  },
+  {
+    "origin": "Creates implementation for",
+    "local": "为创建实现"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(Size dft_size, int flags)",
+    "local": "（大小dft\\u大小，int标志）"
+  },
+  {
+    "origin": "Creates implementation for",
+    "local": "为创建实现"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray lut)",
+    "local": "（输入阵列lut）"
+  },
+  {
+    "origin": "Creates implementation for",
+    "local": "为创建实现"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, Size dft_size, int flags=0, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray dst、Size dft\\u Size、int flags=0、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Performs a forward or inverse discrete Fourier transform (1D or 2D) of the floating point matrix.",
+    "local": "执行浮点矩阵的正向或反向离散傅里叶变换（1D或2D）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, double scale=1, int dtype=-1, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、double scale=1、int dtype=-1、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes a matrix-matrix or matrix-scalar division.",
+    "local": "计算矩阵或矩阵标量除法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes an exponent of each matrix element.",
+    "local": "计算每个矩阵元素的指数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src，OutputArray dst，InputArray mask=noArray（），流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray src, OutputArray minMaxVals, OutputArray loc, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray minMaxVals、OutputArray loc、InputArray mask=noArray（）、流；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, int flipCode, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray dst、int flipCode、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Flips a 2D matrix around vertical, horizontal, or both axes.",
+    "local": "围绕垂直、水平或两个轴翻转二维矩阵。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, double alpha, InputArray src3, double beta, OutputArray dst, int flags=0, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、double alpha、InputArray src3、double beta、OutputArray dst、int flags=0、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Performs generalized matrix multiplication.",
+    "local": "执行广义矩阵乘法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, const Scalar &amp;lowerb, const Scalar &amp;upperb, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、const Scalar&amp；lowerb、const标量；upperb、OutputArray dst、Stream和；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Checks if array elements lie between two scalars.",
+    "local": "检查数组元素是否位于两个标量之间。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray sum, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray sum、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes an integral image.",
+    "local": "计算积分图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes a natural logarithm of absolute value of each matrix element.",
+    "local": "计算每个矩阵元素绝对值的自然对数。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, Scalar_&lt; int &gt; val, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src，标量\\&lt；内部&gt；val、输出阵列dst、流和；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Performs pixel by pixel right left of an image by a constant value.",
+    "local": "按常量值逐像素执行图像的左、右。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, Scalar val, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、Scalar val、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray xy, OutputArray magnitude, Stream &amp;stream=Stream::Null())",
+    "local": "（输入数组xy、输出数组大小、流和；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes magnitudes of complex matrix elements.",
+    "local": "计算复矩阵元素的大小。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray x, InputArray y, OutputArray magnitude, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray x、InputArray y、OutputArray magnitude、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray xy, OutputArray magnitude, Stream &amp;stream=Stream::Null())",
+    "local": "（输入数组xy、输出数组大小、流和；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes squared magnitudes of complex matrix elements.",
+    "local": "计算复矩阵元素的平方大小。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray x, InputArray y, OutputArray magnitude, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray x、InputArray y、OutputArray magnitude、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes the per-element maximum of two matrices (or a matrix and a scalar).",
+    "local": "计算两个矩阵（或一个矩阵和一个标量）的每元素最大值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray mtx, Scalar &amp;mean, Scalar &amp;stddev)",
+    "local": "（InputArray mtx、Scalar和；均值、标量和；标准偏差）"
+  },
+  {
+    "origin": "Computes a mean value and a standard deviation of matrix elements.",
+    "local": "计算矩阵元素的平均值和标准偏差。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray mtx, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（输入阵列mtx、输出阵列dst、流和；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(const GpuMat *src, size_t n, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（const GpuMat*src，size\\n，OutputArray dst，Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Makes a multi-channel matrix out of several single-channel matrices.",
+    "local": "从几个单通道矩阵中生成多通道矩阵。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(const std::vector&lt; GpuMat &gt; &amp;src, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（const std：：向量&lt；GpuMat&gt&amp；src，OutputArray dst，Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes the per-element minimum of two matrices (or a matrix and a scalar).",
+    "local": "计算两个矩阵（或一个矩阵和一个标量）的每元素最小值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, double *minVal, double *maxVal, InputArray mask=noArray())",
+    "local": "（InputArray src，double*minVal，double*maxVal，InputArray mask=noArray（））"
+  },
+  {
+    "origin": "Finds global minimum and maximum matrix elements and returns their values.",
+    "local": "查找全局最小和最大矩阵元素并返回它们的值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, double *minVal, double *maxVal, Point *minLoc, Point *maxLoc, InputArray mask=noArray())",
+    "local": "（InputArray src，double*minVal，double*maxVal，Point*minLoc，Point*maxLoc，InputArray mask=noArray（））"
+  },
+  {
+    "origin": "Finds global minimum and maximum matrix elements and returns their values with locations.",
+    "local": "查找全局最小和最大矩阵元素，并返回它们的值和位置。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, int flags, float scale, bool conjB=false, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、int flags、float scale、bool conjB=false、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Performs a per-element multiplication of two Fourier spectrums and scales the result.",
+    "local": "对两个傅里叶光谱执行每元素乘法并缩放结果。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, int flags, bool conjB=false, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、int flags、bool conjB=false、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Performs a per-element multiplication of two Fourier spectrums.",
+    "local": "对两个傅里叶谱执行每元素乘法。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, double scale=1, int dtype=-1, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、double scale=1、int dtype=-1、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes a matrix-matrix or matrix-scalar per-element product.",
+    "local": "计算每元素的矩阵或矩阵标量积。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, int normType, InputArray mask=noArray())",
+    "local": "（InputArray src1，int normType，InputArray mask=noArray（））"
+  },
+  {
+    "origin": "Returns the norm of a matrix (or difference of two matrices).",
+    "local": "返回矩阵的范数（或两个矩阵的差）。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, int normType=NORM_L2)",
+    "local": "（inputarray src1，inputarray src2，int normtype=norm l2）"
+  },
+  {
+    "origin": "Returns the difference of two matrices.",
+    "local": "返回两个矩阵的差。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, double alpha, double beta, int norm_type, int dtype, InputArray mask=noArray(), Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src，OutputArray dst，double alpha，double beta，int norm_type，int dtype，InputArray mask=noArray（），流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Normalizes the norm or value range of an array.",
+    "local": "规范化数组的范数或值范围。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray x, InputArray y, OutputArray angle, bool angleInDegrees=false, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray x，InputArray y，OutputArray angle，bool angleInDegrees=false，流&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes polar angles of complex matrix elements.",
+    "local": "计算复矩阵元素的极角。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray magnitude, InputArray angle, OutputArray x, OutputArray y, bool angleInDegrees=false, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray magnitude、InputArray angle、OutputArray x、OutputArray y、bool angleInDegrees=false、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Converts polar coordinates into Cartesian.",
+    "local": "将极坐标转换为笛卡尔坐标。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, double power, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（输入阵列src、双电源、输出阵列dst、流和；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Raises every matrix element to a power.",
+    "local": "将每个矩阵元素提升到一个幂。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, InputArray sqr, OutputArray dst, Rect rect, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、InputArray sqr、OutputArray dst、Rect Rect、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes a standard deviation of integral images.",
+    "local": "计算积分图像的标准差。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray mtx, OutputArray vec, int dim, int reduceOp, int dtype=-1, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray mtx、OutputArray vec、int dim、int reduceOp、int dtype=-1、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Reduces a matrix to a vector.",
+    "local": "把矩阵化为向量。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, Scalar_&lt; int &gt; val, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src，标量\\&lt；内部&gt；val、输出阵列dst、流和；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Performs pixel by pixel right shift of an image by a constant value.",
+    "local": "按常量值逐像素右移图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, Scalar val, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、Scalar val、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray src1, double alpha, InputArray src2, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、double alpha、InputArray src2、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "adds scaled array to another one (dst = alpha*src1 + src2)",
+    "local": "将缩放数组添加到另一个数组（dst=alpha*src1+src2）"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, GpuMat *dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、GpuMat*dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Copies each plane of a multi-channel matrix into an array.",
+    "local": "将多通道矩阵的每个平面复制到一个数组中。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, std::vector&lt; GpuMat &gt; &amp;dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src，std:：vector&lt；GpuMat&gt&amp；dst、流和；stream=stream:：Null（））"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes a square value of each matrix element.",
+    "local": "计算每个矩阵元素的平方值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray sqsum, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray sqsum、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes a squared integral image.",
+    "local": "计算平方积分图像。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, InputArray mask=noArray())",
+    "local": "InputArray src，InputArray mask=noArray（））"
+  },
+  {
+    "origin": "Returns the squared sum of matrix elements.",
+    "local": "返回矩阵元素的平方和。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes a square root of each matrix element.",
+    "local": "计算每个矩阵元素的平方根。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, InputArray src2, OutputArray dst, InputArray mask=noArray(), int dtype=-1, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、InputArray src2、OutputArray dst、InputArray mask=noArray（）、int dtype=-1、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Computes a matrix-matrix or matrix-scalar difference.",
+    "local": "计算矩阵或矩阵标量差。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, InputArray mask=noArray())",
+    "local": "InputArray src，InputArray mask=noArray（））"
+  },
+  {
+    "origin": "Returns the sum of matrix elements.",
+    "local": "返回矩阵元素的和。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src, OutputArray dst, double thresh, double maxval, int type, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src、OutputArray dst、double thresh、double maxval、int type、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Applies a fixed-level threshold to each array element.",
+    "local": "对每个数组元素应用固定级别的阈值。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "(InputArray src1, OutputArray dst, Stream &amp;stream=Stream::Null())",
+    "local": "（InputArray src1、OutputArray dst、Stream&amp；stream=stream:：Null（））"
+  },
+  {
+    "origin": "Transposes a matrix.",
+    "local": "变换矩阵。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:33 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:33为OpenCV生成，&#160；"
+  }
+]

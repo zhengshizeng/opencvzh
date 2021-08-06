@@ -1,0 +1,978 @@
+[
+  {
+    "origin": "OpenCV: Extended Image Processing",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Modules",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Extended Image Processing",
+    "local": ""
+  },
+  {
+    "origin": "Modules",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, float alpha, float K, int niters)",
+    "local": ""
+  },
+  {
+    "origin": "Performs anisotropic diffusion on an image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, int d, double",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Smoothes an image using the Edge-Preserving filter.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_src,",
+    "local": ""
+  },
+  {
+    "origin": "_dst, double maxValue, int type, int blockSize, double k, int binarizationMethod=",
+    "local": ""
+  },
+  {
+    "origin": ", double r=128)",
+    "local": ""
+  },
+  {
+    "origin": "Performs thresholding on input images using Niblack's technique or some of the popular variations it inspired.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "I)",
+    "local": ""
+  },
+  {
+    "origin": "Calculates an affine transformation that normalize given image using Pei&amp;Lin Normalization.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "I,",
+    "local": ""
+  },
+  {
+    "origin": "T)",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src,",
+    "local": ""
+  },
+  {
+    "origin": "dst, int thinningType=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies a binary blob thinning operation, to achieve a skeletization of the input image.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "anisotropicDiffusion()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::anisotropicDiffusion",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "float",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "niters",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.anisotropicDiffusion(",
+    "local": ""
+  },
+  {
+    "origin": "src, alpha, K, niters[, dst]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Performs anisotropic diffusion on an image.",
+    "local": ""
+  },
+  {
+    "origin": "The function applies Perona-Malik anisotropic diffusion to an image. This is the solution to the partial differential equation:",
+    "local": ""
+  },
+  {
+    "origin": "\\[{\\frac {\\partial I}{\\partial t}}={\\mathrm {div}}\\left(c(x,y,t)\\nabla I\\right)=\\nabla c\\cdot \\nabla I+c(x,y,t)\\Delta I\\]",
+    "local": ""
+  },
+  {
+    "origin": "Suggested functions for c(x,y,t) are:",
+    "local": ""
+  },
+  {
+    "origin": "\\[c\\left(\\|\\nabla I\\|\\right)=e^{{-\\left(\\|\\nabla I\\|/K\\right)^{2}}}\\]",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "\\[ c\\left(\\|\\nabla I\\|\\right)={\\frac {1}{1+\\left({\\frac {\\|\\nabla I\\|}{K}}\\right)^{2}}} \\]",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Source image with 3 channels.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Destination image of the same size and the same number of channels as src .",
+    "local": ""
+  },
+  {
+    "origin": "alpha",
+    "local": ""
+  },
+  {
+    "origin": "The amount of time to step forward by on each iteration (normally, it's between 0 and 1).",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "sensitivity to the edges",
+    "local": ""
+  },
+  {
+    "origin": "niters",
+    "local": ""
+  },
+  {
+    "origin": "The number of iterations",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "edgePreservingFilter()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::edgePreservingFilter",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "threshold",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.edgePreservingFilter(",
+    "local": ""
+  },
+  {
+    "origin": "src, d, threshold[, dst]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Smoothes an image using the Edge-Preserving filter.",
+    "local": ""
+  },
+  {
+    "origin": "The function smoothes Gaussian noise as well as salt &amp; pepper noise. For more details about this implementation, please see [ReiWoe18] Reich, S. and Wörgötter, F. and Dellen, B. (2018). A Real-Time Edge-Preserving Denoising Filter. Proceedings of the 13th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications (VISIGRAPP): Visapp, 85-94, 4. DOI: 10.5220/0006509000850094.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Source 8-bit 3-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Destination image of the same size and type as src.",
+    "local": ""
+  },
+  {
+    "origin": "d",
+    "local": ""
+  },
+  {
+    "origin": "threshold",
+    "local": ""
+  },
+  {
+    "origin": "Threshold, which distinguishes between noise, outliers, and data.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "niBlackThreshold()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::niBlackThreshold",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "_src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "_dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "maxValue",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "binarizationMethod",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": "r",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "_dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.niBlackThreshold(",
+    "local": ""
+  },
+  {
+    "origin": "_src, maxValue, type, blockSize, k[, _dst[, binarizationMethod[, r]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Performs thresholding on input images using Niblack's technique or some of the popular variations it inspired.",
+    "local": ""
+  },
+  {
+    "origin": "The function transforms a grayscale image to a binary image according to the formulae:",
+    "local": ""
+  },
+  {
+    "origin": "THRESH_BINARY",
+    "local": ""
+  },
+  {
+    "origin": "\\[dst(x,y) = \\fork{\\texttt{maxValue}}{if \\(src(x,y) &gt; T(x,y)\\)}{0}{otherwise}\\]",
+    "local": ""
+  },
+  {
+    "origin": "THRESH_BINARY_INV",
+    "local": ""
+  },
+  {
+    "origin": "\\[dst(x,y) = \\fork{0}{if \\(src(x,y) &gt; T(x,y)\\)}{\\texttt{maxValue}}{otherwise}\\]",
+    "local": ""
+  },
+  {
+    "origin": "where \\(T(x,y)\\) is a threshold calculated individually for each pixel.",
+    "local": ""
+  },
+  {
+    "origin": "The threshold value \\(T(x, y)\\) is determined based on the binarization method chosen. For classic Niblack, it is the mean minus \\( k \\) times standard deviation of \\(\\texttt{blockSize} \\times\\texttt{blockSize}\\) neighborhood of \\((x, y)\\).",
+    "local": ""
+  },
+  {
+    "origin": "The function can't process the image in-place.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "_src",
+    "local": ""
+  },
+  {
+    "origin": "Source 8-bit single-channel image.",
+    "local": ""
+  },
+  {
+    "origin": "_dst",
+    "local": ""
+  },
+  {
+    "origin": "Destination image of the same size and the same type as src.",
+    "local": ""
+  },
+  {
+    "origin": "maxValue",
+    "local": ""
+  },
+  {
+    "origin": "Non-zero value assigned to the pixels for which the condition is satisfied, used with the THRESH_BINARY and THRESH_BINARY_INV thresholding types.",
+    "local": ""
+  },
+  {
+    "origin": "type",
+    "local": ""
+  },
+  {
+    "origin": "Thresholding type, see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "blockSize",
+    "local": ""
+  },
+  {
+    "origin": "Size of a pixel neighborhood that is used to calculate a threshold value for the pixel: 3, 5, 7, and so on.",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "The user-adjustable parameter used by Niblack and inspired techniques. For Niblack, this is normally a value between 0 and 1 that is multiplied with the standard deviation and subtracted from the mean.",
+    "local": ""
+  },
+  {
+    "origin": "binarizationMethod",
+    "local": ""
+  },
+  {
+    "origin": "Binarization method to use. By default, Niblack's technique is used. Other techniques can be specified, see",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "r",
+    "local": ""
+  },
+  {
+    "origin": "The user-adjustable parameter used by Sauvola's technique. This is the dynamic range of standard deviation.",
+    "local": ""
+  },
+  {
+    "origin": "See also",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "PeiLinNormalization()",
+    "local": ""
+  },
+  {
+    "origin": "[1/2]",
+    "local": ""
+  },
+  {
+    "origin": "cv::ximgproc::PeiLinNormalization",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "I",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.PeiLinNormalization(",
+    "local": ""
+  },
+  {
+    "origin": "I[, T]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Calculates an affine transformation that normalize given image using Pei&amp;Lin Normalization.",
+    "local": ""
+  },
+  {
+    "origin": "Assume given image \\(I=T(\\bar{I})\\) where \\(\\bar{I}\\) is a normalized image and \\(T\\) is an affine transformation distorting this image by translation, rotation, scaling and skew. The function returns an affine transformation matrix corresponding to the transformation \\(T^{-1}\\) described in [PeiLin95]. For more details about this implementation, please see [PeiLin95] Soo-Chang Pei and Chao-Nan Lin. Image normalization for pattern recognition. Image and Vision Computing, Vol. 13, N.10, pp. 711-723, 1995.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "I",
+    "local": ""
+  },
+  {
+    "origin": "Given transformed image.",
+    "local": ""
+  },
+  {
+    "origin": "Returns",
+    "local": ""
+  },
+  {
+    "origin": "Transformation matrix corresponding to inversed image transformation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "PeiLinNormalization()",
+    "local": ""
+  },
+  {
+    "origin": "[2/2]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::PeiLinNormalization",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "I",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "T",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.PeiLinNormalization(",
+    "local": ""
+  },
+  {
+    "origin": "I[, T]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts.",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "thinning()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::ximgproc::thinning",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "thinningType",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.ximgproc.thinning(",
+    "local": ""
+  },
+  {
+    "origin": "src[, dst[, thinningType]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Applies a binary blob thinning operation, to achieve a skeletization of the input image.",
+    "local": ""
+  },
+  {
+    "origin": "The function transforms a binary blob image into a skeletized form using the technique of Zhang-Suen.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "src",
+    "local": ""
+  },
+  {
+    "origin": "Source 8-bit single-channel image, containing binary blobs, with blobs having 255 pixel values.",
+    "local": ""
+  },
+  {
+    "origin": "dst",
+    "local": ""
+  },
+  {
+    "origin": "Destination image of the same size and the same type as src. The function can work in-place.",
+    "local": ""
+  },
+  {
+    "origin": "thinningType",
+    "local": ""
+  },
+  {
+    "origin": "Value that defines which thinning algorithm should be used. See",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:42 for OpenCV by",
+    "local": ""
+  }
+]

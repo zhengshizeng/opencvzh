@@ -1,0 +1,178 @@
+[
+  {
+    "origin": "OpenCV: Image Denoising",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Image Denoising",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this chapter,",
+    "local": ""
+  },
+  {
+    "origin": "You will learn about Non-local Means Denoising algorithm to remove noise in the image.",
+    "local": ""
+  },
+  {
+    "origin": "You will see different functions like",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "etc.",
+    "local": ""
+  },
+  {
+    "origin": "Theory",
+    "local": ""
+  },
+  {
+    "origin": "In earlier chapters, we have seen many image smoothing techniques like Gaussian Blurring, Median Blurring etc and they were good to some extent in removing small quantities of noise. In those techniques, we took a small neighbourhood around a pixel and did some operations like gaussian weighted average, median of the values etc to replace the central element. In short, noise removal at a pixel was local to its neighbourhood.",
+    "local": ""
+  },
+  {
+    "origin": "There is a property of noise. Noise is generally considered to be a random variable with zero mean. Consider a noisy pixel, \\(p = p_0 + n\\) where \\(p_0\\) is the true value of pixel and \\(n\\) is the noise in that pixel. You can take large number of same pixels (say \\(N\\)) from different images and computes their average. Ideally, you should get \\(p = p_0\\) since mean of noise is zero.",
+    "local": ""
+  },
+  {
+    "origin": "You can verify it yourself by a simple setup. Hold a static camera to a certain location for a couple of seconds. This will give you plenty of frames, or a lot of images of the same scene. Then write a piece of code to find the average of all the frames in the video (This should be too simple for you now ). Compare the final result and first frame. You can see reduction in noise. Unfortunately this simple method is not robust to camera and scene motions. Also often there is only one noisy image available.",
+    "local": ""
+  },
+  {
+    "origin": "So idea is simple, we need a set of similar images to average out the noise. Consider a small window (say 5x5 window) in the image. Chance is large that the same patch may be somewhere else in the image. Sometimes in a small neighbourhood around it. What about using these similar patches together and find their average? For that particular window, that is fine. See an example image below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "The blue patches in the image looks the similar. Green patches looks similar. So we take a pixel, take small window around it, search for similar windows in the image, average all the windows and replace the pixel with the result we got. This method is Non-Local Means Denoising. It takes more time compared to blurring techniques we saw earlier, but its result is very good. More details and online demo can be found at first link in additional resources.",
+    "local": ""
+  },
+  {
+    "origin": "For color images, image is converted to CIELAB colorspace and then it separately denoise L and AB components.",
+    "local": ""
+  },
+  {
+    "origin": "Image Denoising in OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV provides four variations of this technique.",
+    "local": ""
+  },
+  {
+    "origin": "- works with a single grayscale images",
+    "local": ""
+  },
+  {
+    "origin": "- works with a color image.",
+    "local": ""
+  },
+  {
+    "origin": "- works with image sequence captured in short period of time (grayscale images)",
+    "local": ""
+  },
+  {
+    "origin": "- same as above, but for color images.",
+    "local": ""
+  },
+  {
+    "origin": "Common arguments are:",
+    "local": ""
+  },
+  {
+    "origin": "h : parameter deciding filter strength. Higher h value removes noise better, but removes details of image also. (10 is ok)",
+    "local": ""
+  },
+  {
+    "origin": "hForColorComponents : same as h, but for color images only. (normally same as h)",
+    "local": ""
+  },
+  {
+    "origin": "templateWindowSize : should be odd. (recommended 7)",
+    "local": ""
+  },
+  {
+    "origin": "searchWindowSize : should be odd. (recommended 21)",
+    "local": ""
+  },
+  {
+    "origin": "Please visit first link in additional resources for more details on these parameters.",
+    "local": ""
+  },
+  {
+    "origin": "We will demonstrate 2 and 3 here. Rest is left for you.",
+    "local": ""
+  },
+  {
+    "origin": "As mentioned above it is used to remove noise from color images. (Noise is expected to be gaussian). See the example below:",
+    "local": ""
+  },
+  {
+    "origin": "Below is a zoomed version of result. My input image has a gaussian noise of \\(\\sigma = 25\\). See the result:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Now we will apply the same method to a video. The first argument is the list of noisy frames. Second argument imgToDenoiseIndex specifies which frame we need to denoise, for that we pass the index of frame in our input list. Third is the temporalWindowSize which specifies the number of nearby frames to be used for denoising. It should be odd. In that case, a total of temporalWindowSize frames are used where central frame is the frame to be denoised. For example, you passed a list of 5 frames as input. Let imgToDenoiseIndex = 2 and temporalWindowSize = 3. Then frame-1, frame-2 and frame-3 are used to denoise frame-2. Let's see an example.",
+    "local": ""
+  },
+  {
+    "origin": "Below image shows a zoomed version of the result we got:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "It takes considerable amount of time for computation. In the result, first image is the original frame, second is the noisy one, third is the denoised image.",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "http://www.ipol.im/pub/art/2011/bcm_nlm/",
+    "local": ""
+  },
+  {
+    "origin": "(It has the details, online demo etc. Highly recommended to visit. Our test image is generated from this link)",
+    "local": ""
+  },
+  {
+    "origin": "Online course at coursera",
+    "local": ""
+  },
+  {
+    "origin": "(First image taken from here)",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

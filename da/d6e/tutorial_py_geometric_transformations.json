@@ -1,0 +1,234 @@
+[
+  {
+    "origin": "OpenCV: Geometric Transformations of Images",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Geometric Transformations of Images",
+    "local": ""
+  },
+  {
+    "origin": "Goals",
+    "local": ""
+  },
+  {
+    "origin": "Learn to apply different geometric transformations to images, like translation, rotation, affine transformation etc.",
+    "local": ""
+  },
+  {
+    "origin": "You will see these functions:",
+    "local": ""
+  },
+  {
+    "origin": "Transformations",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV provides two transformation functions,",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": ", with which you can perform all kinds of transformations.",
+    "local": ""
+  },
+  {
+    "origin": "takes a 2x3 transformation matrix while",
+    "local": ""
+  },
+  {
+    "origin": "takes a 3x3 transformation matrix as input.",
+    "local": ""
+  },
+  {
+    "origin": "Scaling",
+    "local": ""
+  },
+  {
+    "origin": "Scaling is just resizing of the image. OpenCV comes with a function",
+    "local": ""
+  },
+  {
+    "origin": "for this purpose. The size of the image can be specified manually, or you can specify the scaling factor. Different interpolation methods are used. Preferable interpolation methods are",
+    "local": ""
+  },
+  {
+    "origin": "for shrinking and",
+    "local": ""
+  },
+  {
+    "origin": "(slow) &amp;",
+    "local": ""
+  },
+  {
+    "origin": "for zooming. By default, the interpolation method",
+    "local": ""
+  },
+  {
+    "origin": "is used for all resizing purposes. You can resize an input image with either of following methods:",
+    "local": ""
+  },
+  {
+    "origin": "Translation",
+    "local": ""
+  },
+  {
+    "origin": "Translation is the shifting of an object's location. If you know the shift in the (x,y) direction and let it be \\((t_x,t_y)\\), you can create the transformation matrix \\(\\textbf{M}\\) as follows:",
+    "local": ""
+  },
+  {
+    "origin": "\\[M = \\begin{bmatrix} 1 &amp; 0 &amp; t_x \\\\ 0 &amp; 1 &amp; t_y \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "You can take make it into a Numpy array of type np.float32 and pass it into the",
+    "local": ""
+  },
+  {
+    "origin": "function. See the below example for a shift of (100,50):",
+    "local": ""
+  },
+  {
+    "origin": "warning",
+    "local": ""
+  },
+  {
+    "origin": "The third argument of the",
+    "local": ""
+  },
+  {
+    "origin": "function is the size of the output image, which should be in the form of **(width, height)**. Remember width = number of columns, and height = number of rows.",
+    "local": ""
+  },
+  {
+    "origin": "See the result below:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Rotation",
+    "local": ""
+  },
+  {
+    "origin": "Rotation of an image for an angle \\(\\theta\\) is achieved by the transformation matrix of the form",
+    "local": ""
+  },
+  {
+    "origin": "\\[M = \\begin{bmatrix} cos\\theta &amp; -sin\\theta \\\\ sin\\theta &amp; cos\\theta \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "But OpenCV provides scaled rotation with adjustable center of rotation so that you can rotate at any location you prefer. The modified transformation matrix is given by",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{bmatrix} \\alpha &amp; \\beta &amp; (1- \\alpha ) \\cdot center.x - \\beta \\cdot center.y \\\\ - \\beta &amp; \\alpha &amp; \\beta \\cdot center.x + (1- \\alpha ) \\cdot center.y \\end{bmatrix}\\]",
+    "local": ""
+  },
+  {
+    "origin": "where:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{array}{l} \\alpha = scale \\cdot \\cos \\theta , \\\\ \\beta = scale \\cdot \\sin \\theta \\end{array}\\]",
+    "local": ""
+  },
+  {
+    "origin": "To find this transformation matrix, OpenCV provides a function,",
+    "local": ""
+  },
+  {
+    "origin": ". Check out the below example which rotates the image by 90 degree with respect to center without any scaling.",
+    "local": ""
+  },
+  {
+    "origin": "See the result:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Affine Transformation",
+    "local": ""
+  },
+  {
+    "origin": "In affine transformation, all parallel lines in the original image will still be parallel in the output image. To find the transformation matrix, we need three points from the input image and their corresponding locations in the output image. Then",
+    "local": ""
+  },
+  {
+    "origin": "will create a 2x3 matrix which is to be passed to",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Check the below example, and also look at the points I selected (which are marked in green color):",
+    "local": ""
+  },
+  {
+    "origin": "See the result:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Perspective Transformation",
+    "local": ""
+  },
+  {
+    "origin": "For perspective transformation, you need a 3x3 transformation matrix. Straight lines will remain straight even after the transformation. To find this transformation matrix, you need 4 points on the input image and corresponding points on the output image. Among these 4 points, 3 of them should not be collinear. Then the transformation matrix can be found by the function",
+    "local": ""
+  },
+  {
+    "origin": ". Then apply",
+    "local": ""
+  },
+  {
+    "origin": "with this 3x3 transformation matrix.",
+    "local": ""
+  },
+  {
+    "origin": "See the code below:",
+    "local": ""
+  },
+  {
+    "origin": "Result:",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "Additional Resources",
+    "local": ""
+  },
+  {
+    "origin": "\"Computer Vision: Algorithms and Applications\", Richard Szeliski",
+    "local": ""
+  },
+  {
+    "origin": "Exercises",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,746 @@
+[
+  {
+    "origin": "OpenCV: Introduction to Principal Component Analysis (PCA)",
+    "local": "OpenCV：主成分分析（PCA）简介"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Introduction to Principal Component Analysis (PCA)",
+    "local": "主成分分析导论"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Original author",
+    "local": "原作者"
+  },
+  {
+    "origin": "Theodore Tsesmelis",
+    "local": "西奥多·塞斯梅利斯。"
+  },
+  {
+    "origin": "Compatibility",
+    "local": "兼容性"
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": "打开CV&gt；=3"
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": "在本教程中，您将学习如何："
+  },
+  {
+    "origin": "Use the OpenCV class",
+    "local": "使用OpenCV类"
+  },
+  {
+    "origin": "to calculate the orientation of an object.",
+    "local": "计算物体的方向。"
+  },
+  {
+    "origin": "What is PCA?",
+    "local": "什么是PCA？"
+  },
+  {
+    "origin": "Principal Component Analysis (PCA) is a statistical procedure that extracts the most important features of a dataset.",
+    "local": "主成分分析（PCA）是一种提取数据集最重要特征的统计方法。"
+  },
+  {
+    "origin": "Consider that you have a set of 2D points as it is shown in the figure above. Each dimension corresponds to a feature you are interested in. Here some could argue that the points are set in a random order. However, if you have a better look you will see that there is a linear pattern (indicated by the blue line) which is hard to dismiss. A key point of PCA is the Dimensionality Reduction. Dimensionality Reduction is the process of reducing the number of the dimensions of the given dataset. For example, in the above case it is possible to approximate the set of points to a single line and therefore, reduce the dimensionality of the given points from 2D to 1D.",
+    "local": "假设您有一组二维点，如上图所示。每个维度对应于您感兴趣的特征。在这里，有些人可能会说这些点是按随机顺序设置的。但是，如果你仔细观察，你会发现有一个很难忽略的线性模式（用蓝线表示）。主成分分析的一个关键点是降维。降维是减少给定数据集维数的过程。例如，在上述情况下，可以将点集近似为一条直线，从而将给定点的维数从2D降低到1D。"
+  },
+  {
+    "origin": "Moreover, you could also see that the points vary the most along the blue line, more than they vary along the Feature 1 or Feature 2 axes. This means that if you know the position of a point along the blue line you have more information about the point than if you only knew where it was on Feature 1 axis or Feature 2 axis.",
+    "local": "此外，您还可以看到，点沿蓝线变化最大，而不是沿要素1或要素2轴变化最大。这意味着，如果您知道沿蓝线的点的位置，则与仅知道该点在要素1轴或要素2轴上的位置相比，您可以获得更多关于该点的信息。"
+  },
+  {
+    "origin": "Hence, PCA allows us to find the direction along which our data varies the most. In fact, the result of running PCA on the set of points in the diagram consist of 2 vectors called",
+    "local": "因此，PCA允许我们找到数据变化最大的方向。实际上，对图中的点集运行PCA的结果由两个向量组成，称为"
+  },
+  {
+    "origin": "eigenvectors",
+    "local": "特征向量"
+  },
+  {
+    "origin": "which are the",
+    "local": "哪些是"
+  },
+  {
+    "origin": "principal components",
+    "local": "主成分"
+  },
+  {
+    "origin": "of the data set.",
+    "local": "数据集的。"
+  },
+  {
+    "origin": "The size of each eigenvector is encoded in the corresponding eigenvalue and indicates how much the data vary along the principal component. The beginning of the eigenvectors is the center of all points in the data set. Applying PCA to N-dimensional data set yields N N-dimensional eigenvectors, N eigenvalues and 1 N-dimensional center point. Enough theory, let’s see how we can put these ideas into code.",
+    "local": "每个特征向量的大小被编码在相应的特征值中，并指示数据沿主分量的变化程度。特征向量的开始是数据集中所有点的中心。对N维数据集进行主成分分析，得到N维特征向量、N个特征值和1个N维中心点。足够的理论，让我们看看如何把这些想法变成代码。"
+  },
+  {
+    "origin": "How are the eigenvectors and eigenvalues computed?",
+    "local": "如何计算特征向量和特征值？"
+  },
+  {
+    "origin": "The goal is to transform a given data set",
+    "local": "目标是转换给定的数据集"
+  },
+  {
+    "origin": "X",
+    "local": "十"
+  },
+  {
+    "origin": "of dimension",
+    "local": "尺寸"
+  },
+  {
+    "origin": "p",
+    "local": "p"
+  },
+  {
+    "origin": "to an alternative data set",
+    "local": "到备用数据集"
+  },
+  {
+    "origin": "Y",
+    "local": "Y"
+  },
+  {
+    "origin": "of smaller dimension",
+    "local": "尺寸较小的"
+  },
+  {
+    "origin": "L",
+    "local": "L"
+  },
+  {
+    "origin": ". Equivalently, we are seeking to find the matrix",
+    "local": ". 等价地，我们正在寻找矩阵"
+  },
+  {
+    "origin": "Y",
+    "local": "Y"
+  },
+  {
+    "origin": ", where",
+    "local": "，在哪里"
+  },
+  {
+    "origin": "Y",
+    "local": "Y"
+  },
+  {
+    "origin": "is the",
+    "local": "是"
+  },
+  {
+    "origin": "Karhunen–Loève transform",
+    "local": "Karhunn-love变换"
+  },
+  {
+    "origin": "(KLT) of matrix",
+    "local": "矩阵的（KLT）"
+  },
+  {
+    "origin": "X",
+    "local": "十"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "\\[ \\mathbf{Y} = \\mathbb{K} \\mathbb{L} \\mathbb{T} \\{\\mathbf{X}\\} \\]",
+    "local": "\\\\[\\mathbf{Y}=\\mathbb{K}\\mathbb{L}\\mathbb{T}\\{\\mathbf{X}\\}\\]"
+  },
+  {
+    "origin": "Organize the data set",
+    "local": "组织数据集"
+  },
+  {
+    "origin": "Suppose you have data comprising a set of observations of",
+    "local": "假设你的数据包含了一组"
+  },
+  {
+    "origin": "p",
+    "local": "p"
+  },
+  {
+    "origin": "variables, and you want to reduce the data so that each observation can be described with only",
+    "local": "变量，并且您希望减少数据，以便每个观察值只能用"
+  },
+  {
+    "origin": "L",
+    "local": "L"
+  },
+  {
+    "origin": "variables,",
+    "local": "变量，"
+  },
+  {
+    "origin": "L",
+    "local": "L"
+  },
+  {
+    "origin": "&lt;",
+    "local": "&lt；"
+  },
+  {
+    "origin": "p",
+    "local": "p"
+  },
+  {
+    "origin": ". Suppose further, that the data are arranged as a set of",
+    "local": ". 进一步假设，数据被安排为一组"
+  },
+  {
+    "origin": "n",
+    "local": "n"
+  },
+  {
+    "origin": "data vectors \\( x_1...x_n \\) with each \\( x_i \\) representing a single grouped observation of the",
+    "local": "数据向量\\（x\\u 1…x\\u n\\），每个\\（x\\u i\\）表示对"
+  },
+  {
+    "origin": "p",
+    "local": "p"
+  },
+  {
+    "origin": "variables.",
+    "local": "变量。"
+  },
+  {
+    "origin": "Write \\( x_1...x_n \\) as row vectors, each of which has",
+    "local": "将\\（x\\u 1…x\\u n\\）写入行向量，每个行向量都有"
+  },
+  {
+    "origin": "p",
+    "local": "p"
+  },
+  {
+    "origin": "columns.",
+    "local": "柱。"
+  },
+  {
+    "origin": "Place the row vectors into a single matrix",
+    "local": "将行向量放入单个矩阵中"
+  },
+  {
+    "origin": "X",
+    "local": "十"
+  },
+  {
+    "origin": "of dimensions \\( n\\times p \\).",
+    "local": "维数\\（n乘以p\\）。"
+  },
+  {
+    "origin": "Calculate the empirical mean",
+    "local": "计算经验平均值"
+  },
+  {
+    "origin": "Find the empirical mean along each dimension \\( j = 1, ..., p \\).",
+    "local": "找出沿每个维度的经验平均值\\（j=1，…，p\\）。"
+  },
+  {
+    "origin": "Place the calculated mean values into an empirical mean vector",
+    "local": "将计算出的平均值放入经验平均向量"
+  },
+  {
+    "origin": "u",
+    "local": "u"
+  },
+  {
+    "origin": "of dimensions \\( p\\times 1 \\).",
+    "local": "尺寸\\（p\\乘以1\\）。"
+  },
+  {
+    "origin": "\\[ \\mathbf{u[j]} = \\frac{1}{n}\\sum_{i=1}^{n}\\mathbf{X[i,j]} \\]",
+    "local": "\\\\[\\mathbf{u[j]}=\\frac{1}{n}\\sum{i=1}^{n}\\mathbf{X[i，j]}\\]"
+  },
+  {
+    "origin": "Calculate the deviations from the mean",
+    "local": "计算与平均值的偏差"
+  },
+  {
+    "origin": "Mean subtraction is an integral part of the solution towards finding a principal component basis that minimizes the mean square error of approximating the data. Hence, we proceed by centering the data as follows:",
+    "local": "均值减法是寻找一个主成分基的解决方案的一个组成部分，这个主成分基可以最小化逼近数据的均方误差。因此，我们按照以下方式对数据进行集中处理："
+  },
+  {
+    "origin": "Subtract the empirical mean vector",
+    "local": "减去经验平均向量"
+  },
+  {
+    "origin": "u",
+    "local": "u"
+  },
+  {
+    "origin": "from each row of the data matrix",
+    "local": "从数据矩阵的每一行"
+  },
+  {
+    "origin": "X",
+    "local": "十"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Store mean-subtracted data in the \\( n\\times p \\) matrix",
+    "local": "将平均减去的数据存储在\\（n乘以p\\）矩阵中"
+  },
+  {
+    "origin": "B",
+    "local": "B"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "\\[ \\mathbf{B} = \\mathbf{X} - \\mathbf{h}\\mathbf{u^{T}} \\]",
+    "local": "\\\\[\\mathbf{B}=\\mathbf{X}-\\mathbf{h}\\mathbf{u^{T}}\\]"
+  },
+  {
+    "origin": "where",
+    "local": "哪里"
+  },
+  {
+    "origin": "h",
+    "local": "小时"
+  },
+  {
+    "origin": "is an \\( n\\times 1 \\) column vector of all 1s:",
+    "local": "是所有1的\\（n乘以1\\）列向量："
+  },
+  {
+    "origin": "\\[ h[i] = 1, i = 1, ..., n \\]",
+    "local": "\\[h[i]=1，i=1，…，n\\]"
+  },
+  {
+    "origin": "Find the covariance matrix",
+    "local": "求协方差矩阵"
+  },
+  {
+    "origin": "Find the \\( p\\times p \\) empirical covariance matrix",
+    "local": "求\\（p\\乘以p\\）经验协方差矩阵"
+  },
+  {
+    "origin": "C",
+    "local": "C"
+  },
+  {
+    "origin": "from the outer product of matrix",
+    "local": "从矩阵的外积"
+  },
+  {
+    "origin": "B",
+    "local": "B"
+  },
+  {
+    "origin": "with itself:",
+    "local": "与自身："
+  },
+  {
+    "origin": "\\[ \\mathbf{C} = \\frac{1}{n-1} \\mathbf{B^{*}} \\cdot \\mathbf{B} \\]",
+    "local": "\\\\[\\mathbf{C}=\\frac{1}{n-1}\\mathbf{B^{*}}\\cdot\\mathbf{B}\\]"
+  },
+  {
+    "origin": "where * is the conjugate transpose operator. Note that if B consists entirely of real numbers, which is the case in many applications, the \"conjugate transpose\" is the same as the regular transpose.",
+    "local": "其中*是共轭转置运算符。请注意，如果B完全由实数组成（在许多应用中都是这样），则“共轭转置”与正则转置相同。"
+  },
+  {
+    "origin": "Find the eigenvectors and eigenvalues of the covariance matrix",
+    "local": "求协方差矩阵的特征向量和特征值"
+  },
+  {
+    "origin": "Compute the matrix",
+    "local": "计算矩阵"
+  },
+  {
+    "origin": "V",
+    "local": "五"
+  },
+  {
+    "origin": "of eigenvectors which diagonalizes the covariance matrix",
+    "local": "对角化协方差矩阵的特征向量"
+  },
+  {
+    "origin": "C",
+    "local": "C"
+  },
+  {
+    "origin": ":",
+    "local": ":"
+  },
+  {
+    "origin": "\\[ \\mathbf{V^{-1}} \\mathbf{C} \\mathbf{V} = \\mathbf{D} \\]",
+    "local": "\\\\[\\mathbf{V^{-1}}\\mathbf{C}\\mathbf{V}=\\mathbf{D}\\]"
+  },
+  {
+    "origin": "where",
+    "local": "哪里"
+  },
+  {
+    "origin": "D",
+    "local": "D"
+  },
+  {
+    "origin": "is the diagonal matrix of eigenvalues of",
+    "local": "是特征值的对角矩阵"
+  },
+  {
+    "origin": "C",
+    "local": "C"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Matrix",
+    "local": "矩阵"
+  },
+  {
+    "origin": "D",
+    "local": "D"
+  },
+  {
+    "origin": "will take the form of an \\( p \\times p \\) diagonal matrix:",
+    "local": "将采用\\（p\\乘以p\\）对角矩阵的形式："
+  },
+  {
+    "origin": "\\[ D[k,l] = \\left\\{\\begin{matrix} \\lambda_k, k = l \\\\ 0, k \\neq l \\end{matrix}\\right. \\]",
+    "local": "\\\\[D[k，l]=\\左\\{\\开始{矩阵}\\λk，k=l\\\\0，k\\neq l\\结束{矩阵}\\右。\\]"
+  },
+  {
+    "origin": "here, \\( \\lambda_j \\) is the",
+    "local": "这里，\\（\\lambda\\u j\\）是"
+  },
+  {
+    "origin": "j",
+    "local": "j"
+  },
+  {
+    "origin": "-th eigenvalue of the covariance matrix",
+    "local": "-协方差矩阵的特征值"
+  },
+  {
+    "origin": "C",
+    "local": "C"
+  },
+  {
+    "origin": "Matrix",
+    "local": "矩阵"
+  },
+  {
+    "origin": "V",
+    "local": "五"
+  },
+  {
+    "origin": ", also of dimension",
+    "local": "，也是尺寸"
+  },
+  {
+    "origin": "p",
+    "local": "p"
+  },
+  {
+    "origin": "x",
+    "local": "十"
+  },
+  {
+    "origin": "p",
+    "local": "p"
+  },
+  {
+    "origin": ", contains",
+    "local": "，包含"
+  },
+  {
+    "origin": "p",
+    "local": "p"
+  },
+  {
+    "origin": "column vectors, each of length",
+    "local": "列向量，每个长度"
+  },
+  {
+    "origin": "p",
+    "local": "p"
+  },
+  {
+    "origin": ", which represent the",
+    "local": "，代表"
+  },
+  {
+    "origin": "p",
+    "local": "p"
+  },
+  {
+    "origin": "eigenvectors of the covariance matrix",
+    "local": "协方差矩阵的特征向量"
+  },
+  {
+    "origin": "C",
+    "local": "C"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "The eigenvalues and eigenvectors are ordered and paired. The",
+    "local": "特征值和特征向量是有序的和成对的。这个"
+  },
+  {
+    "origin": "j",
+    "local": "j"
+  },
+  {
+    "origin": "th eigenvalue corresponds to the",
+    "local": "特征值对应于"
+  },
+  {
+    "origin": "j",
+    "local": "j"
+  },
+  {
+    "origin": "th eigenvector.",
+    "local": "特征向量。"
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "sources",
+    "local": "来源"
+  },
+  {
+    "origin": "[1]",
+    "local": "[1]"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "[2]",
+    "local": "[2]"
+  },
+  {
+    "origin": "and special thanks to Svetlin Penkov for the original tutorial.",
+    "local": "特别感谢斯维特林·彭科夫的原始教程。"
+  },
+  {
+    "origin": "Source Code",
+    "local": "源代码"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Downloadable code",
+    "local": "可下载代码"
+  },
+  {
+    "origin": ": Click",
+    "local": "：单击"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": "Code at glance:",
+    "local": "代码一览："
+  },
+  {
+    "origin": "Note",
+    "local": "注意"
+  },
+  {
+    "origin": "Another example using PCA for dimensionality reduction while maintaining an amount of variance can be found at",
+    "local": "另一个例子是使用PCA进行降维，同时保持一定的方差"
+  },
+  {
+    "origin": "opencv_source_code/samples/cpp/pca.cpp",
+    "local": "opencv\\源代码/samples/cpp/pca.cpp"
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Read image and convert it to binary",
+    "local": "读取图像并将其转换为二进制"
+  },
+  {
+    "origin": "Here we apply the necessary pre-processing procedures in order to be able to detect the objects of interest.",
+    "local": "在这里，我们应用必要的预处理程序，以便能够检测出感兴趣的对象。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Extract objects of interest",
+    "local": "提取感兴趣的对象"
+  },
+  {
+    "origin": "Then find and filter contours by size and obtain the orientation of the remaining ones.",
+    "local": "然后根据轮廓的大小对轮廓进行查找和过滤，得到剩余轮廓的方向。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Extract orientation",
+    "local": "提取方向"
+  },
+  {
+    "origin": "Orientation is extracted by the call of getOrientation() function, which performs all the PCA procedure.",
+    "local": "通过调用getOrientation（）函数提取方向，该函数执行所有PCA过程。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "First the data need to be arranged in a matrix with size n x 2, where n is the number of data points we have. Then we can perform that PCA analysis. The calculated mean (i.e. center of mass) is stored in the",
+    "local": "首先，数据需要被安排在一个大小为nx2的矩阵中，其中n是我们拥有的数据点的数量。然后我们可以进行主成分分析。计算的平均值（即重心）存储在"
+  },
+  {
+    "origin": "cntr",
+    "local": "cntr公司"
+  },
+  {
+    "origin": "variable and the eigenvectors and eigenvalues are stored in the corresponding std::vector’s.",
+    "local": "变量，特征向量和特征值存储在相应的std：：vector中。"
+  },
+  {
+    "origin": "Visualize result",
+    "local": "可视化结果"
+  },
+  {
+    "origin": "The final result is visualized through the",
+    "local": "最终结果通过"
+  },
+  {
+    "origin": "function, where the principal components are drawn in lines, and each eigenvector is multiplied by its eigenvalue and translated to the mean position.",
+    "local": "函数，其中主成分被画成直线，每个特征向量被乘以它的特征值并转化为平均位置。"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "C++",
+    "local": "C++"
+  },
+  {
+    "origin": "Java",
+    "local": "Java"
+  },
+  {
+    "origin": "Python",
+    "local": "蟒蛇"
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "The code opens an image, finds the orientation of the detected objects of interest and then visualizes the result by drawing the contours of the detected objects of interest, the center point, and the x-axis, y-axis regarding the extracted orientation.",
+    "local": "代码打开一个图像，找到感兴趣的检测对象的方向，然后通过绘制感兴趣的检测对象的轮廓、中心点以及与提取的方向有关的x轴、y轴来可视化结果。"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:37为OpenCV生成，&#160；"
+  }
+]

@@ -1,0 +1,734 @@
+[
+  {
+    "origin": "OpenCV: Reconstruction",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruction",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d,",
+    "local": ""
+  },
+  {
+    "origin": "Ps,",
+    "local": ""
+  },
+  {
+    "origin": "points3d,",
+    "local": ""
+  },
+  {
+    "origin": "K, bool is_projective=false)",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d correspondences while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d,",
+    "local": ""
+  },
+  {
+    "origin": "Rs,",
+    "local": ""
+  },
+  {
+    "origin": "Ts,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "points3d, bool is_projective=false)",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d correspondences while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; images,",
+    "local": ""
+  },
+  {
+    "origin": "Ps,",
+    "local": ""
+  },
+  {
+    "origin": "points3d,",
+    "local": ""
+  },
+  {
+    "origin": "K, bool is_projective=false)",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d images while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "(const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; images,",
+    "local": ""
+  },
+  {
+    "origin": "Rs,",
+    "local": ""
+  },
+  {
+    "origin": "Ts,",
+    "local": ""
+  },
+  {
+    "origin": "K,",
+    "local": ""
+  },
+  {
+    "origin": "points3d, bool is_projective=false)",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d images while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Notice that it is compiled only when Ceres Solver is correctly installed.",
+    "local": ""
+  },
+  {
+    "origin": "Check installation instructions in the following tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "reconstruct()",
+    "local": ""
+  },
+  {
+    "origin": "[1/4]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::sfm::reconstruct",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Ps",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "is_projective",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d correspondences while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points2d",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of vectors of 2d points (the inner vector is per image).",
+    "local": ""
+  },
+  {
+    "origin": "Ps",
+    "local": ""
+  },
+  {
+    "origin": "Output vector with the 3x4 projections matrices of each image.",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": "Output array with estimated 3d points.",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Input/Output camera matrix \\(K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\). Input parameters used as initial guess.",
+    "local": ""
+  },
+  {
+    "origin": "is_projective",
+    "local": ""
+  },
+  {
+    "origin": "if true, the cameras are supposed to be projective.",
+    "local": ""
+  },
+  {
+    "origin": "This method calls below signature and extracts projection matrices from estimated K, R and t.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Tracks must be as precise as possible. It does not handle outliers and is very sensible to them.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "reconstruct()",
+    "local": ""
+  },
+  {
+    "origin": "[2/4]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::sfm::reconstruct",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "points2d",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Rs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Ts",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "is_projective",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d correspondences while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "points2d",
+    "local": ""
+  },
+  {
+    "origin": "Input vector of vectors of 2d points (the inner vector is per image).",
+    "local": ""
+  },
+  {
+    "origin": "Rs",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of 3x3 rotations of the camera.",
+    "local": ""
+  },
+  {
+    "origin": "Ts",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of 3x1 translations of the camera.",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": "Output array with estimated 3d points.",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Input/Output camera matrix \\(K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\). Input parameters used as initial guess.",
+    "local": ""
+  },
+  {
+    "origin": "is_projective",
+    "local": ""
+  },
+  {
+    "origin": "if true, the cameras are supposed to be projective.",
+    "local": ""
+  },
+  {
+    "origin": "Internally calls libmv simple pipeline routine with some default parameters by instatiating",
+    "local": ""
+  },
+  {
+    "origin": "class.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Tracks must be as precise as possible. It does not handle outliers and is very sensible to them.",
+    "local": ""
+  },
+  {
+    "origin": "To see a working example for camera motion reconstruction, check the following tutorial:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "reconstruct()",
+    "local": ""
+  },
+  {
+    "origin": "[3/4]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::sfm::reconstruct",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "images",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Ps",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "is_projective",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d images while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "images",
+    "local": ""
+  },
+  {
+    "origin": "a vector of string with the images paths.",
+    "local": ""
+  },
+  {
+    "origin": "Ps",
+    "local": ""
+  },
+  {
+    "origin": "Output vector with the 3x4 projections matrices of each image.",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": "Output array with estimated 3d points.",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Input/Output camera matrix \\(K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\). Input parameters used as initial guess.",
+    "local": ""
+  },
+  {
+    "origin": "is_projective",
+    "local": ""
+  },
+  {
+    "origin": "if true, the cameras are supposed to be projective.",
+    "local": ""
+  },
+  {
+    "origin": "This method calls below signature and extracts projection matrices from estimated K, R and t.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The images must be ordered as they were an image sequence. Additionally, each frame should be as close as posible to the previous and posterior.",
+    "local": ""
+  },
+  {
+    "origin": "For now DAISY features are used in order to compute the 2d points tracks and it only works for 3-4 images.",
+    "local": ""
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": ""
+  },
+  {
+    "origin": "reconstruct()",
+    "local": ""
+  },
+  {
+    "origin": "[4/4]",
+    "local": ""
+  },
+  {
+    "origin": "void cv::sfm::reconstruct",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "images",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Rs",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "Ts",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "is_projective",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Reconstruct 3d points from 2d images while performing autocalibration.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "images",
+    "local": ""
+  },
+  {
+    "origin": "a vector of string with the images paths.",
+    "local": ""
+  },
+  {
+    "origin": "Rs",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of 3x3 rotations of the camera.",
+    "local": ""
+  },
+  {
+    "origin": "Ts",
+    "local": ""
+  },
+  {
+    "origin": "Output vector of 3x1 translations of the camera.",
+    "local": ""
+  },
+  {
+    "origin": "points3d",
+    "local": ""
+  },
+  {
+    "origin": "Output array with estimated 3d points.",
+    "local": ""
+  },
+  {
+    "origin": "K",
+    "local": ""
+  },
+  {
+    "origin": "Input/Output camera matrix \\(K = \\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\\). Input parameters used as initial guess.",
+    "local": ""
+  },
+  {
+    "origin": "is_projective",
+    "local": ""
+  },
+  {
+    "origin": "if true, the cameras are supposed to be projective.",
+    "local": ""
+  },
+  {
+    "origin": "Internally calls libmv simple pipeline routine with some default parameters by instatiating",
+    "local": ""
+  },
+  {
+    "origin": "class.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "The images must be ordered as they were an image sequence. Additionally, each frame should be as close as posible to the previous and posterior.",
+    "local": ""
+  },
+  {
+    "origin": "For now DAISY features are used in order to compute the 2d points tracks and it only works for 3-4 images.",
+    "local": ""
+  },
+  {
+    "origin": "To see a working example for scene reconstruction, check the following tutorial:",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by &#160;",
+    "local": ""
+  }
+]

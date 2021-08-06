@@ -1,0 +1,806 @@
+[
+  {
+    "origin": "OpenCV: Binary descriptors for lines extracted from an image",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "Binary descriptors for lines extracted from an image",
+    "local": ""
+  },
+  {
+    "origin": "Classes",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "Class implements both functionalities for detection of lines and computation of their binary descriptor.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "furnishes all functionalities for querying a dataset provided by user or internal to class (that user must, anyway, populate) on the model of",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "A class to represent a line.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "class",
+    "local": ""
+  },
+  {
+    "origin": "struct",
+    "local": ""
+  },
+  {
+    "origin": "Functions",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;image, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keylines,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;outImage, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;color=",
+    "local": ""
+  },
+  {
+    "origin": "(-1), int flags=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Draws keylines.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "void",
+    "local": ""
+  },
+  {
+    "origin": "(const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;img1, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keylines1, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;img2, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;keylines2, const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;matches1to2,",
+    "local": ""
+  },
+  {
+    "origin": "&amp;outImg, const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;matchColor=",
+    "local": ""
+  },
+  {
+    "origin": "(-1), const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;singleLineColor=",
+    "local": ""
+  },
+  {
+    "origin": "(-1), const std::vector&lt; char &gt; &amp;matchesMask=std::vector&lt; char &gt;(), int flags=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Draws the found matches of keylines from two images.",
+    "local": ""
+  },
+  {
+    "origin": "More...",
+    "local": ""
+  },
+  {
+    "origin": "Detailed Description",
+    "local": ""
+  },
+  {
+    "origin": "Introduction",
+    "local": ""
+  },
+  {
+    "origin": "One of the most challenging activities in computer vision is the extraction of useful information from a given image. Such information, usually comes in the form of points that preserve some kind of property (for instance, they are scale-invariant) and are actually representative of input image.",
+    "local": ""
+  },
+  {
+    "origin": "The goal of this module is seeking a new kind of representative information inside an image and providing the functionalities for its extraction and representation. In particular, differently from previous methods for detection of relevant elements inside an image, lines are extracted in place of points; a new class is defined ad hoc to summarize a line's properties, for reuse and plotting purposes.",
+    "local": ""
+  },
+  {
+    "origin": "Computation of binary descriptors",
+    "local": ""
+  },
+  {
+    "origin": "To obtatin a binary descriptor representing a certain line detected from a certain octave of an image, we first compute a non-binary descriptor as described in",
+    "local": ""
+  },
+  {
+    "origin": ". Such algorithm works on lines extracted using EDLine detector, as explained in",
+    "local": ""
+  },
+  {
+    "origin": ". Given a line, we consider a rectangular region centered at it and called",
+    "local": ""
+  },
+  {
+    "origin": "line support region (LSR)",
+    "local": ""
+  },
+  {
+    "origin": ". Such region is divided into a set of bands \\(\\{B_1, B_2, ..., B_m\\}\\), whose length equals the one of line.",
+    "local": ""
+  },
+  {
+    "origin": "If we indicate with \\(\\bf{d}_L\\) the direction of line, the orthogonal and clockwise direction to line \\(\\bf{d}_{\\perp}\\) can be determined; these two directions, are used to construct a reference frame centered in the middle point of line. The gradients of pixels \\(\\bf{g'}\\) inside LSR can be projected to the newly determined frame, obtaining their local equivalent \\(\\bf{g'} = (\\bf{g}^T \\cdot \\bf{d}_{\\perp}, \\bf{g}^T \\cdot \\bf{d}_L)^T \\triangleq (\\bf{g'}_{d_{\\perp}}, \\bf{g'}_{d_L})^T\\).",
+    "local": ""
+  },
+  {
+    "origin": "Later on, a Gaussian function is applied to all LSR's pixels along \\(\\bf{d}_\\perp\\) direction; first, we assign a global weighting coefficient \\(f_g(i) = (1/\\sqrt{2\\pi}\\sigma_g)e^{-d^2_i/2\\sigma^2_g}\\) to i*-th row in LSR, where \\(d_i\\) is the distance of",
+    "local": ""
+  },
+  {
+    "origin": "i",
+    "local": ""
+  },
+  {
+    "origin": "-th row from the center row in LSR, \\(\\sigma_g = 0.5(m \\cdot w - 1)\\) and \\(w\\) is the width of bands (the same for every band). Secondly, considering a band \\(B_j\\) and its neighbor bands \\(B_{j-1}, B_{j+1}\\), we assign a local weighting \\(F_l(k) = (1/\\sqrt{2\\pi}\\sigma_l)e^{-d'^2_k/2\\sigma_l^2}\\), where \\(d'_k\\) is the distance of",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "-th row from the center row in \\(B_j\\) and \\(\\sigma_l = w\\). Using the global and local weights, we obtain, at the same time, the reduction of role played by gradients far from line and of boundary effect, respectively.",
+    "local": ""
+  },
+  {
+    "origin": "Each band \\(B_j\\) in LSR has an associated",
+    "local": ""
+  },
+  {
+    "origin": "band descriptor(BD)",
+    "local": ""
+  },
+  {
+    "origin": "which is computed considering previous and next band (top and bottom bands are ignored when computing descriptor for first and last band). Once each band has been assignen its BD, the LBD descriptor of line is simply given by",
+    "local": ""
+  },
+  {
+    "origin": "\\[LBD = (BD_1^T, BD_2^T, ... , BD^T_m)^T.\\]",
+    "local": ""
+  },
+  {
+    "origin": "To compute a band descriptor \\(B_j\\), each",
+    "local": ""
+  },
+  {
+    "origin": "k",
+    "local": ""
+  },
+  {
+    "origin": "-th row in it is considered and the gradients in such row are accumulated:",
+    "local": ""
+  },
+  {
+    "origin": "\\[\\begin{matrix} \\bf{V1}^k_j = \\lambda \\sum\\limits_{\\bf{g}'_{d_\\perp}&gt;0}\\bf{g}'_{d_\\perp}, &amp; \\bf{V2}^k_j = \\lambda \\sum\\limits_{\\bf{g}'_{d_\\perp}&lt;0} -\\bf{g}'_{d_\\perp}, \\\\ \\bf{V3}^k_j = \\lambda \\sum\\limits_{\\bf{g}'_{d_L}&gt;0}\\bf{g}'_{d_L}, &amp; \\bf{V4}^k_j = \\lambda \\sum\\limits_{\\bf{g}'_{d_L}&lt;0} -\\bf{g}'_{d_L}\\end{matrix}.\\]",
+    "local": ""
+  },
+  {
+    "origin": "with \\(\\lambda = f_g(k)f_l(k)\\).",
+    "local": ""
+  },
+  {
+    "origin": "By stacking previous results, we obtain the",
+    "local": ""
+  },
+  {
+    "origin": "band description matrix (BDM)",
+    "local": ""
+  },
+  {
+    "origin": "\\[BDM_j = \\left(\\begin{matrix} \\bf{V1}_j^1 &amp; \\bf{V1}_j^2 &amp; \\ldots &amp; \\bf{V1}_j^n \\\\ \\bf{V2}_j^1 &amp; \\bf{V2}_j^2 &amp; \\ldots &amp; \\bf{V2}_j^n \\\\ \\bf{V3}_j^1 &amp; \\bf{V3}_j^2 &amp; \\ldots &amp; \\bf{V3}_j^n \\\\ \\bf{V4}_j^1 &amp; \\bf{V4}_j^2 &amp; \\ldots &amp; \\bf{V4}_j^n \\end{matrix} \\right) \\in \\mathbb{R}^{4\\times n},\\]",
+    "local": ""
+  },
+  {
+    "origin": "with \\(n\\) the number of rows in band \\(B_j\\):",
+    "local": ""
+  },
+  {
+    "origin": "\\[n = \\begin{cases} 2w, &amp; j = 1||m; \\\\ 3w, &amp; \\mbox{else}. \\end{cases}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Each \\(BD_j\\) can be obtained using the standard deviation vector \\(S_j\\) and mean vector \\(M_j\\) of \\(BDM_J\\). Thus, finally:",
+    "local": ""
+  },
+  {
+    "origin": "\\[LBD = (M_1^T, S_1^T, M_2^T, S_2^T, \\ldots, M_m^T, S_m^T)^T \\in \\mathbb{R}^{8m}\\]",
+    "local": ""
+  },
+  {
+    "origin": "Once the LBD has been obtained, it must be converted into a binary form. For such purpose, we consider 32 possible pairs of BD inside it; each couple of BD is compared bit by bit and comparison generates an 8 bit string. Concatenating 32 comparison strings, we get the 256-bit final binary representation of a single LBD.",
+    "local": ""
+  },
+  {
+    "origin": "Function Documentation",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "drawKeylines()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::line_descriptor::drawKeylines",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keylines",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "outImage",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "color",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "outImage",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.line_descriptor.drawKeylines(",
+    "local": ""
+  },
+  {
+    "origin": "image, keylines[, outImage[, color[, flags]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Draws keylines.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "image",
+    "local": ""
+  },
+  {
+    "origin": "input image",
+    "local": ""
+  },
+  {
+    "origin": "keylines",
+    "local": ""
+  },
+  {
+    "origin": "keylines to be drawn",
+    "local": ""
+  },
+  {
+    "origin": "outImage",
+    "local": ""
+  },
+  {
+    "origin": "output image to draw on",
+    "local": ""
+  },
+  {
+    "origin": "color",
+    "local": ""
+  },
+  {
+    "origin": "color of lines to be drawn (if set to defaul value, color is chosen randomly)",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "drawing flags",
+    "local": ""
+  },
+  {
+    "origin": "◆",
+    "local": ""
+  },
+  {
+    "origin": "drawLineMatches()",
+    "local": ""
+  },
+  {
+    "origin": "void cv::line_descriptor::drawLineMatches",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "img1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keylines1",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "img2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "keylines2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt;",
+    "local": ""
+  },
+  {
+    "origin": "&gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "matches1to2",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "outImg",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "matchColor",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const",
+    "local": ""
+  },
+  {
+    "origin": "&amp;",
+    "local": ""
+  },
+  {
+    "origin": "singleLineColor",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "const std::vector&lt; char &gt; &amp;",
+    "local": ""
+  },
+  {
+    "origin": "matchesMask",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Python:",
+    "local": ""
+  },
+  {
+    "origin": "outImg",
+    "local": ""
+  },
+  {
+    "origin": "=",
+    "local": ""
+  },
+  {
+    "origin": "cv.line_descriptor.drawLineMatches(",
+    "local": ""
+  },
+  {
+    "origin": "img1, keylines1, img2, keylines2, matches1to2[, outImg[, matchColor[, singleLineColor[, matchesMask[, flags]]]]]",
+    "local": ""
+  },
+  {
+    "origin": ")",
+    "local": ""
+  },
+  {
+    "origin": "Draws the found matches of keylines from two images.",
+    "local": ""
+  },
+  {
+    "origin": "Parameters",
+    "local": ""
+  },
+  {
+    "origin": "img1",
+    "local": ""
+  },
+  {
+    "origin": "first image",
+    "local": ""
+  },
+  {
+    "origin": "keylines1",
+    "local": ""
+  },
+  {
+    "origin": "keylines extracted from first image",
+    "local": ""
+  },
+  {
+    "origin": "img2",
+    "local": ""
+  },
+  {
+    "origin": "second image",
+    "local": ""
+  },
+  {
+    "origin": "keylines2",
+    "local": ""
+  },
+  {
+    "origin": "keylines extracted from second image",
+    "local": ""
+  },
+  {
+    "origin": "matches1to2",
+    "local": ""
+  },
+  {
+    "origin": "vector of matches",
+    "local": ""
+  },
+  {
+    "origin": "outImg",
+    "local": ""
+  },
+  {
+    "origin": "output matrix to draw on",
+    "local": ""
+  },
+  {
+    "origin": "matchColor",
+    "local": ""
+  },
+  {
+    "origin": "drawing color for matches (chosen randomly in case of default value)",
+    "local": ""
+  },
+  {
+    "origin": "singleLineColor",
+    "local": ""
+  },
+  {
+    "origin": "drawing color for keylines (chosen randomly in case of default value)",
+    "local": ""
+  },
+  {
+    "origin": "matchesMask",
+    "local": ""
+  },
+  {
+    "origin": "mask to indicate which matches must be drawn",
+    "local": ""
+  },
+  {
+    "origin": "flags",
+    "local": ""
+  },
+  {
+    "origin": "drawing flags, see",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "If both",
+    "local": ""
+  },
+  {
+    "origin": "matchColor",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "singleLineColor",
+    "local": ""
+  },
+  {
+    "origin": "are set to their default values, function draws matched lines and line connecting them with same color",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:41 for OpenCV by",
+    "local": ""
+  }
+]

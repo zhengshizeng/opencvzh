@@ -1,0 +1,446 @@
+[
+  {
+    "origin": "OpenCV: Creating a video with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Creating a video with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Bernát Gábor",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV &gt;= 3.0",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "Whenever you work with video feeds you may eventually want to save your image processing result in a form of a new video file. For simple video outputs you can use the OpenCV built-in",
+    "local": ""
+  },
+  {
+    "origin": "class, designed for this.",
+    "local": ""
+  },
+  {
+    "origin": "How to create a video file with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "What type of video files you can create with OpenCV",
+    "local": ""
+  },
+  {
+    "origin": "How to extract a given color channel from a video",
+    "local": ""
+  },
+  {
+    "origin": "As a simple demonstration I'll just extract one of the BGR color channels of an input video file into a new video. You can control the flow of the application from its console line arguments:",
+    "local": ""
+  },
+  {
+    "origin": "The first argument points to the video file to work on",
+    "local": ""
+  },
+  {
+    "origin": "The second argument may be one of the characters: R G B. This will specify which of the channels to extract.",
+    "local": ""
+  },
+  {
+    "origin": "The last argument is the character Y (Yes) or N (No). If this is no, the codec used for the input video file will be the same as for the output. Otherwise, a window will pop up and allow you to select yourself the codec to use.",
+    "local": ""
+  },
+  {
+    "origin": "For example, a valid command line would look like:",
+    "local": ""
+  },
+  {
+    "origin": "The source code",
+    "local": ""
+  },
+  {
+    "origin": "You may also find the source code and these video file in the",
+    "local": ""
+  },
+  {
+    "origin": "folder of the OpenCV source library or",
+    "local": ""
+  },
+  {
+    "origin": "download it from here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The structure of a video",
+    "local": ""
+  },
+  {
+    "origin": "For start, you should have an idea of just how a video file looks. Every video file in itself is a container. The type of the container is expressed in the files extension (for example",
+    "local": ""
+  },
+  {
+    "origin": "avi",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "mov",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "mkv",
+    "local": ""
+  },
+  {
+    "origin": "). This contains multiple elements like: video feeds, audio feeds or other tracks (like for example subtitles). How these feeds are stored is determined by the codec used for each one of them. In case of the audio tracks commonly used codecs are",
+    "local": ""
+  },
+  {
+    "origin": "mp3",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "aac",
+    "local": ""
+  },
+  {
+    "origin": ". For the video files the list is somehow longer and includes names such as",
+    "local": ""
+  },
+  {
+    "origin": "XVID",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "DIVX",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "H264",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "LAGS",
+    "local": ""
+  },
+  {
+    "origin": "(",
+    "local": ""
+  },
+  {
+    "origin": "Lagarith Lossless Codec",
+    "local": ""
+  },
+  {
+    "origin": "). The full list of codecs you may use on a system depends on just what one you have installed.",
+    "local": ""
+  },
+  {
+    "origin": "As you can see things can get really complicated with videos. However, OpenCV is mainly a computer vision library, not a video stream, codec and write one. Therefore, the developers tried to keep this part as simple as possible. Due to this OpenCV for video containers supports only the",
+    "local": ""
+  },
+  {
+    "origin": "avi",
+    "local": ""
+  },
+  {
+    "origin": "extension, its first version. A direct limitation of this is that you cannot save a video file larger than 2 GB. Furthermore you can only create and expand a single video track inside the container. No audio or other track editing support here. Nevertheless, any video codec present on your system might work. If you encounter some of these limitations you will need to look into more specialized video writing libraries such as",
+    "local": ""
+  },
+  {
+    "origin": "FFmpeg",
+    "local": ""
+  },
+  {
+    "origin": "or codecs as",
+    "local": ""
+  },
+  {
+    "origin": "HuffYUV",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "CorePNG",
+    "local": ""
+  },
+  {
+    "origin": "and",
+    "local": ""
+  },
+  {
+    "origin": "LCL",
+    "local": ""
+  },
+  {
+    "origin": ". As an alternative, create the video track with OpenCV and expand it with sound tracks or convert it to other formats by using video manipulation programs such as",
+    "local": ""
+  },
+  {
+    "origin": "VirtualDub",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "AviSynth",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "The VideoWriter class",
+    "local": ""
+  },
+  {
+    "origin": "The content written here builds on the assumption you already read the",
+    "local": ""
+  },
+  {
+    "origin": "tutorial and you know how to read video files. To create a video file you just need to create an instance of the",
+    "local": ""
+  },
+  {
+    "origin": "class. You can specify its properties either via parameters in the constructor or later on via the",
+    "local": ""
+  },
+  {
+    "origin": "function. Either way, the parameters are the same: 1. The name of the output that contains the container type in its extension. At the moment only",
+    "local": ""
+  },
+  {
+    "origin": "avi",
+    "local": ""
+  },
+  {
+    "origin": "is supported. We construct this from the input file, add to this the name of the channel to use, and finish it off with the container extension.",
+    "local": ""
+  },
+  {
+    "origin": "The codec to use for the video track. Now all the video codecs have a unique short name of maximum four characters. Hence, the",
+    "local": ""
+  },
+  {
+    "origin": "XVID",
+    "local": ""
+  },
+  {
+    "origin": ",",
+    "local": ""
+  },
+  {
+    "origin": "DIVX",
+    "local": ""
+  },
+  {
+    "origin": "or",
+    "local": ""
+  },
+  {
+    "origin": "H264",
+    "local": ""
+  },
+  {
+    "origin": "names. This is called a four character code. You may also ask this from an input video by using its",
+    "local": ""
+  },
+  {
+    "origin": "get",
+    "local": ""
+  },
+  {
+    "origin": "function. Because the",
+    "local": ""
+  },
+  {
+    "origin": "get",
+    "local": ""
+  },
+  {
+    "origin": "function is a general function it always returns double values. A double value is stored on 64 bits. Four characters are four bytes, meaning 32 bits. These four characters are coded in the lower 32 bits of the",
+    "local": ""
+  },
+  {
+    "origin": "double",
+    "local": ""
+  },
+  {
+    "origin": ". A simple way to throw away the upper 32 bits would be to just convert this value to",
+    "local": ""
+  },
+  {
+    "origin": "int",
+    "local": ""
+  },
+  {
+    "origin": ":",
+    "local": ""
+  },
+  {
+    "origin": "OpenCV internally works with this integer type and expect this as its second parameter. Now to convert from the integer form to string we may use two methods: a bitwise operator and a union method. The first one extracting from an int the characters looks like (an \"and\" operation, some shifting and adding a 0 at the end to close the string):",
+    "local": ""
+  },
+  {
+    "origin": "You can do the same thing with the",
+    "local": ""
+  },
+  {
+    "origin": "union",
+    "local": ""
+  },
+  {
+    "origin": "as:",
+    "local": ""
+  },
+  {
+    "origin": "The advantage of this is that the conversion is done automatically after assigning, while for the bitwise operator you need to do the operations whenever you change the codec type. In case you know the codecs four character code beforehand, you can use the",
+    "local": ""
+  },
+  {
+    "origin": "CV_FOURCC",
+    "local": ""
+  },
+  {
+    "origin": "macro to build the integer:",
+    "local": ""
+  },
+  {
+    "origin": "If you pass for this argument minus one then a window will pop up at runtime that contains all the codec installed on your system and ask you to select the one to use:",
+    "local": ""
+  },
+  {
+    "origin": "The frame per second for the output video. Again, here I keep the input videos frame per second by using the",
+    "local": ""
+  },
+  {
+    "origin": "get",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "The size of the frames for the output video. Here too I keep the input videos frame size per second by using the",
+    "local": ""
+  },
+  {
+    "origin": "get",
+    "local": ""
+  },
+  {
+    "origin": "function.",
+    "local": ""
+  },
+  {
+    "origin": "The final argument is an optional one. By default is true and says that the output will be a colorful one (so for write you will send three channel images). To create a gray scale video pass a false parameter here.",
+    "local": ""
+  },
+  {
+    "origin": "Here it is, how I use it in the sample:",
+    "local": ""
+  },
+  {
+    "origin": "Afterwards, you use the",
+    "local": ""
+  },
+  {
+    "origin": "function to find out if the open operation succeeded or not. The video file automatically closes when the",
+    "local": ""
+  },
+  {
+    "origin": "VideoWriter",
+    "local": ""
+  },
+  {
+    "origin": "object is destroyed. After you open the object with success you can send the frames of the video in a sequential order by using the",
+    "local": ""
+  },
+  {
+    "origin": "function of the class. Alternatively, you can use its overloaded operator &lt;&lt; :",
+    "local": ""
+  },
+  {
+    "origin": "Extracting a color channel from an BGR image means to set to zero the BGR values of the other channels. You can either do this with image scanning operations or by using the split and merge operations. You first split the channels up into different images, set the other channels to zero images of the same size and type and finally merge them back:",
+    "local": ""
+  },
+  {
+    "origin": "Put all this together and you'll get the upper source code, whose runtime result will show something around the idea:",
+    "local": ""
+  },
+  {
+    "origin": "You may observe a runtime instance of this on the",
+    "local": ""
+  },
+  {
+    "origin": "YouTube here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:34 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "origin": "OpenCV: Upscaling images: multi-output",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "Upscaling images: multi-output",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to use the 'dnn_superres' interface to upscale an image via a multi-output pre-trained neural network. OpenCVs dnn module supports accessing multiple nodes in one inference, if the names of the nodes are given. Currently there is one model included that is capable of giving more output in one inference run, that is the LapSRN model. LapSRN supports multiple outputs with one forward pass. It can now support 2x, 4x, 8x, and (2x, 4x) and (2x, 4x, 8x) super-resolution. The uploaded trained model files have the following output node names:",
+    "local": ""
+  },
+  {
+    "origin": "2x model: NCHW_output",
+    "local": ""
+  },
+  {
+    "origin": "4x model: NCHW_output_2x, NCHW_output_4x",
+    "local": ""
+  },
+  {
+    "origin": "8x model: NCHW_output_2x, NCHW_output_4x, NCHW_output_8x",
+    "local": ""
+  },
+  {
+    "origin": "Building",
+    "local": ""
+  },
+  {
+    "origin": "When building OpenCV, run the following command to build all the contrib module:",
+    "local": ""
+  },
+  {
+    "origin": "Or only build the dnn_superres module:",
+    "local": ""
+  },
+  {
+    "origin": "Or make sure you check the dnn_superres module in the GUI version of CMake: cmake-gui.",
+    "local": ""
+  },
+  {
+    "origin": "Source Code of the sample",
+    "local": ""
+  },
+  {
+    "origin": "Run the sample code with the following command",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "Set header and namespaces",
+    "local": ""
+  },
+  {
+    "origin": "Create the Dnn Superres object",
+    "local": ""
+  },
+  {
+    "origin": "Instantiate a dnn super-resolution object.",
+    "local": ""
+  },
+  {
+    "origin": "Read the model",
+    "local": ""
+  },
+  {
+    "origin": "Read the model from the given path.",
+    "local": ""
+  },
+  {
+    "origin": "Set the model",
+    "local": ""
+  },
+  {
+    "origin": "Sets the algorithm and scaling factor. The last (largest) scaling factor should be given here.",
+    "local": ""
+  },
+  {
+    "origin": "Give the node names and scaling factors",
+    "local": ""
+  },
+  {
+    "origin": "Set the scaling factors, and the output node names in the model.",
+    "local": ""
+  },
+  {
+    "origin": "Upscale an image",
+    "local": ""
+  },
+  {
+    "origin": "Run the inference. The output images will be stored in a Mat vector.",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:38 for OpenCV by &#160;",
+    "local": ""
+  }
+]

@@ -1,0 +1,314 @@
+[
+  {
+    "origin": "OpenCV: High level stitching API (Stitcher class)",
+    "local": ""
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": ""
+  },
+  {
+    "origin": "High level stitching API (Stitcher class)",
+    "local": ""
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Next Tutorial:",
+    "local": ""
+  },
+  {
+    "origin": "Original author",
+    "local": ""
+  },
+  {
+    "origin": "Jiri Horner",
+    "local": ""
+  },
+  {
+    "origin": "Compatibility",
+    "local": ""
+  },
+  {
+    "origin": "Goal",
+    "local": ""
+  },
+  {
+    "origin": "In this tutorial you will learn how to:",
+    "local": ""
+  },
+  {
+    "origin": "use the high-level stitching API for stitching provided by",
+    "local": ""
+  },
+  {
+    "origin": "learn how to use preconfigured Stitcher configurations to stitch images using different camera models.",
+    "local": ""
+  },
+  {
+    "origin": "Code",
+    "local": ""
+  },
+  {
+    "origin": "This tutorial code's is shown lines below. You can also download it from",
+    "local": ""
+  },
+  {
+    "origin": "here",
+    "local": ""
+  },
+  {
+    "origin": ".",
+    "local": ""
+  },
+  {
+    "origin": "Explanation",
+    "local": ""
+  },
+  {
+    "origin": "The most important code part is:",
+    "local": ""
+  },
+  {
+    "origin": "A new instance of stitcher is created and the",
+    "local": ""
+  },
+  {
+    "origin": "will do all the hard work.",
+    "local": ""
+  },
+  {
+    "origin": "can create stitcher in one of the predefined configurations (argument",
+    "local": ""
+  },
+  {
+    "origin": "). See",
+    "local": ""
+  },
+  {
+    "origin": "for details. These configurations will setup multiple stitcher properties to operate in one of predefined scenarios. After you create stitcher in one of predefined configurations you can adjust stitching by setting any of the stitcher properties.",
+    "local": ""
+  },
+  {
+    "origin": "If you have cuda device",
+    "local": ""
+  },
+  {
+    "origin": "can be configured to offload certain operations to GPU. If you prefer this configuration set",
+    "local": ""
+  },
+  {
+    "origin": "to true. OpenCL acceleration will be used transparently based on global OpenCV settings regardless of this flag.",
+    "local": ""
+  },
+  {
+    "origin": "Stitching might fail for several reasons, you should always check if everything went good and resulting pano is stored in",
+    "local": ""
+  },
+  {
+    "origin": ". See",
+    "local": ""
+  },
+  {
+    "origin": "documentation for possible error codes.",
+    "local": ""
+  },
+  {
+    "origin": "Camera models",
+    "local": ""
+  },
+  {
+    "origin": "There are currently 2 camera models implemented in stitching pipeline.",
+    "local": ""
+  },
+  {
+    "origin": "Homography model",
+    "local": ""
+  },
+  {
+    "origin": "expecting perspective transformations between images implemented in",
+    "local": ""
+  },
+  {
+    "origin": "Affine model",
+    "local": ""
+  },
+  {
+    "origin": "expecting affine transformation with 6 DOF or 4 DOF implemented in",
+    "local": ""
+  },
+  {
+    "origin": "Homography model is useful for creating photo panoramas captured by camera, while affine-based model can be used to stitch scans and object captured by specialized devices.",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Certain detailed settings of",
+    "local": ""
+  },
+  {
+    "origin": "might not make sense. Especially you should not mix classes implementing affine model and classes implementing Homography model, as they work with different transformations.",
+    "local": ""
+  },
+  {
+    "origin": "Try it out",
+    "local": ""
+  },
+  {
+    "origin": "If you enabled building samples you can found binary under",
+    "local": ""
+  },
+  {
+    "origin": ". This example is a console application, run it without arguments to see help.",
+    "local": ""
+  },
+  {
+    "origin": "provides some sample data for testing all available configurations.",
+    "local": ""
+  },
+  {
+    "origin": "to try panorama mode run:",
+    "local": ""
+  },
+  {
+    "origin": "to try scans mode run (dataset from home-grade scanner):",
+    "local": ""
+  },
+  {
+    "origin": "or (dataset from professional book scanner):",
+    "local": ""
+  },
+  {
+    "origin": "Note",
+    "local": ""
+  },
+  {
+    "origin": "Examples above expects POSIX platform, on windows you have to provide all files names explicitly (e.g.",
+    "local": ""
+  },
+  {
+    "origin": "...) as windows command line does not support",
+    "local": ""
+  },
+  {
+    "origin": "expansion.",
+    "local": ""
+  },
+  {
+    "origin": "Stitching detailed (python opencv &gt;4.0.1)",
+    "local": ""
+  },
+  {
+    "origin": "If you want to study internals of the stitching pipeline or you want to experiment with detailed configuration you can use stitching_detailed source code available in C++ or python",
+    "local": ""
+  },
+  {
+    "origin": "stitching_detailed",
+    "local": ""
+  },
+  {
+    "origin": "C++",
+    "local": ""
+  },
+  {
+    "origin": "stitching_detailed.cpp",
+    "local": ""
+  },
+  {
+    "origin": "Python",
+    "local": ""
+  },
+  {
+    "origin": "stitching_detailed.py",
+    "local": ""
+  },
+  {
+    "origin": "stitching_detailed program uses command line to get stitching parameter. Many parameters exists. Above examples shows some command line parameters possible :",
+    "local": ""
+  },
+  {
+    "origin": "boat5.jpg boat2.jpg boat3.jpg boat4.jpg boat1.jpg boat6.jpg &ndash;work_megapix 0.6 &ndash;features orb &ndash;matcher homography &ndash;estimator homography &ndash;match_conf 0.3 &ndash;conf_thresh 0.3 &ndash;ba ray &ndash;ba_refine_mask xxxxx &ndash;save_graph test.txt &ndash;wave_correct no &ndash;warp fisheye &ndash;blend multiband &ndash;expos_comp no &ndash;seam gc_colorgrad",
+    "local": ""
+  },
+  {
+    "origin": "Pairwise images are matched using an homography &ndash;matcher homography and estimator used for transformation estimation too &ndash;estimator homography",
+    "local": ""
+  },
+  {
+    "origin": "Confidence for feature matching step is 0.3 : &ndash;match_conf 0.3. You can decrease this value if you have some difficulties to match images",
+    "local": ""
+  },
+  {
+    "origin": "Threshold for two images are from the same panorama confidence is 0. : &ndash;conf_thresh 0.3 You can decr\u0002ease this value if you have some difficulties to match images",
+    "local": ""
+  },
+  {
+    "origin": "Bundle adjustment cost function is ray &ndash;ba ray",
+    "local": ""
+  },
+  {
+    "origin": "Refinement mask for bundle adjustment is xxxxx ( &ndash;ba_refine_mask xxxxx) where 'x' means refine respective parameter and '_' means don't. Refine one, and has the following format: fx,skew,ppx,aspect,ppy",
+    "local": ""
+  },
+  {
+    "origin": "Save matches graph represented in DOT language to test.txt ( &ndash;save_graph test.txt) : Labels description: Nm is number of matches, Ni is number of inliers, C is confidence",
+    "local": ""
+  },
+  {
+    "origin": "Perform wave effect correction is no (&ndash;wave_correct no)",
+    "local": ""
+  },
+  {
+    "origin": "Warp surface type is fisheye (&ndash;warp fisheye)",
+    "local": ""
+  },
+  {
+    "origin": "Blending method is multiband (&ndash;blend multiband)",
+    "local": ""
+  },
+  {
+    "origin": "Exposure compensation method is not used (&ndash;expos_comp no)",
+    "local": ""
+  },
+  {
+    "origin": "Seam estimation estimator is Minimum graph cut-based seam (&ndash;seam gc_colorgrad)",
+    "local": ""
+  },
+  {
+    "origin": "you can use those arguments on command line too :",
+    "local": ""
+  },
+  {
+    "origin": "boat5.jpg boat2.jpg boat3.jpg boat4.jpg boat1.jpg boat6.jpg &ndash;work_megapix 0.6 &ndash;features orb &ndash;matcher homography &ndash;estimator homography &ndash;match_conf 0.3 &ndash;conf_thresh 0.3 &ndash;ba ray &ndash;ba_refine_mask xxxxx &ndash;wave_correct horiz &ndash;warp compressedPlaneA2B1 &ndash;blend multiband &ndash;expos_comp channels_blocks &ndash;seam gc_colorgrad",
+    "local": ""
+  },
+  {
+    "origin": "You will get :",
+    "local": ""
+  },
+  {
+    "origin": "For images captured using a scanner or a drone ( affine motion) you can use those arguments on command line :",
+    "local": ""
+  },
+  {
+    "origin": "newspaper1.jpg newspaper2.jpg &ndash;work_megapix 0.6 &ndash;features surf &ndash;matcher affine &ndash;estimator affine &ndash;match_conf 0.3 &ndash;conf_thresh 0.3 &ndash;ba affine &ndash;ba_refine_mask xxxxx &ndash;wave_correct no &ndash;warp affine",
+    "local": ""
+  },
+  {
+    "origin": "You can find all images in",
+    "local": ""
+  },
+  {
+    "origin": "https://github.com/opencv/opencv_extra/tree/master/testdata/stitching",
+    "local": ""
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:37 for OpenCV by &#160;",
+    "local": ""
+  }
+]

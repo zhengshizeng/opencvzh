@@ -1,0 +1,138 @@
+[
+  {
+    "origin": "OpenCV: Creating a 3D histogram",
+    "local": "OpenCV:创建三维直方图"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Creating a 3D histogram",
+    "local": "创建三维直方图"
+  },
+  {
+    "origin": "Prev Tutorial:",
+    "local": "上一教程："
+  },
+  {
+    "origin": "Goal",
+    "local": "目标"
+  },
+  {
+    "origin": "In this tutorial you will learn how to",
+    "local": "在本教程中，您将学习如何"
+  },
+  {
+    "origin": "Create your own callback keyboard function for viz window.",
+    "local": "为viz窗口创建自己的回调键盘函数。"
+  },
+  {
+    "origin": "Show your 3D histogram in a viz window.",
+    "local": "在视图窗口中显示3D直方图。"
+  },
+  {
+    "origin": "Code",
+    "local": "代码"
+  },
+  {
+    "origin": "You can download the code from",
+    "local": "您可以从"
+  },
+  {
+    "origin": "here",
+    "local": "在这里"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Explanation",
+    "local": "解释"
+  },
+  {
+    "origin": "Here is the general structure of the program:",
+    "local": "以下是该计划的总体结构："
+  },
+  {
+    "origin": "You can give full path to an image in command line",
+    "local": "您可以在命令行中提供图像的完整路径"
+  },
+  {
+    "origin": "or without path, a synthetic image is generated with pixel values are a gaussian distribution",
+    "local": "或者在没有路径的情况下，生成像素值为高斯分布的合成图像"
+  },
+  {
+    "origin": "center(60+/-10,40+/-5,50+/-20) in first quadrant, (160+/-20,10+/-5,50+/-10) in second quadrant, (90+/-10,100+/-20,50+/-20) in third quadrant, (100+/-10,10+/-5,150+/-40) in last quadrant.",
+    "local": "中心（60+/-10,40+/-5,50+/-20）在第一象限，（160+/-20,10+/-5,50+/-10）在第二象限，（90+/-10100+/-20,50+/-20）在第三象限，（100+/-10,10+/-5150+/-40）在最后象限。"
+  },
+  {
+    "origin": "Image tridimensional histogram is calculated using opencv",
+    "local": "利用opencv计算图像的三维直方图"
+  },
+  {
+    "origin": "and",
+    "local": "和"
+  },
+  {
+    "origin": "between 0 and 100.",
+    "local": "介于0和100之间。"
+  },
+  {
+    "origin": "channel are 2, 1 and 0 to synchronise color with Viz axis color in objetc",
+    "local": "通道为2、1和0，以使颜色与objetc中的Viz轴颜色同步"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "A slidebar is inserted in image window. Init slidebar value is 90, it means that only histogram cell greater than 9/100000.0 (23 pixels for an 512X512 pixels) will be display.",
+    "local": "在图像窗口中插入一个滑块。Init slidebar值为90，表示只显示大于9/100000.0（512X512像素为23像素）的直方图单元格。"
+  },
+  {
+    "origin": "We are ready to open a viz window with a callback function to capture keyboard event in viz window. Using",
+    "local": "我们已经准备好打开一个带有回调函数的viz窗口来捕获viz窗口中的键盘事件。使用"
+  },
+  {
+    "origin": "enable keyboard event to be capture in",
+    "local": "启用要在中捕获的键盘事件"
+  },
+  {
+    "origin": "window too.",
+    "local": "窗户也是。"
+  },
+  {
+    "origin": "The function DrawHistogram3D processes histogram Mat to display it in a Viz window. Number of plan, row and column in",
+    "local": "函数DrawHistogram3D处理直方图矩阵以在Viz窗口中显示它。中的计划、行和列数"
+  },
+  {
+    "origin": "can be found using this code :",
+    "local": "可以使用以下代码找到："
+  },
+  {
+    "origin": "To get histogram value at a specific location we use",
+    "local": "在我们使用的特定位置获取直方图值"
+  },
+  {
+    "origin": "method with three arguments k, i and j where k is plane number, i row number and j column number.",
+    "local": "具有三个参数k、i和j的方法，其中k是平面数、i行数和j列数。"
+  },
+  {
+    "origin": "Callback function Principle are as mouse callback function. Key code pressed is in field code of class",
+    "local": "回调函数原理与鼠标回调函数相同。按键代码在类的字段代码中"
+  },
+  {
+    "origin": ".",
+    "local": "."
+  },
+  {
+    "origin": "Results",
+    "local": "结果"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:39 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:39为OpenCV生成，&#160；"
+  }
+]

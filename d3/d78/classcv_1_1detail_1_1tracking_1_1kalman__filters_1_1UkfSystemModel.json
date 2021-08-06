@@ -1,0 +1,318 @@
+[
+  {
+    "origin": "OpenCV: cv::detail::tracking::kalman_filters::UkfSystemModel Class Reference",
+    "local": "OpenCV:cv:：detail:：tracking:：kalman\\u filters:：ukfsystemodel类参考"
+  },
+  {
+    "origin": "Open Source Computer Vision",
+    "local": "开源计算机视觉"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "List of all members",
+    "local": "所有成员的列表"
+  },
+  {
+    "origin": "cv::detail::tracking::kalman_filters::UkfSystemModel Class Reference",
+    "local": "cv:：detail:：tracking:：kalman\\u filters:：ukfsystemodel类参考"
+  },
+  {
+    "origin": "abstract",
+    "local": "摘要"
+  },
+  {
+    "origin": "Model of dynamical system for Unscented Kalman filter. The interface for dynamical system model. It contains functions for computing the next state and the measurement. It must be inherited for using UKF.",
+    "local": "无迹卡尔曼滤波动态系统模型。动态系统模型的接口。它包含用于计算下一个状态和测量的函数。必须继承它才能使用UKF。"
+  },
+  {
+    "origin": "More...",
+    "local": "更多。。。"
+  },
+  {
+    "origin": "Public Member Functions",
+    "local": "公共成员职能"
+  },
+  {
+    "origin": "()",
+    "local": "()"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;x_k, const",
+    "local": "&amp；x u k，常数"
+  },
+  {
+    "origin": "&amp;n_k,",
+    "local": "&amp；好的，"
+  },
+  {
+    "origin": "(const",
+    "local": "常数"
+  },
+  {
+    "origin": "&amp;x_k, const",
+    "local": "&amp；x u k，常数"
+  },
+  {
+    "origin": "&amp;u_k, const",
+    "local": "&amp；好的，康斯特"
+  },
+  {
+    "origin": "&amp;v_k,",
+    "local": "&amp；好的，"
+  },
+  {
+    "origin": "&amp;x_kplus1)=0",
+    "local": "&amp；x_kplus 1）=0"
+  },
+  {
+    "origin": "Detailed Description",
+    "local": "详细说明"
+  },
+  {
+    "origin": "Model of dynamical system for Unscented Kalman filter. The interface for dynamical system model. It contains functions for computing the next state and the measurement. It must be inherited for using UKF.",
+    "local": "无迹卡尔曼滤波动态系统模型。动态系统模型的接口。它包含用于计算下一个状态和测量的函数。必须继承它才能使用UKF。"
+  },
+  {
+    "origin": "Constructor &amp; Destructor Documentation",
+    "local": "建造商和；析构函数文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "~UkfSystemModel()",
+    "local": "~ukfsystemodel（）"
+  },
+  {
+    "origin": "virtual cv::detail::tracking::kalman_filters::UkfSystemModel::~UkfSystemModel",
+    "local": "虚拟简历：：细节：：跟踪：：卡尔曼滤波器：：UkfSystemModel：：~UkfSystemModel"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "inline",
+    "local": "内联"
+  },
+  {
+    "origin": "virtual",
+    "local": "事实上的"
+  },
+  {
+    "origin": "Member Function Documentation",
+    "local": "成员功能文档"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "measurementFunction()",
+    "local": "测量函数（）"
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::kalman_filters::UkfSystemModel::measurementFunction",
+    "local": "虚空cv：：细节：：跟踪：：卡尔曼滤波器：：UKFSystemodel：：度量函数"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "x_k",
+    "local": "好的"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "n_k",
+    "local": "好的"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "z_k",
+    "local": "祖克"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "The function for computing the measurement from the state",
+    "local": "从状态计算测量值的函数"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "x_k",
+    "local": "好的"
+  },
+  {
+    "origin": "- state vector,",
+    "local": "-状态向量，"
+  },
+  {
+    "origin": "n_k",
+    "local": "好的"
+  },
+  {
+    "origin": "- noise vector,",
+    "local": "-噪声矢量，"
+  },
+  {
+    "origin": "z_k",
+    "local": "祖克"
+  },
+  {
+    "origin": "- measurement vector.",
+    "local": "-测量矢量。"
+  },
+  {
+    "origin": "&#9670;&nbsp;",
+    "local": "&#9670;&nbsp；"
+  },
+  {
+    "origin": "stateConversionFunction()",
+    "local": "stateConversionFunction（）"
+  },
+  {
+    "origin": "virtual void cv::detail::tracking::kalman_filters::UkfSystemModel::stateConversionFunction",
+    "local": "虚空cv:：detail:：tracking:：kalman\\u filters:：ukfsystemodel:：stateConversionFunction"
+  },
+  {
+    "origin": "(",
+    "local": "("
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "x_k",
+    "local": "好的"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "u_k",
+    "local": "好的"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "const",
+    "local": "常数"
+  },
+  {
+    "origin": "v_k",
+    "local": "沃克"
+  },
+  {
+    "origin": ",",
+    "local": ","
+  },
+  {
+    "origin": "x_kplus1",
+    "local": "x泳kplus 1个"
+  },
+  {
+    "origin": ")",
+    "local": ")"
+  },
+  {
+    "origin": "pure virtual",
+    "local": "纯虚拟的"
+  },
+  {
+    "origin": "The function for computing the next state from the previous state",
+    "local": "从上一个状态计算下一个状态的函数"
+  },
+  {
+    "origin": "Parameters",
+    "local": "参数"
+  },
+  {
+    "origin": "x_k",
+    "local": "好的"
+  },
+  {
+    "origin": "- previous state vector,",
+    "local": "-以前的状态向量，"
+  },
+  {
+    "origin": "u_k",
+    "local": "好的"
+  },
+  {
+    "origin": "- control vector,",
+    "local": "-控制向量，"
+  },
+  {
+    "origin": "v_k",
+    "local": "沃克"
+  },
+  {
+    "origin": "- noise vector,",
+    "local": "-噪声矢量，"
+  },
+  {
+    "origin": "x_kplus1",
+    "local": "x泳kplus 1个"
+  },
+  {
+    "origin": "- next state vector.",
+    "local": "-下一个状态向量。"
+  },
+  {
+    "origin": "The documentation for this class was generated from the following file:",
+    "local": "此类的文档是从以下文件生成的："
+  },
+  {
+    "origin": "opencv2/tracking/",
+    "local": "opencv2/跟踪/"
+  },
+  {
+    "origin": "Generated on Fri Apr 2 2021 11:36:46 for OpenCV by &#160;",
+    "local": "2021年4月2日星期五11:36:46为OpenCV生成，&#160；"
+  }
+]
